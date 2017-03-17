@@ -12,6 +12,11 @@
 
 namespace arcade
 {
+    class bunny_sound_deleter
+    {
+
+    };
+
     class Lapin : IGfxLib
     {
     public:
@@ -33,6 +38,12 @@ namespace arcade
         void loadSounds(std::vector<std::string> const &sounds);
         void playSound(int soundId);
         bool pollEvent(Event &e);
+
+    private:
+        void updateGUI(IGUI const &gui) override;
+
+    private:
+        void updateMap(IMap const &map) override;
 
     public:
         void display();
