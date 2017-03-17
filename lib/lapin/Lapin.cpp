@@ -73,7 +73,7 @@ void arcade::Lapin::loadSounds(std::vector<std::string> const &sounds)
     for (size_t i = 0; i < sounds.size(); ++i)
     {
         if (isEffect(sounds[i])) {
-            Effects[i] = bunny_load_effect(sounds[i].c_str());
+            Effects[i] = bunny_load_effect(sounds[i].c_str();
             if (!Effects[i])
                 throw std::bad_alloc();
             Where.push_back(true);
@@ -112,15 +112,16 @@ void arcade::Lapin::playSound(int soundId)
 
 bool arcade::Lapin::pollEvent(arcade::Event &e)
 {
+    // TODO pollEvents
     return false;
 }
 
 void arcade::Lapin::updateMap(const arcade::IMap &map)
 {
-
+    // TODO updateMap
 }
 
 void arcade::Lapin::updateGUI(const arcade::IGUI &gui)
 {
-
+    // TODO updateGUI
 }

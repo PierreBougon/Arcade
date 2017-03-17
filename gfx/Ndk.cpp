@@ -25,7 +25,7 @@ bool arcade::Ndk::pollEvent(arcade::Event &e)
 
 void arcade::Ndk::updateMap(arcade::IMap const &map)
 {
-    ILayer layer = map[0];
+    const ILayer &layer = map[0];
     std::vector<arcade::ITile *> vec;
     int i(0);
     int j(0);
