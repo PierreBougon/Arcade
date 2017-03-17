@@ -14,7 +14,7 @@ SRC=
 
 OBJ=		$(SRC:.cpp=.o)
 
-INC=		-I./include/
+INC=		-I./include/ -I./interfaces/
 
 ifeq ($(DEBUG), yes)
 CXXFLAGS=	 -std=c++14 -g -W -Wall -Wextra -Werror $(INC)
