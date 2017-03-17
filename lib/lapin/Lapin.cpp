@@ -73,7 +73,7 @@ void arcade::Lapin::loadSounds(std::vector<std::string> const &sounds)
     for (size_t i = 0; i < sounds.size(); ++i)
     {
         if (isEffect(sounds[i])) {
-            Effects[i] = bunny_load_effect(sounds[i].c_str());
+            Effects[i] = bunny_load_effect(sounds[i].c_str();
             if (!Effects[i])
                 throw std::bad_alloc();
             Where.push_back(true);
@@ -95,17 +95,33 @@ bool arcade::Lapin::isEffect(std::string const &file) const
 
 void arcade::Lapin::playSound(int soundId)
 {
-    if (soundId < Where.size()) {
-        if (Where[soundId]) {
+    if (soundId < Where.size())
+    {
+        if (Where[soundId])
+        {
             bunny_sound_stop(&Effects[soundId]->sound);
             bunny_sound_play(&Effects[soundId]->sound);
-        } else {
+        }
+        else
+        {
             bunny_sound_stop(&Musics[soundId]->sound);
             bunny_sound_play(&Musics[soundId]->sound);
         }
     }
 }
 
-bool arcade::Lapin::pollEvent(arcade::Event &e) {
+bool arcade::Lapin::pollEvent(arcade::Event &e)
+{
+    // TODO pollEvents
     return false;
+}
+
+void arcade::Lapin::updateMap(const arcade::IMap &map)
+{
+    // TODO updateMap
+}
+
+void arcade::Lapin::updateGUI(const arcade::IGUI &gui)
+{
+    // TODO updateGUI
 }

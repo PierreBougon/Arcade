@@ -16,6 +16,8 @@ namespace arcade
         std::vector<std::string> vecLib;
         std::vector<std::string> vecGame;
 
+        void feedVector(std::vector<std::string> *vec, std::string const &directory);
+
     public:
         Pars();
         ~Pars();
