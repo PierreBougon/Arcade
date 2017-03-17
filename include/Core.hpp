@@ -20,6 +20,7 @@ namespace arcade
         std::vector<arcade::IGame *> tabGame;
         Pars pars;
 
+        int recupIndexLib(std::string const& lib);
     public:
         Core();
         ~Core();
