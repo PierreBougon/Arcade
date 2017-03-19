@@ -9,23 +9,28 @@
 #include <IGfxLib.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Audio/Music.hpp>
+#include <map>
 
 namespace arcade
 {
     class SFMLCore : public IGfxLib
     {
     private:
-        unsigned int                                width;
-        unsigned int                                height;
-        size_t                                      x;
-        size_t                                      y;
-        std::unique_ptr<sf::RenderWindow>           window;
-        std::vector<std::unique_ptr<sf::Music>>     sounds;
+        unsigned int                                        width;
+        unsigned int                                        height;
+        size_t                                              x;
+        size_t                                              y;
+        std::map<sf::Event::EventType, arcade::EventType>   mappedEventType;
+        std::map<sf::Event::EventType, arcade::ActionType>  mappedEventAction;
+        std::map<sf::Keyboard::Key, arcade::KeyboardKey>    mappedKeyboard;
+        std::unique_ptr<sf::RenderWindow>                   window;
+        std::vector<std::unique_ptr<sf::Music>>             sounds;
 
     public:
         SFMLCore();
 
         ~SFMLCore() override;
+
 
         bool pollEvent(Event &e) override;
 
@@ -48,6 +53,12 @@ namespace arcade
         void display() override;
 
         void clear() override;
+
+
+    private:
+        void updateEventType(Event &e, sf::Event &event);
+
+        void updateMousePosition(MousePos &pos, sf::Vector2i sfPos);
     };
 }
 
