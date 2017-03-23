@@ -178,7 +178,7 @@ void arcade::SFMLCore::loadSounds(std::vector<std::string> const &sounds)
 
     for (std::vector<std::string>::const_iterator it = sounds.begin(); it != sounds.end() ; ++it)
     {
-        tmpSound = new sf::Music();
+        tmpSound = std::make_unique<sf::Music>();
         if (!tmpSound->openFromFile(*it))
             throw std::bad_alloc();
         this->sounds.push_back(tmpSound);
@@ -207,7 +207,7 @@ void arcade::SFMLCore::initializeWindow()
 {
     sf::VideoMode videoMode(width, height);
 
-    window = new sf::RenderWindow(videoMode, "Retro Furnace");
+    window = std::make_unique<sf::RenderWindow>(videoMode, "Retro Furnace");
 }
 
 void arcade::SFMLCore::updateMap(const arcade::IMap &map)
