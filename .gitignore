@@ -88,3 +88,6 @@ CTestTestfile.cmake
 /cmake-build-debug/
 /interfaces/
 /lib/sfml/dep/SFML-2.4.2/
+
+README*
+LICENSE
