@@ -51,6 +51,7 @@ namespace arcade
         Lapin(Lapin const &lapin) = delete;
         Lapin &operator=(Lapin const &lapin) = delete;
         void printOneSprite(t_bunny_position *pos, ITile const &tile);
+        void printOneColor(t_bunny_position *pos, Color color);
 
     private:
         typedef std::map<size_t, std::unique_ptr<t_bunny_effect, Bunny_sound_deleter>>      t_bunny_map_effect;

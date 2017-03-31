@@ -149,6 +149,14 @@ void arcade::Lapin::printOneSprite(t_bunny_position *pos, ITile const &tile)
     bunny_blit(&sprite->buffer, Map, pos);
 }
 
+void arcade::Lapin::printOneColor(t_bunny_position *pos, Color color)
+{
+    static std::unique_ptr<t_bunny_picture> pic = std::make_unique(bunny_new_picture(TileWidth, TileHeight));
+
+    bunny_fill(&pic->buffer,)
+
+}
+
 void arcade::Lapin::updateMap(const arcade::IMap &map)
 {
     size_t nbLayers = map.getLayerNb();
@@ -164,7 +172,12 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
             pos.x = 0;
             for (size_t x = 0; x < mWidth; ++x)
             {
-                printOneSprite(&pos, map.at(layers, x, y));
+                const ITile& tile = map.at(layers, x, y);
+
+                if (tile.hasSprite())
+                    printOneSprite(&pos, tile);
+                else
+                    printOneColor(&pos, tile.getColor());
                 pos.x += TileWidth;
             }
             pos.y += TileHeight;
