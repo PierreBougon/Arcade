@@ -153,8 +153,8 @@ void arcade::Lapin::printOneColor(t_bunny_position *pos, Color color)
 {
     static std::unique_ptr<t_bunny_picture> pic = std::make_unique(bunny_new_picture(TileWidth, TileHeight));
 
-    bunny_fill(&pic->buffer,)
-
+    bunny_fill(&pic->buffer, color.full);
+    bunny_blit(&pic->buffer, Map, pos);
 }
 
 void arcade::Lapin::updateMap(const arcade::IMap &map)
@@ -187,7 +187,7 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
 
 void arcade::Lapin::updateGUI(arcade::IGUI &gui)
 {
-    // TODO updateGUI
+    // TODO
 }
 
 
