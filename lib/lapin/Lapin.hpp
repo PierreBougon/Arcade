@@ -9,6 +9,7 @@
 # include <map>
 # include <memory>
 # include "lapin.h"
+# include "Sound.hpp"
 
 namespace arcade
 {
@@ -16,61 +17,66 @@ namespace arcade
     class Bunny_sound_deleter
     {
     public:
-        ~Bunny_sound_deleter(){};
-        Bunny_sound_deleter(){};
-        void operator()(T* sound)
-        {
+        void operator()(T* sound) {
             bunny_sound_stop(&sound->sound);
             bunny_delete_sound(&sound->sound);
         };
     };
 
-    class Lapin : IGfxLib
+    class Bunny_picture_deleter
     {
     public:
-        enum CONTEXT {
-            MENU = 0,
-            GAME,
-        };
+        void operator()(t_bunny_picture* picture);
+    };
 
+
+    class Lapin : IGfxLib
+    {
     public:
         ~Lapin();
         Lapin();
 
     public:
-        void setSize(size_t height, size_t width);
-        void setPosition(size_t y, size_t x);
-        void initializeWindow();
         bool doesSupportSound() const;
         void clear();
         void loadSounds(std::vector<std::string> const &sounds);
-        void playSound(int soundId);
+        void soundControl(const Sound &sound);
+        void loadSprites(std::vector<std::unique_ptr<ISprite>> &&sprites);
         bool pollEvent(Event &e);
-        void updateGUI(IGUI const &gui) override;
-        void updateMap(IMap const &map) override;
+        void updateGUI(IGUI &gui);
+        void updateMap(IMap const &map);
         void display();
 
     private:
         Lapin(Lapin const &lapin) = delete;
         Lapin &operator=(Lapin const &lapin) = delete;
-        bool isEffect(std::string const &file) const;
-        typedef std::map<size_t, std::unique_ptr<t_bunny_effect, Bunny_sound_deleter>>   t_bunny_map_effect;
-        typedef std::map<size_t, std::unique_ptr<t_bunny_music, Bunny_sound_deleter>>    t_bunny_map_music;
-        typedef std::vector<t_bunny_context>                                             t_bunny_map_context;
-        typedef std::map<char, arcade::KeyboardKey>                                      t_keyboard;
+        void printOneSprite(t_bunny_position *pos, ITile const &tile);
+        void printOneColor(t_bunny_position *pos, Color color);
+
+    private:
+        typedef std::map<size_t, std::unique_ptr<t_bunny_effect, Bunny_sound_deleter>>      t_bunny_map_effect;
+        typedef t_bunny_context                                                             t_bunny_map_context;
+        typedef std::map<char, arcade::KeyboardKey>                                         t_keyboard;
+        typedef std::map<e_bunny_mouse_button , arcade::MouseKey >                          t_mouse;
+        typedef std::unique_ptr<t_bunny_picture, Bunny_picture_deleter>                     t_sprite;
+        typedef std::vector<std::vector<t_sprite>>                                          t_sprites;
+        typedef unsigned int *t_uintcolormap;
+        typedef t_color *t_colormap;
 
     private:
         unsigned int        Width;
         unsigned int        Height;
+        unsigned int        TileWidth;
+        unsigned int        TileHeight;
         size_t              X;
         size_t              Y;
         t_bunny_window      *Window;
-        t_bunny_pixelarray  *Map;
-        t_bunny_map_context Contexts;
+        t_bunny_picture     *Map;
+        t_bunny_map_context Context;
+        t_keyboard          Keyboard;
+        t_mouse             Mouse;
         t_bunny_map_effect  Effects;
-        t_bunny_map_music   Musics;
-        std::vector<bool>   Where;
-        t_keyboard          keyboard;
+        t_sprites           Sprites;
     };
 }
 
