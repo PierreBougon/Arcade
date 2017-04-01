@@ -50,14 +50,16 @@ namespace arcade
     private:
         Lapin(Lapin const &lapin) = delete;
         Lapin &operator=(Lapin const &lapin) = delete;
-        void printOneSprite(t_bunny_position *pos, ITile const &tile);
-        void printOneColor(t_bunny_position *pos, Color color);
+        void printOneSprite(t_bunny_position const &pos, t_bunny_picture & prite);
+        void printOneColor(t_bunny_position const &pos, Color color, uint32_t width, uint32_t height);
+        void printText(t_bunny_position const &pos, std::string const &text);
 
     private:
         typedef std::map<size_t, std::unique_ptr<t_bunny_effect, Bunny_sound_deleter>>      t_bunny_map_effect;
         typedef t_bunny_context                                                             t_bunny_map_context;
         typedef std::map<char, arcade::KeyboardKey>                                         t_keyboard;
-        typedef std::map<e_bunny_mouse_button , arcade::MouseKey >                          t_mouse;
+        typedef std::map<e_bunny_mouse_button, arcade::MouseKey >                           t_mouse;
+        typedef std::map<char, e_bunny_letter_tab>                                          t_letters;
         typedef std::unique_ptr<t_bunny_picture, Bunny_picture_deleter>                     t_sprite;
         typedef std::vector<std::vector<t_sprite>>                                          t_sprites;
         typedef unsigned int *t_uintcolormap;
@@ -73,8 +75,9 @@ namespace arcade
         t_bunny_window      *Window;
         t_bunny_picture     *Map;
         t_bunny_map_context Context;
-        t_keyboard          Keyboard;
-        t_mouse             Mouse;
+        static t_keyboard   Keyboard;
+        static t_mouse      Mouse;
+        static t_letters    Letters;
         t_bunny_map_effect  Effects;
         t_sprites           Sprites;
     };

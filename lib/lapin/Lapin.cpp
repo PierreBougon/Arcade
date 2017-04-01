@@ -138,23 +138,21 @@ bool arcade::Lapin::pollEvent(arcade::Event &e)
     return (false);
 }
 
-void arcade::Lapin::printOneSprite(t_bunny_position *pos, ITile const &tile)
+void arcade::Lapin::printOneSprite(t_bunny_position const &pos, t_bunny_picture &sprite)
 {
-    t_bunny_clipable *sprite = Sprites[tile.getSpriteId()][tile.getSpritePos()].get();
-
-    sprite->scale.y = static_cast<double>(sprite->clip_height) /
-                    static_cast<double>(TileHeight);
-    sprite->scale.x = static_cast<double>(sprite->clip_width) /
-                    static_cast<double>(TileWidth);
-    bunny_blit(&sprite->buffer, Map, pos);
+    sprite.scale.y = static_cast<double>(sprite.clip_height) / static_cast<double>(TileHeight);
+    sprite.scale.x = static_cast<double>(sprite.clip_width) / static_cast<double>(TileWidth);
+    bunny_blit(&Map->buffer, &sprite, &pos);
 }
 
-void arcade::Lapin::printOneColor(t_bunny_position *pos, Color color)
+void arcade::Lapin::printOneColor(t_bunny_position const &pos, Color color, uint32_t width, uint32_t height)
 {
-    static std::unique_ptr<t_bunny_picture> pic = std::make_unique(bunny_new_picture(TileWidth, TileHeight));
+    static std::unique_ptr<t_bunny_picture> pic = std::make_unique(bunny_new_picture(Width, Height));
 
+    pic->clip_height = height;
+    pic->clip_width = width;
     bunny_fill(&pic->buffer, color.full);
-    bunny_blit(&pic->buffer, Map, pos);
+    bunny_blit(&Map->buffer, pic.get(), &pos);
 }
 
 void arcade::Lapin::updateMap(const arcade::IMap &map)
@@ -175,9 +173,9 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
                 const ITile& tile = map.at(layers, x, y);
 
                 if (tile.hasSprite())
-                    printOneSprite(&pos, tile);
+                    printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()].get());
                 else
-                    printOneColor(&pos, tile.getColor());
+                    printOneColor(pos, tile.getColor(), TileWidth, TileHeight);
                 pos.x += TileWidth;
             }
             pos.y += TileHeight;
@@ -185,11 +183,33 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
     }
 }
 
-void arcade::Lapin::updateGUI(arcade::IGUI &gui)
+void arcade::Lapin::printText(t_bunny_position const &pos, std::string const &text)
 {
-    // TODO
 }
 
+void arcade::Lapin::updateGUI(arcade::IGUI &gui)
+{
+    t_bunny_position pos;
+    uint32_t width;
+    uint32_t height;
+
+    for (size_t i = 0; i < gui.size(); ++i)
+    {
+        IComponent &component = gui.at(i);
+
+        pos.x = static_cast<int>(component.getX() * static_cast<double>(Width));
+        pos.y = static_cast<int>(component.getY() * static_cast<double>(Height));
+        width = static_cast<uint32_t>(component.getWidth() * static_cast<double>(Width));
+        height = static_cast<uint32_t>(component.getHeight() * static_cast<double>(Height));
+
+        if (component.hasSprite())
+            printOneSprite(pos, *Sprites[component.getBackgroundId()][0].get());
+        else
+            printOneColor(pos, component.getBackgroundColor(), width, height);
+
+        printText(pos, component.getText());
+    }
+}
 
 void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
 {
@@ -216,115 +236,7 @@ arcade::Lapin::Lapin() :
         Y(0),
         Window(nullptr),
         Map(nullptr),
-        Context({}),
-        Keyboard({
-                         {BKS_0, arcade::KeyboardKey::KB_0},
-                         {BKS_1, arcade::KeyboardKey::KB_1},
-                         {BKS_2, arcade::KeyboardKey::KB_2},
-                         {BKS_3, arcade::KeyboardKey::KB_3},
-                         {BKS_4, arcade::KeyboardKey::KB_4},
-                         {BKS_5, arcade::KeyboardKey::KB_5},
-                         {BKS_6, arcade::KeyboardKey::KB_6},
-                         {BKS_7, arcade::KeyboardKey::KB_7},
-                         {BKS_8, arcade::KeyboardKey::KB_8},
-                         {BKS_9, arcade::KeyboardKey::KB_9},
-                         {BKS_A, arcade::KeyboardKey::KB_A},
-                         {BKS_B, arcade::KeyboardKey::KB_B},
-                         {BKS_C, arcade::KeyboardKey::KB_C},
-                         {BKS_D, arcade::KeyboardKey::KB_D},
-                         {BKS_E, arcade::KeyboardKey::KB_E},
-                         {BKS_F, arcade::KeyboardKey::KB_F},
-                         {BKS_G, arcade::KeyboardKey::KB_G},
-                         {BKS_H, arcade::KeyboardKey::KB_H},
-                         {BKS_I, arcade::KeyboardKey::KB_I},
-                         {BKS_J, arcade::KeyboardKey::KB_J},
-                         {BKS_K, arcade::KeyboardKey::KB_K},
-                         {BKS_L, arcade::KeyboardKey::KB_L},
-                         {BKS_M, arcade::KeyboardKey::KB_M},
-                         {BKS_N, arcade::KeyboardKey::KB_N},
-                         {BKS_O, arcade::KeyboardKey::KB_O},
-                         {BKS_P, arcade::KeyboardKey::KB_P},
-                         {BKS_Q, arcade::KeyboardKey::KB_Q},
-                         {BKS_R, arcade::KeyboardKey::KB_R},
-                         {BKS_S, arcade::KeyboardKey::KB_S},
-                         {BKS_T, arcade::KeyboardKey::KB_T},
-                         {BKS_U, arcade::KeyboardKey::KB_U},
-                         {BKS_V, arcade::KeyboardKey::KB_V},
-                         {BKS_W, arcade::KeyboardKey::KB_W},
-                         {BKS_X, arcade::KeyboardKey::KB_X},
-                         {BKS_Y, arcade::KeyboardKey::KB_Y},
-                         {BKS_Z, arcade::KeyboardKey::KB_Z},
-                         {BKS_DOWN, arcade::KeyboardKey::KB_ARROW_DOWN},
-                         {BKS_UP, arcade::KeyboardKey ::KB_ARROW_UP},
-                         {BKS_RIGHT, arcade::KeyboardKey::KB_ARROW_RIGHT},
-                         {BKS_LEFT, arcade::KeyboardKey::KB_ARROW_LEFT},
-                         {'&', arcade::KeyboardKey::KB_AMPERSAND},
-                         {'\\', arcade::KeyboardKey::KB_BACKSLASH},
-                         {'*', arcade::KeyboardKey::KB_ASTERISK},
-                         {'@', arcade::KeyboardKey::KB_ATSYMBOL},
-                         {BKS_BACKSPACE, arcade::KeyboardKey::KB_BACKSPACE},
-                         {-1, arcade::KeyboardKey::KB_CAPSLOCK},
-                         {'^', arcade::KeyboardKey::KB_CIRCUMFLEX},
-                         {':', arcade::KeyboardKey::KB_COLON},
-                         {',', arcade::KeyboardKey::KB_COMMA},
-                         {BKS_DELETE, arcade::KeyboardKey::KB_DELETE},
-                         {'$', arcade::KeyboardKey::KB_DOLLAR},
-                         {'.', arcade::KeyboardKey::KB_DOT},
-                         {'\"', arcade::KeyboardKey::KB_DOUBLEQUOTE},
-                         {BKS_END, arcade::KeyboardKey::KB_END},
-                         {BKS_RETURN, arcade::KeyboardKey::KB_ENTER},
-                         {'=', arcade::KeyboardKey::KB_EQUALS},
-                         {BKS_ESCAPE, arcade::KeyboardKey::KB_ESCAPE},
-                         {'!', arcade::KeyboardKey::KB_EXCLAMATION},
-                         {BKS_F1, arcade::KeyboardKey::KB_FN1},
-                         {BKS_F2, arcade::KeyboardKey::KB_FN2},
-                         {BKS_F3, arcade::KeyboardKey::KB_FN3},
-                         {BKS_F4, arcade::KeyboardKey::KB_FN4},
-                         {BKS_F5, arcade::KeyboardKey::KB_FN5},
-                         {BKS_F6, arcade::KeyboardKey::KB_FN6},
-                         {BKS_F7, arcade::KeyboardKey::KB_FN7},
-                         {BKS_F8, arcade::KeyboardKey::KB_FN8},
-                         {BKS_F9, arcade::KeyboardKey::KB_FN9},
-                         {BKS_F10, arcade::KeyboardKey::KB_FN10},
-                         {BKS_F11, arcade::KeyboardKey::KB_FN11},
-                         {BKS_F12, arcade::KeyboardKey::KB_FN12},
-                         {'#', arcade::KeyboardKey::KB_HASHTAG},
-                         {BKS_HOME, arcade::KeyboardKey::KB_HOME},
-                         {'<', arcade::KeyboardKey::KB_INFERIOR},
-                         {BKS_LALT, arcade::KeyboardKey::KB_LALT},
-                         {BKS_LCONTROL, arcade::KeyboardKey::KB_LCTRL},
-                         {'{', arcade::KeyboardKey::KB_LEFTBRACE},
-                         {'[', arcade::KeyboardKey::KB_LEFTBRACKET},
-                         {'(', arcade::KeyboardKey::KB_LEFTPAREN},
-                         {BKS_LSHIFT, arcade::KeyboardKey::KB_LSHIFT},
-                         {'-', arcade::KeyboardKey::KB_MINUS},
-                         {BKS_PAGEDOWN ,arcade::KeyboardKey::KB_PAGEDOWN},
-                         {BKS_PAGEUP, arcade::KeyboardKey::KB_PAGEUP},
-                         {'%', arcade::KeyboardKey::KB_PERCENT},
-                         {'+', arcade::KeyboardKey::KB_PLUS},
-                         {'?', arcade::KeyboardKey::KB_QUESTION},
-                         {BKS_RALT, arcade::KeyboardKey::KB_RALT},
-                         {BKS_RCONTROL, arcade::KeyboardKey::KB_RCTRL},
-                         {'}', arcade::KeyboardKey::KB_RIGHTBRACE},
-                         {']', arcade::KeyboardKey::KB_RIGHTBRACKET},
-                         {')', arcade::KeyboardKey::KB_RIGHTPAREN},
-                         {BKS_RSHIFT, arcade::KeyboardKey::KB_RSHIFT},
-                         {';', arcade::KeyboardKey::KB_SEMICOLON},
-                         {' ', arcade::KeyboardKey::KB_SPACE},
-                         {'>', arcade::KeyboardKey::KB_SUPERIOR},
-                         {'\'', arcade::KeyboardKey::KB_SIMPLEQUOTE},
-                         {'/', arcade::KeyboardKey ::KB_SLASH},
-                         {BKS_TAB, arcade::KeyboardKey::KB_TAB},
-                         {'_', arcade::KeyboardKey::KB_UNDERSCORE},
-                         {'|', arcade::KeyboardKey::KB_VERTICALBAR}
-                 }),
-        Mouse({
-                      {BMB_RIGHT, arcade::MouseKey::M_RIGHT_CLICK},
-                      {BMB_LEFT, arcade::MouseKey::M_LEFT_CLICK},
-                      {BMB_MIDDLE, arcade::MouseKey::M_MIDDLE_CLICK},
-                      {BMB_EXTRABUTTON0, arcade::MouseKey::M_BT0},
-                      {BMB_EXTRABUTTON1, arcade::MouseKey::M_BT1}
-              })
+        Context({})
 {
     bunny_enable_full_blit(true);
     Map = bunny_new_picture(Width, Height);
@@ -341,6 +253,160 @@ arcade::Lapin::Lapin() :
     bunny_set_context(&Context);
 }
 
-void arcade::Bunny_picture_deleter::operator()(t_bunny_picture *picture) {
+void arcade::Bunny_picture_deleter::operator()(t_bunny_picture *picture)
+{
     bunny_delete_clipable(picture);
 }
+
+namespace arcade
+{
+    Lapin::t_keyboard Lapin::Keyboard = {
+            {BKS_0, arcade::KeyboardKey::KB_0},
+            {BKS_1, arcade::KeyboardKey::KB_1},
+            {BKS_2, arcade::KeyboardKey::KB_2},
+            {BKS_3, arcade::KeyboardKey::KB_3},
+            {BKS_4, arcade::KeyboardKey::KB_4},
+            {BKS_5, arcade::KeyboardKey::KB_5},
+            {BKS_6, arcade::KeyboardKey::KB_6},
+            {BKS_7, arcade::KeyboardKey::KB_7},
+            {BKS_8, arcade::KeyboardKey::KB_8},
+            {BKS_9, arcade::KeyboardKey::KB_9},
+            {BKS_A, arcade::KeyboardKey::KB_A},
+            {BKS_B, arcade::KeyboardKey::KB_B},
+            {BKS_C, arcade::KeyboardKey::KB_C},
+            {BKS_D, arcade::KeyboardKey::KB_D},
+            {BKS_E, arcade::KeyboardKey::KB_E},
+            {BKS_F, arcade::KeyboardKey::KB_F},
+            {BKS_G, arcade::KeyboardKey::KB_G},
+            {BKS_H, arcade::KeyboardKey::KB_H},
+            {BKS_I, arcade::KeyboardKey::KB_I},
+            {BKS_J, arcade::KeyboardKey::KB_J},
+            {BKS_K, arcade::KeyboardKey::KB_K},
+            {BKS_L, arcade::KeyboardKey::KB_L},
+            {BKS_M, arcade::KeyboardKey::KB_M},
+            {BKS_N, arcade::KeyboardKey::KB_N},
+            {BKS_O, arcade::KeyboardKey::KB_O},
+            {BKS_P, arcade::KeyboardKey::KB_P},
+            {BKS_Q, arcade::KeyboardKey::KB_Q},
+            {BKS_R, arcade::KeyboardKey::KB_R},
+            {BKS_S, arcade::KeyboardKey::KB_S},
+            {BKS_T, arcade::KeyboardKey::KB_T},
+            {BKS_U, arcade::KeyboardKey::KB_U},
+            {BKS_V, arcade::KeyboardKey::KB_V},
+            {BKS_W, arcade::KeyboardKey::KB_W},
+            {BKS_X, arcade::KeyboardKey::KB_X},
+            {BKS_Y, arcade::KeyboardKey::KB_Y},
+            {BKS_Z, arcade::KeyboardKey::KB_Z},
+            {BKS_DOWN, arcade::KeyboardKey::KB_ARROW_DOWN},
+            {BKS_UP, arcade::KeyboardKey ::KB_ARROW_UP},
+            {BKS_RIGHT, arcade::KeyboardKey::KB_ARROW_RIGHT},
+            {BKS_LEFT, arcade::KeyboardKey::KB_ARROW_LEFT},
+            {'&', arcade::KeyboardKey::KB_AMPERSAND},
+            {'\\', arcade::KeyboardKey::KB_BACKSLASH},
+            {'*', arcade::KeyboardKey::KB_ASTERISK},
+            {'@', arcade::KeyboardKey::KB_ATSYMBOL},
+            {BKS_BACKSPACE, arcade::KeyboardKey::KB_BACKSPACE},
+            {-1, arcade::KeyboardKey::KB_CAPSLOCK},
+            {'^', arcade::KeyboardKey::KB_CIRCUMFLEX},
+            {':', arcade::KeyboardKey::KB_COLON},
+            {',', arcade::KeyboardKey::KB_COMMA},
+            {BKS_DELETE, arcade::KeyboardKey::KB_DELETE},
+            {'$', arcade::KeyboardKey::KB_DOLLAR},
+            {'.', arcade::KeyboardKey::KB_DOT},
+            {'\"', arcade::KeyboardKey::KB_DOUBLEQUOTE},
+            {BKS_END, arcade::KeyboardKey::KB_END},
+            {BKS_RETURN, arcade::KeyboardKey::KB_ENTER},
+            {'=', arcade::KeyboardKey::KB_EQUALS},
+            {BKS_ESCAPE, arcade::KeyboardKey::KB_ESCAPE},
+            {'!', arcade::KeyboardKey::KB_EXCLAMATION},
+            {BKS_F1, arcade::KeyboardKey::KB_FN1},
+            {BKS_F2, arcade::KeyboardKey::KB_FN2},
+            {BKS_F3, arcade::KeyboardKey::KB_FN3},
+            {BKS_F4, arcade::KeyboardKey::KB_FN4},
+            {BKS_F5, arcade::KeyboardKey::KB_FN5},
+            {BKS_F6, arcade::KeyboardKey::KB_FN6},
+            {BKS_F7, arcade::KeyboardKey::KB_FN7},
+            {BKS_F8, arcade::KeyboardKey::KB_FN8},
+            {BKS_F9, arcade::KeyboardKey::KB_FN9},
+            {BKS_F10, arcade::KeyboardKey::KB_FN10},
+            {BKS_F11, arcade::KeyboardKey::KB_FN11},
+            {BKS_F12, arcade::KeyboardKey::KB_FN12},
+            {'#', arcade::KeyboardKey::KB_HASHTAG},
+            {BKS_HOME, arcade::KeyboardKey::KB_HOME},
+            {'<', arcade::KeyboardKey::KB_INFERIOR},
+            {BKS_LALT, arcade::KeyboardKey::KB_LALT},
+            {BKS_LCONTROL, arcade::KeyboardKey::KB_LCTRL},
+            {'{', arcade::KeyboardKey::KB_LEFTBRACE},
+            {'[', arcade::KeyboardKey::KB_LEFTBRACKET},
+            {'(', arcade::KeyboardKey::KB_LEFTPAREN},
+            {BKS_LSHIFT, arcade::KeyboardKey::KB_LSHIFT},
+            {'-', arcade::KeyboardKey::KB_MINUS},
+            {BKS_PAGEDOWN ,arcade::KeyboardKey::KB_PAGEDOWN},
+            {BKS_PAGEUP, arcade::KeyboardKey::KB_PAGEUP},
+            {'%', arcade::KeyboardKey::KB_PERCENT},
+            {'+', arcade::KeyboardKey::KB_PLUS},
+            {'?', arcade::KeyboardKey::KB_QUESTION},
+            {BKS_RALT, arcade::KeyboardKey::KB_RALT},
+            {BKS_RCONTROL, arcade::KeyboardKey::KB_RCTRL},
+            {'}', arcade::KeyboardKey::KB_RIGHTBRACE},
+            {']', arcade::KeyboardKey::KB_RIGHTBRACKET},
+            {')', arcade::KeyboardKey::KB_RIGHTPAREN},
+            {BKS_RSHIFT, arcade::KeyboardKey::KB_RSHIFT},
+            {';', arcade::KeyboardKey::KB_SEMICOLON},
+            {' ', arcade::KeyboardKey::KB_SPACE},
+            {'>', arcade::KeyboardKey::KB_SUPERIOR},
+            {'\'', arcade::KeyboardKey::KB_SIMPLEQUOTE},
+            {'/', arcade::KeyboardKey ::KB_SLASH},
+            {BKS_TAB, arcade::KeyboardKey::KB_TAB},
+            {'_', arcade::KeyboardKey::KB_UNDERSCORE},
+            {'|', arcade::KeyboardKey::KB_VERTICALBAR}
+    };
+
+    Lapin::t_mouse Lapin::Mouse = {
+            {BMB_RIGHT, arcade::MouseKey::M_RIGHT_CLICK},
+            {BMB_LEFT, arcade::MouseKey::M_LEFT_CLICK},
+            {BMB_MIDDLE, arcade::MouseKey::M_MIDDLE_CLICK},
+            {BMB_EXTRABUTTON0, arcade::MouseKey::M_BT0},
+            {BMB_EXTRABUTTON1, arcade::MouseKey::M_BT1}
+    };
+
+    Lapin::t_letters Lapin::Letters = {
+            {'a', BFT_A},
+            {'b', BFT_B},
+            {'c', BFT_C},
+            {'d', BFT_D},
+            {'e', BFT_E},
+            {'f', BFT_F},
+            {'g', BFT_G},
+            {'h', BFT_H},
+            {'i', BFT_I},
+            {'j', BFT_J},
+            {'k', BFT_K},
+            {'l', BFT_L},
+            {'m', BFT_M},
+            {'n', BFT_N},
+            {'o', BFT_O},
+            {'p', BFT_P},
+            {'q', BFT_Q},
+            {'r', BFT_R},
+            {'s', BFT_S},
+            {'t', BFT_T},
+            {'u', BFT_U},
+            {'v', BFT_V},
+            {'w', BFT_W},
+            {'x', BFT_X},
+            {'y', BFT_Y},
+            {'z', BFT_Z},
+            {'!', BFT_EXCLAMATION},
+            {'0', BFT_0},
+            {'1', BFT_1},
+            {'2', BFT_2},
+            {'3', BFT_3},
+            {'4', BFT_4},
+            {'5', BFT_5},
+            {'6', BFT_6},
+            {'7', BFT_7},
+            {'8', BFT_8},
+            {'9', BFT_9}
+    };
+};
