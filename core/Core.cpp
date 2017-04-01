@@ -36,7 +36,7 @@ void arcade::Core::run(std::string const& lib)
     int idx;
 
     pars.FeedVecLib("./lib");
-    pars.FeedVecGame("./games");
+    pars.FeedVecGame("./game");
     FeedLib();
     FeedGame();
     if ((idx = recupIndexLib(lib)) == -1)

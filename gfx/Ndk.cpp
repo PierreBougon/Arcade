@@ -16,17 +16,22 @@ bool arcade::Ndk::pollEvent(arcade::Event &e)
     int c = getch();
     if (keyboard.find(static_cast<char>(c)) != keyboard.end())
     {
+        e.type = arcade::ET_KEYBOARD;
         e.action = arcade::AT_PRESSED;
         e.kb_key = keyboard[static_cast<char>(c)];
         return (true);
     }
+    e.type = arcade::ET_NONE;
+    e.action = arcade::AT_NONE;
+    e.kb_key = arcade::KB_NONE;
     return false;
 }
 
 void arcade::Ndk::updateMap(arcade::IMap const &map)
 {
     const ILayer &layer = map[0];
-    std::vector<arcade::ITile *> vec;
+    const std::vector<arcade::ITile *> vec;
+    std::string tmp;
     int i(0);
     int j(0);
 
@@ -41,38 +46,10 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
     {
         vec = layer[i];
         j = 0;
-        for (std::vector<arcade::ITile *>::iterator it = vec.begin(); it != vec.end(); ++it)
+        for (std::vector<arcade::ITile *>::const_iterator it = vec.begin(); it != vec.end(); ++it)
         {
-            switch ((*it)->getTypeEv())
-            {
-                case arcade::TileTypeEvolution::EMPTY:
-                    mvwprintw(win, i, j, " ");
-                    break;
-                case arcade::TileTypeEvolution::BLOCK:
-                    mvwprintw(win, i, j, "X");
-                    break;
-                case arcade::TileTypeEvolution::POWERUP:
-                    mvwprintw(win, i, j, "P");
-                    break;
-                case arcade::TileTypeEvolution::PLAYER:
-                    mvwprintw(win, i, j, "O");
-                    break;
-                default:
-                    mvwprintw(win, i, j, " ");
-                    break;
-            }
-        }
-    }
-}
-
-void arcade::Ndk::updateGUI(arcade::IGUI const &gui)
-{
-    for (std::map<std::string, std::unique_ptr<IComponent>>::const_iterator it = static_cast<const arcade::Gui&>((gui)).getComponents().begin(); it != static_cast<const arcade::Gui&>((gui)).getComponents().end(); ++it)
-    {
-        if ((*it).second.get()->getType() == arcade::TEXT)
-        {
-            mvwprintw(stdscr, (*it).second.get()->getPos().second, (*it).second.get()->getPos().first, "%s",
-                      (*it).second.get()->getValue().c_str());
+            tmp = vecString[(*it)->getSpriteId()][(*it)->getSpritePos()];
+            mvwprintw(win, i, j, tmp.c_str());
         }
     }
 }
@@ -125,7 +102,7 @@ arcade::Ndk::Ndk() : keyboard({
                               {KEY_RIGHT, arcade::KeyboardKey::KB_ARROW_RIGHT},
                               {KEY_LEFT, arcade::KeyboardKey::KB_ARROW_LEFT},
                               {'&', arcade::KeyboardKey::KB_AMPERSAND},
-                              {'\\', arcade::KeyboardKey::KB_ANTISLASH},
+                              {'\\', arcade::KeyboardKey::KB_BACKSLASH},
                               {'*', arcade::KeyboardKey::KB_ASTERISK},
                               {'@', arcade::KeyboardKey::KB_ATSYMBOL},
                               {KEY_BACKSPACE, arcade::KeyboardKey::KB_BACKSPACE},
@@ -139,7 +116,7 @@ arcade::Ndk::Ndk() : keyboard({
                               {'\"', arcade::KeyboardKey::KB_DOUBLEQUOTE},
                               {KEY_END, arcade::KeyboardKey::KB_END},
                               {KEY_ENTER, arcade::KeyboardKey::KB_ENTER},
-                              {'=', arcade::KeyboardKey::KB_EQUAL},
+                              {'=', arcade::KeyboardKey::KB_EQUALS},
                               {KEY_EXIT, arcade::KeyboardKey::KB_ESCAPE},
                               {'!', arcade::KeyboardKey::KB_EXCLAMATION},
                               {KEY_F(1), arcade::KeyboardKey::KB_FN1},
@@ -189,6 +166,9 @@ arcade::Ndk::Ndk() : keyboard({
     keypad(stdscr, true);
     set_escdelay(0);
     noecho();
+    cbreak();
+    raw();
+    halfdelay(3);
     curs_set(0);
     pass = false;
 }
@@ -202,4 +182,37 @@ void arcade::Ndk::display()
 void arcade::Ndk::clear()
 {
     ::clear();
+}
+
+void arcade::Ndk::soundControl(const arcade::Sound &sound)
+{
+}
+
+void arcade::Ndk::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
+{
+    std::string tmp;
+
+    for (std::vector<std::unique_ptr<arcade::ISprite>>::iterator it = sprites.begin(); it != sprites.end(); ++it)
+    {
+        for (size_t i = 0; i < (*it)->spritesCount(); ++i)
+        {
+            if (i == 0)
+                tmp = (*it)->getAscii(i);
+            else
+                tmp += (*it)->getAscii(i);
+        }
+        vecString.push_back(tmp);
+    }
+}
+
+void arcade::Ndk::updateGUI(arcade::IGUI &gui)
+{
+    for (std::map<std::string, std::unique_ptr<IComponent>>::const_iterator it = static_cast<const arcade::Gui&>((gui)).getComponents().begin(); it != static_cast<const arcade::Gui&>((gui)).getComponents().end(); ++it)
+    {
+        if ((*it).second.get()->getText() != "")
+        {
+            mvwprintw(stdscr, static_cast<int>((*it).second.get()->getX()), static_cast<int>((*it).second.get()->getY()), "%s",
+             (*it).second.get()->getText());
+        }
+    }
 }

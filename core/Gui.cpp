@@ -23,3 +23,20 @@ const std::map<std::string, std::unique_ptr<IComponent>> &arcade::Gui::getCompon
 {
     return components;
 }
+
+size_t arcade::Gui::size() const
+{
+    return components.size();
+}
+
+arcade::IComponent &arcade::Gui::at(std::size_t n)
+{
+    size_t counter(0);
+
+    for (std::map<std::string, std::unique_ptr<IComponent>>::iterator it = components.begin(); it != components.end() ; ++it)
+    {
+        if (counter == n)
+            return (*((*it).second.get()));
+        counter++;
+    }
+}
