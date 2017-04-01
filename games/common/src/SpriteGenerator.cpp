@@ -6,12 +6,12 @@
 
 size_t arcade::SpriteGenerator::spritesCount() const
 {
-    return (Size);
+    return (SpritesCount);
 }
 
 std::string arcade::SpriteGenerator::getGraphicPath(size_t pos) const
 {
-    return Path + Sprite + std::to_string(pos) + Ext;
+    return Path + Name + std::to_string(pos) + Ext;
 }
 
 char arcade::SpriteGenerator::getAscii(size_t pos) const
@@ -26,9 +26,8 @@ arcade::SpriteGenerator::SpriteGenerator(std::string const &ascii,
                                          std::string const &ext) :
         Ascii(ascii),
         Path(path),
-        Sprite(sprite),
-        Size(spritesCount),
+        Name(sprite),
+        SpritesCount(spritesCount),
         Ext(ext)
 {
-
 }
