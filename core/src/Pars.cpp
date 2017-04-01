@@ -3,7 +3,7 @@
 //
 
 #include <dirent.h>
-#include "../include/Pars.hpp"
+#include "Pars.hpp"
 
 arcade::Pars::Pars()
 {

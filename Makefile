@@ -5,39 +5,20 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Tue Mar 14 18:47:35 2017 brout_m
+## Last update Sat Apr  1 17:32:35 2017 bougon_p
 ##
 
-ARCADE=		arcade
+include mk/colors.mk mk/commands.mk mk/definitions.mk
 
-SRC=
-
-OBJ=		$(SRC:.cpp=.o)
-
-INC=		-I./include/ -I./interfaces/
-
-ifeq ($(DEBUG), yes)
-CXXFLAGS=	 -std=c++14 -g -W -Wall -Wextra -Werror $(INC)
-else
-CXXFLAGS=	 -std=c++14 -W -Wall -Wextra -Werror $(INC)
-endif
-
-$(ARCADE): $(OBJ)
-	$(CXX) -o $(NANOTEKSPICE) $(OBJMAIN) $(INC) -L./
-
-##
-##$(ARCADE): $(OBJ)
-##	ar rc $(NANOLIBRARY) $(OBJ)
-##	ranlib $(NANOLIBRARY)
-
-all: $(ARCADE)
+all:
+	@make -s -C core/
 
 clean:
-	rm -rf $(OBJ)
+	@make -s -C core/ clean
 
 fclean: clean
-	rm -rf $(ARCADE)
+	@make -s -C core/ fclean
 
-re: fclean all
+re:	fclean all
 
 .PHONY: make clean fclean re

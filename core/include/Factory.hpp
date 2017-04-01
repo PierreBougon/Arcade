@@ -5,9 +5,9 @@
 #ifndef CPP_ARCADE_FACTORY_HPP
 #define CPP_ARCADE_FACTORY_HPP
 
-#include <GameState.hpp>
 #include <iostream>
 #include <bits/unique_ptr.h>
+#include "GameState.hpp"
 #include "IComponent.hpp"
 
 namespace arcade
