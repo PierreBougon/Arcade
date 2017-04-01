@@ -28,7 +28,8 @@ namespace arcade
         void setTypeEvo(TileTypeEvolution typeEvo);
         void setSpriteId(size_t id);
         void setSpritePos(size_t pos);
-        Tile &operator=(IComponent const& component);
+        void setShiftX(double shift);
+        void setShiftY(double shift);
 
     private:
         TileType Type;

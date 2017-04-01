@@ -77,9 +77,12 @@ void arcade::Tile::setSpritePos(size_t pos)
     Pos = pos;
 }
 
-arcade::Tile &arcade::Tile::operator=(const arcade::IComponent &component)
+void arcade::Tile::setShiftX(double shift)
 {
-    component.
-    return *this;
+    ShiftX = shift;
 }
 
+void arcade::Tile::setShiftY(double shift)
+{
+    ShiftY = shift;
+}
