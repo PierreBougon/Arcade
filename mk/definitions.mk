@@ -4,11 +4,20 @@
 
 RELEASE	=	NO
 
+DLL	=	NO
+
 # Compilation definitions
 
-CXXFLAGS=	-std=c++14 -W -Wall -Wextra
+CXXFLAGS	=	-std=c++14 -W -Wall -Wextra
 ifeq ($(RELEASE), YES)
-CXXFLAGS+=	-Werror
+CXXFLAGS	+=	-Werror
+endif
+ifeq ($(DLL), YES)
+CXXFLAGS	+=	-fPic
 endif
 
 CXX	=	g++
+
+ifeq ($(DLL), YES)
+CXX	+=	-shared
+endif
