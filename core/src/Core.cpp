@@ -2,7 +2,7 @@
 // Created by duhieu_b on 15/03/17.
 //
 
-#include "../include/Core.hpp"
+#include "Core.hpp"
 
 arcade::Core::Core()
 {
@@ -32,6 +32,4 @@ void arcade::Core::run(std::string const& lib)
 {
     pars.FeedVecLib("./lib");
     pars.FeedVecGame("./games");
-
 }
-

@@ -7,8 +7,8 @@
 
 #include <iostream>
 #include <vector>
-#include "../interfaces/IGame.hpp"
-#include "../interfaces/IGfxLib.hpp"
+#include "IGame.hpp"
+#include "IGfxLib.hpp"
 #include "Pars.hpp"
 
 namespace arcade

@@ -2,7 +2,7 @@
 // Created by duhieu_b on 17/03/17.
 //
 
-#include <Factory.hpp>
+#include "Factory.hpp"
 #include "Gui.hpp"
 
 arcade::Gui::~Gui()
