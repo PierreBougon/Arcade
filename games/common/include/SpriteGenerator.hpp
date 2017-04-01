@@ -27,8 +27,8 @@ namespace arcade
     private:
         std::string     Ascii;
         std::string     Path;
-        std::string     Sprite;
-        size_t          Size;
+        std::string     Name;
+        size_t          SpritesCount;
         std::string     Ext;
     };
 }
