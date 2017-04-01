@@ -58,7 +58,7 @@ fabric.properties
 *.pch
 
 # Compiled Dynamic libraries
-*.so
+#*.so
 *.dylib
 *.dll
 
@@ -86,8 +86,8 @@ install_manifest.txt
 CTestTestfile.cmake
 /CMakeLists.txt
 /cmake-build-debug/
+
 /interfaces/
-/lib/sfml/dep/SFML-2.4.2/
 
 *README*
 *LICENSE*
