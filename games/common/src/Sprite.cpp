@@ -22,3 +22,7 @@ size_t arcade::Sprite::advance()
         ++Index;
     return tmp;
 }
+
+size_t arcade::Sprite::getSpriteId() const {
+    return Id;
+}

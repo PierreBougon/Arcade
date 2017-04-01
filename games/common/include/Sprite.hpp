@@ -15,6 +15,7 @@ namespace arcade
     public:
         ~Sprite() {};
         Sprite(size_t id, size_t spriteCount);
+        size_t getSpriteId() const;
         size_t advance();
 
     private:
