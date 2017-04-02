@@ -65,6 +65,12 @@ namespace arcade
 
         void drawColor(ITile const *tile, IMap const &map, size_t x, size_t y);
 
+        void drawColor(IComponent *component);
+
+        void drawSprite(ITile const *tile, IMap const &map, size_t x, size_t y);
+
+        void drawSprite(IComponent *component);
+
         sf::Vector2f getTileSize(IMap const &map);
 
         float getTilePosX(size_t x, IMap const &map);

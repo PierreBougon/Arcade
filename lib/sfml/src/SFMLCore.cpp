@@ -35,19 +35,6 @@ bool arcade::SFMLCore::doesSupportSound() const
     return true;
 }
 
-void arcade::SFMLCore::loadSounds(std::vector<std::string> const &sounds)
-{
-    std::unique_ptr<sf::Music> tmpSound;
-
-    for (std::vector<std::string>::const_iterator it = sounds.begin(); it != sounds.end() ; ++it)
-    {
-        tmpSound = std::make_unique<sf::Music>();
-        if (!tmpSound->openFromFile(*it))
-            throw std::bad_alloc();
-        this->sounds.push_back(tmpSound);
-    }
-}
-
 void arcade::SFMLCore::soundControl(Sound const &sound)
 {
     if (sounds[sound.id] && sound.mode == SoundAction::PLAY)
@@ -69,13 +56,31 @@ void arcade::SFMLCore::updateMap(const arcade::IMap &map)
                 tile = &map.at(l, x, y);
                 if (tile->hasSprite())
                 {
-                    window.draw(sprites[tile->getSpriteId()].sprite);
+                    drawSprite(tile, map, x, y);
                 }
                 else
                 {
                     drawColor(tile, map, x, y);
                 }
             }
+        }
+    }
+}
+
+void arcade::SFMLCore::updateGUI(arcade::IGUI &gui)
+{
+    IComponent *component;
+
+    for (size_t i = 0; i < gui.size(); ++i)
+    {
+        component = &gui.at(i);
+        if (component->hasSprite())
+        {
+            drawSprite(component);
+        }
+        else
+        {
+            drawColor(component);
         }
     }
 }
@@ -113,19 +118,6 @@ void arcade::SFMLCore::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>>
     }
 }
 
-void arcade::SFMLCore::updateGUI(arcade::IGUI &gui)
-{
-/*
-    IComponent const *component;
-
-    for (size_t i = 0; i < gui.size(); ++i)
-    {
-        component = &gui.at(i);
-        component.
-    }
-*/
-}
-
 void arcade::SFMLCore::drawColor(ITile const *tile, IMap const &map, size_t x, size_t y)
 {
     //TODO calculate size of a tile in a relative way
@@ -137,6 +129,38 @@ void arcade::SFMLCore::drawColor(ITile const *tile, IMap const &map, size_t x, s
     colorSprite.setPosition(getTilePosX(x, map) + static_cast<float>(tile->getShiftX()),
                             getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
     window.draw(colorSprite);
+}
+
+void arcade::SFMLCore::drawColor(IComponent *component)
+{
+    sf::Vector2f size(static_cast<float>(component->getWidth()),
+                      static_cast<float>(component->getHeight()));
+
+    //TODO calculate size of a tile in a relative way
+    this->colorSprite.setSize(size);
+    this->colorSprite.setFillColor(sf::Color(component->getBackgroundColor().r,
+                                             component->getBackgroundColor().g,
+                                             component->getBackgroundColor().b,
+                                             component->getBackgroundColor().a));
+    colorSprite.setPosition(static_cast<float>(component->getX()), static_cast<float>(component->getY()));
+    window.draw(colorSprite);
+}
+
+void arcade::SFMLCore::drawSprite(ITile const *tile, IMap const &map, size_t x, size_t y)
+{
+    GfxSprite &sprite = sprites[tile->getSpriteId()];
+
+    sprite.sprite.setPosition(getTilePosX(x, map) + static_cast<float>(tile->getShiftX()),
+                              getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
+    window.draw(sprite.sprite);
+}
+
+void arcade::SFMLCore::drawSprite(IComponent *component)
+{
+    GfxSprite &sprite = sprites[component->getBackgroundId()];
+
+    sprite.sprite.setPosition(static_cast<float>(component->getX()), static_cast<float>(component->getY()));
+    window.draw(sprite.sprite);
 }
 
 sf::Vector2f arcade::SFMLCore::getTileSize(IMap const &map)
@@ -156,6 +180,11 @@ float arcade::SFMLCore::getTilePosX(size_t x, IMap const &map)
 float arcade::SFMLCore::getTilePosY(size_t y, IMap const &map)
 {
     return getTileSize(map).y * y;
+}
+
+void arcade::SFMLCore::loadSounds(std::vector<std::pair<std::string, arcade::SoundType>> const &sounds)
+{
+    // Call soud manager load sound
 }
 
 namespace arcade
