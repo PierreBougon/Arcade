@@ -86,3 +86,9 @@ void arcade::Tile::setShiftY(double shift)
 {
     ShiftY = shift;
 }
+
+arcade::Tile &arcade::Tile::operator=(const arcade::Entity &entity)
+{
+
+    return *this;
+}

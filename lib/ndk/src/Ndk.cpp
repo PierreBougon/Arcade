@@ -2,7 +2,7 @@
 // Created by duhieu_b on 15/03/17.
 //
 
-#include "Ndk.hpp"
+#include "../include/Ndk.hpp"
 #include "Gui.hpp"
 #include <Protocol.hpp>
 #include <curses.h>

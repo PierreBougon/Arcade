@@ -4,7 +4,7 @@
 
 #include <exception>
 #include <memory>
-#include "Lapin.hpp"
+#include "../include/Lapin.hpp"
 
 t_bunny_response keyboardPollEvents(t_bunny_event_state state,
                                     t_bunny_keysym symbole,
