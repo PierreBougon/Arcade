@@ -31,8 +31,12 @@ const ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
     return static_cast<const ITile&>(_map[layer][y][x]);
 }
 
-void arcade::Map::addLayer()
+void arcade::Map::setLayer(std::vector<arcade::Entity> &entities, size_t layer)
 {
-    _map.push_back(t_layer(getHeight(), t_line(getWidth(), arcade::Tile())));
-}
+    for (Entity &entity : entities)
+    {
+        const Vector2i &abs = entity.getAbs();
 
+        _map[layer][abs.y][abs.x] = entity;
+    }
+}

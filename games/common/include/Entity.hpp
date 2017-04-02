@@ -68,6 +68,12 @@ namespace arcade
         void unSetSprite();
 
         // Special
+        void pauseAnimation();
+        void playAnimation();
+        void resetAnimation();
+        void setAnimationRepeat();
+        void setAnimationUnique();
+        void setAnimationMode(arcade::Sprite::SpriteMode mode);
         size_t advance();
     };
 }

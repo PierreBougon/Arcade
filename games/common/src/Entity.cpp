@@ -76,7 +76,6 @@ arcade::Entity::Entity(const arcade::Vector2i &pos,
 
 }
 
-
 arcade::TileType arcade::Entity::getType() const
 {
     return type;
@@ -136,4 +135,34 @@ void arcade::Entity::setSprite(size_t id, size_t spriteCount, size_t index)
 void arcade::Entity::unSetSprite()
 {
     spriteSet = false;
+}
+
+void arcade::Entity::playAnimation()
+{
+    sprite.resume();
+}
+
+void arcade::Entity::pauseAnimation()
+{
+    sprite.pause();
+}
+
+void arcade::Entity::resetAnimation()
+{
+    sprite.reset();
+}
+
+void arcade::Entity::setAnimationUnique()
+{
+    sprite.setMode(Sprite::UNIQUE);
+}
+
+void arcade::Entity::setAnimationRepeat()
+{
+    sprite.setMode(Sprite::REPEAT);
+}
+
+void arcade::Entity::setAnimationMode(arcade::Sprite::SpriteMode mode)
+{
+    sprite.setMode(mode);
 }

@@ -2,19 +2,21 @@
 // Created by brout_m on 01/04/17.
 //
 
-#include "../include/Sprite.hpp"
+#include "Sprite.hpp"
 
 arcade::Sprite::Sprite(size_t id, size_t spriteCount) :
     Id(id),
     SpriteCount(spriteCount),
-    Index(0)
+    Index(0),
+    Paused(true)
 {
 }
 
 arcade::Sprite::Sprite() :
     Id(0),
     SpriteCount(0),
-    Index(0)
+    Index(0),
+    Paused(true)
 {
 }
 
@@ -22,11 +24,19 @@ size_t arcade::Sprite::advance()
 {
     size_t tmp;
 
+    if (Paused)
+        return (Index);
+
     tmp = Index;
+
     if (Index == SpriteCount - 1)
         Index = 0;
     else
         ++Index;
+
+    if (!Index && Mode == Sprite::UNIQUE)
+        Paused = true;
+
     return tmp;
 }
 
@@ -45,4 +55,25 @@ void arcade::Sprite::setSprite(size_t id, size_t spritesCount, size_t index)
     Id = id;
     Index = index;
     SpriteCount = spritesCount;
+}
+
+void arcade::Sprite::pause()
+{
+    Paused = true;
+}
+
+void arcade::Sprite::resume()
+{
+    Paused = false;
+}
+
+void arcade::Sprite::reset()
+{
+    Paused = true;
+    Index = 0;
+}
+
+void arcade::Sprite::setMode(arcade::Sprite::SpriteMode mode)
+{
+    Mode = mode;
 }
