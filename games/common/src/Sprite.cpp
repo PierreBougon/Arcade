@@ -23,6 +23,12 @@ size_t arcade::Sprite::advance()
     return tmp;
 }
 
-size_t arcade::Sprite::getSpriteId() const {
+size_t arcade::Sprite::getSpriteId() const
+{
     return Id;
+}
+
+size_t arcade::Sprite::getSpriteCount() const
+{
+    return SpriteCount;
 }
