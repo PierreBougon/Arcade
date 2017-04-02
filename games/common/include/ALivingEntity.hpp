@@ -3,9 +3,9 @@
 //
 
 #ifndef CPP_ARCADE_ALIVINGENTITY_HPP
-#define CPP_ARCADE_ALIVINGENTITY_HPP
+# define CPP_ARCADE_ALIVINGENTITY_HPP
 
-#include "Entity.hpp"
+# include "Entity.hpp"
 
 namespace arcade
 {
@@ -31,13 +31,13 @@ namespace arcade
                       TileTypeEvolution TypeEvolution,
                       Color col,
                       size_t hp,
-                      Teams const& type);
+                      Teams type);
         ALivingEntity(Vector2i pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
                       size_t hp,
-                      Teams const& type);
+                      Teams type);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;
