@@ -9,7 +9,8 @@ arcade::DestroyableObject::DestroyableObject(arcade::Vector2i pos,
                                              size_t spriteCount,
                                              TileType Type,
                                              TileTypeEvolution typeEvolution,
-                                             Color col, size_t Hp) :
+                                             Color col,
+                                             size_t Hp) :
         LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, true),
         hp(Hp)
 {

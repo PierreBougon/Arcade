@@ -22,6 +22,7 @@ namespace arcade
         TileType type;
         TileTypeEvolution typeEvolution;
         Color color;
+        size_t layer;
         bool spriteSet;
         Sprite sprite;
         Entity() = delete;
@@ -70,6 +71,5 @@ namespace arcade
         size_t advance();
     };
 }
-
 
 #endif //CPP_ARCADE_ENTITY_HPP
