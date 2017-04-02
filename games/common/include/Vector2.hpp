@@ -26,7 +26,7 @@ namespace arcade
         bool operator!=(Vector2 const& comp);
     };
 
-    Vector2 &Vector2::operator=(const T &cpy)
+    Vector2 &Vector2::operator=(const Vector2 &cpy)
     {
         x = cpy.x;
         y = cpy.y;
@@ -41,6 +41,7 @@ namespace arcade
     {
     }
 
+    template <typename T>
     Vector2::Vector2(T a, T b) : x(a), y(b)
     {
     }
