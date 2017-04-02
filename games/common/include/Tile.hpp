@@ -31,7 +31,7 @@ namespace arcade
         void setSpritePos(size_t pos);
         void setShiftX(double shift);
         void setShiftY(double shift);
-        Tile& operator=(Entity const& entity);
+        Tile& operator=(Entity &entity);
 
     private:
         TileType Type;

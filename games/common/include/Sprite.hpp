@@ -14,10 +14,12 @@ namespace arcade
     {
     public:
         ~Sprite() {};
-        Sprite(size_t id, size_t spriteCount);
+        Sprite();
+        Sprite(size_t id, size_t spriteCount = 1);
         size_t getSpriteId() const;
         size_t getSpriteCount() const;
         size_t advance();
+        void setSprite(size_t id, size_t spriteCount = 1, size_t index = 0);
 
     private:
         size_t Id;

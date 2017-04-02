@@ -87,8 +87,18 @@ void arcade::Tile::setShiftY(double shift)
     ShiftY = shift;
 }
 
-arcade::Tile &arcade::Tile::operator=(const arcade::Entity &entity)
+arcade::Tile &arcade::Tile::operator=(arcade::Entity &entity)
 {
+    const Vector2d &shift = entity.getShift();
 
+    Type = entity.getType();
+    TypeEvo = entity.getTypeEvolution();
+    _Color = entity.getColor();
+    SpriteId = entity.getSpriteId();
+    Sprite = entity.hasSprite();
+    if (Sprite)
+        Pos = entity.advance();
+    ShiftX = shift.x;
+    ShiftY = shift.y;
     return *this;
 }

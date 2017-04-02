@@ -13,9 +13,23 @@ namespace arcade
     {
     private:
         bool collidable;
+
     public:
         LifelessEntity(Entity const& cpy, bool collide);
-        LifelessEntity(Vector2i pos, size_t count, size_t spriteCount, TileType Type, TileTypeEvolution TypeEvolution, Color col, bool collider);
+        // With Sprite
+        LifelessEntity(Vector2i pos,
+                       size_t count,
+                       size_t spriteCount,
+                       TileType Type,
+                       TileTypeEvolution TypeEvolution,
+                       Color col,
+                       bool collider);
+        // Without Sprite
+        LifelessEntity(Vector2i pos,
+                       TileType Type,
+                       TileTypeEvolution TypeEvolution,
+                       Color col,
+                       bool collide);
         virtual ~LifelessEntity() {}
 
         bool isCollidable() const;

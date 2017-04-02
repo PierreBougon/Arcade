@@ -19,22 +19,37 @@ namespace arcade
         Vector2i abs;
         Vector2d shift;
         Vector2i prev;
-        Sprite sprite;
         TileType type;
         TileTypeEvolution typeEvolution;
         Color color;
+        bool spriteSet;
+        Sprite sprite;
         Entity() = delete;
 
     public:
         // Constructors / Destructor
         virtual ~Entity() {}
         Entity(Entity const& cpy);
-        Entity(Vector2i const& pos, size_t id, size_t spriteCount, TileType Type, TileTypeEvolution TypeEvolution, Color col);
+
+        // Without Sprite
+        Entity(Vector2i const& pos,
+               TileType Type,
+               TileTypeEvolution TypeEvolution,
+               Color col);
+
+        // With Sprite
+        Entity(Vector2i const& pos,
+               size_t id,
+               size_t spriteCount,
+               TileType Type,
+               TileTypeEvolution TypeEvolution,
+               Color col);
 
         // Getters
         const Vector2i &getAbs() const;
         const Vector2d &getShift() const;
         const Vector2i &getPrev() const;
+        bool hasSprite() const;
         size_t getSpriteId() const;
         TileType getType() const;
         TileTypeEvolution getTypeEvolution() const;
@@ -48,6 +63,8 @@ namespace arcade
         void setType(TileType type);
         void setTypeEvolution(TileTypeEvolution typeEvolution);
         void setColor(const Color &color);
+        void setSprite(size_t id, size_t spriteCount = 1, size_t index = 0);
+        void unSetSprite();
 
         // Special
         size_t advance();

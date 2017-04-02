@@ -13,9 +13,25 @@ namespace arcade
     {
     private:
         size_t hp;
+
     public:
         DestroyableObject(Entity const& cpy, size_t Hp);
-        DestroyableObject(Vector2i pos, size_t idSprite, size_t spriteCount, TileType Type, TileTypeEvolution TypeEvolution, Color col, size_t Hp);
+
+        // With Sprite
+        DestroyableObject(Vector2i pos,
+                          size_t idSprite,
+                          size_t spriteCount,
+                          TileType Type,
+                          TileTypeEvolution TypeEvolution,
+                          Color col,
+                          size_t Hp);
+
+        // Without Sprite
+        DestroyableObject(Vector2i pos,
+                          TileType Type,
+                          TileTypeEvolution TypeEvolution,
+                          Color col,
+                          size_t Hp);
         virtual ~DestroyableObject() {}
 
         bool isDestroy() const;

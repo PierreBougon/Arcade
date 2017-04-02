@@ -43,12 +43,39 @@ size_t arcade::Entity::getSpriteCount() const
     return sprite.getSpriteCount();
 }
 
-arcade::Entity::Entity(const arcade::Vector2i &pos, size_t id, size_t spriteCount, arcade::TileType Type,
-                       arcade::TileTypeEvolution TypeEvolution, arcade::Color col) :
-    abs(pos), shift({0, 0}), prev(pos), sprite(id, spriteCount), type(Type), typeEvolution(TypeEvolution), color(col)
+arcade::Entity::Entity(const arcade::Vector2i &pos,
+                       size_t id,
+                       size_t spriteCount,
+                       arcade::TileType Type,
+                       arcade::TileTypeEvolution TypeEvolution,
+                       arcade::Color col) :
+    abs(pos),
+    shift({0, 0}),
+    prev(pos),
+    type(Type),
+    typeEvolution(TypeEvolution),
+    color(col),
+    spriteSet(true),
+    sprite(id, spriteCount)
 {
 
 }
+
+arcade::Entity::Entity(const arcade::Vector2i &pos,
+                       arcade::TileType Type,
+                       arcade::TileTypeEvolution TypeEvolution,
+                       arcade::Color col) :
+    abs(pos),
+    shift({0, 0}),
+    prev(pos),
+    type(Type),
+    typeEvolution(TypeEvolution),
+    color(col),
+    spriteSet(false)
+{
+
+}
+
 
 arcade::TileType arcade::Entity::getType() const
 {
@@ -93,4 +120,20 @@ void arcade::Entity::setShift(const arcade::Vector2d &Shift)
 void arcade::Entity::setPrev(const arcade::Vector2i &Prev)
 {
     prev = Prev;
+}
+
+bool arcade::Entity::hasSprite() const
+{
+    return spriteSet;
+}
+
+void arcade::Entity::setSprite(size_t id, size_t spriteCount, size_t index)
+{
+    sprite.setSprite(id, spriteCount, index);
+    spriteSet = true;
+}
+
+void arcade::Entity::unSetSprite()
+{
+    spriteSet = false;
 }

@@ -4,11 +4,29 @@
 
 #include "DestroyableObject.hpp"
 
-arcade::DestroyableObject::DestroyableObject(arcade::Vector2i pos, size_t idSprite, size_t spriteCount, TileType Type, TileTypeEvolution typeEvolution, Color col, size_t Hp) :
-        LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, true), hp(Hp)
+arcade::DestroyableObject::DestroyableObject(arcade::Vector2i pos,
+                                             size_t idSprite,
+                                             size_t spriteCount,
+                                             TileType Type,
+                                             TileTypeEvolution typeEvolution,
+                                             Color col, size_t Hp) :
+        LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, true),
+        hp(Hp)
 {
 
 }
+
+arcade::DestroyableObject::DestroyableObject(arcade::Vector2i pos,
+                                             arcade::TileType Type,
+                                             arcade::TileTypeEvolution TypeEvolution,
+                                             arcade::Color col,
+                                             size_t Hp) :
+        LifelessEntity(pos, Type, TypeEvolution, col, true),
+        hp(Hp)
+{
+
+}
+
 
 arcade::DestroyableObject::DestroyableObject(arcade::Entity const& cpy, size_t Hp) : LifelessEntity(cpy, true), hp(Hp)
 {
