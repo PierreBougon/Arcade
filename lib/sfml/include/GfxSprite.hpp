@@ -12,15 +12,16 @@
 
 namespace arcade
 {
-    class GfxSprite
+    struct GfxSprite
     {
     private:
-        size_t      id;
-        sf::Texture texture;
-        sf::Sprite  sprite;
+        std::string     path;
 
     public:
+        sf::Texture     texture;
+        sf::Sprite      sprite;
 
+        GfxSprite(const std::string &path);
     };
 }
 
