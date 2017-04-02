@@ -3,9 +3,9 @@
 //
 
 #include <SFML/Window/Event.hpp>
-#include "../include/SFMLCore.hpp"
+#include "SFMLCore.hpp"
 
-arcade::SFMLCore::SFMLCore() : width(800), height(600), x(0), y(0), window(), map(), gui()
+arcade::SFMLCore::SFMLCore() : width(800), height(600), x(0), y(0), window()
 {
     sf::VideoMode videoMode(width, height);
 
@@ -69,8 +69,11 @@ void arcade::SFMLCore::updateMap(const arcade::IMap &map)
                 tile = &map.at(l, x, y);
                 if (tile->hasSprite())
                 {
-                    window.draw(sprites[tile->getSpriteId()]);
-
+                    window.draw(sprites[tile->getSpriteId()].sprite);
+                }
+                else
+                {
+                    drawColor(tile, map, x, y);
                 }
             }
         }
@@ -101,21 +104,58 @@ void arcade::SFMLCore::updateMousePosition(arcade::MousePos &pos, sf::Vector2i s
 
 void arcade::SFMLCore::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
 {
-
+    for (std::vector<std::unique_ptr<arcade::ISprite>>::iterator it = sprites.begin(); it < sprites.end(); ++it)
+    {
+        for (size_t i = 0; i < (*it)->spritesCount(); ++i)
+        {
+            this->sprites.push_back((*it)->getGraphicPath(i));
+        }
+    }
 }
 
-void arcade::SFMLCore::updateGUI(arcade::IGUI &_gui)
+void arcade::SFMLCore::updateGUI(arcade::IGUI &gui)
 {
-    gui = _gui;
+/*
+    IComponent const *component;
+
+    for (size_t i = 0; i < gui.size(); ++i)
+    {
+        component = &gui.at(i);
+        component.
+    }
+*/
 }
 
-void arcade::SFMLCore::drawMap()
+void arcade::SFMLCore::drawColor(ITile const *tile, IMap const &map, size_t x, size_t y)
 {
+    //TODO calculate size of a tile in a relative way
+    this->colorSprite.setSize(getTileSize(map));
+    this->colorSprite.setFillColor(sf::Color(tile->getColor().r,
+                                             tile->getColor().g,
+                                             tile->getColor().b,
+                                             tile->getColor().a));
+    colorSprite.setPosition(getTilePosX(x, map) + static_cast<float>(tile->getShiftX()),
+                            getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
+    window.draw(colorSprite);
 }
 
-void arcade::SFMLCore::drawGui()
+sf::Vector2f arcade::SFMLCore::getTileSize(IMap const &map)
 {
+    sf::Vector2f pos;
 
+    pos.x = width / map.getWidth();
+    pos.y = height / map.getHeight();
+    return pos;
+}
+
+float arcade::SFMLCore::getTilePosX(size_t x, IMap const &map)
+{
+    return getTileSize(map).x * x;
+}
+
+float arcade::SFMLCore::getTilePosY(size_t y, IMap const &map)
+{
+    return getTileSize(map).y * y;
 }
 
 namespace arcade

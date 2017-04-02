@@ -6,11 +6,14 @@
 #define CPP_ARCADE_SFMLCORE_HPP_
 
 
-#include <IGfxLib.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/Audio/Music.hpp>
 #include <map>
-#include <SFML/Graphics/Sprite.hpp>
+#include "IGfxLib.hpp"
+#include "SFML/Graphics/RenderWindow.hpp"
+#include "SFML/Audio/Music.hpp"
+#include "SFML/Graphics/Sprite.hpp"
+#include "SFML/Window.hpp"
+#include "GfxSprite.hpp"
+#include "SFML/Graphics/RectangleShape.hpp"
 
 namespace arcade
 {
@@ -23,7 +26,8 @@ namespace arcade
         size_t                                                      y;
         sf::RenderWindow                                            window;
         std::vector<std::unique_ptr<sf::Music>>                     sounds;
-        std::vector<sf::Sprite>;
+        std::vector<GfxSprite>                                      sprites;
+        sf::RectangleShape                                          colorSprite;
 
         // Static mapped attributes
         static std::map<sf::Event::EventType, arcade::EventType>    mappedEventType;
@@ -59,9 +63,12 @@ namespace arcade
 
         void updateMousePosition(MousePos &pos, sf::Vector2i sfPos);
 
-        void drawMap();
+        void drawColor(ITile const *tile, IMap const &map, size_t x, size_t y);
 
-        void drawGui();
+        sf::Vector2f getTileSize(IMap const &map);
+
+        float getTilePosX(size_t x, IMap const &map);
+        float getTilePosY(size_t y, IMap const &map);
     };
 }
 
