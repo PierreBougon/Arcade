@@ -48,15 +48,13 @@ arcade::Entity::Entity(const arcade::Vector2i &pos,
                        size_t spriteCount,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
-                       arcade::Color col,
-                       size_t lay) :
+                       arcade::Color col) :
     abs(pos),
     shift({0, 0}),
     prev(pos),
     type(Type),
     typeEvolution(TypeEvolution),
     color(col),
-    layer(lay),
     spriteSet(true),
     sprite(id, spriteCount)
 {
@@ -66,15 +64,13 @@ arcade::Entity::Entity(const arcade::Vector2i &pos,
 arcade::Entity::Entity(const arcade::Vector2i &pos,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
-                       arcade::Color col,
-                       size_t lay) :
+                       arcade::Color col) :
     abs(pos),
     shift({0, 0}),
     prev(pos),
     type(Type),
     typeEvolution(TypeEvolution),
     color(col),
-    layer(lay),
     spriteSet(false)
 {
 

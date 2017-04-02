@@ -23,7 +23,7 @@ namespace arcade
         size_t getHeight() const;
         const ITile &at(size_t layer, size_t x, size_t y) const;
         void addLayer();
-        void consolidate()
+        void consolidate(std::vector)
 
     private:
         typedef std::vector<Tile>       t_line;

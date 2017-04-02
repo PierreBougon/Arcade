@@ -30,14 +30,12 @@ namespace arcade
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t lay,
                       size_t hp,
                       Teams const& type);
         ALivingEntity(Vector2i pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t lay,
                       size_t hp,
                       Teams const& type);
         virtual ~ALivingEntity() {}

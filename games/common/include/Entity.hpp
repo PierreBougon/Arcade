@@ -36,8 +36,7 @@ namespace arcade
         Entity(Vector2i const& pos,
                TileType Type,
                TileTypeEvolution TypeEvolution,
-               Color col,
-               size_t lay = 0);
+               Color col);
 
         // With Sprite
         Entity(Vector2i const& pos,
@@ -45,8 +44,7 @@ namespace arcade
                size_t spriteCount,
                TileType Type,
                TileTypeEvolution TypeEvolution,
-               Color col,
-               size_t lay = 0);
+               Color col);
 
         // Getters
         const Vector2i &getAbs() const;

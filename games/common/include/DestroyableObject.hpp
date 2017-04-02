@@ -24,7 +24,6 @@ namespace arcade
                           TileType Type,
                           TileTypeEvolution TypeEvolution,
                           Color col,
-                          size_t lay,
                           size_t Hp);
 
         // Without Sprite
@@ -32,7 +31,6 @@ namespace arcade
                           TileType Type,
                           TileTypeEvolution TypeEvolution,
                           Color col,
-                          size_t lay,
                           size_t Hp);
         virtual ~DestroyableObject() {}
 

@@ -35,3 +35,4 @@ void arcade::Map::addLayer()
 {
     _map.push_back(t_layer(getHeight(), t_line(getWidth(), arcade::Tile())));
 }
+
