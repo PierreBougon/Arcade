@@ -6,6 +6,7 @@
 #define CPP_ARCADE_VECTOR2_HPP
 
 #include <form.h>
+#include <ostream>
 
 namespace arcade
 {
@@ -14,6 +15,7 @@ namespace arcade
     {
         T x;
         T y;
+
         Vector2();
         Vector2(Vector2 const& cpy);
         Vector2(T a, T b);
@@ -25,6 +27,9 @@ namespace arcade
         bool operator==(Vector2 const& comp);
         bool operator!=(Vector2 const& comp);
     };
+
+    /// Overload left stream operator for Vector2 to be able to easily print it
+    std::ostream &operator<<(std::ostream &os, const Vector2 &vector2);
 
     Vector2 &Vector2::operator=(const Vector2 &cpy)
     {
@@ -86,9 +91,17 @@ namespace arcade
         return (x != comp.x || y != comp.y);
     }
 
-    typedef Vector2<int> Vector2i;
-    typedef Vector2<float> Vector2f;
-    typedef Vector2<double> Vector2d;
+    std::ostream &arcade::operator<<(std::ostream &os, const Vector2 &vector2)
+    {
+        os << "x: " << vector2.x << " y: " << vector2.y;
+        return os;
+    }
+
+    typedef Vector2<int>            Vector2i;
+    typedef Vector2<float>          Vector2f;
+    typedef Vector2<double>         Vector2d;
+    typedef Vector2<size_t>         Vector2s;
+    typedef Vector2<unsigned int>   Vector2u;
 }
 
 #endif //CPP_ARCADE_VECTOR2_HPP
