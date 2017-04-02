@@ -47,6 +47,12 @@ void arcade::SFMLCore::updateMap(const arcade::IMap &map)
 {
     ITile const *tile;
 
+    // Up to aff part of the map we must catch when the map is
+    if (map.getWidth() * getTileSize(map).x > width
+            || map.getHeight() * getTileSize(map).y > height)
+        throw std::range_error("Map is too ");
+
+
     for (size_t l = 0; l < map.getLayerNb(); ++l)
     {
         for (size_t x = 0; x < map.getWidth(); ++x)
@@ -148,10 +154,13 @@ void arcade::SFMLCore::drawColor(IComponent *component)
 
 void arcade::SFMLCore::drawSprite(ITile const *tile, IMap const &map, size_t x, size_t y)
 {
+    sf::Vector2f pos(getTilePosX(x, map) + static_cast<float>(tile->getShiftX()),
+                     getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
     GfxSprite &sprite = sprites[tile->getSpriteId()];
 
-    sprite.sprite.setPosition(getTilePosX(x, map) + static_cast<float>(tile->getShiftX()),
-                              getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
+    sprite.sprite.setScale(1 / (sprite.texture.getSize().x / getTileSize(map).x),
+                           1 / (sprite.texture.getSize().y / getTileSize(map).y));
+    sprite.sprite.setPosition(pos);
     window.draw(sprite.sprite);
 }
 
@@ -159,6 +168,8 @@ void arcade::SFMLCore::drawSprite(IComponent *component)
 {
     GfxSprite &sprite = sprites[component->getBackgroundId()];
 
+    sprite.sprite.setScale(static_cast<float>(component->getWidth() * width),
+                           static_cast<float>(component->getHeight() * height));
     sprite.sprite.setPosition(static_cast<float>(component->getX()), static_cast<float>(component->getY()));
     window.draw(sprite.sprite);
 }

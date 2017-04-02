@@ -2,6 +2,8 @@
 
 # MODE
 
+DEBUG	=	NO
+
 RELEASE	=	NO
 
 DLL	=	NO
@@ -11,10 +13,15 @@ DLL	=	NO
 CXXFLAGS	=	-std=c++14 -W -Wall -Wextra
 ifeq ($(RELEASE), YES)
 CXXFLAGS	+=	-Werror
+else
+ifeq ($(DEBUG), YES)
+CXXFLAGS	+=	-D DEBUG
+endif
 endif
 ifeq ($(DLL), YES)
 CXXFLAGS	+=	-fPic
 endif
+
 
 CXX	=	g++
 
