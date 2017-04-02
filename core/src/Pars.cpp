@@ -3,16 +3,15 @@
 //
 
 #include <dirent.h>
+#include <Logger.hpp>
 #include "Pars.hpp"
 
 arcade::Pars::Pars()
 {
-
 }
 
 arcade::Pars::~Pars()
 {
-
 }
 
 void arcade::Pars::FeedVecLib(std::string const &directory)
@@ -35,6 +34,7 @@ const std::vector<std::string> &arcade::Pars::getVecGame() const
     return vecGame;
 }
 
+
 void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &directory)
 {
     DIR *dir;
@@ -46,6 +46,11 @@ void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &
         {
             vec->push_back(std::string(file->d_name));
         }
+    }
+    else
+    {
+        Logger::log(Logger::Error, "Cannot open " + directory);
+        throw std::invalid_argument(directory + " is not a valid directory");
     }
     closedir(dir);
 }
