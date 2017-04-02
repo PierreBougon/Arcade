@@ -16,17 +16,30 @@ namespace arcade
     class Core
     {
     private:
-        std::vector<arcade::IGfxLib *> tabLib;
-        std::vector<arcade::IGame *> tabGame;
-        Pars pars;
+        std::vector<arcade::IGfxLib *>  tabLib;
+        std::vector<arcade::IGame *>    tabGame;
+        Pars                            pars;
+        std::string                     currentLib;
+        std::string                     currentGame;
 
-        int recupIndexLib(std::string const& lib);
     public:
         Core();
         ~Core();
-        void FeedLib();
-        void FeedGame();
-        void run(std::string const &lib);
+
+        /// Run the game loop
+        void run();
+
+        /// Init the core of the Arcade
+        void init(std::string const &lib);
+
+
+
+    private:
+        void feedLib();
+        void feedGame();
+        int getIndexVec(std::string const &lib, std::vector<std::string> vec);
+        int getIndexLib(std::string const &lib);
+        int getIndexGame(std::string const &game);
     };
 }
 
