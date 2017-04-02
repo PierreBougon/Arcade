@@ -2,8 +2,8 @@
 // Created by Pierre Bougon on 03/02/17.
 //
 
-#ifndef NANOTEKSPICE_LOGGER_H_
-#define NANOTEKSPICE_LOGGER_H_
+#ifndef ARCADE_LOGGER_HPP_
+#define ARCADE_LOGGER_HPP_
 
 
 #include <string>
@@ -29,4 +29,4 @@ public:
 };
 
 
-#endif // !NANOTEKSPICE_LOGGER_H_
+#endif // !ARCADE_LOGGER_HPP_
