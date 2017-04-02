@@ -23,12 +23,14 @@ namespace arcade
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
+                       size_t lay,
                        bool collider);
         // Without Sprite
         LifelessEntity(Vector2i pos,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
+                       size_t lay,
                        bool collide);
         virtual ~LifelessEntity() {}
 

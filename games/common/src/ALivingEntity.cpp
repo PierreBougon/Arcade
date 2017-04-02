@@ -10,9 +10,10 @@ arcade::ALivingEntity::ALivingEntity(arcade::Vector2i pos,
                                      TileType Type,
                                      TileTypeEvolution TypeEvolution,
                                      Color col,
+                                     size_t lay,
                                      size_t Hp,
                                      const arcade::Teams &_type) :
-        Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col),
+        Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col, lay),
         hp(Hp),
         team(_type)
 {
@@ -22,9 +23,10 @@ arcade::ALivingEntity::ALivingEntity(arcade::Vector2i pos,
                                      arcade::TileType Type,
                                      arcade::TileTypeEvolution TypeEvolution,
                                      arcade::Color col,
+                                     size_t lay,
                                      size_t Hp,
                                      const arcade::Teams &_type) :
-    Entity(pos, Type, TypeEvolution, col),
+    Entity(pos, Type, TypeEvolution, col, lay),
     hp(Hp),
     team(_type)
 {

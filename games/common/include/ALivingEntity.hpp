@@ -24,8 +24,22 @@ namespace arcade
         Teams team;
 
     public:
-        ALivingEntity(Vector2i pos, size_t idSprite, size_t spriteCount, TileType Type, TileTypeEvolution TypeEvolution, Color col, size_t hp, Teams const& type);
-        ALivingEntity(Vector2i pos, TileType Type, TileTypeEvolution TypeEvolution, Color col, size_t hp, Teams const& type);
+        ALivingEntity(Vector2i pos,
+                      size_t idSprite,
+                      size_t spriteCount,
+                      TileType Type,
+                      TileTypeEvolution TypeEvolution,
+                      Color col,
+                      size_t lay,
+                      size_t hp,
+                      Teams const& type);
+        ALivingEntity(Vector2i pos,
+                      TileType Type,
+                      TileTypeEvolution TypeEvolution,
+                      Color col,
+                      size_t lay,
+                      size_t hp,
+                      Teams const& type);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;

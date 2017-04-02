@@ -16,8 +16,9 @@ arcade::LifelessEntity::LifelessEntity(arcade::Vector2i pos,
                                        TileType Type,
                                        TileTypeEvolution TypeEvolution,
                                        Color col,
+                                       size_t lay,
                                        bool collide) :
-    Entity(pos, count, spriteCount, Type, TypeEvolution, col),
+    Entity(pos, count, spriteCount, Type, TypeEvolution, col, lay),
     collidable(collide)
 {
 
@@ -27,8 +28,9 @@ arcade::LifelessEntity::LifelessEntity(arcade::Vector2i pos,
                                        arcade::TileType Type,
                                        arcade::TileTypeEvolution TypeEvolution,
                                        arcade::Color col,
+                                       size_t lay,
                                        bool collide) :
-    Entity(pos, Type, TypeEvolution, col),
+    Entity(pos, Type, TypeEvolution, col, lay),
     collidable(collide)
 {
 
