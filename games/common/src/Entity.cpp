@@ -3,8 +3,6 @@
 //
 
 #include "Entity.hpp"
-#include "Sprite.hpp"
-
 
 const arcade::Vector2i &arcade::Entity::getAbs() const
 {
