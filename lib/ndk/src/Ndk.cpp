@@ -2,13 +2,13 @@
 // Created by duhieu_b on 15/03/17.
 //
 
-#include "../include/Ndk.hpp"
-#include "Gui.hpp"
-#include <Protocol.hpp>
-#include <curses.h>
-#include <GameState.hpp>
 #include <bits/unique_ptr.h>
-#include <IComponent.hpp>
+#include <curses.h>
+#include "Ndk.hpp"
+#include "Gui.hpp"
+#include "Protocol.hpp"
+#include "GameState.hpp"
+#include "IComponent.hpp"
 
 
 bool arcade::Ndk::pollEvent(arcade::Event &e)

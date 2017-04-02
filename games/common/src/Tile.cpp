@@ -2,7 +2,7 @@
 // Created by brout_m on 01/04/17.
 //
 
-#include "../include/Tile.hpp"
+#include "Tile.hpp"
 
 arcade::Tile::Tile() :
     Type(TileType::EMPTY),
@@ -85,4 +85,20 @@ void arcade::Tile::setShiftX(double shift)
 void arcade::Tile::setShiftY(double shift)
 {
     ShiftY = shift;
+}
+
+arcade::Tile &arcade::Tile::operator=(arcade::Entity &entity)
+{
+    const Vector2d &shift = entity.getShift();
+
+    Type = entity.getType();
+    TypeEvo = entity.getTypeEvolution();
+    _Color = entity.getColor();
+    SpriteId = entity.getSpriteId();
+    Sprite = entity.hasSprite();
+    if (Sprite)
+        Pos = entity.advance();
+    ShiftX = shift.x;
+    ShiftY = shift.y;
+    return *this;
 }

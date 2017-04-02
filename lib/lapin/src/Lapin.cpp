@@ -4,7 +4,7 @@
 
 #include <exception>
 #include <memory>
-#include "../include/Lapin.hpp"
+#include "Lapin.hpp"
 
 t_bunny_response keyboardPollEvents(t_bunny_event_state state,
                                     t_bunny_keysym symbole,
@@ -140,8 +140,8 @@ bool arcade::Lapin::pollEvent(arcade::Event &e)
 
 void arcade::Lapin::printOneSprite(t_bunny_position const &pos, t_bunny_picture &sprite)
 {
-    sprite.scale.y = static_cast<double>(sprite.clip_height) / static_cast<double>(TileHeight);
-    sprite.scale.x = static_cast<double>(sprite.clip_width) / static_cast<double>(TileWidth);
+    sprite.scale.y = 1.0 / (static_cast<double>(sprite.clip_height) / static_cast<double>(TileHeight));
+    sprite.scale.x = 1.0 / (static_cast<double>(sprite.clip_width) / static_cast<double>(TileWidth));
     bunny_blit(&Map->buffer, &sprite, &pos);
 }
 

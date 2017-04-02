@@ -6,11 +6,11 @@
 #define CPP_ARCADE_GUI_HPP
 
 #include <iostream>
-#include <GameState.hpp>
-#include <IGUI.hpp>
 #include <map>
 #include <bits/unique_ptr.h>
 #include "IComponent.hpp"
+#include "GameState.hpp"
+#include "IGUI.hpp"
 
 namespace arcade
 {

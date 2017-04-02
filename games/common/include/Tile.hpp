@@ -6,6 +6,7 @@
 # define CPP_ARCADE_TILE_HPP
 
 # include "ITile.hpp"
+# include "Entity.hpp"
 # include "IComponent.hpp"
 
 namespace arcade
@@ -30,6 +31,7 @@ namespace arcade
         void setSpritePos(size_t pos);
         void setShiftX(double shift);
         void setShiftY(double shift);
+        Tile& operator=(Entity &entity);
 
     private:
         TileType Type;
