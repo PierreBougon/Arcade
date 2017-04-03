@@ -48,7 +48,8 @@ arcade::Entity::Entity(const arcade::Vector2ui &pos,
                        size_t spriteCount,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
-                       arcade::Color col) :
+                       arcade::Color col,
+                       bool collide) :
     abs(pos),
     shift({0, 0}),
     prev(pos),
@@ -56,6 +57,7 @@ arcade::Entity::Entity(const arcade::Vector2ui &pos,
     typeEvolution(TypeEvolution),
     color(col),
     spriteSet(true),
+    collidable(collide),
     sprite(id, spriteCount)
 {
 
@@ -64,14 +66,16 @@ arcade::Entity::Entity(const arcade::Vector2ui &pos,
 arcade::Entity::Entity(const arcade::Vector2ui &pos,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
-                       arcade::Color col) :
+                       arcade::Color col,
+                       bool collide) :
     abs(pos),
     shift({0, 0}),
     prev(pos),
     type(Type),
     typeEvolution(TypeEvolution),
     color(col),
-    spriteSet(false)
+    spriteSet(false),
+    collidable(collide)
 {
 
 }

@@ -3,17 +3,14 @@
 //
 
 #ifndef CPP_ARCADE_LIFELESSENTITY_HPP
-#define CPP_ARCADE_LIFELESSENTITY_HPP
+# define CPP_ARCADE_LIFELESSENTITY_HPP
 
-#include "Entity.hpp"
+# include "Entity.hpp"
 
 namespace arcade
 {
     class LifelessEntity : public Entity
     {
-    protected:
-        bool collidable;
-
     public:
         LifelessEntity(Entity const& cpy, bool collide);
         // With Sprite
@@ -23,7 +20,7 @@ namespace arcade
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
-                       bool collider);
+                       bool collide);
         // Without Sprite
         LifelessEntity(Vector2ui pos,
                        TileType Type,

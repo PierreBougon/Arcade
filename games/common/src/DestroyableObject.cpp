@@ -10,8 +10,9 @@ arcade::DestroyableObject::DestroyableObject(arcade::Vector2ui pos,
                                              TileType Type,
                                              TileTypeEvolution typeEvolution,
                                              Color col,
-                                             size_t Hp) :
-        LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, true),
+                                             size_t Hp,
+                                             bool collide) :
+        LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, collide),
         hp(Hp)
 {
 
@@ -21,15 +22,19 @@ arcade::DestroyableObject::DestroyableObject(arcade::Vector2ui pos,
                                              arcade::TileType Type,
                                              arcade::TileTypeEvolution TypeEvolution,
                                              arcade::Color col,
-                                             size_t Hp) :
-        LifelessEntity(pos, Type, TypeEvolution, col, true),
+                                             size_t Hp,
+                                             bool collide) :
+        LifelessEntity(pos, Type, TypeEvolution, col, collide),
         hp(Hp)
 {
 
 }
 
 
-arcade::DestroyableObject::DestroyableObject(arcade::Entity const& cpy, size_t Hp) : LifelessEntity(cpy, true), hp(Hp)
+arcade::DestroyableObject::DestroyableObject(arcade::Entity const& cpy,
+                                             size_t Hp) :
+        LifelessEntity(cpy, true),
+        hp(Hp)
 {
 
 }

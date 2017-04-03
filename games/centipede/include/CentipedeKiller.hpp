@@ -39,13 +39,15 @@ namespace arcade
                         TileTypeEvolution typeEvo,
                         Color col,
                         size_t hp,
-                        const Map *map);
+                        const Map &map,
+                        const std::vector<Entity> &entities);
         CentipedeKiller(Vector2ui pos,
                         TileType type,
                         TileTypeEvolution typeEvolution,
                         Color col,
                         size_t hp,
-                        const Map *map);
+                        const Map &map,
+                        const std::vector<Entity> &entities);
         void move();
         void action();
         void updatePlayerInput(const std::vector<Event> &events);
@@ -54,7 +56,8 @@ namespace arcade
     private:
         KillerAction    _action;
         KillerMove      _move;
-        const Map       *_map;
+        const Map       &_map;
+        const std::vector<Entity> &_entities;
 
         bool isMoveTop(const Event& event) const;
         bool isMoveRight(const Event& event) const;

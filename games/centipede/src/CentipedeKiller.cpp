@@ -3,6 +3,7 @@
 //
 
 #include <map>
+#include <algorithm>
 #include "Vector2.hpp"
 #include "Protocol.hpp"
 #include "GameState.hpp"
@@ -16,12 +17,13 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2ui pos,
                                          TileTypeEvolution typeEvo,
                                          Color col,
                                          size_t hp,
-                                         const Map *map) :
-        ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp),
+                                         const Map &map,
+                                         const std::vector<Entity> &entities) :
+        ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
-        _map(map)
-
+        _map(map),
+        _entities(entities)
 {
 
 }
@@ -31,11 +33,13 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2ui pos,
                                          arcade::TileTypeEvolution typeEvolution,
                                          Color col,
                                          size_t hp,
-                                         const Map *map) :
-        ALivingEntity(pos, type, typeEvolution, col, hp),
+                                         const Map &map,
+                                         const std::vector<Entity> &entities) :
+        ALivingEntity(pos, type, typeEvolution, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
-        _map(map)
+        _map(map),
+        _entities(entities)
 {
 
 }
@@ -114,10 +118,17 @@ bool arcade::CentipedeKiller::isFire(const arcade::Event &event) const
 
 void arcade::CentipedeKiller::tryMoveTop()
 {
-    if (abs.y > static_cast<int>(static_cast<double>(_map->getHeight()) * 0.8) &&
-            )
+    std::vector<Entity>::const_iterator it;
+
+    if (abs.y > static_cast<int>(static_cast<double>(_map.getHeight()) * 0.8) &&
+        static_cast<const Tile&>(_map.at(0, abs.y - 1, abs.x)).getType() == TileType::EMPTY)
     {
-        abs.y--;
+        it = std::find_if(_entities.cbegin(), _entities.cend(), [*this](const Entity& entity)
+                          {
+                              return (entity.getAbs() == abs && entity);
+                          });
+        if ()
+            abs.y--;
     }
 }
 

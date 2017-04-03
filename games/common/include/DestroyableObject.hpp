@@ -3,9 +3,9 @@
 //
 
 #ifndef CPP_ARCADE_DESTROYABLEOBJECT_HPP
-#define CPP_ARCADE_DESTROYABLEOBJECT_HPP
+# define CPP_ARCADE_DESTROYABLEOBJECT_HPP
 
-#include "LifelessEntity.hpp"
+# include "LifelessEntity.hpp"
 
 namespace arcade
 {
@@ -24,14 +24,16 @@ namespace arcade
                           TileType Type,
                           TileTypeEvolution TypeEvolution,
                           Color col,
-                          size_t Hp);
+                          size_t Hp,
+                          bool collide);
 
         // Without Sprite
         DestroyableObject(Vector2ui pos,
                           TileType Type,
                           TileTypeEvolution TypeEvolution,
                           Color col,
-                          size_t Hp);
+                          size_t Hp,
+                          bool collide);
         virtual ~DestroyableObject() {}
 
         bool isDestroy() const;

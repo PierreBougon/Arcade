@@ -3,13 +3,13 @@
 //
 
 #ifndef CPP_ARCADE_ENTITY_HPP
-#define CPP_ARCADE_ENTITY_HPP
+# define CPP_ARCADE_ENTITY_HPP
 
-#include <Protocol.hpp>
-#include <GameState.hpp>
-#include <Color.hpp>
-#include "Vector2.hpp"
-#include "Sprite.hpp"
+# include <Protocol.hpp>
+# include <GameState.hpp>
+# include <Color.hpp>
+# include "Vector2.hpp"
+# include "Sprite.hpp"
 
 namespace arcade
 {
@@ -24,6 +24,7 @@ namespace arcade
         Color color;
         size_t layer;
         bool spriteSet;
+        bool collidable;
         Sprite sprite;
         Entity() = delete;
 
@@ -36,7 +37,8 @@ namespace arcade
         Entity(Vector2ui const& pos,
                TileType Type,
                TileTypeEvolution TypeEvolution,
-               Color col);
+               Color col,
+               bool collide);
 
         // With Sprite
         Entity(Vector2ui const& pos,
@@ -44,7 +46,8 @@ namespace arcade
                size_t spriteCount,
                TileType Type,
                TileTypeEvolution TypeEvolution,
-               Color col);
+               Color col,
+               bool collide);
 
         // Getters
         const Vector2ui &getAbs() const;

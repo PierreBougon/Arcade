@@ -23,12 +23,14 @@ namespace arcade
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp);
+                      size_t hp,
+                      bool collide);
         ALivingEntity(Vector2ui pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp);
+                      size_t hp,
+                      bool collide);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;
