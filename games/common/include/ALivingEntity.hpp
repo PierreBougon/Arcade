@@ -9,35 +9,24 @@
 
 namespace arcade
 {
-    enum Teams
-    {
-        NO_TEAM = -1,
-        T_PLAYER,
-        T_ENEMY,
-        NB_TEAM
-    };
-
     class ALivingEntity : public Entity
     {
     private:
         size_t hp;
-        Teams team;
 
     public:
-        ALivingEntity(Vector2i pos,
+        ALivingEntity(Vector2ui pos,
                       size_t idSprite,
                       size_t spriteCount,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      Teams type);
-        ALivingEntity(Vector2i pos,
+                      size_t hp);
+        ALivingEntity(Vector2ui pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      Teams type);
+                      size_t hp);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;
