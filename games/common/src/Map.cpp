@@ -35,7 +35,8 @@ const ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
 
 void arcade::Map::updateLayer(std::vector<arcade::Entity> &entities, size_t layer)
 {
-    for (Entity &entity : entities) {
+    for (Entity &entity : entities)
+    {
         const Vector2i &abs = entity.getAbs();
         _map[layer][abs.y][abs.x] = entity;
     }
