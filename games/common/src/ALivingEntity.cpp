@@ -4,24 +4,26 @@
 
 #include "ALivingEntity.hpp"
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2s pos,
                                      size_t idSprite,
                                      size_t spriteCount,
                                      TileType Type,
                                      TileTypeEvolution TypeEvolution,
                                      Color col,
-                                     size_t Hp) :
-        Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col),
+                                     size_t Hp,
+                                     bool collide) :
+        Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col, collide),
         hp(Hp)
 {
 }
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2s pos,
                                      arcade::TileType Type,
                                      arcade::TileTypeEvolution TypeEvolution,
                                      arcade::Color col,
-                                     size_t Hp) :
-    Entity(pos, Type, TypeEvolution, col),
+                                     size_t Hp,
+                                     bool collide) :
+    Entity(pos, Type, TypeEvolution, col, collide),
     hp(Hp)
 {
 
