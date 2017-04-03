@@ -32,13 +32,12 @@ namespace arcade
                 size_t spriteCount,
         TileType Type,
                 TileTypeEvolution TypeEvolution,
-        Color col,
-                size_t hp);
+        Color col, size_t hp, bool collide);
         PlayerControlSnake(Vector2s pos,
         TileType Type,
                 TileTypeEvolution TypeEvolution,
         Color col,
-                size_t hp);
+                size_t hp, bool collide);
         void move();
         void action();
 

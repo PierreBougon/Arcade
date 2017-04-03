@@ -90,21 +90,21 @@ arcade::Snake::Snake() : gameMap("./assets/map.txt", 2)
 
 void arcade::Snake::createPlayer()
 {
-    Vector2ui pos;
+    Vector2s pos;
     size_t y = gameMap.getHeight() / 2;
     size_t x = gameMap.getWidth() / 2 - 2;
 
     pos.x = x;
     pos.y = y;
-    snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+    snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
     for (int i = 1; i < 4; ++i)
     {
         pos.x = x + i;
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
     }
 }
 
-bool arcade::Snake::checkInSnake(Vector2ui const& pos)
+bool arcade::Snake::checkInSnake(Vector2s const& pos)
 {
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
     {
@@ -116,7 +116,7 @@ bool arcade::Snake::checkInSnake(Vector2ui const& pos)
 
 void arcade::Snake::putFoodInMap()
 {
-    Vector2ui pos;
+    Vector2s pos;
 
     pos.x = rand() % gameMap.getWidth();
     pos.y = rand() % gameMap.getHeight();
@@ -138,32 +138,32 @@ void arcade::Snake::checkEat()
 
 void arcade::Snake::feedingSnakes()
 {
-    Vector2ui pos;
+    Vector2s pos;
 
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
     if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
     }
     pos.x -= 2;
     if (pos.x >= 0 && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
     }
     pos.x += 1;
     pos.y += 1;
     if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
     }
     pos.y -= 2;
     if (pos.y >= 0 && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1));
+        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
     }
     state = GameState::QUIT;
@@ -171,7 +171,7 @@ void arcade::Snake::feedingSnakes()
 
 void arcade::Snake::moveBody()
 {
-    Vector2ui pos;
+    Vector2s pos;
 
     pos = snakes[0].getAbs();
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin() + 1; it != snakes.end() ; ++it)
@@ -183,7 +183,7 @@ void arcade::Snake::moveBody()
 
 void arcade::Snake::checkDead()
 {
-    Vector2ui pos = snakes[0].getAbs();
+    Vector2s pos = snakes[0].getAbs();
 
     if (pos.x < 0 || pos.x > gameMap.getWidth() || pos.y < 0 || pos.y > gameMap.getHeight())
     {

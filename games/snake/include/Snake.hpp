@@ -13,21 +13,11 @@
 
 namespace arcade
 {
-    /*enum actionPlayer
-    {
-        A_NONE = -1,
-        MOVE,
-        EAT,
-        GROWN_UP
-    };*/
-
     class Snake : public IGame
     {
     private:
         Map gameMap;
         Gui gameGui;
-        PlayerInputs move;
-//        actionPlayer action;
         GameState state;
         std::vector<PlayerControlSnake> snakes;
         std::vector<DestroyableObject> cherry;
@@ -50,8 +40,6 @@ namespace arcade
         std::vector<int> &&getSoundsToPlay();
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;
-        PlayerInputs getMove() const;
-        //actionPlayer getAction() const;
     };
 }
 
