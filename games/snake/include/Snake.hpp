@@ -33,6 +33,7 @@ namespace arcade
         std::vector<DestroyableObject> cherry;
         bool checkInSnake(Vector2ui const& pos);
         void checkEat();
+        void checkDead();
         void feedingSnakes();
         void createPlayer();
         void putFoodInMap();

@@ -33,10 +33,15 @@ void arcade::Snake::process()
     if (!cherry.size())
         putFoodInMap();
     snakes[0].move();
+    checkDead();
+    if (state == GameState::QUIT)
+        return;
     moveBody();
     checkEat();
     if (!cherry.size())
         feedingSnakes();
+    if (state == GameState::QUIT)
+        return;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
     {
         gameMap.updateLayer(snakes[0], 1);
@@ -173,5 +178,24 @@ void arcade::Snake::moveBody()
     {
         (*it).setAbs(pos);
         pos = (*it).getAbs();
+    }
+}
+
+void arcade::Snake::checkDead()
+{
+    Vector2ui pos = snakes[0].getAbs();
+
+    if (pos.x < 0 || pos.x > gameMap.getWidth() || pos.y < 0 || pos.y > gameMap.getHeight())
+    {
+        state = GameState::QUIT;
+        return;
+    }
+    for (std::vector<PlayerControlSnake>::iterator it = snakes.begin() + 1; it != snakes.end(); ++it)
+    {
+        if ((*it).getAbs() == pos)
+        {
+            state = GameState::QUIT;
+            break;
+        }
     }
 }
