@@ -86,6 +86,7 @@ namespace arcade
     }
 
     typedef Vector2<int> Vector2i;
+    typedef Vector2<size_t> Vector2ui;
     typedef Vector2<float> Vector2f;
     typedef Vector2<double> Vector2d;
 }

@@ -10,7 +10,7 @@ arcade::LifelessEntity::LifelessEntity(Entity const& cpy, bool collide) :
 {
 }
 
-arcade::LifelessEntity::LifelessEntity(arcade::Vector2i pos,
+arcade::LifelessEntity::LifelessEntity(arcade::Vector2ui pos,
                                        size_t count, size_t
                                        spriteCount,
                                        TileType Type,
@@ -23,7 +23,7 @@ arcade::LifelessEntity::LifelessEntity(arcade::Vector2i pos,
 
 }
 
-arcade::LifelessEntity::LifelessEntity(arcade::Vector2i pos,
+arcade::LifelessEntity::LifelessEntity(arcade::Vector2ui pos,
                                        arcade::TileType Type,
                                        arcade::TileTypeEvolution TypeEvolution,
                                        arcade::Color col,

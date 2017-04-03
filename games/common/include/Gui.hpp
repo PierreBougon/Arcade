@@ -23,9 +23,9 @@ namespace arcade
         void createComponent(const std::string &name, TypeComponent component);
         const IComponent *operator[](std::string const& name) const;
 
-        size_t size() const override;
+        size_t size() const;
 
-        IComponent &at(std::size_t n) override;
+        IComponent &at(std::size_t n);
 
         const std::map<std::string, std::unique_ptr<IComponent>> &getComponents() const;
     };
