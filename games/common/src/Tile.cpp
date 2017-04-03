@@ -102,3 +102,22 @@ arcade::Tile &arcade::Tile::operator=(arcade::Entity &entity)
     ShiftY = shift.y;
     return *this;
 }
+
+arcade::Tile &arcade::Tile::operator=(const arcade::Tile &tile)
+{
+    Type = tile.Type;
+    TypeEvo = tile.TypeEvo;
+    _Color = tile._Color;
+    Sprite = tile.Sprite;
+    SpriteId = tile.SpriteId;
+    Pos = tile.Pos;
+    ShiftX = tile.ShiftX;
+    ShiftY = tile.ShiftY;
+    return  *this;
+}
+
+arcade::Tile &arcade::Tile::operator<<(arcade::Entity &entity) {
+    if (Sprite)
+        Pos = entity.advance();
+    return *this;
+}

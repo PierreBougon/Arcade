@@ -3,41 +3,32 @@
 //
 
 #ifndef CPP_ARCADE_ALIVINGENTITY_HPP
-#define CPP_ARCADE_ALIVINGENTITY_HPP
+# define CPP_ARCADE_ALIVINGENTITY_HPP
 
-#include "Entity.hpp"
+# include <vector>
+# include "Event.hpp"
+# include "Entity.hpp"
 
 namespace arcade
 {
-    enum Teams
-    {
-        NO_TEAM = -1,
-        T_PLAYER,
-        T_ENEMY,
-        NB_TEAM
-    };
-
     class ALivingEntity : public Entity
     {
-    private:
+    protected:
         size_t hp;
-        Teams team;
 
     public:
-        ALivingEntity(Vector2i pos,
+        ALivingEntity(Vector2ui pos,
                       size_t idSprite,
                       size_t spriteCount,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      Teams const& type);
-        ALivingEntity(Vector2i pos,
+                      size_t hp);
+        ALivingEntity(Vector2ui pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      Teams const& type);
+                      size_t hp);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;
@@ -45,6 +36,7 @@ namespace arcade
         size_t getHp() const;
         virtual void move() = 0;
         virtual void action() = 0;
+        virtual void updatePlayerInput(std::vector<Event> &events) = 0;
     };
 }
 

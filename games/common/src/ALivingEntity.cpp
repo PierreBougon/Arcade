@@ -4,41 +4,37 @@
 
 #include "ALivingEntity.hpp"
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2i pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
                                      size_t idSprite,
                                      size_t spriteCount,
                                      TileType Type,
                                      TileTypeEvolution TypeEvolution,
                                      Color col,
-                                     size_t Hp,
-                                     const arcade::Teams &_type) :
+                                     size_t Hp) :
         Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col),
-        hp(Hp),
-        team(_type)
+        hp(Hp)
 {
 }
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2i pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
                                      arcade::TileType Type,
                                      arcade::TileTypeEvolution TypeEvolution,
                                      arcade::Color col,
-                                     size_t Hp,
-                                     const arcade::Teams &_type) :
+                                     size_t Hp) :
     Entity(pos, Type, TypeEvolution, col),
-    hp(Hp),
-    team(_type)
+    hp(Hp)
 {
 
 }
 
 bool arcade::ALivingEntity::isEnemy() const
 {
-    return (team == T_ENEMY);
+    return (getTypeEvolution() == TileTypeEvolution::ENEMY);
 }
 
 bool arcade::ALivingEntity::isPlayer() const
 {
-    return (team == T_PLAYER);
+    return (getTypeEvolution() == TileTypeEvolution::PLAYER);
 }
 
 size_t arcade::ALivingEntity::getHp() const

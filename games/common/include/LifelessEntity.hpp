@@ -11,13 +11,13 @@ namespace arcade
 {
     class LifelessEntity : public Entity
     {
-    private:
+    protected:
         bool collidable;
 
     public:
         LifelessEntity(Entity const& cpy, bool collide);
         // With Sprite
-        LifelessEntity(Vector2i pos,
+        LifelessEntity(Vector2ui pos,
                        size_t count,
                        size_t spriteCount,
                        TileType Type,
@@ -25,7 +25,7 @@ namespace arcade
                        Color col,
                        bool collider);
         // Without Sprite
-        LifelessEntity(Vector2i pos,
+        LifelessEntity(Vector2ui pos,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,

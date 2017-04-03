@@ -4,7 +4,7 @@
 
 #include "Entity.hpp"
 
-const arcade::Vector2i &arcade::Entity::getAbs() const
+const arcade::Vector2ui &arcade::Entity::getAbs() const
 {
     return abs;
 }
@@ -14,7 +14,7 @@ const arcade::Vector2d &arcade::Entity::getShift() const
     return shift;
 }
 
-const arcade::Vector2i &arcade::Entity::getPrev() const
+const arcade::Vector2ui &arcade::Entity::getPrev() const
 {
     return prev;
 }
@@ -43,7 +43,7 @@ size_t arcade::Entity::getSpriteCount() const
     return sprite.getSpriteCount();
 }
 
-arcade::Entity::Entity(const arcade::Vector2i &pos,
+arcade::Entity::Entity(const arcade::Vector2ui &pos,
                        size_t id,
                        size_t spriteCount,
                        arcade::TileType Type,
@@ -61,7 +61,7 @@ arcade::Entity::Entity(const arcade::Vector2i &pos,
 
 }
 
-arcade::Entity::Entity(const arcade::Vector2i &pos,
+arcade::Entity::Entity(const arcade::Vector2ui &pos,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
                        arcade::Color col) :
@@ -75,7 +75,6 @@ arcade::Entity::Entity(const arcade::Vector2i &pos,
 {
 
 }
-
 
 arcade::TileType arcade::Entity::getType() const
 {
@@ -107,7 +106,7 @@ void arcade::Entity::setColor(const arcade::Color &Color)
     color = Color;
 }
 
-void arcade::Entity::setAbs(const arcade::Vector2i &Abs)
+void arcade::Entity::setAbs(const arcade::Vector2ui &Abs)
 {
     abs = Abs;
 }
@@ -117,7 +116,7 @@ void arcade::Entity::setShift(const arcade::Vector2d &Shift)
     shift = Shift;
 }
 
-void arcade::Entity::setPrev(const arcade::Vector2i &Prev)
+void arcade::Entity::setPrev(const arcade::Vector2ui &Prev)
 {
     prev = Prev;
 }
@@ -136,4 +135,34 @@ void arcade::Entity::setSprite(size_t id, size_t spriteCount, size_t index)
 void arcade::Entity::unSetSprite()
 {
     spriteSet = false;
+}
+
+void arcade::Entity::playAnimation()
+{
+    sprite.resume();
+}
+
+void arcade::Entity::pauseAnimation()
+{
+    sprite.pause();
+}
+
+void arcade::Entity::resetAnimation()
+{
+    sprite.reset();
+}
+
+void arcade::Entity::setAnimationUnique()
+{
+    sprite.setMode(Sprite::UNIQUE);
+}
+
+void arcade::Entity::setAnimationRepeat()
+{
+    sprite.setMode(Sprite::REPEAT);
+}
+
+void arcade::Entity::setAnimationMode(arcade::Sprite::SpriteMode mode)
+{
+    sprite.setMode(mode);
 }
