@@ -72,12 +72,12 @@ namespace arcade
             return res;
         }
 
-        bool operator==(Vector2<T> const& comp)
+        bool operator==(Vector2<T> const& comp) const
         {
             return (x == comp.x && y == comp.y);
         }
 
-        bool operator!=(Vector2<T> const& comp)
+        bool operator!=(Vector2<T> const& comp) const
         {
             return (x != comp.x || y != comp.y);
         }

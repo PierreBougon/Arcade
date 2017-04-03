@@ -125,7 +125,7 @@ void arcade::CentipedeKiller::tryMoveTop()
     {
         it = std::find_if(_entities.cbegin(), _entities.cend(), [*this](const Entity& entity)
                           {
-                              return (entity.getAbs() == abs && entity);
+                              return (entity.getAbs() == abs);
                           });
         if ()
             abs.y--;
