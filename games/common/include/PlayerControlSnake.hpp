@@ -12,6 +12,17 @@ namespace arcade
 {
     class PlayerControlSnake : public ALivingEntity
     {
+    public:
+        enum PlayerInputs
+        {
+            I_NONE = -1,
+            MOVE_UP,
+            MOVE_DOWW,
+            MOVE_RIGHT,
+            MOVE_LEFT,
+            NB_IMPUTS
+        };
+
     private:
         PlayerInputs input;
 
@@ -30,6 +41,9 @@ namespace arcade
                 size_t hp);
         void move();
         void action();
+
+        void updatePlayerInput(std::vector<Event> &events);
+
         //void updateInput();
         void createObject();
     };
