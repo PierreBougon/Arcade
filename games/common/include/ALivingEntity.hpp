@@ -17,7 +17,7 @@ namespace arcade
         size_t hp;
 
     public:
-        ALivingEntity(Vector2ui pos,
+        ALivingEntity(Vector2s pos,
                       size_t idSprite,
                       size_t spriteCount,
                       TileType Type,
@@ -25,7 +25,7 @@ namespace arcade
                       Color col,
                       size_t hp,
                       bool collide);
-        ALivingEntity(Vector2ui pos,
+        ALivingEntity(Vector2s pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,

@@ -4,7 +4,7 @@
 
 #include "ALivingEntity.hpp"
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2s pos,
                                      size_t idSprite,
                                      size_t spriteCount,
                                      TileType Type,
@@ -17,7 +17,7 @@ arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
 {
 }
 
-arcade::ALivingEntity::ALivingEntity(arcade::Vector2ui pos,
+arcade::ALivingEntity::ALivingEntity(arcade::Vector2s pos,
                                      arcade::TileType Type,
                                      arcade::TileTypeEvolution TypeEvolution,
                                      arcade::Color col,

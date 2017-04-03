@@ -10,7 +10,7 @@
 #include "Color.hpp"
 #include "CentipedeKiller.hpp"
 
-arcade::CentipedeKiller::CentipedeKiller(Vector2ui pos,
+arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
                                          size_t idSprite,
                                          size_t spriteCount,
                                          TileType type,
@@ -28,7 +28,7 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2ui pos,
 
 }
 
-arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2ui pos,
+arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
                                          arcade::TileType type,
                                          arcade::TileTypeEvolution typeEvolution,
                                          Color col,

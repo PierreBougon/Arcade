@@ -5,7 +5,7 @@
 #ifndef CPP_ARCADE_CENTIPEDEKILLER_HPP
 # define CPP_ARCADE_CENTIPEDEKILLER_HPP
 
-#include <Map.hpp>
+# include "Map.hpp"
 # include "ALivingEntity.hpp"
 
 namespace arcade
@@ -32,7 +32,7 @@ namespace arcade
         typedef void (CentipedeKiller::*try_move_t)();
 
     public:
-        CentipedeKiller(Vector2ui pos,
+        CentipedeKiller(Vector2s pos,
                         size_t idSprite,
                         size_t spriteCount,
                         TileType type,
@@ -41,7 +41,7 @@ namespace arcade
                         size_t hp,
                         const Map &map,
                         const std::vector<Entity> &entities);
-        CentipedeKiller(Vector2ui pos,
+        CentipedeKiller(Vector2s pos,
                         TileType type,
                         TileTypeEvolution typeEvolution,
                         Color col,

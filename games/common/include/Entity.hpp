@@ -16,9 +16,9 @@ namespace arcade
     class Entity
     {
     protected:
-        Vector2ui abs;
+        Vector2s abs;
         Vector2d shift;
-        Vector2ui prev;
+        Vector2s prev;
         TileType type;
         TileTypeEvolution typeEvolution;
         Color color;
@@ -34,14 +34,14 @@ namespace arcade
         Entity(Entity const& cpy);
 
         // Without Sprite
-        Entity(Vector2ui const& pos,
+        Entity(Vector2s const& pos,
                TileType Type,
                TileTypeEvolution TypeEvolution,
                Color col,
                bool collide);
 
         // With Sprite
-        Entity(Vector2ui const& pos,
+        Entity(Vector2s const& pos,
                size_t id,
                size_t spriteCount,
                TileType Type,
@@ -50,9 +50,9 @@ namespace arcade
                bool collide);
 
         // Getters
-        const Vector2ui &getAbs() const;
+        const Vector2s &getAbs() const;
         const Vector2d &getShift() const;
-        const Vector2ui &getPrev() const;
+        const Vector2s &getPrev() const;
         bool hasSprite() const;
         size_t getSpriteId() const;
         TileType getType() const;
@@ -61,9 +61,9 @@ namespace arcade
         size_t getSpriteCount() const;
 
         // Setters
-        void setAbs(const Vector2ui &abs);
+        void setAbs(const Vector2s &abs);
         void setShift(const Vector2d &shift);
-        void setPrev(const Vector2ui &prev);
+        void setPrev(const Vector2s &prev);
         void setType(TileType type);
         void setTypeEvolution(TileTypeEvolution typeEvolution);
         void setColor(const Color &color);

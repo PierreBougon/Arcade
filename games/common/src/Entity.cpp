@@ -4,7 +4,7 @@
 
 #include "Entity.hpp"
 
-const arcade::Vector2ui &arcade::Entity::getAbs() const
+const arcade::Vector2s &arcade::Entity::getAbs() const
 {
     return abs;
 }
@@ -14,7 +14,7 @@ const arcade::Vector2d &arcade::Entity::getShift() const
     return shift;
 }
 
-const arcade::Vector2ui &arcade::Entity::getPrev() const
+const arcade::Vector2s &arcade::Entity::getPrev() const
 {
     return prev;
 }
@@ -43,7 +43,7 @@ size_t arcade::Entity::getSpriteCount() const
     return sprite.getSpriteCount();
 }
 
-arcade::Entity::Entity(const arcade::Vector2ui &pos,
+arcade::Entity::Entity(const arcade::Vector2s &pos,
                        size_t id,
                        size_t spriteCount,
                        arcade::TileType Type,
@@ -63,7 +63,7 @@ arcade::Entity::Entity(const arcade::Vector2ui &pos,
 
 }
 
-arcade::Entity::Entity(const arcade::Vector2ui &pos,
+arcade::Entity::Entity(const arcade::Vector2s &pos,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
                        arcade::Color col,
@@ -110,7 +110,7 @@ void arcade::Entity::setColor(const arcade::Color &Color)
     color = Color;
 }
 
-void arcade::Entity::setAbs(const arcade::Vector2ui &Abs)
+void arcade::Entity::setAbs(const arcade::Vector2s &Abs)
 {
     abs = Abs;
 }
@@ -120,7 +120,7 @@ void arcade::Entity::setShift(const arcade::Vector2d &Shift)
     shift = Shift;
 }
 
-void arcade::Entity::setPrev(const arcade::Vector2ui &Prev)
+void arcade::Entity::setPrev(const arcade::Vector2s &Prev)
 {
     prev = Prev;
 }
