@@ -15,9 +15,10 @@ namespace arcade
     class MapLoader
     {
     public:
+        ~MapLoader();
         MapLoader(std::string const& pathToMapCfg);
         bool isFileParsed() const;
-        std::vector<arcade::Entity> &&getMap();
+        std::vector<arcade::Entity> &getMap() const;
         size_t getWidth() const;
         size_t getHeight() const;
 

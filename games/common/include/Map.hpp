@@ -8,6 +8,7 @@
 # include <vector>
 # include "IMap.hpp"
 # include "Tile.hpp"
+# include "MapLoader.hpp"
 
 namespace arcade
 {
@@ -16,14 +17,12 @@ namespace arcade
     public:
         // Constructors
         virtual ~Map() {};
-        Map(size_t width, size_t height, size_t nbLayers = 1);
+        Map(std::string const& path, size_t nbLayers = 1);
 
         size_t getLayerNb() const;
         size_t getWidth() const;
         size_t getHeight() const;
         const ITile &at(size_t layer, size_t x, size_t y) const;
-        void addLayer();
-        void setLayer(std::vector<Entity> &entities, size_t layer);
         void updateLayer(std::vector<Entity> &entities, size_t layer);
 
     private:
@@ -36,6 +35,7 @@ namespace arcade
         Map &operator=(Map const &map) = delete;
 
         // members
+        MapLoader _mapLoader;
         t_map   _map;
     };
 }

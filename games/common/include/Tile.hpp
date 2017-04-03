@@ -33,6 +33,7 @@ namespace arcade
         void setShiftY(double shift);
         Tile& operator=(Entity &entity);
         Tile& operator=(Tile const& tile);
+        Tile& operator<<(Entity &entity);
 
     private:
         TileType Type;

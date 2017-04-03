@@ -6,10 +6,10 @@
 #include "MapLoader.hpp"
 
 arcade::MapLoader::MapLoader(const std::string &pathToMapCfg) :
-   file(pathToMapCfg),
-   Parsed(false),
-   Height(0),
-   Width(0)
+        file(pathToMapCfg),
+        Parsed(false),
+        Height(0),
+        Width(0)
 {
     parse();
 }
@@ -18,9 +18,9 @@ bool arcade::MapLoader::isFileParsed() const {
     return Parsed;
 }
 
-std::vector<arcade::Entity> &&arcade::MapLoader::getMap()
+std::vector<arcade::Entity> &arcade::MapLoader::getMap() const
 {
-    return std::move(Map);
+    return Map;
 }
 
 void arcade::MapLoader::parse()
@@ -37,17 +37,17 @@ void arcade::MapLoader::parse()
         for (char tile : line)
         {
             if (tile == '#')
-                Map.push_back(LifelessEntity({x, y},
-                                             arcade::TileType::BLOCK,
-                                             arcade::TileTypeEvolution::BLOCK,
-                                             Color::White,
-                                             true));
+                Map.emplace_back(LifelessEntity({x, y},
+                                                arcade::TileType::BLOCK,
+                                                arcade::TileTypeEvolution::BLOCK,
+                                                Color::White,
+                                                true));
             else
-                Map.push_back(LifelessEntity({x, y},
-                                             arcade::TileType::EMPTY,
-                                             arcade::TileTypeEvolution::EMPTY,
-                                             Color::Black,
-                                             false));
+                Map.emplace_back(LifelessEntity({x, y},
+                                                arcade::TileType::EMPTY,
+                                                arcade::TileTypeEvolution::EMPTY,
+                                                Color::Black,
+                                                false));
             ++x;
         }
         ++y;
@@ -55,10 +55,17 @@ void arcade::MapLoader::parse()
     Height = static_cast<size_t >(y);
 }
 
-size_t arcade::MapLoader::getWidth() const {
+size_t arcade::MapLoader::getWidth() const
+{
     return Width;
 }
 
-size_t arcade::MapLoader::getHeight() const {
+size_t arcade::MapLoader::getHeight() const
+{
     return Height;
+}
+
+arcade::MapLoader::~MapLoader()
+{
+    file.close();
 }

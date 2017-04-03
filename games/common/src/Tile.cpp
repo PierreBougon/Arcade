@@ -113,4 +113,11 @@ arcade::Tile &arcade::Tile::operator=(const arcade::Tile &tile)
     Pos = tile.Pos;
     ShiftX = tile.ShiftX;
     ShiftY = tile.ShiftY;
+    return  *this;
+}
+
+arcade::Tile &arcade::Tile::operator<<(arcade::Entity &entity) {
+    if (Sprite)
+        Pos = entity.advance();
+    return *this;
 }
