@@ -83,11 +83,6 @@ arcade::Snake::Snake() : gameMap("./assets/map.txt", 2)
     putFoodInMap();
 }
 
-/*arcade::actionPlayer arcade::snake::getAction() const
-{
-    return action;
-}*/
-
 void arcade::Snake::createPlayer()
 {
     Vector2s pos;
@@ -125,7 +120,7 @@ void arcade::Snake::putFoodInMap()
         pos.x = rand() % gameMap.getWidth();
         pos.y = rand() % gameMap.getHeight();
     }
-    cherry.push_back(DestroyableObject(pos, TileType::OTHER, TileTypeEvolution::FOOD, Color::Red, 1));
+    cherry.push_back(DestroyableObject(pos, TileType::OTHER, TileTypeEvolution::FOOD, Color::Red, 1, false));
 }
 
 void arcade::Snake::checkEat()
