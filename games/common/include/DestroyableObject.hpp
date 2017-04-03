@@ -11,7 +11,7 @@ namespace arcade
 {
     class DestroyableObject : public LifelessEntity
     {
-    private:
+    protected:
         size_t hp;
 
     public:

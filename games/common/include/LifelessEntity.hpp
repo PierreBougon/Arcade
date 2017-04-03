@@ -11,7 +11,7 @@ namespace arcade
 {
     class LifelessEntity : public Entity
     {
-    private:
+    protected:
         bool collidable;
 
     public:

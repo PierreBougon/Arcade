@@ -15,8 +15,12 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2ui pos,
                                          TileType type,
                                          TileTypeEvolution typeEvo,
                                          Color col,
-                                         size_t hp) :
-        ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp)
+                                         size_t hp,
+                                         const Map *map) :
+        ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp),
+        _action(KillerAction::NOTHING),
+        _move(KillerMove::STAY),
+        _map(map)
 
 {
 
@@ -26,8 +30,12 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2ui pos,
                                          arcade::TileType type,
                                          arcade::TileTypeEvolution typeEvolution,
                                          Color col,
-                                         size_t hp) :
-        ALivingEntity(pos, type, typeEvolution, col, hp)
+                                         size_t hp,
+                                         const Map *map) :
+        ALivingEntity(pos, type, typeEvolution, col, hp),
+        _action(KillerAction::NOTHING),
+        _move(KillerMove::STAY),
+        _map(map)
 {
 
 }
@@ -46,18 +54,29 @@ void arcade::CentipedeKiller::updatePlayerInput(const std::vector<arcade::Event>
 {
     static std::map<KillerMove, move_t > moveTab = {
             {KillerMove::GO_UP, &isMoveTop},
-            {KillerMove::GO_RIGHT, &isMoveTop},
-            {KillerMove::GO_DOWN, &isMoveTop},
-            {KillerMove::GO_LEFT, &isMoveTop}
+            {KillerMove::GO_RIGHT, &isMoveRight},
+            {KillerMove::GO_DOWN, &isMoveDown},
+            {KillerMove::GO_LEFT, &isMoveLeft}
     };
     static std::map<KillerAction, move_t > actionTab = {
             {KillerAction::FIRE, &isFire}
     };
 
     _move = KillerMove::STAY;
+    _action = KillerAction::NOTHING;
     for (const arcade::Event &event : events)
     {
+        for (std::pair<KillerMove, move_t> check : moveTab)
+        {
+            if ((this->*(check.second))(event))
+                _move = check.first;
+        }
 
+        for (std::pair<KillerAction, move_t> check : actionTab)
+        {
+            if ((this->*(check.second))(event))
+                _action = check.first;
+        }
     }
 }
 
@@ -91,4 +110,26 @@ bool arcade::CentipedeKiller::isFire(const arcade::Event &event) const
             event.kb_key == KB_SPACE) ||
            (event.type == ET_MOUSE && event.action == AT_PRESSED &&
             (event.m_key == M_LEFT_CLICK));
+}
+
+void arcade::CentipedeKiller::tryMoveTop()
+{
+    if (abs.y > static_cast<int>(static_cast<double>(_map->getHeight()) * 0.8) &&
+            )
+    {
+        abs.y--;
+    }
+}
+
+void arcade::CentipedeKiller::tryMoveRight()
+{
+    if (abs.x < )
+}
+
+void arcade::CentipedeKiller::tryMoveLeft()
+{
+}
+
+void arcade::CentipedeKiller::tryMoveBot()
+{
 }

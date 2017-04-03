@@ -13,7 +13,7 @@ namespace arcade
 {
     class ALivingEntity : public Entity
     {
-    private:
+    protected:
         size_t hp;
 
     public:

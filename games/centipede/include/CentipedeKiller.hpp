@@ -5,6 +5,7 @@
 #ifndef CPP_ARCADE_CENTIPEDEKILLER_HPP
 # define CPP_ARCADE_CENTIPEDEKILLER_HPP
 
+#include <Map.hpp>
 # include "ALivingEntity.hpp"
 
 namespace arcade
@@ -28,6 +29,7 @@ namespace arcade
         };
 
         typedef bool (CentipedeKiller::*move_t)(const Event &event) const;
+        typedef void (CentipedeKiller::*try_move_t)();
 
     public:
         CentipedeKiller(Vector2ui pos,
@@ -36,12 +38,14 @@ namespace arcade
                         TileType type,
                         TileTypeEvolution typeEvo,
                         Color col,
-                        size_t hp);
+                        size_t hp,
+                        const Map *map);
         CentipedeKiller(Vector2ui pos,
                         TileType type,
                         TileTypeEvolution typeEvolution,
                         Color col,
-                        size_t hp);
+                        size_t hp,
+                        const Map *map);
         void move();
         void action();
         void updatePlayerInput(const std::vector<Event> &events);
@@ -50,12 +54,17 @@ namespace arcade
     private:
         KillerAction    _action;
         KillerMove      _move;
+        const Map       *_map;
 
         bool isMoveTop(const Event& event) const;
         bool isMoveRight(const Event& event) const;
         bool isMoveLeft(const Event& event) const;
         bool isMoveDown(const Event& event) const;
         bool isFire(const Event& event) const;
+        void tryMoveTop();
+        void tryMoveRight();
+        void tryMoveLeft();
+        void tryMoveBot();
     };
 }
 

@@ -15,7 +15,7 @@ namespace arcade
 {
     class Entity
     {
-    private:
+    protected:
         Vector2ui abs;
         Vector2d shift;
         Vector2ui prev;
