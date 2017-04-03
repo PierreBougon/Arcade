@@ -9,35 +9,25 @@
 #include <IGame.hpp>
 #include <Gui.hpp>
 #include <Map.hpp>
+#include "PlayerControlSnake.hpp"
 
 namespace arcade
 {
-    enum PlayerInputs
-    {
-        I_NONE = -1,
-        MOVE_UP,
-        MOVE_DOWW,
-        MOVE_RIGHT,
-        MOVE_LEFT,
-        NB_IMPUTS
-    };
-
-    /*enum actionPlayer
-    {
-        A_NONE = -1,
-        MOVE,
-        EAT,
-        GROWN_UP
-    };*/
-
     class Snake : public IGame
     {
+    private:
         Map gameMap;
         Gui gameGui;
-        PlayerInputs move;
-//        actionPlayer action;
         GameState state;
-        std::vector<Entity> entities;
+        std::vector<PlayerControlSnake> snakes;
+        std::vector<DestroyableObject> cherry;
+        bool checkInSnake(Vector2ui const& pos);
+        void checkEat();
+        void checkDead();
+        void feedingSnakes();
+        void createPlayer();
+        void putFoodInMap();
+        void moveBody();
     public:
         Snake();
         GameState getGameState() const;
@@ -50,10 +40,6 @@ namespace arcade
         std::vector<int> &&getSoundsToPlay();
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;
-        PlayerInputs getMove() const;
-        //actionPlayer getAction() const;
-        void createPlayer();
-        void putFoodInMap();
     };
 }
 

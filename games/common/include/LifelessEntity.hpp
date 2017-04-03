@@ -3,29 +3,26 @@
 //
 
 #ifndef CPP_ARCADE_LIFELESSENTITY_HPP
-#define CPP_ARCADE_LIFELESSENTITY_HPP
+# define CPP_ARCADE_LIFELESSENTITY_HPP
 
-#include "Entity.hpp"
+# include "Entity.hpp"
 
 namespace arcade
 {
     class LifelessEntity : public Entity
     {
-    protected:
-        bool collidable;
-
     public:
         LifelessEntity(Entity const& cpy, bool collide);
         // With Sprite
-        LifelessEntity(Vector2ui pos,
+        LifelessEntity(Vector2s pos,
                        size_t count,
                        size_t spriteCount,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
-                       bool collider);
+                       bool collide);
         // Without Sprite
-        LifelessEntity(Vector2ui pos,
+        LifelessEntity(Vector2s pos,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,

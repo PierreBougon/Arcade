@@ -12,24 +12,37 @@ namespace arcade
 {
     class PlayerControlSnake : public ALivingEntity
     {
+    public:
+        enum PlayerInputs
+        {
+            I_NONE = -1,
+            MOVE_UP,
+            MOVE_DOWW,
+            MOVE_RIGHT,
+            MOVE_LEFT,
+            NB_IMPUTS
+        };
+
     private:
         PlayerInputs input;
 
     public:
-        PlayerControlSnake(Vector2ui pos,
+        PlayerControlSnake(Vector2s pos,
         size_t idSprite,
                 size_t spriteCount,
         TileType Type,
                 TileTypeEvolution TypeEvolution,
-        Color col,
-                size_t hp);
-        PlayerControlSnake(Vector2ui pos,
+        Color col, size_t hp, bool collide);
+        PlayerControlSnake(Vector2s pos,
         TileType Type,
                 TileTypeEvolution TypeEvolution,
         Color col,
-                size_t hp);
+                size_t hp, bool collide);
         void move();
         void action();
+
+        void updatePlayerInput(std::vector<Event> &events);
+
         //void updateInput();
         void createObject();
     };
