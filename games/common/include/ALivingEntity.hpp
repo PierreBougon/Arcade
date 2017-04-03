@@ -5,6 +5,8 @@
 #ifndef CPP_ARCADE_ALIVINGENTITY_HPP
 # define CPP_ARCADE_ALIVINGENTITY_HPP
 
+# include <vector>
+# include "Event.hpp"
 # include "Entity.hpp"
 
 namespace arcade
@@ -34,6 +36,7 @@ namespace arcade
         size_t getHp() const;
         virtual void move() = 0;
         virtual void action() = 0;
+        virtual void updatePlayerInput(std::vector<Event> &events) = 0;
     };
 }
 

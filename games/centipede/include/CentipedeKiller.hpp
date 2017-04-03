@@ -12,19 +12,24 @@ namespace arcade
     class CentipedeKiller : public ALivingEntity
     {
     public:
-        CentipedeKiller(Vector2i pos,
+        CentipedeKiller(Vector2ui pos,
                         size_t idSprite,
                         size_t spriteCount,
                         TileType type,
                         TileTypeEvolution typeEvo,
                         Color col,
                         size_t hp);
-        CentipedeKiller(Vector2i pos,
+        CentipedeKiller(Vector2ui pos,
                         TileType type,
                         TileTypeEvolution typeEvolution,
                         Color col,
                         size_t hp);
+
+        void move();
+        void action();
+
     private:
+
     };
 }
 

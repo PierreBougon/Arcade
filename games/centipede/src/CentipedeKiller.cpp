@@ -8,7 +8,7 @@
 #include "Color.hpp"
 #include "CentipedeKiller.hpp"
 
-arcade::CentipedeKiller::CentipedeKiller(Vector2i pos,
+arcade::CentipedeKiller::CentipedeKiller(Vector2ui pos,
                                          size_t idSprite,
                                          size_t spriteCount,
                                          TileType type,
@@ -21,12 +21,21 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2i pos,
 
 }
 
-arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2i pos,
+arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2ui pos,
                                          arcade::TileType type,
                                          arcade::TileTypeEvolution typeEvolution,
                                          Color col,
                                          size_t hp) :
     ALivingEntity(pos, type, typeEvolution, col, hp)
 {
+
+}
+
+void arcade::CentipedeKiller::action()
+{
+
+}
+
+void arcade::CentipedeKiller::move(arcade::CentipedeKiller::MoveDirection dir) {
 
 }
