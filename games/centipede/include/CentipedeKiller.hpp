@@ -12,6 +12,24 @@ namespace arcade
     class CentipedeKiller : public ALivingEntity
     {
     public:
+        enum KillerMove
+        {
+            GO_UP = 0,
+            GO_RIGHT,
+            GO_DOWN,
+            GO_LEFT,
+            STAY
+        };
+
+        enum KillerAction
+        {
+            FIRE = 0,
+            NOTHING
+        };
+
+        typedef bool (CentipedeKiller::*move_t)(const Event &event) const;
+
+    public:
         CentipedeKiller(Vector2ui pos,
                         size_t idSprite,
                         size_t spriteCount,
@@ -24,12 +42,20 @@ namespace arcade
                         TileTypeEvolution typeEvolution,
                         Color col,
                         size_t hp);
-
         void move();
         void action();
+        void updatePlayerInput(const std::vector<Event> &events);
+
 
     private:
+        KillerAction    _action;
+        KillerMove      _move;
 
+        bool isMoveTop(const Event& event) const;
+        bool isMoveRight(const Event& event) const;
+        bool isMoveLeft(const Event& event) const;
+        bool isMoveDown(const Event& event) const;
+        bool isFire(const Event& event) const;
     };
 }
 

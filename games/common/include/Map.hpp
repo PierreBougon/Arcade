@@ -23,7 +23,7 @@ namespace arcade
         size_t getWidth() const;
         size_t getHeight() const;
         const ITile &at(size_t layer, size_t x, size_t y) const;
-        void updateLayer(std::vector<Entity> &entities, size_t layer);
+        void updateLayer(Entity &entity, size_t layer);
 
     private:
         typedef std::vector<Tile>       t_line;

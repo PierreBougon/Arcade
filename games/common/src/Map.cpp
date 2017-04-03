@@ -10,7 +10,10 @@ arcade::Map::Map(std::string const& path,  size_t nbLayers) :
         _mapLoader(path),
         _map(nbLayers, t_layer (_mapLoader.getHeight(), t_line (_mapLoader.getWidth(), arcade::Tile())))
 {
-    updateLayer(_mapLoader.getMap(), 0);
+    for (Entity &entity : _mapLoader.getMap())
+    {
+        updateLayer(entity, 0);
+    }
 }
 
 size_t arcade::Map::getLayerNb() const
@@ -33,10 +36,8 @@ const ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
     return static_cast<const ITile&>(_map[layer][y][x]);
 }
 
-void arcade::Map::updateLayer(std::vector<arcade::Entity> &entities, size_t layer)
+void arcade::Map::updateLayer(arcade::Entity &entity, size_t layer)
 {
-    for (Entity &entity : entities) {
-        const Vector2ui &abs = entity.getAbs();
-        _map[layer][abs.y][abs.x] = entity;
-    }
+    const Vector2ui &abs = entity.getAbs();
+    _map[layer][abs.y][abs.x] = entity;
 }
