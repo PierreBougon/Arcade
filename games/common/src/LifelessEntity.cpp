@@ -4,9 +4,8 @@
 
 #include "LifelessEntity.hpp"
 
-arcade::LifelessEntity::LifelessEntity(Entity const& cpy, bool collide) :
-        Entity(cpy),
-        collidable(collide)
+arcade::LifelessEntity::LifelessEntity(Entity const& cpy) :
+        Entity(cpy)
 {
 }
 
@@ -17,8 +16,7 @@ arcade::LifelessEntity::LifelessEntity(arcade::Vector2s pos,
                                        TileTypeEvolution TypeEvolution,
                                        Color col,
                                        bool collide) :
-    Entity(pos, count, spriteCount, Type, TypeEvolution, col, collide),
-    collidable(collide)
+    Entity(pos, count, spriteCount, Type, TypeEvolution, col, collide)
 {
 
 }
@@ -28,8 +26,7 @@ arcade::LifelessEntity::LifelessEntity(arcade::Vector2s pos,
                                        arcade::TileTypeEvolution TypeEvolution,
                                        arcade::Color col,
                                        bool collide) :
-    Entity(pos, Type, TypeEvolution, col, collide),
-    collidable(collide)
+    Entity(pos, Type, TypeEvolution, col, collide)
 {
 
 }

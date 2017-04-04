@@ -12,7 +12,7 @@ namespace arcade
     class LifelessEntity : public Entity
     {
     public:
-        LifelessEntity(Entity const& cpy, bool collide);
+        LifelessEntity(Entity const& cpy);
         // With Sprite
         LifelessEntity(Vector2s pos,
                        size_t count,

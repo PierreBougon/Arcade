@@ -16,7 +16,10 @@ namespace arcade
 
     public:
         DestroyableObject(Entity const& cpy, size_t Hp);
-
+        DestroyableObject(DestroyableObject const &) = default;
+        DestroyableObject(DestroyableObject &&) = default;
+        DestroyableObject &operator=(DestroyableObject const &) = default;
+        DestroyableObject &operator=(DestroyableObject &&);
         // With Sprite
         DestroyableObject(Vector2s pos,
                           size_t idSprite,

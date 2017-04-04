@@ -12,6 +12,14 @@
 
 namespace arcade
 {
+    enum TypeComponent
+    {
+        COMP_NONE = -1,
+        TEXT,
+        BUTTON,
+        SLIDER
+    };
+
     class Factory
     {
         public:

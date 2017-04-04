@@ -8,6 +8,7 @@
 #include <iostream>
 #include <map>
 #include <bits/unique_ptr.h>
+#include "Factory.hpp"
 #include "IComponent.hpp"
 #include "GameState.hpp"
 #include "IGUI.hpp"
