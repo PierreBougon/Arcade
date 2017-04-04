@@ -4,6 +4,7 @@
 
 #include <DLLoader.hpp>
 #include <algorithm>
+#include <Logger.hpp>
 #include "../include/Core.hpp"
 
 arcade::Core::Core()
@@ -30,16 +31,18 @@ void arcade::Core::run()
 {
     while (isOpen())
     {
-        //events
+        manageEvents();
+        if (!isOpen())
+            return;
         if (currentGame && currentGame->getTick())
         {
             currentGame->process();
             playSound();
-            // SOUNDMANAGER sound currentGame.
             switch (currentGame->getGameState())
             {
                 case GameState::QUIT :
                     quitArcade();
+                    return;
                     break;
                 case GameState::LOADING :
                     initGame();
@@ -162,4 +165,27 @@ void arcade::Core::playSound()
 void arcade::Core::sendNetwork()
 {
     //currentGame->getNetworkToSend()
+}
+
+void arcade::Core::manageEvents()
+{
+    Event               event;
+    std::vector<Event>  _events;
+
+    while (currentLib->pollEvent(event))
+    {
+        switch (event.type)
+        {
+            case EventType::ET_QUIT :
+                open = false;
+                break;
+            default:
+                _events.push_back(event);
+                break;
+        }
+    }
+    if (currentGame)
+        currentGame->notifyEvent(std::move(_events));
+    else
+        events = &(std::move(_events));
 }

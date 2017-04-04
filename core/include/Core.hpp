@@ -20,6 +20,7 @@ namespace arcade
         std::vector<std::unique_ptr<arcade::AGame>>    tabGame;
         Pars                                           pars;
         bool                                           open;
+        std::vector<Event> const                       *events;
 
         // Pointers on current instance of lib & game
         // They contain raw address of unique_ptr from vectors tabLib & tabGame
@@ -62,6 +63,8 @@ namespace arcade
 
         /// Encapsulate the networks calls
         void sendNetwork();
+
+        void manageEvents();
     };
 }
 
