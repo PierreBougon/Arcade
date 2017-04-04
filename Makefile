@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Sun Apr  2 00:51:16 2017 bougon_p
+## Last update Tue Apr  4 20:52:32 2017 bougon_p
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -34,7 +34,7 @@ endif
 clean:
 	@make -s -C core/ clean
 
-fclean: clean
+fclean:
 	@make -s -C core/ fclean
 
 re:	fclean all
