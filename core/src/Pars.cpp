@@ -40,6 +40,7 @@ void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &
     DIR *dir;
     struct dirent *file;
 
+    vec->clear();
     if ((dir = opendir(directory.c_str())))
     {
         while ((file = readdir(dir)))
