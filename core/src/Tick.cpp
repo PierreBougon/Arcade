@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Tick.hpp"
 
-arcade::Tick::Tick() : baseTime(std::chrono::steady_clock::now())
+arcade::Tick::Tick() : baseTime(std::chrono::steady_clock::now()), tickrate(BASIC_TICK_RATE)
 {}
 
 bool arcade::Tick::isTick()
@@ -26,4 +26,9 @@ bool arcade::Tick::isTick()
 void arcade::Tick::reset()
 {
     baseTime = std::chrono::steady_clock::now();
+}
+
+void arcade::Tick::setTickrate(arcade::tick_t tickrate)
+{
+    this->tickrate = tickrate;
 }
