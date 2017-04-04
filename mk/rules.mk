@@ -1,23 +1,25 @@
 ## Generic rules for Makefiles
 
 $(NAME):	$(OBJ)
-		@$(ECHO) "$(GREEN) == $(WHITE) Compiling Core  $(GREEN) == $(CLEAR)"
-		@$(CXX) $(OBJ) -o $(NAME) $(INC)
+		@$(ECHO) "$(BLUE) Flags used \t: $(BOLD_WHITE)$(CXXFLAGS)$(CLEAR)"
+		@$(ECHO) "$(BLUE) Dependencies:$(BOLD_WHITE)$(LDFLAGS)$(CLEAR)"
+		@$(ECHO) "$(BLUE) == $(BOLD_WHITE) $(PROJECT_NAME)  Compiled $(BLUE) == $(CLEAR)"
+		@$(CXX) $(OBJ) -o $(NAME) $(INC) $(LDFLAGS)
 
 all:		$(NAME)
 
 clean:
-		@$(ECHO) "$(WHITE) [$(RED)RM$(WHITE)] $(OBJ)$(CLEAR)"
+		@$(ECHO) "$(BOLD_WHITE) [$(RED)RM$(BOLD_WHITE)] $(OBJ)$(CLEAR)"
 		@$(RM) $(OBJ)
 
 fclean:     	clean
-		@$(ECHO) "$(WHITE) [$(RED)RM$(WHITE)] $(NAME)$(CLEAR)"
+		@$(ECHO) "$(BOLD_WHITE) [$(RED)RM$(BOLD_WHITE)] $(NAME)$(CLEAR)"
 		@$(RM) $(NAME)
 
 re:		fclean all
 
 .cpp.o:
-		$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
-		@$(ECHO) "$(WHITE) [$(GREEN)OK$(WHITE)] Compiled "$<"\n$(CLEAR)"
+		$(CXX) $(INC) $(LDFLAGS) -c $< -o $@
+		@$(ECHO) "$(BOLD_WHITE) [$(GREEN)OK$(BOLD_WHITE)] Compiled "$<"\n$(CLEAR)"
 
 .PHONY:		all clean fclean re
