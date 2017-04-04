@@ -9,25 +9,20 @@
 
 arcade::Core::Core() :
 {
-    pars.FeedVecLib("./lib");
-    pars.FeedVecGame("./games");
-    feedLib();
-    feedGame();
+    loadDependencies();
 
-    // Basic choice should be decided on a menu
     currentLib = findLib("./lib/sfml/lib_arcade_sfml.so");
+
+    //TODO: Basic choice should be decided on a menu
     currentGame = findGame("./games/snake/snake.so");
 }
 
 arcade::Core::Core(std::string const &lib)
 {
-    pars.FeedVecLib("./lib");
-    pars.FeedVecGame("./games");
-    feedLib();
-    feedGame();
+    loadDependencies();
 
-    // Basic choice should be decided on a menu
     currentLib = findLib(lib);
+    //TODO: Basic choice should be decided on a menu
     currentGame = findGame("./games/snake/snake.so");
 }
 
@@ -37,13 +32,10 @@ arcade::Core::~Core()
 
 void arcade::Core::init(std::string const &lib)
 {
-    pars.FeedVecLib("./lib");
-    pars.FeedVecGame("./games");
-    feedLib();
-    feedGame();
-    currentLib = findLib(lib);
+    loadDependencies();
 
-    // Basic choice should be decided on a menu
+    currentLib = findLib(lib);
+    //TODO: Basic choice should be decided on a menu
     currentGame = findGame("./games/snake/snake.so");
 }
 
@@ -63,7 +55,6 @@ void arcade::Core::run()
                 case GameState::QUIT :
                     quitArcade();
                     return;
-                    break;
                 case GameState::LOADING :
                     initGame();
                     break;
@@ -71,7 +62,6 @@ void arcade::Core::run()
                     drawFrame();
                     break;
                 case GameState::MENU :
-//                    currentLib->updateGUI(currentGame->getGUI());
                     quitGame();
                     break;
                 default:
@@ -80,7 +70,7 @@ void arcade::Core::run()
         }
         else
         {
-            // display arcade menu
+            //TODO: display arcade menu
         }
         currentLib->display();
     }
@@ -217,4 +207,12 @@ void arcade::Core::manageEvents()
         currentGame->notifyEvent(std::move(_events));
     else
         events = &(std::move(_events));
+}
+
+void arcade::Core::loadDependencies()
+{
+    pars.FeedVecLib("./lib");
+    pars.FeedVecGame("./games");
+    feedLib();
+    feedGame();
 }

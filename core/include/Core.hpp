@@ -66,6 +66,8 @@ namespace arcade
         void sendNetwork();
 
         void manageEvents();
+
+        void loadDependencies();
     };
 }
 
