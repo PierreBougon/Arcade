@@ -14,10 +14,11 @@ namespace arcade
 
     class Tick
     {
+        ////////////////////////////////////
         /// Static const attributes
+        ////////////////////////////////////
     public:
         constexpr static tick_t BASIC_TICK_RATE    = 128.0f;
-        constexpr static float  TICK_MS            = 1.0f / tickrate;
 
 
     private:
@@ -33,6 +34,8 @@ namespace arcade
         void setTickrate(tick_t tickrate);
 
         void reset();
+
+        tick_t tickMs();
     };
 }
 

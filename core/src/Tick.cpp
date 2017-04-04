@@ -14,7 +14,7 @@ bool arcade::Tick::isTick()
             std::chrono::duration_cast<std::chrono::duration<double>>
                     (std::chrono::steady_clock::now() - baseTime);
 
-    if (time_span.count() >= TICK_MS)
+    if (time_span.count() >= tickMs())
     {
         std::cout << time_span.count() << std::endl;
         baseTime = std::chrono::steady_clock::now();
@@ -31,4 +31,9 @@ void arcade::Tick::reset()
 void arcade::Tick::setTickrate(arcade::tick_t tickrate)
 {
     this->tickrate = tickrate;
+}
+
+arcade::tick_t arcade::Tick::tickMs()
+{
+    return 1.0f / tickrate;
 }
