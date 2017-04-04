@@ -2,14 +2,16 @@
 // Created by brout_m on 03/04/17.
 //
 
-#ifndef CPP_ARCADE_CENTIPEDE_HPP
-# define CPP_ARCADE_CENTIPEDE_HPP
+#ifndef CPP_ARCADE_CENTIPEDEGAME_HPP
+# define CPP_ARCADE_CENTIPEDEGAME_HPP
 
 # include <list>
 # include "IGame.hpp"
 # include "Map.hpp"
 # include "Gui.hpp"
 # include "CentipedeKiller.hpp"
+# include "Mushroom.hpp"
+# include "Centipede.hpp"
 
 namespace arcade
 {
@@ -45,13 +47,14 @@ namespace arcade
         Gui                             _gui;
         CentipedeKiller                 _centipedeKiller;
         Bullet                          _bullet;
-        std::list<Entity>               _mushrooms;
-        std::list<std::list<Entity>>    _entities;
+        std::list<Mushroom>             _mushrooms;
+        std::list<Centipede>            _centipedes;
 
     // private functions
         void randomize(Map &map, double density = 0.5);
         Vector2s &&placePlayer(Map &map);
+        void createCentipede();
     };
 }
 
-#endif //CPP_ARCADE_CENTIPEDE_HPP
+#endif //CPP_ARCADE_CENTIPEDEGAME_HPP

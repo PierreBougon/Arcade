@@ -18,15 +18,15 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
                                          Color col,
                                          size_t hp,
                                          const Map &map,
-                                         std::list<Entity> &mushrooms,
-                                         std::list<std::list<Entity>> &entities,
+                                         std::list<Mushroom> &mushrooms,
+                                         std::list<Centipede> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
         _map(map),
         _mushrooms(mushrooms),
-        _entities(entities),
+        _centipedes(entities),
         _bullet(bullet)
 {
 
@@ -38,15 +38,15 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
                                          Color col,
                                          size_t hp,
                                          const Map &map,
-                                         std::list<Entity> &mushrooms,
-                                         std::list<std::list<Entity>> &entities,
+                                         std::list<Mushroom> &mushrooms,
+                                         std::list<Centipede> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, type, typeEvolution, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
         _map(map),
         _mushrooms(mushrooms),
-        _entities(entities),
+        _centipedes(entities),
         _bullet(bullet)
 {
 
@@ -143,7 +143,7 @@ void arcade::CentipedeKiller::tryMoveTop()
     if (abs.y > static_cast<int>(static_cast<double>(_map.getHeight()) * 0.8) &&
         static_cast<const Tile&>(_map.at(0, abs.x, abs.y - 1)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&abs](const Mushroom &entity)
                      {
                          return (entity.abs == {abs.x, abs.y - 1});
                      }) != _mushrooms.cend())
@@ -155,7 +155,7 @@ void arcade::CentipedeKiller::tryMoveRight()
     if (abs.x < _map.getWidth() - 1 &&
         static_cast<const Tile&>(_map.at(0, abs.x + 1, abs.y)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&abs](const Mushroom &entity)
                      {
                          return (entity.abs == {abs.x + 1, abs.y});
                      }) != _mushrooms.cend())
@@ -167,7 +167,7 @@ void arcade::CentipedeKiller::tryMoveLeft()
     if (abs.x > 0 &&
         static_cast<const Tile&>(_map.at(0, abs.x - 1, abs.y)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&abs](const Mushroom &entity)
                      {
                          return (entity.abs == {abs.x - 1, abs.y});
                      }) != _mushrooms.cend())
@@ -179,7 +179,7 @@ void arcade::CentipedeKiller::tryMoveBot()
     if (abs.y < _map.getHeight() - 1 &&
         static_cast<const Tile&>(_map.at(0, abs.x, abs.y + 1)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&abs](const Mushroom &entity)
                      {
                          return (entity.abs == {abs.x, abs.y + 1});
                      }) != _mushrooms.cend())
@@ -192,8 +192,20 @@ void arcade::CentipedeKiller::tryFire()
         _bullet.reset({abs.y, abs.x});
 }
 
-void arcade::CentipedeKiller::touched()
+bool arcade::CentipedeKiller::touched()
 {
-    if (hp)
-        --hp;
+    for (Centipede &centipede : _centipedes)
+    {
+        for (CentipedePart &part : centipede.getBody())
+        {
+            if (part.abs == abs)
+            {
+                if (hp)
+                    --hp;
+            }
+        }
+        if (!hp)
+            break;
+    }
+    return (!hp);
 }
