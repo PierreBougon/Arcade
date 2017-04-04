@@ -6,7 +6,12 @@
 #include "Centipede.hpp"
 
 arcade::CentipedePart::CentipedePart(const arcade::Vector2s &pos) :
-        ALivingEntity(pos, TileType::EVIL_DUDE, TileTypeEvolution::ENEMY, Color::Green, 1, false)
+        ALivingEntity(pos,
+                      TileType::EVIL_DUDE,
+                      TileTypeEvolution::ENEMY,
+                      Color::Green,
+                      1,
+                      false)
 {
 }
 
@@ -25,6 +30,7 @@ void arcade::CentipedePart::action()
 
 void arcade::CentipedePart::updatePlayerInput(std::vector<arcade::Event> &events)
 {
+    (void)events;
 }
 
 size_t arcade::CentipedePart::getNb() const
@@ -85,7 +91,7 @@ bool arcade::Centipede::hitByBullet(arcade::Bullet &bullet,
             mushrooms.push_back(Mushroom(it->getAbs()));
             _body.pop_back();
         } else {
-            centipedes.emplace_back(Centipede(_start, split(pos, mushrooms), _directionH, _directionV));
+            centipedes.emplace_back(std::move(Centipede(_start, split(pos, mushrooms), _directionH, _directionV)));
             centipedes.back()._poped = _poped;
             _poped = 0;
         }

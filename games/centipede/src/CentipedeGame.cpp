@@ -31,8 +31,10 @@ void arcade::CentipedeGame::randomize(arcade::Map &map, double density)
     {
         for (size_t x = 0; x < map.getWidth(); ++x)
         {
-            if (_centipedeKiller.getAbs() != {x, y} && std::rand() % static_cast<int>(1.0 / density) == 0)
-                _mushrooms.emplace_back(ALivingEntity({x, y}, TileType::BLOCK, TileTypeEvolution::BLOCK, Color::White, 4, true));
+            Vector2s vec(x, y);
+
+            if (_centipedeKiller.getAbs() != vec && std::rand() % static_cast<int>(1.0 / density) == 0)
+                _mushrooms.emplace_back(Mushroom(vec));
         }
     }
 
@@ -59,7 +61,8 @@ void arcade::CentipedeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&_
 
 std::vector<arcade::NetworkPacket> &&arcade::CentipedeGame::getNetworkToSend()
 {
-    return {};
+    std::vector<arcade::NetworkPacket> npt;
+    return std::move(npt);
 }
 
 void arcade::CentipedeGame::createCentipede()
@@ -95,17 +98,23 @@ void arcade::CentipedeGame::process()
 
 std::vector<std::unique_ptr<arcade::ISprite>> &&arcade::CentipedeGame::getSpritesToLoad() const
 {
-    return {};
+    std::vector<std::unique_ptr<arcade::ISprite>> sprt;
+
+    return std::move(sprt);
 }
 
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::getSoundsToLoad() const
 {
-    return {};
+    std::vector<std::pair<std::string, arcade::SoundType>> sounds;
+
+    return std::move(sounds);
 }
 
 std::vector<int> &&arcade::CentipedeGame::getSoundsToPlay()
 {
-    return {};
+    std::vector<int> sounds;
+
+    return std::move(sounds);
 }
 
 const arcade::IMap &arcade::CentipedeGame::getCurrentMap() const

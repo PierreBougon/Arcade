@@ -15,7 +15,7 @@ arcade::Mushroom::Mushroom(Vector2s const& pos) :
 }
 
 void arcade::Mushroom::hit(arcade::Bullet &bullet) {
-    if (bullet.abs == abs)
+    if (bullet.getAbs() == abs)
     {
         --hp;
         bullet.hit();

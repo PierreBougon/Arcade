@@ -45,6 +45,8 @@ namespace arcade
                   std::list<CentipedePart> &&centipede,
                   CentipedeDirection dirH,
                   CentipedeDirection dirV);
+        Centipede(Centipede const &centipede) = default;
+        Centipede &operator=(Centipede const& centipede) = default;
         std::list<CentipedePart> &getBody();
         void setBody();
         void oneTurn(Bullet &bullet,
@@ -71,8 +73,6 @@ namespace arcade
 
         // deleted methods
         Centipede() = delete;
-        Centipede(Centipede const& centipede) = delete;
-        Centipede &operator=(Centipede const& centipede) = delete;
     };
 }
 

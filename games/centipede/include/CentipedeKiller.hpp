@@ -58,8 +58,8 @@ namespace arcade
                         std::list<Centipede> &entities,
                         Bullet &bullet);
         void move();
+        void updatePlayerInput(std::vector<Event> &events) override;
         void action();
-        void updatePlayerInput(const std::vector<Event> &events);
         bool touched();
 
     private:

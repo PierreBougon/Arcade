@@ -2,8 +2,11 @@ include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 ## Core variables
 
-SRC	=	src/Snake.cpp	\
-		src/PlayerControlSnake.cpp \
+SRC	=	src/Bullet.cpp	\
+		src/Centipede.cpp \
+		src/CentipedeGame.cpp \
+		src/CentipedeKiller.cpp \
+		src/Mushroom.cpp \
 
 INTERFACE_DIR = ../../interfaces/
 
@@ -34,7 +37,7 @@ SRC += $(addprefix $(COMMON_DIR), $(COMMON_FIL))
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
-NAME    =      	../../libarcade_snake.so
+NAME    =      	../../libarcade_centipede.so
 
 INC     =       -Iinclude -I../../interfaces -I../include -I../common/include -I../../core/include
 

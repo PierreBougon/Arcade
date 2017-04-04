@@ -45,8 +45,8 @@ namespace arcade
         arcade::GameState               _gameState;
         Map                             _map;
         Gui                             _gui;
-        CentipedeKiller                 _centipedeKiller;
         Bullet                          _bullet;
+        CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom>             _mushrooms;
         std::list<Centipede>            _centipedes;
 
