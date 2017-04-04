@@ -18,7 +18,7 @@ namespace arcade
         DestroyableObject(Entity const& cpy, size_t Hp);
 
         // With Sprite
-        DestroyableObject(Vector2s pos,
+        DestroyableObject(Vector2s const &pos,
                           size_t idSprite,
                           size_t spriteCount,
                           TileType Type,
@@ -28,7 +28,7 @@ namespace arcade
                           bool collide);
 
         // Without Sprite
-        DestroyableObject(Vector2s pos,
+        DestroyableObject(Vector2s const &pos,
                           TileType Type,
                           TileTypeEvolution TypeEvolution,
                           Color col,

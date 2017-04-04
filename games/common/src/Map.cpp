@@ -41,3 +41,24 @@ void arcade::Map::updateLayer(arcade::Entity &entity, size_t layer)
     const Vector2s &abs = entity.getAbs();
     _map[layer][abs.y][abs.x] = entity;
 }
+
+void arcade::Map::resetLayer(size_t layer)
+{
+    Tile empty;
+
+    for (t_line &line : _map[layer])
+    {
+        for (Tile &tile : line)
+        {
+            tile = empty;
+        }
+    }
+}
+
+void arcade::Map::resetMapFromLayer(size_t layer)
+{
+    for (size_t i = layer; i < _map.size(); ++i)
+    {
+        resetLayer(i);
+    }
+}
