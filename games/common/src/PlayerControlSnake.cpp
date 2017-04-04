@@ -26,15 +26,15 @@ void arcade::PlayerControlSnake::createObject()
 }
 
 arcade::PlayerControlSnake::PlayerControlSnake(arcade::Vector2s pos, size_t idSprite, size_t spriteCount, arcade::TileType Type,
-                                     arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp) :
-        ALivingEntity(pos, idSprite, spriteCount, Type, TypeEvolution, col, hp)
+                                     arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp, bool collide) :
+        ALivingEntity(pos, idSprite, spriteCount, Type, TypeEvolution, col, hp, collide)
 {
     input = MOVE_LEFT;
 }
 
 arcade::PlayerControlSnake::PlayerControlSnake(arcade::Vector2s pos, arcade::TileType Type,
-                                     arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp) :
-        ALivingEntity(pos, Type, TypeEvolution, col, hp)
+                                     arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp, bool collide) :
+        ALivingEntity(pos, Type, TypeEvolution, col, hp, collide)
 {
 
 }
