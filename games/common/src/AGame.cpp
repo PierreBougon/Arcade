@@ -6,5 +6,5 @@
 
 arcade::tick_t arcade::AGame::getTick()
 {
-    return tickRate;
+    return Tick::BASIC_TICK_RATE;
 }
