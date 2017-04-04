@@ -30,6 +30,7 @@ namespace arcade
 
     public:
         Core();
+        Core(std::string const &lib);
         ~Core();
 
         /// Run the game loop

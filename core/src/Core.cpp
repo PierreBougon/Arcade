@@ -2,13 +2,33 @@
 // Created by duhieu_b on 15/03/17.
 //
 
-#include <DLLoader.hpp>
 #include <algorithm>
-#include <Logger.hpp>
-#include "../include/Core.hpp"
+#include "DLLoader.hpp"
+#include "Logger.hpp"
+#include "Core.hpp"
 
-arcade::Core::Core()
+arcade::Core::Core() :
 {
+    pars.FeedVecLib("./lib");
+    pars.FeedVecGame("./games");
+    feedLib();
+    feedGame();
+
+    // Basic choice should be decided on a menu
+    currentLib = findLib("./lib/sfml/lib_arcade_sfml.so");
+    currentGame = findGame("./games/snake/snake.so");
+}
+
+arcade::Core::Core(std::string const &lib)
+{
+    pars.FeedVecLib("./lib");
+    pars.FeedVecGame("./games");
+    feedLib();
+    feedGame();
+
+    // Basic choice should be decided on a menu
+    currentLib = findLib(lib);
+    currentGame = findGame("./games/snake/snake.so");
 }
 
 arcade::Core::~Core()
@@ -107,6 +127,7 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
     return (-1);
 }
 
+
 arcade::AGame *arcade::Core::findGame(const std::string &game)
 {
     std::vector<std::unique_ptr<arcade::AGame>>::iterator it =
@@ -114,7 +135,11 @@ arcade::AGame *arcade::Core::findGame(const std::string &game)
                 return _game == game;
             });
     if (it == tabGame.end())
+    {
+        Logger::log(Logger::Error,
+                   game + " : This game cannot be loaded, check out your games/ directory to see your games");
         return nullptr;
+    }
     return it->get();
 }
 
@@ -125,7 +150,11 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
         return _lib == lib;
     });
     if (it == tabLib.end())
+    {
+        Logger::log(Logger::Error,
+                    lib + " : This lib cannot be loaded, check out your lib/ directory to see your library");
         return nullptr;
+    }
     return it->get();
 }
 
