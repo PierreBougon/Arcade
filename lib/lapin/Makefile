@@ -10,18 +10,18 @@
 
 ## Include colors and basic commands
 
-include ../mk/colors.mk ../mk/commands.mk ../mk/definitions.mk
+include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 ## Lib variables
 
-SRC	=	src/Lapin.cpp
+SRC		=	src/Lapin.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	lib_arcade_lapin.so
 
-INC     =       -Iinclude -I../../ArcadeInterfaces
+INC     =       -Iinclude -I../../interfaces -I./dep/deps -I./dep/
 
 ## Lib rules
 
-include ../mk/rules.mk
+include ../../mk/rules.mk
