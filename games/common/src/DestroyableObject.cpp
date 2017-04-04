@@ -4,7 +4,7 @@
 
 #include "DestroyableObject.hpp"
 
-arcade::DestroyableObject::DestroyableObject(arcade::Vector2s pos,
+arcade::DestroyableObject::DestroyableObject(arcade::Vector2s const &pos,
                                              size_t idSprite,
                                              size_t spriteCount,
                                              TileType Type,
@@ -18,7 +18,7 @@ arcade::DestroyableObject::DestroyableObject(arcade::Vector2s pos,
 
 }
 
-arcade::DestroyableObject::DestroyableObject(arcade::Vector2s pos,
+arcade::DestroyableObject::DestroyableObject(arcade::Vector2s const &pos,
                                              arcade::TileType Type,
                                              arcade::TileTypeEvolution TypeEvolution,
                                              arcade::Color col,

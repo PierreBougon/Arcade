@@ -24,6 +24,8 @@ namespace arcade
         size_t getHeight() const;
         const ITile &at(size_t layer, size_t x, size_t y) const;
         void updateLayer(Entity &entity, size_t layer);
+        void resetLayer(size_t layer);
+        void resetMapFromLayer(size_t layer);
 
     private:
         typedef std::vector<Tile>       t_line;
