@@ -1,5 +1,5 @@
 //
-// Created by duhieu_b on 15/03/17.
+// Created by Pierre Bougon on 15/03/17.
 //
 
 #ifndef CPP_ARCADE_CORE_HPP
@@ -20,7 +20,7 @@ namespace arcade
         std::vector<std::unique_ptr<arcade::AGame>>    tabGame;
         Pars                                           pars;
         bool                                           open;
-        std::vector<Event>                             *events;
+        std::vector<Event>                             events;
 
         // Pointers on current instance of lib & game
         // They contain raw address of unique_ptr from vectors tabLib & tabGame

@@ -1,5 +1,5 @@
 //
-// Created by duhieu_b on 15/03/17.
+// Created by Pierre Bougon on 15/03/17.
 //
 
 #include <algorithm>
@@ -7,7 +7,9 @@
 #include "Logger.hpp"
 #include "Core.hpp"
 
-arcade::Core::Core() :
+arcade::Core::Core() : tabLib(), tabGame(), pars(),
+                       open(false), events(),
+                       currentLib(nullptr), currentGame(nullptr)
 {
     loadDependencies();
 
@@ -17,7 +19,9 @@ arcade::Core::Core() :
     currentGame = findGame("./games/snake/snake.so");
 }
 
-arcade::Core::Core(std::string const &lib)
+arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
+                                             open(false), events(),
+                                             currentLib(nullptr), currentGame(nullptr)
 {
     loadDependencies();
 
@@ -80,8 +84,17 @@ void arcade::Core::feedLib()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
-        DLLoader loader(*it);
-        tabLib.push_back(loader.getInstance("getLib"));
+        DLLoader<IGfxLib> loader(*it);
+        if (loader.getError() == DLLError::NONE)
+        {
+            IGfxLib *lib_ptr = loader.getInstance("getLib");
+            std::unique_ptr<IGfxLib> lib(lib_ptr);
+            tabLib.push_back(std::move(lib));
+        }
+        else
+        {
+            //TODO: manage error
+        }
     }
 }
 
@@ -89,8 +102,17 @@ void arcade::Core::feedGame()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
-        DLLoader loader(*it);
-        tabGame.push_back(loader.getInstance("getGame"));
+        DLLoader<IGame> loader(*it);
+        if (loader.getError() == DLLError::NONE)
+        {
+            IGame *game_ptr = loader.getInstance("getGame");
+            std::unique_ptr<IGame> game(game_ptr);
+            //tabGame.push_back(game);
+        }
+        else
+        {
+            //TODO: manage error
+        }
     }
 }
 
@@ -108,7 +130,7 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
 {
     int i = 0;
 
-    for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); ++it)
+    for (std::vector<std::string>::const_iterator it = vec.begin(); it != vec.end(); ++it)
     {
         if (*it == lib)
             return i;
@@ -120,32 +142,32 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
 
 arcade::AGame *arcade::Core::findGame(const std::string &game)
 {
-    std::vector<std::unique_ptr<arcade::AGame>>::iterator it =
-            std::find_if(tabGame.begin(), tabGame.end(), [&game](std::string _game){
+    std::vector<std::string>::const_iterator it =
+            std::find_if(pars.getVecGame().begin(), pars.getVecGame().end(), [game](std::string const &_game){
                 return _game == game;
             });
-    if (it == tabGame.end())
+    if (it == pars.getVecGame().end())
     {
         Logger::log(Logger::Error,
                    game + " : This game cannot be loaded, check out your games/ directory to see your games");
         return nullptr;
     }
-    return it->get();
+    return tabGame[std::distance(it, pars.getVecGame().begin())].get();
 }
 
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 {
-    std::vector<std::unique_ptr<arcade::IGfxLib>>::iterator it =
-    std::find_if(tabLib.begin(), tabLib.end(), [&lib](std::string _lib){
+    std::vector<std::string>::const_iterator it =
+    std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &_lib){
         return _lib == lib;
     });
-    if (it == tabLib.end())
+    if (it == pars.getVecLib().end())
     {
         Logger::log(Logger::Error,
                     lib + " : This lib cannot be loaded, check out your lib/ directory to see your library");
         return nullptr;
     }
-    return it->get();
+    return tabLib[std::distance(it, pars.getVecLib().begin())].get();
 }
 
 void arcade::Core::drawFrame()
@@ -206,7 +228,7 @@ void arcade::Core::manageEvents()
     if (currentGame)
         currentGame->notifyEvent(std::move(_events));
     else
-        events = &(std::move(_events));
+        events = _events;
 }
 
 void arcade::Core::loadDependencies()
