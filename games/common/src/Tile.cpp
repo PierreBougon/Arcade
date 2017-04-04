@@ -6,7 +6,7 @@
 
 arcade::Tile::Tile() :
     Type(TileType::EMPTY),
-    TypeEvo(TileType::EMPTY),
+    TypeEvo(TileTypeEvolution::EMPTY),
     _Color(arcade::Color::Black),
     Sprite(false),
     SpriteId(0),

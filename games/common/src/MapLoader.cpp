@@ -18,15 +18,15 @@ bool arcade::MapLoader::isFileParsed() const {
     return Parsed;
 }
 
-std::vector<arcade::Entity> &arcade::MapLoader::getMap() const
+std::vector<arcade::Entity> &arcade::MapLoader::getMap()
 {
     return Map;
 }
 
 void arcade::MapLoader::parse()
 {
-    int y;
-    int x;
+    size_t y;
+    size_t x;
     std::string line;
 
     y = 0;

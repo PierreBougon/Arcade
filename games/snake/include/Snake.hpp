@@ -6,9 +6,11 @@
 #define CPP_ARCADE_SNAKE_HPP
 
 
-#include <IGame.hpp>
-#include <Gui.hpp>
-#include <Map.hpp>
+#include "IGame.hpp"
+#include "Gui.hpp"
+#include "Map.hpp"
+#include "Sound.hpp"
+#include "DestroyableObject.hpp"
 #include "PlayerControlSnake.hpp"
 
 namespace arcade
@@ -21,7 +23,8 @@ namespace arcade
         GameState state;
         std::vector<PlayerControlSnake> snakes;
         std::vector<DestroyableObject> cherry;
-        bool checkInSnake(Vector2ui const& pos);
+
+        bool checkInSnake(Vector2s const& pos);
         void checkEat();
         void checkDead();
         void feedingSnakes();
@@ -36,7 +39,7 @@ namespace arcade
         std::vector<NetworkPacket> &&getNetworkToSend();
         void process();
         std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
-        std::vector<std::string> getSoundsToLoad() const;
+        std::vector<std::pair<std::string, arcade::SoundType>> getSoundsToLoad() const;
         std::vector<int> &&getSoundsToPlay();
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;

@@ -29,12 +29,13 @@ size_t arcade::Entity::getSpriteId() const
     return sprite.getSpriteId();
 }
 
-arcade::Entity::Entity() : abs({0, 0}), shift({0, 0}), prev({0, 0}), sprite(0, 0)
-{
-}
-
 arcade::Entity::Entity(arcade::Entity const& cpy) :
-        abs(cpy.getAbs()), shift(cpy.getShift()), prev(cpy.getPrev()), sprite(cpy.getSpriteId(), cpy.getSpriteCount()), type(cpy.getType()), typeEvolution(cpy.getTypeEvolution()), color(getColor())
+        abs(cpy.getAbs()),
+        shift(cpy.getShift()),
+        prev(cpy.getPrev()),
+        type(cpy.getType()), typeEvolution(cpy.getTypeEvolution()),
+        color(getColor()),
+        sprite(cpy.getSpriteId(), cpy.getSpriteCount())
 {
 }
 

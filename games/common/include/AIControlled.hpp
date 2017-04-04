@@ -12,8 +12,8 @@ namespace arcade
     class AIControlled : public ALivingEntity
     {
     private:
-        AIAtion actions;
-        AIMovement movement;
+//        AIAtion actions;
+//        AIMovement movement;
 
     public:
         void move();

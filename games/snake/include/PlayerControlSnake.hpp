@@ -6,7 +6,6 @@
 #define CPP_ARCADE_PLAYERCONTROL_HPP
 
 #include "ALivingEntity.hpp"
-#include "Snake.hpp"
 
 namespace arcade
 {
