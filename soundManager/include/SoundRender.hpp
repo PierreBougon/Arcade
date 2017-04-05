@@ -6,9 +6,9 @@
 #define CPP_ARCADE_SOUNDRENDER_HPP_
 
 
-#include <Sound.hpp>
-#include <SFML/Audio/Music.hpp>
-#include <SFML/Audio/SoundBuffer.hpp>
+#include "Sound.hpp"
+#include "SFML/Audio/Music.hpp"
+#include "SFML/Audio/SoundBuffer.hpp"
 #include "SFML/Audio/Sound.hpp"
 
 namespace arcade
@@ -29,7 +29,30 @@ namespace arcade
 
         void loadFromFile(const std::string &file);
 
+        //////////////////////////////////////////////////////////////////////////////
+        ///
+        /// Use this method to set your sound with your SoundRender attributes
+        //////////////////////////////////////////////////////////////////////////////
+        void refresh();
+
+
+        //////////////////////////////////////////////////////////////////////////////
+        ///
+        /// _Prefer using_ the refresh(); method since it will set
+        /// your sound with the attributes you chose
+        /// Those methods only wrap SFML sound methods to be able
+        /// to deal with sound or music in the same class
+        //////////////////////////////////////////////////////////////////////////////
         void play();
+
+        void stop();
+
+        void setVolume();
+
+        void setVolume(float volume);
+
+        void loop();
+
     };
 }
 

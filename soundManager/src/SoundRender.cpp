@@ -36,3 +36,66 @@ void arcade::SoundRender::play()
         sound.play();
     }
 }
+
+void arcade::SoundRender::stop()
+{
+    if (type == MUSIC)
+    {
+        music.stop();
+    }
+    else
+    {
+        sound.stop();
+    }
+}
+
+void arcade::SoundRender::setVolume()
+{
+    if (type == MUSIC)
+    {
+        music.setVolume(volume);
+    }
+    else
+    {
+        sound.setVolume(volume);
+    }
+}
+
+void arcade::SoundRender::setVolume(float volume)
+{
+    if (type == MUSIC)
+    {
+        music.setVolume(volume);
+    }
+    else
+    {
+        sound.setVolume(volume);
+    }
+}
+
+void arcade::SoundRender::loop()
+{
+    if (type == MUSIC)
+    {
+        music.setLoop(true);
+    }
+    else
+    {
+        sound.setLoop(true);
+    }
+}
+
+void arcade::SoundRender::refresh()
+{
+    if (type == MUSIC)
+    {
+        music.setLoop(mode == REPEAT);
+        music.setVolume(volume);
+        SoundAction::
+    }
+    else
+    {
+        sound.setLoop(mode == REPEAT);
+        sound.setVolume(volume);
+    }
+}
