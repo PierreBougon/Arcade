@@ -140,7 +140,7 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
 }
 
 
-arcade::AGame *arcade::Core::findGame(const std::string &game)
+arcade::IGame *arcade::Core::findGame(const std::string &game)
 {
     std::vector<std::string>::const_iterator it =
             std::find_if(pars.getVecGame().begin(), pars.getVecGame().end(), [game](std::string const &_game){

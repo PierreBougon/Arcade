@@ -17,7 +17,7 @@ namespace arcade
     {
     private:
         std::vector<std::unique_ptr<arcade::IGfxLib>>  tabLib;
-        std::vector<std::unique_ptr<arcade::AGame>>    tabGame;
+        std::vector<std::unique_ptr<arcade::IGame>>    tabGame;
         Pars                                           pars;
         bool                                           open;
         std::vector<Event>                             events;
@@ -26,7 +26,7 @@ namespace arcade
         // They contain raw address of unique_ptr from vectors tabLib & tabGame
         // DO NOT free those pointers nor delete them
         IGfxLib                                        *currentLib;
-        AGame                                          *currentGame;
+        IGame                                          *currentGame;
 
     public:
         Core();
@@ -50,7 +50,7 @@ namespace arcade
         int getIndexGame(std::string const &game) const;
 
         /// Find corresponding instance of game or lib
-        AGame   *findGame(const std::string &game);
+        IGame   *findGame(const std::string &game);
         IGfxLib *findLib(const std::string &lib);
 
         /// Methods relative to the GameState
