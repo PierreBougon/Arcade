@@ -18,15 +18,15 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
                                          Color col,
                                          size_t hp,
                                          const Map &map,
-                                         std::list<Entity> &mushrooms,
-                                         std::list<std::list<Entity>> &entities,
+                                         std::list<Mushroom> &mushrooms,
+                                         std::list<Centipede> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
         _map(map),
         _mushrooms(mushrooms),
-        _entities(entities),
+        _centipedes(entities),
         _bullet(bullet)
 {
 
@@ -38,15 +38,15 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
                                          Color col,
                                          size_t hp,
                                          const Map &map,
-                                         std::list<Entity> &mushrooms,
-                                         std::list<std::list<Entity>> &entities,
+                                         std::list<Mushroom> &mushrooms,
+                                         std::list<Centipede> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, type, typeEvolution, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY),
         _map(map),
         _mushrooms(mushrooms),
-        _entities(entities),
+        _centipedes(entities),
         _bullet(bullet)
 {
 
@@ -63,10 +63,10 @@ void arcade::CentipedeKiller::action()
 void arcade::CentipedeKiller::move()
 {
     static const std::vector<try_move_t > tryMoveTab = {
-            tryMoveTop,
-            tryMoveRight,
-            tryMoveBot,
-            tryMoveLeft
+            &CentipedeKiller::tryMoveTop,
+            &CentipedeKiller::tryMoveRight,
+            &CentipedeKiller::tryMoveBot,
+            &CentipedeKiller::tryMoveLeft
     };
 
     if (_move != KillerMove::STAY)
@@ -76,16 +76,16 @@ void arcade::CentipedeKiller::move()
     }
 }
 
-void arcade::CentipedeKiller::updatePlayerInput(const std::vector<arcade::Event> &events)
+void arcade::CentipedeKiller::updatePlayerInput(std::vector<arcade::Event> &events)
 {
     static const std::map<KillerMove, move_t > moveTab = {
-            {KillerMove::GO_UP, &isMoveTop},
-            {KillerMove::GO_RIGHT, &isMoveRight},
-            {KillerMove::GO_DOWN, &isMoveDown},
-            {KillerMove::GO_LEFT, &isMoveLeft}
+            {KillerMove::GO_UP, &CentipedeKiller::isMoveTop},
+            {KillerMove::GO_RIGHT, &CentipedeKiller::isMoveRight},
+            {KillerMove::GO_DOWN, &CentipedeKiller::isMoveDown},
+            {KillerMove::GO_LEFT, &CentipedeKiller::isMoveLeft}
     };
     static const std::map<KillerAction, move_t > actionTab = {
-            {KillerAction::FIRE, &isFire}
+            {KillerAction::FIRE, &CentipedeKiller::isFire}
     };
 
     _move = KillerMove::STAY;
@@ -104,6 +104,7 @@ void arcade::CentipedeKiller::updatePlayerInput(const std::vector<arcade::Event>
                 _action = check.first;
         }
     }
+
 }
 
 bool arcade::CentipedeKiller::isMoveTop(const arcade::Event &event) const
@@ -140,48 +141,56 @@ bool arcade::CentipedeKiller::isFire(const arcade::Event &event) const
 
 void arcade::CentipedeKiller::tryMoveTop()
 {
+    Vector2s vec(abs.x, abs.y - 1);
+
     if (abs.y > static_cast<int>(static_cast<double>(_map.getHeight()) * 0.8) &&
         static_cast<const Tile&>(_map.at(0, abs.x, abs.y - 1)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&vec](const Mushroom &entity)
                      {
-                         return (entity.abs == {abs.x, abs.y - 1});
+                         return (entity.getAbs() == vec);
                      }) != _mushrooms.cend())
         --abs.y;
 }
 
 void arcade::CentipedeKiller::tryMoveRight()
 {
+    Vector2s vec(abs.x + 1, abs.y);
+
     if (abs.x < _map.getWidth() - 1 &&
         static_cast<const Tile&>(_map.at(0, abs.x + 1, abs.y)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&vec](const Mushroom &entity)
                      {
-                         return (entity.abs == {abs.x + 1, abs.y});
+                         return (entity.getAbs() == vec);
                      }) != _mushrooms.cend())
         ++abs.x;
 }
 
 void arcade::CentipedeKiller::tryMoveLeft()
 {
+    Vector2s vec(abs.x - 1, abs.y);
+
     if (abs.x > 0 &&
         static_cast<const Tile&>(_map.at(0, abs.x - 1, abs.y)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&vec](const Mushroom &entity)
                      {
-                         return (entity.abs == {abs.x - 1, abs.y});
+                         return (entity.getAbs() == vec);
                      }) != _mushrooms.cend())
         --abs.x;
 }
 
 void arcade::CentipedeKiller::tryMoveBot()
 {
+    Vector2s vec(abs.x, abs.y + 1);
+
     if (abs.y < _map.getHeight() - 1 &&
         static_cast<const Tile&>(_map.at(0, abs.x, abs.y + 1)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
-                     [&abs](const Entity &entity)
+                     [&vec](const Mushroom &entity)
                      {
-                         return (entity.abs == {abs.x, abs.y + 1});
+                         return (entity.getAbs() == vec);
                      }) != _mushrooms.cend())
         ++abs.y;
 }
@@ -192,8 +201,20 @@ void arcade::CentipedeKiller::tryFire()
         _bullet.reset({abs.y, abs.x});
 }
 
-void arcade::CentipedeKiller::touched()
+bool arcade::CentipedeKiller::touched()
 {
-    if (hp)
-        --hp;
+    for (Centipede &centipede : _centipedes)
+    {
+        for (CentipedePart &part : centipede.getBody())
+        {
+            if (part.getAbs() == abs)
+            {
+                if (hp)
+                    --hp;
+            }
+        }
+        if (!hp)
+            break;
+    }
+    return (!hp);
 }

@@ -10,6 +10,8 @@
 # include "Map.hpp"
 # include "ALivingEntity.hpp"
 # include "Bullet.hpp"
+# include "Mushroom.hpp"
+# include "Centipede.hpp"
 
 namespace arcade
 {
@@ -43,8 +45,8 @@ namespace arcade
                         Color col,
                         size_t hp,
                         const Map &map,
-                        std::list<Entity> &mushrooms,
-                        std::list<std::list<Entity>> &entities,
+                        std::list<Mushroom> &mushrooms,
+                        std::list<Centipede> &entities,
                         Bullet &bullet);
         CentipedeKiller(Vector2s pos,
                         TileType type,
@@ -52,20 +54,20 @@ namespace arcade
                         Color col,
                         size_t hp,
                         const Map &map,
-                        std::list<Entity> &mushrooms,
-                        std::list<std::list<Entity>> &entities,
+                        std::list<Mushroom> &mushrooms,
+                        std::list<Centipede> &entities,
                         Bullet &bullet);
         void move();
+        void updatePlayerInput(std::vector<Event> &events) override;
         void action();
-        void updatePlayerInput(const std::vector<Event> &events);
-        void touched();
+        bool touched();
 
     private:
         KillerAction                    _action;
         KillerMove                      _move;
         const Map                       &_map;
-        std::list<Entity>               &_mushrooms;
-        std::list<std::list<Entity>>    &_entities;
+        std::list<Mushroom>             &_mushrooms;
+        std::list<Centipede>            &_centipedes;
         Bullet                          &_bullet;
 
         bool isMoveTop(const Event& event) const;
