@@ -5,6 +5,10 @@ $(NAME):	$(OBJ)
 		@$(ECHO) "$(BLUE) Dependencies:$(BOLD_WHITE)$(LDFLAGS)$(CLEAR)"
 		@$(ECHO) "$(BLUE) == $(BOLD_WHITE) $(PROJECT_NAME)  Compiled $(BLUE) == $(CLEAR)\n"
 		@$(CXX) $(OBJ) -o $(NAME) $(INC) $(LDFLAGS)
+		@$(eval PROJECT_NAME=)
+		@$(eval LDFLAGS=)
+		@$(eval DLL=NO)
+		@$(eval CXXFLAGS= -std=c++14 -W -Wall -Wextra)
 
 all:		$(NAME)
 
