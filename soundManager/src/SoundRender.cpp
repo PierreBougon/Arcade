@@ -73,15 +73,15 @@ void arcade::SoundRender::setVolume(float volume)
     }
 }
 
-void arcade::SoundRender::loop()
+void arcade::SoundRender::setLoop(bool state)
 {
     if (type == MUSIC)
     {
-        music.setLoop(true);
+        music.setLoop(state);
     }
     else
     {
-        sound.setLoop(true);
+        sound.setLoop(state);
     }
 }
 
@@ -91,11 +91,26 @@ void arcade::SoundRender::refresh()
     {
         music.setLoop(mode == REPEAT);
         music.setVolume(volume);
-        SoundAction::
     }
     else
     {
         sound.setLoop(mode == REPEAT);
         sound.setVolume(volume);
     }
+}
+
+void arcade::SoundRender::pause()
+{
+    if (type == MUSIC)
+    {
+        music.pause();
+    }
+    else
+    {
+        sound.pause();
+    }
+}
+
+arcade::SoundRender::~SoundRender()
+{
 }

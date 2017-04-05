@@ -14,7 +14,7 @@ int main(int ac, char **av)
         Logger::log(Logger::Error, "Usage: ./arcade ./path/your_lib.so");
         return (EXIT_FAILURE);
     }
-    std::srand((unsigned int) std::chrono::system_clock::now().time_since_epoch().count());
+    std::srand(static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count()));
     arcade::Core arcadeCore;
 
     arcadeCore.init(av[1]);

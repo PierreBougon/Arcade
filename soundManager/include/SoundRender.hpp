@@ -27,6 +27,8 @@ namespace arcade
         SoundRender(unsigned int id, SoundAction mode = SoundAction::UNIQUE,
                     float volume = 50.0f, SoundType type = SoundType::MUSIC);
 
+        virtual ~SoundRender();
+
         void loadFromFile(const std::string &file);
 
         //////////////////////////////////////////////////////////////////////////////
@@ -45,13 +47,15 @@ namespace arcade
         //////////////////////////////////////////////////////////////////////////////
         void play();
 
+        void pause();
+
         void stop();
 
         void setVolume();
 
         void setVolume(float volume);
 
-        void loop();
+        void setLoop(bool state);
 
     };
 }
