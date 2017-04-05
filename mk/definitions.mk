@@ -8,6 +8,10 @@ RELEASE	=	NO
 
 DLL	=	NO
 
+# NAME
+
+PROJECT_NAME	=
+
 # Compilation definitions
 
 CXXFLAGS	=	-std=c++14 -W -Wall -Wextra
@@ -25,6 +29,8 @@ endif
 
 CXX	=	g++
 
+LDFLAGS	=
+
 ifeq ($(DLL), YES)
-CXX	+=	-shared
+LDFLAGS	+=	-shared
 endif

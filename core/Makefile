@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sat Apr  1 13:38:06 2017 bougon_p
-## Last update Sun Apr  2 01:03:08 2017 bougon_p
+## Last update Tue Apr  4 23:01:10 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -14,17 +14,20 @@ include ../mk/colors.mk ../mk/commands.mk ../mk/definitions.mk
 
 ## Core variables
 
-SRC	=	src/Core.cpp	\
-		src/Factory.cpp	\
-		src/Gui.cpp	\
-		src/Pars.cpp	\
-		src/Text.cpp
+PROJECT_NAME	=	Core
 
-OBJ 	=   	$(SRC:.cpp=.o)
+SRC		=	src/main.cpp	\
+			src/Core.cpp	\
+			src/Pars.cpp	\
+			src/Logger.cpp
 
-NAME    =      	../arcade
+LDFLAGS 	+=	-ldl
 
-INC     =       -Iinclude -I../ArcadeInterfaces -I../include
+OBJ 		=   	$(SRC:.cpp=.o)
+
+NAME   		=      	../arcade
+
+INC     	=       -Iinclude -I../ArcadeInterfaces -I../include -I../games/common/include
 
 ## Core rules
 

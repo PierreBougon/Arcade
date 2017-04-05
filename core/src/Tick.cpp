@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Tick.hpp"
 
-arcade::Tick::Tick() : baseTime(std::chrono::steady_clock::now())
+arcade::Tick::Tick() : baseTime(std::chrono::steady_clock::now()), tickrate(BASIC_TICK_RATE)
 {}
 
 bool arcade::Tick::isTick()
@@ -14,7 +14,7 @@ bool arcade::Tick::isTick()
             std::chrono::duration_cast<std::chrono::duration<double>>
                     (std::chrono::steady_clock::now() - baseTime);
 
-    if (time_span.count() >= TICK_MS)
+    if (time_span.count() >= tickMs())
     {
         std::cout << time_span.count() << std::endl;
         baseTime = std::chrono::steady_clock::now();
@@ -26,4 +26,14 @@ bool arcade::Tick::isTick()
 void arcade::Tick::reset()
 {
     baseTime = std::chrono::steady_clock::now();
+}
+
+void arcade::Tick::setTickrate(arcade::tick_t tickrate)
+{
+    this->tickrate = tickrate;
+}
+
+arcade::tick_t arcade::Tick::tickMs()
+{
+    return 1.0f / tickrate;
 }

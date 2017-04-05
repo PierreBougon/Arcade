@@ -6,27 +6,35 @@
 #define CPP_ARCADE_TICK_HPP_
 
 #include <chrono>
+#include "IGame.hpp"
 
 namespace arcade
 {
+
     class Tick
     {
+        ////////////////////////////////////
         /// Static const attributes
+        ////////////////////////////////////
     public:
-        /// Tick rate is the number of the tick per second your game will process
-        constexpr static float TICK_RATE    = 128.0f;
-        constexpr static float TICK_MS      = 1.0f / TICK_RATE;
+        constexpr static tick_t BASIC_TICK_RATE    = 128.0f;
 
 
     private:
-        std::chrono::steady_clock::time_point     baseTime;
+        std::chrono::steady_clock::time_point       baseTime;
+        /// Tick rate is the number of the tick per second your game will process
+        tick_t                                      tickrate;
 
     public:
         Tick();
 
         bool isTick();
 
+        void setTickrate(tick_t tickrate);
+
         void reset();
+
+        tick_t tickMs();
     };
 }
 
