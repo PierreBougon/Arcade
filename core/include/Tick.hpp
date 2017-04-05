@@ -6,11 +6,10 @@
 #define CPP_ARCADE_TICK_HPP_
 
 #include <chrono>
+#include "IGame.hpp"
 
 namespace arcade
 {
-    /// Definition of
-    typedef float tick_t;
 
     class Tick
     {

@@ -50,7 +50,7 @@ void arcade::Core::run()
         manageEvents();
         if (!isOpen())
             return;
-        if (currentGame && currentGame->getTick())
+        if (currentGame && currentGame->getTickRate())
         {
             currentGame->process();
             playSound();
@@ -107,7 +107,7 @@ void arcade::Core::feedGame()
         {
             IGame *game_ptr = loader.getInstance("getGame");
             std::unique_ptr<IGame> game(game_ptr);
-            //tabGame.push_back(game);
+            tabGame.push_back(std::move(game));
         }
         else
         {
@@ -152,7 +152,7 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
                    game + " : This game cannot be loaded, check out your games/ directory to see your games");
         return nullptr;
     }
-    return tabGame[std::distance(it, pars.getVecGame().begin())].get();
+    return tabGame[it - pars.getVecGame().begin()].get();
 }
 
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
@@ -167,7 +167,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
                     lib + " : This lib cannot be loaded, check out your lib/ directory to see your library");
         return nullptr;
     }
-    return tabLib[std::distance(it, pars.getVecLib().begin())].get();
+    return tabLib[it - pars.getVecLib().begin()].get();
 }
 
 void arcade::Core::drawFrame()
