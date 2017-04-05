@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sat Apr  1 13:38:06 2017 bougon_p
-## Last update Tue Apr  4 23:01:10 2017 bougon_p
+## Last update Wed Apr  5 21:40:30 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -27,7 +27,7 @@ OBJ 		=   	$(SRC:.cpp=.o)
 
 NAME   		=      	../arcade
 
-INC     	=       -Iinclude -I../ArcadeInterfaces -I../include -I../games/common/include
+INC     	=       -Iinclude -I../interfaces -I../include -I../games/common/include
 
 ## Core rules
 
