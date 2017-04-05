@@ -478,3 +478,8 @@ namespace arcade
             {'9', BFT_9}
     };
 };
+
+extern "C" arcade::IGfxLib *getLib()
+{
+    return (new arcade::Lapin());
+}

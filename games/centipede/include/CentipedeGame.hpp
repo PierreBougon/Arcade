@@ -40,6 +40,7 @@ namespace arcade
         std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
         std::vector<int> &&getSoundsToPlay();
+        void updateMap();
 
     private:
         arcade::GameState               _gameState;
@@ -56,5 +57,7 @@ namespace arcade
         void createCentipede();
     };
 }
+
+extern "C" arcade::IGame *getGame();
 
 #endif //CPP_ARCADE_CENTIPEDEGAME_HPP

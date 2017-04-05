@@ -137,3 +137,22 @@ arcade::Vector2s &&arcade::CentipedeGame::placePlayer(arcade::Map &map)
     pos.y = std::rand() % static_cast<size_t>(static_cast<double>(height) * 0.2 + static_cast<double>(width) * 0.8);
     return std::move(pos);
 }
+
+void arcade::CentipedeGame::updateMap()
+{
+    _map.resetMapFromLayer(PLAYER);
+    _map.updateLayer(_centipedeKiller, CentipedeLayers::PLAYER);
+    for (Mushroom &mushroom : _mushrooms)
+        _map.updateLayer(mushroom, CentipedeLayers::PLAYER);
+
+    _map.updateLayer(_bullet, CentipedeLayers::BULLET);
+
+    for (Centipede &centipede : _centipedes)
+        for (CentipedePart &part : centipede.getBody())
+            _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
+}
+
+extern "C" arcade::IGame *getGame()
+{
+    return (new arcade::CentipedeGame());
+}
