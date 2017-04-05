@@ -12,8 +12,7 @@
 
 include ../mk/colors.mk ../mk/commands.mk ../mk/definitions.mk
 
-## Lib variables
-
+## Lib variab
 SRC	=	src/SFMLCore.cpp	\
 		src/GfxSprite.cpp	
 

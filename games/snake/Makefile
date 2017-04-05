@@ -11,10 +11,6 @@ INTERFACE_FIL = Color.cpp \
 
 SRC += $(addprefix $(INTERFACE_DIR), $(INTERFACE_FIL))
 
-CORE_DIR = ../../core/src/
-
-CORE_FIL = Gui.cpp \
-
 SRC += $(addprefix $(CORE_DIR), $(CORE_FIL))
 
 COMMON_DIR = ../common/src/
@@ -25,6 +21,7 @@ COMMON_FIL = AIControlled.cpp \
              Entity.cpp \
              LifelessEntity.cpp \
              Map.cpp \
+	     Gui.cpp \
              MapLoader.cpp \
              Sprite.cpp \
              SpriteGenerator.cpp \
@@ -34,7 +31,7 @@ SRC += $(addprefix $(COMMON_DIR), $(COMMON_FIL))
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
-NAME    =      	../../libarcade_snake.so
+NAME    =      	../libarcade_snake.so
 
 INC     =       -Iinclude -I../../interfaces -I../include -I../common/include -I../../core/include
 

@@ -46,6 +46,28 @@ arcade::Lapin::~Lapin()
         bunny_stop(Window);
     if (Map != nullptr)
         bunny_delete_clipable(Map);
+    for (std::pair<const size_t, t_bunny_effect *> &effect : Effects)
+    {
+        if (effect.second != nullptr) {
+            bunny_sound_stop(&effect.second->sound);
+            bunny_delete_sound(&effect.second->sound);
+        }
+    }
+    for (std::pair<const size_t, t_bunny_music *> &music : Musics)
+    {
+        if (music.second != nullptr) {
+            bunny_sound_stop(&music.second->sound);
+            bunny_delete_sound(&music.second->sound);
+        }
+    }
+    for (std::vector<t_bunny_picture *> &vec : Sprites)
+    {
+        for (t_bunny_picture *&sprite : vec)
+        {
+            if (sprite != nullptr)
+                bunny_delete_clipable(sprite);
+        }
+    }
 }
 
 bool arcade::Lapin::doesSupportSound() const
@@ -64,35 +86,68 @@ void arcade::Lapin::clear()
     bunny_clear(&Window->buffer, BLACK);
 }
 
-void arcade::Lapin::loadSounds(std::vector<std::string> const &sounds)
+void arcade::Lapin::loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds)
 {
-    for (size_t i = 0; i < sounds.size(); ++i)
+    size_t i(0);
+
+    for (std::pair<std::string, SoundType> const& sound : sounds)
     {
-        Effects[i] = std::make_unique(bunny_load_music(sounds[i].c_str()));
-        if (!Effects[i])
-            throw std::bad_alloc();
+        if (sound.second == SoundType::MUSIC)
+        {
+            Musics[i] = bunny_load_music(sound.first.c_str());
+            if (!Musics[i])
+                throw std::bad_alloc();
+        }
+        else
+        {
+            Effects[i] = bunny_load_effect(sound.first.c_str());
+            if (!Effects[i])
+                throw std::bad_alloc();
+        }
+        ++i;
     }
 }
 
 void arcade::Lapin::soundControl(const Sound &sound)
 {
-    if (sound.id < Effects.size())
-    {
-        bunny_sound_stop(&Effects[sound.id]->sound);
-        bunny_sound_loop(&Effects[sound.id]->sound, false);
+    t_bunny_map_music::iterator musicIt;
+    t_bunny_map_effect::iterator effectIt;
+    t_bunny_sound *snd;
+
+    musicIt = Musics.find(sound.id);
+    effectIt = Effects.find(sound.id);
+
+    snd = musicIt != Musics.end() ? &musicIt->second->sound :
+          effectIt != Effects.end() ? &effectIt->second->sound : nullptr;
+
+    if (snd != nullptr)
         switch (sound.mode)
         {
             case (UNIQUE) :
-                bunny_sound_play(&Effects[sound.id]->sound);
-                bunny_sound_volume(&Effects[sound.id]->sound, sound.volume);
+                bunny_sound_play(snd);
+                bunny_sound_loop(snd, false);
                 break;
             case (REPEAT) :
-                bunny_sound_play(&Effects[sound.id]->sound);
-                bunny_sound_volume(&Effects[sound.id]->sound, sound.volume);
-                bunny_sound_loop(&Effects[sound.id]->sound, true);
+                bunny_sound_play(snd);
+                bunny_sound_loop(snd, true);
+                break;
+            case (VOLUME) :
+                bunny_sound_volume(snd, sound.volume);
+                break;
+            case (STOP):
+                bunny_sound_stop(snd);
+                bunny_sound_loop(snd, false);
+                break;
+            case (PLAY) :
+                bunny_sound_play(snd);
+                break;
+            case (PAUSE) :
+                bunny_sound_stop(snd);
+                break;
+            case (RESUME) :
+                bunny_sound_play(snd);
                 break;
         }
-    }
 }
 
 bool arcade::Lapin::pollEvent(arcade::Event &e)
@@ -119,7 +174,7 @@ bool arcade::Lapin::pollEvent(arcade::Event &e)
     while (iMouse < LAST_BUNNY_MOUSEBUTTON)
     {
         ++iMouse;
-        if (mouse[iMouse] && Mouse.find(iMouse) != Mouse.end()) {
+        if (mouse[iMouse] && Mouse.find(static_cast<e_bunny_mouse_button>(iMouse)) != Mouse.end()) {
             e.type = ET_MOUSE;
             e.action = AT_PRESSED;
             e.m_key = Mouse[static_cast<e_bunny_mouse_button>(iMouse)];
@@ -147,12 +202,15 @@ void arcade::Lapin::printOneSprite(t_bunny_position const &pos, t_bunny_picture 
 
 void arcade::Lapin::printOneColor(t_bunny_position const &pos, Color color, uint32_t width, uint32_t height)
 {
-    static std::unique_ptr<t_bunny_picture> pic = std::make_unique(bunny_new_picture(Width, Height));
+    static t_bunny_picture *pic = bunny_new_picture(Width, Height);
 
-    pic->clip_height = height;
-    pic->clip_width = width;
-    bunny_fill(&pic->buffer, color.full);
-    bunny_blit(&Map->buffer, pic.get(), &pos);
+    if (pic != nullptr)
+    {
+        pic->clip_height = height;
+        pic->clip_width = width;
+        bunny_fill(&pic->buffer, color.full);
+        bunny_blit(&Map->buffer, pic, &pos);
+    }
 }
 
 void arcade::Lapin::updateMap(const arcade::IMap &map)
@@ -173,7 +231,7 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
                 const ITile& tile = map.at(layers, x, y);
 
                 if (tile.hasSprite())
-                    printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()].get());
+                    printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()]);
                 else
                     printOneColor(pos, tile.getColor(), TileWidth, TileHeight);
                 pos.x += TileWidth;
@@ -183,7 +241,7 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
     }
 }
 
-void arcade::Lapin::printText(t_bunny_position const &pos, std::string const &text)
+void arcade::Lapin::printText(t_bunny_position const &, std::string const &)
 {
 }
 
@@ -203,7 +261,7 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
         height = static_cast<uint32_t>(component.getHeight() * static_cast<double>(Height));
 
         if (component.hasSprite())
-            printOneSprite(pos, *Sprites[component.getBackgroundId()][0].get());
+            printOneSprite(pos, *Sprites[component.getBackgroundId()][0]);
         else
             printOneColor(pos, component.getBackgroundColor(), width, height);
 
@@ -213,13 +271,13 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
 
 void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
 {
-    std::vector<t_sprite> add;
+    std::vector<t_bunny_picture *> add;
 
-    for (std::unique_ptr<arcade::ISprite> sprite : sprites)
+    for (std::unique_ptr<arcade::ISprite> &sprite : sprites)
     {
         for (size_t i = 0; i < sprite->spritesCount(); ++i)
         {
-            add.emplace_back(std::make_unique(bunny_load_picture(sprite->getGraphicPath(i).c_str())));
+            add.emplace_back(bunny_load_picture(sprite->getGraphicPath(i).c_str()));
             if (!add.back())
                 throw std::bad_alloc();
         }
@@ -256,6 +314,16 @@ arcade::Lapin::Lapin() :
 void arcade::Bunny_picture_deleter::operator()(t_bunny_picture *picture)
 {
     bunny_delete_clipable(picture);
+}
+
+void arcade::Bunny_sound_deleter::operator()(t_bunny_effect *sound) {
+    bunny_sound_stop(&sound->sound);
+    bunny_delete_sound(&sound->sound);
+}
+
+void arcade::Bunny_music_deleter::operator()(t_bunny_music *sound) {
+    bunny_sound_stop(&sound->sound);
+    bunny_delete_sound(&sound->sound);
 }
 
 namespace arcade
