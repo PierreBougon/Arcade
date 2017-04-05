@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Tue Apr  4 20:52:32 2017 bougon_p
+## Last update Wed Apr  5 18:43:26 2017 bougon_p
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -21,7 +21,7 @@ GAMES=
 # 			games/snake
 
 all:
-ifeq ($(RELEASE), YES)
+ifeq ($(RELEASE), NO)
 	@make -s -C $(BINARY)
 	@make -s -C $(GRAPHIC_LIB) DLL=YES
 	@make -s -C $(GAMES) DLL=YES
