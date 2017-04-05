@@ -31,9 +31,9 @@ size_t arcade::Map::getHeight() const
     return _mapLoader.getHeight();
 }
 
-const ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
+const arcade::ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
 {
-    return static_cast<const ITile&>(_map[layer][y][x]);
+    return static_cast<const arcade::ITile&>(_map[layer][y][x]);
 }
 
 void arcade::Map::updateLayer(arcade::Entity &entity, size_t layer)

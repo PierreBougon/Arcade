@@ -8,6 +8,7 @@
 #include <iostream>
 #include <GameState.hpp>
 #include "IComponent.hpp"
+#include "Factory.hpp"
 
 namespace arcade
 {

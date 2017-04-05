@@ -5,9 +5,9 @@
 #ifndef CPP_ARCADE_ENTITY_HPP
 # define CPP_ARCADE_ENTITY_HPP
 
-# include <Protocol.hpp>
-# include <GameState.hpp>
-# include <Color.hpp>
+# include "Protocol.hpp"
+# include "GameState.hpp"
+# include "Color.hpp"
 # include "Vector2.hpp"
 # include "Sprite.hpp"
 

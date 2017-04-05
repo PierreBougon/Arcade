@@ -11,7 +11,7 @@
 
 namespace arcade
 {
-    class Tile : ITile
+    class Tile : public ITile
     {
     public:
         ~Tile() {};

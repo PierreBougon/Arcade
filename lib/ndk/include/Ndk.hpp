@@ -6,7 +6,7 @@
 #define CPP_ARCADE_NDK_HPP
 
 #include <curses.h>
-#include <IGfxLib.hpp>
+#include "IGfxLib.hpp"
 #include <map>
 
 namespace arcade
@@ -18,6 +18,8 @@ namespace arcade
         WINDOW *win;
         bool pass;
         std::vector<std::string> vecString;
+        size_t width;
+        size_t height;
     public:
         Ndk();
 
@@ -29,13 +31,13 @@ namespace arcade
 
         ~Ndk();
         bool pollEvent(arcade::Event &e);
-        bool doesSupportSound() const = delete;
-        void loadSounds(std::vector<std::string> const &sounds) = delete;
-        void playSound(int soundId) = delete;
+        bool doesSupportSound() const;
+        void loadSounds(std::vector<std::string> const &sounds);
+        void playSound(int soundId);
         void updateMap(arcade::IMap const &map);
-        void setSize(size_t height, size_t width) = delete;
-        void setPosition(size_t y, size_t x) = delete;
-        void initializeWindow() = delete;
+        void setSize(size_t Height, size_t Width);
+        void setPosition(size_t y, size_t x);
+        void initializeWindow();
         void display();
         void clear();
     };

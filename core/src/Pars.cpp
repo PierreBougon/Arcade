@@ -24,12 +24,12 @@ void arcade::Pars::FeedVecGame(std::string const &directory)
     feedVector(&vecGame, directory);
 }
 
-const std::vector<std::string> &arcade::Pars::getVecLib() const
+std::vector<std::string> &arcade::Pars::getVecLib() const
 {
     return vecLib;
 }
 
-const std::vector<std::string> &arcade::Pars::getVecGame() const
+std::vector<std::string> &arcade::Pars::getVecGame() const
 {
     return vecGame;
 }

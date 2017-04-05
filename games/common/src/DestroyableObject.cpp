@@ -33,7 +33,7 @@ arcade::DestroyableObject::DestroyableObject(arcade::Vector2s const &pos,
 
 arcade::DestroyableObject::DestroyableObject(arcade::Entity const& cpy,
                                              size_t Hp) :
-        LifelessEntity(cpy, true),
+        LifelessEntity(cpy),
         hp(Hp)
 {
 
@@ -55,4 +55,9 @@ void arcade::DestroyableObject::takeDamage(size_t dam)
         hp = 0;
     else
         hp -= dam;
+}
+
+arcade::DestroyableObject &arcade::DestroyableObject::operator=(arcade::DestroyableObject &&)
+{
+    return *this;
 }

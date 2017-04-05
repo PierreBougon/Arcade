@@ -23,8 +23,8 @@ namespace arcade
         ~Pars();
         void FeedVecLib(std::string const &directory);
         void FeedVecGame(std::string const &directory);
-        const std::vector<std::string> &getVecLib() const;
-        const std::vector<std::string> &getVecGame() const;
+        std::vector<std::string> &getVecLib() const;
+        std::vector<std::string> &getVecGame() const;
     };
 }
 

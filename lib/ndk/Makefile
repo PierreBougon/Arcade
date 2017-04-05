@@ -10,18 +10,18 @@
 
 ## Include colors and basic commands
 
-include ../mk/colors.mk ../mk/commands.mk ../mk/definitions.mk
+include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 ## Lib variables
 
-SRC	=	src/ndk.cpp
+SRC	=	src/Ndk.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	lib_arcade_ndk.so
 
-INC     =       -Iinclude -I../../ArcadeInterfaces
+INC     =       -Iinclude -I../../interfaces -lncurses
 
 ## Lib rules
 
-include ../mk/rules.mk
+include ../../mk/rules.mk

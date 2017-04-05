@@ -2,8 +2,8 @@
 // Created by duhieu_b on 03/04/17.
 //
 
-#include <PlayerControlSnake.hpp>
-#include <DestroyableObject.hpp>
+#include "PlayerControlSnake.hpp"
+#include "DestroyableObject.hpp"
 #include "Snake.hpp"
 
 arcade::GameState arcade::Snake::getGameState() const
@@ -15,17 +15,18 @@ void arcade::Snake::notifyEvent(std::vector<arcade::Event> &&events)
 {
     std::vector<arcade::Event> tmpEvent;
 
-    tmpEvent = events;
+    tmpEvent = std::move(events);
     snakes[0].updatePlayerInput(tmpEvent);
 }
 
-void arcade::Snake::notifyNetwork(std::vector<arcade::NetworkPacket> &&events)
+void arcade::Snake::notifyNetwork(std::vector<arcade::NetworkPacket> &&)
 {
 }
 
 std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
 {
-    return nullptr;
+    std::vector<arcade::NetworkPacket> tmp;
+    return std::move(tmp);
 }
 
 void arcade::Snake::process()
@@ -52,17 +53,20 @@ void arcade::Snake::process()
 
 std::vector<std::unique_ptr<arcade::ISprite>> &&arcade::Snake::getSpritesToLoad() const
 {
-    return nullptr;
+    std::vector<std::unique_ptr<arcade::ISprite>> tmp;
+    return std::move(tmp);
 }
 
-std::vector<std::string> arcade::Snake::getSoundsToLoad() const
+std::vector<std::pair<std::string, arcade::SoundType>> arcade::Snake::getSoundsToLoad() const
 {
-    return nullptr;
+    std::vector<std::pair<std::string, arcade::SoundType>> tmp;
+    return tmp;
 }
 
 std::vector<int> &&arcade::Snake::getSoundsToPlay()
 {
-    return nullptr;
+    std::vector<int> tmp;
+    return std::move(tmp);
 }
 
 const arcade::IMap &arcade::Snake::getCurrentMap() const
@@ -143,7 +147,7 @@ void arcade::Snake::feedingSnakes()
         return;
     }
     pos.x -= 2;
-    if (pos.x >= 0 && !checkInSnake(pos))
+    if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
@@ -156,7 +160,7 @@ void arcade::Snake::feedingSnakes()
         return;
     }
     pos.y -= 2;
-    if (pos.y >= 0 && !checkInSnake(pos))
+    if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
         return;
@@ -180,7 +184,7 @@ void arcade::Snake::checkDead()
 {
     Vector2s pos = snakes[0].getAbs();
 
-    if (pos.x < 0 || pos.x > gameMap.getWidth() || pos.y < 0 || pos.y > gameMap.getHeight())
+    if (pos.x > gameMap.getWidth() || pos.y > gameMap.getHeight())
     {
         state = GameState::QUIT;
         return;

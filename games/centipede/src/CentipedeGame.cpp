@@ -18,7 +18,7 @@ arcade::CentipedeGame::CentipedeGame() :
                          1,
                          _map,
                          _mushrooms,
-                         _entities,
+                         _centipedes,
                          _bullet)
 {
     randomize(_map, 0.1);
@@ -31,8 +31,10 @@ void arcade::CentipedeGame::randomize(arcade::Map &map, double density)
     {
         for (size_t x = 0; x < map.getWidth(); ++x)
         {
-            if (_centipedeKiller.getAbs() != {x, y} && std::rand() % static_cast<int>(1.0 / density) == 0)
-                _mushrooms.emplace_back(ALivingEntity({x, y}, TileType::BLOCK, TileTypeEvolution::BLOCK, Color::White, 4, true));
+            Vector2s vec(x, y);
+
+            if (_centipedeKiller.getAbs() != vec && std::rand() % static_cast<int>(1.0 / density) == 0)
+                _mushrooms.emplace_back(Mushroom(vec));
         }
     }
 
@@ -47,8 +49,7 @@ arcade::GameState arcade::CentipedeGame::getGameState() const
 
 void arcade::CentipedeGame::notifyEvent(std::vector<arcade::Event> &&_events)
 {
-    std::vector<arcade::Event> events = _events;
-
+    std::vector<arcade::Event> events = std::move(_events);
     _centipedeKiller.updatePlayerInput(events);
 }
 
@@ -60,27 +61,60 @@ void arcade::CentipedeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&_
 
 std::vector<arcade::NetworkPacket> &&arcade::CentipedeGame::getNetworkToSend()
 {
-    return {};
+    std::vector<arcade::NetworkPacket> npt;
+    return std::move(npt);
+}
+
+void arcade::CentipedeGame::createCentipede()
+{
+    Vector2s pos;
+
+    pos.x = rand() % _map.getWidth();
+    pos.y = 0;
+    _centipedes.emplace_back(Centipede(pos));
 }
 
 void arcade::CentipedeGame::process()
 {
+    if (_gameState != INGAME)
+        _gameState = INGAME;
 
+    if (!_centipedes.size())
+        createCentipede();
+
+    _centipedeKiller.move();
+    _centipedeKiller.action();
+
+    for (Centipede &centipede : _centipedes)
+    {
+        centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
+    }
+
+    _centipedeKiller.touched();
+
+    if (!_centipedeKiller.getHp())
+        _gameState = QUIT;
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> &&arcade::CentipedeGame::getSpritesToLoad() const
 {
-    return {};
+    std::vector<std::unique_ptr<arcade::ISprite>> sprt;
+
+    return std::move(sprt);
 }
 
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::getSoundsToLoad() const
 {
-    return {};
+    std::vector<std::pair<std::string, arcade::SoundType>> sounds;
+
+    return std::move(sounds);
 }
 
 std::vector<int> &&arcade::CentipedeGame::getSoundsToPlay()
 {
-    return {};
+    std::vector<int> sounds;
+
+    return std::move(sounds);
 }
 
 const arcade::IMap &arcade::CentipedeGame::getCurrentMap() const
