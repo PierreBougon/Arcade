@@ -3,7 +3,7 @@
 $(NAME):	$(OBJ)
 		@$(ECHO) "$(BLUE) Flags used \t: $(BOLD_WHITE)$(CXXFLAGS)$(CLEAR)"
 		@$(ECHO) "$(BLUE) Dependencies:$(BOLD_WHITE)$(LDFLAGS)$(CLEAR)"
-		@$(ECHO) "$(BLUE) == $(BOLD_WHITE) $(PROJECT_NAME)  Compiled $(BLUE) == $(CLEAR)"
+		@$(ECHO) "$(BLUE) == $(BOLD_WHITE) $(PROJECT_NAME)  Compiled $(BLUE) == $(CLEAR)\n"
 		@$(CXX) $(OBJ) -o $(NAME) $(INC) $(LDFLAGS)
 
 all:		$(NAME)
