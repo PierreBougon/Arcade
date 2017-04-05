@@ -18,17 +18,13 @@ namespace arcade
     class Gui : public arcade::IGUI
     {
     private:
-        std::map<std::string, std::unique_ptr<IComponent>> components;
+        std::vector<IComponent &> components;
     public:
         ~Gui();
-        void createComponent(const std::string &name, TypeComponent component);
-        const IComponent *operator[](std::string const& name) const;
-
+        Gui();
         size_t size() const;
 
         IComponent &at(std::size_t n);
-
-        const std::map<std::string, std::unique_ptr<IComponent>> &getComponents() const;
     };
 }
 
