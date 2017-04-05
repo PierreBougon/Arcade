@@ -2,9 +2,11 @@
 // Created by brout_m on 03/04/17.
 //
 
+#include <new>
 #include <cstdlib>
 #include "LifelessEntity.hpp"
 #include "CentipedeGame.hpp"
+#include "Protocol.hpp"
 
 arcade::CentipedeGame::CentipedeGame() :
         _gameState(GameState::NONE),
@@ -152,7 +154,108 @@ void arcade::CentipedeGame::updateMap()
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
 }
 
+const arcade::Map &arcade::CentipedeGame::getMouliMap() const {
+    return _map;
+}
+
 extern "C" arcade::IGame *getGame()
 {
     return (new arcade::CentipedeGame());
+}
+
+extern "C" void updateMap(arcade::WhereAmI *whereAmI, arcade::GetMap *map, const arcade::Map& imap)
+{
+
+    for (size_t y = 0; y < imap.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < imap.getWidth(); ++x)
+        {
+            for (size_t layer = 0; layer < imap.getLayerNb(); ++layer)
+            {
+                const arcade::Tile &tile = imap.atMouli(layer, x, y);
+
+                map->tile[y * imap.getWidth() + x] = tile.getType();
+                if (tile.getTypeEv() == arcade::TileTypeEvolution::PLAYER)
+                {
+                    whereAmI->position[0].x = static_cast<uint16_t >(x);
+                    whereAmI->position[0].y = static_cast<uint16_t >(y);
+                }
+                if (tile.getType() != arcade::TileType::EMPTY)
+                    break;
+            }
+        }
+    }
+}
+
+extern "C" void Play()
+{
+    arcade::CentipedeGame centipedeGame;
+    arcade::Map const& map = centipedeGame.getMouliMap();
+    arcade::Event event;
+    std::vector<arcade::Event> events;
+    size_t command;
+    size_t whereAmISize = sizeof(arcade::WhereAmI) + sizeof(arcade::Position);
+    size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
+    char *tmp = new char[whereAmISize];
+    arcade::WhereAmI *whereAmI = new (tmp) arcade::WhereAmI;
+    tmp = new char[mapSize];
+    arcade::GetMap *getMap = new (tmp) arcade::GetMap;
+
+    whereAmI->lenght = 1;
+    whereAmI->type = arcade::CommandType::PLAY;
+    getMap->height = static_cast<uint16_t>(map.getHeight());
+    getMap->width = static_cast<uint16_t>(map.getWidth());
+    event.type = arcade::EventType::ET_KEYBOARD;
+    event.action = arcade::ActionType::AT_PRESSED;
+    updateMap(whereAmI, getMap, map);
+    while (std::cin >> command)
+    {
+        getMap->type = static_cast<arcade::CommandType>(command);
+        switch (getMap->type)
+        {
+            case (arcade::CommandType::WHERE_AM_I) :
+                std::cout.write(reinterpret_cast<const char *>(whereAmI), whereAmISize);
+                break;
+            case (arcade::CommandType::GET_MAP) :
+                std::cout.write(reinterpret_cast<const char *>(getMap), mapSize);
+                break;
+            case (arcade::CommandType::GO_UP) :
+                event.kb_key = arcade::KB_ARROW_UP;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::GO_DOWN) : ;
+                event.kb_key = arcade::KB_ARROW_DOWN;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::GO_LEFT) : ;
+                event.kb_key = arcade::KB_ARROW_LEFT;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::GO_RIGHT) : ;
+                event.kb_key = arcade::KB_ARROW_RIGHT;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::GO_FORWARD) : ;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::SHOOT) :
+                event.kb_key = arcade::KB_SPACE;
+                events.push_back(event);
+                centipedeGame.notifyEvent(std::move(events));
+                break;
+            case (arcade::CommandType::ILLEGAL) :
+                break;
+            case (arcade::CommandType::PLAY) :
+                centipedeGame.process();
+                updateMap(whereAmI, getMap, map);
+                break;
+        }
+    }
+    delete [] whereAmI;
+    delete [] getMap;
 }

@@ -13,8 +13,8 @@
 include ../mk/colors.mk ../mk/commands.mk ../mk/definitions.mk
 
 ## Lib variab
-SRC	=	src/SFMLCore.cpp	\
-		src/GfxSprite.cpp	
+SRC		=		src/SFMLCore.cpp	\
+				src/GfxSprite.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
