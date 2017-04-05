@@ -57,4 +57,6 @@ namespace arcade
     };
 }
 
+extern "C" arcade::IGame *getGame();
+
 #endif //CPP_ARCADE_CENTIPEDEGAME_HPP

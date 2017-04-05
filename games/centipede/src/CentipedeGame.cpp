@@ -137,3 +137,8 @@ arcade::Vector2s &&arcade::CentipedeGame::placePlayer(arcade::Map &map)
     pos.y = std::rand() % static_cast<size_t>(static_cast<double>(height) * 0.2 + static_cast<double>(width) * 0.8);
     return std::move(pos);
 }
+
+extern "C" arcade::IGame *getGame()
+{
+    return (new arcade::CentipedeGame());
+}

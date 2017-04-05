@@ -5,11 +5,11 @@
 #ifndef CPP_ARCADE_LAPIN_HPP
 # define CPP_ARCADE_LAPIN_HPP
 
-# include <IGfxLib.hpp>
 # include <map>
 # include <memory>
 # include "lapin.h"
 # include "Sound.hpp"
+# include "IGfxLib.hpp"
 
 namespace arcade
 {
@@ -32,7 +32,7 @@ namespace arcade
     };
 
 
-    class Lapin : IGfxLib
+    class Lapin : public IGfxLib
     {
     public:
         ~Lapin();
@@ -87,5 +87,7 @@ namespace arcade
         t_sprites           Sprites;
     };
 }
+
+extern "C" arcade::IGfxLib *getLib();
 
 #endif //CPP_ARCADE_LAPIN_HPP

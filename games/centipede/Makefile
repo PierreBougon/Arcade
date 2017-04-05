@@ -8,38 +8,33 @@ SRC	=	src/Bullet.cpp	\
 		src/CentipedeKiller.cpp \
 		src/Mushroom.cpp \
 
-INTERFACE_DIR = ../../interfaces/
+INTERFACE_DIR = 	../../interfaces/
 
-INTERFACE_FIL = Color.cpp \
+INTERFACE_FIL = 	Color.cpp \
 
-SRC += $(addprefix $(INTERFACE_DIR), $(INTERFACE_FIL))
+SRC += 				$(addprefix $(INTERFACE_DIR), $(INTERFACE_FIL))
 
-CORE_DIR = ../../core/src/
+COMMON_DIR = 		../common/src/
 
-CORE_FIL = Gui.cpp \
+COMMON_FIL = 		AIControlled.cpp \
+		            ALivingEntity.cpp \
+		            DestroyableObject.cpp \
+		            Entity.cpp \
+		            LifelessEntity.cpp \
+		            Map.cpp \
+		            MapLoader.cpp \
+		            Sprite.cpp \
+		            SpriteGenerator.cpp \
+		            Tile.cpp \
+					Gui.cpp
 
-SRC += $(addprefix $(CORE_DIR), $(CORE_FIL))
+SRC += 				$(addprefix $(COMMON_DIR), $(COMMON_FIL))
 
-COMMON_DIR = ../common/src/
+OBJ 	=   		$(SRC:.cpp=.o)
 
-COMMON_FIL = AIControlled.cpp \
-             ALivingEntity.cpp \
-             DestroyableObject.cpp \
-             Entity.cpp \
-             LifelessEntity.cpp \
-             Map.cpp \
-             MapLoader.cpp \
-             Sprite.cpp \
-             SpriteGenerator.cpp \
-             Tile.cpp
+NAME    =      		../lib_arcade_centipede.so
 
-SRC += $(addprefix $(COMMON_DIR), $(COMMON_FIL))
-
-OBJ 	=   	$(SRC:.cpp=.o)
-
-NAME    =      	../lib_arcade_centipede.so
-
-INC     =       -Iinclude -I../../interfaces -I../include -I../common/include -I../../core/include
+INC     =       	-Iinclude -I../../interfaces -I../include -I../common/include -I../../core/include
 
 ## Core rules
 
