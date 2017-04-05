@@ -62,3 +62,7 @@ void arcade::Map::resetMapFromLayer(size_t layer)
         resetLayer(i);
     }
 }
+
+const arcade::Tile &arcade::Map::atMouli(size_t layer, size_t x, size_t y) const {
+    return _map[layer][y][x];
+}

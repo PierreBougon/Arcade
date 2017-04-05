@@ -35,12 +35,12 @@ namespace arcade
         void notifyNetwork(std::vector<NetworkPacket> &&events);
         void process();
         const IMap &getCurrentMap() const;
+        const Map &getMouliMap() const;
         IGUI &getGUI();
         std::vector<NetworkPacket> &&getNetworkToSend();
         std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
         std::vector<int> &&getSoundsToPlay();
-        void updateMap();
 
     private:
         arcade::GameState               _gameState;
@@ -55,9 +55,12 @@ namespace arcade
         void randomize(Map &map, double density = 0.5);
         Vector2s &&placePlayer(Map &map);
         void createCentipede();
+        void updateMap();
     };
 }
 
 extern "C" arcade::IGame *getGame();
+
+extern "C" void Play();
 
 #endif //CPP_ARCADE_CENTIPEDEGAME_HPP
