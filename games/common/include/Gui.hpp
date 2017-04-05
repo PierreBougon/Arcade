@@ -58,9 +58,10 @@ namespace arcade
         Color _textColor;
         bool _clicked;
     };
-    
+
     class Gui : public arcade::IGUI
     {
+        std::vector<IComponent &> components;
     public:
         ~Gui();
         void createComponent(const std::string &name, Component &&cmp);

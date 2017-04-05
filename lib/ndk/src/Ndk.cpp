@@ -5,11 +5,6 @@
 #include <bits/unique_ptr.h>
 #include <curses.h>
 #include "Ndk.hpp"
-#include "Gui.hpp"
-#include "Protocol.hpp"
-#include "GameState.hpp"
-#include "IComponent.hpp"
-
 
 bool arcade::Ndk::pollEvent(arcade::Event &e)
 {
@@ -29,11 +24,11 @@ bool arcade::Ndk::pollEvent(arcade::Event &e)
 
 void arcade::Ndk::updateMap(arcade::IMap const &map)
 {
-    const ILayer &layer = map[0];
-    const std::vector<arcade::ITile *> vec;
+    size_t layer = map.getLayerNb();
     std::string tmp;
-    int i(0);
-    int j(0);
+    size_t i;
+    size_t j;
+    size_t k;
 
     if (!pass)
     {
@@ -42,14 +37,16 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
     }
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
-    for (i = 0; i < layer.ǵetHeight(); ++i)
+    for (i = 0; i < layer; ++i)
     {
-        vec = layer[i];
-        j = 0;
-        for (std::vector<arcade::ITile *>::const_iterator it = vec.begin(); it != vec.end(); ++it)
+        for (j = 0; j < map.getHeight(); ++j)
         {
-            tmp = vecString[(*it)->getSpriteId()][(*it)->getSpritePos()];
-            mvwprintw(win, i, j, tmp.c_str());
+            for (k = 0; k < map.getWidth(); ++k)
+            {
+                ITile const& tile = map.at(i, k, j);
+                tmp = vecString[tile.getSpritePos()][tile.getSpritePos()];
+                mvwprintw(win, static_cast<int>(j), static_cast<int>(k), tmp.c_str());
+            }
         }
     }
 }
@@ -171,6 +168,8 @@ arcade::Ndk::Ndk() : keyboard({
     halfdelay(3);
     curs_set(0);
     pass = false;
+    height = 0;
+    width = 0;
 }
 
 void arcade::Ndk::display()
@@ -186,6 +185,7 @@ void arcade::Ndk::clear()
 
 void arcade::Ndk::soundControl(const arcade::Sound &sound)
 {
+    (void) sound;
 }
 
 void arcade::Ndk::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
@@ -207,12 +207,49 @@ void arcade::Ndk::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sp
 
 void arcade::Ndk::updateGUI(arcade::IGUI &gui)
 {
-    for (std::map<std::string, std::unique_ptr<IComponent>>::const_iterator it = static_cast<const arcade::Gui&>((gui)).getComponents().begin(); it != static_cast<const arcade::Gui&>((gui)).getComponents().end(); ++it)
+    for (size_t i = 0; i < gui.size(); ++i)
     {
-        if ((*it).second.get()->getText() != "")
+        IComponent &component = gui.at(i);
+        if (component.getText() != "")
         {
-            mvwprintw(stdscr, static_cast<int>((*it).second.get()->getX()), static_cast<int>((*it).second.get()->getY()), "%s",
-             (*it).second.get()->getText());
+            mvwprintw(stdscr, static_cast<int>(component.getX()), static_cast<int>(component.getY()), "%s",
+             component.getText().c_str());
         }
+    }
+}
+
+bool arcade::Ndk::doesSupportSound() const
+{
+    return false;
+}
+
+void arcade::Ndk::loadSounds(std::vector<std::string> const &sounds)
+{
+    (void) sounds;
+}
+
+void arcade::Ndk::playSound(int soundId)
+{
+    (void) soundId;
+}
+
+void arcade::Ndk::setSize(size_t Height, size_t Width)
+{
+    height = Height;
+    width = Width;
+}
+
+void arcade::Ndk::setPosition(size_t y, size_t x)
+{
+    (void) y;
+    (void) x;
+}
+
+void arcade::Ndk::initializeWindow()
+{
+    if (!pass)
+    {
+        win = newwin(static_cast<int>(height), static_cast<int>(width), getmaxy(stdscr) / 4, getmaxx(stdscr) / 4);
+        pass = true;
     }
 }
