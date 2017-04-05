@@ -69,7 +69,7 @@ std::list<arcade::CentipedePart> &arcade::Centipede::getBody()
 
 bool arcade::Centipede::hitByBullet(arcade::Bullet &bullet,
                                     std::list<Centipede> &centipedes,
-                                    std::list<Mushroom> &mushrooms)
+                                    std::list<Mushroom*> &mushrooms)
 {
     std::list<CentipedePart>::iterator it;
 
@@ -84,11 +84,11 @@ bool arcade::Centipede::hitByBullet(arcade::Bullet &bullet,
         size_t pos = it->getNb();
 
         if (pos == 0) {
-            mushrooms.push_back(Mushroom(it->getAbs()));
+            mushrooms.push_back(new Mushroom(it->getAbs()));
             _body.pop_front();
             setBody();
         } else if (pos == _body.size()) {
-            mushrooms.push_back(Mushroom(it->getAbs()));
+            mushrooms.push_back(new Mushroom(it->getAbs()));
             _body.pop_back();
         } else {
             centipedes.emplace_back(std::move(Centipede(_start, split(pos, mushrooms), _directionH, _directionV)));
@@ -99,7 +99,7 @@ bool arcade::Centipede::hitByBullet(arcade::Bullet &bullet,
     return (!_body.size());
 }
 
-std::list<arcade::CentipedePart> &&arcade::Centipede::split(size_t pos, std::list<Mushroom> &mushrooms)
+std::list<arcade::CentipedePart> &&arcade::Centipede::split(size_t pos, std::list<Mushroom*> &mushrooms)
 {
     size_t i;
     std::list<arcade::CentipedePart> newCentipede;
@@ -113,7 +113,7 @@ std::list<arcade::CentipedePart> &&arcade::Centipede::split(size_t pos, std::lis
         ++i;
     }
     _body.splice(newCentipede.cbegin(), _body, first, _body.cend());
-    mushrooms.push_back(Mushroom(newCentipede.front().getAbs()));
+    mushrooms.push_back(new Mushroom(newCentipede.front().getAbs()));
     newCentipede.pop_front();
     return std::move(newCentipede);
 }
@@ -132,7 +132,7 @@ void arcade::Centipede::setBody()
 
 void arcade::Centipede::oneTurn(Bullet &bullet,
                                 std::list<Centipede> &centipedes,
-                                std::list<Mushroom> &mushrooms,
+                                std::list<Mushroom*> &mushrooms,
                                 Map const& map)
 {
     if (_poped) {
@@ -161,7 +161,7 @@ bool arcade::Centipede::checkCentipedeCollision(std::list<arcade::Centipede> &ce
 }
 
 void arcade::Centipede::moveHead(std::list<arcade::Centipede> &centipedes,
-                                 std::list<arcade::Mushroom> &mushrooms,
+                                 std::list<arcade::Mushroom*> &mushrooms,
                                  const arcade::Map &map)
 {
     const Vector2s &_abs = _body.front().getAbs();
@@ -171,8 +171,8 @@ void arcade::Centipede::moveHead(std::list<arcade::Centipede> &centipedes,
     if (_directionH == WEST)
     {
         if (_body.front().getAbs().x == 0 ||
-            std::find_if(mushrooms.cbegin(), mushrooms.cend(), [&west](const Mushroom &mush) {
-                return (mush.getAbs() == west);
+            std::find_if(mushrooms.cbegin(), mushrooms.cend(), [&west](const Mushroom *mush) {
+                return (mush->getAbs() == west);
             }) != mushrooms.cend() || checkCentipedeCollision(centipedes, west))
         {
             testMove(map, _abs);
@@ -184,8 +184,8 @@ void arcade::Centipede::moveHead(std::list<arcade::Centipede> &centipedes,
     else
     {
         if (_body.front().getAbs().x == map.getWidth() - 1 ||
-            std::find_if(mushrooms.cbegin(), mushrooms.cend(), [&east](const Mushroom &mush) {
-                return (mush.getAbs() == east);
+            std::find_if(mushrooms.cbegin(), mushrooms.cend(), [&east](const Mushroom *mush) {
+                return (mush->getAbs() == east);
             }) != mushrooms.cend() || checkCentipedeCollision(centipedes, east))
         {
             testMove(map, _abs);

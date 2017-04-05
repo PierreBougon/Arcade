@@ -45,7 +45,7 @@ namespace arcade
                         Color col,
                         size_t hp,
                         const Map &map,
-                        std::list<Mushroom> &mushrooms,
+                        std::list<Mushroom*> &mushrooms,
                         std::list<Centipede> &entities,
                         Bullet &bullet);
         CentipedeKiller(Vector2s pos,
@@ -54,7 +54,7 @@ namespace arcade
                         Color col,
                         size_t hp,
                         const Map &map,
-                        std::list<Mushroom> &mushrooms,
+                        std::list<Mushroom*> &mushrooms,
                         std::list<Centipede> &entities,
                         Bullet &bullet);
         void move();
@@ -66,7 +66,7 @@ namespace arcade
         KillerAction                    _action;
         KillerMove                      _move;
         const Map                       &_map;
-        std::list<Mushroom>             &_mushrooms;
+        std::list<Mushroom*>             &_mushrooms;
         std::list<Centipede>            &_centipedes;
         Bullet                          &_bullet;
 

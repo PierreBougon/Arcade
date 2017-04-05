@@ -3,6 +3,7 @@
 //
 
 #include <cstddef>
+#include <iostream>
 #include "ITile.hpp"
 #include "Map.hpp"
 
@@ -10,9 +11,9 @@ arcade::Map::Map(std::string const& path,  size_t nbLayers) :
         _mapLoader(path),
         _map(nbLayers, t_layer (_mapLoader.getHeight(), t_line (_mapLoader.getWidth(), arcade::Tile())))
 {
-    for (Entity &entity : _mapLoader.getMap())
+    for (Entity *entity : _mapLoader.getMap())
     {
-        updateLayer(entity, 0);
+        updateLayer(*entity, 0);
     }
 }
 

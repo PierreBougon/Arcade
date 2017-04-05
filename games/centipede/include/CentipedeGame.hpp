@@ -28,7 +28,7 @@ namespace arcade
         };
 
     public:
-        ~CentipedeGame() {};
+        ~CentipedeGame();
         CentipedeGame();
         GameState getGameState() const;
         void notifyEvent(std::vector<Event> &&events);
@@ -48,12 +48,12 @@ namespace arcade
         Gui                             _gui;
         Bullet                          _bullet;
         CentipedeKiller                 _centipedeKiller;
-        std::list<Mushroom>             _mushrooms;
+        std::list<Mushroom *>           _mushrooms;
         std::list<Centipede>            _centipedes;
 
     // private functions
         void randomize(Map &map, double density = 0.5);
-        Vector2s &&placePlayer(Map &map);
+        Vector2s placePlayer(Map &map);
         void createCentipede();
         void updateMap();
     };

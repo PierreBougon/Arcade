@@ -18,7 +18,7 @@ namespace arcade
         ~MapLoader();
         MapLoader(std::string const& pathToMapCfg);
         bool isFileParsed() const;
-        std::vector<arcade::Entity> &getMap();
+        std::vector<arcade::Entity *> &getMap();
         size_t getWidth() const;
         size_t getHeight() const;
 
@@ -27,7 +27,7 @@ namespace arcade
         bool Parsed;
         size_t Height;
         size_t Width;
-        std::vector<arcade::Entity> Map;
+        std::vector<arcade::Entity *> Map;
 
         void parse();
     };

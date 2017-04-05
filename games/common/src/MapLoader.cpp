@@ -3,6 +3,7 @@
 //
 
 #include <LifelessEntity.hpp>
+#include <iostream>
 #include "MapLoader.hpp"
 
 arcade::MapLoader::MapLoader(const std::string &pathToMapCfg) :
@@ -18,7 +19,7 @@ bool arcade::MapLoader::isFileParsed() const {
     return Parsed;
 }
 
-std::vector<arcade::Entity> &arcade::MapLoader::getMap()
+std::vector<arcade::Entity *> &arcade::MapLoader::getMap()
 {
     return Map;
 }
@@ -32,22 +33,25 @@ void arcade::MapLoader::parse()
     y = 0;
     while (std::getline(file, line))
     {
+
         x = 0;
         Width = line.size();
         for (char tile : line)
         {
+            Vector2s vec(x, y);
+
             if (tile == '#')
-                Map.emplace_back(LifelessEntity({x, y},
-                                                arcade::TileType::BLOCK,
-                                                arcade::TileTypeEvolution::BLOCK,
-                                                Color::White,
-                                                true));
+                Map.push_back(new LifelessEntity(vec,
+                                                 arcade::TileType::BLOCK,
+                                                 arcade::TileTypeEvolution::BLOCK,
+                                                 Color::White,
+                                                 true));
             else
-                Map.emplace_back(LifelessEntity({x, y},
-                                                arcade::TileType::EMPTY,
-                                                arcade::TileTypeEvolution::EMPTY,
-                                                Color::Black,
-                                                false));
+                Map.push_back(new LifelessEntity (vec,
+                                                  arcade::TileType::EMPTY,
+                                                  arcade::TileTypeEvolution::EMPTY,
+                                                  Color::Black,
+                                                  false));
             ++x;
         }
         ++y;
@@ -68,4 +72,7 @@ size_t arcade::MapLoader::getHeight() const
 arcade::MapLoader::~MapLoader()
 {
     file.close();
+    for (Entity *entity : Map)
+        if (entity != nullptr)
+            delete entity;
 }

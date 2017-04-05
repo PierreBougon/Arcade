@@ -51,7 +51,7 @@ namespace arcade
         void setBody();
         void oneTurn(Bullet &bullet,
                      std::list<Centipede> &centipedes,
-                     std::list<Mushroom> &mushrooms,
+                     std::list<Mushroom*> &mushrooms,
                      Map const& map);
 
     private:
@@ -66,10 +66,10 @@ namespace arcade
         void testMove(Map const& map, Vector2s const& pos);
         void moveBody();
         void moveHead(std::list<Centipede> &centipedes,
-                      std::list<Mushroom> &mushrooms,
+                      std::list<Mushroom*> &mushrooms,
                       Map const& map);
-        bool hitByBullet(Bullet &bullet, std::list<Centipede> &centipedes, std::list<Mushroom> &mushrooms);
-        std::list<CentipedePart> &&split(size_t pos, std::list<Mushroom> &mushroom);
+        bool hitByBullet(Bullet &bullet, std::list<Centipede> &centipedes, std::list<Mushroom*> &mushrooms);
+        std::list<CentipedePart> &&split(size_t pos, std::list<Mushroom*> &mushroom);
 
         // deleted methods
         Centipede() = delete;

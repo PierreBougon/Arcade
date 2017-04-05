@@ -36,12 +36,12 @@ void arcade::CentipedeGame::randomize(arcade::Map &map, double density)
             Vector2s vec(x, y);
 
             if (_centipedeKiller.getAbs() != vec && std::rand() % static_cast<int>(1.0 / density) == 0)
-                _mushrooms.emplace_back(Mushroom(vec));
+                _mushrooms.push_back(new Mushroom(vec));
         }
     }
 
-    for (Entity &entity : _mushrooms)
-        map.updateLayer(entity, PLAYER);
+    for (Entity *entity : _mushrooms)
+        map.updateLayer(*entity, PLAYER);
 }
 
 arcade::GameState arcade::CentipedeGame::getGameState() const
@@ -129,7 +129,7 @@ arcade::IGUI &arcade::CentipedeGame::getGUI()
     return _gui;
 }
 
-arcade::Vector2s &&arcade::CentipedeGame::placePlayer(arcade::Map &map)
+arcade::Vector2s arcade::CentipedeGame::placePlayer(arcade::Map &map)
 {
     Vector2s pos;
     size_t height = map.getHeight();
@@ -137,15 +137,15 @@ arcade::Vector2s &&arcade::CentipedeGame::placePlayer(arcade::Map &map)
 
     pos.x = std::rand() % width;
     pos.y = std::rand() % static_cast<size_t>(static_cast<double>(height) * 0.2 + static_cast<double>(width) * 0.8);
-    return std::move(pos);
+    return pos;
 }
 
 void arcade::CentipedeGame::updateMap()
 {
     _map.resetMapFromLayer(PLAYER);
     _map.updateLayer(_centipedeKiller, CentipedeLayers::PLAYER);
-    for (Mushroom &mushroom : _mushrooms)
-        _map.updateLayer(mushroom, CentipedeLayers::PLAYER);
+    for (Mushroom *mushroom : _mushrooms)
+        _map.updateLayer(*mushroom, CentipedeLayers::PLAYER);
 
     _map.updateLayer(_bullet, CentipedeLayers::BULLET);
 
@@ -156,6 +156,13 @@ void arcade::CentipedeGame::updateMap()
 
 const arcade::Map &arcade::CentipedeGame::getMouliMap() const {
     return _map;
+}
+
+arcade::CentipedeGame::~CentipedeGame()
+{
+    for (Mushroom *mush : _mushrooms)
+        if (mush)
+            delete mush;
 }
 
 extern "C" arcade::IGame *getGame()
@@ -193,13 +200,13 @@ extern "C" void Play()
     arcade::Map const& map = centipedeGame.getMouliMap();
     arcade::Event event;
     std::vector<arcade::Event> events;
-    size_t command;
     size_t whereAmISize = sizeof(arcade::WhereAmI) + sizeof(arcade::Position);
     size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
     char *tmp = new char[whereAmISize];
     arcade::WhereAmI *whereAmI = new (tmp) arcade::WhereAmI;
     tmp = new char[mapSize];
     arcade::GetMap *getMap = new (tmp) arcade::GetMap;
+    char line[2];
 
     whereAmI->lenght = 1;
     whereAmI->type = arcade::CommandType::PLAY;
@@ -208,9 +215,13 @@ extern "C" void Play()
     event.type = arcade::EventType::ET_KEYBOARD;
     event.action = arcade::ActionType::AT_PRESSED;
     updateMap(whereAmI, getMap, map);
-    while (std::cin >> command)
+    std::cout << "LOLILOL" << std::endl;
+    while (std::cin.read(line, 2))
     {
-        getMap->type = static_cast<arcade::CommandType>(command);
+        line[0] = '0';
+        std::string lineRead(line);
+
+        getMap->type = static_cast<arcade::CommandType>(std::stoi(lineRead));
         switch (getMap->type)
         {
             case (arcade::CommandType::WHERE_AM_I) :

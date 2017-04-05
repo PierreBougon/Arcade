@@ -33,7 +33,8 @@ arcade::Entity::Entity(arcade::Entity const& cpy) :
         abs(cpy.getAbs()),
         shift(cpy.getShift()),
         prev(cpy.getPrev()),
-        type(cpy.getType()), typeEvolution(cpy.getTypeEvolution()),
+        type(cpy.getType()),
+        typeEvolution(cpy.getTypeEvolution()),
         color(getColor()),
         sprite(cpy.getSpriteId(), cpy.getSpriteCount())
 {
