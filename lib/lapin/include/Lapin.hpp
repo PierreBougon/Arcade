@@ -13,14 +13,16 @@
 
 namespace arcade
 {
-    template <typename T>
     class Bunny_sound_deleter
     {
     public:
-        void operator()(T* sound) {
-            bunny_sound_stop(&sound->sound);
-            bunny_delete_sound(&sound->sound);
-        };
+        void operator()(t_bunny_effect* sound);
+    };
+
+    class Bunny_music_deleter
+    {
+    public:
+        void operator()(t_bunny_music* sound);
     };
 
     class Bunny_picture_deleter
@@ -39,11 +41,13 @@ namespace arcade
     public:
         bool doesSupportSound() const;
         void clear();
-        void loadSounds(std::vector<std::string> const &sounds);
         void soundControl(const Sound &sound);
         void loadSprites(std::vector<std::unique_ptr<ISprite>> &&sprites);
         bool pollEvent(Event &e);
         void updateGUI(IGUI &gui);
+        void loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds) override;
+
+    public:
         void updateMap(IMap const &map);
         void display();
 
@@ -55,13 +59,13 @@ namespace arcade
         void printText(t_bunny_position const &pos, std::string const &text);
 
     private:
-        typedef std::map<size_t, std::unique_ptr<t_bunny_effect, Bunny_sound_deleter>>      t_bunny_map_effect;
-        typedef t_bunny_context                                                             t_bunny_map_context;
-        typedef std::map<char, arcade::KeyboardKey>                                         t_keyboard;
-        typedef std::map<e_bunny_mouse_button, arcade::MouseKey >                           t_mouse;
-        typedef std::map<char, e_bunny_letter_tab>                                          t_letters;
-        typedef std::unique_ptr<t_bunny_picture, Bunny_picture_deleter>                     t_sprite;
-        typedef std::vector<std::vector<t_sprite>>                                          t_sprites;
+        typedef std::map<size_t, t_bunny_effect *>                          t_bunny_map_effect;
+        typedef std::map<size_t, t_bunny_music *>                           t_bunny_map_music;
+        typedef t_bunny_context                                             t_bunny_map_context;
+        typedef std::map<char, arcade::KeyboardKey>                         t_keyboard;
+        typedef std::map<e_bunny_mouse_button, arcade::MouseKey >           t_mouse;
+        typedef std::map<char, e_bunny_letter_tab>                          t_letters;
+        typedef std::vector<std::vector<t_bunny_picture *>>                 t_sprites;
         typedef unsigned int *t_uintcolormap;
         typedef t_color *t_colormap;
 
@@ -79,6 +83,7 @@ namespace arcade
         static t_mouse      Mouse;
         static t_letters    Letters;
         t_bunny_map_effect  Effects;
+        t_bunny_map_music   Musics;
         t_sprites           Sprites;
     };
 }

@@ -14,14 +14,22 @@ include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 ## Lib variables
 
-SRC		=	src/Lapin.cpp
+SRC			=		src/Lapin.cpp \
+					../../interfaces/Color.cpp \
+					../../interfaces/Sound.cpp
 
-OBJ 	=   	$(SRC:.cpp=.o)
+OBJ 		=   	$(SRC:.cpp=.o)
 
-NAME    =      	lib_arcade_lapin.so
+NAME    	=      	../lib_arcade_lapin.so
 
-INC     =       -Iinclude -I../../interfaces -I./dep/deps -I./dep/
-
+INC     	=       -Iinclude \
+					-I../../interfaces \
+					-I./dep/ -I./dep/deps \
+					-L./dep/lib \
+					-llapin -lusb-1.0 \
+					-L../sfml/SFML-2.4.2/dep/lib \
+					-lsfml-audio -lsfml-graphics -lsfml-network -lsfml-system -lsfml-window \
+					-Wl,--allow-shlib-undefined
 ## Lib rules
 
 include ../../mk/rules.mk

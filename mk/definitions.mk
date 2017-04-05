@@ -19,7 +19,7 @@ CXXFLAGS	+=	-D DEBUG
 endif
 endif
 ifeq ($(DLL), YES)
-CXXFLAGS	+=	-fPic
+CXXFLAGS	+=	-fPIC
 endif
 
 

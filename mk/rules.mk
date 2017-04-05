@@ -2,7 +2,7 @@
 
 $(NAME):	$(OBJ)
 		@$(ECHO) "$(GREEN) == $(WHITE) Compiling Core  $(GREEN) == $(CLEAR)"
-		@$(CXX) $(OBJ) -o $(NAME) $(INC)
+		$(CXX) $(OBJ) -o $(NAME) $(INC)
 
 all:		$(NAME)
 
