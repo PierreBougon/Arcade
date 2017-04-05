@@ -20,6 +20,6 @@ re:		fclean all
 
 .cpp.o:
 		@$(CXX) $(INC) $(LDFLAGS) -c $< -o $@
-		@$(ECHO) "$(BOLD_WHITE) [$(GREEN)OK$(BOLD_WHITE)] Compiled "$<"\n$(CLEAR)"
+		@$(ECHO) "$(BOLD_WHITE) [$(GREEN)OK$(BOLD_WHITE)] Compiled "$<"$(CLEAR)"
 
 .PHONY:		all clean fclean re
