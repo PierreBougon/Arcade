@@ -8,21 +8,6 @@ arcade::Gui::~Gui()
 {
 }
 
-void arcade::Gui::createComponent(const std::string &name, Component &&cmp)
-{
-    components[name] = std::make_unique<Component>(cmp);
-}
-
-arcade::IComponent *arcade::Gui::operator[](std::string const &name)
-{
-    return components[name].get();
-}
-
-const std::map<std::string, std::unique_ptr<arcade::IComponent>> &arcade::Gui::getComponents() const
-{
-    return components;
-}
-
 size_t arcade::Gui::size() const
 {
     return components.size();
@@ -31,7 +16,7 @@ size_t arcade::Gui::size() const
 arcade::IComponent &arcade::Gui::at(std::size_t n)
 {
     size_t counter(0);
-    std::map<std::string, std::unique_ptr<arcade::IComponent>>::iterator it;
+    std::vector<IComponent *>::iterator it;
 
     for (it = components.begin(); it != components.end() ; ++it)
     {
@@ -39,7 +24,17 @@ arcade::IComponent &arcade::Gui::at(std::size_t n)
             break;
         counter++;
     }
-    return (*((*it).second.get()));
+    return (*(*it));
+}
+
+arcade::Gui::Gui()
+{
+
+}
+
+void arcade::Gui::addComponent(arcade::Component &add)
+{
+    components.push_back(new Component(add));
 }
 
 
