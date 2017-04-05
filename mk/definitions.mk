@@ -29,8 +29,8 @@ endif
 
 CXX	=	g++
 
-ifeq ($(DLL), YES)
-CXX	+=	-shared
-endif
-
 LDFLAGS	=
+
+ifeq ($(DLL), YES)
+LDFLAGS	+=	-shared
+endif
