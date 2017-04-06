@@ -4,6 +4,7 @@
 
 #include <new>
 #include <cstdlib>
+#include <unistd.h>
 #include "LifelessEntity.hpp"
 #include "CentipedeGame.hpp"
 #include "Protocol.hpp"
@@ -23,6 +24,7 @@ arcade::CentipedeGame::CentipedeGame() :
                          _centipedes,
                          _bullet)
 {
+    _map.updateLayer(_centipedeKiller, PLAYER);
     randomize(_map, 0.1);
     _gameState = GameState::LOADING;
 }
@@ -94,6 +96,8 @@ void arcade::CentipedeGame::process()
 
     _centipedeKiller.touched();
 
+    updateMap();
+
     if (!_centipedeKiller.getHp())
         _gameState = QUIT;
 }
@@ -136,7 +140,7 @@ arcade::Vector2s arcade::CentipedeGame::placePlayer(arcade::Map &map)
     size_t width = map.getWidth();
 
     pos.x = std::rand() % width;
-    pos.y = std::rand() % static_cast<size_t>(static_cast<double>(height) * 0.2 + static_cast<double>(width) * 0.8);
+    pos.y = height - 1;
     return pos;
 }
 
@@ -170,7 +174,7 @@ extern "C" arcade::IGame *getGame()
     return (new arcade::CentipedeGame());
 }
 
-extern "C" void updateMap(arcade::WhereAmI *whereAmI, arcade::GetMap *map, const arcade::Map& imap)
+static void updateMap(arcade::WhereAmI *whereAmI, arcade::GetMap *map, const arcade::Map& imap)
 {
     for (size_t y = 0; y < imap.getHeight(); ++y)
     {
@@ -181,7 +185,7 @@ extern "C" void updateMap(arcade::WhereAmI *whereAmI, arcade::GetMap *map, const
                 const arcade::Tile &tile = imap.atMouli(layer, x, y);
 
                 map->tile[y * imap.getWidth() + x] = tile.getType();
-                if (tile.getTypeEv() == arcade::TileTypeEvolution::PLAYER)
+                if (tile.getType() == arcade::TileType::OTHER)
                 {
                     whereAmI->position[0].x = static_cast<uint16_t >(x);
                     whereAmI->position[0].y = static_cast<uint16_t >(y);
@@ -201,27 +205,27 @@ extern "C" void Play()
     std::vector<arcade::Event> events;
     size_t whereAmISize = sizeof(arcade::WhereAmI) + sizeof(arcade::Position);
     size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
-    arcade::WhereAmI *whereAmI = reinterpret_cast<arcade::WhereAmI *>(new char[whereAmISize]);
-    arcade::GetMap *getMap = reinterpret_cast<arcade::GetMap*>(new char[mapSize]);
+    arcade::WhereAmI *whereAmI = reinterpret_cast<arcade::WhereAmI *>(new char[whereAmISize] {0});
+    arcade::GetMap *getMap = reinterpret_cast<arcade::GetMap*>(new char[mapSize] {0});
     arcade::CommandType command;
 
     whereAmI->lenght = 1;
-    whereAmI->type = arcade::CommandType::PLAY;
     getMap->height = static_cast<uint16_t>(map.getHeight());
     getMap->width = static_cast<uint16_t>(map.getWidth());
     event.type = arcade::EventType::ET_KEYBOARD;
     event.action = arcade::ActionType::AT_PRESSED;
     updateMap(whereAmI, getMap, map);
-    while (std::cin.read(reinterpret_cast<char *>(&command), sizeof(arcade::CommandType)))
+    while (read(0, &command, sizeof(arcade::CommandType)))
     {
+        std::cerr << (int)command << std::endl;
         getMap->type = command;
-        switch (command)
-        {
+        whereAmI->type = command;
+        switch (command) {
             case (arcade::CommandType::WHERE_AM_I) :
-                std::cout.write(reinterpret_cast<const char *>(whereAmI), whereAmISize);
+                write(1, reinterpret_cast<const char *>(whereAmI), whereAmISize);
                 break;
             case (arcade::CommandType::GET_MAP) :
-                std::cout.write(reinterpret_cast<const char *>(getMap), mapSize);
+                write(1, reinterpret_cast<const char *>(getMap), mapSize);
                 break;
             case (arcade::CommandType::GO_UP) :
                 event.kb_key = arcade::KB_ARROW_UP;

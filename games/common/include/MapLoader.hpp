@@ -30,6 +30,7 @@ namespace arcade
         std::vector<arcade::Entity *> Map;
 
         void parse();
+        void defaultMap(size_t width, size_t height);
     };
 }
 
