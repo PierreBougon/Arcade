@@ -33,7 +33,6 @@ void arcade::MapLoader::parse()
     y = 0;
     while (std::getline(file, line))
     {
-
         x = 0;
         Width = line.size();
         for (char tile : line)

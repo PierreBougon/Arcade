@@ -41,9 +41,16 @@ namespace arcade
         std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
         std::vector<std::pair<std::string, arcade::SoundType>> getSoundsToLoad() const;
         std::vector<int> &&getSoundsToPlay();
+        size_t getSizeSnake() const;
+        const arcade::Map &getMouliMap() const;
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;
+
+        IGUI &getGUI() override;
     };
 }
+
+extern "C" arcade::IGame *getGame();
+extern "C" void Play();
 
 #endif //CPP_ARCADE_SNAKE_HPP
