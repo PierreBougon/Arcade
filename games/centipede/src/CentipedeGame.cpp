@@ -172,7 +172,6 @@ extern "C" arcade::IGame *getGame()
 
 extern "C" void updateMap(arcade::WhereAmI *whereAmI, arcade::GetMap *map, const arcade::Map& imap)
 {
-
     for (size_t y = 0; y < imap.getHeight(); ++y)
     {
         for (size_t x = 0; x < imap.getWidth(); ++x)
@@ -202,11 +201,9 @@ extern "C" void Play()
     std::vector<arcade::Event> events;
     size_t whereAmISize = sizeof(arcade::WhereAmI) + sizeof(arcade::Position);
     size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
-    char *tmp = new char[whereAmISize];
-    arcade::WhereAmI *whereAmI = new (tmp) arcade::WhereAmI;
-    tmp = new char[mapSize];
-    arcade::GetMap *getMap = new (tmp) arcade::GetMap;
-    char line[2];
+    arcade::WhereAmI *whereAmI = reinterpret_cast<arcade::WhereAmI *>(new char[whereAmISize]);
+    arcade::GetMap *getMap = reinterpret_cast<arcade::GetMap*>(new char[mapSize]);
+    arcade::CommandType command;
 
     whereAmI->lenght = 1;
     whereAmI->type = arcade::CommandType::PLAY;
@@ -215,14 +212,10 @@ extern "C" void Play()
     event.type = arcade::EventType::ET_KEYBOARD;
     event.action = arcade::ActionType::AT_PRESSED;
     updateMap(whereAmI, getMap, map);
-    std::cout << "LOLILOL" << std::endl;
-    while (std::cin.read(line, 2))
+    while (std::cin.read(reinterpret_cast<char *>(&command), sizeof(arcade::CommandType)))
     {
-        line[0] = '0';
-        std::string lineRead(line);
-
-        getMap->type = static_cast<arcade::CommandType>(std::stoi(lineRead));
-        switch (getMap->type)
+        getMap->type = command;
+        switch (command)
         {
             case (arcade::CommandType::WHERE_AM_I) :
                 std::cout.write(reinterpret_cast<const char *>(whereAmI), whereAmISize);
@@ -235,22 +228,22 @@ extern "C" void Play()
                 events.push_back(event);
                 centipedeGame.notifyEvent(std::move(events));
                 break;
-            case (arcade::CommandType::GO_DOWN) : ;
+            case (arcade::CommandType::GO_DOWN) :
                 event.kb_key = arcade::KB_ARROW_DOWN;
                 events.push_back(event);
                 centipedeGame.notifyEvent(std::move(events));
                 break;
-            case (arcade::CommandType::GO_LEFT) : ;
+            case (arcade::CommandType::GO_LEFT) :
                 event.kb_key = arcade::KB_ARROW_LEFT;
                 events.push_back(event);
                 centipedeGame.notifyEvent(std::move(events));
                 break;
-            case (arcade::CommandType::GO_RIGHT) : ;
+            case (arcade::CommandType::GO_RIGHT) :
                 event.kb_key = arcade::KB_ARROW_RIGHT;
                 events.push_back(event);
                 centipedeGame.notifyEvent(std::move(events));
                 break;
-            case (arcade::CommandType::GO_FORWARD) : ;
+            case (arcade::CommandType::GO_FORWARD) :
                 events.push_back(event);
                 centipedeGame.notifyEvent(std::move(events));
                 break;
