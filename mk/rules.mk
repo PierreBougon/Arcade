@@ -17,7 +17,7 @@ clean:
 		@$(RM) $(OBJ)
 
 fclean:     	clean
-		@$(ECHO) "$(BOLD_WHITE) [$(RED)RM$(BOLD_WHITE)] $(NAME)$(CLEAR)"
+		@$(ECHO) "$(BOLD_WHITE) [$(RED)RM$(BOLD_WHITE)] $(NAME)$(CLEAR)\n"
 		@$(RM) $(NAME)
 
 re:		fclean all
