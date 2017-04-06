@@ -7,18 +7,10 @@
 
 # include <dlfcn.h>
 # include <string>
+#include "LoadingExceptions.hpp"
 
 namespace arcade
 {
-    // Error enum to set a state if an error occurred in the DLL Loading
-    enum class DLLError
-    {
-        NONE = -1,
-        WINDOW_ERROR,
-        UNDEFINED_ERROR,
-        NB_ERRORS
-    };
-
     template <typename T>
     class DLLoader
     {
@@ -36,7 +28,7 @@ namespace arcade
                 library(_library),
                 handle(dlopen(library.c_str(), RTLD_NOW)),
                 func(nullptr),
-                error(DLLError::NONE)
+                error(DLLoadingError::DLLError::NONE)
         {}
 
         T *getInstance(std::string const &entrypoint)
@@ -56,24 +48,24 @@ namespace arcade
                         return nullptr;
                     }
                 }
-                catch (std::bad_alloc)
+                catch (DLLoadingError _error)
                 {
-                    error = DLLError::UNDEFINED_ERROR;
+                    error = _error.getError();
                 }
             }
             return func();
         }
 
-        DLLError getError() const
+        DLLoadingError::DLLError getError() const
         {
             return error;
         }
 
     private:
-        std::string library;
-        void *handle;
-        T *(*func)();
-        DLLError error;
+        std::string                 library;
+        void                        *handle;
+        T                           *(*func)();
+        DLLoadingError::DLLError    error;
     };
 }
 
