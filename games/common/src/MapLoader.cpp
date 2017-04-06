@@ -12,7 +12,10 @@ arcade::MapLoader::MapLoader(const std::string &pathToMapCfg) :
         Height(0),
         Width(0)
 {
-    parse();
+    if (file.is_open())
+        parse();
+    else
+        defaultMap(16, 16);
 }
 
 bool arcade::MapLoader::isFileParsed() const {
@@ -33,7 +36,6 @@ void arcade::MapLoader::parse()
     y = 0;
     while (std::getline(file, line))
     {
-
         x = 0;
         Width = line.size();
         for (char tile : line)
@@ -71,8 +73,27 @@ size_t arcade::MapLoader::getHeight() const
 
 arcade::MapLoader::~MapLoader()
 {
-    file.close();
+    if (file.is_open())
+        file.close();
     for (Entity *entity : Map)
         if (entity != nullptr)
             delete entity;
+}
+
+void arcade::MapLoader::defaultMap(size_t width, size_t height) {
+
+    for (size_t y = 0; y < height; ++y)
+    {
+        for (size_t x = 0; x < width; ++x)
+        {
+            Vector2s vec(x, y);
+            Map.push_back(new LifelessEntity(vec,
+                                             arcade::TileType::EMPTY,
+                                             arcade::TileTypeEvolution::EMPTY,
+                                             Color::Black,
+                                             false));
+        }
+        Height = height;
+        Width = width;
+    }
 }
