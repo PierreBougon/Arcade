@@ -46,20 +46,6 @@ arcade::Lapin::~Lapin()
         bunny_stop(Window);
     if (Map != nullptr)
         bunny_delete_clipable(Map);
-    for (std::pair<const size_t, t_bunny_effect *> &effect : Effects)
-    {
-        if (effect.second != nullptr) {
-            bunny_sound_stop(&effect.second->sound);
-            bunny_delete_sound(&effect.second->sound);
-        }
-    }
-    for (std::pair<const size_t, t_bunny_music *> &music : Musics)
-    {
-        if (music.second != nullptr) {
-            bunny_sound_stop(&music.second->sound);
-            bunny_delete_sound(&music.second->sound);
-        }
-    }
     for (std::vector<t_bunny_picture *> &vec : Sprites)
     {
         for (t_bunny_picture *&sprite : vec)
@@ -88,66 +74,12 @@ void arcade::Lapin::clear()
 
 void arcade::Lapin::loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds)
 {
-    size_t i(0);
-
-    for (std::pair<std::string, SoundType> const& sound : sounds)
-    {
-        if (sound.second == SoundType::MUSIC)
-        {
-            Musics[i] = bunny_load_music(sound.first.c_str());
-            if (!Musics[i])
-                throw std::bad_alloc();
-        }
-        else
-        {
-            Effects[i] = bunny_load_effect(sound.first.c_str());
-            if (!Effects[i])
-                throw std::bad_alloc();
-        }
-        ++i;
-    }
+    SM.loadSounds(sounds);
 }
 
 void arcade::Lapin::soundControl(const Sound &sound)
 {
-    t_bunny_map_music::iterator musicIt;
-    t_bunny_map_effect::iterator effectIt;
-    t_bunny_sound *snd;
-
-    musicIt = Musics.find(sound.id);
-    effectIt = Effects.find(sound.id);
-
-    snd = musicIt != Musics.end() ? &musicIt->second->sound :
-          effectIt != Effects.end() ? &effectIt->second->sound : nullptr;
-
-    if (snd != nullptr)
-        switch (sound.mode)
-        {
-            case (UNIQUE) :
-                bunny_sound_play(snd);
-                bunny_sound_loop(snd, false);
-                break;
-            case (REPEAT) :
-                bunny_sound_play(snd);
-                bunny_sound_loop(snd, true);
-                break;
-            case (VOLUME) :
-                bunny_sound_volume(snd, sound.volume);
-                break;
-            case (STOP):
-                bunny_sound_stop(snd);
-                bunny_sound_loop(snd, false);
-                break;
-            case (PLAY) :
-                bunny_sound_play(snd);
-                break;
-            case (PAUSE) :
-                bunny_sound_stop(snd);
-                break;
-            case (RESUME) :
-                bunny_sound_play(snd);
-                break;
-        }
+    SM.soundControl(sound);
 }
 
 bool arcade::Lapin::pollEvent(arcade::Event &e)
@@ -314,16 +246,6 @@ arcade::Lapin::Lapin() :
 void arcade::Bunny_picture_deleter::operator()(t_bunny_picture *picture)
 {
     bunny_delete_clipable(picture);
-}
-
-void arcade::Bunny_sound_deleter::operator()(t_bunny_effect *sound) {
-    bunny_sound_stop(&sound->sound);
-    bunny_delete_sound(&sound->sound);
-}
-
-void arcade::Bunny_music_deleter::operator()(t_bunny_music *sound) {
-    bunny_sound_stop(&sound->sound);
-    bunny_delete_sound(&sound->sound);
 }
 
 namespace arcade
