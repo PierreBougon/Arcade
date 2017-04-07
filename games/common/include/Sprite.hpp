@@ -32,6 +32,7 @@ namespace arcade
         void setMode(SpriteMode mode);
         void setSprite(size_t id, size_t spriteCount = 1, size_t index = 0);
         Sprite& operator=(Sprite const& sprite);
+        Sprite(Sprite const& sprite);
 
     private:
         size_t Id;
@@ -39,9 +40,6 @@ namespace arcade
         size_t Index;
         bool Paused;
         SpriteMode Mode;
-
-    private:
-        Sprite(Sprite const& sprite) = delete;
     };
 }
 

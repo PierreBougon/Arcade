@@ -22,21 +22,22 @@ namespace arcade
         DestroyableObject &operator=(DestroyableObject &&);
         // With Sprite
         DestroyableObject(Vector2s const &pos,
-                          size_t idSprite,
-                          size_t spriteCount,
-                          TileType Type,
-                          TileTypeEvolution TypeEvolution,
-                          Color col,
-                          size_t Hp,
-                          bool collide);
+                          std::vector<size_t> idSprite,
+                          std::vector<size_t> spriteCount,
+                          Orientation dir,
+                          TileType Type = TileType::OTHER,
+                          TileTypeEvolution TypeEvolution = TileTypeEvolution::FOOD,
+                          Color col = Color::Red,
+                          size_t Hp = 1,
+                          bool collide = false);
 
         // Without Sprite
         DestroyableObject(Vector2s const &pos,
-                          TileType Type,
-                          TileTypeEvolution TypeEvolution,
-                          Color col,
-                          size_t Hp,
-                          bool collide);
+                          TileType Type = TileType::OTHER,
+                          TileTypeEvolution TypeEvolution = TileTypeEvolution::FOOD,
+                          Color col = Color::Red,
+                          size_t Hp = 1,
+                          bool collide = false);
         virtual ~DestroyableObject() {}
 
         bool isDestroy() const;

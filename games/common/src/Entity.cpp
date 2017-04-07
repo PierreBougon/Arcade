@@ -2,6 +2,8 @@
 // Created by duhieu_b on 01/04/17.
 //
 
+#include <vector>
+#include <iostream>
 #include "Entity.hpp"
 
 const arcade::Vector2s &arcade::Entity::getAbs() const
@@ -21,12 +23,13 @@ const arcade::Vector2s &arcade::Entity::getPrev() const
 
 size_t arcade::Entity::advance()
 {
-    return sprite.advance();
+    return sprite[curSprite].advance();
 }
 
 size_t arcade::Entity::getSpriteId() const
 {
-    return sprite.getSpriteId();
+    //std::cerr << "CurSprite : " << curSprite << "Size Vec : " << sprite.size() << std::endl;
+    return sprite[curSprite].getSpriteId();
 }
 
 arcade::Entity::Entity(arcade::Entity const& cpy) :
@@ -36,36 +39,40 @@ arcade::Entity::Entity(arcade::Entity const& cpy) :
         type(cpy.getType()),
         typeEvolution(cpy.getTypeEvolution()),
         color(getColor()),
-        layer(cpy.layer),
         spriteSet(cpy.spriteSet),
-        sprite(cpy.getSpriteId(), cpy.getSpriteCount())
+        collidable(cpy.collidable),
+        curSprite(cpy.curSprite),
+        sprite(cpy.sprite)
 {
 }
 
 size_t arcade::Entity::getSpriteCount() const
 {
-    return sprite.getSpriteCount();
+    return sprite[curSprite].getSpriteCount();
 }
 
 arcade::Entity::Entity(const arcade::Vector2s &pos,
-                       size_t id,
-                       size_t spriteCount,
+                       std::vector<size_t> id,
+                       std::vector<size_t> spriteCount,
+                       Orientation dir,
                        arcade::TileType Type,
                        arcade::TileTypeEvolution TypeEvolution,
                        arcade::Color col,
                        bool collide) :
-        abs(pos),
-        shift(),
-        prev(pos),
-        type(Type),
-        typeEvolution(TypeEvolution),
-        color(col),
-        layer(0),
-        spriteSet(true),
-        collidable(collide),
-        sprite(id, spriteCount)
+    abs(pos),
+    shift({0, 0}),
+    prev(pos),
+    type(Type),
+    typeEvolution(TypeEvolution),
+    color(col),
+    spriteSet(true),
+    collidable(collide),
+    curSprite(dir)
 {
-
+    for (size_t i = 0; i < id.size(); ++i)
+    {
+        sprite.push_back(Sprite(id[i], spriteCount[i]));
+    }
 }
 
 arcade::Entity::Entity(const arcade::Vector2s &pos,
@@ -73,17 +80,16 @@ arcade::Entity::Entity(const arcade::Vector2s &pos,
                        arcade::TileTypeEvolution TypeEvolution,
                        arcade::Color col,
                        bool collide) :
-        abs(pos),
-        shift(),
-        prev(pos),
-        type(Type),
-        typeEvolution(TypeEvolution),
-        color(col),
-        layer(0),
-        spriteSet(false),
-        collidable(collide)
+    abs(pos),
+    shift({0, 0}),
+    prev(pos),
+    type(Type),
+    typeEvolution(TypeEvolution),
+    color(col),
+    spriteSet(false),
+    collidable(collide)
 {
-
+    curSprite = Orientation::UP;
 }
 
 arcade::TileType arcade::Entity::getType() const
@@ -136,9 +142,12 @@ bool arcade::Entity::hasSprite() const
     return spriteSet;
 }
 
-void arcade::Entity::setSprite(size_t id, size_t spriteCount, size_t index)
+void arcade::Entity::setSprite(std::vector<size_t> id, std::vector<size_t> spriteCount, size_t index)
 {
-    sprite.setSprite(id, spriteCount, index);
+    for (size_t i = 0; i < sprite.size(); ++i)
+    {
+        sprite[i].setSprite(id[i], spriteCount[i], index);
+    }
     spriteSet = true;
 }
 
@@ -149,30 +158,35 @@ void arcade::Entity::unSetSprite()
 
 void arcade::Entity::playAnimation()
 {
-    sprite.resume();
+    sprite[curSprite].resume();
 }
 
 void arcade::Entity::pauseAnimation()
 {
-    sprite.pause();
+    sprite[curSprite].pause();
 }
 
 void arcade::Entity::resetAnimation()
 {
-    sprite.reset();
+    sprite[curSprite].reset();
 }
 
 void arcade::Entity::setAnimationUnique()
 {
-    sprite.setMode(Sprite::UNIQUE);
+    sprite[curSprite].setMode(Sprite::UNIQUE);
 }
 
 void arcade::Entity::setAnimationRepeat()
 {
-    sprite.setMode(Sprite::REPEAT);
+    sprite[curSprite].setMode(Sprite::REPEAT);
 }
 
 void arcade::Entity::setAnimationMode(arcade::Sprite::SpriteMode mode)
 {
-    sprite.setMode(mode);
+    sprite[curSprite].setMode(mode);
+}
+
+void arcade::Entity::setNewDir(Orientation dir)
+{
+    curSprite = dir;
 }

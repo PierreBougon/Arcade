@@ -25,20 +25,9 @@ arcade::CentipedeGame::CentipedeGame() :
     _gameState = GameState::LOADING;
     createCentipede();
     _centipedes.front().oneTurn(_bullet, _centipedes, _mushrooms, _map);
-    std::cerr << "CREATED CENTIPEDE POS x : "
-              << _centipedes.front().getBody().front().getAbs().x
-              << " y : "
-              << _centipedes.front().getBody().front().getAbs().y
-              << std::endl;
     for (Centipede &centipede : _centipedes)
-    {
-        std::cerr << "BODY SIZE = " << centipede.getBody().size() << std::endl;
         for (CentipedePart &part : centipede.getBody())
-        {
-            std::cerr << "BODY PART POS = " << part.getAbs() << std::endl;
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
-        }
-    }
     this->updateMap();
 }
 
@@ -95,34 +84,26 @@ void arcade::CentipedeGame::createCentipede()
 
 void arcade::CentipedeGame::process()
 {
-    std::cerr << "start process" << std::endl;
     if (_gameState != INGAME)
         _gameState = INGAME;
 
-    std::cerr << "creating centiped" << std::endl;
     if (!_centipedes.size())
         createCentipede();
 
-//    std::cerr << "moving player" << std::endl;
     _centipedeKiller.move(_map, _mushrooms);
     _centipedeKiller.action(_bullet);
 
-//    std::cerr << "moving centiped" << std::endl;
     for (Centipede &centipede : _centipedes)
     {
         centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
     }
 
-//    std::cerr << "killing centiped" << std::endl;
     _centipedeKiller.touched(_centipedes);
 
-//    std::cerr << "updating map" << std::endl;
     this->updateMap();
 
-//    std::cerr << "player hp" << std::endl;
     if (!_centipedeKiller.getHp())
         _gameState = QUIT;
-    std::cerr << "end process" << std::endl;
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::CentipedeGame::getSpritesToLoad() const
@@ -169,24 +150,18 @@ arcade::Vector2s arcade::CentipedeGame::placePlayer(arcade::Map &map)
 
 void arcade::CentipedeGame::updateMap()
 {
-    std::cerr << "updating reseting" << std::endl;
     _map.resetMapFromLayer(PLAYER);
-//    std::cerr << "updating player" << std::endl;
     _map.updateLayer(_centipedeKiller, CentipedeLayers::PLAYER);
 
-//    std::cerr << "updating mushroom" << std::endl;
     for (Mushroom *mushroom : _mushrooms)
         _map.updateLayer(*mushroom, CentipedeLayers::PLAYER);
 
-//    std::cerr << "updating bullet" << std::endl;
     if (_bullet.isAlive())
         _map.updateLayer(_bullet, CentipedeLayers::BULLET);
 
-//    std::cerr << "updating centipede" << std::endl;
     for (Centipede &centipede : _centipedes)
         for (CentipedePart &part : centipede.getBody())
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
-    std::cerr << "updating done" << std::endl;
 }
 
 const arcade::Map &arcade::CentipedeGame::getMouliMap() const {
@@ -227,9 +202,6 @@ void printMap(arcade::GetMap *m)
 
 static void updateMap(arcade::GetMap *map, const arcade::Map& imap)
 {
-
-//    std::cerr << "MAP LAYERS = " << imap.getLayerNb() << std::endl;
-
     for (size_t y = 0; y < imap.getHeight(); ++y)
     {
         for (size_t x = 0; x < imap.getWidth(); ++x)
@@ -261,10 +233,9 @@ extern "C" void Play()
     getMap->width = static_cast<uint16_t>(map.getWidth());
     getMap->type = arcade::CommandType::GET_MAP;
     updateMap(getMap, map);
-    while (read(0, &command, sizeof(arcade::CommandType)))
+    while (std::cin.read(reinterpret_cast<char*>(&command), sizeof(arcade::CommandType)))
     {
         arcade::Event event;
-        std::cerr << "COMMAND: " << (size_t)command << std::endl;
         event.type = arcade::EventType::ET_KEYBOARD;
         event.action = arcade::ActionType::AT_PRESSED;
         switch (command)
@@ -272,14 +243,12 @@ extern "C" void Play()
             case (arcade::CommandType::WHERE_AM_I) :
                 whereAmI->position[0].x = static_cast<uint16_t >(centipedeGame.getPlayerpos().x);
                 whereAmI->position[0].y = static_cast<uint16_t >(centipedeGame.getPlayerpos().y);
-//                std::cerr << " x = " << whereAmI->position[0].x << ", y = " << whereAmI->position[0].y << std::endl;
                 std::cout.write(reinterpret_cast<const char *>(whereAmI), whereAmISize);
                 std::cout.flush();
                 break;
             case (arcade::CommandType::GET_MAP) :
                 updateMap(getMap, map);
                 std::cout.write(reinterpret_cast<const char *>(getMap), mapSize);
-                printMap(getMap);
                 std::cout.flush();
                 break;
             case (arcade::CommandType::GO_UP) :

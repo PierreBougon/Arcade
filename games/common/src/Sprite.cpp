@@ -86,3 +86,9 @@ arcade::Sprite &arcade::Sprite::operator=(const arcade::Sprite &sprite) {
     Mode = sprite.Mode;
     return *this;
 }
+
+arcade::Sprite::Sprite(const arcade::Sprite &sprite) :
+    Id(sprite.Id), SpriteCount(sprite.SpriteCount), Index(sprite.Index), Paused(sprite.Paused), Mode(sprite.Mode)
+{
+
+}

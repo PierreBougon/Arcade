@@ -26,9 +26,9 @@ void arcade::PlayerControlSnake::createObject()
 {
 }
 
-arcade::PlayerControlSnake::PlayerControlSnake(arcade::Vector2s pos, size_t idSprite, size_t spriteCount, arcade::TileType Type,
+arcade::PlayerControlSnake::PlayerControlSnake(arcade::Vector2s pos, std::vector<size_t> idSprite, std::vector<size_t> spriteCount,  Orientation dir, arcade::TileType Type,
                                      arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp, bool collide) :
-        ALivingEntity(pos, idSprite, spriteCount, Type, TypeEvolution, col, hp, collide)
+        ALivingEntity(pos, idSprite, spriteCount, dir, Type, TypeEvolution, col, hp, collide)
 {
     input = MOVE_LEFT;
 }
@@ -73,4 +73,9 @@ void arcade::PlayerControlSnake::updatePlayerInput(std::vector<arcade::Event> &e
             }
         }
     }
+}
+
+void arcade::PlayerControlSnake::updateSprite()
+{
+
 }
