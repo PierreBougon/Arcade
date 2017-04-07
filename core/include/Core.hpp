@@ -16,8 +16,8 @@ namespace arcade
     class Core
     {
     private:
-        std::vector<std::unique_ptr<arcade::IGfxLib>>  tabLib;
-        std::vector<std::unique_ptr<arcade::IGame>>    tabGame;
+        std::vector<arcade::IGfxLib *>                 tabLib;
+        std::vector<arcade::IGame *>                   tabGame;
         Pars                                           pars;
         bool                                           open;
         std::vector<Event>                             events;

@@ -27,7 +27,7 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 
     currentLib = findLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    currentGame = findGame("./games/lib_arcade_centipede.so");
 }
 
 arcade::Core::~Core()
@@ -45,6 +45,7 @@ void arcade::Core::init(std::string const &lib)
 
 void arcade::Core::run()
 {
+    open = true;
     while (isOpen())
     {
         manageEvents();
@@ -85,11 +86,11 @@ void arcade::Core::feedLib()
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
         DLLoader<IGfxLib> loader(*it);
+        IGfxLib *lib_ptr = loader.getInstance("getLib");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
-            IGfxLib *lib_ptr = loader.getInstance("getLib");
-            std::unique_ptr<IGfxLib> lib(lib_ptr);
-            tabLib.push_back(std::move(lib));
+            if (lib_ptr)
+                tabLib.push_back(lib_ptr);
         }
         else
         {
@@ -104,11 +105,11 @@ void arcade::Core::feedGame()
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
         DLLoader<IGame> loader(*it);
+        IGame *game_ptr = loader.getInstance("getGame");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
-            IGame *game_ptr = loader.getInstance("getGame");
-            std::unique_ptr<IGame> game(game_ptr);
-            tabGame.push_back(std::move(game));
+            if (game_ptr)
+                tabGame.push_back(game_ptr);
         }
         else
         {
@@ -145,8 +146,8 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
 arcade::IGame *arcade::Core::findGame(const std::string &game)
 {
     std::vector<std::string>::const_iterator it =
-            std::find_if(pars.getVecGame().begin(), pars.getVecGame().end(), [game](std::string const &_game){
-                return _game == game;
+            std::find_if(pars.getVecGame().begin(), pars.getVecGame().end(), [game](std::string const &_game) {
+                return _game == game.substr((game.find_last_of("/") == game.npos) ? 0 : game.find_last_of("/") + 1);
             });
     if (it == pars.getVecGame().end())
     {
@@ -154,22 +155,23 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
                     game + " : This game has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabGame[it - pars.getVecGame().begin()].get();
+    return tabGame[it - pars.getVecGame().begin()];
 }
 
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 {
     std::vector<std::string>::const_iterator it =
     std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &_lib){
-        return _lib == lib;
+        return _lib == lib.substr((lib.find_last_of("/") == lib.npos) ? 0 : lib.find_last_of("/") + 1);
     });
     if (it == pars.getVecLib().end())
     {
+
         Logger::log(Logger::Error,
                     lib + " : This lib has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabLib[it - pars.getVecLib().begin()].get();
+    return tabLib[it - pars.getVecLib().begin()];
 }
 
 void arcade::Core::drawFrame()
@@ -196,7 +198,6 @@ void arcade::Core::quitGame()
 
 void arcade::Core::quitArcade()
 {
-    // TODO check new implementation
     open = false;
 }
 
