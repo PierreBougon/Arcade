@@ -38,8 +38,8 @@ namespace arcade
 
     public:
         CentipedeKiller(Vector2s pos,
-                        size_t idSprite,
-                        size_t spriteCount,
+                        std::vector<size_t> idSprite,
+                        std::vector<size_t> spriteCount,
                         TileType type,
                         TileTypeEvolution typeEvo,
                         Color col,
