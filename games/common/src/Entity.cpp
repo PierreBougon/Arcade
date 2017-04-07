@@ -3,6 +3,7 @@
 //
 
 #include <vector>
+#include <iostream>
 #include "Entity.hpp"
 
 const arcade::Vector2s &arcade::Entity::getAbs() const
@@ -27,6 +28,7 @@ size_t arcade::Entity::advance()
 
 size_t arcade::Entity::getSpriteId() const
 {
+    //std::cerr << "CurSprite : " << curSprite << "Size Vec : " << sprite.size() << std::endl;
     return sprite[curSprite].getSpriteId();
 }
 
@@ -87,7 +89,7 @@ arcade::Entity::Entity(const arcade::Vector2s &pos,
     spriteSet(false),
     collidable(collide)
 {
-
+    curSprite = Orientation::UP;
 }
 
 arcade::TileType arcade::Entity::getType() const
