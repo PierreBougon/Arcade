@@ -18,7 +18,8 @@ PROJECT_NAME	=	Lapin Graphic arcade library
 
 SRC		=	src/Lapin.cpp \
 			../../interfaces/Color.cpp \
-			../../interfaces/Sound.cpp
+			../../interfaces/Sound.cpp \
+			../../exceptions/src/LoadingExceptions.cpp
 
 OBJ 		=   	$(SRC:.cpp=.o)
 
@@ -26,6 +27,7 @@ NAME    	=      	../lib_arcade_lapin.so
 
 INC     	=       -Iinclude \
 			-I../../interfaces \
+			-I../../exceptions/include \
 			-I./dep/ -I./dep/deps \
 			-L./dep/lib \
 			-llapin -lusb-1.0 \
