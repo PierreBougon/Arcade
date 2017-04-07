@@ -16,12 +16,26 @@ arcade::Pars::~Pars()
 
 void arcade::Pars::FeedVecLib(std::string const &directory)
 {
-    feedVector(&vecLib, directory);
+    try
+    {
+        feedVector(&vecLib, directory);
+    }
+    catch (std::invalid_argument error)
+    {
+        error.what();
+    }
 }
 
 void arcade::Pars::FeedVecGame(std::string const &directory)
 {
-    feedVector(&vecGame, directory);
+    try
+    {
+        feedVector(&vecGame, directory);
+    }
+    catch (std::invalid_argument error)
+    {
+        error.what();
+    }
 }
 
 std::vector<std::string> const &arcade::Pars::getVecLib() const
