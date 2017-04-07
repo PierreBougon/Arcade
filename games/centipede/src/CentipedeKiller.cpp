@@ -104,6 +104,7 @@ void arcade::CentipedeKiller::updatePlayerInput(std::vector<arcade::Event> &even
                 _action = check.first;
         }
     }
+
 }
 
 bool arcade::CentipedeKiller::isMoveTop(const arcade::Event &event) const

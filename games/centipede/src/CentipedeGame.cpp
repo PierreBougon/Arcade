@@ -250,7 +250,7 @@ extern "C" void Play()
     while (read(0, &command, sizeof(arcade::CommandType)))
     {
         arcade::Event event;
-        std::cerr << (size_t)command << "\n";
+        std::cerr << (size_t)command << std::endl;
         event.type = arcade::EventType::ET_KEYBOARD;
         event.action = arcade::ActionType::AT_PRESSED;
         switch (command)
