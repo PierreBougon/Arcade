@@ -16,19 +16,18 @@ int main(int ac, char **av)
         return (EXIT_FAILURE);
     }
     std::srand(static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count()));
-    arcade::Core arcadeCore;
 
     try
     {
-        arcadeCore.init(av[1]);
+        arcade::Core arcadeCore(av[1]);
+        arcadeCore.run();
     }
-    catch (arcade::LoadingExceptions const &error)
+    catch (arcade::DLLoadingError const &error)
     {
-        error.what();
+        Logger::log(Logger::Error, error.what());
         return (EXIT_FAILURE);
     }
     // TODO: try catch for a game exception or something
-    arcadeCore.run();
 
     return (EXIT_SUCCESS);
 }
