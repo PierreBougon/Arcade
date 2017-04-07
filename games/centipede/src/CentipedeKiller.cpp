@@ -16,51 +16,34 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
                                          TileType type,
                                          TileTypeEvolution typeEvo,
                                          Color col,
-                                         size_t hp,
-                                         const Map &map,
-                                         std::list<Mushroom*> &mushrooms,
-                                         std::list<Centipede*> &entities,
-                                         Bullet &bullet) :
+                                         size_t hp) :
         ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
-        _move(KillerMove::STAY),
-        _map(map),
-        _mushrooms(mushrooms),
-        _centipedes(entities),
-        _bullet(bullet)
+        _move(KillerMove::STAY)
 {
-
 }
 
 arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
                                          arcade::TileType type,
                                          arcade::TileTypeEvolution typeEvolution,
                                          Color col,
-                                         size_t hp,
-                                         const Map &map,
-                                         std::list<Mushroom*> &mushrooms,
-                                         std::list<Centipede*> &entities,
-                                         Bullet &bullet) :
+                                         size_t hp) :
         ALivingEntity(pos, type, typeEvolution, col, hp, true),
         _action(KillerAction::NOTHING),
-        _move(KillerMove::STAY),
-        _map(map),
-        _mushrooms(mushrooms),
-        _centipedes(entities),
-        _bullet(bullet)
+        _move(KillerMove::STAY)
 {
 
 }
 
-void arcade::CentipedeKiller::action()
+void arcade::CentipedeKiller::action(arcade::Bullet &bullet)
 {
-    tryFire();
-    if (_bullet.isAlive())
-        _bullet.go();
+    tryFire(bullet);
+    if (bullet.isAlive())
+        bullet.go();
     _action = KillerAction::NOTHING;
 }
 
-void arcade::CentipedeKiller::move()
+void arcade::CentipedeKiller::move(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms)
 {
     static const std::vector<try_move_t > tryMoveTab = {
             &CentipedeKiller::tryMoveTop,
@@ -71,7 +54,7 @@ void arcade::CentipedeKiller::move()
 
     if (_move != KillerMove::STAY)
     {
-        (this->*tryMoveTab[_move])();
+        (this->*tryMoveTab[_move])(map, mushrooms);
         _move = KillerMove::STAY;
     }
 }
@@ -139,77 +122,81 @@ bool arcade::CentipedeKiller::isFire(const arcade::Event &event) const
             (event.m_key == M_LEFT_CLICK));
 }
 
-void arcade::CentipedeKiller::tryMoveTop()
+void arcade::CentipedeKiller::tryMoveTop(const arcade::Map &map,
+                                         const std::list<arcade::Mushroom*> &mushrooms)
 {
     Vector2s vec(abs.x, abs.y - 1);
 
-    if (abs.y > static_cast<size_t >(static_cast<double>(_map.getHeight()) * 0.8) &&
-        static_cast<const Tile&>(_map.at(0, abs.x, abs.y - 1)).getType() == TileType::EMPTY &&
-        std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
+    if (abs.y > static_cast<size_t >(static_cast<double>(map.getHeight()) * 0.8) &&
+        static_cast<const Tile&>(map.at(0, abs.x, abs.y - 1)).getType() == TileType::EMPTY &&
+        std::find_if(mushrooms.cbegin(), mushrooms.cend(),
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != _mushrooms.cend())
+                     }) != mushrooms.cend())
         --abs.y;
 }
 
-void arcade::CentipedeKiller::tryMoveRight()
+void arcade::CentipedeKiller::tryMoveRight(const arcade::Map &map,
+                                           const std::list<arcade::Mushroom*> &mushrooms)
 {
     Vector2s vec(abs.x + 1, abs.y);
 
-    if (abs.x < _map.getWidth() - 1 &&
-        static_cast<const Tile&>(_map.at(0, abs.x + 1, abs.y)).getType() == TileType::EMPTY &&
-        std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
+    if (abs.x < map.getWidth() - 1 &&
+        static_cast<const Tile&>(map.at(0, abs.x + 1, abs.y)).getType() == TileType::EMPTY &&
+        std::find_if(mushrooms.cbegin(), mushrooms.cend(),
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != _mushrooms.cend())
+                     }) != mushrooms.cend())
         ++abs.x;
 }
 
-void arcade::CentipedeKiller::tryMoveLeft()
+void arcade::CentipedeKiller::tryMoveLeft(const arcade::Map &map,
+                                          const std::list<arcade::Mushroom*> &mushrooms)
 {
     Vector2s vec(abs.x - 1, abs.y);
 
     if (abs.x > 0 &&
-        static_cast<const Tile&>(_map.at(0, abs.x - 1, abs.y)).getType() == TileType::EMPTY &&
-        std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
+        static_cast<const Tile&>(map.at(0, abs.x - 1, abs.y)).getType() == TileType::EMPTY &&
+        std::find_if(mushrooms.cbegin(), mushrooms.cend(),
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != _mushrooms.cend())
+                     }) != mushrooms.cend())
         --abs.x;
 }
 
-void arcade::CentipedeKiller::tryMoveBot()
+void arcade::CentipedeKiller::tryMoveBot(const arcade::Map &map,
+                                         const std::list<arcade::Mushroom*> &mushrooms)
 {
     Vector2s vec(abs.x, abs.y + 1);
 
-    if (abs.y < _map.getHeight() - 1 &&
-        static_cast<const Tile&>(_map.at(0, abs.x, abs.y + 1)).getType() == TileType::EMPTY &&
-        std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
+    if (abs.y < map.getHeight() - 1 &&
+        static_cast<const Tile&>(map.at(0, abs.x, abs.y + 1)).getType() == TileType::EMPTY &&
+        std::find_if(mushrooms.cbegin(), mushrooms.cend(),
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != _mushrooms.cend())
+                     }) != mushrooms.cend())
         ++abs.y;
 }
 
-void arcade::CentipedeKiller::tryFire()
+void arcade::CentipedeKiller::tryFire(arcade::Bullet &bullet)
 {
     Vector2s vec(abs.x, abs.y);
 
-    if (!_bullet.isAlive())
-        _bullet.reset(vec);
+    if (!bullet.isAlive())
+        bullet.reset(vec);
 }
 
-bool arcade::CentipedeKiller::touched()
+bool arcade::CentipedeKiller::touched(std::list<arcade::Centipede> &centipedes)
 {
-    for (Centipede *centipede : _centipedes)
+    for (Centipede &centipede : centipedes)
     {
-        for (CentipedePart *part : centipede->getBody())
+        for (CentipedePart &part : centipede.getBody())
         {
-            if (part->getAbs() == abs)
+            if (part.getAbs() == abs)
             {
                 if (hp)
                     --hp;
@@ -219,4 +206,12 @@ bool arcade::CentipedeKiller::touched()
             break;
     }
     return (!hp);
+}
+
+void arcade::CentipedeKiller::move()
+{
+}
+
+void arcade::CentipedeKiller::action()
+{
 }

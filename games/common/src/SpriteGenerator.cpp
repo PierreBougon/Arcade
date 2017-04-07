@@ -2,7 +2,7 @@
 // Created by brout_m on 01/04/17.
 //
 
-#include "../include/SpriteGenerator.hpp"
+#include "SpriteGenerator.hpp"
 
 size_t arcade::SpriteGenerator::spritesCount() const
 {

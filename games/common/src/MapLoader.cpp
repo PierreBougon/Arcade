@@ -31,6 +31,7 @@ void arcade::MapLoader::parse()
 {
     size_t y;
     size_t x;
+    Vector2s vec;
     std::string line;
 
     y = 0;
@@ -40,8 +41,8 @@ void arcade::MapLoader::parse()
         Width = line.size();
         for (char tile : line)
         {
-            Vector2s vec(x, y);
-
+            vec.x = x;
+            vec.y = y;
             if (tile == '#')
                 Map.push_back(new LifelessEntity(vec,
                                                  arcade::TileType::BLOCK,
@@ -81,19 +82,21 @@ arcade::MapLoader::~MapLoader()
 }
 
 void arcade::MapLoader::defaultMap(size_t width, size_t height) {
+    Vector2s vec;
 
     for (size_t y = 0; y < height; ++y)
     {
         for (size_t x = 0; x < width; ++x)
         {
-            Vector2s vec(x, y);
+            vec.x = x;
+            vec.y = y;
             Map.push_back(new LifelessEntity(vec,
                                              arcade::TileType::EMPTY,
                                              arcade::TileTypeEvolution::EMPTY,
                                              Color::Black,
                                              false));
         }
-        Height = height;
-        Width = width;
     }
+    Height = height;
+    Width = width;
 }

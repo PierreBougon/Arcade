@@ -18,25 +18,35 @@ arcade::CentipedeGame::CentipedeGame() :
                          TileType::EMPTY,
                          TileTypeEvolution::PLAYER,
                          Color::Cyan,
-                         1,
-                         _map,
-                         _mushrooms,
-                         _centipedes,
-                         _bullet)
+                         1)
 {
     _map.updateLayer(_centipedeKiller, PLAYER);
     randomize(_map, 0.1);
     _gameState = GameState::LOADING;
+/*    createCentipede();
+    _centipedes.front().oneTurn(_bullet, _centipedes, _mushrooms, _map);
+    std::cerr << "CREATED CENTIPEDE POS x : "
+              << _centipedes.front().getBody().front().getAbs().x
+              << " y : "
+              << _centipedes.front().getBody().front().getAbs().y
+              << std::endl;
+    for (Centipede &centipede : _centipedes)
+        for (CentipedePart &part : centipede.getBody())
+            _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
+    this->updateMap();
+    */
 }
 
 void arcade::CentipedeGame::randomize(arcade::Map &map, double density)
 {
-    for (size_t y = 0; y < map.getHeight(); ++y)
+    Vector2s vec;
+
+    for (size_t y = 0; y < map.getHeight() - 1; ++y)
     {
         for (size_t x = 0; x < map.getWidth(); ++x)
         {
-            Vector2s vec(x, y);
-
+            vec.x = x;
+            vec.y = y;
             if (_centipedeKiller.getAbs() != vec && std::rand() % static_cast<int>(1.0 / density) == 0)
                 _mushrooms.push_back(new Mushroom(vec));
         }
@@ -75,7 +85,7 @@ void arcade::CentipedeGame::createCentipede()
 
     pos.x = rand() % _map.getWidth();
     pos.y = 0;
-    _centipedes.emplace_back(new Centipede(pos));
+    _centipedes.push_back(Centipede(pos));
 }
 
 void arcade::CentipedeGame::process()
@@ -88,23 +98,23 @@ void arcade::CentipedeGame::process()
     if (!_centipedes.size())
         createCentipede();
 
-    std::cerr << "moving player" << std::endl;
-    _centipedeKiller.move();
-    _centipedeKiller.action();
+//    std::cerr << "moving player" << std::endl;
+    _centipedeKiller.move(_map, _mushrooms);
+    _centipedeKiller.action(_bullet);
 
-    std::cerr << "moving centiped" << std::endl;
-    for (Centipede *centipede : _centipedes)
+//    std::cerr << "moving centiped" << std::endl;
+    for (Centipede &centipede : _centipedes)
     {
-        centipede->oneTurn(_bullet, _centipedes, _mushrooms, _map);
+        centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
     }
 
-    std::cerr << "killing centiped" << std::endl;
-    _centipedeKiller.touched();
+//    std::cerr << "killing centiped" << std::endl;
+    _centipedeKiller.touched(_centipedes);
 
-    std::cerr << "updating map" << std::endl;
+//    std::cerr << "updating map" << std::endl;
     this->updateMap();
 
-    std::cerr << "player hp" << std::endl;
+//    std::cerr << "player hp" << std::endl;
     if (!_centipedeKiller.getHp())
         _gameState = QUIT;
     std::cerr << "end process" << std::endl;
@@ -156,20 +166,21 @@ void arcade::CentipedeGame::updateMap()
 {
     std::cerr << "updating reseting" << std::endl;
     _map.resetMapFromLayer(PLAYER);
-    std::cerr << "updating player" << std::endl;
+//    std::cerr << "updating player" << std::endl;
     _map.updateLayer(_centipedeKiller, CentipedeLayers::PLAYER);
 
-    std::cerr << "updating mushroom" << std::endl;
+//    std::cerr << "updating mushroom" << std::endl;
     for (Mushroom *mushroom : _mushrooms)
         _map.updateLayer(*mushroom, CentipedeLayers::PLAYER);
 
-    std::cerr << "updating bullet" << std::endl;
-    _map.updateLayer(_bullet, CentipedeLayers::BULLET);
+//    std::cerr << "updating bullet" << std::endl;
+    if (_bullet.isAlive())
+        _map.updateLayer(_bullet, CentipedeLayers::BULLET);
 
-    std::cerr << "updating centipede" << std::endl;
-    for (Centipede *centipede : _centipedes)
-        for (CentipedePart *part : centipede->getBody())
-            _map.updateLayer(*part, CentipedeLayers::CENTIPEDE);
+//    std::cerr << "updating centipede" << std::endl;
+    for (Centipede &centipede : _centipedes)
+        for (CentipedePart &part : centipede.getBody())
+            _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
     std::cerr << "updating done" << std::endl;
 }
 
@@ -187,6 +198,10 @@ arcade::CentipedeGame::~CentipedeGame()
 const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const
 {
     return _centipedeKiller.getAbs();
+}
+
+arcade::tick_t arcade::CentipedeGame::getTickRate() const {
+    return 60;
 }
 
 extern "C" arcade::IGame *getGame()
@@ -207,23 +222,17 @@ void printMap(arcade::GetMap *m)
 
 static void updateMap(arcade::GetMap *map, const arcade::Map& imap)
 {
+
+//    std::cerr << "MAP LAYERS = " << imap.getLayerNb() << std::endl;
+
     for (size_t y = 0; y < imap.getHeight(); ++y)
     {
         for (size_t x = 0; x < imap.getWidth(); ++x)
         {
             for (size_t layer = 0; layer < imap.getLayerNb(); ++layer)
             {
-                const arcade::Tile &tile = imap.atMouli(layer, x, y);
-
-                map->tile[y * imap.getWidth() + x] = tile.getType();
-/*
-                if (tile.getType() == arcade::TileType::OTHER)
-                {
-                    whereAmI->position[0].x = static_cast<uint16_t >(x);
-                    whereAmI->position[0].y = static_cast<uint16_t >(y);
-                }
-*/
-                if (tile.getType() != arcade::TileType::EMPTY)
+                map->tile[y * imap.getWidth() + x] = imap.atMouli(layer, x, y).getType();
+                if (imap.atMouli(layer, x, y).getType() != arcade::TileType::EMPTY)
                     break;
             }
         }
@@ -233,13 +242,13 @@ static void updateMap(arcade::GetMap *map, const arcade::Map& imap)
 extern "C" void Play()
 {
     arcade::CentipedeGame centipedeGame;
+    arcade::CommandType command;
     arcade::Map const& map = centipedeGame.getMouliMap();
     std::vector<arcade::Event> events;
     size_t whereAmISize = sizeof(arcade::WhereAmI) + sizeof(arcade::Position);
     size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
     arcade::WhereAmI *whereAmI = reinterpret_cast<arcade::WhereAmI *>(new char[whereAmISize] {0});
     arcade::GetMap *getMap = reinterpret_cast<arcade::GetMap*>(new char[mapSize] {0});
-    arcade::CommandType command;
 
     whereAmI->lenght = 1;
     whereAmI->type = arcade::CommandType::WHERE_AM_I;
@@ -250,7 +259,7 @@ extern "C" void Play()
     while (read(0, &command, sizeof(arcade::CommandType)))
     {
         arcade::Event event;
-        std::cerr << (size_t)command << std::endl;
+        std::cerr << "COMMAND: " << (size_t)command << std::endl;
         event.type = arcade::EventType::ET_KEYBOARD;
         event.action = arcade::ActionType::AT_PRESSED;
         switch (command)
@@ -258,12 +267,15 @@ extern "C" void Play()
             case (arcade::CommandType::WHERE_AM_I) :
                 whereAmI->position[0].x = static_cast<uint16_t >(centipedeGame.getPlayerpos().x);
                 whereAmI->position[0].y = static_cast<uint16_t >(centipedeGame.getPlayerpos().y);
-                write(1, reinterpret_cast<const char *>(whereAmI), whereAmISize);
+//                std::cerr << " x = " << whereAmI->position[0].x << ", y = " << whereAmI->position[0].y << std::endl;
+                std::cout.write(reinterpret_cast<const char *>(whereAmI), whereAmISize);
+                std::cout.flush();
                 break;
             case (arcade::CommandType::GET_MAP) :
                 updateMap(getMap, map);
-                printMap(getMap);
-                write(1, reinterpret_cast<const char *>(getMap), mapSize);
+                std::cout.write(reinterpret_cast<const char *>(getMap), mapSize);
+//                printMap(getMap);
+                std::cout.flush();
                 break;
             case (arcade::CommandType::GO_UP) :
                 event.kb_key = arcade::KB_ARROW_UP;
@@ -298,8 +310,6 @@ extern "C" void Play()
                 break;
             case (arcade::CommandType::PLAY) :
                 centipedeGame.process();
-                break;
-            default:
                 break;
         }
     }

@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:43:58 2017 bougon_p
-## Last update Wed Apr  5 20:22:02 2017 duhieu_b
+## Last update Fri Apr  7 19:00:47 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -20,7 +20,9 @@ OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	../lib_arcade_ndk.so
 
-INC     =       -Iinclude -I../../interfaces -lncurses
+INC     =       -Iinclude -I../../interfaces 
+
+LDFLAGS	+=	-lncurses
 
 ## Lib rules
 

@@ -42,6 +42,8 @@ namespace arcade
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
         std::vector<Sound> getSoundsToPlay();
         const Vector2s &getPlayerpos() const;
+        tick_t getTickRate() const;
+
 
     private:
         arcade::GameState               _gameState;
@@ -50,7 +52,7 @@ namespace arcade
         Bullet                          _bullet;
         CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom *>           _mushrooms;
-        std::list<Centipede *>          _centipedes;
+        std::list<Centipede>            _centipedes;
 
     // private functions
         void randomize(Map &map, double density = 0.5);

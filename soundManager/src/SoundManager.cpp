@@ -4,6 +4,9 @@
 
 #include "SoundManager.hpp"
 
+arcade::SoundManager::SoundManager()
+{}
+
 void arcade::SoundManager::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds)
 {
     unsigned int id = 0;

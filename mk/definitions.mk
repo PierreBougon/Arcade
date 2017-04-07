@@ -29,7 +29,7 @@ CXXFLAGS	+=	-fPIC
 endif
 
 ifeq ($(SANITIZE), YES)
-CXXFLAGS	+=	-fsanitize=address -fno-omit-frame-pointer  -lasan
+CXXFLAGS	+=	-fsanitize=memory -fsanitize-memory-track-origins=2 -fomit-frame-pointer
 endif
 
 CXX	=	g++

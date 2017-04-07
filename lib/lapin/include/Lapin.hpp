@@ -10,27 +10,15 @@
 # include "lapin.h"
 # include "Sound.hpp"
 # include "IGfxLib.hpp"
+# include "SoundManager.hpp"
 
 namespace arcade
 {
-    class Bunny_sound_deleter
-    {
-    public:
-        void operator()(t_bunny_effect* sound);
-    };
-
-    class Bunny_music_deleter
-    {
-    public:
-        void operator()(t_bunny_music* sound);
-    };
-
     class Bunny_picture_deleter
     {
     public:
         void operator()(t_bunny_picture* picture);
     };
-
 
     class Lapin : public IGfxLib
     {
@@ -59,8 +47,6 @@ namespace arcade
         void printText(t_bunny_position const &pos, std::string const &text);
 
     private:
-        typedef std::map<size_t, t_bunny_effect *>                          t_bunny_map_effect;
-        typedef std::map<size_t, t_bunny_music *>                           t_bunny_map_music;
         typedef t_bunny_context                                             t_bunny_map_context;
         typedef std::map<char, arcade::KeyboardKey>                         t_keyboard;
         typedef std::map<e_bunny_mouse_button, arcade::MouseKey >           t_mouse;
@@ -82,9 +68,8 @@ namespace arcade
         static t_keyboard   Keyboard;
         static t_mouse      Mouse;
         static t_letters    Letters;
-        t_bunny_map_effect  Effects;
-        t_bunny_map_music   Musics;
         t_sprites           Sprites;
+        arcade::SoundManager SM;
     };
 }
 

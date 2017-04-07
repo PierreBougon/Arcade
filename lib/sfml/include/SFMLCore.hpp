@@ -7,6 +7,7 @@
 
 
 #include <map>
+#include <SoundManager.hpp>
 #include "IGfxLib.hpp"
 #include "SFML/Graphics/RenderWindow.hpp"
 #include "SFML/Audio/Music.hpp"
@@ -25,7 +26,7 @@ namespace arcade
         size_t                                                      x;
         size_t                                                      y;
         sf::RenderWindow                                            window;
-        std::vector<std::unique_ptr<sf::Music>>                     sounds;
+        SoundManager                                                soundManager;
         std::vector<GfxSprite>                                      sprites;
         sf::RectangleShape                                          colorSprite;
 

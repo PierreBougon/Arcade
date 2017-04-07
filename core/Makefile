@@ -1,11 +1,11 @@
 ##
 ## Makefile for Makefile in /home/bougon_p/rendu/TEK2/cpp_arcade/core
-## 
+##
 ## Made by bougon_p
 ## Login   <bougon_p@epitech.net>
-## 
+##
 ## Started on  Sat Apr  1 13:38:06 2017 bougon_p
-## Last update Wed Apr  5 21:40:30 2017 bougon_p
+## Last update Fri Apr  7 20:09:52 2017 brout_m
 ##
 
 ## Include colors and basic commands
@@ -27,7 +27,7 @@ OBJ 		=   	$(SRC:.cpp=.o)
 
 NAME   		=      	../arcade
 
-INC     	=       -Iinclude -I../interfaces -I../include -I../games/common/include
+INC     	=       -Iinclude -I../interfaces -I../include -I../games/common/include -I../exceptions/include
 
 ## Core rules
 
