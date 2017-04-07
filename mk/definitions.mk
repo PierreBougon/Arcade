@@ -6,7 +6,9 @@ DEBUG	=	NO
 
 RELEASE	=	NO
 
-DLL	=	NO
+DLL	= NO
+
+SANITIZE = NO
 
 # NAME
 
@@ -26,6 +28,9 @@ ifeq ($(DLL), YES)
 CXXFLAGS	+=	-fPIC
 endif
 
+ifeq ($(SANITIZE), YES)
+CXXFLAGS	+=	-fsanitize=address -fno-omit-frame-pointer  -lasan
+endif
 
 CXX	=	g++
 
