@@ -64,6 +64,8 @@ arcade::Centipede::Centipede(Vector2s const& pos,
         _directionH(dirH),
         _directionV(dirV)
 {
+    _body.push_back(CentipedePart(pos));
+    --_poped;
 }
 
 arcade::Centipede::Centipede(const arcade::Centipede &centipede) :
@@ -167,14 +169,15 @@ void arcade::Centipede::oneTurn(Bullet &bullet,
                                 std::list<Mushroom*> &mushrooms,
                                 Map const& map)
 {
+    hitByBullet(bullet, centipedes, mushrooms);
+    moveHead(centipedes, mushrooms, map);
     if (_poped) {
+        std::cerr << "BODYPART PUSHING AT: " << _start << std::endl;
         _body.push_back(CentipedePart(_start));
         setBody();
         --_poped;
     }
-    hitByBullet(bullet, centipedes, mushrooms);
     moveBody();
-    moveHead(centipedes, mushrooms, map);
 }
 
 bool arcade::Centipede::checkCentipedeCollision(std::list<arcade::Centipede> &centipedes,
@@ -262,15 +265,15 @@ void arcade::Centipede::testMove(const arcade::Map &map, const arcade::Vector2s 
 
 void arcade::Centipede::moveBody()
 {
-    std::list<arcade::CentipedePart>::iterator second;
-    std::list<arcade::CentipedePart>::const_iterator first;
+    std::list<arcade::CentipedePart>::reverse_iterator second;
+    std::list<arcade::CentipedePart>::const_reverse_iterator first;
 
     if (_body.size() > 1)
     {
-        first = _body.cbegin();
-        second = _body.begin();
-        ++second;
-        while (second != _body.end())
+        first = _body.crbegin();
+        second = _body.rbegin();
+        ++first;
+        while (first != _body.crend())
         {
             second->setAbs(first->getAbs());
             ++second;
