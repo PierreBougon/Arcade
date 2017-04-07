@@ -33,17 +33,28 @@ namespace arcade
         void moveBody();
     public:
         Snake();
+
+        tick_t getTickRate() const override;
+
         GameState getGameState() const;
         void notifyEvent(std::vector<Event> &&events);
         void notifyNetwork(std::vector<NetworkPacket> &&events);
         std::vector<NetworkPacket> &&getNetworkToSend();
         void process();
-        std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
+        std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const;
         std::vector<std::pair<std::string, arcade::SoundType>> getSoundsToLoad() const;
-        std::vector<int> &&getSoundsToPlay();
+        std::vector<arcade::Sound> getSoundsToPlay();
+        size_t getSizeSnake() const;
+        std::vector<Vector2s> getPlayerpos();
+        const arcade::Map &getMouliMap() const;
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;
+
+        IGUI &getGUI() override;
     };
 }
+
+extern "C" arcade::IGame *getGame();
+extern "C" void Play();
 
 #endif //CPP_ARCADE_SNAKE_HPP

@@ -43,4 +43,6 @@ namespace arcade
     };
 }
 
+extern "C" arcade::IGfxLib *getLib();
+
 #endif //CPP_ARCADE_NDK_HPP

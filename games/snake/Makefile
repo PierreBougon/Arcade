@@ -31,7 +31,7 @@ SRC += $(addprefix $(COMMON_DIR), $(COMMON_FIL))
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
-NAME    =      	../libarcade_snake.so
+NAME    =      	../lib_arcade_snake.so
 
 INC     =       -Iinclude -I../../interfaces -I../include -I../common/include -I../../core/include
 

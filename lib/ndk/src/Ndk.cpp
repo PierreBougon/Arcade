@@ -253,3 +253,8 @@ void arcade::Ndk::initializeWindow()
         pass = true;
     }
 }
+
+extern "C" arcade::IGfxLib *getLb()
+{
+    return (new arcade::Ndk());
+}
