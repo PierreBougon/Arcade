@@ -37,10 +37,7 @@ bool arcade::SFMLCore::doesSupportSound() const
 
 void arcade::SFMLCore::soundControl(Sound const &sound)
 {
-    if (sounds[sound.id] && sound.mode == SoundAction::PLAY)
-    {
-        sounds[sound.id]->play();
-    }
+    soundManager.soundControl(sound);
 }
 
 void arcade::SFMLCore::updateMap(const arcade::IMap &map)
@@ -195,7 +192,7 @@ float arcade::SFMLCore::getTilePosY(size_t y, IMap const &map)
 
 void arcade::SFMLCore::loadSounds(std::vector<std::pair<std::string, arcade::SoundType>> const &sounds)
 {
-    // Call soud manager load sound
+    soundManager.loadSounds(sounds);
 }
 
 namespace arcade
@@ -246,7 +243,7 @@ namespace arcade
                     {sf::Event::EventType::Count, arcade::ActionType::NB_ACTION_TYPE},
             };
 
-    std::map<sf::Keyboard::Key, arcade::KeyboardKey> SFML::mappedKeyboard =
+    std::map<sf::Keyboard::Key, arcade::KeyboardKey> SFMLCore::mappedKeyboard =
             {
                     {sf::Keyboard::Num0, arcade::KeyboardKey::KB_0},
                     {sf::Keyboard::Numpad0, arcade::KeyboardKey::KB_0},
