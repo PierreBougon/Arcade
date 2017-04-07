@@ -66,8 +66,8 @@ namespace arcade
         KillerAction                    _action;
         KillerMove                      _move;
         const Map                       &_map;
-        std::list<Mushroom*>             &_mushrooms;
-        std::list<Centipede*>            &_centipedes;
+        std::list<Mushroom*>            &_mushrooms;
+        std::list<Centipede*>           &_centipedes;
         Bullet                          &_bullet;
 
         bool isMoveTop(const Event& event) const;
