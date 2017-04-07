@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Thu Apr  6 14:58:48 2017 bougon_p
+## Last update Fri Apr  7 20:07:03 2017 brout_m
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -16,9 +16,7 @@ GRAPHIC_LIB	=	lib/sfml	\
 			lib/lapin	\
 			lib/ndk
 
-GAMES=
-# GAMES		=	games/pacman	\
-# 			games/snake
+GAMES		=	games/centipede	\
 
 all:
 ifeq ($(RELEASE), NO)

@@ -25,7 +25,6 @@ arcade::CentipedeGame::CentipedeGame() :
     _gameState = GameState::LOADING;
 /*    createCentipede();
     _centipedes.front().oneTurn(_bullet, _centipedes, _mushrooms, _map);
-    std::cerr << "CREATED CENTIPEDE SIZE : " << _centipedes.size() << std::endl;
     std::cerr << "CREATED CENTIPEDE POS x : "
               << _centipedes.front().getBody().front().getAbs().x
               << " y : "
@@ -35,7 +34,7 @@ arcade::CentipedeGame::CentipedeGame() :
         for (CentipedePart &part : centipede.getBody())
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
     this->updateMap();
- */
+    */
 }
 
 void arcade::CentipedeGame::randomize(arcade::Map &map, double density)
@@ -201,6 +200,10 @@ const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const
     return _centipedeKiller.getAbs();
 }
 
+arcade::tick_t arcade::CentipedeGame::getTickRate() const {
+    return 60;
+}
+
 extern "C" arcade::IGame *getGame()
 {
     return (new arcade::CentipedeGame());
@@ -270,8 +273,8 @@ extern "C" void Play()
                 break;
             case (arcade::CommandType::GET_MAP) :
                 updateMap(getMap, map);
-                printMap(getMap);
                 std::cout.write(reinterpret_cast<const char *>(getMap), mapSize);
+//                printMap(getMap);
                 std::cout.flush();
                 break;
             case (arcade::CommandType::GO_UP) :

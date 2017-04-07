@@ -3,6 +3,7 @@
 //
 
 #include <algorithm>
+#include <iostream>
 #include "Centipede.hpp"
 
 arcade::CentipedePart::CentipedePart(const arcade::Vector2s &pos) :
@@ -146,7 +147,7 @@ arcade::Centipede &arcade::Centipede::operator=(const arcade::Centipede &centipe
 
 void arcade::Centipede::setBody(std::list<CentipedePart> &&newBody)
 {
-    _body = std::move(newBody);
+    _body = newBody;
 }
 
 void arcade::Centipede::setBody()
@@ -196,6 +197,7 @@ void arcade::Centipede::moveHead(std::list<arcade::Centipede> &centipedes,
                                  const arcade::Map &map)
 {
     const Vector2s &_abs = _body.front().getAbs();
+    std::cerr << "HEAD POS x = " << _abs.x << " y = " << _abs.y << std::endl;
     Vector2s east(_abs.x + 1, _abs.y);
     Vector2s west(_abs.x - 1, _abs.y);
 

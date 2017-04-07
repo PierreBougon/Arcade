@@ -42,6 +42,8 @@ namespace arcade
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
         std::vector<Sound> getSoundsToPlay();
         const Vector2s &getPlayerpos() const;
+        tick_t getTickRate() const;
+
 
     private:
         arcade::GameState               _gameState;
