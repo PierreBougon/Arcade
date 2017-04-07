@@ -5,12 +5,14 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:44:40 2017 bougon_p
-## Last update Fri Apr  7 21:03:42 2017 brout_m
+## Last update Fri Apr  7 21:29:38 2017 bougon_p
 ##
 
 ## Include colors and basic commands
 
 include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
+
+PROJECT_NAME	=	Lapin Graphic arcade library
 
 ## Lib variables
 
