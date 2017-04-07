@@ -27,22 +27,23 @@ namespace arcade
 
     public:
         PlayerControlSnake(Vector2s pos,
-        size_t idSprite,
-                size_t spriteCount,
-        TileType Type,
-                TileTypeEvolution TypeEvolution,
-        Color col, size_t hp, bool collide);
+        std::vector<size_t> idSprite,
+                std::vector<size_t> spriteCount,
+                           Orientation dir,
+        TileType Type = TileType::OTHER,
+                TileTypeEvolution TypeEvolution = TileTypeEvolution::PLAYER,
+        Color col = Color::Cyan, size_t hp = 1, bool collide = true);
         PlayerControlSnake(Vector2s pos,
-        TileType Type,
-                TileTypeEvolution TypeEvolution,
-        Color col,
-                size_t hp, bool collide);
+        TileType Type = TileType::OTHER,
+                TileTypeEvolution TypeEvolution = TileTypeEvolution::PLAYER,
+        Color col = Color::Cyan,
+                size_t hp = 1, bool collide = true);
         void move();
         void action();
 
         void updatePlayerInput(std::vector<Event> &events);
 
-        //void updateInput();
+        void updateSprite();
         void createObject();
     };
 }

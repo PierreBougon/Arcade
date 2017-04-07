@@ -5,14 +5,15 @@
 #include "ALivingEntity.hpp"
 
 arcade::ALivingEntity::ALivingEntity(arcade::Vector2s const &pos,
-                                     size_t idSprite,
-                                     size_t spriteCount,
+                                     std::vector<size_t> idSprite,
+                                     std::vector<size_t> spriteCount,
+                                     Orientation dir,
                                      TileType Type,
                                      TileTypeEvolution TypeEvolution,
                                      Color col,
                                      size_t Hp,
                                      bool collide) :
-        Entity(pos, idSprite, spriteCount, Type, TypeEvolution, col, collide),
+        Entity(pos, idSprite, spriteCount, dir, Type, TypeEvolution, col, collide),
         hp(Hp)
 {
 }

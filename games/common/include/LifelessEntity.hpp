@@ -5,6 +5,7 @@
 #ifndef CPP_ARCADE_LIFELESSENTITY_HPP
 # define CPP_ARCADE_LIFELESSENTITY_HPP
 
+#include <vector>
 # include "Entity.hpp"
 
 namespace arcade
@@ -15,18 +16,19 @@ namespace arcade
         LifelessEntity(Entity const& cpy);
         // With Sprite
         LifelessEntity(Vector2s const &pos,
-                       size_t count,
-                       size_t spriteCount,
+                       std::vector<size_t> count,
+                       std::vector<size_t> spriteCount,
+                       Orientation dir,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
-                       bool collide);
+                       bool collide = false);
         // Without Sprite
         LifelessEntity(Vector2s const &pos,
                        TileType Type,
                        TileTypeEvolution TypeEvolution,
                        Color col,
-                       bool collide);
+                       bool collide = false);
         virtual ~LifelessEntity() {}
 
         bool isCollidable() const;

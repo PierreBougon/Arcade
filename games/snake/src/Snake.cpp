@@ -2,6 +2,8 @@
 // Created by duhieu_b on 03/04/17.
 //
 
+#include <memory>
+#include "SpriteGenerator.hpp"
 #include "PlayerControlSnake.hpp"
 #include "DestroyableObject.hpp"
 #include "Snake.hpp"
@@ -55,6 +57,22 @@ void arcade::Snake::process()
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() const
 {
     std::vector<std::unique_ptr<arcade::ISprite>> tmp;
+
+    /*tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "bodyHori", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "bodyVerti", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerUpLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerUpRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerDownLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerDownRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./assets/img/", "food", 1, ".png"));*/
     return tmp;
 }
 
@@ -95,11 +113,11 @@ void arcade::Snake::createPlayer()
 
     pos.x = x;
     pos.y = y;
-    snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+    snakes.push_back(PlayerControlSnake(pos));
     for (int i = 1; i < 4; ++i)
     {
         pos.x = x + i;
-        snakes.push_back(PlayerControlSnake(pos, TileType::EVIL_DUDE, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+        snakes.push_back(PlayerControlSnake(pos));
     }
 }
 
@@ -124,7 +142,7 @@ void arcade::Snake::putFoodInMap()
         pos.x = rand() % gameMap.getWidth();
         pos.y = rand() % gameMap.getHeight();
     }
-    cherry.push_back(DestroyableObject(pos, TileType::OTHER, TileTypeEvolution::FOOD, Color::Red, 1, false));
+    cherry.push_back(DestroyableObject(pos));
 }
 
 void arcade::Snake::checkEat()
@@ -143,26 +161,26 @@ void arcade::Snake::feedingSnakes()
     pos.y = snakes.back().getAbs().y;
     if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::OTHER, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+        snakes.push_back(PlayerControlSnake(pos));
         return;
     }
     pos.x -= 2;
     if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::OTHER, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+        snakes.push_back(PlayerControlSnake(pos));
         return;
     }
     pos.x += 1;
     pos.y += 1;
     if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::OTHER, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+        snakes.push_back(PlayerControlSnake(pos));
         return;
     }
     pos.y -= 2;
     if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos, TileType::OTHER, TileTypeEvolution::PLAYER, Color::Cyan, 1, true));
+        snakes.push_back(PlayerControlSnake(pos));
         return;
     }
     state = GameState::MENU;

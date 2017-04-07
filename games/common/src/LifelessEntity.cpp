@@ -10,13 +10,14 @@ arcade::LifelessEntity::LifelessEntity(Entity const& cpy) :
 }
 
 arcade::LifelessEntity::LifelessEntity(Vector2s const &pos,
-                                       size_t count, size_t
-                                       spriteCount,
+                                       std::vector<size_t> count,
+                                       std::vector<size_t> spriteCount,
+                                       Orientation dir,
                                        TileType Type,
                                        TileTypeEvolution TypeEvolution,
                                        Color col,
                                        bool collide) :
-    Entity(pos, count, spriteCount, Type, TypeEvolution, col, collide)
+    Entity(pos, count, spriteCount, dir, Type, TypeEvolution, col, collide)
 {
 
 }

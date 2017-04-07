@@ -5,6 +5,7 @@
 #ifndef CPP_ARCADE_ENTITY_HPP
 # define CPP_ARCADE_ENTITY_HPP
 
+#include <vector>
 # include "Protocol.hpp"
 # include "GameState.hpp"
 # include "Color.hpp"
@@ -13,6 +14,14 @@
 
 namespace arcade
 {
+    enum Orientation
+    {
+        UP = 0,
+        RIGHT,
+        DOWN,
+        LEFT
+    };
+
     class Entity
     {
     protected:
@@ -22,10 +31,10 @@ namespace arcade
         TileType type;
         TileTypeEvolution typeEvolution;
         Color color;
-        size_t layer;
         bool spriteSet;
         bool collidable;
-        Sprite sprite;
+        Orientation curSprite;
+        std::vector<Sprite> sprite;
         Entity() = delete;
 
     public:
@@ -42,8 +51,9 @@ namespace arcade
 
         // With Sprite
         Entity(Vector2s const& pos,
-               size_t id,
-               size_t spriteCount,
+               std::vector<size_t> id,
+               std::vector<size_t> spriteCount,
+               Orientation dir,
                TileType Type,
                TileTypeEvolution TypeEvolution,
                Color col,
@@ -67,8 +77,9 @@ namespace arcade
         void setType(TileType type);
         void setTypeEvolution(TileTypeEvolution typeEvolution);
         void setColor(const Color &color);
-        void setSprite(size_t id, size_t spriteCount = 1, size_t index = 0);
+        void setSprite(std::vector<size_t> id, std::vector<size_t> spriteCount, size_t index = 0);
         void unSetSprite();
+        void setNewDir(Orientation dir);
 
         // Special
         void pauseAnimation();

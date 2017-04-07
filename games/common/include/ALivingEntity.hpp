@@ -18,19 +18,20 @@ namespace arcade
 
     public:
         ALivingEntity(Vector2s const &pos,
-                      size_t idSprite,
-                      size_t spriteCount,
+                      std::vector<size_t> idSprite,
+                      std::vector<size_t> spriteCount,
+                      Orientation dir,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      bool collide);
+                      size_t hp = 1,
+                      bool collide = true);
         ALivingEntity(Vector2s const &pos,
                       TileType Type,
                       TileTypeEvolution TypeEvolution,
                       Color col,
-                      size_t hp,
-                      bool collide);
+                      size_t hp = 1,
+                      bool collide = true);
         virtual ~ALivingEntity() {}
 
         bool isEnemy() const;

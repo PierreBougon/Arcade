@@ -5,14 +5,15 @@
 #include "DestroyableObject.hpp"
 
 arcade::DestroyableObject::DestroyableObject(arcade::Vector2s const &pos,
-                                             size_t idSprite,
-                                             size_t spriteCount,
+                                             std::vector<size_t> idSprite,
+                                             std::vector<size_t> spriteCount,
+                                             Orientation dir,
                                              TileType Type,
                                              TileTypeEvolution typeEvolution,
                                              Color col,
                                              size_t Hp,
                                              bool collide) :
-        LifelessEntity(pos, idSprite, spriteCount, Type, typeEvolution, col, collide),
+        LifelessEntity(pos, idSprite, spriteCount, dir, Type, typeEvolution, col, collide),
         hp(Hp)
 {
 
