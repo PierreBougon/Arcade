@@ -42,6 +42,8 @@ namespace arcade
             NONE = -1,
             WINDOW_ERROR,
             UNDEFINED_ERROR,
+            NO_LIB_LOADED_ERROR,
+            NO_GAME_LOADED_ERROR,
             NB_ERRORS
         };
 
