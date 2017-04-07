@@ -9,7 +9,7 @@
 
 namespace arcade
 {
-    class SpriteGenerator : ISprite
+    class SpriteGenerator : public ISprite
     {
     public:
         ~SpriteGenerator() {};

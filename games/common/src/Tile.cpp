@@ -95,10 +95,17 @@ arcade::Tile &arcade::Tile::operator=(arcade::Entity &entity)
     Type = entity.getType();
     TypeEvo = entity.getTypeEvolution();
     _Color = entity.getColor();
-    SpriteId = entity.getSpriteId();
     Sprite = entity.hasSprite();
     if (entity.hasSprite())
+    {
+        SpriteId = entity.getSpriteId();
         Pos = entity.advance();
+    }
+    else
+    {
+        SpriteId = 0;
+        Pos = 0;
+    }
     ShiftX = shift.x;
     ShiftY = shift.y;
     return *this;

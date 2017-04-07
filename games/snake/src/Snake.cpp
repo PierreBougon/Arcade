@@ -58,7 +58,7 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
 {
     std::vector<std::unique_ptr<arcade::ISprite>> tmp;
 
-    /*tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headUp", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headLeft", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headRight", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headDown", 1, ".png"));
@@ -72,7 +72,7 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailLeft", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailRight", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./assets/img/", "food", 1, ".png"));*/
+    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./assets/img/", "food", 1, ".png"));
     return tmp;
 }
 
@@ -258,8 +258,6 @@ extern "C" arcade::IGame *getGame()
 
 extern "C" void updateMap(arcade::GetMap *map, const arcade::Map& imap)
 {
-    //size_t i(0);
-
     for (size_t y = 0; y < imap.getHeight(); ++y)
     {
         for (size_t x = 0; x < imap.getWidth(); ++x)
@@ -269,12 +267,6 @@ extern "C" void updateMap(arcade::GetMap *map, const arcade::Map& imap)
                 const arcade::Tile &tile = imap.atMouli(layer, x, y);
 
                 map->tile[y * imap.getWidth() + x] = tile.getType();
-                /*if (tile.getTypeEv() == arcade::TileTypeEvolution::PLAYER)
-                {
-                    whereAmI->position[i].x = static_cast<uint16_t >(x);
-                    whereAmI->position[i].y = static_cast<uint16_t >(y);
-                    i++;
-                }*/
                 if (tile.getType() != arcade::TileType::EMPTY)
                     break;
             }
