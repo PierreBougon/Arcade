@@ -93,7 +93,8 @@ void arcade::Core::feedLib()
         }
         else
         {
-            //TODO: manage error
+            Logger::log(Logger::Error,
+                        *it + " : This lib cannot be loaded, check out your lib/ directory to see your library");
         }
     }
 }
@@ -111,7 +112,8 @@ void arcade::Core::feedGame()
         }
         else
         {
-            //TODO: manage error
+            Logger::log(Logger::Error,
+                        *it + " : This game cannot be loaded, check out your games/ directory to see your games");
         }
     }
 }
@@ -149,7 +151,7 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
     if (it == pars.getVecGame().end())
     {
         Logger::log(Logger::Error,
-                   game + " : This game cannot be loaded, check out your games/ directory to see your games");
+                    game + " : This game has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
     return tabGame[it - pars.getVecGame().begin()].get();
@@ -164,7 +166,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
     if (it == pars.getVecLib().end())
     {
         Logger::log(Logger::Error,
-                    lib + " : This lib cannot be loaded, check out your lib/ directory to see your library");
+                    lib + " : This lib has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
     return tabLib[it - pars.getVecLib().begin()].get();
@@ -234,8 +236,15 @@ void arcade::Core::manageEvents()
 
 void arcade::Core::loadDependencies()
 {
-    pars.FeedVecLib("./lib");
-    pars.FeedVecGame("./games");
+    try
+    {
+        pars.FeedVecLib("./lib");
+        pars.FeedVecGame("./games");
+    }
+    catch (std::invalid_argument error)
+    {
+        error.what();
+    }
     feedLib();
     feedGame();
 }
