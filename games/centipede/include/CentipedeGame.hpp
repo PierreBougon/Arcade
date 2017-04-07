@@ -50,7 +50,7 @@ namespace arcade
         Bullet                          _bullet;
         CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom *>           _mushrooms;
-        std::list<Centipede *>          _centipedes;
+        std::list<Centipede>            _centipedes;
 
     // private functions
         void randomize(Map &map, double density = 0.5);

@@ -77,3 +77,12 @@ void arcade::Sprite::setMode(arcade::Sprite::SpriteMode mode)
 {
     Mode = mode;
 }
+
+arcade::Sprite &arcade::Sprite::operator=(const arcade::Sprite &sprite) {
+    Index = sprite.Index;
+    Id = sprite.Id;
+    SpriteCount = sprite.SpriteCount;
+    Paused = sprite.Paused;
+    Mode = sprite.Mode;
+    return *this;
+}

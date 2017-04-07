@@ -34,7 +34,7 @@ namespace arcade
         };
 
         typedef bool (CentipedeKiller::*move_t)(const Event &event) const;
-        typedef void (CentipedeKiller::*try_move_t)();
+        typedef void (CentipedeKiller::*try_move_t)(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
 
     public:
         CentipedeKiller(Vector2s pos,
@@ -43,43 +43,34 @@ namespace arcade
                         TileType type,
                         TileTypeEvolution typeEvo,
                         Color col,
-                        size_t hp,
-                        const Map &map,
-                        std::list<Mushroom*> &mushrooms,
-                        std::list<Centipede*> &entities,
-                        Bullet &bullet);
+                        size_t hp);
         CentipedeKiller(Vector2s pos,
                         TileType type,
                         TileTypeEvolution typeEvolution,
                         Color col,
-                        size_t hp,
-                        const Map &map,
-                        std::list<Mushroom*> &mushrooms,
-                        std::list<Centipede*> &entities,
-                        Bullet &bullet);
-        void move();
-        void updatePlayerInput(std::vector<Event> &events) override;
+                        size_t hp);
+
         void action();
-        bool touched();
+        void move();
+        void move(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void updatePlayerInput(std::vector<Event> &events) override;
+        void action(arcade::Bullet &bullet);
+        bool touched(std::list<arcade::Centipede> &centipedes);
 
     private:
         KillerAction                    _action;
         KillerMove                      _move;
-        const Map                       &_map;
-        std::list<Mushroom*>            &_mushrooms;
-        std::list<Centipede*>           &_centipedes;
-        Bullet                          &_bullet;
 
         bool isMoveTop(const Event& event) const;
         bool isMoveRight(const Event& event) const;
         bool isMoveLeft(const Event& event) const;
         bool isMoveDown(const Event& event) const;
         bool isFire(const Event& event) const;
-        void tryMoveTop();
-        void tryMoveRight();
-        void tryMoveLeft();
-        void tryMoveBot();
-        void tryFire();
+        void tryMoveTop(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void tryMoveRight(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void tryMoveLeft(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void tryMoveBot(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void tryFire(arcade::Bullet &bullet);
     };
 }
 
