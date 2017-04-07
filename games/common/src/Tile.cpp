@@ -2,6 +2,7 @@
 // Created by brout_m on 01/04/17.
 //
 
+#include <iostream>
 #include "Tile.hpp"
 
 arcade::Tile::Tile() :
@@ -96,7 +97,7 @@ arcade::Tile &arcade::Tile::operator=(arcade::Entity &entity)
     _Color = entity.getColor();
     SpriteId = entity.getSpriteId();
     Sprite = entity.hasSprite();
-    if (Sprite)
+    if (entity.hasSprite())
         Pos = entity.advance();
     ShiftX = shift.x;
     ShiftY = shift.y;

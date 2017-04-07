@@ -36,6 +36,8 @@ arcade::Entity::Entity(arcade::Entity const& cpy) :
         type(cpy.getType()),
         typeEvolution(cpy.getTypeEvolution()),
         color(getColor()),
+        layer(cpy.layer),
+        spriteSet(cpy.spriteSet),
         sprite(cpy.getSpriteId(), cpy.getSpriteCount())
 {
 }
@@ -58,6 +60,7 @@ arcade::Entity::Entity(const arcade::Vector2s &pos,
         type(Type),
         typeEvolution(TypeEvolution),
         color(col),
+        layer(0),
         spriteSet(true),
         collidable(collide),
         sprite(id, spriteCount)
@@ -76,6 +79,7 @@ arcade::Entity::Entity(const arcade::Vector2s &pos,
         type(Type),
         typeEvolution(TypeEvolution),
         color(col),
+        layer(0),
         spriteSet(false),
         collidable(collide)
 {
