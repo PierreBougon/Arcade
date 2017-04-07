@@ -68,6 +68,15 @@ namespace arcade
         void manageEvents();
 
         void loadDependencies();
+
+
+        /**************************************************************************************
+         * Some error messages to make the code easier to understand and more beautiful
+         **************************************************************************************/
+    private:
+        static const std::string NO_LIB_ERROR_MSG;
+        static const std::string NO_GAME_ERROR_MSG;
+
     };
 }
 

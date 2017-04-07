@@ -236,15 +236,27 @@ void arcade::Core::manageEvents()
 
 void arcade::Core::loadDependencies()
 {
-    try
-    {
-        pars.FeedVecLib("./lib");
-        pars.FeedVecGame("./games");
-    }
-    catch (std::invalid_argument error)
-    {
-        error.what();
-    }
+    pars.FeedVecLib("./lib");
+    if (pars.getVecLib().size() == 0)
+        throw LoadingExceptions("Cannot open lib/ directory");
+    pars.FeedVecGame("./games");
+    if (pars.getVecGame().size() == 0)
+        throw LoadingExceptions("Cannot open game/ directory");
     feedLib();
+    if (tabLib.size() == 0)
+        throw DLLoadingError(NO_LIB_ERROR_MSG, DLLoadingError::DLLError::NO_LIB_LOADED_ERROR);
     feedGame();
+    if (tabGame.size() == 0)
+        throw DLLoadingError(NO_GAME_ERROR_MSG, DLLoadingError::DLLError::NO_GAME_LOADED_ERROR);
 }
+
+
+    /**************************************************************************************
+     * Some error messages to make the code easier to understand and more beautiful
+     **************************************************************************************/
+    namespace arcade
+    {
+        const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
+
+        const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
+    }
