@@ -40,6 +40,8 @@ namespace arcade
         void initializeWindow();
         void display();
         void clear();
+
+        void loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds) override;
     };
 }
 

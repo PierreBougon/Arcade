@@ -20,6 +20,8 @@ namespace arcade
         std::vector<std::unique_ptr<SoundRender>>    listSounds;
 
     public:
+        SoundManager();
+
         virtual ~SoundManager();
 
         void loadSounds(std::vector<std::pair<std::string, SoundType>> const &sounds);

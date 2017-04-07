@@ -254,6 +254,11 @@ void arcade::Ndk::initializeWindow()
     }
 }
 
+void arcade::Ndk::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds)
+{
+
+}
+
 extern "C" arcade::IGfxLib *getLb()
 {
     return (new arcade::Ndk());
