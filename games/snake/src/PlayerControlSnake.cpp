@@ -2,16 +2,17 @@
 // Created by duhieu_b on 02/04/17.
 //
 
+#include <iostream>
 #include "PlayerControlSnake.hpp"
 
 void arcade::PlayerControlSnake::move()
 {
     switch (input)
     {
-        case MOVE_UP: abs.y--; break;
-        case MOVE_DOWW: abs.y++; break;
-        case MOVE_RIGHT: abs.x++; break;
-        case MOVE_LEFT: abs.x--; break;
+        case MOVE_UP: prev = abs; abs.y--; break;
+        case MOVE_DOWW: prev = abs; abs.y++; break;
+        case MOVE_RIGHT: prev = abs; abs.x++; break;
+        case MOVE_LEFT: prev = abs; abs.x--;  break;
         default: break;
     }
 }
@@ -36,7 +37,7 @@ arcade::PlayerControlSnake::PlayerControlSnake(arcade::Vector2s pos, arcade::Til
                                      arcade::TileTypeEvolution TypeEvolution, arcade::Color col, size_t hp, bool collide) :
         ALivingEntity(pos, Type, TypeEvolution, col, hp, collide)
 {
-
+    input = MOVE_LEFT;
 }
 
 void arcade::PlayerControlSnake::updatePlayerInput(std::vector<arcade::Event> &events)
