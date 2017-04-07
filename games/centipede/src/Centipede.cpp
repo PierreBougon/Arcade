@@ -170,14 +170,13 @@ void arcade::Centipede::oneTurn(Bullet &bullet,
                                 Map const& map)
 {
     hitByBullet(bullet, centipedes, mushrooms);
+    moveBody();
     moveHead(centipedes, mushrooms, map);
     if (_poped) {
-        std::cerr << "BODYPART PUSHING AT: " << _start << std::endl;
         _body.push_back(CentipedePart(_start));
         setBody();
         --_poped;
     }
-    moveBody();
 }
 
 bool arcade::Centipede::checkCentipedeCollision(std::list<arcade::Centipede> &centipedes,
@@ -200,7 +199,6 @@ void arcade::Centipede::moveHead(std::list<arcade::Centipede> &centipedes,
                                  const arcade::Map &map)
 {
     const Vector2s &_abs = _body.front().getAbs();
-    std::cerr << "HEAD POS x = " << _abs.x << " y = " << _abs.y << std::endl;
     Vector2s east(_abs.x + 1, _abs.y);
     Vector2s west(_abs.x - 1, _abs.y);
 
