@@ -11,13 +11,13 @@
 #include "CentipedeKiller.hpp"
 
 arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
-                                         size_t idSprite,
-                                         size_t spriteCount,
+                                         std::vector<size_t> idSprite,
+                                         std::vector<size_t> spriteCount,
                                          TileType type,
                                          TileTypeEvolution typeEvo,
                                          Color col,
                                          size_t hp) :
-        ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
+        ALivingEntity(pos, idSprite, spriteCount, Orientation::UP, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
         _move(KillerMove::STAY)
 {
