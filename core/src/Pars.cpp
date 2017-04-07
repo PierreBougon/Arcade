@@ -51,6 +51,7 @@ std::vector<std::string> const &arcade::Pars::getVecGame() const
 
 void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &directory)
 {
+    std::string _file;
     DIR *dir;
     struct dirent *file;
 
@@ -59,7 +60,9 @@ void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &
     {
         while ((file = readdir(dir)))
         {
-            vec->push_back(std::string(file->d_name));
+            _file = file->d_name;
+            if (_file.find_last_of(".so") == _file.length() - 1 && _file.length() > 3)
+                vec->push_back(std::string(file->d_name));
         }
     }
     else
