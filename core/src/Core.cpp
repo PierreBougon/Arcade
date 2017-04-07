@@ -85,7 +85,7 @@ void arcade::Core::feedLib()
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
         DLLoader<IGfxLib> loader(*it);
-        if (loader.getError() == DLLError::NONE)
+        if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
             IGfxLib *lib_ptr = loader.getInstance("getLib");
             std::unique_ptr<IGfxLib> lib(lib_ptr);
@@ -103,7 +103,7 @@ void arcade::Core::feedGame()
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
         DLLoader<IGame> loader(*it);
-        if (loader.getError() == DLLError::NONE)
+        if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
             IGame *game_ptr = loader.getInstance("getGame");
             std::unique_ptr<IGame> game(game_ptr);
@@ -200,7 +200,8 @@ void arcade::Core::quitArcade()
 
 void arcade::Core::playSound()
 {
-    currentLib->soundControl(currentGame->getSoundsToPlay());
+    for (Sound sound : currentGame->getSoundsToPlay())
+        currentLib->soundControl(std::move(sound));
 }
 
 void arcade::Core::sendNetwork()

@@ -19,7 +19,7 @@ arcade::CentipedeKiller::CentipedeKiller(Vector2s pos,
                                          size_t hp,
                                          const Map &map,
                                          std::list<Mushroom*> &mushrooms,
-                                         std::list<Centipede> &entities,
+                                         std::list<Centipede*> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, idSprite, spriteCount, type, typeEvo, col, hp, true),
         _action(KillerAction::NOTHING),
@@ -39,7 +39,7 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
                                          size_t hp,
                                          const Map &map,
                                          std::list<Mushroom*> &mushrooms,
-                                         std::list<Centipede> &entities,
+                                         std::list<Centipede*> &entities,
                                          Bullet &bullet) :
         ALivingEntity(pos, type, typeEvolution, col, hp, true),
         _action(KillerAction::NOTHING),
@@ -104,7 +104,6 @@ void arcade::CentipedeKiller::updatePlayerInput(std::vector<arcade::Event> &even
                 _action = check.first;
         }
     }
-
 }
 
 bool arcade::CentipedeKiller::isMoveTop(const arcade::Event &event) const
@@ -143,7 +142,7 @@ void arcade::CentipedeKiller::tryMoveTop()
 {
     Vector2s vec(abs.x, abs.y - 1);
 
-    if (abs.y > static_cast<int>(static_cast<double>(_map.getHeight()) * 0.8) &&
+    if (abs.y > static_cast<size_t >(static_cast<double>(_map.getHeight()) * 0.8) &&
         static_cast<const Tile&>(_map.at(0, abs.x, abs.y - 1)).getType() == TileType::EMPTY &&
         std::find_if(_mushrooms.cbegin(), _mushrooms.cend(),
                      [&vec](const Mushroom *entity)
@@ -197,17 +196,19 @@ void arcade::CentipedeKiller::tryMoveBot()
 
 void arcade::CentipedeKiller::tryFire()
 {
+    Vector2s vec(abs.x, abs.y);
+
     if (!_bullet.isAlive())
-        _bullet.reset({abs.y, abs.x});
+        _bullet.reset(vec);
 }
 
 bool arcade::CentipedeKiller::touched()
 {
-    for (Centipede &centipede : _centipedes)
+    for (Centipede *centipede : _centipedes)
     {
-        for (CentipedePart &part : centipede.getBody())
+        for (CentipedePart *part : centipede->getBody())
         {
-            if (part.getAbs() == abs)
+            if (part->getAbs() == abs)
             {
                 if (hp)
                     --hp;

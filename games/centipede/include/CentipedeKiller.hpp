@@ -46,7 +46,7 @@ namespace arcade
                         size_t hp,
                         const Map &map,
                         std::list<Mushroom*> &mushrooms,
-                        std::list<Centipede> &entities,
+                        std::list<Centipede*> &entities,
                         Bullet &bullet);
         CentipedeKiller(Vector2s pos,
                         TileType type,
@@ -55,7 +55,7 @@ namespace arcade
                         size_t hp,
                         const Map &map,
                         std::list<Mushroom*> &mushrooms,
-                        std::list<Centipede> &entities,
+                        std::list<Centipede*> &entities,
                         Bullet &bullet);
         void move();
         void updatePlayerInput(std::vector<Event> &events) override;
@@ -67,7 +67,7 @@ namespace arcade
         KillerMove                      _move;
         const Map                       &_map;
         std::list<Mushroom*>             &_mushrooms;
-        std::list<Centipede>            &_centipedes;
+        std::list<Centipede*>            &_centipedes;
         Bullet                          &_bullet;
 
         bool isMoveTop(const Event& event) const;

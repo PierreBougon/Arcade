@@ -38,9 +38,10 @@ namespace arcade
         const Map &getMouliMap() const;
         IGUI &getGUI();
         std::vector<NetworkPacket> &&getNetworkToSend();
-        std::vector<std::unique_ptr<ISprite>> &&getSpritesToLoad() const;
+        std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
-        std::vector<int> &&getSoundsToPlay();
+        std::vector<Sound> getSoundsToPlay();
+        const Vector2s &getPlayerpos() const;
 
     private:
         arcade::GameState               _gameState;
@@ -49,7 +50,7 @@ namespace arcade
         Bullet                          _bullet;
         CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom *>           _mushrooms;
-        std::list<Centipede>            _centipedes;
+        std::list<Centipede *>          _centipedes;
 
     // private functions
         void randomize(Map &map, double density = 0.5);

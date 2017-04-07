@@ -36,40 +36,38 @@ namespace arcade
             SOUTH,
             NORTH
         };
+
     public:
         Centipede(Vector2s const& pos,
                   size_t length = 10,
                   CentipedeDirection dirH = WEST,
                   CentipedeDirection dirV = SOUTH);
-        Centipede(Vector2s const& pos,
-                  std::list<CentipedePart> &&centipede,
-                  CentipedeDirection dirH,
-                  CentipedeDirection dirV);
-        Centipede(Centipede const &centipede) = default;
-        Centipede &operator=(Centipede const& centipede) = default;
-        std::list<CentipedePart> &getBody();
+        Centipede(Centipede const &centipede) = delete;
+        Centipede &operator=(Centipede const& centipede) = delete;
+        std::list<CentipedePart *> &getBody();
         void setBody();
+        void setBody(std::list<CentipedePart*> &&newBody);
         void oneTurn(Bullet &bullet,
-                     std::list<Centipede> &centipedes,
+                     std::list<Centipede*> &centipedes,
                      std::list<Mushroom*> &mushrooms,
                      Map const& map);
 
     private:
-        std::list<CentipedePart>    _body;
+        std::list<CentipedePart *>  _body;
         size_t                      _poped;
         Vector2s                    _start;
         CentipedeDirection          _directionH;
         CentipedeDirection          _directionV;
 
         // private methods
-        bool checkCentipedeCollision(std::list<Centipede> &centipedes, Vector2s const& pos);
+        bool checkCentipedeCollision(std::list<Centipede*> &centipedes, Vector2s const& pos);
         void testMove(Map const& map, Vector2s const& pos);
         void moveBody();
-        void moveHead(std::list<Centipede> &centipedes,
+        void moveHead(std::list<Centipede*> &centipedes,
                       std::list<Mushroom*> &mushrooms,
                       Map const& map);
-        bool hitByBullet(Bullet &bullet, std::list<Centipede> &centipedes, std::list<Mushroom*> &mushrooms);
-        std::list<CentipedePart> &&split(size_t pos, std::list<Mushroom*> &mushroom);
+        bool hitByBullet(Bullet &bullet, std::list<Centipede*> &centipedes, std::list<Mushroom*> &mushrooms);
+        void split(size_t pos, std::list<Mushroom*> &mushroom, std::list<Centipede*> &centipedes);
 
         // deleted methods
         Centipede() = delete;
