@@ -33,7 +33,7 @@ namespace arcade
         virtual ~SpritesLoadingError() throw();
     };
 
-    class DLLoadingError : LoadingExceptions
+    class DLLoadingError : public LoadingExceptions
     {
     public:
         // Error enum to set a state if an error occurred in the DLL Loading
