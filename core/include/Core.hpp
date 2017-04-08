@@ -56,6 +56,10 @@ namespace arcade
         IGame   *findGame(const std::string &game);
         IGfxLib *findLib(const std::string &lib);
 
+        /// Set current game / lib
+        void setGame(const std::string &game);
+        void setLib(const std::string &lib);
+
         /// Methods relative to the GameState
         void drawFrame();
         void initGame();

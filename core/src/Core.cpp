@@ -13,10 +13,10 @@ arcade::Core::Core() : tabLib(), tabGame(), pars(),
 {
     loadDependencies();
 
-    currentLib = findLib("./lib/lib_arcade_lapin.so");
+    setLib("./lib/lib_arcade_lapin.so");
 
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
@@ -25,9 +25,9 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 {
     loadDependencies();
 
-    currentLib = findLib(lib);
+    setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::~Core()
@@ -38,9 +38,9 @@ void arcade::Core::init(std::string const &lib)
 {
     loadDependencies();
 
-    currentLib = findLib(lib);
+    setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 void arcade::Core::run()
@@ -61,9 +61,6 @@ void arcade::Core::run()
                 case GameState::QUIT :
                     quitArcade();
                     return;
-                case GameState::LOADING :
-                    initGame();
-                    break;
                 case GameState::INGAME :
                     currentGame->process();
                     drawFrame();
@@ -175,6 +172,18 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
     return tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
 }
 
+void arcade::Core::setGame(const std::string &game)
+{
+    currentGame = findGame(game);
+    initGame();
+}
+
+void arcade::Core::setLib(const std::string &lib)
+{
+    currentLib = findLib(lib);
+}
+
+
 void arcade::Core::drawFrame()
 {
     currentLib->clear();
@@ -268,5 +277,4 @@ namespace arcade
     const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
 
     const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
-
 }
