@@ -6,7 +6,6 @@
 #define CPP_ARCADE_VECTOR2_HPP
 
 #include <ostream>
-#include "form.h"
 
 namespace arcade
 {
