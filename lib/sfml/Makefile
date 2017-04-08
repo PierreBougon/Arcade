@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sun Apr  2 00:32:42 2017 bougon_p
-## Last update Fri Apr  7 19:05:35 2017 bougon_p
+## Last update Sat Apr  8 17:58:38 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -27,7 +27,7 @@ NAME    =      	../lib_arcade_sfml.so
 
 INC     =       -Iinclude -I../../interfaces -I../../soundManager/include
 
-LDFLAGS	+=	-L../dep/SFML/			\
+LDFLAGS	+=	-L./dep/SFML/			\
 		-lsfml-graphics			\
 		-lsfml-window			\
 		-lsfml-system			\
