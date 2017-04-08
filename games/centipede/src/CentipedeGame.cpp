@@ -22,13 +22,13 @@ arcade::CentipedeGame::CentipedeGame() :
 {
     _map.updateLayer(_centipedeKiller, PLAYER);
     randomize(_map, 0.1);
-    _gameState = GameState::LOADING;
     createCentipede();
     _centipedes.front().oneTurn(_bullet, _centipedes, _mushrooms, _map);
     for (Centipede &centipede : _centipedes)
         for (CentipedePart &part : centipede.getBody())
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
     this->updateMap();
+    _gameState = GameState::INGAME;
 }
 
 void arcade::CentipedeGame::randomize(arcade::Map &map, double density)

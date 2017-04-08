@@ -239,7 +239,6 @@ arcade::Lapin::Lapin() :
     Window = bunny_start(Width, Height, false, "Retro Furnace");
     if (Window == nullptr)
         throw DLLoadingError("Can't create window", DLLoadingError::DLLError::WINDOW_ERROR);
-
     Context.key = keyboardPollEvents;
     Context.loop = mainLoop;
     Context.click = mousePollEvents;
