@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:44:40 2017 bougon_p
-## Last update Fri Apr  7 21:29:38 2017 bougon_p
+## Last update Sat Apr  8 12:52:46 2017 brout_m
 ##
 
 ## Include colors and basic commands
@@ -27,16 +27,16 @@ NAME    	=      	../lib_arcade_lapin.so
 
 INC     	=       -Iinclude \
 			-I../../interfaces \
+			-I../../soundManager/include \
 			-I../../exceptions/include \
 			-I./dep/ -I./dep/deps \
 			-L./dep/lib \
-			-llapin -lusb-1.0 \
-			-L../sfml/SFML-2.4.2/dep/lib \
-			-lsfml-audio -lsfml-graphics -lsfml-network -lsfml-system -lsfml-window \
-			-Wl,--allow-shlib-undefined \
-			-I../../soundManager/include \
-			-L../../soundManager \
-			-l_sound_manager
+			-llapin \
+			-L../../soundManager/ \
+			-l_sound_manager \
+			-L./dep/SFML-2.3/lib \
+			-lsfml-audio -lsfml-graphics -lsfml-system -lsfml-window \
+			-lm
 ## Lib rules
 
 include ../../mk/rules.mk

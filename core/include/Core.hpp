@@ -45,6 +45,7 @@ namespace arcade
     private:
         void feedLib();
         void feedGame();
+        void feedSound();
         int getIndexVec(std::string const &lib, std::vector<std::string> vec) const;
         int getIndexLib(std::string const &lib) const;
         int getIndexGame(std::string const &game) const;

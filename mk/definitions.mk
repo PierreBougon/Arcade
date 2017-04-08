@@ -25,7 +25,7 @@ CXXFLAGS	+=	-D DEBUG -g
 endif
 endif
 ifeq ($(DLL), YES)
-CXXFLAGS	+=	-fPIC
+CXXFLAGS	+=	-fPIC -ldl
 endif
 
 ifeq ($(SANITIZE), YES)
@@ -37,5 +37,5 @@ CXX	=	g++
 LDFLAGS	=
 
 ifeq ($(DLL), YES)
-LDFLAGS	+=	-shared
+CXX	+= -shared
 endif
