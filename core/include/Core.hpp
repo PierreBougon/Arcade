@@ -10,6 +10,7 @@
 #include "AGame.hpp"
 #include "IGfxLib.hpp"
 #include "Pars.hpp"
+#include "DLLoader.hpp"
 
 namespace arcade
 {
@@ -21,6 +22,7 @@ namespace arcade
         Pars                                           pars;
         bool                                           open;
         std::vector<Event>                             events;
+        std::unique_ptr<DLLoader<IGfxLib>>             sound;
 
         // Pointers on current instance of lib & game
         // They contain raw address of unique_ptr from vectors tabLib & tabGame
