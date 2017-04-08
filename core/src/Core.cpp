@@ -45,13 +45,15 @@ void arcade::Core::init(std::string const &lib)
 
 void arcade::Core::run()
 {
+    Tick tick;
+
     open = true;
     while (isOpen())
     {
         manageEvents();
         if (!isOpen())
             return;
-        if (currentGame && currentGame->getTickRate())
+        if (currentGame && tick.isTick())
         {
             currentGame->process();
             playSound();
@@ -91,11 +93,9 @@ void arcade::Core::feedLib()
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
         DLLoader<IGfxLib> loader("./lib/" + *it);
-        IGfxLib *lib_ptr = loader.getInstance("getLib");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
-            if (lib_ptr)
-                tabLib.push_back(lib_ptr);
+                tabLib.push_back(std::make_unique<DLLoader<IGfxLib>>(loader));
         }
         else
         {
@@ -110,11 +110,9 @@ void arcade::Core::feedGame()
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
         DLLoader<IGame> loader("./games/" + *it);
-        IGame *game_ptr = loader.getInstance("getGame");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
-            if (game_ptr)
-                tabGame.push_back(game_ptr);
+            tabGame.push_back(std::make_unique<DLLoader<IGame>>(loader));
         }
         else
         {
@@ -160,7 +158,7 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
                     game + " : This game has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabGame[it - pars.getVecGame().begin()];
+    return tabGame[it - pars.getVecGame().begin()]->getInstance("getGame");
 }
 
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
@@ -176,7 +174,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
                     lib + " : This lib has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabLib[it - pars.getVecLib().begin()];
+    return tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
 }
 
 void arcade::Core::drawFrame()
