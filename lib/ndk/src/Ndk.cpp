@@ -4,6 +4,7 @@
 
 #include <bits/unique_ptr.h>
 #include <curses.h>
+#include <iostream>
 #include "Ndk.hpp"
 
 bool arcade::Ndk::pollEvent(arcade::Event &e)
@@ -53,6 +54,7 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
 arcade::Ndk::~Ndk()
 {
+    std::cout << "ENDWIN ..." << std::endl;
     clear();
     endwin();
 }
@@ -159,6 +161,7 @@ arcade::Ndk::Ndk() : keyboard({
                               {'|', arcade::KeyboardKey::KB_VERTICALBAR}
                       })
 {
+    std::cout << "INITSRC ..." << std::endl;
     initscr();
     keypad(stdscr, true);
     set_escdelay(0);
@@ -170,6 +173,7 @@ arcade::Ndk::Ndk() : keyboard({
     pass = false;
     height = 0;
     width = 0;
+    initializeWindow();
 }
 
 void arcade::Ndk::display()
