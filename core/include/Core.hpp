@@ -83,6 +83,8 @@ namespace arcade
     private:
         static const std::string NO_LIB_ERROR_MSG;
         static const std::string NO_GAME_ERROR_MSG;
+        static const std::string ALL_LIB_CORRUPTED_ERROR_MSG;
+        static const std::string ALL_GAME_CORRUPTED_ERROR_MSG;
 
     };
 }
