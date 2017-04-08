@@ -61,9 +61,6 @@ void arcade::Core::run()
                 case GameState::QUIT :
                     quitArcade();
                     return;
-                case GameState::LOADING :
-                    initGame();
-                    break;
                 case GameState::INGAME :
                     currentGame->process();
                     drawFrame();
@@ -175,6 +172,18 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
     return tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
 }
 
+void arcade::Core::setGame(const std::string &game)
+{
+    currentGame = findGame(game);
+    initGame();
+}
+
+void arcade::Core::setLib(const std::string &lib)
+{
+    currentLib = findLib(lib);
+}
+
+
 void arcade::Core::drawFrame()
 {
     currentLib->clear();
@@ -268,5 +277,4 @@ namespace arcade
     const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
 
     const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
-
 }
