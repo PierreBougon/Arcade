@@ -10,6 +10,8 @@
 
 namespace arcade
 {
+    typedef float tick_t;
+
     class Tick
     {
         ////////////////////////////////////

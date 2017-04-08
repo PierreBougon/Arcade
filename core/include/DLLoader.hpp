@@ -15,8 +15,6 @@ namespace arcade
     template <typename T>
     class DLLoader
     {
-
-
     public:
 
         ~DLLoader()
