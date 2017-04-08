@@ -13,10 +13,10 @@ arcade::Core::Core() : tabLib(), tabGame(), pars(),
 {
     loadDependencies();
 
-    currentLib = findLib("./lib/lib_arcade_lapin.so");
+    setLib("./lib/lib_arcade_lapin.so");
 
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
@@ -25,9 +25,9 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 {
     loadDependencies();
 
-    currentLib = findLib(lib);
+    setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::~Core()
@@ -38,9 +38,9 @@ void arcade::Core::init(std::string const &lib)
 {
     loadDependencies();
 
-    currentLib = findLib(lib);
+    setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 void arcade::Core::run()
