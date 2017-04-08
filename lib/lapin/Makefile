@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:44:40 2017 bougon_p
-## Last update Fri Apr  7 21:03:42 2017 brout_m
+## Last update Sat Apr  8 02:50:44 2017 brout_m
 ##
 
 ## Include colors and basic commands
@@ -16,7 +16,8 @@ include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 SRC		=	src/Lapin.cpp \
 			../../interfaces/Color.cpp \
-			../../interfaces/Sound.cpp
+			../../interfaces/Sound.cpp \
+			../../exceptions/src/LoadingExceptions.cpp
 
 OBJ 		=   	$(SRC:.cpp=.o)
 
@@ -24,6 +25,7 @@ NAME    	=      	../lib_arcade_lapin.so
 
 INC     	=       -Iinclude \
 			-I../../interfaces \
+			-I../../exceptions/include \
 			-I./dep/ -I./dep/deps \
 			-L./dep/lib \
 			-llapin -lusb-1.0 \
