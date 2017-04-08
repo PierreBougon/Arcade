@@ -17,12 +17,12 @@ namespace arcade
     class Core
     {
     private:
-        std::vector<arcade::IGfxLib *>                 tabLib;
-        std::vector<arcade::IGame *>                   tabGame;
-        Pars                                           pars;
-        bool                                           open;
-        std::vector<Event>                             events;
-        std::unique_ptr<DLLoader<IGfxLib>>             sound;
+        std::vector<std::unique_ptr<DLLoader<IGfxLib>>> tabLib;
+        std::vector<std::unique_ptr<DLLoader<IGame>>>   tabGame;
+        Pars                                            pars;
+        bool                                            open;
+        std::vector<Event>                              events;
+        std::unique_ptr<DLLoader<IGfxLib>>              sound;
 
         // Pointers on current instance of lib & game
         // They contain raw address of unique_ptr from vectors tabLib & tabGame
