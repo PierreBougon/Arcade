@@ -75,7 +75,7 @@ void arcade::Core::run()
                     break;
             }
         }
-        else
+        else if (!currentGame)
         {
             //TODO: display arcade menu
         }
