@@ -86,9 +86,6 @@ CTestTestfile.cmake
 /CMakeLists.txt
 /cmake-build-debug/
 
-interfaces
-/interfaces/
-
 *README*
 *LICENSE*
 /ArcadeInterfaces/
