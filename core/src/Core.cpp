@@ -83,7 +83,7 @@ void arcade::Core::run()
 
 void arcade::Core::feedSound()
 {
-    DLLoader<IGfxLib>loader("./soundManager/lib_sound_manager.so", RTLD_GLOBAL);
+    sound = std::make_unique<DLLoader<IGfxLib>>("./soundManager/lib_sound_manager.so", RTLD_GLOBAL);
 }
 
 void arcade::Core::feedLib()
@@ -109,7 +109,7 @@ void arcade::Core::feedGame()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
-        DLLoader<IGame> loader("./game/" + *it);
+        DLLoader<IGame> loader("./games/" + *it);
         IGame *game_ptr = loader.getInstance("getGame");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
@@ -249,7 +249,7 @@ void arcade::Core::loadDependencies()
     if (pars.getVecGame().size() == 0)
         throw LoadingExceptions("Cannot open game/ directory");
     std::cerr << "LOL1" << std::endl;
-    feedSound();
+    //feedSound();
     std::cerr << "LOL2" << std::endl;
     feedLib();
     std::cerr << "LOL3" << std::endl;

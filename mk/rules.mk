@@ -22,7 +22,7 @@ fclean:     	clean
 
 re:		fclean all
 
-.cpp.o:
+.cpp.o:ifeq ($(STATIC), YES)
 		@$(CXX) $(CXXFLAGS) $(INC) $(LDFLAGS) -c $< -o $@
 		@$(ECHO) "$(BOLD_WHITE) [$(GREEN)OK$(BOLD_WHITE)] Compiled "$<"$(CLEAR)"
 
