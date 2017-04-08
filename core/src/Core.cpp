@@ -45,13 +45,15 @@ void arcade::Core::init(std::string const &lib)
 
 void arcade::Core::run()
 {
+    Tick tick;
+
     open = true;
     while (isOpen())
     {
         manageEvents();
         if (!isOpen())
             return;
-        if (currentGame && currentGame->getTickRate())
+        if (currentGame && tick.isTick())
         {
             currentGame->process();
             playSound();

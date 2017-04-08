@@ -10,7 +10,6 @@
 
 namespace arcade
 {
-
     class Tick
     {
         ////////////////////////////////////
