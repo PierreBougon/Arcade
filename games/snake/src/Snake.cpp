@@ -33,6 +33,7 @@ std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
 
 void arcade::Snake::process()
 {
+    gameMap.resetMapFromLayer(0);
     if (!cherry.size())
         putFoodInMap();
     snakes[0].move();
@@ -48,32 +49,39 @@ void arcade::Snake::process()
         return;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
     {
-        gameMap.updateLayer(snakes[0], 1);
+        gameMap.updateLayer((*it), 1);
     }
     gameMap.updateLayer(cherry[0], 1);
+    for (size_t i = 0; i < gameMap.getHeight(); ++i)
+        for (size_t j = 0; j < gameMap.getWidth(); ++j)
+        {
+            empty.setAbs({j, i});
+            gameMap.updateLayer(empty, 0);
+        }
 }
-
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() const
 {
     std::vector<std::unique_ptr<arcade::ISprite>> tmp;
 
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "headDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "bodyHori", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "bodyVerti", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerUpLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerUpRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerDownLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "cornerDownRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./assets/img/", "tailDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./assets/img/", "food", 1, ".png"));
-    return tmp;
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyHori", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyVerti", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./games/snakes/assets/img/", "food", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(" ", "./games/snakes/assets/img/", "empty", 1, ".png"));
+
+    return std::move(tmp);
 }
 
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::Snake::getSoundsToLoad() const
@@ -98,10 +106,9 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2)
+arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false))
 {
     state = LOADING;
-    sprites = getSpritesToLoad();
     createPlayer();
     putFoodInMap();
     state = INGAME;

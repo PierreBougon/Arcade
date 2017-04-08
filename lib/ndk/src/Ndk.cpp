@@ -5,6 +5,7 @@
 #include <bits/unique_ptr.h>
 #include <curses.h>
 #include <iostream>
+#include "Tile.hpp"
 #include "Ndk.hpp"
 
 bool arcade::Ndk::pollEvent(arcade::Event &e)
@@ -33,20 +34,29 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
     if (!pass)
     {
-        win = newwin(static_cast<int>(map.getHeight()), static_cast<int>(map.getWidth()), getmaxy(stdscr) / 4, getmaxx(stdscr) / 4);
+        //std::cout << "Height :" << map.getHeight() << "WIdth : " << map.getWidth() << " && getmaxy / 4" << getmaxy(stdscr) / 4  << " getmaxx : " << getmaxx(stdscr) / 4 << std::endl;
+        win = newwin(static_cast<int>(map.getHeight()), static_cast<int>(map.getWidth()), 10, 10);
         pass = true;
     }
-    werase(win);
+    //werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
     for (i = 0; i < layer; ++i)
     {
+//        std::cout << "LAYER :" << layer << std::endl;
         for (j = 0; j < map.getHeight(); ++j)
         {
             for (k = 0; k < map.getWidth(); ++k)
             {
+//                std::cout << "POO" << std::endl;
                 ITile const& tile = map.at(i, k, j);
-                tmp = vecString[tile.getSpritePos()][tile.getSpritePos()];
-                mvwprintw(win, static_cast<int>(j), static_cast<int>(k), tmp.c_str());
+                if (tile.hasSprite())
+                {
+//                    std::cout << "GetSpritePos : " << tile.getSpriteId() << "GetSpriteId" << tile.getSpriteId()
+//                              << "Vec size" << vecString.size() << std::endl;
+                    tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
+//                    std::cout << "j : " << j << " && k : " << k << std::endl;
+                    mvwprintw(win, static_cast<int>(j), static_cast<int>(k), tmp.c_str());
+                }
             }
         }
     }
@@ -171,9 +181,9 @@ arcade::Ndk::Ndk() : keyboard({
     halfdelay(3);
     curs_set(0);
     pass = false;
-    height = 0;
-    width = 0;
-    initializeWindow();
+    //height = 60;
+    //width = 80;
+    //initializeWindow();
 }
 
 void arcade::Ndk::display()
