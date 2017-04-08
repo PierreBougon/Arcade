@@ -104,6 +104,7 @@ arcade::Snake::Snake() : gameMap("./assets/map.txt", 2)
     sprites = getSpritesToLoad();
     createPlayer();
     putFoodInMap();
+    state = INGAME;
 }
 
 void arcade::Snake::createPlayer()
