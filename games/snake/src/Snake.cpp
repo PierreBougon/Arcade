@@ -8,6 +8,8 @@
 #include "DestroyableObject.hpp"
 #include "Snake.hpp"
 
+static bool talinette = false;
+
 arcade::GameState arcade::Snake::getGameState() const
 {
     return state;
@@ -33,31 +35,35 @@ std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
 
 void arcade::Snake::process()
 {
-    gameMap.resetMapFromLayer(0);
-    if (!cherry.size())
-        putFoodInMap();
-    snakes[0].move();
-    checkDead();
-    if (state == GameState::MENU)
-        return;
-    moveBody();
-    checkEat();
-    if (!cherry.size())
-        feedingSnakes();
-    setSprites();
-    if (state == GameState::MENU)
-        return;
-    for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
+    if (!(tick % 60) || talinette)
     {
-        gameMap.updateLayer((*it), 1);
-    }
-    gameMap.updateLayer(cherry[0], 1);
-    for (size_t i = 0; i < gameMap.getHeight(); ++i)
-        for (size_t j = 0; j < gameMap.getWidth(); ++j)
+        gameMap.resetMapFromLayer(0);
+        if (!cherry.size())
+            putFoodInMap();
+        snakes[0].move();
+        checkDead();
+        if (state == GameState::MENU)
+            return;
+        moveBody();
+        checkEat();
+        if (!cherry.size())
+            feedingSnakes();
+        setSprites();
+        if (state == GameState::MENU)
+            return;
+        for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end(); ++it)
         {
-            empty.setAbs({j, i});
-            gameMap.updateLayer(empty, 0);
+            gameMap.updateLayer((*it), 1);
         }
+        gameMap.updateLayer(cherry[0], 1);
+        for (size_t i = 0; i < gameMap.getHeight(); ++i)
+            for (size_t j = 0; j < gameMap.getWidth(); ++j)
+            {
+                empty.setAbs({j, i});
+                gameMap.updateLayer(empty, 0);
+            }
+    }
+    tick++;
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() const
@@ -106,7 +112,7 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false))
+arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0)
 {
     state = LOADING;
     createPlayer();
@@ -180,26 +186,26 @@ void arcade::Snake::feedingSnakes()
 
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
-    if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
+    if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
         return;
     }
     pos.x -= 2;
-    if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
+    if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::RIGHT));
         return;
     }
     pos.x += 1;
     pos.y += 1;
-    if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
+    if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::DOWN));
         return;
     }
     pos.y -= 2;
-    if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
+    if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
         return;
@@ -226,7 +232,7 @@ void arcade::Snake::checkDead()
 {
     Vector2s pos = snakes[0].getAbs();
 
-    if (pos.x > gameMap.getWidth() || pos.y > gameMap.getHeight())
+    if (pos.x >= gameMap.getWidth() || pos.y >= gameMap.getHeight())
     {
         state = GameState::MENU;
         return;
@@ -356,6 +362,7 @@ extern "C" void Play()
     std::vector<arcade::Vector2s> pos;
     arcade::CommandType command;
 
+    talinette = true;
     player->lenght = static_cast<uint16_t >(size);
     player->type = arcade::CommandType::WHERE_AM_I;
     maps->height = static_cast<uint16_t>(map.getHeight());
