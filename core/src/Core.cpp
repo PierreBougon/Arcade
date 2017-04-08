@@ -251,7 +251,6 @@ void arcade::Core::loadDependencies()
     if (pars.getVecGame().size() == 0)
         throw LoadingExceptions("Cannot open game/ directory");
     std::cerr << "LOL1" << std::endl;
-    //feedSound();
     std::cerr << "LOL2" << std::endl;
     feedLib();
     std::cerr << "LOL3" << std::endl;
