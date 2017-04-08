@@ -1,4 +1,4 @@
-    //
+//
 // Created by Pierre Bougon on 15/03/17.
 //
 
@@ -81,11 +81,16 @@ void arcade::Core::run()
     }
 }
 
+void arcade::Core::feedSound()
+{
+    DLLoader<IGfxLib>loader("./soundManager/lib_sound_manager.so", RTLD_GLOBAL);
+}
+
 void arcade::Core::feedLib()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
-        DLLoader<IGfxLib> loader(*it);
+        DLLoader<IGfxLib> loader("./lib/" + *it);
         IGfxLib *lib_ptr = loader.getInstance("getLib");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
@@ -104,7 +109,7 @@ void arcade::Core::feedGame()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
-        DLLoader<IGame> loader(*it);
+        DLLoader<IGame> loader("./game/" + *it);
         IGame *game_ptr = loader.getInstance("getGame");
         if (loader.getError() == DLLoadingError::DLLError::NONE)
         {
@@ -161,9 +166,9 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 {
     std::vector<std::string>::const_iterator it =
-    std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &_lib){
-        return _lib == lib.substr((lib.find_last_of("/") == lib.npos) ? 0 : lib.find_last_of("/") + 1);
-    });
+            std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &_lib){
+                return _lib == lib.substr((lib.find_last_of("/") == lib.npos) ? 0 : lib.find_last_of("/") + 1);
+            });
     if (it == pars.getVecLib().end())
     {
 
@@ -243,21 +248,29 @@ void arcade::Core::loadDependencies()
     pars.FeedVecGame("./games");
     if (pars.getVecGame().size() == 0)
         throw LoadingExceptions("Cannot open game/ directory");
+    std::cerr << "LOL1" << std::endl;
+    feedSound();
+    std::cerr << "LOL2" << std::endl;
     feedLib();
+    std::cerr << "LOL3" << std::endl;
     if (tabLib.size() == 0)
         throw DLLoadingError(NO_LIB_ERROR_MSG, DLLoadingError::DLLError::NO_LIB_LOADED_ERROR);
+    std::cerr << "LOL4" << std::endl;
     feedGame();
+    std::cerr << "LOL5" << std::endl;
     if (tabGame.size() == 0)
         throw DLLoadingError(NO_GAME_ERROR_MSG, DLLoadingError::DLLError::NO_GAME_LOADED_ERROR);
+    std::cerr << "LOL6" << std::endl;
 }
 
 
-    /**************************************************************************************
-     * Some error messages to make the code easier to understand and more beautiful
-     **************************************************************************************/
-    namespace arcade
-    {
-        const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
+/**************************************************************************************
+ * Some error messages to make the code easier to understand and more beautiful
+ **************************************************************************************/
+namespace arcade
+{
+    const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
 
-        const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
-    }
+    const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
+
+}

@@ -7,6 +7,7 @@
 
 # include <dlfcn.h>
 # include <string>
+# include <iostream>
 # include "LoadingExceptions.hpp"
 
 namespace arcade
@@ -26,19 +27,32 @@ namespace arcade
 
         DLLoader(std::string const &_library) :
                 library(_library),
-                handle(dlopen(library.c_str(), RTLD_NOW)),
+                handle(dlopen(library.c_str(), RTLD_LAZY)),
                 func(nullptr),
                 error(DLLoadingError::DLLError::NONE)
-        {}
+        {
+            std::cerr << "ctor : " << dlerror() << std::endl;
+        }
+
+        DLLoader(std::string const &_library, int flag) :
+                library(_library),
+                handle(dlopen(library.c_str(), RTLD_LAZY | flag)),
+                func(nullptr),
+                error(DLLoadingError::DLLError::NONE)
+        {
+            std::cerr << "ctor : " << dlerror() << std::endl;
+        }
 
         T *getInstance(std::string const &entrypoint)
         {
+            std::cerr << "lol1" << std::endl;
             if (!handle)
                 return (nullptr);
+            std::cerr << "lol2" << std::endl;
             if (func == nullptr)
             {
                 dlerror();
-
+                std::cerr << "lol3" << std::endl;
                 try
                 {
                     *(void **)(&func) = dlsym(handle, entrypoint.c_str());
