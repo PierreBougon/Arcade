@@ -59,6 +59,9 @@ namespace arcade
                Color col,
                bool collide);
 
+        // Overload operator()
+        Entity &operator=(Entity const& cpy);
+
         // Getters
         const Vector2s &getAbs() const;
         const Vector2d &getShift() const;

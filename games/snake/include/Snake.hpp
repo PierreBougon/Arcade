@@ -23,6 +23,7 @@ namespace arcade
         GameState state;
         std::vector<PlayerControlSnake> snakes;
         std::vector<DestroyableObject> cherry;
+        std::vector<std::unique_ptr<arcade::ISprite>> sprites;
 
         bool checkInSnake(Vector2s const& pos);
         void checkEat();
@@ -31,6 +32,7 @@ namespace arcade
         void createPlayer();
         void putFoodInMap();
         void moveBody();
+        void setSprites();
     public:
         Snake();
 

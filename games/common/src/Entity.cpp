@@ -190,3 +190,21 @@ void arcade::Entity::setNewDir(Orientation dir)
 {
     curSprite = dir;
 }
+
+arcade::Entity &arcade::Entity::operator=(const arcade::Entity &cpy)
+{
+    if (&cpy != this)
+    {
+        abs = cpy.abs;
+        shift = cpy.shift;
+        prev = cpy.prev;
+        type = cpy.type;
+        typeEvolution = cpy.typeEvolution;
+        color = cpy.color;
+        spriteSet = cpy.spriteSet;
+        collidable = cpy.collidable;
+        curSprite = cpy.curSprite;
+        sprite = cpy.sprite;
+    }
+    return *this;
+}

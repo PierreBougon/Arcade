@@ -7,7 +7,6 @@
 #include "PlayerControlSnake.hpp"
 #include "DestroyableObject.hpp"
 #include "Snake.hpp"
-#include "Protocol.hpp"
 
 arcade::GameState arcade::Snake::getGameState() const
 {
@@ -44,6 +43,7 @@ void arcade::Snake::process()
     checkEat();
     if (!cherry.size())
         feedingSnakes();
+    setSprites();
     if (state == GameState::MENU)
         return;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
@@ -101,6 +101,7 @@ const arcade::IGUI &arcade::Snake::getGUI() const
 arcade::Snake::Snake() : gameMap("./assets/map.txt", 2)
 {
     state = LOADING;
+    sprites = getSpritesToLoad();
     createPlayer();
     putFoodInMap();
 }
@@ -110,14 +111,22 @@ void arcade::Snake::createPlayer()
     Vector2s pos;
     size_t y = gameMap.getHeight() / 2;
     size_t x = (gameMap.getWidth() / 2) - 2;
+    std::vector<size_t> head = {0, 1, 2, 3};
+    std::vector<size_t> tail = {10, 11, 12, 13};
+    std::vector<size_t> body = {4, 5};
+    std::vector<size_t> count = {1, 1, 1, 1};
+    std::vector<size_t> countBody = {1, 1};
 
     pos.x = x;
     pos.y = y;
-    snakes.push_back(PlayerControlSnake(pos));
+    snakes.push_back(PlayerControlSnake(pos, head, count, Orientation::LEFT));
     for (int i = 1; i < 4; ++i)
     {
         pos.x = x + i;
-        snakes.push_back(PlayerControlSnake(pos));
+        if (i == 3)
+            snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
+        else
+            snakes.push_back(PlayerControlSnake(pos, body, countBody, Orientation::RIGHT));
     }
 }
 
@@ -134,6 +143,8 @@ bool arcade::Snake::checkInSnake(Vector2s const& pos)
 void arcade::Snake::putFoodInMap()
 {
     Vector2s pos;
+    std::vector<size_t> food = {14};
+    std::vector<size_t> count = {1};
 
     pos.x = rand() % gameMap.getWidth();
     pos.y = rand() % gameMap.getHeight();
@@ -142,7 +153,7 @@ void arcade::Snake::putFoodInMap()
         pos.x = rand() % gameMap.getWidth();
         pos.y = rand() % gameMap.getHeight();
     }
-    cherry.push_back(DestroyableObject(pos));
+    cherry.push_back(DestroyableObject(pos, food, count, Orientation::UP));
 }
 
 void arcade::Snake::checkEat()
@@ -156,31 +167,33 @@ void arcade::Snake::checkEat()
 void arcade::Snake::feedingSnakes()
 {
     Vector2s pos;
+    std::vector<size_t> tail = {10, 11, 12, 13};
+    std::vector<size_t> count = {1, 1, 1, 1};
 
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
     if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos));
+        snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
         return;
     }
     pos.x -= 2;
     if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos));
+        snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::RIGHT));
         return;
     }
     pos.x += 1;
     pos.y += 1;
     if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos));
+        snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::DOWN));
         return;
     }
     pos.y -= 2;
     if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
     {
-        snakes.push_back(PlayerControlSnake(pos));
+        snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
         return;
     }
     state = GameState::MENU;
@@ -249,6 +262,54 @@ std::vector<arcade::Vector2s> arcade::Snake::getPlayerpos()
         pos.push_back((*it).getAbs());
     }
     return pos;
+}
+
+void arcade::Snake::setSprites()
+{
+    Vector2s pos;
+    Vector2s posPrev;
+    Vector2s posNext;
+    std::vector<size_t> body = {4, 5};
+    std::vector<size_t> corner = {6, 7, 8, 9};
+    std::vector<size_t> count = {1, 1, 1, 1};
+    std::vector<size_t> countBody = {1, 1};
+
+    if (snakes[0].getAbs().x > snakes[1].getAbs().x)
+        snakes[0].setNewDir(Orientation::RIGHT);
+    else if (snakes[0].getAbs().x < snakes[1].getAbs().x)
+        snakes[0].setNewDir(Orientation::LEFT);
+    else if (snakes[0].getAbs().y > snakes[1].getAbs().y)
+        snakes[0].setNewDir(Orientation::DOWN);
+    else
+        snakes[0].setNewDir(Orientation::UP);
+    for (size_t i = 1; i < snakes.size() - 1; i++)
+    {
+        pos = snakes[i].getAbs();
+        posPrev = snakes[i - 1].getAbs();
+        posNext = snakes[i + 1].getAbs();
+        if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x)
+            snakes[i].setSprite(corner, count, Orientation::UP);
+        else if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x)
+            snakes[i].setSprite(corner, count, Orientation::RIGHT);
+        else if (pos.x > posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+            snakes[i].setSprite(corner, count, Orientation::LEFT);
+        else if (pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+            snakes[i].setSprite(corner, count, Orientation::DOWN);
+        else if (pos.x == posPrev.x && pos.x == posNext.x)
+            snakes[i].setSprite(body, countBody, Orientation::UP);
+        else if (pos.y == posPrev.y && pos.y == posNext.y)
+            snakes[i].setSprite(body, countBody, Orientation::RIGHT);
+    }
+    pos = snakes[snakes.size() - 1].getAbs();
+    posPrev = snakes[snakes.size() - 2].getAbs();
+    if (pos.x == posPrev.x && pos.y > posPrev.y)
+        snakes[snakes.size() - 1].setNewDir(Orientation::UP);
+    else if (pos.x == posPrev.x && pos.y < posPrev.y)
+        snakes[snakes.size() - 1].setNewDir(Orientation::DOWN);
+    else if (pos.y == posPrev.y && pos.x > posPrev.x)
+        snakes[snakes.size() - 1].setNewDir(Orientation::LEFT);
+    else if (pos.y == posPrev.y && pos.x < posPrev.x)
+        snakes[snakes.size() - 1].setNewDir(Orientation::RIGHT);
 }
 
 extern "C" arcade::IGame *getGame()
