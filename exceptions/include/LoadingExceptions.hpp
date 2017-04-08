@@ -33,7 +33,7 @@ namespace arcade
         virtual ~SpritesLoadingError() throw();
     };
 
-    class DLLoadingError : LoadingExceptions
+    class DLLoadingError : public LoadingExceptions
     {
     public:
         // Error enum to set a state if an error occurred in the DLL Loading
@@ -42,6 +42,8 @@ namespace arcade
             NONE = -1,
             WINDOW_ERROR,
             UNDEFINED_ERROR,
+            NO_LIB_LOADED_ERROR,
+            NO_GAME_LOADED_ERROR,
             NB_ERRORS
         };
 

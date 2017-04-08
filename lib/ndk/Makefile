@@ -5,10 +5,12 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:43:58 2017 bougon_p
-## Last update Fri Apr  7 19:00:47 2017 bougon_p
+## Last update Fri Apr  7 21:29:32 2017 bougon_p
 ##
 
 ## Include colors and basic commands
+
+PROJECT_NAME	=	NDK Graphic arcade library
 
 include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 

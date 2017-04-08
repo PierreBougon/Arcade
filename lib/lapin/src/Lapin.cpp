@@ -5,6 +5,7 @@
 #include <exception>
 #include <memory>
 #include "Lapin.hpp"
+#include "LoadingExceptions.hpp"
 
 t_bunny_response keyboardPollEvents(t_bunny_event_state state,
                                     t_bunny_keysym symbole,
@@ -136,6 +137,9 @@ void arcade::Lapin::printOneColor(t_bunny_position const &pos, Color color, uint
 {
     static t_bunny_picture *pic = bunny_new_picture(Width, Height);
 
+    if (!pic)
+        throw DLLoadingError("Bad alloc", DLLoadingError::DLLError::UNDEFINED_ERROR);
+
     if (pic != nullptr)
     {
         pic->clip_height = height;
@@ -211,7 +215,7 @@ void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&
         {
             add.emplace_back(bunny_load_picture(sprite->getGraphicPath(i).c_str()));
             if (!add.back())
-                throw std::bad_alloc();
+                throw DLLoadingError("Can't load sprites", DLLoadingError::DLLError::UNDEFINED_ERROR);
         }
         Sprites.emplace_back(std::move(add));
     }
@@ -231,10 +235,10 @@ arcade::Lapin::Lapin() :
     bunny_enable_full_blit(true);
     Map = bunny_new_picture(Width, Height);
     if (Map == nullptr)
-        throw std::bad_alloc();
+        throw DLLoadingError("Can't create main picture", DLLoadingError::DLLError::UNDEFINED_ERROR);
     Window = bunny_start(Width, Height, false, "Retro Furnace");
     if (Window == nullptr)
-        throw std::bad_alloc();
+        throw DLLoadingError("Can't create window", DLLoadingError::DLLError::WINDOW_ERROR);
 
     Context.key = keyboardPollEvents;
     Context.loop = mainLoop;
@@ -245,7 +249,8 @@ arcade::Lapin::Lapin() :
 
 void arcade::Bunny_picture_deleter::operator()(t_bunny_picture *picture)
 {
-    bunny_delete_clipable(picture);
+    if (picture)
+        bunny_delete_clipable(picture);
 }
 
 namespace arcade

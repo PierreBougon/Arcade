@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include "Logger.hpp"
 #include "Core.hpp"
+#include "LoadingExceptions.hpp"
 
 int main(int ac, char **av)
 {
@@ -15,10 +16,18 @@ int main(int ac, char **av)
         return (EXIT_FAILURE);
     }
     std::srand(static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count()));
-    arcade::Core arcadeCore;
 
-    arcadeCore.init(av[1]);
-    arcadeCore.run();
+    try
+    {
+        arcade::Core arcadeCore(av[1]);
+        arcadeCore.run();
+    }
+    catch (arcade::DLLoadingError const &error)
+    {
+        Logger::log(Logger::Error, error.what());
+        return (EXIT_FAILURE);
+    }
+    // TODO: try catch for a game exception or something
 
     return (EXIT_SUCCESS);
 }

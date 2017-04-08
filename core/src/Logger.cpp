@@ -15,7 +15,7 @@ void Logger::log(Logger::Level lvl, std::string msg, bool abort)
 {
     switch (lvl)
     {
-        case Logger::DEBUG:
+        case Logger::Debug:
             if (Debug::DEBUG_MODE)
                 std::cout << "<Debug> : " << msg << std::endl;
             break;

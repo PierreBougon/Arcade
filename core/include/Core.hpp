@@ -16,8 +16,8 @@ namespace arcade
     class Core
     {
     private:
-        std::vector<std::unique_ptr<arcade::IGfxLib>>  tabLib;
-        std::vector<std::unique_ptr<arcade::IGame>>    tabGame;
+        std::vector<arcade::IGfxLib *>                 tabLib;
+        std::vector<arcade::IGame *>                   tabGame;
         Pars                                           pars;
         bool                                           open;
         std::vector<Event>                             events;
@@ -68,6 +68,15 @@ namespace arcade
         void manageEvents();
 
         void loadDependencies();
+
+
+        /**************************************************************************************
+         * Some error messages to make the code easier to understand and more beautiful
+         **************************************************************************************/
+    private:
+        static const std::string NO_LIB_ERROR_MSG;
+        static const std::string NO_GAME_ERROR_MSG;
+
     };
 }
 

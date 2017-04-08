@@ -16,12 +16,26 @@ arcade::Pars::~Pars()
 
 void arcade::Pars::FeedVecLib(std::string const &directory)
 {
-    feedVector(&vecLib, directory);
+    try
+    {
+        feedVector(&vecLib, directory);
+    }
+    catch (std::invalid_argument error)
+    {
+        error.what();
+    }
 }
 
 void arcade::Pars::FeedVecGame(std::string const &directory)
 {
-    feedVector(&vecGame, directory);
+    try
+    {
+        feedVector(&vecGame, directory);
+    }
+    catch (std::invalid_argument error)
+    {
+        error.what();
+    }
 }
 
 std::vector<std::string> const &arcade::Pars::getVecLib() const
@@ -37,6 +51,7 @@ std::vector<std::string> const &arcade::Pars::getVecGame() const
 
 void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &directory)
 {
+    std::string _file;
     DIR *dir;
     struct dirent *file;
 
@@ -45,7 +60,9 @@ void arcade::Pars::feedVector(std::vector<std::string> *vec, std::string const &
     {
         while ((file = readdir(dir)))
         {
-            vec->push_back(std::string(file->d_name));
+            _file = file->d_name;
+            if (_file.find_last_of(".so") == _file.length() - 1 && _file.length() > 3)
+                vec->push_back(std::string(file->d_name));
         }
     }
     else
