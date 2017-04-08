@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sat Apr  1 13:38:06 2017 bougon_p
-## Last update Sat Apr  8 12:57:43 2017 brout_m
+## Last update Sat Apr  8 16:34:20 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -20,6 +20,7 @@ SRC		=	src/main.cpp				\
 			src/Core.cpp				\
 			src/Pars.cpp				\
 			src/Logger.cpp				\
+			src/Tick.cpp				\
 			../exceptions/src/LoadingExceptions.cpp
 
 LDFLAGS 	+=	-ldl
