@@ -55,7 +55,6 @@ void arcade::Core::run()
             return;
         if (currentGame && tick.isTick())
         {
-            currentGame->process();
             playSound();
             switch (currentGame->getGameState())
             {
@@ -66,6 +65,7 @@ void arcade::Core::run()
                     initGame();
                     break;
                 case GameState::INGAME :
+                    currentGame->process();
                     drawFrame();
                     break;
                 case GameState::MENU :
@@ -144,7 +144,6 @@ int arcade::Core::getIndexVec(std::string const &lib, std::vector<std::string> v
     }
     return (-1);
 }
-
 
 arcade::IGame *arcade::Core::findGame(const std::string &game)
 {
