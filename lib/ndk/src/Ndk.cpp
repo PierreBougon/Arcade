@@ -173,6 +173,7 @@ arcade::Ndk::Ndk() : keyboard({
     pass = false;
     height = 0;
     width = 0;
+    initializeWindow();
 }
 
 void arcade::Ndk::display()

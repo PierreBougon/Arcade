@@ -27,7 +27,7 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 
     currentLib = findLib(lib);
     //TODO: Basic choice should be decided on a menu
-    currentGame = findGame("./games/lib_arcade_centipede.so");
+    currentGame = findGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::~Core()
@@ -92,10 +92,10 @@ void arcade::Core::feedLib()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
-        DLLoader<IGfxLib> loader("./lib/" + *it);
-        if (loader.getError() == DLLoadingError::DLLError::NONE)
+        std::unique_ptr<DLLoader<IGfxLib>> loader = std::make_unique<DLLoader<IGfxLib>>("./lib/" + *it);
+        if (loader->getError() == DLLoadingError::DLLError::NONE)
         {
-                tabLib.push_back(std::make_unique<DLLoader<IGfxLib>>(loader));
+            tabLib.push_back(std::move(loader));
         }
         else
         {
@@ -109,10 +109,10 @@ void arcade::Core::feedGame()
 {
     for (std::vector<std::string>::const_iterator it = pars.getVecGame().begin(); it != pars.getVecGame().end(); it++)
     {
-        DLLoader<IGame> loader("./games/" + *it);
-        if (loader.getError() == DLLoadingError::DLLError::NONE)
+        std::unique_ptr<DLLoader<IGame>> loader = std::make_unique<DLLoader<IGame>>("./games/" + *it);
+        if (loader->getError() == DLLoadingError::DLLError::NONE)
         {
-            tabGame.push_back(std::make_unique<DLLoader<IGame>>(loader));
+            tabGame.push_back(std::move(loader));
         }
         else
         {
@@ -169,7 +169,6 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
             });
     if (it == pars.getVecLib().end())
     {
-
         Logger::log(Logger::Error,
                     lib + " : This lib has not been found it may happen when a lib cannot be loaded");
         return nullptr;
@@ -179,6 +178,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 
 void arcade::Core::drawFrame()
 {
+    currentLib->clear();
     currentLib->updateMap(currentGame->getCurrentMap());
     currentLib->updateGUI(currentGame->getGUI());
 }
