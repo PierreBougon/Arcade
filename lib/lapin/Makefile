@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:44:40 2017 bougon_p
-## Last update Sat Apr  8 18:23:05 2017 brout_m
+## Last update Sat Apr  8 17:38:01 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -24,6 +24,12 @@ SRC		=	src/Lapin.cpp \
 OBJ 		=   	$(SRC:.cpp=.o)
 
 NAME    	=      	../lib_arcade_lapin.so
+
+INC     	=       -Iinclude \
+			-I../../interfaces \
+			-I../../soundManager/include \
+			-I../../exceptions/include \
+			-I./dep/ -I./dep/deps \
 
 INC     	=       -Iinclude \
 			-I../../interfaces \
