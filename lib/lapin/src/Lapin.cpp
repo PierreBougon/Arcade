@@ -4,6 +4,7 @@
 
 #include <exception>
 #include <memory>
+#include <iostream>
 #include "Lapin.hpp"
 #include "LoadingExceptions.hpp"
 
@@ -43,6 +44,7 @@ t_bunny_response mouseMovement(const t_bunny_position *pos,
 
 arcade::Lapin::~Lapin()
 {
+    std::cerr << "DESTRUCTION" << std::endl;
     if (Window != nullptr)
         bunny_stop(Window);
     if (Map != nullptr)
@@ -232,13 +234,17 @@ arcade::Lapin::Lapin() :
         Map(nullptr),
         Context({})
 {
+    std::cerr << "CONSTRUCTION" << std::endl;
     bunny_enable_full_blit(true);
     Map = bunny_new_picture(Width, Height);
     if (Map == nullptr)
         throw DLLoadingError("Can't create main picture", DLLoadingError::DLLError::UNDEFINED_ERROR);
+    std::cerr << "MAP BUILDT" << std::endl;
+
     Window = bunny_start(Width, Height, false, "Retro Furnace");
     if (Window == nullptr)
         throw DLLoadingError("Can't create window", DLLoadingError::DLLError::WINDOW_ERROR);
+    std::cerr << "WINDOW BUILDT" << std::endl;
     Context.key = keyboardPollEvents;
     Context.loop = mainLoop;
     Context.click = mousePollEvents;
