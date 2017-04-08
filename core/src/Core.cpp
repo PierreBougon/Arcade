@@ -83,12 +83,11 @@ void arcade::Core::run()
 
 void arcade::Core::feedSound()
 {
-    DLLoader<IGfxLib>loader("./soundManager/lib_sound_manager.so", RTLD_GLOBAL);
+    sound = std::make_unique<DLLoader<IGfxLib>>("./soundManager/lib_sound_manager.so", RTLD_GLOBAL);
 }
 
 void arcade::Core::feedLib()
 {
-    std::cout << "HEY !!" << std::endl;
     for (std::vector<std::string>::const_iterator it = pars.getVecLib().begin(); it != pars.getVecLib().end(); it++)
     {
         DLLoader<IGfxLib> loader("./lib/" + *it);
@@ -104,7 +103,6 @@ void arcade::Core::feedLib()
                         *it + " : This lib cannot be loaded, check out your lib/ directory to see your library");
         }
     }
-    std::cout << "HOY !!" << std::endl;
 }
 
 void arcade::Core::feedGame()
@@ -250,13 +248,18 @@ void arcade::Core::loadDependencies()
     pars.FeedVecGame("./games");
     if (pars.getVecGame().size() == 0)
         throw LoadingExceptions("Cannot open game/ directory");
-    feedSound();
+    std::cerr << "LOL1" << std::endl;
+    std::cerr << "LOL2" << std::endl;
     feedLib();
+    std::cerr << "LOL3" << std::endl;
     if (tabLib.size() == 0)
         throw DLLoadingError(NO_LIB_ERROR_MSG, DLLoadingError::DLLError::NO_LIB_LOADED_ERROR);
+    std::cerr << "LOL4" << std::endl;
     feedGame();
+    std::cerr << "LOL5" << std::endl;
     if (tabGame.size() == 0)
         throw DLLoadingError(NO_GAME_ERROR_MSG, DLLoadingError::DLLError::NO_GAME_LOADED_ERROR);
+    std::cerr << "LOL6" << std::endl;
 }
 
 

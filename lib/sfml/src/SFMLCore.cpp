@@ -3,6 +3,7 @@
 //
 
 #include <SFML/Window/Event.hpp>
+#include "IGfxLib.hpp"
 #include "SFMLCore.hpp"
 
 arcade::SFMLCore::SFMLCore() : width(800), height(600), x(0), y(0), window()
@@ -343,4 +344,9 @@ namespace arcade
                     {sf::Keyboard::RSystem, arcade::KeyboardKey::KB_NONE},
                     {sf::Keyboard::Pause, arcade::KeyboardKey::KB_NONE},
             };
+}
+
+extern "C" arcade::IGfxLib *getLib()
+{
+    return (new arcade::SFMLCore());
 }
