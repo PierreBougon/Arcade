@@ -19,16 +19,14 @@ include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 SRC	=	src/Ndk.cpp			\
 		../../interfaces/Sound.cpp \
 		../../interfaces/Color.cpp \
-		../../soundManager/src/soundManager.cpp \
-		../../soundManager/src/SoundRender.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	../lib_arcade_ndk.so
 
-INC     =       -Iinclude -I../../interfaces -I../../games/common/include -I../../soundManager/include
+INC     =       -Iinclude -I../../interfaces -I../../games/common/include
 
-LDFLAGS	+=	-lncurses -L../../soundManager -l_sound_manager
+LDFLAGS	+=	-lncurses
 
 ## Lib rules
 

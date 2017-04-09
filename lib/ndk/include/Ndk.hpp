@@ -8,7 +8,6 @@
 #include <curses.h>
 #include <map>
 #include "IGfxLib.hpp"
-#include "SoundManager.hpp"
 
 namespace arcade
 {
@@ -21,7 +20,6 @@ namespace arcade
         std::vector<std::string> vecString;
         size_t width;
         size_t height;
-        SoundManager manager;
 
         void setColor(size_t, size_t, size_t, ITile const&);
     public:

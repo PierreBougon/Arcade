@@ -63,9 +63,6 @@ namespace arcade
         std::list<Mushroom *>           _mushrooms;
         std::list<Centipede *>          _centipedes;
         size_t                          _tick;
-        bool                            shot;
-        bool                            alive;
-
 
         // private functions
         void randomize(Map &map, double density = 0.5);
