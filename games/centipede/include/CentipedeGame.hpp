@@ -44,7 +44,8 @@ namespace arcade
         std::vector<Sound> getSoundsToPlay();
         const Vector2s &getPlayerpos() const;
         tick_t getTickRate() const;
-
+        bool shot;
+        bool alive;
 
     private:
         arcade::GameState               _gameState;
