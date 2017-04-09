@@ -270,17 +270,17 @@ void arcade::Snake::moveSnake()
     {
         snakes[0].move();
         checkDead();
-        moveBody();
+        moveBody(true);
     }
     else
     {
         snakes[0].moveShift(tick % (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed),
                             (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed));
-        moveBody();
+        moveBody(false);
     }
 }
 
-void arcade::Snake::moveBody()
+void arcade::Snake::moveBody(bool movePhysic)
 {
     Vector2s pos;
     Vector2s newPos;
@@ -293,7 +293,8 @@ void arcade::Snake::moveBody()
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin() + 1; it != snakes.end() ; ++it)
     {
         newPos = (*it).getAbs();
-        (*it).setAbs(pos);
+        if (movePhysic)
+            (*it).setAbs(pos);
         switch (it->getOrientation())
         {
             case Orientation::UP :
