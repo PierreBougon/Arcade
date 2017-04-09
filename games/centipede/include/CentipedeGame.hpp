@@ -46,13 +46,13 @@ namespace arcade
         const IMap &getCurrentMap() const;
         const Map &getMouliMap() const;
         IGUI &getGUI();
-        std::vector<NetworkPacket> &&getNetworkToSend();
+        std::vector<NetworkPacket> getNetworkToSend();
         std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const;
         std::vector<std::pair<std::string, SoundType>> getSoundsToLoad() const;
         std::vector<Sound> getSoundsToPlay();
         const Vector2s &getPlayerpos() const;
-        tick_t getTickRate() const;
 
+        bool hasNetwork() const override;
 
     private:
         arcade::GameState               _gameState;
