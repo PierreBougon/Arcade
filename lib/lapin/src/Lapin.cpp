@@ -147,6 +147,8 @@ void arcade::Lapin::printOneColor(t_bunny_position const &pos, Color color, uint
 
 void arcade::Lapin::updateMap(const arcade::IMap &map)
 {
+    t_bunny_position _pos;
+
     size_t nbLayers = map.getLayerNb();
     size_t mHeight = map.getHeight();
     size_t mWidth = map.getWidth();
@@ -164,10 +166,12 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
             {
                 const ITile& tile = map.at(layers, x, y);
 
+                _pos.x = pos.x + static_cast<int>(tile.getShiftX() * TileWidth);
+                _pos.y = pos.y + static_cast<int>(tile.getShiftY() * TileHeight);
                 if (tile.hasSprite() && Sprites[tile.getSpriteId()][tile.getSpritePos()] != nullptr)
-                    printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()]);
+                    printOneSprite(_pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()]);
                 else if (tile.getColor().full != Color::Transparent.full)
-                    printOneColor(pos, tile.getColor(), TileWidth, TileHeight);
+                    printOneColor(_pos, tile.getColor(), TileWidth, TileHeight);
                 pos.x += TileWidth;
             }
             pos.y += TileHeight;
