@@ -1,0 +1,278 @@
+\hypertarget{unionarcade_1_1_color}{\section{arcade\-:\-:Color Union Reference}
+\label{unionarcade_1_1_color}\index{arcade\-::\-Color@{arcade\-::\-Color}}
+}
+
+
+Union to store R\-G\-Ba color.  
+
+
+
+
+{\ttfamily \#include $<$Color.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionarcade_1_1_color_a053784aa4df3917111e2717d74fa3d85}{Color} (uint32\-\_\-t c=Black.\-full)
+\begin{DoxyCompactList}\small\item\em Constructor to create color from a 4 bytes integer. \end{DoxyCompactList}\item 
+\hyperlink{unionarcade_1_1_color_acf519d304c0dae64e28b976414af0753}{Color} (uint8\-\_\-t \hyperlink{unionarcade_1_1_color_a20637c0cb142a384bd034cceacafe6e0}{r}, uint8\-\_\-t \hyperlink{unionarcade_1_1_color_a97c509df99c9b119622f4b2ff8b3f21b}{g}, uint8\-\_\-t \hyperlink{unionarcade_1_1_color_a7edec98cabcfdeb71ae750e7442a6baf}{b}, uint8\-\_\-t \hyperlink{unionarcade_1_1_color_ae2f888f27d844d24f9ef10917f42d2dc}{a}=255)
+\begin{DoxyCompactList}\small\item\em Constructor to create color from a 4 color component. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_a83a50461144496e223210c16a3e37d4e}{operator==} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_aedb97f3185cb3c8da0c20741ce8738cd}{operator!=} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_a1ec33b6fd522a346562408bccdbb8e40}{operator$<$=} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_a9824e87bab868bf045bec2c7b8175bbc}{operator$>$=} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_ae57e632cad53651f489dadd50477b160}{operator$<$} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{unionarcade_1_1_color_a25d65e1f8624baacaf99950e9f8363f6}{operator$>$} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&col)
+\item 
+\hyperlink{unionarcade_1_1_color_a25345f417c09d13da1b20f5a0f030eec}{Color} (\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&c)
+\begin{DoxyCompactList}\small\item\em Constructor to copy a \hyperlink{unionarcade_1_1_color}{Color}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{unionarcade_1_1_color_ad68cc4b72cafa2c89dac97a336d1ca32}{full}
+\begin{DoxyCompactList}\small\item\em Transparent color. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{unionarcade_1_1_color_a805bb231543d607ee00f353506c850be}{rgba} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em 4 bytes integer value of the color \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{unionarcade_1_1_color_a20637c0cb142a384bd034cceacafe6e0}{r}\\
+\>uint8\_t \hyperlink{unionarcade_1_1_color_a97c509df99c9b119622f4b2ff8b3f21b}{g}\\
+\>uint8\_t \hyperlink{unionarcade_1_1_color_a7edec98cabcfdeb71ae750e7442a6baf}{b}\\
+\>uint8\_t \hyperlink{unionarcade_1_1_color_ae2f888f27d844d24f9ef10917f42d2dc}{a}\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em array of the 4 color component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_adf9314b9d80e839db37907dc8e281175}{Black}
+\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_aa8bd809fbf902dbbe53b9bb6802eb57f}{White}
+\begin{DoxyCompactList}\small\item\em Black color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_a7101e34126fdb3c14d53045681938293}{Red}
+\begin{DoxyCompactList}\small\item\em White color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_aa7271d3c9e5fc07926979eaa610af7e4}{Green}
+\begin{DoxyCompactList}\small\item\em Red color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_a37e72a85b3ce04f4642a48cae2f60644}{Blue}
+\begin{DoxyCompactList}\small\item\em Green color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_aa437de4029652dba87b0b64ca488f8ff}{Yellow}
+\begin{DoxyCompactList}\small\item\em Blue color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_aabfdd84cadc61ca458e8122869310631}{Magenta}
+\begin{DoxyCompactList}\small\item\em Yellow color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_a73cbdbe2ebf731489bafec16cb88e705}{Cyan}
+\begin{DoxyCompactList}\small\item\em Magenta color. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \hyperlink{unionarcade_1_1_color_a689350442a28301beb49ca78a4885e4f}{Transparent}
+\begin{DoxyCompactList}\small\item\em Cyan color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Union to store R\-G\-Ba color. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{unionarcade_1_1_color_a053784aa4df3917111e2717d74fa3d85}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Color@{Color}}
+\index{Color@{Color}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Color\-::\-Color (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{c = {\ttfamily Black.full}}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a053784aa4df3917111e2717d74fa3d85}
+
+
+Constructor to create color from a 4 bytes integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & 4 bytes integer value containing a color \\
+\hline
+\end{DoxyParams}
+\hypertarget{unionarcade_1_1_color_acf519d304c0dae64e28b976414af0753}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Color@{Color}}
+\index{Color@{Color}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Color\-::\-Color (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{r, }
+\item[{uint8\-\_\-t}]{g, }
+\item[{uint8\-\_\-t}]{b, }
+\item[{uint8\-\_\-t}]{a = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_acf519d304c0dae64e28b976414af0753}
+
+
+Constructor to create color from a 4 color component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em r} & Red color component value \\
+\hline
+\mbox{\tt in}  & {\em g} & Green color component value \\
+\hline
+\mbox{\tt in}  & {\em b} & Blue color component value \\
+\hline
+\mbox{\tt in}  & {\em a} & Alpha (opacity) color component value \\
+\hline
+\end{DoxyParams}
+\hypertarget{unionarcade_1_1_color_a25345f417c09d13da1b20f5a0f030eec}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Color@{Color}}
+\index{Color@{Color}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Color\-::\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{c}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a25345f417c09d13da1b20f5a0f030eec}
+
+
+Constructor to copy a \hyperlink{unionarcade_1_1_color}{Color}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & \hyperlink{unionarcade_1_1_color}{Color} to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{unionarcade_1_1_color_aedb97f3185cb3c8da0c20741ce8738cd}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_aedb97f3185cb3c8da0c20741ce8738cd}
+\hypertarget{unionarcade_1_1_color_ae57e632cad53651f489dadd50477b160}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_ae57e632cad53651f489dadd50477b160}
+\hypertarget{unionarcade_1_1_color_a1ec33b6fd522a346562408bccdbb8e40}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a1ec33b6fd522a346562408bccdbb8e40}
+\hypertarget{unionarcade_1_1_color_a83a50461144496e223210c16a3e37d4e}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator==@{operator==}}
+\index{operator==@{operator==}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a83a50461144496e223210c16a3e37d4e}
+\hypertarget{unionarcade_1_1_color_a25d65e1f8624baacaf99950e9f8363f6}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a25d65e1f8624baacaf99950e9f8363f6}
+\hypertarget{unionarcade_1_1_color_a9824e87bab868bf045bec2c7b8175bbc}{\index{arcade\-::\-Color@{arcade\-::\-Color}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Color\-::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{{\bf Color} {\bf const} \&}]{col}
+\end{DoxyParamCaption}
+)}}\label{unionarcade_1_1_color_a9824e87bab868bf045bec2c7b8175bbc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{unionarcade_1_1_color_a43cc3c8f8963922521042f4ea70178b3}{\subsubsection[{"@1}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{unionarcade_1_1_color_a43cc3c8f8963922521042f4ea70178b3}
+
+
+array of the 4 color component 
+
+\hypertarget{unionarcade_1_1_color_ae2f888f27d844d24f9ef10917f42d2dc}{\index{arcade\-::\-Color@{arcade\-::\-Color}!a@{a}}
+\index{a@{a}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t arcade\-::\-Color\-::a}}\label{unionarcade_1_1_color_ae2f888f27d844d24f9ef10917f42d2dc}
+\hypertarget{unionarcade_1_1_color_a7edec98cabcfdeb71ae750e7442a6baf}{\index{arcade\-::\-Color@{arcade\-::\-Color}!b@{b}}
+\index{b@{b}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t arcade\-::\-Color\-::b}}\label{unionarcade_1_1_color_a7edec98cabcfdeb71ae750e7442a6baf}
+\hypertarget{unionarcade_1_1_color_adf9314b9d80e839db37907dc8e281175}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Black@{Black}}
+\index{Black@{Black}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Black}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Black\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_adf9314b9d80e839db37907dc8e281175}
+\hypertarget{unionarcade_1_1_color_a37e72a85b3ce04f4642a48cae2f60644}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Blue@{Blue}}
+\index{Blue@{Blue}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Blue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Blue\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_a37e72a85b3ce04f4642a48cae2f60644}
+
+
+Green color. 
+
+\hypertarget{unionarcade_1_1_color_a73cbdbe2ebf731489bafec16cb88e705}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Cyan@{Cyan}}
+\index{Cyan@{Cyan}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Cyan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Cyan\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_a73cbdbe2ebf731489bafec16cb88e705}
+
+
+Magenta color. 
+
+\hypertarget{unionarcade_1_1_color_ad68cc4b72cafa2c89dac97a336d1ca32}{\index{arcade\-::\-Color@{arcade\-::\-Color}!full@{full}}
+\index{full@{full}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{full}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t arcade\-::\-Color\-::full}}\label{unionarcade_1_1_color_ad68cc4b72cafa2c89dac97a336d1ca32}
+
+
+Transparent color. 
+
+\hypertarget{unionarcade_1_1_color_a97c509df99c9b119622f4b2ff8b3f21b}{\index{arcade\-::\-Color@{arcade\-::\-Color}!g@{g}}
+\index{g@{g}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t arcade\-::\-Color\-::g}}\label{unionarcade_1_1_color_a97c509df99c9b119622f4b2ff8b3f21b}
+\hypertarget{unionarcade_1_1_color_aa7271d3c9e5fc07926979eaa610af7e4}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Green@{Green}}
+\index{Green@{Green}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Green}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Green\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_aa7271d3c9e5fc07926979eaa610af7e4}
+
+
+Red color. 
+
+\hypertarget{unionarcade_1_1_color_aabfdd84cadc61ca458e8122869310631}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Magenta@{Magenta}}
+\index{Magenta@{Magenta}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Magenta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Magenta\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_aabfdd84cadc61ca458e8122869310631}
+
+
+Yellow color. 
+
+\hypertarget{unionarcade_1_1_color_a20637c0cb142a384bd034cceacafe6e0}{\index{arcade\-::\-Color@{arcade\-::\-Color}!r@{r}}
+\index{r@{r}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t arcade\-::\-Color\-::r}}\label{unionarcade_1_1_color_a20637c0cb142a384bd034cceacafe6e0}
+\hypertarget{unionarcade_1_1_color_a7101e34126fdb3c14d53045681938293}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Red@{Red}}
+\index{Red@{Red}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Red}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Red\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_a7101e34126fdb3c14d53045681938293}
+
+
+White color. 
+
+\hypertarget{unionarcade_1_1_color_a805bb231543d607ee00f353506c850be}{\index{arcade\-::\-Color@{arcade\-::\-Color}!rgba@{rgba}}
+\index{rgba@{rgba}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{rgba}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t arcade\-::\-Color\-::rgba\mbox{[}4\mbox{]}}}\label{unionarcade_1_1_color_a805bb231543d607ee00f353506c850be}
+
+
+4 bytes integer value of the color 
+
+\hypertarget{unionarcade_1_1_color_a689350442a28301beb49ca78a4885e4f}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Transparent@{Transparent}}
+\index{Transparent@{Transparent}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Transparent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Transparent\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_a689350442a28301beb49ca78a4885e4f}
+
+
+Cyan color. 
+
+\hypertarget{unionarcade_1_1_color_aa8bd809fbf902dbbe53b9bb6802eb57f}{\index{arcade\-::\-Color@{arcade\-::\-Color}!White@{White}}
+\index{White@{White}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{White}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-White\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_aa8bd809fbf902dbbe53b9bb6802eb57f}
+
+
+Black color. 
+
+\hypertarget{unionarcade_1_1_color_aa437de4029652dba87b0b64ca488f8ff}{\index{arcade\-::\-Color@{arcade\-::\-Color}!Yellow@{Yellow}}
+\index{Yellow@{Yellow}!arcade::Color@{arcade\-::\-Color}}
+\subsubsection[{Yellow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf Color} arcade\-::\-Color\-::\-Yellow\hspace{0.3cm}{\ttfamily [static]}}}\label{unionarcade_1_1_color_aa437de4029652dba87b0b64ca488f8ff}
+
+
+Blue color. 
+
+
+
+The documentation for this union was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+interfaces/\hyperlink{interfaces_2_color_8hpp}{Color.\-hpp}\item 
+interfaces/\hyperlink{_color_8cpp}{Color.\-cpp}\end{DoxyCompactItemize}

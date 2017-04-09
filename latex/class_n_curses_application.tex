@@ -1,0 +1,286 @@
+\hypertarget{class_n_curses_application}{\section{N\-Curses\-Application Class Reference}
+\label{class_n_curses_application}\index{N\-Curses\-Application@{N\-Curses\-Application}}
+}
+
+
+{\ttfamily \#include $<$cursesapp.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_n_curses_application_1_1__slk__link}{\-\_\-slk\-\_\-link}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{struct_n_curses_application_1_1__slk__link}{N\-Curses\-Application\-::\-\_\-slk\-\_\-link} \hyperlink{class_n_curses_application_a967e03c00bd923d718a18be735b6104b}{S\-L\-K\-\_\-\-Link}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_n_curses_application_af0dc1dae5b9e8a9e0707154960aa507a}{$\sim$\-N\-Curses\-Application} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_application_ae94357ea7cdb977e4cd55948d40e1227}{operator()} (void)
+\item 
+virtual void \hyperlink{class_n_curses_application_a922b5c0200d3ccb9f23275dde554c042}{handle\-Args} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_application_acb442a275dcde797e05bc446a15981b7}{use\-Colors} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_application_a36d28b32d72f7694192426097d053b1f}{push} (\hyperlink{class_soft___label___key___set}{Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set} \&S)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_application_a3cc6b3e7b18164fc18e57e337ba70933}{pop} ()
+\item 
+\hyperlink{class_soft___label___key___set}{Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set} $\ast$ \hyperlink{class_n_curses_application_a8f28bec9e888adefb0b5253361e10b0f}{top} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_ad1b440ce99b9554a2b33d7f73bff99ae}{foregrounds} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_a6624b3f67674e2dd7aadb51f3ff62474}{backgrounds} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_a481fea32ada884c0d5fa8068d0faaa2d}{inactives} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_aeec14403a63dd0c311023d196055741b}{labels} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_a0ffd4436e4e89689cf4df9bd3ba958b6}{dialog\-\_\-backgrounds} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_a834eed1189928347c09d673fb2f88153}{window\-\_\-backgrounds} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_application_ab2910676d361e485646b3723d8403a2e}{screen\-\_\-titles} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_n_curses_application}{N\-Curses\-Application} $\ast$ \hyperlink{class_n_curses_application_a6896c005e98c5a42eec577aca3b0f412}{get\-Application} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_n_curses_application_af5a64740722485562ab3063fac8e5589}{init} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} b\-Colors)
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_application_a904000c73395b026846bdc0f683fee2a}{titlesize} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual void \hyperlink{class_n_curses_application_af6a34b8fb44856a8d5d322d6f1ddf9e4}{title} ()
+\item 
+virtual \\*
+\hyperlink{class_soft___label___key___set_a4d68b5593db1c9c763e3916b2b6edaf6}{Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set\-::\-Label\-\_\-\-Layout} \hyperlink{class_n_curses_application_a722d8c69d964df81bed8643b88f8fab4}{use\-S\-L\-Ks} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual void \hyperlink{class_n_curses_application_a5747bac8974ab593ae8e2f69d9389ea2}{init\-\_\-labels} (\hyperlink{class_soft___label___key___set}{Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set} \&S) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_application_ac0b3a68c94540b85dba1e39003abb115}{run} ()=0
+\item 
+\hyperlink{class_n_curses_application_a65ac14567741eadf143dc453e303f150}{N\-Curses\-Application} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} want\-Colors=F\-A\-L\-S\-E)
+\item 
+\hyperlink{class_n_curses_application}{N\-Curses\-Application} \& \hyperlink{class_n_curses_application_ac5effc2f818d5daf12cd37965e830bac}{operator=} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_application}{N\-Curses\-Application} \&rhs)
+\item 
+\hyperlink{class_n_curses_application_aa45919b98b7103ae735bf7ee080b6dfa}{N\-Curses\-Application} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_application}{N\-Curses\-Application} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_application_a2e435866a06c43c110e0a435e641c16d}{b\-\_\-\-Colors}
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_application_acb60c51b333d257562a32e4bef64a0ba}{Root\-\_\-\-Window}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_application_a31976ca99082718dcbb567edad6625b0}{title\-Window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_n_curses_application_a967e03c00bd923d718a18be735b6104b}{\index{N\-Curses\-Application@{N\-Curses\-Application}!S\-L\-K\-\_\-\-Link@{S\-L\-K\-\_\-\-Link}}
+\index{S\-L\-K\-\_\-\-Link@{S\-L\-K\-\_\-\-Link}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{S\-L\-K\-\_\-\-Link}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf N\-Curses\-Application\-::\-\_\-slk\-\_\-link}  {\bf N\-Curses\-Application\-::\-S\-L\-K\-\_\-\-Link}}}\label{class_n_curses_application_a967e03c00bd923d718a18be735b6104b}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_curses_application_a65ac14567741eadf143dc453e303f150}{\index{N\-Curses\-Application@{N\-Curses\-Application}!N\-Curses\-Application@{N\-Curses\-Application}}
+\index{N\-Curses\-Application@{N\-Curses\-Application}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{N\-Curses\-Application}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Application\-::\-N\-Curses\-Application (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{want\-Colors = {\ttfamily FALSE}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_application_a65ac14567741eadf143dc453e303f150}
+\hypertarget{class_n_curses_application_aa45919b98b7103ae735bf7ee080b6dfa}{\index{N\-Curses\-Application@{N\-Curses\-Application}!N\-Curses\-Application@{N\-Curses\-Application}}
+\index{N\-Curses\-Application@{N\-Curses\-Application}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{N\-Curses\-Application}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Application\-::\-N\-Curses\-Application (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Application} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_application_aa45919b98b7103ae735bf7ee080b6dfa}
+\hypertarget{class_n_curses_application_af0dc1dae5b9e8a9e0707154960aa507a}{\index{N\-Curses\-Application@{N\-Curses\-Application}!$\sim$\-N\-Curses\-Application@{$\sim$\-N\-Curses\-Application}}
+\index{$\sim$\-N\-Curses\-Application@{$\sim$\-N\-Curses\-Application}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{$\sim$\-N\-Curses\-Application}]{\setlength{\rightskip}{0pt plus 5cm}virtual N\-Curses\-Application\-::$\sim$\-N\-Curses\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_application_af0dc1dae5b9e8a9e0707154960aa507a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_curses_application_a6624b3f67674e2dd7aadb51f3ff62474}{\index{N\-Curses\-Application@{N\-Curses\-Application}!backgrounds@{backgrounds}}
+\index{backgrounds@{backgrounds}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{backgrounds}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::backgrounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a6624b3f67674e2dd7aadb51f3ff62474}
+\hypertarget{class_n_curses_application_a0ffd4436e4e89689cf4df9bd3ba958b6}{\index{N\-Curses\-Application@{N\-Curses\-Application}!dialog\-\_\-backgrounds@{dialog\-\_\-backgrounds}}
+\index{dialog\-\_\-backgrounds@{dialog\-\_\-backgrounds}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{dialog\-\_\-backgrounds}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::dialog\-\_\-backgrounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a0ffd4436e4e89689cf4df9bd3ba958b6}
+\hypertarget{class_n_curses_application_ad1b440ce99b9554a2b33d7f73bff99ae}{\index{N\-Curses\-Application@{N\-Curses\-Application}!foregrounds@{foregrounds}}
+\index{foregrounds@{foregrounds}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{foregrounds}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::foregrounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_ad1b440ce99b9554a2b33d7f73bff99ae}
+\hypertarget{class_n_curses_application_a6896c005e98c5a42eec577aca3b0f412}{\index{N\-Curses\-Application@{N\-Curses\-Application}!get\-Application@{get\-Application}}
+\index{get\-Application@{get\-Application}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{get\-Application}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf N\-Curses\-Application}$\ast$ N\-Curses\-Application\-::get\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_n_curses_application_a6896c005e98c5a42eec577aca3b0f412}
+\hypertarget{class_n_curses_application_a922b5c0200d3ccb9f23275dde554c042}{\index{N\-Curses\-Application@{N\-Curses\-Application}!handle\-Args@{handle\-Args}}
+\index{handle\-Args@{handle\-Args}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{handle\-Args}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Application\-::handle\-Args (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a922b5c0200d3ccb9f23275dde554c042}
+\hypertarget{class_n_curses_application_a481fea32ada884c0d5fa8068d0faaa2d}{\index{N\-Curses\-Application@{N\-Curses\-Application}!inactives@{inactives}}
+\index{inactives@{inactives}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{inactives}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::inactives (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a481fea32ada884c0d5fa8068d0faaa2d}
+\hypertarget{class_n_curses_application_af5a64740722485562ab3063fac8e5589}{\index{N\-Curses\-Application@{N\-Curses\-Application}!init@{init}}
+\index{init@{init}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Application\-::init (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{b\-Colors}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_af5a64740722485562ab3063fac8e5589}
+\hypertarget{class_n_curses_application_a5747bac8974ab593ae8e2f69d9389ea2}{\index{N\-Curses\-Application@{N\-Curses\-Application}!init\-\_\-labels@{init\-\_\-labels}}
+\index{init\-\_\-labels@{init\-\_\-labels}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{init\-\_\-labels}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Application\-::init\-\_\-labels (
+\begin{DoxyParamCaption}
+\item[{{\bf Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set} \&}]{S}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a5747bac8974ab593ae8e2f69d9389ea2}
+\hypertarget{class_n_curses_application_aeec14403a63dd0c311023d196055741b}{\index{N\-Curses\-Application@{N\-Curses\-Application}!labels@{labels}}
+\index{labels@{labels}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{labels}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_aeec14403a63dd0c311023d196055741b}
+\hypertarget{class_n_curses_application_ae94357ea7cdb977e4cd55948d40e1227}{\index{N\-Curses\-Application@{N\-Curses\-Application}!operator()@{operator()}}
+\index{operator()@{operator()}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Application\-::operator() (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_application_ae94357ea7cdb977e4cd55948d40e1227}
+\hypertarget{class_n_curses_application_ac5effc2f818d5daf12cd37965e830bac}{\index{N\-Curses\-Application@{N\-Curses\-Application}!operator=@{operator=}}
+\index{operator=@{operator=}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Application}\& N\-Curses\-Application\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Application} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_application_ac5effc2f818d5daf12cd37965e830bac}
+\hypertarget{class_n_curses_application_a3cc6b3e7b18164fc18e57e337ba70933}{\index{N\-Curses\-Application@{N\-Curses\-Application}!pop@{pop}}
+\index{pop@{pop}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Application\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_application_a3cc6b3e7b18164fc18e57e337ba70933}
+\hypertarget{class_n_curses_application_a36d28b32d72f7694192426097d053b1f}{\index{N\-Curses\-Application@{N\-Curses\-Application}!push@{push}}
+\index{push@{push}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Application\-::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set} \&}]{S}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_application_a36d28b32d72f7694192426097d053b1f}
+\hypertarget{class_n_curses_application_ac0b3a68c94540b85dba1e39003abb115}{\index{N\-Curses\-Application@{N\-Curses\-Application}!run@{run}}
+\index{run@{run}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Application\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_n_curses_application_ac0b3a68c94540b85dba1e39003abb115}
+\hypertarget{class_n_curses_application_ab2910676d361e485646b3723d8403a2e}{\index{N\-Curses\-Application@{N\-Curses\-Application}!screen\-\_\-titles@{screen\-\_\-titles}}
+\index{screen\-\_\-titles@{screen\-\_\-titles}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{screen\-\_\-titles}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::screen\-\_\-titles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_ab2910676d361e485646b3723d8403a2e}
+\hypertarget{class_n_curses_application_af6a34b8fb44856a8d5d322d6f1ddf9e4}{\index{N\-Curses\-Application@{N\-Curses\-Application}!title@{title}}
+\index{title@{title}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Application\-::title (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_af6a34b8fb44856a8d5d322d6f1ddf9e4}
+\hypertarget{class_n_curses_application_a904000c73395b026846bdc0f683fee2a}{\index{N\-Curses\-Application@{N\-Curses\-Application}!titlesize@{titlesize}}
+\index{titlesize@{titlesize}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{titlesize}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Application\-::titlesize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a904000c73395b026846bdc0f683fee2a}
+\hypertarget{class_n_curses_application_a8f28bec9e888adefb0b5253361e10b0f}{\index{N\-Curses\-Application@{N\-Curses\-Application}!top@{top}}
+\index{top@{top}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set}$\ast$ N\-Curses\-Application\-::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_n_curses_application_a8f28bec9e888adefb0b5253361e10b0f}
+\hypertarget{class_n_curses_application_acb442a275dcde797e05bc446a15981b7}{\index{N\-Curses\-Application@{N\-Curses\-Application}!use\-Colors@{use\-Colors}}
+\index{use\-Colors@{use\-Colors}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{use\-Colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Application\-::use\-Colors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_application_acb442a275dcde797e05bc446a15981b7}
+\hypertarget{class_n_curses_application_a722d8c69d964df81bed8643b88f8fab4}{\index{N\-Curses\-Application@{N\-Curses\-Application}!use\-S\-L\-Ks@{use\-S\-L\-Ks}}
+\index{use\-S\-L\-Ks@{use\-S\-L\-Ks}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{use\-S\-L\-Ks}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Soft\-\_\-\-Label\-\_\-\-Key\-\_\-\-Set\-::\-Label\-\_\-\-Layout} N\-Curses\-Application\-::use\-S\-L\-Ks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a722d8c69d964df81bed8643b88f8fab4}
+\hypertarget{class_n_curses_application_a834eed1189928347c09d673fb2f88153}{\index{N\-Curses\-Application@{N\-Curses\-Application}!window\-\_\-backgrounds@{window\-\_\-backgrounds}}
+\index{window\-\_\-backgrounds@{window\-\_\-backgrounds}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{window\-\_\-backgrounds}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf chtype} N\-Curses\-Application\-::window\-\_\-backgrounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_application_a834eed1189928347c09d673fb2f88153}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_curses_application_a2e435866a06c43c110e0a435e641c16d}{\index{N\-Curses\-Application@{N\-Curses\-Application}!b\-\_\-\-Colors@{b\-\_\-\-Colors}}
+\index{b\-\_\-\-Colors@{b\-\_\-\-Colors}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{b\-\_\-\-Colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Application\-::b\-\_\-\-Colors\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_application_a2e435866a06c43c110e0a435e641c16d}
+\hypertarget{class_n_curses_application_acb60c51b333d257562a32e4bef64a0ba}{\index{N\-Curses\-Application@{N\-Curses\-Application}!Root\-\_\-\-Window@{Root\-\_\-\-Window}}
+\index{Root\-\_\-\-Window@{Root\-\_\-\-Window}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{Root\-\_\-\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Application\-::\-Root\-\_\-\-Window\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_application_acb60c51b333d257562a32e4bef64a0ba}
+\hypertarget{class_n_curses_application_a31976ca99082718dcbb567edad6625b0}{\index{N\-Curses\-Application@{N\-Curses\-Application}!title\-Window@{title\-Window}}
+\index{title\-Window@{title\-Window}!NCursesApplication@{N\-Curses\-Application}}
+\subsubsection[{title\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Application\-::title\-Window\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_n_curses_application_a31976ca99082718dcbb567edad6625b0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/ndk/dep/\hyperlink{cursesapp_8h}{cursesapp.\-h}\end{DoxyCompactItemize}

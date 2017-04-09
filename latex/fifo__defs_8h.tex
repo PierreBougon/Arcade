@@ -1,0 +1,135 @@
+\hypertarget{fifo__defs_8h}{\section{lib/ndk/dep/fifo\-\_\-defs.h File Reference}
+\label{fifo__defs_8h}\index{lib/ndk/dep/fifo\-\_\-defs.\-h@{lib/ndk/dep/fifo\-\_\-defs.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head}~sp-\/$>$\-\_\-fifohead
+\item 
+\#define \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}~sp-\/$>$\-\_\-fifotail
+\item 
+\#define \hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek}~sp-\/$>$\-\_\-fifopeek
+\item 
+\#define \hyperlink{fifo__defs_8h_adc5d0c02a76a19831b78623decff596e}{h\-\_\-inc}()
+\item 
+\#define \hyperlink{fifo__defs_8h_aeb208cae66f7dfc377031525aa4cec79}{h\-\_\-dec}()
+\item 
+\#define \hyperlink{fifo__defs_8h_aeed3671aa062c433460b3d0a253e7946}{t\-\_\-inc}()
+\item 
+\#define \hyperlink{fifo__defs_8h_a2e637a1ac2cd304c4897654c2e9ed13a}{t\-\_\-dec}()
+\item 
+\#define \hyperlink{fifo__defs_8h_ace793e75db7319016bde83abe1abfe0c}{p\-\_\-inc}()
+\item 
+\#define \hyperlink{fifo__defs_8h_afd5e57df214bdc55c8e9440653b358a4}{cooked\-\_\-key\-\_\-in\-\_\-fifo}()~((\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} $>$= 0) \&\& (\hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek} != \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head}))
+\item 
+\#define \hyperlink{fifo__defs_8h_ab6137e199083a63f4367d5d6a12a0d84}{raw\-\_\-key\-\_\-in\-\_\-fifo}()~((\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} $>$= 0) \&\& (\hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek} != \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{fifo__defs_8h_afd5e57df214bdc55c8e9440653b358a4}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!cooked\-\_\-key\-\_\-in\-\_\-fifo@{cooked\-\_\-key\-\_\-in\-\_\-fifo}}
+\index{cooked\-\_\-key\-\_\-in\-\_\-fifo@{cooked\-\_\-key\-\_\-in\-\_\-fifo}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{cooked\-\_\-key\-\_\-in\-\_\-fifo}]{\setlength{\rightskip}{0pt plus 5cm}\#define cooked\-\_\-key\-\_\-in\-\_\-fifo(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(({\bf head} $>$= 0) \&\& ({\bf peek} != {\bf head}))}}\label{fifo__defs_8h_afd5e57df214bdc55c8e9440653b358a4}
+\hypertarget{fifo__defs_8h_aeb208cae66f7dfc377031525aa4cec79}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!h\-\_\-dec@{h\-\_\-dec}}
+\index{h\-\_\-dec@{h\-\_\-dec}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{h\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}\#define h\-\_\-dec(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fifo__defs_8h_aeb208cae66f7dfc377031525aa4cec79}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        (\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} <= 0) \(\backslash\)
+        ? \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} = \hyperlink{curses_8priv_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}-1 \(\backslash\)
+        : \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head}--; \hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{\(\backslash\)}
+\hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{        if} (\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} == \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}) \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{\(\backslash\)}
+\hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{        tail} = -1; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fifo__defs_8h_adc5d0c02a76a19831b78623decff596e}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!h\-\_\-inc@{h\-\_\-inc}}
+\index{h\-\_\-inc@{h\-\_\-inc}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{h\-\_\-inc}]{\setlength{\rightskip}{0pt plus 5cm}\#define h\-\_\-inc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fifo__defs_8h_adc5d0c02a76a19831b78623decff596e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        (\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} >= \hyperlink{curses_8priv_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}-1) \(\backslash\)
+        ? \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} = 0 \(\backslash\)
+        : \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head}++; \hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{\(\backslash\)}
+\hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{        if} (\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} == \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}) \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{\(\backslash\)}
+\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{        head} = -1, \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} = 0; \(\backslash\)
+    \}
+\end{DoxyCode}
+\hypertarget{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!head@{head}}
+\index{head@{head}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}\#define head~sp-\/$>$\-\_\-fifohead}}\label{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}
+\hypertarget{fifo__defs_8h_ace793e75db7319016bde83abe1abfe0c}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!p\-\_\-inc@{p\-\_\-inc}}
+\index{p\-\_\-inc@{p\-\_\-inc}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{p\-\_\-inc}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-\_\-inc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fifo__defs_8h_ace793e75db7319016bde83abe1abfe0c}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        (\hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek} >= \hyperlink{curses_8priv_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}-1) \(\backslash\)
+        ? \hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek} = 0 \(\backslash\)
+        : \hyperlink{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{peek}++; \(\backslash\)
+        \}
+\end{DoxyCode}
+\hypertarget{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!peek@{peek}}
+\index{peek@{peek}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}\#define peek~sp-\/$>$\-\_\-fifopeek}}\label{fifo__defs_8h_a45cb0a34255fed79bf93d529d03dacd8}
+\hypertarget{fifo__defs_8h_ab6137e199083a63f4367d5d6a12a0d84}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!raw\-\_\-key\-\_\-in\-\_\-fifo@{raw\-\_\-key\-\_\-in\-\_\-fifo}}
+\index{raw\-\_\-key\-\_\-in\-\_\-fifo@{raw\-\_\-key\-\_\-in\-\_\-fifo}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{raw\-\_\-key\-\_\-in\-\_\-fifo}]{\setlength{\rightskip}{0pt plus 5cm}\#define raw\-\_\-key\-\_\-in\-\_\-fifo(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(({\bf head} $>$= 0) \&\& ({\bf peek} != {\bf tail}))}}\label{fifo__defs_8h_ab6137e199083a63f4367d5d6a12a0d84}
+\hypertarget{fifo__defs_8h_a2e637a1ac2cd304c4897654c2e9ed13a}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!t\-\_\-dec@{t\-\_\-dec}}
+\index{t\-\_\-dec@{t\-\_\-dec}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{t\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-dec(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fifo__defs_8h_a2e637a1ac2cd304c4897654c2e9ed13a}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        (\hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} <= 0) \(\backslash\)
+        ? \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} = \hyperlink{curses_8priv_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}-1 \(\backslash\)
+        : \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}--; \hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{\(\backslash\)}
+\hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{        if} (\hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head} == \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}) \(\backslash\)
+        fifo\_clear(sp); \(\backslash\)
+        \}
+\end{DoxyCode}
+\hypertarget{fifo__defs_8h_aeed3671aa062c433460b3d0a253e7946}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!t\-\_\-inc@{t\-\_\-inc}}
+\index{t\-\_\-inc@{t\-\_\-inc}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{t\-\_\-inc}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-inc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fifo__defs_8h_aeed3671aa062c433460b3d0a253e7946}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        (\hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} >= \hyperlink{curses_8priv_8h_a6092455278a1ac67204e0dbe08f9d13f}{FIFO\_SIZE}-1) \(\backslash\)
+        ? \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} = 0 \(\backslash\)
+        : \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail}++; \hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{\(\backslash\)}
+\hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{        if} (\hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{tail} == \hyperlink{fifo__defs_8h_a6d1197264c8235ebd5bda57ba423914e}{head}) \hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{\(\backslash\)}
+\hyperlink{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{        tail} = -1; \(\backslash\)
+        \}
+\end{DoxyCode}
+\hypertarget{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}{\index{fifo\-\_\-defs.\-h@{fifo\-\_\-defs.\-h}!tail@{tail}}
+\index{tail@{tail}!fifo_defs.h@{fifo\-\_\-defs.\-h}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}\#define tail~sp-\/$>$\-\_\-fifotail}}\label{fifo__defs_8h_aeb205b1461b511358d0bdd0a457b6428}

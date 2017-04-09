@@ -1,0 +1,77 @@
+\hypertarget{struct_matrix}{\section{Matrix$<$ Columns, Rows $>$ Struct Template Reference}
+\label{struct_matrix}\index{Matrix$<$ Columns, Rows $>$@{Matrix$<$ Columns, Rows $>$}}
+}
+
+
+\hyperlink{struct_matrix}{Matrix} type, used to set uniforms in G\-L\-S\-L.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_matrix_ad40da72f526bcd6854d83496d2f62e01}{Matrix} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} float $\ast$pointer)
+\begin{DoxyCompactList}\small\item\em Construct from raw data. \end{DoxyCompactList}\item 
+\hyperlink{struct_matrix_acc8ec3ddfe33a01f9ae7970d8fed9855}{Matrix} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Transform \&transform)
+\begin{DoxyCompactList}\small\item\em Construct implicitly from S\-F\-M\-L transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{struct_matrix_a494cc3a7a34398ec21992ba83018d9f4}{array} \mbox{[}Columns $\ast$Rows\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array holding matrix data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std\-::size\-\_\-t Columns, std\-::size\-\_\-t Rows$>$struct Matrix$<$ Columns, Rows $>$}
+
+\hyperlink{struct_matrix}{Matrix} type, used to set uniforms in G\-L\-S\-L. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_matrix_ad40da72f526bcd6854d83496d2f62e01}{\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$std\-::size\-\_\-t Columns, std\-::size\-\_\-t Rows$>$ {\bf Matrix}$<$ Columns, Rows $>$\-::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf const} float $\ast$}]{pointer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{struct_matrix_ad40da72f526bcd6854d83496d2f62e01}
+
+
+Construct from raw data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & Points to the beginning of an array that has the size of the matrix. The elements are copied to the instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{struct_matrix_acc8ec3ddfe33a01f9ae7970d8fed9855}{\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$std\-::size\-\_\-t Columns, std\-::size\-\_\-t Rows$>$ {\bf Matrix}$<$ Columns, Rows $>$\-::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Transform \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_matrix_acc8ec3ddfe33a01f9ae7970d8fed9855}
+
+
+Construct implicitly from S\-F\-M\-L transform. 
+
+This constructor is only supported for 3x3 and 4x4 matrices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & Object containing a transform. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_matrix_a494cc3a7a34398ec21992ba83018d9f4}{\index{Matrix@{Matrix}!array@{array}}
+\index{array@{array}!Matrix@{Matrix}}
+\subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$std\-::size\-\_\-t Columns, std\-::size\-\_\-t Rows$>$ float {\bf Matrix}$<$ Columns, Rows $>$\-::array\mbox{[}Columns $\ast$Rows\mbox{]}}}\label{struct_matrix_a494cc3a7a34398ec21992ba83018d9f4}
+
+
+Array holding matrix data. 
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/sfml/dep/\-S\-F\-M\-L-\/2.\-4.\-2/include/\-S\-F\-M\-L/\-Graphics/\hyperlink{_glsl_8inl}{Glsl.\-inl}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{_centipede_game_8cpp}{\section{games/centipede/src/\-Centipede\-Game.cpp File Reference}
+\label{_centipede_game_8cpp}\index{games/centipede/src/\-Centipede\-Game.\-cpp@{games/centipede/src/\-Centipede\-Game.\-cpp}}
+}
+{\ttfamily \#include $<$new$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include \char`\"{}Sprite\-Generator.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Sound.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Lifeless\-Entity.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Centipede\-Game.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Protocol.\-hpp\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_centipede_game_8cpp_a343172b364bbd11767e7276da2313cfd}{randomize} (\-\_\-map, 0.\-05)
+\item 
+\hyperlink{_centipede_game_8cpp_a2d42787fe78a207c6f0ea4c0ea5369be}{create\-Centipede} ()
+\item 
+\-\_\-centipedes \hyperlink{_centipede_game_8cpp_a7572eb55e4f21a1c6dba907180403e7d}{front} () -\/$>$ one\-Turn(\-\_\-centipedes, \-\_\-mushrooms, \-\_\-map)
+\item 
+\hyperlink{classarcade_1_1_i_game}{arcade\-::\-I\-Game} $\ast$ \hyperlink{_centipede_game_8cpp_a76fade57340999ca46935174db9c3b5f}{get\-Game} ()
+\item 
+void \hyperlink{_centipede_game_8cpp_af05371cc209e6f74e4b663ac5b0421d0}{print\-Map} (arcade\-::\-Get\-Map $\ast$m)
+\item 
+void \hyperlink{_centipede_game_8cpp_a12574569144fb9d22d996965ee42b627}{Play} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+for(Centipede \\*
+$\ast$centipede\-:\-\_\-centipedes) for(Centipede\-Part \\*
+$\ast$part thi \hyperlink{_centipede_game_8cpp_a2803793b075d1b0ccf5d1b286a93d9f9}{update\-Map} )()
+\item 
+\hyperlink{_centipede_game_8cpp_add8c76342294367d2f9f5c8dd9413bfd}{\-\_\-tick} = 0
+\item 
+\hyperlink{_centipede_game_8cpp_a27519e8005a05afe38482e2c59836359}{shot} = \hyperlink{_snake_8cpp_ae6c865df784842196d411c1466b01686}{false}
+\item 
+\hyperlink{_centipede_game_8cpp_a1e21ed5b71d748120cd80fa98723be88}{alive} = \hyperlink{_snake_8cpp_ae6c865df784842196d411c1466b01686}{false}
+\item 
+\hyperlink{_centipede_game_8cpp_a89db38f7042b4c0f14a1eab5effaeb3d}{\-\_\-game\-State} = Game\-State\-::\-I\-N\-G\-A\-M\-E
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_centipede_game_8cpp_a2d42787fe78a207c6f0ea4c0ea5369be}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!create\-Centipede@{create\-Centipede}}
+\index{create\-Centipede@{create\-Centipede}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{create\-Centipede}]{\setlength{\rightskip}{0pt plus 5cm}create\-Centipede (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_centipede_game_8cpp_a2d42787fe78a207c6f0ea4c0ea5369be}
+\hypertarget{_centipede_game_8cpp_a7572eb55e4f21a1c6dba907180403e7d}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!front@{front}}
+\index{front@{front}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-centipedes front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) -\/$>$  one\-Turn(\-\_\-centipedes, \-\_\-mushrooms, \-\_\-map)}}\label{_centipede_game_8cpp_a7572eb55e4f21a1c6dba907180403e7d}
+\hypertarget{_centipede_game_8cpp_a76fade57340999ca46935174db9c3b5f}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!get\-Game@{get\-Game}}
+\index{get\-Game@{get\-Game}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{get\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-I\-Game}$\ast$ get\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_centipede_game_8cpp_a76fade57340999ca46935174db9c3b5f}
+\hypertarget{_centipede_game_8cpp_a12574569144fb9d22d996965ee42b627}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!Play@{Play}}
+\index{Play@{Play}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_centipede_game_8cpp_a12574569144fb9d22d996965ee42b627}
+\hypertarget{_centipede_game_8cpp_af05371cc209e6f74e4b663ac5b0421d0}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!print\-Map@{print\-Map}}
+\index{print\-Map@{print\-Map}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{print\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Map (
+\begin{DoxyParamCaption}
+\item[{arcade\-::\-Get\-Map $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{_centipede_game_8cpp_af05371cc209e6f74e4b663ac5b0421d0}
+\hypertarget{_centipede_game_8cpp_a343172b364bbd11767e7276da2313cfd}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!randomize@{randomize}}
+\index{randomize@{randomize}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{randomize}]{\setlength{\rightskip}{0pt plus 5cm}randomize (
+\begin{DoxyParamCaption}
+\item[{\-\_\-map}]{, }
+\item[{0.}]{05}
+\end{DoxyParamCaption}
+)}}\label{_centipede_game_8cpp_a343172b364bbd11767e7276da2313cfd}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_centipede_game_8cpp_a89db38f7042b4c0f14a1eab5effaeb3d}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!\-\_\-game\-State@{\-\_\-game\-State}}
+\index{\-\_\-game\-State@{\-\_\-game\-State}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{\-\_\-game\-State}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-game\-State = Game\-State\-::\-I\-N\-G\-A\-M\-E}}\label{_centipede_game_8cpp_a89db38f7042b4c0f14a1eab5effaeb3d}
+\hypertarget{_centipede_game_8cpp_add8c76342294367d2f9f5c8dd9413bfd}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!\-\_\-tick@{\-\_\-tick}}
+\index{\-\_\-tick@{\-\_\-tick}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{\-\_\-tick}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-tick = 0}}\label{_centipede_game_8cpp_add8c76342294367d2f9f5c8dd9413bfd}
+\hypertarget{_centipede_game_8cpp_a1e21ed5b71d748120cd80fa98723be88}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!alive@{alive}}
+\index{alive@{alive}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{alive}]{\setlength{\rightskip}{0pt plus 5cm}alive = {\bf false}}}\label{_centipede_game_8cpp_a1e21ed5b71d748120cd80fa98723be88}
+\hypertarget{_centipede_game_8cpp_a27519e8005a05afe38482e2c59836359}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!shot@{shot}}
+\index{shot@{shot}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{shot}]{\setlength{\rightskip}{0pt plus 5cm}shot = {\bf false}}}\label{_centipede_game_8cpp_a27519e8005a05afe38482e2c59836359}
+\hypertarget{_centipede_game_8cpp_a2803793b075d1b0ccf5d1b286a93d9f9}{\index{Centipede\-Game.\-cpp@{Centipede\-Game.\-cpp}!update\-Map@{update\-Map}}
+\index{update\-Map@{update\-Map}!CentipedeGame.cpp@{Centipede\-Game.\-cpp}}
+\subsubsection[{update\-Map}]{\setlength{\rightskip}{0pt plus 5cm}for (Centipede $\ast$centipede \-: \-\_\-centipedes) for (Centipede\-Part $\ast$part thi update\-Map)()}}\label{_centipede_game_8cpp_a2803793b075d1b0ccf5d1b286a93d9f9}

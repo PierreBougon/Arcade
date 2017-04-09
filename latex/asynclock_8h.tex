@@ -1,0 +1,176 @@
+\hypertarget{asynclock_8h}{\section{lib/lapin/dep/lapin/asynclock.h File Reference}
+\label{asynclock_8h}\index{lib/lapin/dep/lapin/asynclock.\-h@{lib/lapin/dep/lapin/asynclock.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__trap}{s\-\_\-bunny\-\_\-trap}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03}{e\-\_\-bunny\-\_\-call\-\_\-order} \hyperlink{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}{t\-\_\-bunny\-\_\-call\-\_\-order}
+\item 
+typedef void($\ast$ \hyperlink{asynclock_8h_a274714d28267198e48f559ec76a57309}{t\-\_\-bunny\-\_\-trap\-\_\-function} )(double elapsed\-\_\-time, struct \hyperlink{structs__bunny__trap}{s\-\_\-bunny\-\_\-trap} $\ast$trp, void $\ast$data)
+\item 
+typedef struct \hyperlink{structs__bunny__trap}{s\-\_\-bunny\-\_\-trap} \hyperlink{asynclock_8h_abb57fa808183b5d33710f35995201bc7}{t\-\_\-bunny\-\_\-trap}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03}{e\-\_\-bunny\-\_\-call\-\_\-order} \{ \hyperlink{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03afb597493e9c638a10d425bc14d46344f}{B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}, 
+\hyperlink{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03a2e2fb2a75107245d7b60c20ee2848d8e}{B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{asynclock_8h_abb57fa808183b5d33710f35995201bc7}{t\-\_\-bunny\-\_\-trap} $\ast$ \hyperlink{asynclock_8h_abdcd87e14e15aea462b510d1188ecaa2}{bunny\-\_\-new\-\_\-trap} (\hyperlink{asynclock_8h_a274714d28267198e48f559ec76a57309}{t\-\_\-bunny\-\_\-trap\-\_\-function} func, \hyperlink{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}{t\-\_\-bunny\-\_\-call\-\_\-order} order, double start\-\_\-time, double duration, void $\ast$param)
+\item 
+void \hyperlink{asynclock_8h_ada794a75d86630ebb94e1a9a21538abb}{bunny\-\_\-delete\-\_\-trap} (\hyperlink{asynclock_8h_abb57fa808183b5d33710f35995201bc7}{t\-\_\-bunny\-\_\-trap} $\ast$trap)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{asynclock_8h_a8b3c00b972df280baa474b6d42fa8fe2}{bunny\-\_\-asynclock} (double elasped\-\_\-time, \hyperlink{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}{t\-\_\-bunny\-\_\-call\-\_\-order} order)
+\item 
+double \hyperlink{asynclock_8h_a889042c2d64b5400951bc5a6b2f2830c}{bunny\-\_\-reset\-\_\-clock} (void)
+\item 
+double \hyperlink{asynclock_8h_a81c5228367be9ec4ef8cf4ce1354c763}{bunny\-\_\-get\-\_\-current\-\_\-time} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Asynclock module is useful to insert functions that will be called later, for a specific duration or regulary.
+
+/!\textbackslash{} D\-O\-E\-S N\-O\-T W\-O\-R\-K Y\-E\-T /!\textbackslash{}
+
+This module is quite complex! Pay attention to what you read. 
+
+\subsection{Typedef Documentation}
+\hypertarget{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}{\index{asynclock.\-h@{asynclock.\-h}!t\-\_\-bunny\-\_\-call\-\_\-order@{t\-\_\-bunny\-\_\-call\-\_\-order}}
+\index{t\-\_\-bunny\-\_\-call\-\_\-order@{t\-\_\-bunny\-\_\-call\-\_\-order}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-call\-\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-call\-\_\-order}				 {\bf t\-\_\-bunny\-\_\-call\-\_\-order}}}\label{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}
+\hypertarget{asynclock_8h_abb57fa808183b5d33710f35995201bc7}{\index{asynclock.\-h@{asynclock.\-h}!t\-\_\-bunny\-\_\-trap@{t\-\_\-bunny\-\_\-trap}}
+\index{t\-\_\-bunny\-\_\-trap@{t\-\_\-bunny\-\_\-trap}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-trap}				 {\bf t\-\_\-bunny\-\_\-trap}}}\label{asynclock_8h_abb57fa808183b5d33710f35995201bc7}
+\hypertarget{asynclock_8h_a274714d28267198e48f559ec76a57309}{\index{asynclock.\-h@{asynclock.\-h}!t\-\_\-bunny\-\_\-trap\-\_\-function@{t\-\_\-bunny\-\_\-trap\-\_\-function}}
+\index{t\-\_\-bunny\-\_\-trap\-\_\-function@{t\-\_\-bunny\-\_\-trap\-\_\-function}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-trap\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-trap\-\_\-function)(double elapsed\-\_\-time, struct {\bf s\-\_\-bunny\-\_\-trap} $\ast$trp, void $\ast$data)}}\label{asynclock_8h_a274714d28267198e48f559ec76a57309}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03}{\index{asynclock.\-h@{asynclock.\-h}!e\-\_\-bunny\-\_\-call\-\_\-order@{e\-\_\-bunny\-\_\-call\-\_\-order}}
+\index{e\-\_\-bunny\-\_\-call\-\_\-order@{e\-\_\-bunny\-\_\-call\-\_\-order}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-call\-\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-call\-\_\-order}}}\label{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}!asynclock.\-h@{asynclock.\-h}}\index{asynclock.\-h@{asynclock.\-h}!B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}}\item[{\em 
+\hypertarget{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03afb597493e9c638a10d425bc14d46344f}{B\-C\-O\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}\label{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03afb597493e9c638a10d425bc14d46344f}
+}]\index{B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}!asynclock.\-h@{asynclock.\-h}}\index{asynclock.\-h@{asynclock.\-h}!B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N@{B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}}\item[{\em 
+\hypertarget{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03a2e2fb2a75107245d7b60c20ee2848d8e}{B\-C\-O\-\_\-\-A\-F\-T\-E\-R\-\_\-\-L\-O\-O\-P\-\_\-\-M\-A\-I\-N\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N}\label{asynclock_8h_a529d73245f13949ca3a89aacf0a17e03a2e2fb2a75107245d7b60c20ee2848d8e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{asynclock_8h_a8b3c00b972df280baa474b6d42fa8fe2}{\index{asynclock.\-h@{asynclock.\-h}!bunny\-\_\-asynclock@{bunny\-\_\-asynclock}}
+\index{bunny\-\_\-asynclock@{bunny\-\_\-asynclock}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{bunny\-\_\-asynclock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} bunny\-\_\-asynclock (
+\begin{DoxyParamCaption}
+\item[{double}]{elasped\-\_\-time, }
+\item[{{\bf t\-\_\-bunny\-\_\-call\-\_\-order}}]{order}
+\end{DoxyParamCaption}
+)}}\label{asynclock_8h_a8b3c00b972df280baa474b6d42fa8fe2}
+This function manage all traps accordingly to the indicated elapsed\-\_\-time. It updates the current\-\_\-time accordingly to what you give to it and call functions. The t\-\_\-bunny\-\_\-call\-\_\-order is a filter allowing to call only a subset of previously registered functions.
+
+/!\textbackslash{} You are N\-O\-T supposed to use this function if you use bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw. These functions already call bunny\-\_\-asynclock!
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\-\_\-time} & The elasped time since the last call to bunny\-\_\-asynclock, in seconds. If you wish to use bunny\-\_\-asynclock by yourself (without bunny\-\_\-loop$\ast$ functions), you should use clock\-\_\-gettime or gettimeofday to get the time progression. In case you use a timeval$\ast$, for example, the time in the bunny format will be ((double)tv-\/$>$tv\-\_\-sec + (double)tv-\/$>$tv\-\_\-nsec / 1e9)\\
+\hline
+{\em order} & Are we before the function set with bunny\-\_\-loop\-\_\-main\-\_\-function or after? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+How many traps are still registered. Useful to stack tasks to end, make a cartoon or things like that. 
+\end{DoxyReturn}
+\hypertarget{asynclock_8h_ada794a75d86630ebb94e1a9a21538abb}{\index{asynclock.\-h@{asynclock.\-h}!bunny\-\_\-delete\-\_\-trap@{bunny\-\_\-delete\-\_\-trap}}
+\index{bunny\-\_\-delete\-\_\-trap@{bunny\-\_\-delete\-\_\-trap}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-trap (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-trap} $\ast$}]{trap}
+\end{DoxyParamCaption}
+)}}\label{asynclock_8h_ada794a75d86630ebb94e1a9a21538abb}
+Remove the sent trap from the asynclock. You can call it safely from anywhere, even from a t\-\_\-bunny\-\_\-trap function\-: the asynclock will remove it in the end of its cycle. 
+\begin{DoxyParams}{Parameters}
+{\em trap} & The trap to remove, it musts have been created by bunny\-\_\-new\-\_\-trap. \\
+\hline
+\end{DoxyParams}
+\hypertarget{asynclock_8h_a81c5228367be9ec4ef8cf4ce1354c763}{\index{asynclock.\-h@{asynclock.\-h}!bunny\-\_\-get\-\_\-current\-\_\-time@{bunny\-\_\-get\-\_\-current\-\_\-time}}
+\index{bunny\-\_\-get\-\_\-current\-\_\-time@{bunny\-\_\-get\-\_\-current\-\_\-time}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-current\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}double bunny\-\_\-get\-\_\-current\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{asynclock_8h_a81c5228367be9ec4ef8cf4ce1354c763}
+Return the current bunny time. This is not a real time clock\-: it is updated by bunny\-\_\-asynclock, so it is your-\/program-\/time. \begin{DoxyReturn}{Returns}
+The current time, in seconds. 
+\end{DoxyReturn}
+\hypertarget{asynclock_8h_abdcd87e14e15aea462b510d1188ecaa2}{\index{asynclock.\-h@{asynclock.\-h}!bunny\-\_\-new\-\_\-trap@{bunny\-\_\-new\-\_\-trap}}
+\index{bunny\-\_\-new\-\_\-trap@{bunny\-\_\-new\-\_\-trap}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-trap}$\ast$ bunny\-\_\-new\-\_\-trap (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-trap\-\_\-function}}]{func, }
+\item[{{\bf t\-\_\-bunny\-\_\-call\-\_\-order}}]{order, }
+\item[{double}]{start\-\_\-time, }
+\item[{double}]{duration, }
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)}}\label{asynclock_8h_abdcd87e14e15aea462b510d1188ecaa2}
+Define a new trap\-: a function that will be called under certain circumstances.
+
+
+\begin{DoxyItemize}
+\item -\/ If start\-\_\-time is positive \-: -\/ -\/
+\end{DoxyItemize}
+
+If duration is superior to 0\-:
+\begin{DoxyItemize}
+\item Each loop if the current time is between start\-\_\-time and start\-\_\-time + duration
+\end{DoxyItemize}
+
+If duration is 0 or really close to 0 (gl\-\_\-bunny\-\_\-play\-\_\-it\-\_\-once)\-:
+\begin{DoxyItemize}
+\item The function will be called only one time if the current time is after start\-\_\-time and the function was never called
+\end{DoxyItemize}
+
+If duration is negative\-:
+\begin{DoxyItemize}
+\item Every -\/duration, the function is called again
+\item -\/ If start\-\_\-time is negative or zero \-: -\/ -\/
+\end{DoxyItemize}
+
+The trap will wait for every tasks stacked before it to be played. Its behavior will be exacly the same except for the previously specified point.
+
+The function is called with the elapsed time, the returned t\-\_\-bunny\-\_\-trap and the sent param as parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & The function to call under specified conditions \\
+\hline
+{\em order} & The function will be called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the structure that incarnates the trap. N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{asynclock_8h_a889042c2d64b5400951bc5a6b2f2830c}{\index{asynclock.\-h@{asynclock.\-h}!bunny\-\_\-reset\-\_\-clock@{bunny\-\_\-reset\-\_\-clock}}
+\index{bunny\-\_\-reset\-\_\-clock@{bunny\-\_\-reset\-\_\-clock}!asynclock.h@{asynclock.\-h}}
+\subsubsection[{bunny\-\_\-reset\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}double bunny\-\_\-reset\-\_\-clock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{asynclock_8h_a889042c2d64b5400951bc5a6b2f2830c}
+Set the bunny clock to the current time \begin{DoxyReturn}{Returns}
+The current time in the bunny clock format 
+\end{DoxyReturn}

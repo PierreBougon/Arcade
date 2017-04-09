@@ -1,0 +1,381 @@
+\hypertarget{classhbs_1_1_p_v_m110_n}{\section{hbs\-:\-:P\-V\-M110\-N Class Reference}
+\label{classhbs_1_1_p_v_m110_n}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}
+}
+
+
+{\ttfamily \#include $<$P\-V\-M110\-N.\-hpp$>$}
+
+Inheritance diagram for hbs\-:\-:P\-V\-M110\-N\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhbs_1_1_p_v_m110_n}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00}{Card\-Id} \{ \hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00a4b22ef70d42bf7fe27994b8be52a982b}{I\-D\-\_\-0}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ad2d388fbc7a2a5ea5a8bf302bd771bbe}{I\-D\-\_\-1}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00abbe3a097fa62b02585284693ae2a2139}{I\-D\-\_\-2}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ab78272ca498ae678e8794c73647358af}{I\-D\-\_\-3}
+ \}
+\begin{DoxyCompactList}\small\item\em I\-D of the Velleman card. (Jumper on the board) \end{DoxyCompactList}\item 
+enum \hyperlink{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97}{Analog\-Input} \{ \hyperlink{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97af452471c02a89a64890f6f6fb17ad63e}{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97a5e602df3494469d1fd9eaeaf73f6fc66}{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1}
+ \}
+\begin{DoxyCompactList}\small\item\em I\-D of analog inputs. \end{DoxyCompactList}\item 
+enum \hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8fa}{Digital\-Input} \{ \\*
+\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa16764b74046c85195bd696d6df80e05a}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa399545919832cf58e53af5d7297126ef}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa01a81e24a7ad5519e7f78848da27e874}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa11becf8f0eda6486f0c867e6353b1e84}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3}, 
+\\*
+\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa68079f1bf272f7dd5649610776354c36}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4}
+ \}
+\begin{DoxyCompactList}\small\item\em I\-D of digital inputs. \end{DoxyCompactList}\item 
+enum \hyperlink{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45b}{Analog\-Output} \{ \hyperlink{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45ba8e1eb378417fc2859a5ac98dd10cb057}{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45baf078f4669c342156776f6c068e198e37}{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}
+ \}
+\begin{DoxyCompactList}\small\item\em I\-D of the analog outputs. \end{DoxyCompactList}\item 
+enum \hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228}{Digital\-Output} \{ \\*
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a0cfd060fe7097539f31b86eea19f2c97}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228aaa798ee0f818759782c03a0fb3217d15}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a339c63f156a5f1e650744d9226764983}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a5e58a17bbfb32e92a7e0f39c36004d69}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3}, 
+\\*
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a9acb22636f03d6c5a0e9e2ac36d49a43}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a720f6edd6433d368a857117d9141ffc9}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a96d3d567aed25d95c8cfb0a62f4ec941}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6}, 
+\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a692d8b3813505f4e3615da9baf4cfde5}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7}
+ \}
+\begin{DoxyCompactList}\small\item\em I\-D of the digital outputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_p_v_m110_n_a0ba7bc921ff0e908bd5751fda9ab1d14}{Open} (\hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00}{Card\-Id} id=\hyperlink{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00a4b22ef70d42bf7fe27994b8be52a982b}{I\-D\-\_\-0})
+\begin{DoxyCompactList}\small\item\em Open the velleman board that match the given I\-D. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_p_v_m110_n_a2a4a0ba137ccbf6c39ad58d929e11969}{Close} (void)
+\begin{DoxyCompactList}\small\item\em Close the velleman board that was opened. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_p_v_m110_n_a615d9b1a069e5e8bb9fda30f4d4e99f5}{Read\-Inputs} (void)
+\begin{DoxyCompactList}\small\item\em Retrieve information from the board to the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} class. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \hyperlink{classhbs_1_1_p_v_m110_n_aa3255c503bf7d43215e51b1c3982237d}{Get\-Analog} (\hyperlink{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97}{Analog\-Input} id) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the value of an analog input retrieved inside the class. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_p_v_m110_n_a3708da13b16173d45aff614f39d74bf7}{Get\-Digital} (\hyperlink{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8fa}{Digital\-Input} id) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the value of a digital input retrieved inside the class. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \hyperlink{classhbs_1_1_p_v_m110_n_a254057fa890b3b9471dd242d8a669c89}{Get\-Digital} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get values of every digital input retrieved inside the class. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_p_v_m110_n_a861a92dfc5e075b99645d4b79cc87186}{Write\-Outputs} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Send to the board values set in the class. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_p_v_m110_n_ab8097fb019bf042e7ed36b8e52bd2f6f}{Set\-Analog} (\hyperlink{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45b}{Analog\-Output} id, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\begin{DoxyCompactList}\small\item\em Set an analog output. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_p_v_m110_n_a40b24ca5bfb81ce34edc062644ad398a}{Set\-Digital} (\hyperlink{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228}{Digital\-Output} id, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\begin{DoxyCompactList}\small\item\em Set a digital output. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_p_v_m110_n_a67785a78469777efce7dae0a854addd6}{Set\-Digital} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\begin{DoxyCompactList}\small\item\em Set every digital output at once. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_p_v_m110_n_a15dec48a4afcb5b541072b971a0926dc}{P\-V\-M110\-N} (void)
+\begin{DoxyCompactList}\small\item\em Build the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} communicator. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_p_v_m110_n_aff0c5265ddc42c42d1d1a97be46de4c8}{$\sim$\-P\-V\-M110\-N} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} communicator. Close its usb device if it was still opened. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Analog\-Input@{Analog\-Input}}
+\index{Analog\-Input@{Analog\-Input}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Analog\-Input}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-P\-V\-M110\-N\-::\-Analog\-Input}}}\label{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97}
+
+
+I\-D of analog inputs. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0@{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0@{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97af452471c02a89a64890f6f6fb17ad63e}{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-0}\label{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97af452471c02a89a64890f6f6fb17ad63e}
+}]\index{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1@{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1@{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97a5e602df3494469d1fd9eaeaf73f6fc66}{A\-N\-A\-L\-\_\-\-I\-N\-P\-U\-T\-\_\-1}\label{classhbs_1_1_p_v_m110_n_ace5ddf4b54079516206c07f915c88d97a5e602df3494469d1fd9eaeaf73f6fc66}
+}]\end{description}
+\end{Desc}
+\hypertarget{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45b}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Analog\-Output@{Analog\-Output}}
+\index{Analog\-Output@{Analog\-Output}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Analog\-Output}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-P\-V\-M110\-N\-::\-Analog\-Output}}}\label{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45b}
+
+
+I\-D of the analog outputs. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0@{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0@{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45ba8e1eb378417fc2859a5ac98dd10cb057}{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}\label{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45ba8e1eb378417fc2859a5ac98dd10cb057}
+}]\index{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1@{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1@{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45baf078f4669c342156776f6c068e198e37}{A\-N\-A\-L\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}\label{classhbs_1_1_p_v_m110_n_acad2215726715b9d47760b291f49e45baf078f4669c342156776f6c068e198e37}
+}]\end{description}
+\end{Desc}
+\hypertarget{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Card\-Id@{Card\-Id}}
+\index{Card\-Id@{Card\-Id}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Card\-Id}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-P\-V\-M110\-N\-::\-Card\-Id}}}\label{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00}
+
+
+I\-D of the Velleman card. (Jumper on the board) 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\-D\-\_\-0@{I\-D\-\_\-0}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!I\-D\-\_\-0@{I\-D\-\_\-0}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00a4b22ef70d42bf7fe27994b8be52a982b}{I\-D\-\_\-0}\label{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00a4b22ef70d42bf7fe27994b8be52a982b}
+}]\index{I\-D\-\_\-1@{I\-D\-\_\-1}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!I\-D\-\_\-1@{I\-D\-\_\-1}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ad2d388fbc7a2a5ea5a8bf302bd771bbe}{I\-D\-\_\-1}\label{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ad2d388fbc7a2a5ea5a8bf302bd771bbe}
+}]\index{I\-D\-\_\-2@{I\-D\-\_\-2}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!I\-D\-\_\-2@{I\-D\-\_\-2}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00abbe3a097fa62b02585284693ae2a2139}{I\-D\-\_\-2}\label{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00abbe3a097fa62b02585284693ae2a2139}
+}]\index{I\-D\-\_\-3@{I\-D\-\_\-3}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!I\-D\-\_\-3@{I\-D\-\_\-3}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ab78272ca498ae678e8794c73647358af}{I\-D\-\_\-3}\label{classhbs_1_1_p_v_m110_n_a5716cfee1fa873caf6bf841229c9cb00ab78272ca498ae678e8794c73647358af}
+}]\end{description}
+\end{Desc}
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8fa}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Digital\-Input@{Digital\-Input}}
+\index{Digital\-Input@{Digital\-Input}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Digital\-Input}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-P\-V\-M110\-N\-::\-Digital\-Input}}}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8fa}
+
+
+I\-D of digital inputs. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa16764b74046c85195bd696d6df80e05a}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-0}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa16764b74046c85195bd696d6df80e05a}
+}]\index{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa399545919832cf58e53af5d7297126ef}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-1}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa399545919832cf58e53af5d7297126ef}
+}]\index{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa01a81e24a7ad5519e7f78848da27e874}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-2}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa01a81e24a7ad5519e7f78848da27e874}
+}]\index{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa11becf8f0eda6486f0c867e6353b1e84}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-3}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa11becf8f0eda6486f0c867e6353b1e84}
+}]\index{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4@{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa68079f1bf272f7dd5649610776354c36}{D\-I\-G\-I\-\_\-\-I\-N\-P\-U\-T\-\_\-4}\label{classhbs_1_1_p_v_m110_n_aa2574dc931283e208ba911ecd97ac8faa68079f1bf272f7dd5649610776354c36}
+}]\end{description}
+\end{Desc}
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Digital\-Output@{Digital\-Output}}
+\index{Digital\-Output@{Digital\-Output}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-P\-V\-M110\-N\-::\-Digital\-Output}}}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228}
+
+
+I\-D of the digital outputs. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a0cfd060fe7097539f31b86eea19f2c97}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-0}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a0cfd060fe7097539f31b86eea19f2c97}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228aaa798ee0f818759782c03a0fb3217d15}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-1}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228aaa798ee0f818759782c03a0fb3217d15}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a339c63f156a5f1e650744d9226764983}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-2}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a339c63f156a5f1e650744d9226764983}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a5e58a17bbfb32e92a7e0f39c36004d69}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-3}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a5e58a17bbfb32e92a7e0f39c36004d69}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a9acb22636f03d6c5a0e9e2ac36d49a43}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-4}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a9acb22636f03d6c5a0e9e2ac36d49a43}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a720f6edd6433d368a857117d9141ffc9}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-5}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a720f6edd6433d368a857117d9141ffc9}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a96d3d567aed25d95c8cfb0a62f4ec941}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-6}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a96d3d567aed25d95c8cfb0a62f4ec941}
+}]\index{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7}!hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}}\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7@{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7}}\item[{\em 
+\hypertarget{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a692d8b3813505f4e3615da9baf4cfde5}{D\-I\-G\-I\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-7}\label{classhbs_1_1_p_v_m110_n_a5465effcd4a5984d51ff2cabaeb7d228a692d8b3813505f4e3615da9baf4cfde5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhbs_1_1_p_v_m110_n_a15dec48a4afcb5b541072b971a0926dc}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!P\-V\-M110\-N@{P\-V\-M110\-N}}
+\index{P\-V\-M110\-N@{P\-V\-M110\-N}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{P\-V\-M110\-N}]{\setlength{\rightskip}{0pt plus 5cm}hbs\-::\-P\-V\-M110\-N\-::\-P\-V\-M110\-N (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a15dec48a4afcb5b541072b971a0926dc}
+
+
+Build the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} communicator. 
+
+\hypertarget{classhbs_1_1_p_v_m110_n_aff0c5265ddc42c42d1d1a97be46de4c8}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!$\sim$\-P\-V\-M110\-N@{$\sim$\-P\-V\-M110\-N}}
+\index{$\sim$\-P\-V\-M110\-N@{$\sim$\-P\-V\-M110\-N}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{$\sim$\-P\-V\-M110\-N}]{\setlength{\rightskip}{0pt plus 5cm}hbs\-::\-P\-V\-M110\-N\-::$\sim$\-P\-V\-M110\-N (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_aff0c5265ddc42c42d1d1a97be46de4c8}
+
+
+Destroy the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} communicator. Close its usb device if it was still opened. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classhbs_1_1_p_v_m110_n_a2a4a0ba137ccbf6c39ad58d929e11969}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Close@{Close}}
+\index{Close@{Close}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-P\-V\-M110\-N\-::\-Close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a2a4a0ba137ccbf6c39ad58d929e11969}
+
+
+Close the velleman board that was opened. 
+
+\hypertarget{classhbs_1_1_p_v_m110_n_aa3255c503bf7d43215e51b1c3982237d}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Get\-Analog@{Get\-Analog}}
+\index{Get\-Analog@{Get\-Analog}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Get\-Analog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} char hbs\-::\-P\-V\-M110\-N\-::\-Get\-Analog (
+\begin{DoxyParamCaption}
+\item[{{\bf Analog\-Input}}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_p_v_m110_n_aa3255c503bf7d43215e51b1c3982237d}
+
+
+Get the value of an analog input retrieved inside the class. 
+
+Get the value of an analog input retrieved inside the class. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the input you wish to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The analog value, from 0 to 255. (0\-V-\/5\-V) 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_p_v_m110_n_a3708da13b16173d45aff614f39d74bf7}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Get\-Digital@{Get\-Digital}}
+\index{Get\-Digital@{Get\-Digital}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Get\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-P\-V\-M110\-N\-::\-Get\-Digital (
+\begin{DoxyParamCaption}
+\item[{{\bf Digital\-Input}}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_p_v_m110_n_a3708da13b16173d45aff614f39d74bf7}
+
+
+Get the value of a digital input retrieved inside the class. 
+
+Get the value of a digital input retrieved inside the class. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the input you wish to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The digital value. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_p_v_m110_n_a254057fa890b3b9471dd242d8a669c89}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Get\-Digital@{Get\-Digital}}
+\index{Get\-Digital@{Get\-Digital}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Get\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} char hbs\-::\-P\-V\-M110\-N\-::\-Get\-Digital (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_p_v_m110_n_a254057fa890b3b9471dd242d8a669c89}
+
+
+Get values of every digital input retrieved inside the class. 
+
+Get values of every digital input retrieved inside the class. \begin{DoxyReturn}{Returns}
+All digital values, one per bit. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_p_v_m110_n_a0ba7bc921ff0e908bd5751fda9ab1d14}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Open@{Open}}
+\index{Open@{Open}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-P\-V\-M110\-N\-::\-Open (
+\begin{DoxyParamCaption}
+\item[{{\bf Card\-Id}}]{id = {\ttfamily {\bf I\-D\-\_\-0}}}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a0ba7bc921ff0e908bd5751fda9ab1d14}
+
+
+Open the velleman board that match the given I\-D. 
+
+Open the velleman board that match the given I\-D. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The I\-D of the board you wish to connect with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_p_v_m110_n_a615d9b1a069e5e8bb9fda30f4d4e99f5}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Read\-Inputs@{Read\-Inputs}}
+\index{Read\-Inputs@{Read\-Inputs}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Read\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-P\-V\-M110\-N\-::\-Read\-Inputs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a615d9b1a069e5e8bb9fda30f4d4e99f5}
+
+
+Retrieve information from the board to the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} class. 
+
+Retrieve informations from the board to the \hyperlink{classhbs_1_1_p_v_m110_n}{P\-V\-M110\-N} class. You have to call Read\-Inputs before any Get$\ast$ function. Every call to Read\-Inputs updates the recorded status. \begin{DoxyReturn}{Returns}
+True if everything went well. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_p_v_m110_n_ab8097fb019bf042e7ed36b8e52bd2f6f}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Set\-Analog@{Set\-Analog}}
+\index{Set\-Analog@{Set\-Analog}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Set\-Analog}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-P\-V\-M110\-N\-::\-Set\-Analog (
+\begin{DoxyParamCaption}
+\item[{{\bf Analog\-Output}}]{id, }
+\item[{{\bf unsigned} char}]{value}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_ab8097fb019bf042e7ed36b8e52bd2f6f}
+
+
+Set an analog output. 
+
+Set an analog output. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the analog output to set. \\
+\hline
+{\em value} & The value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classhbs_1_1_p_v_m110_n_a40b24ca5bfb81ce34edc062644ad398a}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Set\-Digital@{Set\-Digital}}
+\index{Set\-Digital@{Set\-Digital}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Set\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-P\-V\-M110\-N\-::\-Set\-Digital (
+\begin{DoxyParamCaption}
+\item[{{\bf Digital\-Output}}]{id, }
+\item[{{\bf bool}}]{value}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a40b24ca5bfb81ce34edc062644ad398a}
+
+
+Set a digital output. 
+
+Set a digital output. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the digital output to set. \\
+\hline
+{\em value} & The value to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classhbs_1_1_p_v_m110_n_a67785a78469777efce7dae0a854addd6}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Set\-Digital@{Set\-Digital}}
+\index{Set\-Digital@{Set\-Digital}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Set\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-P\-V\-M110\-N\-::\-Set\-Digital (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} char}]{value}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_p_v_m110_n_a67785a78469777efce7dae0a854addd6}
+
+
+Set every digital output at once. 
+
+Set every digital output at once. 
+\begin{DoxyParams}{Parameters}
+{\em value} & All digital values, one per bit. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classhbs_1_1_p_v_m110_n_a861a92dfc5e075b99645d4b79cc87186}{\index{hbs\-::\-P\-V\-M110\-N@{hbs\-::\-P\-V\-M110\-N}!Write\-Outputs@{Write\-Outputs}}
+\index{Write\-Outputs@{Write\-Outputs}!hbs::PVM110N@{hbs\-::\-P\-V\-M110\-N}}
+\subsubsection[{Write\-Outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-P\-V\-M110\-N\-::\-Write\-Outputs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_p_v_m110_n_a861a92dfc5e075b99645d4b79cc87186}
+
+
+Send to the board values set in the class. 
+
+Send to the board values set in the class. You have to set values before thanks to Set$\ast$ functions. \begin{DoxyReturn}{Returns}
+True if everything went well. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_p_v_m110_n_8hpp}{P\-V\-M110\-N.\-hpp}\end{DoxyCompactItemize}

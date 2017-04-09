@@ -1,0 +1,248 @@
+\hypertarget{classarcade_1_1_component}{\section{arcade\-:\-:Component Class Reference}
+\label{classarcade_1_1_component}\index{arcade\-::\-Component@{arcade\-::\-Component}}
+}
+
+
+{\ttfamily \#include $<$Gui.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Component\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_component_aece4316c5e98dcd0af1f6fc258923d0e}{Component} (double x, double y, double width, double height, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} sprite\-Id, \hyperlink{unionarcade_1_1_color}{Color} bg, std\-::string \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&txt, \hyperlink{unionarcade_1_1_color}{Color} txt\-Color)
+\item 
+\hyperlink{classarcade_1_1_component_a6270430a97743ff123e21201cc937032}{Component} (double x, double y, double width, double height, \hyperlink{unionarcade_1_1_color}{Color} bg, std\-::string \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&txt, \hyperlink{unionarcade_1_1_color}{Color} txt\-Color)
+\item 
+\hyperlink{classarcade_1_1_component_af1a6366611e343f24d253dbd59ef3a47}{Component} (\hyperlink{classarcade_1_1_component}{Component} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&cmp)
+\item 
+double \hyperlink{classarcade_1_1_component_aa9f5d26238ab9a3aa66581435ab342bd}{get\-X} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the X position (between 0.\-0 and 1.\-0) \end{DoxyCompactList}\item 
+double \hyperlink{classarcade_1_1_component_afc55425603d69eb6ffe7c68faf1217ea}{get\-Y} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the Y position (between 0.\-0 and 1.\-0) \end{DoxyCompactList}\item 
+double \hyperlink{classarcade_1_1_component_a5a994fc75526b28c2143f9d25c628c66}{get\-Width} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+double \hyperlink{classarcade_1_1_component_ad77e751bdeb37fcca268d22febb84a9f}{get\-Height} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the component's height (between 0.\-0 and 1.\-0) \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_component_a40eb04e4e977e1771c789742025f762c}{has\-Sprite} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Return true if the component has a sprite. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_component_a7cc1f16412a28dc4e54462e7aca481b0}{get\-Background\-Id} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the id of the background sprite. \end{DoxyCompactList}\item 
+\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{classarcade_1_1_component_afc1b1ddd8abec154f63f88ff2d1fb5f6}{get\-Background\-Color} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the color of the background. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \& \hyperlink{classarcade_1_1_component_a1fe2450277a4f37a7625b0b3deb7a75d}{get\-Text} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the text value. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_component_acbe88607acaa6930ba468ea808a983ca}{set\-Text} (std\-::string text)
+\item 
+void \hyperlink{classarcade_1_1_component_a9aea3bdc9243734b0adf62bd4374fd6e}{set\-Sprite} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} id)
+\item 
+void \hyperlink{classarcade_1_1_component_add191bdc12082bbc7a4d575e6400bf73}{set\-Clicked} ()
+\begin{DoxyCompactList}\small\item\em Way of the lib to tell a component it was clicked. \end{DoxyCompactList}\item 
+\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{classarcade_1_1_component_ad8fc0212256aee804469f01035cd47f9}{get\-Text\-Color} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_component_aece4316c5e98dcd0af1f6fc258923d0e}{\index{arcade\-::\-Component@{arcade\-::\-Component}!Component@{Component}}
+\index{Component@{Component}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{Component}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Component\-::\-Component (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{width, }
+\item[{double}]{height, }
+\item[{{\bf size\-\_\-t}}]{sprite\-Id, }
+\item[{{\bf arcade\-::\-Color}}]{bg, }
+\item[{std\-::string {\bf const} \&}]{txt, }
+\item[{{\bf arcade\-::\-Color}}]{txt\-Color}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_component_aece4316c5e98dcd0af1f6fc258923d0e}
+\hypertarget{classarcade_1_1_component_a6270430a97743ff123e21201cc937032}{\index{arcade\-::\-Component@{arcade\-::\-Component}!Component@{Component}}
+\index{Component@{Component}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{Component}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Component\-::\-Component (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{width, }
+\item[{double}]{height, }
+\item[{{\bf arcade\-::\-Color}}]{bg, }
+\item[{std\-::string {\bf const} \&}]{txt, }
+\item[{{\bf arcade\-::\-Color}}]{txt\-Color}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_component_a6270430a97743ff123e21201cc937032}
+\hypertarget{classarcade_1_1_component_af1a6366611e343f24d253dbd59ef3a47}{\index{arcade\-::\-Component@{arcade\-::\-Component}!Component@{Component}}
+\index{Component@{Component}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{Component}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Component\-::\-Component (
+\begin{DoxyParamCaption}
+\item[{{\bf Component} {\bf const} \&}]{cmp}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_component_af1a6366611e343f24d253dbd59ef3a47}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_component_afc1b1ddd8abec154f63f88ff2d1fb5f6}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Background\-Color@{get\-Background\-Color}}
+\index{get\-Background\-Color@{get\-Background\-Color}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Background\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Color} arcade\-::\-Component\-::get\-Background\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_afc1b1ddd8abec154f63f88ff2d1fb5f6}
+
+
+Get the color of the background. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a99301c61be2a21ef8a274727ba781a00}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_a7cc1f16412a28dc4e54462e7aca481b0}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Background\-Id@{get\-Background\-Id}}
+\index{get\-Background\-Id@{get\-Background\-Id}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Background\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Component\-::get\-Background\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_a7cc1f16412a28dc4e54462e7aca481b0}
+
+
+Get the id of the background sprite. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a7d4c00172b0ba0e3dc63832a9234efbb}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_ad77e751bdeb37fcca268d22febb84a9f}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Component\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_ad77e751bdeb37fcca268d22febb84a9f}
+
+
+Get the component's height (between 0.\-0 and 1.\-0) 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a77a3bed39227f11d06bb71e06ee2ee30}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_a1fe2450277a4f37a7625b0b3deb7a75d}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Text@{get\-Text}}
+\index{get\-Text@{get\-Text}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Text}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} std\-::string \& arcade\-::\-Component\-::get\-Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_a1fe2450277a4f37a7625b0b3deb7a75d}
+
+
+Get the text value. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a85e1e58ad9109683522f25d62a49257a}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_ad8fc0212256aee804469f01035cd47f9}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Text\-Color@{get\-Text\-Color}}
+\index{get\-Text\-Color@{get\-Text\-Color}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Text\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Color} arcade\-::\-Component\-::get\-Text\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_ad8fc0212256aee804469f01035cd47f9}
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a9d4c57ad7c49e39ef0269f10fdc14807}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_a5a994fc75526b28c2143f9d25c628c66}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Component\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_a5a994fc75526b28c2143f9d25c628c66}
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a558e5d49736a3828753a4062d5c9bfb1}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_aa9f5d26238ab9a3aa66581435ab342bd}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Component\-::get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_aa9f5d26238ab9a3aa66581435ab342bd}
+
+
+Get the X position (between 0.\-0 and 1.\-0) 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_ab9d24992e8519756d56c0282001eccce}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_afc55425603d69eb6ffe7c68faf1217ea}{\index{arcade\-::\-Component@{arcade\-::\-Component}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Component\-::get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_afc55425603d69eb6ffe7c68faf1217ea}
+
+
+Get the Y position (between 0.\-0 and 1.\-0) 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_ad19f185c30ab99ed831d2c68fabf920f}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_a40eb04e4e977e1771c789742025f762c}{\index{arcade\-::\-Component@{arcade\-::\-Component}!has\-Sprite@{has\-Sprite}}
+\index{has\-Sprite@{has\-Sprite}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{has\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Component\-::has\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_a40eb04e4e977e1771c789742025f762c}
+
+
+Return true if the component has a sprite. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_a03ea8019a23fd44731a06548ef7e6ff3}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_add191bdc12082bbc7a4d575e6400bf73}{\index{arcade\-::\-Component@{arcade\-::\-Component}!set\-Clicked@{set\-Clicked}}
+\index{set\-Clicked@{set\-Clicked}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{set\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Component\-::set\-Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_component_add191bdc12082bbc7a4d575e6400bf73}
+
+
+Way of the lib to tell a component it was clicked. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_component_ae0cd9b58ad0b127c671a5d8f92d9c25f}{arcade\-::\-I\-Component}.
+
+\hypertarget{classarcade_1_1_component_a9aea3bdc9243734b0adf62bd4374fd6e}{\index{arcade\-::\-Component@{arcade\-::\-Component}!set\-Sprite@{set\-Sprite}}
+\index{set\-Sprite@{set\-Sprite}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{set\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Component\-::set\-Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{id}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_component_a9aea3bdc9243734b0adf62bd4374fd6e}
+\hypertarget{classarcade_1_1_component_acbe88607acaa6930ba468ea808a983ca}{\index{arcade\-::\-Component@{arcade\-::\-Component}!set\-Text@{set\-Text}}
+\index{set\-Text@{set\-Text}!arcade::Component@{arcade\-::\-Component}}
+\subsubsection[{set\-Text}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Component\-::set\-Text (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{text}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_component_acbe88607acaa6930ba468ea808a983ca}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{_gui_8hpp}{Gui.\-hpp}\item 
+games/common/src/\hyperlink{_gui_8cpp}{Gui.\-cpp}\end{DoxyCompactItemize}

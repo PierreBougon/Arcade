@@ -1,0 +1,305 @@
+\hypertarget{classhbs_1_1_workers}{\section{hbs\-:\-:Workers Class Reference}
+\label{classhbs_1_1_workers}\index{hbs\-::\-Workers@{hbs\-::\-Workers}}
+}
+
+
+\hyperlink{classhbs_1_1_workers}{Workers} is a thread pool made to work with the \hyperlink{classhbs_1_1_work}{Work} class.  
+
+
+
+
+{\ttfamily \#include $<$Workers.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634f}{Load} \{ \hyperlink{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa7e0744a5720973af1c98c5225b8df8e5}{O\-V\-E\-R\-L\-O\-A\-D}, 
+\hyperlink{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa6543896a2818caa3c00d40084f58c2b4}{N\-O\-M\-I\-N\-A\-L}, 
+\hyperlink{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa2fbfb62e885cc85d531ed20e48ae354c}{U\-N\-D\-E\-R\-L\-O\-A\-D}
+ \}
+\item 
+typedef std\-::pair$<$ \hyperlink{classhbs_1_1_work}{Work} $\ast$, \hyperlink{namespacehbs_aab8d06205ac2b0b14186327fd6c1c0d6}{Id\-Task} $>$ \hyperlink{classhbs_1_1_workers_a451e0985676c46558a1114b12dd96916}{Task}
+\item 
+typedef std\-::pair$<$ \hyperlink{classhbs_1_1_work}{Work} \\*
+$\ast$, \hyperlink{namespacehbs_a6d744a52db9bca0a9752a009118641f4}{Id\-Message} $>$ \hyperlink{classhbs_1_1_workers_addd8065047a1fa376581419ffcda0685}{Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_workers_abcecaa0389dfaef7bba2d0ed49d3387d}{Add\-Thread} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} thread)
+\begin{DoxyCompactList}\small\item\em Add a specific amount of threads inside the thread pool. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_workers_a187412eef0f473cc77352c46212139d0}{Remove\-Thread} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} thread=0)
+\begin{DoxyCompactList}\small\item\em Remove a specific amount of threads inside the thread pool. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classhbs_1_1_workers_aaabd1d8fa09fd7757dad48d7b9a613cf}{Get\-How\-Many\-Workers} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Return how many threads are running right know, ignoring threads awaiting for removal. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classhbs_1_1_workers_aa13f3e6ed55ebf0a23ead4903ca99d43}{Get\-How\-Many\-Threads} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Return how many threads are running right know. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_workers_ae7ee79b106483cd7bb2eb2c4158c11dd}{Add} (\hyperlink{classhbs_1_1_work}{hbs\-::\-Work} \&work, \hyperlink{namespacehbs_aab8d06205ac2b0b14186327fd6c1c0d6}{hbs\-::\-Id\-Task} ts=\hyperlink{namespacehbs_ad95bc3c367f3d09c0d70ff80c469a15ca18ab2d1bfa3ea7aaf3a8a3272c384667}{hbs\-::\-No\-Details})
+\begin{DoxyCompactList}\small\item\em Add a single task to do. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_workers_a6027768ad2ec5ae569353fbe228b3d00}{Add} (std\-::list$<$ \hyperlink{classhbs_1_1_workers_a451e0985676c46558a1114b12dd96916}{Task} $>$ \&tasks)
+\begin{DoxyCompactList}\small\item\em Add several task to do. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classhbs_1_1_workers_aedd820365d89c79024ef322daab1f62b}{Get\-How\-Many\-Tasks} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em How many tasks are awaiting to be treated in the thread pool. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classhbs_1_1_workers_a65cb78bc4bc0aefbb1e3f0ee23d223c5}{Get\-Awaiting\-Threads} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em How many threads are waiting in the thread pool. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_workers_a0cc4e512f1f50f0496384e2456e0d53b}{Is\-Working} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Ask if not all works are done and if not all threads are waiting. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_workers_ab719a793adce960a24611cf5d3f80f4e}{Get\-Message} (\hyperlink{classhbs_1_1_workers_addd8065047a1fa376581419ffcda0685}{hbs\-::\-Workers\-::\-Message} \&msg)
+\begin{DoxyCompactList}\small\item\em Get message returned from asked tasks. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634f}{Load} \hyperlink{classhbs_1_1_workers_a4445d2fca7108c91d93826d458d39e01}{Evaluate\-The\-Load} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Ask for an performance evaluation. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_workers_a96d4930cad692e275316de824cab6d35}{Workers} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr\-\_\-thread=3)
+\begin{DoxyCompactList}\small\item\em Build the tread pool with a specific quantity of threads. \end{DoxyCompactList}\item 
+virtual \hyperlink{classhbs_1_1_workers_ad9e1e243123c18d6eb45fbc82b54f07a}{$\sim$\-Workers} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the threads and the thread pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classhbs_1_1_workers}{Workers} is a thread pool made to work with the \hyperlink{classhbs_1_1_work}{Work} class. 
+
+The \hyperlink{classhbs_1_1_workers}{Workers} class allows the user to ask for a specific amount of thread. The amount of thread can be changed. You also can watch the load balancy and act in consequence.
+
+You can add works in the \hyperlink{classhbs_1_1_workers}{Workers} class, one at time, or several in one single call. Getting returned message is easy thanks to the Get\-Message function.
+
+You can watch how many threads are running, so you can fork instead of adding new threads if you think you are full. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classhbs_1_1_workers_addd8065047a1fa376581419ffcda0685}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Message@{Message}}
+\index{Message@{Message}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::pair$<${\bf Work}$\ast$, {\bf Id\-Message}$>$ {\bf hbs\-::\-Workers\-::\-Message}}}\label{classhbs_1_1_workers_addd8065047a1fa376581419ffcda0685}
+\hypertarget{classhbs_1_1_workers_a451e0985676c46558a1114b12dd96916}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Task@{Task}}
+\index{Task@{Task}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Task}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::pair$<${\bf Work}$\ast$, {\bf Id\-Task}$>$ {\bf hbs\-::\-Workers\-::\-Task}}}\label{classhbs_1_1_workers_a451e0985676c46558a1114b12dd96916}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634f}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Load@{Load}}
+\index{Load@{Load}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hbs\-::\-Workers\-::\-Load}}}\label{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634f}
+The Load enumeration indicates the level of load in the thread pool with the current amount of threads. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\-V\-E\-R\-L\-O\-A\-D@{O\-V\-E\-R\-L\-O\-A\-D}!hbs\-::\-Workers@{hbs\-::\-Workers}}\index{hbs\-::\-Workers@{hbs\-::\-Workers}!O\-V\-E\-R\-L\-O\-A\-D@{O\-V\-E\-R\-L\-O\-A\-D}}\item[{\em 
+\hypertarget{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa7e0744a5720973af1c98c5225b8df8e5}{O\-V\-E\-R\-L\-O\-A\-D}\label{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa7e0744a5720973af1c98c5225b8df8e5}
+}]\index{N\-O\-M\-I\-N\-A\-L@{N\-O\-M\-I\-N\-A\-L}!hbs\-::\-Workers@{hbs\-::\-Workers}}\index{hbs\-::\-Workers@{hbs\-::\-Workers}!N\-O\-M\-I\-N\-A\-L@{N\-O\-M\-I\-N\-A\-L}}\item[{\em 
+\hypertarget{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa6543896a2818caa3c00d40084f58c2b4}{N\-O\-M\-I\-N\-A\-L}\label{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa6543896a2818caa3c00d40084f58c2b4}
+}]\index{U\-N\-D\-E\-R\-L\-O\-A\-D@{U\-N\-D\-E\-R\-L\-O\-A\-D}!hbs\-::\-Workers@{hbs\-::\-Workers}}\index{hbs\-::\-Workers@{hbs\-::\-Workers}!U\-N\-D\-E\-R\-L\-O\-A\-D@{U\-N\-D\-E\-R\-L\-O\-A\-D}}\item[{\em 
+\hypertarget{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa2fbfb62e885cc85d531ed20e48ae354c}{U\-N\-D\-E\-R\-L\-O\-A\-D}\label{classhbs_1_1_workers_a9bc855eea9a43df727e1a85b3520634fa2fbfb62e885cc85d531ed20e48ae354c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhbs_1_1_workers_a96d4930cad692e275316de824cab6d35}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Workers@{Workers}}
+\index{Workers@{Workers}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Workers}]{\setlength{\rightskip}{0pt plus 5cm}hbs\-::\-Workers\-::\-Workers (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{nbr\-\_\-thread = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_a96d4930cad692e275316de824cab6d35}
+
+
+Build the tread pool with a specific quantity of threads. 
+
+\hyperlink{classhbs_1_1_workers}{Workers} \hyperlink{classhbs_1_1_workers}{Workers} build the thread pool with a specific quantity fo threads 
+\begin{DoxyParams}{Parameters}
+{\em nbr\-\_\-thread} & The number of threads you want in your thread pool. This can be 0 if you only want to create a thread pool that you will extend later. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\-::system\-\_\-error} & The function may throw if the creation of a thread fail. All threads are killed before throwing, if some were previously successfuly launched. \\
+\hline
+{\em std\-::bad\-\_\-alloc} & The function may throw if there is not enough space in memory to enlarge the list of threads. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classhbs_1_1_workers_ad9e1e243123c18d6eb45fbc82b54f07a}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!$\sim$\-Workers@{$\sim$\-Workers}}
+\index{$\sim$\-Workers@{$\sim$\-Workers}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{$\sim$\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}virtual hbs\-::\-Workers\-::$\sim$\-Workers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classhbs_1_1_workers_ad9e1e243123c18d6eb45fbc82b54f07a}
+
+
+Destroy the threads and the thread pool. 
+
+$\sim$\-Workers The destructor ask to all thread to stop. It waits one seconde before killing them if they did not stop. If you wait that all threads end their work, of course, it is better. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classhbs_1_1_workers_ae7ee79b106483cd7bb2eb2c4158c11dd}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Add@{Add}}
+\index{Add@{Add}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Workers\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{{\bf hbs\-::\-Work} \&}]{work, }
+\item[{{\bf hbs\-::\-Id\-Task}}]{ts = {\ttfamily {\bf hbs\-::\-No\-Details}}}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_ae7ee79b106483cd7bb2eb2c4158c11dd}
+
+
+Add a single task to do. 
+
+Add Add a single task to do. 
+\begin{DoxyParams}{Parameters}
+{\em work} & The class that contains the code that will be executed by a thread \\
+\hline
+{\em ts} & A subtask specification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return false on error. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_workers_a6027768ad2ec5ae569353fbe228b3d00}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Add@{Add}}
+\index{Add@{Add}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Workers\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{std\-::list$<$ {\bf Task} $>$ \&}]{tasks}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_a6027768ad2ec5ae569353fbe228b3d00}
+
+
+Add several task to do. 
+
+Add Add several tasks to do in the thread pool. You should use this function instead of calling several time the Add function that push a single task in order to avoid several mutex locking and unlocked. 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & A queue of Task, std\-::pair that contains a \hyperlink{classhbs_1_1_work}{Work} pointer and a subtask id. Elements will be removed if successfully registered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return false if the list is not empty, so some elements failed to be registered. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_workers_abcecaa0389dfaef7bba2d0ed49d3387d}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Add\-Thread@{Add\-Thread}}
+\index{Add\-Thread@{Add\-Thread}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Add\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Workers\-::\-Add\-Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{thread}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_abcecaa0389dfaef7bba2d0ed49d3387d}
+
+
+Add a specific amount of threads inside the thread pool. 
+
+Add a specific amount of threads inside the thread pool. You should never use Add\-Thread when threads are working. 
+\begin{DoxyParams}{Parameters}
+{\em thread} & How many threads you want to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return false on error if H\-B\-S\-L\-\_\-\-N\-O\-\_\-\-T\-H\-R\-O\-W is set. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\-::runtime\-\_\-error} & The function may throw if the creation of a thread fail. All threads are killed before throwing, if some were previously successfuly launched. \\
+\hline
+{\em std\-::bad\-\_\-alloc} & The function may throw if there is not enough space in memory to enlarge the list of threads. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classhbs_1_1_workers_a4445d2fca7108c91d93826d458d39e01}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Evaluate\-The\-Load@{Evaluate\-The\-Load}}
+\index{Evaluate\-The\-Load@{Evaluate\-The\-Load}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Evaluate\-The\-Load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Load} hbs\-::\-Workers\-::\-Evaluate\-The\-Load (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_a4445d2fca7108c91d93826d458d39e01}
+
+
+Ask for an performance evaluation. 
+
+Evaluate\-The\-Load This function evaluates thanks to the number of threads, the length of the task queue and the current working threads the load of the thread pool. \begin{DoxyReturn}{Returns}
+The function return the load balancy. Over, under or nominal load. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_workers_a65cb78bc4bc0aefbb1e3f0ee23d223c5}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Get\-Awaiting\-Threads@{Get\-Awaiting\-Threads}}
+\index{Get\-Awaiting\-Threads@{Get\-Awaiting\-Threads}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Get\-Awaiting\-Threads}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} hbs\-::\-Workers\-::\-Get\-Awaiting\-Threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_a65cb78bc4bc0aefbb1e3f0ee23d223c5}
+
+
+How many threads are waiting in the thread pool. 
+
+\hypertarget{classhbs_1_1_workers_aedd820365d89c79024ef322daab1f62b}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Get\-How\-Many\-Tasks@{Get\-How\-Many\-Tasks}}
+\index{Get\-How\-Many\-Tasks@{Get\-How\-Many\-Tasks}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Get\-How\-Many\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} hbs\-::\-Workers\-::\-Get\-How\-Many\-Tasks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_aedd820365d89c79024ef322daab1f62b}
+
+
+How many tasks are awaiting to be treated in the thread pool. 
+
+\hypertarget{classhbs_1_1_workers_aa13f3e6ed55ebf0a23ead4903ca99d43}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Get\-How\-Many\-Threads@{Get\-How\-Many\-Threads}}
+\index{Get\-How\-Many\-Threads@{Get\-How\-Many\-Threads}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Get\-How\-Many\-Threads}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} hbs\-::\-Workers\-::\-Get\-How\-Many\-Threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_aa13f3e6ed55ebf0a23ead4903ca99d43}
+
+
+Return how many threads are running right know. 
+
+\hypertarget{classhbs_1_1_workers_aaabd1d8fa09fd7757dad48d7b9a613cf}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Get\-How\-Many\-Workers@{Get\-How\-Many\-Workers}}
+\index{Get\-How\-Many\-Workers@{Get\-How\-Many\-Workers}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Get\-How\-Many\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} hbs\-::\-Workers\-::\-Get\-How\-Many\-Workers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_aaabd1d8fa09fd7757dad48d7b9a613cf}
+
+
+Return how many threads are running right know, ignoring threads awaiting for removal. 
+
+\hypertarget{classhbs_1_1_workers_ab719a793adce960a24611cf5d3f80f4e}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Get\-Message@{Get\-Message}}
+\index{Get\-Message@{Get\-Message}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Workers\-::\-Get\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf hbs\-::\-Workers\-::\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_ab719a793adce960a24611cf5d3f80f4e}
+
+
+Get message returned from asked tasks. 
+
+Get\-Message Get a message returned from a \hyperlink{classhbs_1_1_work}{Work} class to the thread pool. Get\-Message also remove dead threads from the structure while returning false. You should only use Get\-Message after all threads end their work. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & A buffer you have to sent that will be filled with the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return false if the msg parameter was untouched, true if a message was written. 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_workers_a0cc4e512f1f50f0496384e2456e0d53b}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Is\-Working@{Is\-Working}}
+\index{Is\-Working@{Is\-Working}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Is\-Working}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Workers\-::\-Is\-Working (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classhbs_1_1_workers_a0cc4e512f1f50f0496384e2456e0d53b}
+
+
+Ask if not all works are done and if not all threads are waiting. 
+
+\hypertarget{classhbs_1_1_workers_a187412eef0f473cc77352c46212139d0}{\index{hbs\-::\-Workers@{hbs\-::\-Workers}!Remove\-Thread@{Remove\-Thread}}
+\index{Remove\-Thread@{Remove\-Thread}!hbs::Workers@{hbs\-::\-Workers}}
+\subsubsection[{Remove\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-Workers\-::\-Remove\-Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{thread = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classhbs_1_1_workers_a187412eef0f473cc77352c46212139d0}
+
+
+Remove a specific amount of threads inside the thread pool. 
+
+The Remove\-Thread function remove a specified quantity of threads. Note that threads may not die instantly\-: The thread pool will wait that their current work is done. 
+\begin{DoxyParams}{Parameters}
+{\em thread} & How many threads you want to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_workers_8hpp}{Workers.\-hpp}\end{DoxyCompactItemize}

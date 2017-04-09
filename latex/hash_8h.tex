@@ -1,0 +1,76 @@
+\hypertarget{hash_8h}{\section{lib/lapin/dep/lapin/hash.h File Reference}
+\label{hash_8h}\index{lib/lapin/dep/lapin/hash.\-h@{lib/lapin/dep/lapin/hash.\-h}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{hash_8h_a08a3b606c403c7d1cdc7450b5aca611e}{e\-\_\-bunny\-\_\-hash} \hyperlink{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{t\-\_\-bunny\-\_\-hash}
+\item 
+typedef uint64\-\_\-t($\ast$ \hyperlink{hash_8h_a42ba468d18b6cd5685f0312b8ab143b0}{t\-\_\-bunny\-\_\-my\-\_\-hash} )(\hyperlink{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{t\-\_\-bunny\-\_\-hash} hash, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$ptr, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{hash_8h_a08a3b606c403c7d1cdc7450b5aca611e}{e\-\_\-bunny\-\_\-hash} \{ \hyperlink{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea390b28fbcb630d30f4d810c1a11cb569}{B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R}, 
+\hyperlink{hash_8h_a08a3b606c403c7d1cdc7450b5aca611eab0d1d496169dc9994b0ab56b1212f115}{B\-H\-\_\-\-F\-N\-V}, 
+\hyperlink{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea7c73cc748b25795bcbfd502d6fa43db6}{B\-H\-\_\-\-C\-U\-S\-T\-O\-M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{hash_8h_a40e84a40901cc8cd9e933ac067f6d768}{bunny\-\_\-hash} (\hyperlink{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{t\-\_\-bunny\-\_\-hash} hash, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$ptr, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hash_8h_a42ba468d18b6cd5685f0312b8ab143b0}{t\-\_\-bunny\-\_\-my\-\_\-hash} \hyperlink{hash_8h_af96209a7fb7b7ee4b340d7574083ad03}{gl\-\_\-bunny\-\_\-my\-\_\-hash}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hash function. As bunny\-\_\-security, they are not made to be 
+
+\subsection{Typedef Documentation}
+\hypertarget{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{\index{hash.\-h@{hash.\-h}!t\-\_\-bunny\-\_\-hash@{t\-\_\-bunny\-\_\-hash}}
+\index{t\-\_\-bunny\-\_\-hash@{t\-\_\-bunny\-\_\-hash}!hash.h@{hash.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-hash}				 {\bf t\-\_\-bunny\-\_\-hash}}}\label{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}
+t\-\_\-unny\-\_\-hash's value are hash algorithm. B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R works well with A\-S\-C\-I\-I strings B\-H\-\_\-\-F\-N\-V with bytes Any value equal or greater than B\-H\-\_\-\-C\-U\-S\-T\-O\-M will call the gl\-\_\-bunny\-\_\-my\-\_\-hash function pointer. \hypertarget{hash_8h_a42ba468d18b6cd5685f0312b8ab143b0}{\index{hash.\-h@{hash.\-h}!t\-\_\-bunny\-\_\-my\-\_\-hash@{t\-\_\-bunny\-\_\-my\-\_\-hash}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-hash@{t\-\_\-bunny\-\_\-my\-\_\-hash}!hash.h@{hash.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\-\_\-t($\ast$ t\-\_\-bunny\-\_\-my\-\_\-hash)({\bf t\-\_\-bunny\-\_\-hash} hash, {\bf const} void $\ast$ptr, {\bf size\-\_\-t} len)}}\label{hash_8h_a42ba468d18b6cd5685f0312b8ab143b0}
+The type of the function that will be called when B\-H\-\_\-\-C\-U\-S\-T\-O\-M or greater is passed to bunny\-\_\-hash. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{hash_8h_a08a3b606c403c7d1cdc7450b5aca611e}{\index{hash.\-h@{hash.\-h}!e\-\_\-bunny\-\_\-hash@{e\-\_\-bunny\-\_\-hash}}
+\index{e\-\_\-bunny\-\_\-hash@{e\-\_\-bunny\-\_\-hash}!hash.h@{hash.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-hash}}}\label{hash_8h_a08a3b606c403c7d1cdc7450b5aca611e}
+t\-\_\-unny\-\_\-hash's value are hash algorithm. B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R works well with A\-S\-C\-I\-I strings B\-H\-\_\-\-F\-N\-V with bytes Any value equal or greater than B\-H\-\_\-\-C\-U\-S\-T\-O\-M will call the gl\-\_\-bunny\-\_\-my\-\_\-hash function pointer. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R@{B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R}!hash.\-h@{hash.\-h}}\index{hash.\-h@{hash.\-h}!B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R@{B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R}}\item[{\em 
+\hypertarget{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea390b28fbcb630d30f4d810c1a11cb569}{B\-H\-\_\-\-M\-U\-L\-T\-I\-P\-L\-I\-E\-R}\label{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea390b28fbcb630d30f4d810c1a11cb569}
+}]\index{B\-H\-\_\-\-F\-N\-V@{B\-H\-\_\-\-F\-N\-V}!hash.\-h@{hash.\-h}}\index{hash.\-h@{hash.\-h}!B\-H\-\_\-\-F\-N\-V@{B\-H\-\_\-\-F\-N\-V}}\item[{\em 
+\hypertarget{hash_8h_a08a3b606c403c7d1cdc7450b5aca611eab0d1d496169dc9994b0ab56b1212f115}{B\-H\-\_\-\-F\-N\-V}\label{hash_8h_a08a3b606c403c7d1cdc7450b5aca611eab0d1d496169dc9994b0ab56b1212f115}
+}]\index{B\-H\-\_\-\-C\-U\-S\-T\-O\-M@{B\-H\-\_\-\-C\-U\-S\-T\-O\-M}!hash.\-h@{hash.\-h}}\index{hash.\-h@{hash.\-h}!B\-H\-\_\-\-C\-U\-S\-T\-O\-M@{B\-H\-\_\-\-C\-U\-S\-T\-O\-M}}\item[{\em 
+\hypertarget{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea7c73cc748b25795bcbfd502d6fa43db6}{B\-H\-\_\-\-C\-U\-S\-T\-O\-M}\label{hash_8h_a08a3b606c403c7d1cdc7450b5aca611ea7c73cc748b25795bcbfd502d6fa43db6}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{hash_8h_a40e84a40901cc8cd9e933ac067f6d768}{\index{hash.\-h@{hash.\-h}!bunny\-\_\-hash@{bunny\-\_\-hash}}
+\index{bunny\-\_\-hash@{bunny\-\_\-hash}!hash.h@{hash.\-h}}
+\subsubsection[{bunny\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t bunny\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-hash}}]{hash, }
+\item[{{\bf const} void $\ast$}]{ptr, }
+\item[{{\bf size\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{hash_8h_a40e84a40901cc8cd9e933ac067f6d768}
+Compute a short hash. 
+
+\subsection{Variable Documentation}
+\hypertarget{hash_8h_af96209a7fb7b7ee4b340d7574083ad03}{\index{hash.\-h@{hash.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-hash@{gl\-\_\-bunny\-\_\-my\-\_\-hash}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-hash@{gl\-\_\-bunny\-\_\-my\-\_\-hash}!hash.h@{hash.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-hash} gl\-\_\-bunny\-\_\-my\-\_\-hash}}\label{hash_8h_af96209a7fb7b7ee4b340d7574083ad03}
+The function pointer that will point on the function that will be called when bunny\-\_\-hash is called with B\-H\-\_\-\-C\-U\-S\-T\-O\-M or greater as hash. 

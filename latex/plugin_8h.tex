@@ -1,0 +1,141 @@
+\hypertarget{plugin_8h}{\section{lib/lapin/dep/lapin/plugin.h File Reference}
+\label{plugin_8h}\index{lib/lapin/dep/lapin/plugin.\-h@{lib/lapin/dep/lapin/plugin.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionu__bunny__value}{u\-\_\-bunny\-\_\-value}
+\item 
+struct \hyperlink{structs__bunny__prototype}{s\-\_\-bunny\-\_\-prototype}
+\item 
+struct \hyperlink{structs__bunny__plugin}{s\-\_\-bunny\-\_\-plugin}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8}{e\-\_\-bunny\-\_\-value\-\_\-type} \hyperlink{plugin_8h_a55796ce95dcd437c2c6385e31c1586f2}{t\-\_\-bunny\-\_\-value\-\_\-type}
+\item 
+typedef union \hyperlink{unionu__bunny__value}{u\-\_\-bunny\-\_\-value} \hyperlink{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}{t\-\_\-bunny\-\_\-value}
+\item 
+typedef struct \hyperlink{structs__bunny__prototype}{s\-\_\-bunny\-\_\-prototype} \hyperlink{plugin_8h_a5fb3f2be080f97ed3a49a79e0de92a98}{t\-\_\-bunny\-\_\-prototype}
+\item 
+typedef \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{plugin_8h_a5fb3f2be080f97ed3a49a79e0de92a98}{t\-\_\-bunny\-\_\-prototype} $\ast$($\ast$ \hyperlink{plugin_8h_ab5872b246dc908efa2e0c82934df97c8}{t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list} )(void)
+\item 
+typedef struct \hyperlink{structs__bunny__plugin}{s\-\_\-bunny\-\_\-plugin} \hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8}{e\-\_\-bunny\-\_\-value\-\_\-type} \{ \\*
+\hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8adb31f5ef7acca5e1131fcc0fbfa6911d}{V\-O\-I\-D} = 'v', 
+\hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a5a063e265d2ac903b6808e9f6e73ec46}{I\-N\-T\-E\-G\-E\-R} = 'i', 
+\hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a33465d1d419b1074fb259ef444609e92}{D\-O\-U\-B\-L\-E} = 'd', 
+\hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aee847e634a4297b274316de8a8ca9921}{S\-T\-R\-I\-N\-G} = 's', 
+\\*
+\hyperlink{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aad7dce162b42b3d0968ffa57fad43512}{P\-O\-I\-N\-T\-E\-R} = 'p'
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin} $\ast$ \hyperlink{plugin_8h_a05eb225bfee5669a2c8bedb66118e123}{bunny\-\_\-new\-\_\-plugin} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$libfile)
+\item 
+void \hyperlink{plugin_8h_a9bff74a56273bd14ca2c34c4817d734c}{bunny\-\_\-delete\-\_\-plugin} (\hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin} $\ast$plugin)
+\item 
+void $\ast$ \hyperlink{plugin_8h_a7c064958df67291d5199f7a9e857f739}{bunny\-\_\-plugin\-\_\-get\-\_\-function} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin} $\ast$plugin, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$funcname)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{plugin_8h_ab5af9d7d19c514a4ca2fe6b3cb180986}{bunny\-\_\-plugin\-\_\-call} (\hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin} $\ast$plugin, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$funcname, \hyperlink{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}{t\-\_\-bunny\-\_\-value} $\ast$return\-\_\-value, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} arrlen, \hyperlink{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}{t\-\_\-bunny\-\_\-value} $\ast$val)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{plugin_8h_a1c1a3976d0f7779d4d82be5a48b7670c}{bunny\-\_\-plugin\-\_\-callv} (\hyperlink{plugin_8h_a8b44eb725895f1069b117220baa35f89}{t\-\_\-bunny\-\_\-plugin} $\ast$plugin, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$func, \hyperlink{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}{t\-\_\-bunny\-\_\-value} $\ast$return\-\_\-value,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The plugin module allows you to load dynamic libraries design with a specific fashion, imposed by the bunny plugin.
+
+/!\textbackslash{} D\-O\-E\-S N\-O\-T W\-O\-R\-K Y\-E\-T /!\textbackslash{} 
+
+\subsection{Typedef Documentation}
+\hypertarget{plugin_8h_ab5872b246dc908efa2e0c82934df97c8}{\index{plugin.\-h@{plugin.\-h}!t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list@{t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list}}
+\index{t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list@{t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list}!plugin.h@{plugin.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf const} {\bf t\-\_\-bunny\-\_\-prototype}$\ast$($\ast$ t\-\_\-bunny\-\_\-get\-\_\-function\-\_\-list)(void)}}\label{plugin_8h_ab5872b246dc908efa2e0c82934df97c8}
+\hypertarget{plugin_8h_a8b44eb725895f1069b117220baa35f89}{\index{plugin.\-h@{plugin.\-h}!t\-\_\-bunny\-\_\-plugin@{t\-\_\-bunny\-\_\-plugin}}
+\index{t\-\_\-bunny\-\_\-plugin@{t\-\_\-bunny\-\_\-plugin}!plugin.h@{plugin.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-plugin}				 {\bf t\-\_\-bunny\-\_\-plugin}}}\label{plugin_8h_a8b44eb725895f1069b117220baa35f89}
+\hypertarget{plugin_8h_a5fb3f2be080f97ed3a49a79e0de92a98}{\index{plugin.\-h@{plugin.\-h}!t\-\_\-bunny\-\_\-prototype@{t\-\_\-bunny\-\_\-prototype}}
+\index{t\-\_\-bunny\-\_\-prototype@{t\-\_\-bunny\-\_\-prototype}!plugin.h@{plugin.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-prototype}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-prototype}				 {\bf t\-\_\-bunny\-\_\-prototype}}}\label{plugin_8h_a5fb3f2be080f97ed3a49a79e0de92a98}
+\hypertarget{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}{\index{plugin.\-h@{plugin.\-h}!t\-\_\-bunny\-\_\-value@{t\-\_\-bunny\-\_\-value}}
+\index{t\-\_\-bunny\-\_\-value@{t\-\_\-bunny\-\_\-value}!plugin.h@{plugin.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf u\-\_\-bunny\-\_\-value}				 {\bf t\-\_\-bunny\-\_\-value}}}\label{plugin_8h_a2c66de429a5075f7e34c748a9a9b09cf}
+\hypertarget{plugin_8h_a55796ce95dcd437c2c6385e31c1586f2}{\index{plugin.\-h@{plugin.\-h}!t\-\_\-bunny\-\_\-value\-\_\-type@{t\-\_\-bunny\-\_\-value\-\_\-type}}
+\index{t\-\_\-bunny\-\_\-value\-\_\-type@{t\-\_\-bunny\-\_\-value\-\_\-type}!plugin.h@{plugin.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-value\-\_\-type}				 {\bf t\-\_\-bunny\-\_\-value\-\_\-type}}}\label{plugin_8h_a55796ce95dcd437c2c6385e31c1586f2}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8}{\index{plugin.\-h@{plugin.\-h}!e\-\_\-bunny\-\_\-value\-\_\-type@{e\-\_\-bunny\-\_\-value\-\_\-type}}
+\index{e\-\_\-bunny\-\_\-value\-\_\-type@{e\-\_\-bunny\-\_\-value\-\_\-type}!plugin.h@{plugin.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-value\-\_\-type}}}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{V\-O\-I\-D@{V\-O\-I\-D}!plugin.\-h@{plugin.\-h}}\index{plugin.\-h@{plugin.\-h}!V\-O\-I\-D@{V\-O\-I\-D}}\item[{\em 
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8adb31f5ef7acca5e1131fcc0fbfa6911d}{V\-O\-I\-D}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8adb31f5ef7acca5e1131fcc0fbfa6911d}
+}]\index{I\-N\-T\-E\-G\-E\-R@{I\-N\-T\-E\-G\-E\-R}!plugin.\-h@{plugin.\-h}}\index{plugin.\-h@{plugin.\-h}!I\-N\-T\-E\-G\-E\-R@{I\-N\-T\-E\-G\-E\-R}}\item[{\em 
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a5a063e265d2ac903b6808e9f6e73ec46}{I\-N\-T\-E\-G\-E\-R}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a5a063e265d2ac903b6808e9f6e73ec46}
+}]\index{D\-O\-U\-B\-L\-E@{D\-O\-U\-B\-L\-E}!plugin.\-h@{plugin.\-h}}\index{plugin.\-h@{plugin.\-h}!D\-O\-U\-B\-L\-E@{D\-O\-U\-B\-L\-E}}\item[{\em 
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a33465d1d419b1074fb259ef444609e92}{D\-O\-U\-B\-L\-E}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8a33465d1d419b1074fb259ef444609e92}
+}]\index{S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}!plugin.\-h@{plugin.\-h}}\index{plugin.\-h@{plugin.\-h}!S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aee847e634a4297b274316de8a8ca9921}{S\-T\-R\-I\-N\-G}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aee847e634a4297b274316de8a8ca9921}
+}]\index{P\-O\-I\-N\-T\-E\-R@{P\-O\-I\-N\-T\-E\-R}!plugin.\-h@{plugin.\-h}}\index{plugin.\-h@{plugin.\-h}!P\-O\-I\-N\-T\-E\-R@{P\-O\-I\-N\-T\-E\-R}}\item[{\em 
+\hypertarget{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aad7dce162b42b3d0968ffa57fad43512}{P\-O\-I\-N\-T\-E\-R}\label{plugin_8h_a89e532ddd4128e93e5d7341fb07637f8aad7dce162b42b3d0968ffa57fad43512}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{plugin_8h_a9bff74a56273bd14ca2c34c4817d734c}{\index{plugin.\-h@{plugin.\-h}!bunny\-\_\-delete\-\_\-plugin@{bunny\-\_\-delete\-\_\-plugin}}
+\index{bunny\-\_\-delete\-\_\-plugin@{bunny\-\_\-delete\-\_\-plugin}!plugin.h@{plugin.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-plugin (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-plugin} $\ast$}]{plugin}
+\end{DoxyParamCaption}
+)}}\label{plugin_8h_a9bff74a56273bd14ca2c34c4817d734c}
+\hypertarget{plugin_8h_a05eb225bfee5669a2c8bedb66118e123}{\index{plugin.\-h@{plugin.\-h}!bunny\-\_\-new\-\_\-plugin@{bunny\-\_\-new\-\_\-plugin}}
+\index{bunny\-\_\-new\-\_\-plugin@{bunny\-\_\-new\-\_\-plugin}!plugin.h@{plugin.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-plugin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-plugin}$\ast$ bunny\-\_\-new\-\_\-plugin (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{libfile}
+\end{DoxyParamCaption}
+)}}\label{plugin_8h_a05eb225bfee5669a2c8bedb66118e123}
+\hypertarget{plugin_8h_ab5af9d7d19c514a4ca2fe6b3cb180986}{\index{plugin.\-h@{plugin.\-h}!bunny\-\_\-plugin\-\_\-call@{bunny\-\_\-plugin\-\_\-call}}
+\index{bunny\-\_\-plugin\-\_\-call@{bunny\-\_\-plugin\-\_\-call}!plugin.h@{plugin.\-h}}
+\subsubsection[{bunny\-\_\-plugin\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-plugin\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-plugin} $\ast$}]{plugin, }
+\item[{{\bf const} char $\ast$}]{funcname, }
+\item[{{\bf t\-\_\-bunny\-\_\-value} $\ast$}]{return\-\_\-value, }
+\item[{{\bf size\-\_\-t}}]{arrlen, }
+\item[{{\bf t\-\_\-bunny\-\_\-value} $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{plugin_8h_ab5af9d7d19c514a4ca2fe6b3cb180986}
+\hypertarget{plugin_8h_a1c1a3976d0f7779d4d82be5a48b7670c}{\index{plugin.\-h@{plugin.\-h}!bunny\-\_\-plugin\-\_\-callv@{bunny\-\_\-plugin\-\_\-callv}}
+\index{bunny\-\_\-plugin\-\_\-callv@{bunny\-\_\-plugin\-\_\-callv}!plugin.h@{plugin.\-h}}
+\subsubsection[{bunny\-\_\-plugin\-\_\-callv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-plugin\-\_\-callv (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-plugin} $\ast$}]{plugin, }
+\item[{{\bf const} char $\ast$}]{func, }
+\item[{{\bf t\-\_\-bunny\-\_\-value} $\ast$}]{return\-\_\-value, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{plugin_8h_a1c1a3976d0f7779d4d82be5a48b7670c}
+\hypertarget{plugin_8h_a7c064958df67291d5199f7a9e857f739}{\index{plugin.\-h@{plugin.\-h}!bunny\-\_\-plugin\-\_\-get\-\_\-function@{bunny\-\_\-plugin\-\_\-get\-\_\-function}}
+\index{bunny\-\_\-plugin\-\_\-get\-\_\-function@{bunny\-\_\-plugin\-\_\-get\-\_\-function}!plugin.h@{plugin.\-h}}
+\subsubsection[{bunny\-\_\-plugin\-\_\-get\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ bunny\-\_\-plugin\-\_\-get\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-plugin} $\ast$}]{plugin, }
+\item[{{\bf const} char $\ast$}]{funcname}
+\end{DoxyParamCaption}
+)}}\label{plugin_8h_a7c064958df67291d5199f7a9e857f739}

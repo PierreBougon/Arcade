@@ -1,0 +1,139 @@
+\hypertarget{classarcade_1_1_centipede}{\section{arcade\-:\-:Centipede Class Reference}
+\label{classarcade_1_1_centipede}\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}}
+}
+
+
+{\ttfamily \#include $<$Centipede.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27b}{Centipede\-Direction} \{ \hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba7d421fd2ab675f151e98fdeb0ec2db93}{E\-A\-S\-T}, 
+\hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba177a3ef7ab855bde37c9abe7bbdbdfad}{W\-E\-S\-T}, 
+\hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba23f74b2268eacbde2d764036693e081a}{S\-O\-U\-T\-H}, 
+\hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27bad77fa33a31c6231a772e749d6a10bc6e}{N\-O\-R\-T\-H}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_centipede_a6e8de7adad1de42cfdea280ca573554c}{$\sim$\-Centipede} ()
+\item 
+\hyperlink{classarcade_1_1_centipede_ab7ae00c32a1fdbe899b0be6e0f32b66a}{Centipede} (\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&pos, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} length=\hyperlink{_centipede_8hpp_a9771cabfd673a8e350f1f8ce0b8f458f}{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-I\-Z\-E}, \hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27b}{Centipede\-Direction} dir\-H=\hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba177a3ef7ab855bde37c9abe7bbdbdfad}{W\-E\-S\-T}, \hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27b}{Centipede\-Direction} dir\-V=\hyperlink{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba23f74b2268eacbde2d764036693e081a}{S\-O\-U\-T\-H})
+\item 
+\hyperlink{classarcade_1_1_centipede_ae38648ca7f41faa6c882157604446008}{Centipede} (\hyperlink{classarcade_1_1_centipede}{Centipede} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&centipede)
+\item 
+\hyperlink{classarcade_1_1_centipede}{Centipede} \& \hyperlink{classarcade_1_1_centipede_a908922296dc7e851eb5bedf3c35f0df9}{operator=} (\hyperlink{classarcade_1_1_centipede}{Centipede} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&centipede)
+\item 
+std\-::deque\\*
+$<$ \hyperlink{classarcade_1_1_centipede_part}{arcade\-::\-Centipede\-Part} $\ast$ $>$ \& \hyperlink{classarcade_1_1_centipede_ab6ed7bd5652b14d4f7f862e3cde61071}{get\-Body} ()
+\item 
+void \hyperlink{classarcade_1_1_centipede_a848c877d4dddb4e7354e19832ad5d0eb}{set\-Body} ()
+\item 
+void \hyperlink{classarcade_1_1_centipede_ae44e01f5c6fa7c116fc4ab18b8a392ef}{set\-Body} (std\-::deque$<$ \hyperlink{classarcade_1_1_centipede_part}{arcade\-::\-Centipede\-Part} $\ast$ $>$ \&new\-Body)
+\item 
+void \hyperlink{classarcade_1_1_centipede_a7d3d58443cd9b072211cb5773f2e8510}{one\-Turn} (std\-::list$<$ \hyperlink{classarcade_1_1_centipede}{Centipede} $\ast$ $>$ \&centipedes, std\-::list$<$ \hyperlink{classarcade_1_1_mushroom}{Mushroom} $\ast$ $>$ \&mushrooms, \hyperlink{classarcade_1_1_map}{Map} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&map)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_centipede_a4331bb6a29f08b8a003dc1ee29f3ddd7}{hit\-By\-Bullet} (\hyperlink{classarcade_1_1_bullet}{Bullet} \&bullet, std\-::list$<$ \hyperlink{classarcade_1_1_centipede}{Centipede} $\ast$ $>$ \&centipedes, std\-::list$<$ \hyperlink{classarcade_1_1_mushroom}{Mushroom} $\ast$ $>$ \&mushrooms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27b}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!Centipede\-Direction@{Centipede\-Direction}}
+\index{Centipede\-Direction@{Centipede\-Direction}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{Centipede\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf arcade\-::\-Centipede\-::\-Centipede\-Direction}}}\label{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-A\-S\-T@{E\-A\-S\-T}!arcade\-::\-Centipede@{arcade\-::\-Centipede}}\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!E\-A\-S\-T@{E\-A\-S\-T}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba7d421fd2ab675f151e98fdeb0ec2db93}{E\-A\-S\-T}\label{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba7d421fd2ab675f151e98fdeb0ec2db93}
+}]\index{W\-E\-S\-T@{W\-E\-S\-T}!arcade\-::\-Centipede@{arcade\-::\-Centipede}}\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!W\-E\-S\-T@{W\-E\-S\-T}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba177a3ef7ab855bde37c9abe7bbdbdfad}{W\-E\-S\-T}\label{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba177a3ef7ab855bde37c9abe7bbdbdfad}
+}]\index{S\-O\-U\-T\-H@{S\-O\-U\-T\-H}!arcade\-::\-Centipede@{arcade\-::\-Centipede}}\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!S\-O\-U\-T\-H@{S\-O\-U\-T\-H}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba23f74b2268eacbde2d764036693e081a}{S\-O\-U\-T\-H}\label{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27ba23f74b2268eacbde2d764036693e081a}
+}]\index{N\-O\-R\-T\-H@{N\-O\-R\-T\-H}!arcade\-::\-Centipede@{arcade\-::\-Centipede}}\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!N\-O\-R\-T\-H@{N\-O\-R\-T\-H}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27bad77fa33a31c6231a772e749d6a10bc6e}{N\-O\-R\-T\-H}\label{classarcade_1_1_centipede_a5ee9df78614426762a3960348e1bc27bad77fa33a31c6231a772e749d6a10bc6e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_centipede_a6e8de7adad1de42cfdea280ca573554c}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!$\sim$\-Centipede@{$\sim$\-Centipede}}
+\index{$\sim$\-Centipede@{$\sim$\-Centipede}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{$\sim$\-Centipede}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Centipede\-::$\sim$\-Centipede (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_a6e8de7adad1de42cfdea280ca573554c}
+\hypertarget{classarcade_1_1_centipede_ab7ae00c32a1fdbe899b0be6e0f32b66a}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!Centipede@{Centipede}}
+\index{Centipede@{Centipede}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{Centipede}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Centipede\-::\-Centipede (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector2s} {\bf const} \&}]{pos, }
+\item[{{\bf size\-\_\-t}}]{length = {\ttfamily {\bf D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-I\-Z\-E}}, }
+\item[{{\bf Centipede\-Direction}}]{dir\-H = {\ttfamily {\bf W\-E\-S\-T}}, }
+\item[{{\bf Centipede\-Direction}}]{dir\-V = {\ttfamily {\bf S\-O\-U\-T\-H}}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_ab7ae00c32a1fdbe899b0be6e0f32b66a}
+\hypertarget{classarcade_1_1_centipede_ae38648ca7f41faa6c882157604446008}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!Centipede@{Centipede}}
+\index{Centipede@{Centipede}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{Centipede}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Centipede\-::\-Centipede (
+\begin{DoxyParamCaption}
+\item[{{\bf Centipede} {\bf const} \&}]{centipede}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_ae38648ca7f41faa6c882157604446008}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_centipede_ab6ed7bd5652b14d4f7f862e3cde61071}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!get\-Body@{get\-Body}}
+\index{get\-Body@{get\-Body}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{get\-Body}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$ {\bf arcade\-::\-Centipede\-Part} $\ast$ $>$ \& arcade\-::\-Centipede\-::get\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_ab6ed7bd5652b14d4f7f862e3cde61071}
+\hypertarget{classarcade_1_1_centipede_a4331bb6a29f08b8a003dc1ee29f3ddd7}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!hit\-By\-Bullet@{hit\-By\-Bullet}}
+\index{hit\-By\-Bullet@{hit\-By\-Bullet}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{hit\-By\-Bullet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Centipede\-::hit\-By\-Bullet (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Bullet} \&}]{bullet, }
+\item[{std\-::list$<$ {\bf Centipede} $\ast$ $>$ \&}]{centipedes, }
+\item[{std\-::list$<$ {\bf Mushroom} $\ast$ $>$ \&}]{mushrooms}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_a4331bb6a29f08b8a003dc1ee29f3ddd7}
+\hypertarget{classarcade_1_1_centipede_a7d3d58443cd9b072211cb5773f2e8510}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!one\-Turn@{one\-Turn}}
+\index{one\-Turn@{one\-Turn}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{one\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-::one\-Turn (
+\begin{DoxyParamCaption}
+\item[{std\-::list$<$ {\bf Centipede} $\ast$ $>$ \&}]{centipedes, }
+\item[{std\-::list$<$ {\bf Mushroom} $\ast$ $>$ \&}]{mushrooms, }
+\item[{{\bf Map} {\bf const} \&}]{map}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_a7d3d58443cd9b072211cb5773f2e8510}
+\hypertarget{classarcade_1_1_centipede_a908922296dc7e851eb5bedf3c35f0df9}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!operator=@{operator=}}
+\index{operator=@{operator=}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Centipede} \& arcade\-::\-Centipede\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Centipede} {\bf const} \&}]{centipede}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_a908922296dc7e851eb5bedf3c35f0df9}
+\hypertarget{classarcade_1_1_centipede_a848c877d4dddb4e7354e19832ad5d0eb}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!set\-Body@{set\-Body}}
+\index{set\-Body@{set\-Body}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{set\-Body}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-::set\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_a848c877d4dddb4e7354e19832ad5d0eb}
+\hypertarget{classarcade_1_1_centipede_ae44e01f5c6fa7c116fc4ab18b8a392ef}{\index{arcade\-::\-Centipede@{arcade\-::\-Centipede}!set\-Body@{set\-Body}}
+\index{set\-Body@{set\-Body}!arcade::Centipede@{arcade\-::\-Centipede}}
+\subsubsection[{set\-Body}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-::set\-Body (
+\begin{DoxyParamCaption}
+\item[{std\-::deque$<$ {\bf arcade\-::\-Centipede\-Part} $\ast$ $>$ \&}]{new\-Body}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_ae44e01f5c6fa7c116fc4ab18b8a392ef}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/centipede/include/\hyperlink{_centipede_8hpp}{Centipede.\-hpp}\item 
+games/centipede/src/\hyperlink{_centipede_8cpp}{Centipede.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{class_file_input_stream}{\section{File\-Input\-Stream Class Reference}
+\label{class_file_input_stream}\index{File\-Input\-Stream@{File\-Input\-Stream}}
+}
+
+
+{\ttfamily \#include $<$File\-Input\-Stream.\-hpp$>$}
+
+
+
+\subsection{Detailed Description}
+This class is a specialization of Input\-Stream that reads from a file on disk.
+
+It wraps a file in the common Input\-Stream interface and therefore allows to use generic classes or functions that accept such a stream, with a file on disk as the data source.
+
+In addition to the virtual functions inherited from Input\-Stream, \hyperlink{class_file_input_stream}{File\-Input\-Stream} adds a function to specify the file to open.
+
+S\-F\-M\-L resource classes can usually be loaded directly from a filename, so this class shouldn't be useful to you unless you create your own algorithms that operate on a Input\-Stream.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} process(InputStream& stream);
+
+FileStream stream;
+\textcolor{keywordflow}{if} (stream.open(\textcolor{stringliteral}{"some\_file.dat"}))
+   process(stream);
+\end{DoxyCode}
+
+
+Input\-Stream, Memory\-Stream 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-System/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_system_2_file_input_stream_8hpp}{File\-Input\-Stream.\-hpp}\end{DoxyCompactItemize}

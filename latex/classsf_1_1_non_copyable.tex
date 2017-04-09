@@ -1,0 +1,88 @@
+\hypertarget{classsf_1_1_non_copyable}{\section{sf\-:\-:Non\-Copyable Class Reference}
+\label{classsf_1_1_non_copyable}\index{sf\-::\-Non\-Copyable@{sf\-::\-Non\-Copyable}}
+}
+
+
+Utility class that makes any derived class non-\/copyable.  
+
+
+
+
+{\ttfamily \#include $<$Non\-Copyable.\-hpp$>$}
+
+Inheritance diagram for sf\-:\-:Non\-Copyable\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classsf_1_1_non_copyable}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\-Copyable} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{Non\-Copyable} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{$\sim$\-Non\-Copyable} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility class that makes any derived class non-\/copyable. 
+
+This class makes its instances non-\/copyable, by explicitly disabling its copy constructor and its assignment operator.
+
+To create a non-\/copyable class, simply inherit from \hyperlink{classsf_1_1_non_copyable}{sf\-::\-Non\-Copyable}.
+
+The type of inheritance (public or private) doesn't matter, the copy constructor and assignment operator are declared private in \hyperlink{classsf_1_1_non_copyable}{sf\-::\-Non\-Copyable} so they will end up being inaccessible in both cases. Thus you can use a shorter syntax for inheriting from it (see below).
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keyword}{class }MyNonCopyableClass : \hyperlink{classsf_1_1_non_copyable}{sf::NonCopyable}
+\{
+    ...
+\};
+\end{DoxyCode}
+
+
+Deciding whether the instances of a class can be copied or not is a very important design choice. You are strongly encouraged to think about it before writing a class, and to use \hyperlink{classsf_1_1_non_copyable}{sf\-::\-Non\-Copyable} when necessary to prevent many potential future errors when using it. This is also a very important indication to users of your class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{\index{sf\-::\-Non\-Copyable@{sf\-::\-Non\-Copyable}!Non\-Copyable@{Non\-Copyable}}
+\index{Non\-Copyable@{Non\-Copyable}!sf::NonCopyable@{sf\-::\-Non\-Copyable}}
+\subsubsection[{Non\-Copyable}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Non\-Copyable\-::\-Non\-Copyable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}
+
+
+Default constructor. 
+
+Because this class has a copy constructor, the compiler will not automatically generate the default constructor. That's why we must define it explicitly. \hypertarget{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{\index{sf\-::\-Non\-Copyable@{sf\-::\-Non\-Copyable}!Non\-Copyable@{Non\-Copyable}}
+\index{Non\-Copyable@{Non\-Copyable}!sf::NonCopyable@{sf\-::\-Non\-Copyable}}
+\subsubsection[{Non\-Copyable}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Non\-Copyable\-::\-Non\-Copyable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}
+
+
+Default constructor. 
+
+Because this class has a copy constructor, the compiler will not automatically generate the default constructor. That's why we must define it explicitly. \hypertarget{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}{\index{sf\-::\-Non\-Copyable@{sf\-::\-Non\-Copyable}!$\sim$\-Non\-Copyable@{$\sim$\-Non\-Copyable}}
+\index{$\sim$\-Non\-Copyable@{$\sim$\-Non\-Copyable}!sf::NonCopyable@{sf\-::\-Non\-Copyable}}
+\subsubsection[{$\sim$\-Non\-Copyable}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Non\-Copyable\-::$\sim$\-Non\-Copyable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classsf_1_1_non_copyable_a8274ffbf46014f5f7f364befb52c7728}
+
+
+Default destructor. 
+
+By declaring a protected destructor it's impossible to call delete on a pointer of \hyperlink{classsf_1_1_non_copyable}{sf\-::\-Non\-Copyable}, thus preventing possible resource leaks. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-System/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_system_2_non_copyable_8hpp}{Non\-Copyable.\-hpp}\end{DoxyCompactItemize}

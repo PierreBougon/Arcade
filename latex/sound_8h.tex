@@ -1,0 +1,288 @@
+\hypertarget{sound_8h}{\section{lib/lapin/dep/lapin/sound.h File Reference}
+\label{sound_8h}\index{lib/lapin/dep/lapin/sound.\-h@{lib/lapin/dep/lapin/sound.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__sound}{s\-\_\-bunny\-\_\-sound}
+\item 
+struct \hyperlink{structs__bunny__music}{s\-\_\-bunny\-\_\-music}
+\item 
+struct \hyperlink{structs__bunny__effect}{s\-\_\-bunny\-\_\-effect}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sound_8h_a51a4c00c924e99660ea73330c872da3a}{S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}~44100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__sound}{s\-\_\-bunny\-\_\-sound} \hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound}
+\item 
+typedef struct \hyperlink{structs__bunny__music}{s\-\_\-bunny\-\_\-music} \hyperlink{sound_8h_a827604e20c529171582f21e8a5e7badd}{t\-\_\-bunny\-\_\-music}
+\item 
+typedef struct \hyperlink{structs__bunny__effect}{s\-\_\-bunny\-\_\-effect} \hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sound_8h_a827604e20c529171582f21e8a5e7badd}{t\-\_\-bunny\-\_\-music} $\ast$ \hyperlink{sound_8h_a9392b3b823e2ec6b174574d6196a762a}{bunny\-\_\-load\-\_\-music} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect} $\ast$ \hyperlink{sound_8h_a4897e19ccd3a6c4a110b3ae29c4ee728}{bunny\-\_\-new\-\_\-effect} (double duration)
+\item 
+\hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect} $\ast$ \hyperlink{sound_8h_a19084d9ba60f2194e6f7e4a30f6331a1}{bunny\-\_\-load\-\_\-effect} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{sound_8h_ae79f53273195f31240bdeee050929d6d}{bunny\-\_\-save\-\_\-effect} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect} $\ast$effect, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{sound_8h_ab892264c783801b5bdfda5da5fcee0f1}{bunny\-\_\-compute\-\_\-effect} (\hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect} $\ast$effect)
+\item 
+void \hyperlink{sound_8h_a75623551f96d72bf6197f73b89d9dda9}{bunny\-\_\-sound\-\_\-volume} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound, double volume)
+\item 
+void \hyperlink{sound_8h_a922ceb537efb0b85987f6abae40bfc4e}{bunny\-\_\-sound\-\_\-pitch} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound, double pitch)
+\item 
+void \hyperlink{sound_8h_aac7ff0385c596d46c5d65000cab61831}{bunny\-\_\-sound\-\_\-loop} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{_lapin_8cpp_ae75dc9a105e970734a903222f40b464c}{loop})
+\item 
+void \hyperlink{sound_8h_a6044c010adacc5b8fe31889b397512d7}{bunny\-\_\-sound\-\_\-position} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound, double x, double y, double z)
+\item 
+void \hyperlink{sound_8h_a76d12e93f0bc9f0134fdbe59339556bd}{bunny\-\_\-sound\-\_\-attenuation} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound, double attenuation)
+\item 
+void \hyperlink{sound_8h_a419b4b8591c8f61fbb39e1f53da96402}{bunny\-\_\-sound\-\_\-play} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound)
+\item 
+void \hyperlink{sound_8h_aee838c50a0866db79e76f6be3ac3a1a8}{bunny\-\_\-sound\-\_\-stop} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound)
+\item 
+double \hyperlink{sound_8h_a6f1b3a4e9db8e69b4ffe6a39d9ed26f7}{bunny\-\_\-music\-\_\-get\-\_\-cursor} (\hyperlink{sound_8h_a827604e20c529171582f21e8a5e7badd}{t\-\_\-bunny\-\_\-music} $\ast$music)
+\item 
+void \hyperlink{sound_8h_a6c6526eb176aeb94b26756f1c3878772}{bunny\-\_\-delete\-\_\-sound} (\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} $\ast$sound)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The sound module contains facilities to load, generate and play sounds. Recording is currently not supported. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{sound_8h_a51a4c00c924e99660ea73330c872da3a}{\index{sound.\-h@{sound.\-h}!S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S@{S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}}
+\index{S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S@{S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}!sound.h@{sound.\-h}}
+\subsubsection[{S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S~44100}}\label{sound_8h_a51a4c00c924e99660ea73330c872da3a}
+The bunny\-\_\-load\-\_\-effect function create in the bunny\-\_\-malloc memory space a sample of duration seconds. bunny\-\_\-new\-\_\-effect create S\-A\-M\-P\-L\-E\-\_\-\-P\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S int16\-\_\-t inside the t\-\_\-bunny\-\_\-effect structure per second. 
+\begin{DoxyParams}{Parameters}
+{\em duration} & The duration of the sound effect in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid t\-\_\-bunny\-\_\-effect or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{\index{sound.\-h@{sound.\-h}!t\-\_\-bunny\-\_\-effect@{t\-\_\-bunny\-\_\-effect}}
+\index{t\-\_\-bunny\-\_\-effect@{t\-\_\-bunny\-\_\-effect}!sound.h@{sound.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-effect}				 {\bf t\-\_\-bunny\-\_\-effect}}}\label{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}
+The t\-\_\-bunny\-\_\-effect structure is useful to play, load and manage sound effects. It contains attributes like sample\-\_\-per\-\_\-second which contains how many int16\-\_\-t is neccessary to a one second sound. duration is the sound duration in seconds. and finaly sample which is the sound wave itself. sample is the sound equivalent of the t\-\_\-bunny\-\_\-pixelarray 's pixel field\-: it is an array of duration $\ast$ sample\-\_\-per\-\_\-second int16\-\_\-t. \hypertarget{sound_8h_a827604e20c529171582f21e8a5e7badd}{\index{sound.\-h@{sound.\-h}!t\-\_\-bunny\-\_\-music@{t\-\_\-bunny\-\_\-music}}
+\index{t\-\_\-bunny\-\_\-music@{t\-\_\-bunny\-\_\-music}!sound.h@{sound.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-music}				 {\bf t\-\_\-bunny\-\_\-music}}}\label{sound_8h_a827604e20c529171582f21e8a5e7badd}
+The t\-\_\-bunny\-\_\-music structure is useful to play, load and manage music. It contains an attribute named \char`\"{}duration\char`\"{} which is, in seconds, the duration of the music. \hypertarget{sound_8h_af5566812e76e3d6b601768a24d114a14}{\index{sound.\-h@{sound.\-h}!t\-\_\-bunny\-\_\-sound@{t\-\_\-bunny\-\_\-sound}}
+\index{t\-\_\-bunny\-\_\-sound@{t\-\_\-bunny\-\_\-sound}!sound.h@{sound.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-sound}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-sound}				 {\bf t\-\_\-bunny\-\_\-sound}}}\label{sound_8h_af5566812e76e3d6b601768a24d114a14}
+The t\-\_\-bunny\-\_\-sound is the header of every other sound structure like t\-\_\-bunny\-\_\-music or t\-\_\-bunny\-\_\-effect. It contains the name of the file from which the sound was loaded or N\-U\-L\-L if it was generated. It also contents private fields. 
+
+\subsection{Function Documentation}
+\hypertarget{sound_8h_ab892264c783801b5bdfda5da5fcee0f1}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-compute\-\_\-effect@{bunny\-\_\-compute\-\_\-effect}}
+\index{bunny\-\_\-compute\-\_\-effect@{bunny\-\_\-compute\-\_\-effect}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-compute\-\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-compute\-\_\-effect (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-effect} $\ast$}]{effect}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_ab892264c783801b5bdfda5da5fcee0f1}
+In case you have created a sound effect and then filled its content manually thanks to the sample attribute, before playing the sound effect, you must call this function. 
+\begin{DoxyParams}{Parameters}
+{\em effect} & The sound effect to generate \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a6c6526eb176aeb94b26756f1c3878772}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-delete\-\_\-sound@{bunny\-\_\-delete\-\_\-sound}}
+\index{bunny\-\_\-delete\-\_\-sound@{bunny\-\_\-delete\-\_\-sound}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-sound}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-sound (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a6c6526eb176aeb94b26756f1c3878772}
+Delete the sent sound. 
+\begin{DoxyParams}{Parameters}
+{\em The} & sound to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a19084d9ba60f2194e6f7e4a30f6331a1}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-load\-\_\-effect@{bunny\-\_\-load\-\_\-effect}}
+\index{bunny\-\_\-load\-\_\-effect@{bunny\-\_\-load\-\_\-effect}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-effect}$\ast$ bunny\-\_\-load\-\_\-effect (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a19084d9ba60f2194e6f7e4a30f6331a1}
+The bunny\-\_\-load\-\_\-effect function load a sound file and return a matching t\-\_\-bunny\-\_\-effect. The reserved memory to handle it is inside the bunny\-\_\-malloc space. Supported formats are .wav and .ogg. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The sound file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-effect pointer or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{sound_8h_a9392b3b823e2ec6b174574d6196a762a}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-load\-\_\-music@{bunny\-\_\-load\-\_\-music}}
+\index{bunny\-\_\-load\-\_\-music@{bunny\-\_\-load\-\_\-music}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-music}$\ast$ bunny\-\_\-load\-\_\-music (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a9392b3b823e2ec6b174574d6196a762a}
+The bunny\-\_\-load\-\_\-music function load a sound file and return a matching t\-\_\-bunny\-\_\-music. The reserved memory to handle it is outside the bunny\-\_\-malloc space. Supported formats are .wav and .ogg. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The music file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-music pointer or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{sound_8h_a6f1b3a4e9db8e69b4ffe6a39d9ed26f7}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-music\-\_\-get\-\_\-cursor@{bunny\-\_\-music\-\_\-get\-\_\-cursor}}
+\index{bunny\-\_\-music\-\_\-get\-\_\-cursor@{bunny\-\_\-music\-\_\-get\-\_\-cursor}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-music\-\_\-get\-\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}double bunny\-\_\-music\-\_\-get\-\_\-cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-music} $\ast$}]{music}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a6f1b3a4e9db8e69b4ffe6a39d9ed26f7}
+Get the position in seconds of the sent music. 
+\begin{DoxyParams}{Parameters}
+{\em music} & The music to know where the cursor is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position in seconds between the beginning and the current cursor. 
+\end{DoxyReturn}
+\hypertarget{sound_8h_a4897e19ccd3a6c4a110b3ae29c4ee728}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-new\-\_\-effect@{bunny\-\_\-new\-\_\-effect}}
+\index{bunny\-\_\-new\-\_\-effect@{bunny\-\_\-new\-\_\-effect}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-effect}$\ast$ bunny\-\_\-new\-\_\-effect (
+\begin{DoxyParamCaption}
+\item[{double}]{duration}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a4897e19ccd3a6c4a110b3ae29c4ee728}
+\hypertarget{sound_8h_ae79f53273195f31240bdeee050929d6d}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-save\-\_\-effect@{bunny\-\_\-save\-\_\-effect}}
+\index{bunny\-\_\-save\-\_\-effect@{bunny\-\_\-save\-\_\-effect}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-save\-\_\-effect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-save\-\_\-effect (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-effect} $\ast$}]{effect, }
+\item[{{\bf const} char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_ae79f53273195f31240bdeee050929d6d}
+The bunny\-\_\-save\-\_\-effect function save into a sound file the given sound. Supported formats are .wav and .ogg 
+\begin{DoxyParams}{Parameters}
+{\em effect} & The sound to save \\
+\hline
+{\em str} & The file where to save \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well else false. 
+\end{DoxyReturn}
+\hypertarget{sound_8h_a76d12e93f0bc9f0134fdbe59339556bd}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-attenuation@{bunny\-\_\-sound\-\_\-attenuation}}
+\index{bunny\-\_\-sound\-\_\-attenuation@{bunny\-\_\-sound\-\_\-attenuation}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-attenuation}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-attenuation (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound, }
+\item[{double}]{attenuation}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a76d12e93f0bc9f0134fdbe59339556bd}
+Calibrate the way the sound is getting lower when getting far from the position (0, 0, 0) when bunny\-\_\-sound\-\_\-position is set. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to modify \\
+\hline
+{\em attenuation} & A value between 0 and 10. \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_aac7ff0385c596d46c5d65000cab61831}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-loop@{bunny\-\_\-sound\-\_\-loop}}
+\index{bunny\-\_\-sound\-\_\-loop@{bunny\-\_\-sound\-\_\-loop}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound, }
+\item[{{\bf bool}}]{loop}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_aac7ff0385c596d46c5d65000cab61831}
+Set if the sound will be played again if it reaches its end. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to calibrate \\
+\hline
+{\em True} & to activate the loop, false to deactivate the loop. \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a922ceb537efb0b85987f6abae40bfc4e}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-pitch@{bunny\-\_\-sound\-\_\-pitch}}
+\index{bunny\-\_\-sound\-\_\-pitch@{bunny\-\_\-sound\-\_\-pitch}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-pitch}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-pitch (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound, }
+\item[{double}]{pitch}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a922ceb537efb0b85987f6abae40bfc4e}
+The bunny\-\_\-sound\-\_\-pitch function accellerate or make slower the playing speed of the given sound, making it more acute or lower. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to modify \\
+\hline
+{\em pitch} & A value that will be multiplied with the playing speed. If set to 1, the sound is played with the original speed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a419b4b8591c8f61fbb39e1f53da96402}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-play@{bunny\-\_\-sound\-\_\-play}}
+\index{bunny\-\_\-sound\-\_\-play@{bunny\-\_\-sound\-\_\-play}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-play}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-play (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a419b4b8591c8f61fbb39e1f53da96402}
+Play the sound. If the sound is a t\-\_\-bunny\-\_\-effect and that it was manually edited, do to forget to call bunny\-\_\-compute\-\_\-effect before. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to play. \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a6044c010adacc5b8fe31889b397512d7}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-position@{bunny\-\_\-sound\-\_\-position}}
+\index{bunny\-\_\-sound\-\_\-position@{bunny\-\_\-sound\-\_\-position}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a6044c010adacc5b8fe31889b397512d7}
+Set the position of the sound in space. You should use headphones to feel it better. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to modify \\
+\hline
+{\em x} & The horizontal position of the sound \\
+\hline
+{\em y} & The vertical position of the sound \\
+\hline
+{\em z} & The in-\/front-\/of-\/you/behind-\/you axis of the sound \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_aee838c50a0866db79e76f6be3ac3a1a8}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-stop@{bunny\-\_\-sound\-\_\-stop}}
+\index{bunny\-\_\-sound\-\_\-stop@{bunny\-\_\-sound\-\_\-stop}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-stop (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_aee838c50a0866db79e76f6be3ac3a1a8}
+Stop the sound. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to stop. \\
+\hline
+\end{DoxyParams}
+\hypertarget{sound_8h_a75623551f96d72bf6197f73b89d9dda9}{\index{sound.\-h@{sound.\-h}!bunny\-\_\-sound\-\_\-volume@{bunny\-\_\-sound\-\_\-volume}}
+\index{bunny\-\_\-sound\-\_\-volume@{bunny\-\_\-sound\-\_\-volume}!sound.h@{sound.\-h}}
+\subsubsection[{bunny\-\_\-sound\-\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-sound\-\_\-volume (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-sound} $\ast$}]{sound, }
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)}}\label{sound_8h_a75623551f96d72bf6197f73b89d9dda9}
+The bunny\-\_\-sound\-\_\-volume change the volume of the given sound. 
+\begin{DoxyParams}{Parameters}
+{\em sound} & The sound to modify \\
+\hline
+{\em volume} & A value between 0 and 100 \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,105 @@
+\hypertarget{classbpt_1_1_net_com_1_1_client}{\section{bpt\-:\-:Net\-Com\-:\-:Client Class Reference}
+\label{classbpt_1_1_net_com_1_1_client}\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}}
+}
+
+
+{\ttfamily \#include $<$Client.\-hpp$>$}
+
+Inheritance diagram for bpt\-:\-:Net\-Com\-:\-:Client\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classbpt_1_1_net_com_1_1_client}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacebpt_1_1_net_com_af30d27373a967c6e6bcbf97963e2ab1d}{Communication} \& \hyperlink{classbpt_1_1_net_com_1_1_client_ac1ed443aee7aa7c4c434b0cd5ed26c1b}{operator()} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_ndk_8cpp_a174cf046f3b5dbb1258515b3f138b8c7}{timeout}=0)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_client_ae27e9a6765cc0e25a6abaea38a05a4c3}{Write} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} size, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} client=U\-I\-N\-T\-\_\-\-M\-A\-X)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_client_acfd3008d02a4839aadf47ff3e0ad9d8b}{Start} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&host, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_client_abcdb2b699c881a5885384123434f0441}{Stop} (void)
+\item 
+\hyperlink{classbpt_1_1_net_com_1_1_client_aaf829171ed1256cafc6499c0152d0ab2}{Client} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&host=\char`\"{}\char`\"{}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port}=\char`\"{}\char`\"{})  throw (int)
+\item 
+\hyperlink{classbpt_1_1_net_com_1_1_client_ace12916401b5b4e341eb6825a0f4b240}{Client} (\hyperlink{namespacebpt_1_1_net_com_ae55ee05019d82af5d3cc17e7e0ebedff}{Packet\-Protocol} \hyperlink{classbpt_1_1_net_com_1_1_communicator_aac1e2e8c0b91c11f347c042e56f46041}{protocol}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&host=\char`\"{}\char`\"{}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port}=\char`\"{}\char`\"{})  throw (int)
+\item 
+virtual \hyperlink{classbpt_1_1_net_com_1_1_client_a472c00b03d911ffecebd3beb9310b491}{$\sim$\-Client} (void)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpt_1_1_net_com_1_1_client_aaf829171ed1256cafc6499c0152d0ab2}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!Client@{Client}}
+\index{Client@{Client}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}bpt\-::\-Net\-Com\-::\-Client\-::\-Client (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{host = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{{\bf const} std\-::string \&}]{port = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) throw  {\bf int}) }}\label{classbpt_1_1_net_com_1_1_client_aaf829171ed1256cafc6499c0152d0ab2}
+\hypertarget{classbpt_1_1_net_com_1_1_client_ace12916401b5b4e341eb6825a0f4b240}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!Client@{Client}}
+\index{Client@{Client}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}bpt\-::\-Net\-Com\-::\-Client\-::\-Client (
+\begin{DoxyParamCaption}
+\item[{{\bf Packet\-Protocol}}]{protocol, }
+\item[{{\bf const} std\-::string \&}]{host = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{{\bf const} std\-::string \&}]{port = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) throw  {\bf int}) }}\label{classbpt_1_1_net_com_1_1_client_ace12916401b5b4e341eb6825a0f4b240}
+\hypertarget{classbpt_1_1_net_com_1_1_client_a472c00b03d911ffecebd3beb9310b491}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!$\sim$\-Client@{$\sim$\-Client}}
+\index{$\sim$\-Client@{$\sim$\-Client}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{$\sim$\-Client}]{\setlength{\rightskip}{0pt plus 5cm}virtual bpt\-::\-Net\-Com\-::\-Client\-::$\sim$\-Client (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_client_a472c00b03d911ffecebd3beb9310b491}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpt_1_1_net_com_1_1_client_ac1ed443aee7aa7c4c434b0cd5ed26c1b}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!operator()@{operator()}}
+\index{operator()@{operator()}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf const} {\bf Communication}\& bpt\-::\-Net\-Com\-::\-Client\-::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{timeout = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_client_ac1ed443aee7aa7c4c434b0cd5ed26c1b}
+
+
+Implements \hyperlink{classbpt_1_1_net_com_1_1_communicator_ab7e2be99f24a3250c99b0c4230b73323}{bpt\-::\-Net\-Com\-::\-Communicator}.
+
+\hypertarget{classbpt_1_1_net_com_1_1_client_acfd3008d02a4839aadf47ff3e0ad9d8b}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!Start@{Start}}
+\index{Start@{Start}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Client\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{host, }
+\item[{{\bf const} std\-::string \&}]{port}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_client_acfd3008d02a4839aadf47ff3e0ad9d8b}
+\hypertarget{classbpt_1_1_net_com_1_1_client_abcdb2b699c881a5885384123434f0441}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!Stop@{Stop}}
+\index{Stop@{Stop}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Client\-::\-Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_client_abcdb2b699c881a5885384123434f0441}
+\hypertarget{classbpt_1_1_net_com_1_1_client_ae27e9a6765cc0e25a6abaea38a05a4c3}{\index{bpt\-::\-Net\-Com\-::\-Client@{bpt\-::\-Net\-Com\-::\-Client}!Write@{Write}}
+\index{Write@{Write}!bpt::NetCom::Client@{bpt\-::\-Net\-Com\-::\-Client}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Client\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{size, }
+\item[{{\bf unsigned} {\bf int}}]{client = {\ttfamily UINT\-\_\-MAX}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_client_ae27e9a6765cc0e25a6abaea38a05a4c3}
+
+
+Implements \hyperlink{classbpt_1_1_net_com_1_1_communicator_a4c405127bb3b4ce96506a4750568d075}{bpt\-::\-Net\-Com\-::\-Communicator}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_client_8hpp}{Client.\-hpp}\end{DoxyCompactItemize}

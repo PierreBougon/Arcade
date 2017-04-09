@@ -1,0 +1,204 @@
+\hypertarget{database_8h}{\section{lib/lapin/dep/lapin/database.h File Reference}
+\label{database_8h}\index{lib/lapin/dep/lapin/database.\-h@{lib/lapin/dep/lapin/database.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__database}{s\-\_\-bunny\-\_\-database}
+\item 
+struct \hyperlink{structs__bunny__database__iterator}{s\-\_\-bunny\-\_\-database\-\_\-iterator}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__database}{s\-\_\-bunny\-\_\-database} \hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database}
+\item 
+typedef struct \\*
+\hyperlink{structs__bunny__database__iterator}{s\-\_\-bunny\-\_\-database\-\_\-iterator} \hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$ \hyperlink{database_8h_ad5ca34e3290b06b86723749c49d0bf1e}{bunny\-\_\-new\-\_\-database} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$url, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$login, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$password)
+\item 
+void \hyperlink{database_8h_ae7b076ff10ccf046cfc19f7ac9e5bbc5}{bunny\-\_\-delete\-\_\-database} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{database_8h_adb5e715b70170d7de60d66dc589dcf70}{bunny\-\_\-database\-\_\-select} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$db\-\_\-name)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{database_8h_a43e8b42082a0ee2bf010435bda86b1a0}{bunny\-\_\-database\-\_\-query} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$request)
+\item 
+\hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$ \hyperlink{database_8h_ae0a5f1b65c86133799e623c77b3d4e91}{bunny\-\_\-database\-\_\-first} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db)
+\item 
+\hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$ \hyperlink{database_8h_ad179dc85e1817086d2677a599dbb32ba}{bunny\-\_\-database\-\_\-next} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$it)
+\item 
+\hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$ \hyperlink{database_8h_a99e786c30f750880cb43dbe5b55f65e3}{bunny\-\_\-database\-\_\-end} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{database_8h_ab457d271dee7e5dd7245eada66c0511f}{bunny\-\_\-database\-\_\-get} (\hyperlink{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{t\-\_\-bunny\-\_\-database} $\ast$db, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{database_8h_a97503de4454c545eecefaf29f8486692}{t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$it, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The database module is useful to talk with a My\-S\-Q\-L database server. It wraps the My\-S\-Q\-L client library.
+
+/!\textbackslash{} D\-O\-E\-S N\-O\-T W\-O\-R\-K Y\-E\-T /!\textbackslash{} 
+
+\subsection{Typedef Documentation}
+\hypertarget{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}{\index{database.\-h@{database.\-h}!t\-\_\-bunny\-\_\-database@{t\-\_\-bunny\-\_\-database}}
+\index{t\-\_\-bunny\-\_\-database@{t\-\_\-bunny\-\_\-database}!database.h@{database.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-database}				 {\bf t\-\_\-bunny\-\_\-database}}}\label{database_8h_a83c5fb7da44200b4ebfc98c2158919a9}
+The t\-\_\-bunny\-\_\-database structure contains datas that were used to open the communication with the database server.
+\begin{DoxyItemize}
+\item The first field is private and should not be modified.
+\item The url is where your database is. It can be an I\-P or \char`\"{}localhost\char`\"{}.
+\item The login and password fields are the login and password that were used to connect to the database.
+\item The database field is the database chosen inside the database system, the one you will browse and edit. 
+\end{DoxyItemize}\hypertarget{database_8h_a97503de4454c545eecefaf29f8486692}{\index{database.\-h@{database.\-h}!t\-\_\-bunny\-\_\-database\-\_\-iterator@{t\-\_\-bunny\-\_\-database\-\_\-iterator}}
+\index{t\-\_\-bunny\-\_\-database\-\_\-iterator@{t\-\_\-bunny\-\_\-database\-\_\-iterator}!database.h@{database.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-database\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-database\-\_\-iterator}				 {\bf t\-\_\-bunny\-\_\-database\-\_\-iterator}}}\label{database_8h_a97503de4454c545eecefaf29f8486692}
+The t\-\_\-bunny\-\_\-database\-\_\-iterator is the structure that will be used to browse the results of a database query. The first field is the index that is currently browse. The nbr\-\_\-rows field is maximum index + 1. The data is the retrieved from database data. 
+
+\subsection{Function Documentation}
+\hypertarget{database_8h_a99e786c30f750880cb43dbe5b55f65e3}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-end@{bunny\-\_\-database\-\_\-end}}
+\index{bunny\-\_\-database\-\_\-end@{bunny\-\_\-database\-\_\-end}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-database\-\_\-iterator}$\ast$ bunny\-\_\-database\-\_\-end (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{database_8h_a99e786c30f750880cb43dbe5b55f65e3}
+Return the last iterator. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-He last iterator. 
+\end{DoxyReturn}
+\hypertarget{database_8h_ae0a5f1b65c86133799e623c77b3d4e91}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-first@{bunny\-\_\-database\-\_\-first}}
+\index{bunny\-\_\-database\-\_\-first@{bunny\-\_\-database\-\_\-first}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-database\-\_\-iterator}$\ast$ bunny\-\_\-database\-\_\-first (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{database_8h_ae0a5f1b65c86133799e623c77b3d4e91}
+Get the first returned by the database server value. (We assume that you sent a S\-E\-L\-E\-C\-T query with bunny\-\_\-database\-\_\-query before).
+
+This is the way\-:
+
+bunny\-\_\-databas\-\_\-query(db, ...); for (it = bunny\-\_\-database\-\_\-first(db); it != bunny\-\_\-database\-\_\-end(db); it = bunny\-\_\-database\-\_\-next(db, it)) \{\}
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to the first value. 
+\end{DoxyReturn}
+\hypertarget{database_8h_ab457d271dee7e5dd7245eada66c0511f}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-get@{bunny\-\_\-database\-\_\-get}}
+\index{bunny\-\_\-database\-\_\-get@{bunny\-\_\-database\-\_\-get}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-database\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$}]{it, }
+\item[{{\bf const} char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{database_8h_ab457d271dee7e5dd7245eada66c0511f}
+Get the value that is associated with the sent name. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+{\em it} & An iterator to a database value \\
+\hline
+{\em name} & The name of the field you want to fetch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The requested value or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{database_8h_ad179dc85e1817086d2677a599dbb32ba}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-next@{bunny\-\_\-database\-\_\-next}}
+\index{bunny\-\_\-database\-\_\-next@{bunny\-\_\-database\-\_\-next}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-database\-\_\-iterator}$\ast$ bunny\-\_\-database\-\_\-next (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-database\-\_\-iterator} $\ast$}]{it}
+\end{DoxyParamCaption}
+)}}\label{database_8h_ad179dc85e1817086d2677a599dbb32ba}
+Get the next returned by the database server value. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+{\em it} & The current value, that was returned by bunny\-\_\-database\-\_\-first or bunny\-\_\-database\-\_\-next. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator to the next value. 
+\end{DoxyReturn}
+\hypertarget{database_8h_a43e8b42082a0ee2bf010435bda86b1a0}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-query@{bunny\-\_\-database\-\_\-query}}
+\index{bunny\-\_\-database\-\_\-query@{bunny\-\_\-database\-\_\-query}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-database\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db, }
+\item[{{\bf const} char $\ast$}]{request}
+\end{DoxyParamCaption}
+)}}\label{database_8h_a43e8b42082a0ee2bf010435bda86b1a0}
+Send a S\-Q\-L query to the database server. It could be any My\-S\-Q\-L valid S\-Q\-L request. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+{\em request} & An S\-Q\-L request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well. False on the other case. 
+\end{DoxyReturn}
+\hypertarget{database_8h_adb5e715b70170d7de60d66dc589dcf70}{\index{database.\-h@{database.\-h}!bunny\-\_\-database\-\_\-select@{bunny\-\_\-database\-\_\-select}}
+\index{bunny\-\_\-database\-\_\-select@{bunny\-\_\-database\-\_\-select}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-database\-\_\-select}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-database\-\_\-select (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db, }
+\item[{{\bf const} char $\ast$}]{db\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{database_8h_adb5e715b70170d7de60d66dc589dcf70}
+Select a specific database on the database server for future queries. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server. \\
+\hline
+{\em db\-\_\-name} & The name of the database to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well. False on the other case. 
+\end{DoxyReturn}
+\hypertarget{database_8h_ae7b076ff10ccf046cfc19f7ac9e5bbc5}{\index{database.\-h@{database.\-h}!bunny\-\_\-delete\-\_\-database@{bunny\-\_\-delete\-\_\-database}}
+\index{bunny\-\_\-delete\-\_\-database@{bunny\-\_\-delete\-\_\-database}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-database (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-database} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{database_8h_ae7b076ff10ccf046cfc19f7ac9e5bbc5}
+Disconnect from the sent database server. 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database server to disconnect from. \\
+\hline
+\end{DoxyParams}
+\hypertarget{database_8h_ad5ca34e3290b06b86723749c49d0bf1e}{\index{database.\-h@{database.\-h}!bunny\-\_\-new\-\_\-database@{bunny\-\_\-new\-\_\-database}}
+\index{bunny\-\_\-new\-\_\-database@{bunny\-\_\-new\-\_\-database}!database.h@{database.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-database}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-database}$\ast$ bunny\-\_\-new\-\_\-database (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{url, }
+\item[{{\bf const} char $\ast$}]{login, }
+\item[{{\bf const} char $\ast$}]{password}
+\end{DoxyParamCaption}
+)}}\label{database_8h_ad5ca34e3290b06b86723749c49d0bf1e}
+Open a communicaton with the database server. 
+\begin{DoxyParams}{Parameters}
+{\em url} & Where is the database? Can be a domain, an I\-P or \char`\"{}localhost\char`\"{}. \\
+\hline
+{\em login} & The login to send to the database server. \\
+\hline
+{\em password} & The password to use with the database server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A structure gathering these informations on success, N\-U\-L\-L on error. 
+\end{DoxyReturn}

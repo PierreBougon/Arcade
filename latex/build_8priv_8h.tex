@@ -1,0 +1,66 @@
+\hypertarget{build_8priv_8h}{\section{lib/ndk/dep/build.priv.\-h File Reference}
+\label{build_8priv_8h}\index{lib/ndk/dep/build.\-priv.\-h@{lib/ndk/dep/build.\-priv.\-h}}
+}
+{\ttfamily \#include $<$ncurses\-\_\-dll.\-h$>$}\\*
+{\ttfamily \#include $<$ncurses\-\_\-cfg.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$curses.\-h$>$}\\*
+{\ttfamily \#include $<$nc\-\_\-alloc.\-h$>$}\\*
+{\ttfamily \#include $<$nc\-\_\-string.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{build_8priv_8h_a287312187727602974c1d34fcedfce9d}{M\-O\-D\-U\-L\-E\-\_\-\-I\-D}(id)~/$\ast$nothing$\ast$/
+\item 
+\#define \hyperlink{build_8priv_8h_a687984f47d8cce148d1b914d2b79612a}{E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0
+\item 
+\#define \hyperlink{build_8priv_8h_a73efe787c131b385070f25d18b7c9aa4}{E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}~1
+\item 
+\#define \hyperlink{build_8priv_8h_aa67a933733d1bcf84f15d68c6d75fe40}{Free\-And\-Null}(p)~free(p); p = 0
+\item 
+\#define \hyperlink{build_8priv_8h_a195344b6afd8e743ad84ff9d963c44be}{U\-Char}(c)~((\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char)(c))
+\item 
+\#define \hyperlink{build_8priv_8h_ac01cdf29d88c23c80a382517c5387413}{S\-I\-Z\-E\-O\-F}(v)~(sizeof(v) / sizeof(v\mbox{[}0\mbox{]}))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{build_8priv_8h_a73efe787c131b385070f25d18b7c9aa4}{\index{build.\-priv.\-h@{build.\-priv.\-h}!E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E@{E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}}
+\index{E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E@{E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E~1}}\label{build_8priv_8h_a73efe787c131b385070f25d18b7c9aa4}
+\hypertarget{build_8priv_8h_a687984f47d8cce148d1b914d2b79612a}{\index{build.\-priv.\-h@{build.\-priv.\-h}!E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S@{E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S}}
+\index{E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S@{E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S~0}}\label{build_8priv_8h_a687984f47d8cce148d1b914d2b79612a}
+\hypertarget{build_8priv_8h_aa67a933733d1bcf84f15d68c6d75fe40}{\index{build.\-priv.\-h@{build.\-priv.\-h}!Free\-And\-Null@{Free\-And\-Null}}
+\index{Free\-And\-Null@{Free\-And\-Null}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{Free\-And\-Null}]{\setlength{\rightskip}{0pt plus 5cm}\#define Free\-And\-Null(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~free(p); p = 0}}\label{build_8priv_8h_aa67a933733d1bcf84f15d68c6d75fe40}
+\hypertarget{build_8priv_8h_a287312187727602974c1d34fcedfce9d}{\index{build.\-priv.\-h@{build.\-priv.\-h}!M\-O\-D\-U\-L\-E\-\_\-\-I\-D@{M\-O\-D\-U\-L\-E\-\_\-\-I\-D}}
+\index{M\-O\-D\-U\-L\-E\-\_\-\-I\-D@{M\-O\-D\-U\-L\-E\-\_\-\-I\-D}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{M\-O\-D\-U\-L\-E\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-U\-L\-E\-\_\-\-I\-D(
+\begin{DoxyParamCaption}
+\item[{}]{id}
+\end{DoxyParamCaption}
+)~/$\ast$nothing$\ast$/}}\label{build_8priv_8h_a287312187727602974c1d34fcedfce9d}
+\hypertarget{build_8priv_8h_ac01cdf29d88c23c80a382517c5387413}{\index{build.\-priv.\-h@{build.\-priv.\-h}!S\-I\-Z\-E\-O\-F@{S\-I\-Z\-E\-O\-F}}
+\index{S\-I\-Z\-E\-O\-F@{S\-I\-Z\-E\-O\-F}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{S\-I\-Z\-E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I\-Z\-E\-O\-F(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~(sizeof(v) / sizeof(v\mbox{[}0\mbox{]}))}}\label{build_8priv_8h_ac01cdf29d88c23c80a382517c5387413}
+\hypertarget{build_8priv_8h_a195344b6afd8e743ad84ff9d963c44be}{\index{build.\-priv.\-h@{build.\-priv.\-h}!U\-Char@{U\-Char}}
+\index{U\-Char@{U\-Char}!build.priv.h@{build.\-priv.\-h}}
+\subsubsection[{U\-Char}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-Char(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(({\bf unsigned} char)(c))}}\label{build_8priv_8h_a195344b6afd8e743ad84ff9d963c44be}

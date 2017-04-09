@@ -1,0 +1,59 @@
+\hypertarget{structs__bunny__hardware}{\section{s\-\_\-bunny\-\_\-hardware Struct Reference}
+\label{structs__bunny__hardware}\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}}
+}
+
+
+{\ttfamily \#include $<$hardware.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{structs__bunny__hardware_add026ee96be41faf560395aa39d3fe25}{\-\_\-private}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{structs__bunny__hardware_ac432cb9537587d721684ef22d95e2a8d}{id}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{structs__bunny__hardware_a7967f0f90cb718e96c5ed76ce6666fb5}{digital\-\_\-inputs} \mbox{[}5\mbox{]}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} double \hyperlink{structs__bunny__hardware_a19dd432d40c86ff1cb5931b0d5c344c6}{analog\-\_\-inputs} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{structs__bunny__hardware_af94bf845a369eaba768f4658c2441103}{digital\-\_\-outputs} \mbox{[}8\mbox{]}
+\item 
+double \hyperlink{structs__bunny__hardware_a333c865cf78646f7ed3c25d99f85840c}{analog\-\_\-outputs} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-hardware structure contains informations and buffers useful to handle the board.
+
+It starts with a private field.
+
+The id match the id of the board, that can be configured thanks to a jumper.
+
+The digital\-\_\-inputs and analog\-\_\-inputs are set by the bunny\-\_\-hardware\-\_\-read function and match the electronic state of the board. Digital inputs are boolean while analog\-\_\-inputs are double. The value of these double can vary between 0 and 5, matching the electronic states that can vary between 0 and 5 volts.
+
+The digital\-\_\-outputs and analog\-\_\-outputs are written on the board thanks to 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__hardware_add026ee96be41faf560395aa39d3fe25}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!\-\_\-private@{\-\_\-private}}
+\index{\-\_\-private@{\-\_\-private}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{\-\_\-private}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} void$\ast$ {\bf const} s\-\_\-bunny\-\_\-hardware\-::\-\_\-private}}\label{structs__bunny__hardware_add026ee96be41faf560395aa39d3fe25}
+\hypertarget{structs__bunny__hardware_a19dd432d40c86ff1cb5931b0d5c344c6}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!analog\-\_\-inputs@{analog\-\_\-inputs}}
+\index{analog\-\_\-inputs@{analog\-\_\-inputs}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{analog\-\_\-inputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} double s\-\_\-bunny\-\_\-hardware\-::analog\-\_\-inputs\mbox{[}2\mbox{]}}}\label{structs__bunny__hardware_a19dd432d40c86ff1cb5931b0d5c344c6}
+\hypertarget{structs__bunny__hardware_a333c865cf78646f7ed3c25d99f85840c}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!analog\-\_\-outputs@{analog\-\_\-outputs}}
+\index{analog\-\_\-outputs@{analog\-\_\-outputs}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{analog\-\_\-outputs}]{\setlength{\rightskip}{0pt plus 5cm}double s\-\_\-bunny\-\_\-hardware\-::analog\-\_\-outputs\mbox{[}2\mbox{]}}}\label{structs__bunny__hardware_a333c865cf78646f7ed3c25d99f85840c}
+\hypertarget{structs__bunny__hardware_a7967f0f90cb718e96c5ed76ce6666fb5}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!digital\-\_\-inputs@{digital\-\_\-inputs}}
+\index{digital\-\_\-inputs@{digital\-\_\-inputs}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{digital\-\_\-inputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf bool} s\-\_\-bunny\-\_\-hardware\-::digital\-\_\-inputs\mbox{[}5\mbox{]}}}\label{structs__bunny__hardware_a7967f0f90cb718e96c5ed76ce6666fb5}
+\hypertarget{structs__bunny__hardware_af94bf845a369eaba768f4658c2441103}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!digital\-\_\-outputs@{digital\-\_\-outputs}}
+\index{digital\-\_\-outputs@{digital\-\_\-outputs}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{digital\-\_\-outputs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} s\-\_\-bunny\-\_\-hardware\-::digital\-\_\-outputs\mbox{[}8\mbox{]}}}\label{structs__bunny__hardware_af94bf845a369eaba768f4658c2441103}
+\hypertarget{structs__bunny__hardware_ac432cb9537587d721684ef22d95e2a8d}{\index{s\-\_\-bunny\-\_\-hardware@{s\-\_\-bunny\-\_\-hardware}!id@{id}}
+\index{id@{id}!s_bunny_hardware@{s\-\_\-bunny\-\_\-hardware}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf int} s\-\_\-bunny\-\_\-hardware\-::id}}\label{structs__bunny__hardware_ac432cb9537587d721684ef22d95e2a8d}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{hardware_8h}{hardware.\-h}\end{DoxyCompactItemize}

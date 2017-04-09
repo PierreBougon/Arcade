@@ -1,0 +1,333 @@
+\hypertarget{classarcade_1_1_centipede_game}{\section{arcade\-:\-:Centipede\-Game Class Reference}
+\label{classarcade_1_1_centipede_game}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}
+}
+
+
+{\ttfamily \#include $<$Centipede\-Game.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Centipede\-Game\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_centipede_game}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8f}{Centipede\-Layers} \{ \\*
+\hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8faca10410ec8102d60b32283df8d7dace9}{L\-A\-Y\-E\-R0} = 0, 
+\hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa7d13720deac2c6e502be9d91ac3392f2}{P\-L\-A\-Y\-E\-R}, 
+\hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa2bfe1247c94537aa74ce4c70a7b363fa}{B\-U\-L\-L\-E\-T}, 
+\hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fab8a9d80312c280dd9c27c9d0cf438ced}{C\-E\-N\-T\-I\-P\-E\-D\-E}, 
+\\*
+\hyperlink{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa1d2a49c31d0b3918fd4810e04852510a}{L\-A\-S\-T\-L\-A\-Y\-E\-R}
+ \}
+\item 
+enum \hyperlink{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deb}{Centipede\-Sprites} \{ \hyperlink{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba1189697ac20bc79854e29761e3edaa51}{K\-I\-L\-L\-E\-R} = 0, 
+\hyperlink{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba4dfc69722f3746fced8bbb615eb26e81}{M\-U\-S\-H\-R\-O\-O\-M}, 
+\hyperlink{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba65e084ee4d8cdea1e9d04beae682319c}{B\-O\-D\-Y}, 
+\hyperlink{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88debaa48cbd57f6e157a52d123a52dbaa533f}{F\-I\-R\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_centipede_game_a64aa08384005ddb8bf7e20f428f6e673}{$\sim$\-Centipede\-Game} ()
+\item 
+\hyperlink{classarcade_1_1_centipede_game_ab657a35b7e6c2ba40d06e583a4338b9f}{Centipede\-Game} ()
+\item 
+\hyperlink{namespacearcade_a6adca89ee2f539b03980c7e59b044ed7}{Game\-State} \hyperlink{classarcade_1_1_centipede_game_adc81b3a7d8b3ad4a769233bcc80b3ede}{get\-Game\-State} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Ask the current game state to the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_centipede_game_ae3467cae4763f49f4c3db90c9dbf616b}{notify\-Event} (std\-::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&\&events)
+\begin{DoxyCompactList}\small\item\em Send events (keyboard, mouse, etc) to the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_centipede_game_ad7fa625646fcfc7051c8338ebaa7d41c}{notify\-Network} (std\-::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\-Packet} $>$ \&\&events)
+\begin{DoxyCompactList}\small\item\em Send network packets to the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_centipede_game_a0516faa09b8bd5019bc676fb8095ebf0}{process} ()
+\begin{DoxyCompactList}\small\item\em Make the game process a game loop. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classarcade_1_1_i_map}{I\-Map} \& \hyperlink{classarcade_1_1_centipede_game_a08e07d3f7c64a0ef1dc0ca7782433225}{get\-Current\-Map} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the current version of the map. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classarcade_1_1_map}{Map} \& \hyperlink{classarcade_1_1_centipede_game_a13c9afca767a3660ddc6f9f887541eb6}{get\-Mouli\-Map} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{classarcade_1_1_i_g_u_i}{I\-G\-U\-I} \& \hyperlink{classarcade_1_1_centipede_game_af13a64c23ce392cb49da2df7ac520581}{get\-G\-U\-I} ()
+\begin{DoxyCompactList}\small\item\em Get the current version of the G\-U\-I to display. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{structarcade_1_1_network_packet}{Network\-Packet} $>$ \hyperlink{classarcade_1_1_centipede_game_ac15ad3e47e29f57c3adc4a2fcc71821f}{get\-Network\-To\-Send} ()
+\begin{DoxyCompactList}\small\item\em Get the network packet to send from the game to the server. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{classarcade_1_1_i_sprite}{I\-Sprite} $>$ $>$ \hyperlink{classarcade_1_1_centipede_game_a9f7172352ba26e86c0605b40a4ed1231}{get\-Sprites\-To\-Load} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em get the list of sprites to load for this game \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::pair\\*
+$<$ std\-::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\-Type} $>$ $>$ \hyperlink{classarcade_1_1_centipede_game_a6b8ba2608713f0ff32a2624e346f6206}{get\-Sounds\-To\-Load} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em get the list of sound files to load for this game \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{structarcade_1_1_sound}{Sound} $>$ \hyperlink{classarcade_1_1_centipede_game_ac5325cf0d8e5e00c6a9241865183d55b}{get\-Sounds\-To\-Play} ()
+\begin{DoxyCompactList}\small\item\em Get the sounds to play You should return by std\-::move to not copy your vector and to clear it at the same time. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \& \hyperlink{classarcade_1_1_centipede_game_a37b28cea0f4989de09dbb94ad843ab7f}{get\-Playerpos} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{namespacearcade_a0310f1a25932c12488a64333351f88f6}{tick\-\_\-t} \hyperlink{classarcade_1_1_centipede_game_adb4c2b9b2b45aac64b6a460ba6b0f5ba}{get\-Tick\-Rate} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_centipede_game_aaa007b0b45cf5abd268d41915db5c914}{has\-Network} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} override
+\begin{DoxyCompactList}\small\item\em Does this game support network ? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_centipede_game_a85162871e41eff0a32942de54c07d851}{shot}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_centipede_game_aa8436e95e4b81e44c0b89f07f43fc2bb}{alive}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8f}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!Centipede\-Layers@{Centipede\-Layers}}
+\index{Centipede\-Layers@{Centipede\-Layers}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{Centipede\-Layers}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf arcade\-::\-Centipede\-Game\-::\-Centipede\-Layers}}}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\-A\-Y\-E\-R0@{L\-A\-Y\-E\-R0}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!L\-A\-Y\-E\-R0@{L\-A\-Y\-E\-R0}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8faca10410ec8102d60b32283df8d7dace9}{L\-A\-Y\-E\-R0}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8faca10410ec8102d60b32283df8d7dace9}
+}]\index{P\-L\-A\-Y\-E\-R@{P\-L\-A\-Y\-E\-R}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!P\-L\-A\-Y\-E\-R@{P\-L\-A\-Y\-E\-R}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa7d13720deac2c6e502be9d91ac3392f2}{P\-L\-A\-Y\-E\-R}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa7d13720deac2c6e502be9d91ac3392f2}
+}]\index{B\-U\-L\-L\-E\-T@{B\-U\-L\-L\-E\-T}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!B\-U\-L\-L\-E\-T@{B\-U\-L\-L\-E\-T}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa2bfe1247c94537aa74ce4c70a7b363fa}{B\-U\-L\-L\-E\-T}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa2bfe1247c94537aa74ce4c70a7b363fa}
+}]\index{C\-E\-N\-T\-I\-P\-E\-D\-E@{C\-E\-N\-T\-I\-P\-E\-D\-E}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!C\-E\-N\-T\-I\-P\-E\-D\-E@{C\-E\-N\-T\-I\-P\-E\-D\-E}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fab8a9d80312c280dd9c27c9d0cf438ced}{C\-E\-N\-T\-I\-P\-E\-D\-E}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fab8a9d80312c280dd9c27c9d0cf438ced}
+}]\index{L\-A\-S\-T\-L\-A\-Y\-E\-R@{L\-A\-S\-T\-L\-A\-Y\-E\-R}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!L\-A\-S\-T\-L\-A\-Y\-E\-R@{L\-A\-S\-T\-L\-A\-Y\-E\-R}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa1d2a49c31d0b3918fd4810e04852510a}{L\-A\-S\-T\-L\-A\-Y\-E\-R}\label{classarcade_1_1_centipede_game_a8e150013dbaeb7bd9d9e5cb2cd3b8c8fa1d2a49c31d0b3918fd4810e04852510a}
+}]\end{description}
+\end{Desc}
+\hypertarget{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deb}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!Centipede\-Sprites@{Centipede\-Sprites}}
+\index{Centipede\-Sprites@{Centipede\-Sprites}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{Centipede\-Sprites}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf arcade\-::\-Centipede\-Game\-::\-Centipede\-Sprites}}}\label{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{K\-I\-L\-L\-E\-R@{K\-I\-L\-L\-E\-R}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!K\-I\-L\-L\-E\-R@{K\-I\-L\-L\-E\-R}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba1189697ac20bc79854e29761e3edaa51}{K\-I\-L\-L\-E\-R}\label{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba1189697ac20bc79854e29761e3edaa51}
+}]\index{M\-U\-S\-H\-R\-O\-O\-M@{M\-U\-S\-H\-R\-O\-O\-M}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!M\-U\-S\-H\-R\-O\-O\-M@{M\-U\-S\-H\-R\-O\-O\-M}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba4dfc69722f3746fced8bbb615eb26e81}{M\-U\-S\-H\-R\-O\-O\-M}\label{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba4dfc69722f3746fced8bbb615eb26e81}
+}]\index{B\-O\-D\-Y@{B\-O\-D\-Y}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!B\-O\-D\-Y@{B\-O\-D\-Y}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba65e084ee4d8cdea1e9d04beae682319c}{B\-O\-D\-Y}\label{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88deba65e084ee4d8cdea1e9d04beae682319c}
+}]\index{F\-I\-R\-E@{F\-I\-R\-E}!arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}}\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!F\-I\-R\-E@{F\-I\-R\-E}}\item[{\em 
+\hypertarget{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88debaa48cbd57f6e157a52d123a52dbaa533f}{F\-I\-R\-E}\label{classarcade_1_1_centipede_game_aa78ea4d05806fef42a3ea01c50a88debaa48cbd57f6e157a52d123a52dbaa533f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_centipede_game_a64aa08384005ddb8bf7e20f428f6e673}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!$\sim$\-Centipede\-Game@{$\sim$\-Centipede\-Game}}
+\index{$\sim$\-Centipede\-Game@{$\sim$\-Centipede\-Game}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{$\sim$\-Centipede\-Game}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Centipede\-Game\-::$\sim$\-Centipede\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_game_a64aa08384005ddb8bf7e20f428f6e673}
+\hypertarget{classarcade_1_1_centipede_game_ab657a35b7e6c2ba40d06e583a4338b9f}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!Centipede\-Game@{Centipede\-Game}}
+\index{Centipede\-Game@{Centipede\-Game}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{Centipede\-Game}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Centipede\-Game\-::\-Centipede\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_centipede_game_ab657a35b7e6c2ba40d06e583a4338b9f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_centipede_game_a08e07d3f7c64a0ef1dc0ca7782433225}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Current\-Map@{get\-Current\-Map}}
+\index{get\-Current\-Map@{get\-Current\-Map}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Current\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-I\-Map} \& arcade\-::\-Centipede\-Game\-::get\-Current\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_a08e07d3f7c64a0ef1dc0ca7782433225}
+
+
+Get the current version of the map. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_ac3906ee9bb340b92ddc3ef2a9c61a6cc}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_adc81b3a7d8b3ad4a769233bcc80b3ede}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Game\-State@{get\-Game\-State}}
+\index{get\-Game\-State@{get\-Game\-State}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Game\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Game\-State} arcade\-::\-Centipede\-Game\-::get\-Game\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_adc81b3a7d8b3ad4a769233bcc80b3ede}
+
+
+Ask the current game state to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a75083f0465c0ccbdbbb38c689b4a694c}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_af13a64c23ce392cb49da2df7ac520581}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-G\-U\-I@{get\-G\-U\-I}}
+\index{get\-G\-U\-I@{get\-G\-U\-I}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-G\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-I\-G\-U\-I} \& arcade\-::\-Centipede\-Game\-::get\-G\-U\-I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_af13a64c23ce392cb49da2df7ac520581}
+
+
+Get the current version of the G\-U\-I to display. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_abe849a6ed370a18de51bc8cb7a2329ba}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_a13c9afca767a3660ddc6f9f887541eb6}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Mouli\-Map@{get\-Mouli\-Map}}
+\index{get\-Mouli\-Map@{get\-Mouli\-Map}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Mouli\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Map} \& arcade\-::\-Centipede\-Game\-::get\-Mouli\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_centipede_game_a13c9afca767a3660ddc6f9f887541eb6}
+\hypertarget{classarcade_1_1_centipede_game_ac15ad3e47e29f57c3adc4a2fcc71821f}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Network\-To\-Send@{get\-Network\-To\-Send}}
+\index{get\-Network\-To\-Send@{get\-Network\-To\-Send}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Network\-To\-Send}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf arcade\-::\-Network\-Packet} $>$ arcade\-::\-Centipede\-Game\-::get\-Network\-To\-Send (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_ac15ad3e47e29f57c3adc4a2fcc71821f}
+
+
+Get the network packet to send from the game to the server. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a5aa80dfdb3c1881fbc749e3d53efc6f8}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_a37b28cea0f4989de09dbb94ad843ab7f}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Playerpos@{get\-Playerpos}}
+\index{get\-Playerpos@{get\-Playerpos}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Playerpos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Vector2s} \& arcade\-::\-Centipede\-Game\-::get\-Playerpos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_centipede_game_a37b28cea0f4989de09dbb94ad843ab7f}
+\hypertarget{classarcade_1_1_centipede_game_a6b8ba2608713f0ff32a2624e346f6206}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Sounds\-To\-Load@{get\-Sounds\-To\-Load}}
+\index{get\-Sounds\-To\-Load@{get\-Sounds\-To\-Load}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Sounds\-To\-Load}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::pair$<$ std\-::string, {\bf arcade\-::\-Sound\-Type} $>$ $>$ arcade\-::\-Centipede\-Game\-::get\-Sounds\-To\-Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_a6b8ba2608713f0ff32a2624e346f6206}
+
+
+get the list of sound files to load for this game 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a0b66cd9ef3b5cd0dff95debb7e4f594e}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_ac5325cf0d8e5e00c6a9241865183d55b}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Sounds\-To\-Play@{get\-Sounds\-To\-Play}}
+\index{get\-Sounds\-To\-Play@{get\-Sounds\-To\-Play}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Sounds\-To\-Play}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf arcade\-::\-Sound} $>$ arcade\-::\-Centipede\-Game\-::get\-Sounds\-To\-Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_ac5325cf0d8e5e00c6a9241865183d55b}
+
+
+Get the sounds to play You should return by std\-::move to not copy your vector and to clear it at the same time. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a88b3c7efb13780cdbbdf5b879a18ed4d}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_a9f7172352ba26e86c0605b40a4ed1231}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Sprites\-To\-Load@{get\-Sprites\-To\-Load}}
+\index{get\-Sprites\-To\-Load@{get\-Sprites\-To\-Load}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Sprites\-To\-Load}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::unique\-\_\-ptr$<$ {\bf arcade\-::\-I\-Sprite} $>$ $>$ arcade\-::\-Centipede\-Game\-::get\-Sprites\-To\-Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_a9f7172352ba26e86c0605b40a4ed1231}
+
+
+get the list of sprites to load for this game 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a2d0dc7c78a68c4dd0359911775993f68}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_adb4c2b9b2b45aac64b6a460ba6b0f5ba}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!get\-Tick\-Rate@{get\-Tick\-Rate}}
+\index{get\-Tick\-Rate@{get\-Tick\-Rate}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{get\-Tick\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tick\-\_\-t} arcade\-::\-Centipede\-Game\-::get\-Tick\-Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_centipede_game_adb4c2b9b2b45aac64b6a460ba6b0f5ba}
+\hypertarget{classarcade_1_1_centipede_game_aaa007b0b45cf5abd268d41915db5c914}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!has\-Network@{has\-Network}}
+\index{has\-Network@{has\-Network}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{has\-Network}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Centipede\-Game\-::has\-Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_aaa007b0b45cf5abd268d41915db5c914}
+
+
+Does this game support network ? 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_ae66bf253e252f43ce17d9e94f08a1d1c}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_ae3467cae4763f49f4c3db90c9dbf616b}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!notify\-Event@{notify\-Event}}
+\index{notify\-Event@{notify\-Event}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{notify\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-Game\-::notify\-Event (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Event} $>$ \&\&}]{events}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_ae3467cae4763f49f4c3db90c9dbf616b}
+
+
+Send events (keyboard, mouse, etc) to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_a37d164b4052fa3c28256fb0bf0002876}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_ad7fa625646fcfc7051c8338ebaa7d41c}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!notify\-Network@{notify\-Network}}
+\index{notify\-Network@{notify\-Network}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{notify\-Network}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-Game\-::notify\-Network (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Network\-Packet} $>$ \&\&}]{events}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_ad7fa625646fcfc7051c8338ebaa7d41c}
+
+
+Send network packets to the game. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_aaf375290947abf3db32d966facbfacf3}{arcade\-::\-I\-Game}.
+
+\hypertarget{classarcade_1_1_centipede_game_a0516faa09b8bd5019bc676fb8095ebf0}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!process@{process}}
+\index{process@{process}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Centipede\-Game\-::process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_centipede_game_a0516faa09b8bd5019bc676fb8095ebf0}
+
+
+Make the game process a game loop. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_game_af0111a41083f38a1af1a7f94287e6e77}{arcade\-::\-I\-Game}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classarcade_1_1_centipede_game_aa8436e95e4b81e44c0b89f07f43fc2bb}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!alive@{alive}}
+\index{alive@{alive}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{alive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Centipede\-Game\-::alive}}\label{classarcade_1_1_centipede_game_aa8436e95e4b81e44c0b89f07f43fc2bb}
+\hypertarget{classarcade_1_1_centipede_game_a85162871e41eff0a32942de54c07d851}{\index{arcade\-::\-Centipede\-Game@{arcade\-::\-Centipede\-Game}!shot@{shot}}
+\index{shot@{shot}!arcade::CentipedeGame@{arcade\-::\-Centipede\-Game}}
+\subsubsection[{shot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Centipede\-Game\-::shot}}\label{classarcade_1_1_centipede_game_a85162871e41eff0a32942de54c07d851}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/centipede/include/\hyperlink{_centipede_game_8hpp}{Centipede\-Game.\-hpp}\item 
+games/centipede/src/\hyperlink{_centipede_game_8cpp}{Centipede\-Game.\-cpp}\end{DoxyCompactItemize}

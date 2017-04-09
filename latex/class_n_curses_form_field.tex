@@ -1,0 +1,390 @@
+\hypertarget{class_n_curses_form_field}{\section{N\-Curses\-Form\-Field Class Reference}
+\label{class_n_curses_form_field}\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}}
+}
+
+
+{\ttfamily \#include $<$cursesf.\-h$>$}
+
+Inheritance diagram for N\-Curses\-Form\-Field\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_curses_form_field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_curses_form_field_af8e6c1e955ef4d8f2da9f52b0af3f422}{N\-Curses\-Form\-Field} ()
+\item 
+\hyperlink{class_n_curses_form_field_a3bdb9eeefe6254b8e6ebfaa433b7a19b}{N\-Curses\-Form\-Field} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} rows, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} ncols, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-row=0, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-col=0, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} offscreen\-\_\-rows=0, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} additional\-\_\-buffers=0)
+\item 
+\hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} \& \hyperlink{class_n_curses_form_field_aa3b8a2fcc2d7a68ca5ba084d6ae4f6d7}{operator=} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} \&rhs)
+\item 
+\hyperlink{class_n_curses_form_field_a5a936b5f160add0a70d4437e4d92e017}{N\-Curses\-Form\-Field} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} \&rhs)
+\item 
+virtual \hyperlink{class_n_curses_form_field_aa10ba05b7ccae394abbe04aa033e65c7}{$\sim$\-N\-Curses\-Form\-Field} ()
+\item 
+\hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} $\ast$ \hyperlink{class_n_curses_form_field_aa76ac0538a0a35d545df04aaea8dd60b}{dup} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-row, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-col)
+\item 
+\hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} $\ast$ \hyperlink{class_n_curses_form_field_a0ca156299b2e10b1bf610fe4dae6aa5f}{link} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-row, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} first\-\_\-col)
+\item 
+F\-I\-E\-L\-D $\ast$ \hyperlink{class_n_curses_form_field_ae280cb9049352e4d77225d839edc9f46}{get\-\_\-field} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a7f7ee023466c743f620fc8812166243a}{info} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&rows, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&ncols, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&first\-\_\-row, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&first\-\_\-col, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&offscreen\-\_\-rows, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&additional\-\_\-buffers) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a2baaaaa202b7930dc3abedc8f287cee0}{dynamic\-\_\-info} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&dynamic\-\_\-rows, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&dynamic\-\_\-cols, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&max\-\_\-growth) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a2daff9cc66881dd8ce121a507fbcb986}{set\-\_\-maximum\-\_\-growth} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} growth=0)
+\item 
+void \hyperlink{class_n_curses_form_field_acfc392ac4d948913c8ffcfea27a3dacb}{move} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} row, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} col)
+\item 
+void \hyperlink{class_n_curses_form_field_adabefe351d19e74ea9a71b5e68033fb8}{new\-\_\-page} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} page\-Flag=F\-A\-L\-S\-E)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_form_field_a99afac5c3158dd9866ba4fe48a35782e}{is\-\_\-new\-\_\-page} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a63a141aa72721e4b20d8a83bb45f71e9}{set\-\_\-justification} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} just)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_form_field_afd1e8386bd4b1e022a9f401d431c5eda}{justification} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a68cf4e46c57289510fa6835ee39ee119}{set\-\_\-foreground} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} foreground)
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_form_field_a4bfb93b9802f063332cca6e337e6be44}{fore} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a12fa2b773e85bf1eb5b56ef876de807d}{set\-\_\-background} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} background)
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_form_field_afb6619ece2151f0439cf6fc23a1c16d1}{back} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a6e6308c00d9a64490430a77a210af732}{set\-\_\-pad\-\_\-character} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} padding)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_form_field_aaba43d1e24b151e40f115fbc5b75f926}{pad} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_ad4d0e5a0449985f2bb2c760aa97ebe98}{options\-\_\-on} (Field\-\_\-\-Options opts)
+\item 
+void \hyperlink{class_n_curses_form_field_a907218551eda01d52ac85452e2618451}{options\-\_\-off} (Field\-\_\-\-Options opts)
+\item 
+Field\-\_\-\-Options \hyperlink{class_n_curses_form_field_af8063599c777ce444900efe8b4221047}{options} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_a72dd566c56b181cb437403aabd0c5743}{set\-\_\-options} (Field\-\_\-\-Options opts)
+\item 
+void \hyperlink{class_n_curses_form_field_a97ed67480e3af143a77119ba22e1462d}{set\-\_\-changed} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} change\-Flag=T\-R\-U\-E)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_form_field_acaa055d09a709e76a4e9dbce6efe4f03}{changed} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int}() \hyperlink{class_n_curses_form_field_a8b468b60c02123deb019a38e00ca1553}{index} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_aaa9132c687db16937520492c7a0d318c}{set\-\_\-value} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$val, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} buffer=0)
+\item 
+char $\ast$ \hyperlink{class_n_curses_form_field_a759c0ffc4ed4363923ee22088f260b7f}{value} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} buffer=0) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_form_field_ab9b5a28ff460336577dc6058695f3749}{set\-\_\-fieldtype} (\hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} \&f)
+\item 
+\hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} $\ast$ \hyperlink{class_n_curses_form_field_ac68055ec9fa9e9ef89e945b5cc997b5a}{fieldtype} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_n_curses_form_field_a748f25f342d1b4228d1bb5e0fbeb82fc}{On\-Error} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} err) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} T\-H\-R\-O\-W2(N\-Curses\-Exception \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-E\-L\-D $\ast$ \hyperlink{class_n_curses_form_field_a1702927c89099dd48638e80bd71e9ee0}{field}
+\item 
+\hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} $\ast$ \hyperlink{class_n_curses_form_field_a5c11bb279f5e95777335788b26828b81}{ftype}
+\item 
+void \hyperlink{class_n_curses_form_field_a67c74669c2cb8f4599d99ebef593d556}{N\-Curses\-Form\-Exception}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_n_curses_form_field_a4ce5a13a8b35977630ef1c99997ddb78}{N\-Curses\-Form}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_curses_form_field_af8e6c1e955ef4d8f2da9f52b0af3f422}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}}
+\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{N\-Curses\-Form\-Field}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Form\-Field\-::\-N\-Curses\-Form\-Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_af8e6c1e955ef4d8f2da9f52b0af3f422}
+\hypertarget{class_n_curses_form_field_a3bdb9eeefe6254b8e6ebfaa433b7a19b}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}}
+\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{N\-Curses\-Form\-Field}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Form\-Field\-::\-N\-Curses\-Form\-Field (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{rows, }
+\item[{{\bf int}}]{ncols, }
+\item[{{\bf int}}]{first\-\_\-row = {\ttfamily 0}, }
+\item[{{\bf int}}]{first\-\_\-col = {\ttfamily 0}, }
+\item[{{\bf int}}]{offscreen\-\_\-rows = {\ttfamily 0}, }
+\item[{{\bf int}}]{additional\-\_\-buffers = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a3bdb9eeefe6254b8e6ebfaa433b7a19b}
+\hypertarget{class_n_curses_form_field_a5a936b5f160add0a70d4437e4d92e017}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}}
+\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{N\-Curses\-Form\-Field}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Form\-Field\-::\-N\-Curses\-Form\-Field (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Form\-Field} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a5a936b5f160add0a70d4437e4d92e017}
+\hypertarget{class_n_curses_form_field_aa10ba05b7ccae394abbe04aa033e65c7}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!$\sim$\-N\-Curses\-Form\-Field@{$\sim$\-N\-Curses\-Form\-Field}}
+\index{$\sim$\-N\-Curses\-Form\-Field@{$\sim$\-N\-Curses\-Form\-Field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{$\sim$\-N\-Curses\-Form\-Field}]{\setlength{\rightskip}{0pt plus 5cm}virtual N\-Curses\-Form\-Field\-::$\sim$\-N\-Curses\-Form\-Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_form_field_aa10ba05b7ccae394abbe04aa033e65c7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_curses_form_field_afb6619ece2151f0439cf6fc23a1c16d1}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!back@{back}}
+\index{back@{back}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Form\-Field\-::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_afb6619ece2151f0439cf6fc23a1c16d1}
+\hypertarget{class_n_curses_form_field_acaa055d09a709e76a4e9dbce6efe4f03}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!changed@{changed}}
+\index{changed@{changed}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{changed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Form\-Field\-::changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_acaa055d09a709e76a4e9dbce6efe4f03}
+\hypertarget{class_n_curses_form_field_aa76ac0538a0a35d545df04aaea8dd60b}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!dup@{dup}}
+\index{dup@{dup}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{dup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Form\-Field}$\ast$ N\-Curses\-Form\-Field\-::dup (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{first\-\_\-row, }
+\item[{{\bf int}}]{first\-\_\-col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_aa76ac0538a0a35d545df04aaea8dd60b}
+\hypertarget{class_n_curses_form_field_a2baaaaa202b7930dc3abedc8f287cee0}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!dynamic\-\_\-info@{dynamic\-\_\-info}}
+\index{dynamic\-\_\-info@{dynamic\-\_\-info}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{dynamic\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::dynamic\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{dynamic\-\_\-rows, }
+\item[{{\bf int} \&}]{dynamic\-\_\-cols, }
+\item[{{\bf int} \&}]{max\-\_\-growth}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a2baaaaa202b7930dc3abedc8f287cee0}
+\hypertarget{class_n_curses_form_field_ac68055ec9fa9e9ef89e945b5cc997b5a}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!fieldtype@{fieldtype}}
+\index{fieldtype@{fieldtype}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{fieldtype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Field\-Type}$\ast$ N\-Curses\-Form\-Field\-::fieldtype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_ac68055ec9fa9e9ef89e945b5cc997b5a}
+\hypertarget{class_n_curses_form_field_a4bfb93b9802f063332cca6e337e6be44}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!fore@{fore}}
+\index{fore@{fore}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{fore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Form\-Field\-::fore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a4bfb93b9802f063332cca6e337e6be44}
+\hypertarget{class_n_curses_form_field_ae280cb9049352e4d77225d839edc9f46}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!get\-\_\-field@{get\-\_\-field}}
+\index{get\-\_\-field@{get\-\_\-field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{get\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-E\-L\-D$\ast$ N\-Curses\-Form\-Field\-::get\-\_\-field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_ae280cb9049352e4d77225d839edc9f46}
+\hypertarget{class_n_curses_form_field_a8b468b60c02123deb019a38e00ca1553}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!index@{index}}
+\index{index@{index}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int}() N\-Curses\-Form\-Field\-::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a8b468b60c02123deb019a38e00ca1553}
+\hypertarget{class_n_curses_form_field_a7f7ee023466c743f620fc8812166243a}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!info@{info}}
+\index{info@{info}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::info (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{rows, }
+\item[{{\bf int} \&}]{ncols, }
+\item[{{\bf int} \&}]{first\-\_\-row, }
+\item[{{\bf int} \&}]{first\-\_\-col, }
+\item[{{\bf int} \&}]{offscreen\-\_\-rows, }
+\item[{{\bf int} \&}]{additional\-\_\-buffers}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a7f7ee023466c743f620fc8812166243a}
+\hypertarget{class_n_curses_form_field_a99afac5c3158dd9866ba4fe48a35782e}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!is\-\_\-new\-\_\-page@{is\-\_\-new\-\_\-page}}
+\index{is\-\_\-new\-\_\-page@{is\-\_\-new\-\_\-page}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{is\-\_\-new\-\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Form\-Field\-::is\-\_\-new\-\_\-page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a99afac5c3158dd9866ba4fe48a35782e}
+\hypertarget{class_n_curses_form_field_afd1e8386bd4b1e022a9f401d431c5eda}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!justification@{justification}}
+\index{justification@{justification}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{justification}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Form\-Field\-::justification (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_afd1e8386bd4b1e022a9f401d431c5eda}
+\hypertarget{class_n_curses_form_field_a0ca156299b2e10b1bf610fe4dae6aa5f}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!link@{link}}
+\index{link@{link}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Form\-Field}$\ast$ N\-Curses\-Form\-Field\-::link (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{first\-\_\-row, }
+\item[{{\bf int}}]{first\-\_\-col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a0ca156299b2e10b1bf610fe4dae6aa5f}
+\hypertarget{class_n_curses_form_field_acfc392ac4d948913c8ffcfea27a3dacb}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!move@{move}}
+\index{move@{move}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::move (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{row, }
+\item[{{\bf int}}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_acfc392ac4d948913c8ffcfea27a3dacb}
+\hypertarget{class_n_curses_form_field_adabefe351d19e74ea9a71b5e68033fb8}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!new\-\_\-page@{new\-\_\-page}}
+\index{new\-\_\-page@{new\-\_\-page}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{new\-\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::new\-\_\-page (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{page\-Flag = {\ttfamily FALSE}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_adabefe351d19e74ea9a71b5e68033fb8}
+\hypertarget{class_n_curses_form_field_a748f25f342d1b4228d1bb5e0fbeb82fc}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!On\-Error@{On\-Error}}
+\index{On\-Error@{On\-Error}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{On\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::\-On\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{err}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_form_field_a748f25f342d1b4228d1bb5e0fbeb82fc}
+\hypertarget{class_n_curses_form_field_aa3b8a2fcc2d7a68ca5ba084d6ae4f6d7}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!operator=@{operator=}}
+\index{operator=@{operator=}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Form\-Field}\& N\-Curses\-Form\-Field\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Form\-Field} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_aa3b8a2fcc2d7a68ca5ba084d6ae4f6d7}
+\hypertarget{class_n_curses_form_field_af8063599c777ce444900efe8b4221047}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!options@{options}}
+\index{options@{options}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{options}]{\setlength{\rightskip}{0pt plus 5cm}Field\-\_\-\-Options N\-Curses\-Form\-Field\-::options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_af8063599c777ce444900efe8b4221047}
+\hypertarget{class_n_curses_form_field_a907218551eda01d52ac85452e2618451}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!options\-\_\-off@{options\-\_\-off}}
+\index{options\-\_\-off@{options\-\_\-off}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{options\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::options\-\_\-off (
+\begin{DoxyParamCaption}
+\item[{Field\-\_\-\-Options}]{opts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a907218551eda01d52ac85452e2618451}
+\hypertarget{class_n_curses_form_field_ad4d0e5a0449985f2bb2c760aa97ebe98}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!options\-\_\-on@{options\-\_\-on}}
+\index{options\-\_\-on@{options\-\_\-on}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{options\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::options\-\_\-on (
+\begin{DoxyParamCaption}
+\item[{Field\-\_\-\-Options}]{opts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_ad4d0e5a0449985f2bb2c760aa97ebe98}
+\hypertarget{class_n_curses_form_field_aaba43d1e24b151e40f115fbc5b75f926}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!pad@{pad}}
+\index{pad@{pad}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{pad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Form\-Field\-::pad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_aaba43d1e24b151e40f115fbc5b75f926}
+\hypertarget{class_n_curses_form_field_a12fa2b773e85bf1eb5b56ef876de807d}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-background@{set\-\_\-background}}
+\index{set\-\_\-background@{set\-\_\-background}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-background}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-background (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{background}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a12fa2b773e85bf1eb5b56ef876de807d}
+\hypertarget{class_n_curses_form_field_a97ed67480e3af143a77119ba22e1462d}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-changed@{set\-\_\-changed}}
+\index{set\-\_\-changed@{set\-\_\-changed}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-changed (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{change\-Flag = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a97ed67480e3af143a77119ba22e1462d}
+\hypertarget{class_n_curses_form_field_ab9b5a28ff460336577dc6058695f3749}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-fieldtype@{set\-\_\-fieldtype}}
+\index{set\-\_\-fieldtype@{set\-\_\-fieldtype}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-fieldtype}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-fieldtype (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Field\-Type} \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_ab9b5a28ff460336577dc6058695f3749}
+\hypertarget{class_n_curses_form_field_a68cf4e46c57289510fa6835ee39ee119}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-foreground@{set\-\_\-foreground}}
+\index{set\-\_\-foreground@{set\-\_\-foreground}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-foreground}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-foreground (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{foreground}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a68cf4e46c57289510fa6835ee39ee119}
+\hypertarget{class_n_curses_form_field_a63a141aa72721e4b20d8a83bb45f71e9}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-justification@{set\-\_\-justification}}
+\index{set\-\_\-justification@{set\-\_\-justification}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-justification}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-justification (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{just}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a63a141aa72721e4b20d8a83bb45f71e9}
+\hypertarget{class_n_curses_form_field_a2daff9cc66881dd8ce121a507fbcb986}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-maximum\-\_\-growth@{set\-\_\-maximum\-\_\-growth}}
+\index{set\-\_\-maximum\-\_\-growth@{set\-\_\-maximum\-\_\-growth}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-maximum\-\_\-growth}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-maximum\-\_\-growth (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{growth = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a2daff9cc66881dd8ce121a507fbcb986}
+\hypertarget{class_n_curses_form_field_a72dd566c56b181cb437403aabd0c5743}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-options@{set\-\_\-options}}
+\index{set\-\_\-options@{set\-\_\-options}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-options}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-options (
+\begin{DoxyParamCaption}
+\item[{Field\-\_\-\-Options}]{opts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a72dd566c56b181cb437403aabd0c5743}
+\hypertarget{class_n_curses_form_field_a6e6308c00d9a64490430a77a210af732}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-pad\-\_\-character@{set\-\_\-pad\-\_\-character}}
+\index{set\-\_\-pad\-\_\-character@{set\-\_\-pad\-\_\-character}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-pad\-\_\-character}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-pad\-\_\-character (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{padding}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a6e6308c00d9a64490430a77a210af732}
+\hypertarget{class_n_curses_form_field_aaa9132c687db16937520492c7a0d318c}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!set\-\_\-value@{set\-\_\-value}}
+\index{set\-\_\-value@{set\-\_\-value}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{set\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::set\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{val, }
+\item[{{\bf int}}]{buffer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_aaa9132c687db16937520492c7a0d318c}
+\hypertarget{class_n_curses_form_field_a759c0ffc4ed4363923ee22088f260b7f}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!value@{value}}
+\index{value@{value}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ N\-Curses\-Form\-Field\-::value (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{buffer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_form_field_a759c0ffc4ed4363923ee22088f260b7f}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_n_curses_form_field_a4ce5a13a8b35977630ef1c99997ddb78}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!N\-Curses\-Form@{N\-Curses\-Form}}
+\index{N\-Curses\-Form@{N\-Curses\-Form}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{N\-Curses\-Form}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf N\-Curses\-Form}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_n_curses_form_field_a4ce5a13a8b35977630ef1c99997ddb78}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_curses_form_field_a1702927c89099dd48638e80bd71e9ee0}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!field@{field}}
+\index{field@{field}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-E\-L\-D$\ast$ N\-Curses\-Form\-Field\-::field\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_form_field_a1702927c89099dd48638e80bd71e9ee0}
+\hypertarget{class_n_curses_form_field_a5c11bb279f5e95777335788b26828b81}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!ftype@{ftype}}
+\index{ftype@{ftype}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{ftype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Field\-Type}$\ast$ N\-Curses\-Form\-Field\-::ftype\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_form_field_a5c11bb279f5e95777335788b26828b81}
+\hypertarget{class_n_curses_form_field_a67c74669c2cb8f4599d99ebef593d556}{\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!N\-Curses\-Form\-Exception@{N\-Curses\-Form\-Exception}}
+\index{N\-Curses\-Form\-Exception@{N\-Curses\-Form\-Exception}!NCursesFormField@{N\-Curses\-Form\-Field}}
+\subsubsection[{N\-Curses\-Form\-Exception}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Field\-::\-N\-Curses\-Form\-Exception\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_form_field_a67c74669c2cb8f4599d99ebef593d556}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (\hyperlink{group__system_ga7fe7f475639e26334606b5142c29551f}{err} != E\_OK)
+      THROW(\textcolor{keyword}{new} \hyperlink{class_n_curses_form_field_a67c74669c2cb8f4599d99ebef593d556}{NCursesFormException} (\hyperlink{group__system_ga7fe7f475639e26334606b5142c29551f}{err}))
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/ndk/dep/\hyperlink{cursesf_8h}{cursesf.\-h}\end{DoxyCompactItemize}

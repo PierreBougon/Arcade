@@ -1,0 +1,128 @@
+\hypertarget{class_n_curses_field_type}{\section{N\-Curses\-Field\-Type Class Reference}
+\label{class_n_curses_field_type}\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}}
+}
+
+
+{\ttfamily \#include $<$cursesf.\-h$>$}
+
+Inheritance diagram for N\-Curses\-Field\-Type\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_n_curses_field_type}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_curses_field_type_a7a9152b7a86cd460f3ba8a86163a4be9}{N\-Curses\-Field\-Type} ()
+\item 
+\hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} \& \hyperlink{class_n_curses_field_type_ae7c89fd4b0be06f7fe763245ab2fc1d0}{operator=} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} \&rhs)
+\item 
+\hyperlink{class_n_curses_field_type_a120324292341ba0286326d4e0319a64e}{N\-Curses\-Field\-Type} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_field_type}{N\-Curses\-Field\-Type} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_n_curses_field_type_a0ad3eb32ee38316369e5019c7b7bfdcf}{On\-Error} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} err) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} T\-H\-R\-O\-W2(N\-Curses\-Exception \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void N\-Curses\-Form\-Exception \hyperlink{class_n_curses_field_type_a38565d555546ece340f89c57033d8b32}{if} (err!=E\-\_\-\-O\-K) T\-H\-R\-O\-W(new N\-Curses\-Form\-Exception(err))
+\item 
+\hyperlink{class_n_curses_field_type_abcd01b5e4a301b73eb4e404877c1d5a9}{N\-Curses\-Field\-Type} (F\-I\-E\-L\-D\-T\-Y\-P\-E $\ast$f)
+\item 
+virtual \hyperlink{class_n_curses_field_type_a3de5c7b452e2d4872c626d607c8e177e}{$\sim$\-N\-Curses\-Field\-Type} ()
+\item 
+virtual void \hyperlink{class_n_curses_field_type_ab799f23fdd17b204950e36962b38da43}{set} (\hyperlink{class_n_curses_form_field}{N\-Curses\-Form\-Field} \&f)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-E\-L\-D\-T\-Y\-P\-E $\ast$ \hyperlink{class_n_curses_field_type_a78b6e494cf9d2ca180dc4e6e92402863}{fieldtype}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_n_curses_field_type_a35bbdfb43bd305d5686fec6f4a4010d5}{N\-Curses\-Form\-Field}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_curses_field_type_abcd01b5e4a301b73eb4e404877c1d5a9}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}}
+\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{N\-Curses\-Field\-Type}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Field\-Type\-::\-N\-Curses\-Field\-Type (
+\begin{DoxyParamCaption}
+\item[{F\-I\-E\-L\-D\-T\-Y\-P\-E $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_field_type_abcd01b5e4a301b73eb4e404877c1d5a9}
+\hypertarget{class_n_curses_field_type_a3de5c7b452e2d4872c626d607c8e177e}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!$\sim$\-N\-Curses\-Field\-Type@{$\sim$\-N\-Curses\-Field\-Type}}
+\index{$\sim$\-N\-Curses\-Field\-Type@{$\sim$\-N\-Curses\-Field\-Type}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{$\sim$\-N\-Curses\-Field\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual N\-Curses\-Field\-Type\-::$\sim$\-N\-Curses\-Field\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_field_type_a3de5c7b452e2d4872c626d607c8e177e}
+\hypertarget{class_n_curses_field_type_a7a9152b7a86cd460f3ba8a86163a4be9}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}}
+\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{N\-Curses\-Field\-Type}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Field\-Type\-::\-N\-Curses\-Field\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_field_type_a7a9152b7a86cd460f3ba8a86163a4be9}
+\hypertarget{class_n_curses_field_type_a120324292341ba0286326d4e0319a64e}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}}
+\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{N\-Curses\-Field\-Type}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Field\-Type\-::\-N\-Curses\-Field\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Field\-Type} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_field_type_a120324292341ba0286326d4e0319a64e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_curses_field_type_a38565d555546ece340f89c57033d8b32}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!if@{if}}
+\index{if@{if}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Form\-Exception N\-Curses\-Field\-Type\-::if (
+\begin{DoxyParamCaption}
+\item[{err!}]{ = {\ttfamily E\-\_\-OK}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [new]}, {\ttfamily [protected]}}}\label{class_n_curses_field_type_a38565d555546ece340f89c57033d8b32}
+\hypertarget{class_n_curses_field_type_a0ad3eb32ee38316369e5019c7b7bfdcf}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!On\-Error@{On\-Error}}
+\index{On\-Error@{On\-Error}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{On\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Field\-Type\-::\-On\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{err}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_field_type_a0ad3eb32ee38316369e5019c7b7bfdcf}
+\hypertarget{class_n_curses_field_type_ae7c89fd4b0be06f7fe763245ab2fc1d0}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!operator=@{operator=}}
+\index{operator=@{operator=}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Field\-Type}\& N\-Curses\-Field\-Type\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Field\-Type} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_field_type_ae7c89fd4b0be06f7fe763245ab2fc1d0}
+\hypertarget{class_n_curses_field_type_ab799f23fdd17b204950e36962b38da43}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!set@{set}}
+\index{set@{set}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Field\-Type\-::set (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Form\-Field} \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_n_curses_field_type_ab799f23fdd17b204950e36962b38da43}
+
+
+Implemented in \hyperlink{class_user_defined_field_type_ae7b9a1003401089db6bde8b0bbbbb189}{User\-Defined\-Field\-Type}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_n_curses_field_type_a35bbdfb43bd305d5686fec6f4a4010d5}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}}
+\index{N\-Curses\-Form\-Field@{N\-Curses\-Form\-Field}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{N\-Curses\-Form\-Field}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf N\-Curses\-Form\-Field}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_n_curses_field_type_a35bbdfb43bd305d5686fec6f4a4010d5}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_curses_field_type_a78b6e494cf9d2ca180dc4e6e92402863}{\index{N\-Curses\-Field\-Type@{N\-Curses\-Field\-Type}!fieldtype@{fieldtype}}
+\index{fieldtype@{fieldtype}!NCursesFieldType@{N\-Curses\-Field\-Type}}
+\subsubsection[{fieldtype}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-E\-L\-D\-T\-Y\-P\-E$\ast$ N\-Curses\-Field\-Type\-::fieldtype\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_field_type_a78b6e494cf9d2ca180dc4e6e92402863}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/ndk/dep/\hyperlink{cursesf_8h}{cursesf.\-h}\end{DoxyCompactItemize}

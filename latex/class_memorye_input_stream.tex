@@ -1,0 +1,33 @@
+\hypertarget{class_memorye_input_stream}{\section{Memorye\-Input\-Stream Class Reference}
+\label{class_memorye_input_stream}\index{Memorye\-Input\-Stream@{Memorye\-Input\-Stream}}
+}
+
+
+{\ttfamily \#include $<$Memory\-Input\-Stream.\-hpp$>$}
+
+
+
+\subsection{Detailed Description}
+This class is a specialization of Input\-Stream that reads from data in memory.
+
+It wraps a memory chunk in the common Input\-Stream interface and therefore allows to use generic classes or functions that accept such a stream, with content already loaded in memory.
+
+In addition to the virtual functions inherited from Input\-Stream, Memory\-Input\-Stream adds a function to specify the pointer and size of the data in memory.
+
+S\-F\-M\-L resource classes can usually be loaded directly from memory, so this class shouldn't be useful to you unless you create your own algorithms that operate on a Input\-Stream.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} process(InputStream& stream);
+
+MemoryStream stream;
+stream.open(thePtr, theSize);
+process(stream);
+\end{DoxyCode}
+
+
+Input\-Stream, File\-Stream 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-System/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_system_2_memory_input_stream_8hpp}{Memory\-Input\-Stream.\-hpp}\end{DoxyCompactItemize}
