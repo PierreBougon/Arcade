@@ -37,9 +37,10 @@ namespace arcade
         void feedingSnakes();
         void createPlayer();
         void putFoodInMap();
-        void moveBody();
+        void moveBody(bool movePysic);
         void setSprites();
         void settingScore();
+        void moveSnake();
     public:
         Snake();
 
