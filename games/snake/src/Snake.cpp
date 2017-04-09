@@ -8,6 +8,8 @@
 #include "DestroyableObject.hpp"
 #include "Snake.hpp"
 
+static bool talinette = false;
+
 arcade::GameState arcade::Snake::getGameState() const
 {
     return state;
@@ -33,51 +35,56 @@ std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
 
 void arcade::Snake::process()
 {
-    gameMap.resetMapFromLayer(0);
-    if (!cherry.size())
-        putFoodInMap();
-    snakes[0].move();
-    checkDead();
-    if (state == GameState::MENU)
-        return;
-    moveBody();
-    checkEat();
-    if (!cherry.size())
-        feedingSnakes();
-    setSprites();
-    if (state == GameState::MENU)
-        return;
-    for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end() ; ++it)
+    if (!(tick % 30) || talinette)
     {
-        gameMap.updateLayer((*it), 1);
-    }
-    gameMap.updateLayer(cherry[0], 1);
-    for (size_t i = 0; i < gameMap.getHeight(); ++i)
-        for (size_t j = 0; j < gameMap.getWidth(); ++j)
+        gameMap.resetMapFromLayer(0);
+        if (!cherry.size())
+            putFoodInMap();
+        snakes[0].move();
+        checkDead();
+        if (state == GameState::MENU)
+            return;
+        moveBody();
+        checkEat();
+        if (!cherry.size())
+            feedingSnakes();
+        setSprites();
+        if (state == GameState::MENU)
+            return;
+        for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end(); ++it)
         {
-            empty.setAbs({j, i});
-            gameMap.updateLayer(empty, 0);
+            gameMap.updateLayer((*it), 1);
         }
+        if (cherry.size())
+            gameMap.updateLayer(cherry[0], 1);
+        for (size_t i = 0; i < gameMap.getHeight(); ++i)
+            for (size_t j = 0; j < gameMap.getWidth(); ++j)
+            {
+                empty.setAbs({j, i});
+                gameMap.updateLayer(empty, 0);
+            }
+    }
+    tick++;
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() const
 {
     std::vector<std::unique_ptr<arcade::ISprite>> tmp;
 
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "headDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("A", "./games/snakes/assets/img/", "headUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snakes/assets/img/", "headLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("v", "./games/snakes/assets/img/", "headRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snakes/assets/img/", "headDown", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyHori", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyVerti", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpLeft", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpRight", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownLeft", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "tailDown", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("u", "./games/snakes/assets/img/", "tailUp", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snakes/assets/img/", "tailLeft", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("^", "./games/snakes/assets/img/", "tailRight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snakes/assets/img/", "tailDown", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./games/snakes/assets/img/", "food", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>(" ", "./games/snakes/assets/img/", "empty", 1, ".png"));
 
@@ -106,7 +113,7 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false))
+arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0)
 {
     state = LOADING;
     createPlayer();
@@ -180,28 +187,32 @@ void arcade::Snake::feedingSnakes()
 
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
-    if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
+    if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
+        snakes[snakes.size() - 1].setColor(Color(2));
         return;
     }
     pos.x -= 2;
-    if (pos.x <= gameMap.getWidth() && !checkInSnake(pos))
+    if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::RIGHT));
+        snakes[snakes.size() - 1].setColor(Color(2));
         return;
     }
     pos.x += 1;
     pos.y += 1;
-    if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
+    if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::DOWN));
+        snakes[snakes.size() - 1].setColor(Color(2));
         return;
     }
     pos.y -= 2;
-    if (pos.y <= gameMap.getHeight() && !checkInSnake(pos))
+    if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
+        snakes[snakes.size() - 1].setColor(Color(2));
         return;
     }
     state = GameState::MENU;
@@ -226,7 +237,7 @@ void arcade::Snake::checkDead()
 {
     Vector2s pos = snakes[0].getAbs();
 
-    if (pos.x > gameMap.getWidth() || pos.y > gameMap.getHeight())
+    if (pos.x >= gameMap.getWidth() || pos.y >= gameMap.getHeight())
     {
         state = GameState::MENU;
         return;
@@ -305,7 +316,7 @@ void arcade::Snake::setSprites()
             snakes[i].setSprite(corner, count, Orientation::DOWN);
         else if (pos.x == posPrev.x && pos.x == posNext.x)
             snakes[i].setSprite(body, countBody, Orientation::UP);
-        else if (pos.y == posPrev.y && pos.y == posNext.y)
+        else if (pos.y == posPrev.y && pos.y  == posNext.y)
             snakes[i].setSprite(body, countBody, Orientation::RIGHT);
     }
     pos = snakes[snakes.size() - 1].getAbs();
@@ -356,6 +367,7 @@ extern "C" void Play()
     std::vector<arcade::Vector2s> pos;
     arcade::CommandType command;
 
+    talinette = true;
     player->lenght = static_cast<uint16_t >(size);
     player->type = arcade::CommandType::WHERE_AM_I;
     maps->height = static_cast<uint16_t>(map.getHeight());

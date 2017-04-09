@@ -4,6 +4,7 @@
 
 #include <cstddef>
 #include <iostream>
+#include <Logger.hpp>
 #include "ITile.hpp"
 #include "Map.hpp"
 
@@ -40,6 +41,7 @@ const arcade::ITile &arcade::Map::at(size_t layer, size_t x, size_t y) const
 void arcade::Map::updateLayer(arcade::Entity &entity, size_t layer)
 {
     const Vector2s &abs = entity.getAbs();
+    //std::cerr << "Layer : " << layer << " && Size : " << _map.size() << std::endl;
     _map[layer][abs.y][abs.x] = entity;
 }
 

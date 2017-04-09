@@ -189,7 +189,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 
 void arcade::Core::setGame(const std::string &game)
 {
-    int nbTested = 0;
+    size_t nbTested = 0;
 
     currentGame = nullptr;
     while (!currentGame && nbTested < tabGame.size())
@@ -204,7 +204,7 @@ void arcade::Core::setGame(const std::string &game)
 
 void arcade::Core::setLib(const std::string &lib)
 {
-    int nbTested = 0;
+    size_t nbTested = 0;
 
     currentLib = nullptr;
     while (!currentLib && nbTested < tabLib.size())

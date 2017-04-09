@@ -25,6 +25,7 @@ namespace arcade
         std::vector<DestroyableObject> cherry;
         std::vector<std::unique_ptr<arcade::ISprite>> sprites;
         Entity empty;
+        size_t tick;
 
         bool checkInSnake(Vector2s const& pos);
         void checkEat();
