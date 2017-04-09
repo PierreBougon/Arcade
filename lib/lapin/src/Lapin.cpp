@@ -191,7 +191,7 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
 
     for (size_t i = 0; i < gui.size(); ++i)
     {
-        IComponent &component = gui.at(i);
+ /*       IComponent &component = gui.at(i);
 
         pos.x = static_cast<int>(component.getX() * static_cast<double>(Width));
         pos.y = static_cast<int>(component.getY() * static_cast<double>(Height));
@@ -203,7 +203,7 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
         else
             printOneColor(pos, component.getBackgroundColor(), width, height);
 
-        printText(pos, component.getText());
+        printText(pos, component.getText()); */
     }
 }
 

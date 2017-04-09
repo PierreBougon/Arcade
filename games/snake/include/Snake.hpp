@@ -28,7 +28,7 @@ namespace arcade
         Entity empty;
         size_t tick;
         Score  score;
-        size_t snakeSpeed;
+        double snakeSpeed;
 
 
         bool checkInSnake(Vector2s const& pos);
