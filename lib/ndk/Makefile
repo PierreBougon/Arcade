@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:43:58 2017 bougon_p
-## Last update Sun Apr  9 05:20:03 2017 bougon_p
+## Last update Sun Apr  9 18:14:42 2017 duhieu_b
 ##
 
 ## Include colors and basic commands
@@ -17,7 +17,8 @@ include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 ## Lib variables
 
 SRC	=	src/Ndk.cpp			\
-		../../interfaces/Sound.cpp
+		../../interfaces/Sound.cpp \
+		../../interfaces/Color.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
