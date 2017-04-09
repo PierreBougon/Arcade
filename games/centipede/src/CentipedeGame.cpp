@@ -157,7 +157,7 @@ std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::ge
 {
     std::vector<std::pair<std::string, arcade::SoundType>> sounds;
 
-    sounds.push_back(std::pair<std::string, arcade::SoundType>({"./soundManager/assets/Pew_Pew.mp3", SoundType::SOUND}));
+    sounds.push_back(std::pair<std::string, arcade::SoundType>({"./soundManager/assets/Pew_Pew.ogg", SoundType::SOUND}));
     return sounds;
 
 }

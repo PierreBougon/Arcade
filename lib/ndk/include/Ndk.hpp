@@ -6,8 +6,9 @@
 #define CPP_ARCADE_NDK_HPP
 
 #include <curses.h>
-#include "IGfxLib.hpp"
 #include <map>
+#include "IGfxLib.hpp"
+#include "SoundManager.hpp"
 
 namespace arcade
 {
@@ -20,6 +21,7 @@ namespace arcade
         std::vector<std::string> vecString;
         size_t width;
         size_t height;
+        SoundManager manager;
 
         void setColor(size_t, size_t, size_t, ITile const&);
     public:
@@ -34,8 +36,6 @@ namespace arcade
         virtual ~Ndk();
         bool pollEvent(arcade::Event &e);
         bool doesSupportSound() const;
-        void loadSounds(std::vector<std::string> const &sounds);
-        void playSound(int soundId);
         void updateMap(arcade::IMap const &map);
         void setSize(size_t Height, size_t Width);
         void setPosition(size_t y, size_t x);
@@ -43,7 +43,7 @@ namespace arcade
         void display();
         void clear();
 
-        void loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds) override;
+        void loadSounds(std::vector<std::pair<std::string, SoundType> > const &sounds);
     };
 }
 

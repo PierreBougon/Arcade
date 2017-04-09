@@ -218,7 +218,7 @@ void arcade::Ndk::clear()
 
 void arcade::Ndk::soundControl(const arcade::Sound &sound)
 {
-    (void) sound;
+    manager.soundControl(sound);
 }
 
 void arcade::Ndk::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
@@ -256,17 +256,7 @@ void arcade::Ndk::updateGUI(arcade::IGUI &gui)
 
 bool arcade::Ndk::doesSupportSound() const
 {
-    return false;
-}
-
-void arcade::Ndk::loadSounds(std::vector<std::string> const &sounds)
-{
-    (void) sounds;
-}
-
-void arcade::Ndk::playSound(int soundId)
-{
-    (void) soundId;
+    return true;
 }
 
 void arcade::Ndk::setSize(size_t Height, size_t Width)
@@ -292,7 +282,7 @@ void arcade::Ndk::initializeWindow()
 
 void arcade::Ndk::loadSounds(const std::vector<std::pair<std::string, arcade::SoundType>> &sounds)
 {
-    (void) sounds;
+    manager.loadSounds(sounds);
 }
 
 extern "C" arcade::IGfxLib *getLib()
