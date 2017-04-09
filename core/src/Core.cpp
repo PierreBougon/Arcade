@@ -28,7 +28,7 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 
     setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    setGame("./games/lib_arcade_centipede.so");
+    setGame("./games/lib_arcade_snake.so");
 }
 
 arcade::Core::~Core()
@@ -75,11 +75,14 @@ void arcade::Core::run()
         }
         else if (!currentGame)
         {
+            currentLib->clear();
             //TODO: display arcade menu
         }
-        currentLib->clear();
+        else
+        {
+            usleep(100);
+        }
         currentLib->display();
-        usleep(100);
     }
 }
 
@@ -238,6 +241,9 @@ void arcade::Core::prevLib()
 
 void arcade::Core::drawFrame()
 {
+    // TODO : check
+    currentLib->clear();
+
     currentLib->updateMap(currentGame->getCurrentMap());
     currentLib->updateGUI(currentGame->getGUI());
 }
