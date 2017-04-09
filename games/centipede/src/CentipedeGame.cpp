@@ -140,6 +140,7 @@ std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::ge
     std::vector<std::pair<std::string, arcade::SoundType>> sounds;
 
     return sounds;
+
 }
 
 std::vector<arcade::Sound> arcade::CentipedeGame::getSoundsToPlay()
