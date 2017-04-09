@@ -73,6 +73,8 @@ namespace arcade
         const Color &getColor() const;
         size_t getSpriteCount() const;
 
+        Orientation getOrientation() const;
+
         // Setters
         void setAbs(const Vector2s &abs);
         void setShift(const Vector2d &shift);
