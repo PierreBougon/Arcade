@@ -8,6 +8,7 @@
 #include "PlayerControlSnake.hpp"
 #include "DestroyableObject.hpp"
 #include "Snake.hpp"
+#include "Tick.hpp"
 
 static bool talinette = false;
 
@@ -45,35 +46,32 @@ std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
 
 void arcade::Snake::process()
 {
-    if (!(tick % 30) || talinette)
+    gameMap.resetMapFromLayer(0);
+    if (!cherry.size())
+        putFoodInMap();
+    moveSnake();
+    if (state == GameState::MENU)
+        return;
+
+
+    checkEat();
+    if (!cherry.size())
+        feedingSnakes();
+    setSprites();
+    if (state == GameState::MENU)
+        return;
+    for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end(); ++it)
     {
-        gameMap.resetMapFromLayer(0);
-        if (!cherry.size())
-            putFoodInMap();
-        snakes[0].move();
-        checkDead();
-        if (state == GameState::MENU)
-            return;
-        moveBody();
-        checkEat();
-        if (!cherry.size())
-            feedingSnakes();
-        setSprites();
-        if (state == GameState::MENU)
-            return;
-        for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end(); ++it)
-        {
-            gameMap.updateLayer((*it), 1);
-        }
-        if (cherry.size())
-            gameMap.updateLayer(cherry[0], 1);
-        for (size_t i = 0; i < gameMap.getHeight(); ++i)
-            for (size_t j = 0; j < gameMap.getWidth(); ++j)
-            {
-                empty.setAbs({j, i});
-                gameMap.updateLayer(empty, 0);
-            }
+        gameMap.updateLayer((*it), 1);
     }
+    if (cherry.size())
+        gameMap.updateLayer(cherry[0], 1);
+    for (size_t i = 0; i < gameMap.getHeight(); ++i)
+        for (size_t j = 0; j < gameMap.getWidth(); ++j)
+        {
+            empty.setAbs({j, i});
+            gameMap.updateLayer(empty, 0);
+        }
     tick++;
 }
 
@@ -123,7 +121,10 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0), score(4)
+arcade::Snake::Snake()
+        : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}),
+                                                       Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY,
+                                                       Color::Black, false)), tick(0), score(4), snakeSpeed(4)
 {
     state = LOADING;
     createPlayer();
@@ -231,17 +232,50 @@ void arcade::Snake::feedingSnakes()
     state = GameState::MENU;
 }
 
+void arcade::Snake::moveSnake()
+{
+    if (!(tick % (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed)) || talinette)
+    {
+        snakes[0].move();
+        checkDead();
+        moveBody();
+    }
+    else
+    {
+        snakes[0].moveShift(tick % (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed),
+                            (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed));
+        moveBody();
+    }
+}
+
 void arcade::Snake::moveBody()
 {
     Vector2s pos;
     Vector2s newPos;
+    double   shift;
+    Vector2d newShift;
 
     pos = snakes[0].getPrev();
+    shift = snakes[0].getShift().x == 0.0d ? snakes[0].getShift().y : snakes[0].getShift().x;
     newPos = pos;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin() + 1; it != snakes.end() ; ++it)
     {
         newPos = (*it).getAbs();
         (*it).setAbs(pos);
+        switch (it->getOrientation())
+        {
+            case Orientation::UP :
+            case Orientation::DOWN :
+                newShift.x = 0; newShift.y = shift;
+                break;
+            case Orientation::LEFT :
+            case Orientation::RIGHT :
+                newShift.x = shift; newShift.y = 0;
+                break;
+            default:
+                break;
+        }
+        it->setShift(newShift);
         pos = newPos;
     }
 }
