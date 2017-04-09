@@ -6,7 +6,8 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <algorithm>
-#include <Sound.hpp>
+#include "SpriteGenerator.hpp"
+#include "Sound.hpp"
 #include "LifelessEntity.hpp"
 #include "CentipedeGame.hpp"
 #include "Protocol.hpp"
@@ -19,9 +20,11 @@ arcade::CentipedeGame::CentipedeGame() :
         _gui(),
         _bullet(Vector2s(0, 0)),
         _centipedeKiller(placePlayer(_map),
+                         {KILLER},
+                         {1},
                          TileType::EMPTY,
                          TileTypeEvolution::PLAYER,
-                         Color::Cyan,
+                         Color::Red,
                          1)
 {
     _map.updateLayer(_centipedeKiller, PLAYER);
@@ -85,7 +88,7 @@ void arcade::CentipedeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&_
     (void)events;
 }
 
-std::vector<arcade::NetworkPacket> &&arcade::CentipedeGame::getNetworkToSend()
+std::vector<arcade::NetworkPacket> arcade::CentipedeGame::getNetworkToSend()
 {
     std::vector<arcade::NetworkPacket> npt;
     return std::move(npt);
@@ -140,9 +143,14 @@ void arcade::CentipedeGame::process()
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::CentipedeGame::getSpritesToLoad() const
 {
-    std::vector<std::unique_ptr<arcade::ISprite>> sprt;
+    std::vector<std::unique_ptr<arcade::ISprite>> tmp;
 
-    return sprt;
+    tmp.push_back(std::make_unique<SpriteGenerator>("V", "./games/snake/assets/img/", "killer", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("T", "./games/snake/assets/img/", "mushroom", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "head", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("o", "./games/snake/assets/img/", "body", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("'", "./games/snake/assets/img/", "fire", 1, ".png"));
+    return std::move(tmp);
 }
 
 std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::getSoundsToLoad() const
@@ -216,10 +224,6 @@ const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const
     return _centipedeKiller.getAbs();
 }
 
-arcade::tick_t arcade::CentipedeGame::getTickRate() const {
-    return SPEED;
-}
-
 void arcade::CentipedeGame::bulletAndMushrooms()
 {
     std::list<arcade::Mushroom *>::iterator it;
@@ -247,6 +251,11 @@ void arcade::CentipedeGame::removeDeadCentipedes()
                         });
     if (it != _centipedes.end())
         _centipedes.erase(it, _centipedes.end());
+}
+
+bool arcade::CentipedeGame::hasNetwork() const
+{
+    return false;
 }
 
 extern "C" arcade::IGame *getGame()

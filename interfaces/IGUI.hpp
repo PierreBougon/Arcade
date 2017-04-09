@@ -21,7 +21,7 @@ namespace arcade
     ///
     virtual ~IGUI() {};
 
-    // Score of IComponent
+    // Number of IComponent
     ///
     /// \fn virtual std::size_t size() const = 0
     /// \brief Return the number of elements

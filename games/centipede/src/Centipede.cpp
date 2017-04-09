@@ -9,9 +9,12 @@
 
 arcade::CentipedePart::CentipedePart(const arcade::Vector2s &pos) :
         ALivingEntity(pos,
+                      {2},
+                      {1},
+                      arcade::Orientation::UP,
                       TileType::EVIL_DUDE,
                       TileTypeEvolution::ENEMY,
-                      Color::White,
+                      Color::Green,
                       1,
                       false)
 {

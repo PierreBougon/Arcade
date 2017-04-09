@@ -6,9 +6,12 @@
 
 arcade::Mushroom::Mushroom(Vector2s const& pos) :
         DestroyableObject(pos,
+                          {1},
+                          {1},
+                          arcade::Orientation::UP,
                           TileType::OBSTACLE,
                           TileTypeEvolution::OBSTACLE,
-                          Color::Magenta,
+                          Color::Cyan,
                           4,
                           true)
 {

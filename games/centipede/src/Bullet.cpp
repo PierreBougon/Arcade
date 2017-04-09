@@ -8,6 +8,9 @@
 
 arcade::Bullet::Bullet(const Vector2s &pos) :
     LifelessEntity(pos,
+                   {3},
+                   {1},
+                   arcade::Orientation::UP,
                    TileType::MY_SHOOT,
                    TileTypeEvolution::SHOT_PLAYER,
                    Color::Yellow,
