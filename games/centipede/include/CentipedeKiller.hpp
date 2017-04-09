@@ -55,7 +55,10 @@ namespace arcade
         void move(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
         void updatePlayerInput(std::vector<Event> &events) override;
         void action(arcade::Bullet &bullet);
-        bool touched(std::list<arcade::Centipede> &centipedes);
+        bool touched(std::list<arcade::Centipede*> &centipedes);
+        void bulletVsCentipede(arcade::Bullet &bullet,
+                               std::list<arcade::Centipede*> &centipedes,
+                               std::list<arcade::Mushroom*> &mushrooms);
 
     private:
         KillerAction                    _action;

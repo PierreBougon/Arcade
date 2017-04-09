@@ -24,12 +24,12 @@ arcade::CentipedeGame::CentipedeGame() :
                          1)
 {
     _map.updateLayer(_centipedeKiller, PLAYER);
-    randomize(_map, 0.1);
+    randomize(_map, 0.05);
     createCentipede();
-    _centipedes.front().oneTurn(_bullet, _centipedes, _mushrooms, _map);
-    for (Centipede &centipede : _centipedes)
-        for (CentipedePart &part : centipede.getBody())
-            _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
+    _centipedes.front()->oneTurn(_centipedes, _mushrooms, _map);
+    for (Centipede *centipede : _centipedes)
+        for (CentipedePart *part : centipede->getBody())
+            _map.updateLayer(*part, CentipedeLayers::CENTIPEDE);
     this->updateMap();
     _tick = 0;
     _gameState = GameState::INGAME;
@@ -84,7 +84,7 @@ void arcade::CentipedeGame::createCentipede()
 
     pos.x = rand() % _map.getWidth();
     pos.y = 0;
-    _centipedes.push_back(Centipede(pos));
+    _centipedes.push_back(new Centipede(pos));
 }
 
 void arcade::CentipedeGame::process()
@@ -95,15 +95,19 @@ void arcade::CentipedeGame::process()
         _centipedeKiller.move(_map, _mushrooms);
         _centipedeKiller.action(_bullet);
         bulletAndMushrooms();
+        _centipedeKiller.bulletVsCentipede(_bullet, _centipedes, _mushrooms);
+        removeDeadCentipedes();
         this->updateMap();
     }
 
-    if (!(_tick % (SPEED * 2)) || talinette) {
+    if (!(_tick % (SPEED * 2)) || talinette)
+    {
         if (!_centipedes.size())
             createCentipede();
 
-        for (Centipede &centipede : _centipedes) {
-            centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
+        for (Centipede *centipede : _centipedes)
+        {
+            centipede->oneTurn(_centipedes, _mushrooms, _map);
         }
 
         _centipedeKiller.touched(_centipedes);
@@ -168,9 +172,9 @@ void arcade::CentipedeGame::updateMap()
     if (_bullet.isAlive())
         _map.updateLayer(_bullet, CentipedeLayers::BULLET);
 
-    for (Centipede &centipede : _centipedes)
-        for (CentipedePart &part : centipede.getBody())
-            _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
+    for (Centipede *centipede : _centipedes)
+        for (CentipedePart *part : centipede->getBody())
+            _map.updateLayer(*part, CentipedeLayers::CENTIPEDE);
 }
 
 const arcade::Map &arcade::CentipedeGame::getMouliMap() const {
@@ -199,16 +203,27 @@ void arcade::CentipedeGame::bulletAndMushrooms()
 
     if ((it = std::find_if(_mushrooms.begin(), _mushrooms.end(),
                            [this](Mushroom *mush) {
-                              return (mush->getAbs() == _bullet.getAbs());
+                               return (mush->getAbs() == _bullet.getAbs());
                            })) != _mushrooms.end())
     {
-        _bullet.hit();
         _bullet.reset(_centipedeKiller.getAbs());
         _bullet.hit();
         (*it)->takeDamage(1);
         if ((*it)->getHp() == 0)
             _mushrooms.erase(it);
     }
+}
+
+void arcade::CentipedeGame::removeDeadCentipedes()
+{
+    std::list<arcade::Centipede *>::iterator it;
+
+    it = std::remove_if(_centipedes.begin(), _centipedes.end(),
+                        [](arcade::Centipede *cent) {
+                            return (cent->getBody().size() == 0);
+                        });
+    if (it != _centipedes.end())
+        _centipedes.erase(it, _centipedes.end());
 }
 
 extern "C" arcade::IGame *getGame()

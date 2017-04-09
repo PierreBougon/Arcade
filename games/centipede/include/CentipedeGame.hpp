@@ -53,7 +53,7 @@ namespace arcade
         Bullet                          _bullet;
         CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom *>           _mushrooms;
-        std::list<Centipede>            _centipedes;
+        std::list<Centipede *>          _centipedes;
         size_t                          _tick;
 
 
@@ -63,6 +63,7 @@ namespace arcade
         void createCentipede();
         void updateMap();
         void bulletAndMushrooms();
+        void removeDeadCentipedes();
     };
 }
 
