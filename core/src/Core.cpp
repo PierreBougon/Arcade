@@ -193,13 +193,17 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 void arcade::Core::setGame(const std::string &game)
 {
     size_t nbTested = 0;
+    std::vector<std::string>::const_iterator it = std::find(pars.getVecGame().begin(), pars.getVecGame().end(), game);
 
     currentGame = nullptr;
     while (!currentGame && nbTested < tabGame.size())
     {
-        currentGame = findGame(game);
+        currentGame = findGame(*it);
         initGame();
+        ++it;
         ++nbTested;
+        if (it == pars.getVecGame().end())
+            it = pars.getVecGame().begin();
     }
     if (nbTested == tabGame.size())
         throw DLLoadingError(ALL_GAME_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::GAMES_CORRUPTED);
@@ -208,12 +212,16 @@ void arcade::Core::setGame(const std::string &game)
 void arcade::Core::setLib(const std::string &lib)
 {
     size_t nbTested = 0;
+    std::vector<std::string>::const_iterator it = std::find(pars.getVecLib().begin(), pars.getVecLib().end(), lib);
 
     currentLib = nullptr;
     while (!currentLib && nbTested < tabLib.size())
     {
-        currentLib = findLib(lib);
+        currentLib = findLib(*it);
+        ++it;
         ++nbTested;
+        if (it == pars.getVecLib().end())
+            it = pars.getVecLib().begin();
     }
     if (nbTested == tabLib.size())
         throw DLLoadingError(ALL_LIB_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::LIBRARIES_CORRUPTED);
@@ -323,6 +331,9 @@ bool arcade::Core::coreEvent(const arcade::Event &event)
                 return true;
             case KB_5:
                 nextGame();
+                return true;
+            case KB_ESCAPE:
+                open = false;
                 return true;
             default:
                 return false;

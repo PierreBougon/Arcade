@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sun Apr  2 00:32:42 2017 bougon_p
-## Last update Sun Apr  9 11:42:53 2017 bougon_p
+## Last update Sun Apr  9 20:40:13 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -30,7 +30,7 @@ INC     =       -Iinclude \
 		-I../../soundManager/include \
 		-I../lapin/dep/SFML-2.3/include
 
-LDFLAGS	+=	-L../lapin/dep/SFML-2.3/lib/		\
+LDFLAGS	+=	-L../lapin/dep/SFML-2.3/lib/	\
 		-lsfml-graphics			\
 		-lsfml-window			\
 		-lsfml-system			\

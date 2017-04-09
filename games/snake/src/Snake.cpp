@@ -62,7 +62,7 @@ void arcade::Snake::process()
         return;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin(); it != snakes.end(); ++it)
     {
-        gameMap.updateLayer((*it), 1);
+        gameMap.updateLayer(*it, 1);
     }
     if (cherry.size())
         gameMap.updateLayer(cherry[0], 1);
@@ -288,7 +288,7 @@ void arcade::Snake::moveBody(bool movePhysic)
     Vector2d newShift;
 
     pos = snakes[0].getPrev();
-    shift = snakes[0].getShift().x == 0.0d ? snakes[0].getShift().y : snakes[0].getShift().x;
+    shift = snakes[0].getShift().x == 0.0 ? snakes[0].getShift().y : snakes[0].getShift().x;
     newPos = pos;
     for (std::vector<PlayerControlSnake>::iterator it = snakes.begin() + 1; it != snakes.end() ; ++it)
     {
@@ -308,7 +308,8 @@ void arcade::Snake::moveBody(bool movePhysic)
             default:
                 break;
         }
-        it->setShift(newShift);
+//        if (it->getSpriteId() < 6 || it->getSpriteId() > 9)
+//            it->setShift(newShift);
         pos = newPos;
     }
 }
