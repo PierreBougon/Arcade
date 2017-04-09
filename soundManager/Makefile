@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Wed Apr  5 21:11:25 2017 bougon_p
-## Last update Sun Apr  9 10:30:32 2017 bougon_p
+## Last update Sun Apr  9 23:17:38 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -20,13 +20,14 @@ PROJECT_NAME	=	Sound Manager
 
 SRC	=	src/SoundManager.cpp	\
 		src/SoundRender.cpp	\
-		../interfaces/Sound.cpp
+		../interfaces/Sound.cpp	\
+		../core/src/Logger.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	lib_sound_manager.a
 
-INC     =       -Iinclude -I../interfaces
+INC     =       -Iinclude -I../interfaces -I../core/include
 
 LDFLAGS	+=	-L../lib/sfml/dep/SFML/    \
                 -lsfml-graphics \
