@@ -43,6 +43,7 @@ namespace arcade
         size_t getBackgroundId() const;
         Color getBackgroundColor() const;
         const std::string &getText() const;
+        void setText(std::string text);
         void setClicked();
         Color getTextColor() const;
 
@@ -67,6 +68,8 @@ namespace arcade
         size_t size() const;
         IComponent &at(std::size_t n);
         void addComponent(Component &add);
+        void addComponent(Component &&add);
+
     private:
         std::vector<IComponent *> components;
     };

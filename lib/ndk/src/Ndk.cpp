@@ -36,8 +36,9 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
     if (!pass)
     {
-        win = newwin(static_cast<int>(map.getHeight() + 2), static_cast<int>(map.getWidth() + 2), 10, 10);
+        win = newwin(static_cast<int>(map.getHeight() + 2), static_cast<int>(map.getWidth() + 2), static_cast<int>(0.1 * getmaxx(stdscr)),static_cast<int>(0.1 * getmaxy(stdscr)));
         set_escdelay(0);
+        cbreak();
         noecho();
         curs_set(0);
         wtimeout(win, 0);
@@ -128,7 +129,7 @@ arcade::Ndk::Ndk() : keyboard({
                               {KEY_END, arcade::KeyboardKey::KB_END},
                               {KEY_ENTER, arcade::KeyboardKey::KB_ENTER},
                               {'=', arcade::KeyboardKey::KB_EQUALS},
-                              {KEY_EXIT, arcade::KeyboardKey::KB_ESCAPE},
+                              {27, arcade::KeyboardKey::KB_ESCAPE},
                               {'!', arcade::KeyboardKey::KB_EXCLAMATION},
                               {KEY_F(1), arcade::KeyboardKey::KB_FN1},
                               {KEY_F(2), arcade::KeyboardKey::KB_FN2},
@@ -174,6 +175,7 @@ arcade::Ndk::Ndk() : keyboard({
                       })
 {
     initscr();
+    keypad(stdscr, true);
     timeout(0);
     pass = false;
 }
@@ -218,7 +220,11 @@ void arcade::Ndk::updateGUI(arcade::IGUI &gui)
         IComponent &component = gui.at(i);
         if (component.getText() != "")
         {
-            mvwprintw(stdscr, static_cast<int>(component.getX()), static_cast<int>(component.getY()), "%s",
+            std::cerr << static_cast<int>(component.getX() * getmaxx(stdscr)) << " && " << static_cast<int>(component.getY() * getmaxy(stdscr)) << std::endl;
+            start_color();
+            init_pair(1, COLOR_RED, COLOR_BLACK);
+            wattron(stdscr, COLOR_PAIR(component.getTextColor().full));
+            mvwprintw(stdscr, static_cast<int>(component.getX() * getmaxx(stdscr)), static_cast<int>(component.getY() * getmaxy(stdscr)), "%s",
              component.getText().c_str());
         }
     }

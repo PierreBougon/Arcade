@@ -3,6 +3,7 @@
 //
 
 #include <memory>
+#include <string>
 #include "SpriteGenerator.hpp"
 #include "PlayerControlSnake.hpp"
 #include "DestroyableObject.hpp"
@@ -19,8 +20,17 @@ void arcade::Snake::notifyEvent(std::vector<arcade::Event> &&events)
 {
     std::vector<arcade::Event> tmpEvent;
 
-    tmpEvent = std::move(events);
-    snakes[0].updatePlayerInput(tmpEvent);
+    if (events.size() > 0 && events[0].action == AT_PRESSED && events[0].type == ET_KEYBOARD &&
+        events[0].kb_key == KB_ESCAPE)
+    {
+        state = MENU;
+        tmpEvent = std::move(events);
+    }
+    else
+    {
+        tmpEvent = std::move(events);
+        snakes[0].updatePlayerInput(tmpEvent);
+    }
 }
 
 void arcade::Snake::notifyNetwork(std::vector<arcade::NetworkPacket> &&)
@@ -113,11 +123,12 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0)
+arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0), score(4)
 {
     state = LOADING;
     createPlayer();
     putFoodInMap();
+    gameGui.addComponent(Component(0.05, 0.05, 0.1, 0.1, 17, Color::Blue, "Score : " + std::to_string(score), Color(1)));
     state = INGAME;
 }
 
@@ -185,6 +196,8 @@ void arcade::Snake::feedingSnakes()
     std::vector<size_t> tail = {10, 11, 12, 13};
     std::vector<size_t> count = {1, 1, 1, 1};
 
+    score += 1;
+    static_cast<Component&>(gameGui.at(0)).setText("Score : " + std::to_string(score));
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
     if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
