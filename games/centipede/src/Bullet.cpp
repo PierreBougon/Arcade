@@ -7,7 +7,8 @@
 #include "Bullet.hpp"
 
 arcade::Bullet::Bullet(const Vector2s &pos) :
-    LifelessEntity(pos, TileType::MY_SHOOT,
+    LifelessEntity(pos,
+                   TileType::MY_SHOOT,
                    TileTypeEvolution::SHOT_PLAYER,
                    Color::Yellow,
                    false),

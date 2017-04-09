@@ -189,13 +189,13 @@ void arcade::CentipedeKiller::tryFire(arcade::Bullet &bullet)
         bullet.reset(vec);
 }
 
-bool arcade::CentipedeKiller::touched(std::list<arcade::Centipede> &centipedes)
+bool arcade::CentipedeKiller::touched(std::list<arcade::Centipede*> &centipedes)
 {
-    for (Centipede &centipede : centipedes)
+    for (Centipede *centipede : centipedes)
     {
-        for (CentipedePart &part : centipede.getBody())
+        for (CentipedePart *part : centipede->getBody())
         {
-            if (part.getAbs() == abs)
+            if (part->getAbs() == abs)
             {
                 if (hp)
                     --hp;
@@ -213,4 +213,19 @@ void arcade::CentipedeKiller::move()
 
 void arcade::CentipedeKiller::action()
 {
+}
+
+void arcade::CentipedeKiller::bulletVsCentipede(arcade::Bullet &bullet,
+                                                std::list<arcade::Centipede *> &centipedes,
+                                                std::list<arcade::Mushroom *> &mushrooms)
+{
+    for (arcade::Centipede *centipede : centipedes)
+    {
+        if (centipede->hitByBullet(bullet, centipedes, mushrooms))
+        {
+            bullet.reset(abs);
+            bullet.hit();
+            return ;
+        }
+    }
 }

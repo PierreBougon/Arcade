@@ -16,7 +16,6 @@ bool arcade::Tick::isTick()
 
     if (time_span.count() >= tickMs())
     {
-        std::cout << time_span.count() << std::endl;
         baseTime = std::chrono::steady_clock::now();
         return true;
     }

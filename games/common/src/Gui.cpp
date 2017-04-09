@@ -37,6 +37,11 @@ void arcade::Gui::addComponent(arcade::Component &add)
     components.push_back(new Component(add));
 }
 
+void arcade::Gui::addComponent(arcade::Component &&add)
+{
+    components.push_back(new Component(add));
+}
+
 
 double arcade::Component::getX() const
 {
@@ -141,4 +146,9 @@ arcade::Component::Component(const arcade::Component &cmp)
     _text = cmp._text;
     _textColor = cmp._textColor;
     _clicked = cmp._clicked;
+}
+
+void arcade::Component::setText(std::string text)
+{
+    _text = text;
 }
