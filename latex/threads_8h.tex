@@ -1,0 +1,114 @@
+\hypertarget{threads_8h}{\section{lib/lapin/dep/lapin/threads.h File Reference}
+\label{threads_8h}\index{lib/lapin/dep/lapin/threads.\-h@{lib/lapin/dep/lapin/threads.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__threadpool}{s\-\_\-bunny\-\_\-threadpool}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__threadpool}{s\-\_\-bunny\-\_\-threadpool} \hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool}
+\item 
+typedef void($\ast$ \hyperlink{threads_8h_ac13366a2552634d48d943312ff7ebc23}{t\-\_\-bunny\-\_\-function} )(void $\ast$data, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$add\-\_\-ptr)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool} $\ast$ \hyperlink{threads_8h_a2817877105849533e76e943e720b7357}{bunny\-\_\-new\-\_\-threadpool} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr)
+\item 
+void \hyperlink{threads_8h_afbdce3a915c4f9b61f415c4162fd159d}{bunny\-\_\-delete\-\_\-threadpool} (\hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool} $\ast$pol)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{threads_8h_ae0d7b4efff46332c92f21a58e369da2b}{bunny\-\_\-thread\-\_\-foreach} (\hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool} $\ast$pol, \hyperlink{threads_8h_ac13366a2552634d48d943312ff7ebc23}{t\-\_\-bunny\-\_\-function} func, void $\ast$$\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$add\-\_\-ptr)
+\item 
+void \hyperlink{threads_8h_aa7b490060c88a16581713f723cbe631c}{bunny\-\_\-thread\-\_\-wait\-\_\-completion} (\hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool} $\ast$pol)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An easy to use thread pool that allow you to exploit the multiple threads of your system without making anything more complex than a for like construction. 
+
+\subsection{Typedef Documentation}
+\hypertarget{threads_8h_ac13366a2552634d48d943312ff7ebc23}{\index{threads.\-h@{threads.\-h}!t\-\_\-bunny\-\_\-function@{t\-\_\-bunny\-\_\-function}}
+\index{t\-\_\-bunny\-\_\-function@{t\-\_\-bunny\-\_\-function}!threads.h@{threads.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-function)(void $\ast$data, {\bf const} void $\ast$add\-\_\-ptr)}}\label{threads_8h_ac13366a2552634d48d943312ff7ebc23}
+The type of function where threads can jump. 
+\begin{DoxyParams}{Parameters}
+{\em The} & data which came from the collection given to the bunny\-\_\-thread\-\_\-foreach. This data is only manipulated by this function. \\
+\hline
+{\em A} & void$\ast$ pointer which is from the last parameter of bunny\-\_\-thread\-\_\-foreach. This data can be accessed by every threads, so pay attention to race condition! It is mainly here to be read, not written! \\
+\hline
+\end{DoxyParams}
+\hypertarget{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{\index{threads.\-h@{threads.\-h}!t\-\_\-bunny\-\_\-threadpool@{t\-\_\-bunny\-\_\-threadpool}}
+\index{t\-\_\-bunny\-\_\-threadpool@{t\-\_\-bunny\-\_\-threadpool}!threads.h@{threads.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-threadpool}				 {\bf t\-\_\-bunny\-\_\-threadpool}}}\label{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}
+A t\-\_\-bunny\-\_\-threadpool represents the threadpool for the library. It starts with a private field, and then the number of threads 
+
+\subsection{Function Documentation}
+\hypertarget{threads_8h_afbdce3a915c4f9b61f415c4162fd159d}{\index{threads.\-h@{threads.\-h}!bunny\-\_\-delete\-\_\-threadpool@{bunny\-\_\-delete\-\_\-threadpool}}
+\index{bunny\-\_\-delete\-\_\-threadpool@{bunny\-\_\-delete\-\_\-threadpool}!threads.h@{threads.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-threadpool (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-threadpool} $\ast$}]{pol}
+\end{DoxyParamCaption}
+)}}\label{threads_8h_afbdce3a915c4f9b61f415c4162fd159d}
+Delete the threadpool. Kill threads before returning. 
+\begin{DoxyParams}{Parameters}
+{\em pol} & The threadpool to destroy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{threads_8h_a2817877105849533e76e943e720b7357}{\index{threads.\-h@{threads.\-h}!bunny\-\_\-new\-\_\-threadpool@{bunny\-\_\-new\-\_\-threadpool}}
+\index{bunny\-\_\-new\-\_\-threadpool@{bunny\-\_\-new\-\_\-threadpool}!threads.h@{threads.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-threadpool}$\ast$ bunny\-\_\-new\-\_\-threadpool (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{nbr}
+\end{DoxyParamCaption}
+)}}\label{threads_8h_a2817877105849533e76e943e720b7357}
+The bunny\-\_\-new\-\_\-threadpool function creates a threadpool with the given amounth of threads. 
+\begin{DoxyParams}{Parameters}
+{\em nbr} & The amount of threads you want \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-threadpool or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{threads_8h_ae0d7b4efff46332c92f21a58e369da2b}{\index{threads.\-h@{threads.\-h}!bunny\-\_\-thread\-\_\-foreach@{bunny\-\_\-thread\-\_\-foreach}}
+\index{bunny\-\_\-thread\-\_\-foreach@{bunny\-\_\-thread\-\_\-foreach}!threads.h@{threads.\-h}}
+\subsubsection[{bunny\-\_\-thread\-\_\-foreach}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-thread\-\_\-foreach (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-threadpool} $\ast$}]{pol, }
+\item[{{\bf t\-\_\-bunny\-\_\-function}}]{func, }
+\item[{void $\ast$$\ast$}]{data, }
+\item[{{\bf size\-\_\-t}}]{len, }
+\item[{{\bf const} void $\ast$}]{add\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{threads_8h_ae0d7b4efff46332c92f21a58e369da2b}
+Make every threads inside pol call func with a part of data and add\-\_\-ptr as parameter. 
+\begin{DoxyParams}{Parameters}
+{\em pol} & The threadpool \\
+\hline
+{\em func} & The function that threads will call \\
+\hline
+{\em data} & An array of pointer to data that will be splitted in order to be sent to the t\-\_\-bunny\-\_\-function as first parameter. \\
+\hline
+{\em len} & The length of the data array \\
+\hline
+{\em A} & pointer that will be transmitted to t\-\_\-bunny\-\_\-function as second parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if not enough memory was available to launch the foreach or if a critical error happened in the thread launching system. True if everything went well. 
+\end{DoxyReturn}
+\hypertarget{threads_8h_aa7b490060c88a16581713f723cbe631c}{\index{threads.\-h@{threads.\-h}!bunny\-\_\-thread\-\_\-wait\-\_\-completion@{bunny\-\_\-thread\-\_\-wait\-\_\-completion}}
+\index{bunny\-\_\-thread\-\_\-wait\-\_\-completion@{bunny\-\_\-thread\-\_\-wait\-\_\-completion}!threads.h@{threads.\-h}}
+\subsubsection[{bunny\-\_\-thread\-\_\-wait\-\_\-completion}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-thread\-\_\-wait\-\_\-completion (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-threadpool} $\ast$}]{pol}
+\end{DoxyParamCaption}
+)}}\label{threads_8h_aa7b490060c88a16581713f723cbe631c}
+This function does not return while every threads are not back in the threadpool sleeping. Useful to wait between two foreach, when their order is important. 
+\begin{DoxyParams}{Parameters}
+{\em pol} & The threadpool. \\
+\hline
+\end{DoxyParams}

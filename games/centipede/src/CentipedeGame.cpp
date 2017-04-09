@@ -71,7 +71,6 @@ void arcade::CentipedeGame::notifyEvent(std::vector<arcade::Event> &&_events)
     {
         if (event.kb_key == arcade::KeyboardKey::KB_ESCAPE)
         {
-            std::cerr << "QUIT THIS GAME" << std::endl;
             _gameState = arcade::GameState::MENU;
             return ;
         }

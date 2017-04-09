@@ -1,0 +1,137 @@
+\hypertarget{_lapin_8cpp}{\section{lib/lapin/src/\-Lapin.cpp File Reference}
+\label{_lapin_8cpp}\index{lib/lapin/src/\-Lapin.\-cpp@{lib/lapin/src/\-Lapin.\-cpp}}
+}
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}Lapin.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Loading\-Exceptions.\-hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacearcade}{arcade}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{_lapin_8cpp_a10d6c1ca3670d2acf6b8571f42ce024e}{keyboard\-Poll\-Events} (\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} state, \hyperlink{enum_8h_a6bd88cacb5dbe63a85e8cededa379eb4}{t\-\_\-bunny\-\_\-keysym} symbole, void $\ast$data)
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{_lapin_8cpp_ada1ee1ff9fde9690812ff4290e5ff05d}{main\-Loop} (void $\ast$data)
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{_lapin_8cpp_a2abd6ba30f686b1048b7a5cfa1adf802}{mouse\-Poll\-Events} (\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} state, \hyperlink{enum_8h_a4f4c36d161b8d7bacebd032a774565a1}{t\-\_\-bunny\-\_\-mouse\-\_\-button} button, void $\ast$data)
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{_lapin_8cpp_a14d8e1a1da582550cfd5bc03b8d2e55e}{mouse\-Movement} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos, void $\ast$data)
+\item 
+\hyperlink{_lapin_8cpp_a8405940958626b9bd74115cc36a99cd3}{bunny\-\_\-enable\-\_\-full\-\_\-blit} (true)
+\item 
+\hyperlink{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{if} (\hyperlink{_lapin_8cpp_afdfce14f0d12266a9956f9fe5e4fe1fd}{Map}==nullptr) throw D\-L\-Loading\-Error(\char`\"{}Can't create \hyperlink{main_8cpp_a0c99d968a34e803d378692bde2e3f18f}{main} picture\char`\"{}
+\item 
+\hyperlink{_lapin_8cpp_abf79c5f131a31d7123b4f9a0e0340868}{if} (\hyperlink{_lapin_8cpp_a6f567238a0aaa00ab1b336d0cf0faf4b}{Window}==nullptr) throw D\-L\-Loading\-Error(\char`\"{}Can't create window\char`\"{}
+\item 
+\hyperlink{classarcade_1_1_i_gfx_lib}{arcade\-::\-I\-Gfx\-Lib} $\ast$ \hyperlink{_lapin_8cpp_a5376f7cc6e73b17875dbd3bde92f4cbd}{get\-Lib} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_lapin_8cpp_afdfce14f0d12266a9956f9fe5e4fe1fd}{Map} = \hyperlink{graphics_8h_a0f006839183de6217dcb23dd6dbe1017}{bunny\-\_\-new\-\_\-picture}(Width, Height)
+\item 
+\hyperlink{_lapin_8cpp_a6f567238a0aaa00ab1b336d0cf0faf4b}{Window} = \hyperlink{window_8h_a7e7b5c288f76371a901e9d506eefdfdf}{bunny\-\_\-start}(Width, Height, \hyperlink{_snake_8cpp_ae6c865df784842196d411c1466b01686}{false}, \char`\"{}Retro Furnace\char`\"{})
+\item 
+\hyperlink{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{Context} \hyperlink{_lapin_8cpp_a932411f3292c57b7c05604b25312a33c}{key} = \hyperlink{_lapin_8cpp_a10d6c1ca3670d2acf6b8571f42ce024e}{keyboard\-Poll\-Events}
+\item 
+\hyperlink{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{Context} \hyperlink{_lapin_8cpp_ae75dc9a105e970734a903222f40b464c}{loop} = \hyperlink{_lapin_8cpp_ada1ee1ff9fde9690812ff4290e5ff05d}{main\-Loop}
+\item 
+\hyperlink{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{Context} \hyperlink{_lapin_8cpp_a8ec4ca7fdc10441c3b9cd361a023820d}{click} = \hyperlink{_lapin_8cpp_a2abd6ba30f686b1048b7a5cfa1adf802}{mouse\-Poll\-Events}
+\item 
+\hyperlink{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{Context} \hyperlink{_lapin_8cpp_a258b4567b154d2250af0bc0277b0b6de}{move} = \hyperlink{_lapin_8cpp_a14d8e1a1da582550cfd5bc03b8d2e55e}{mouse\-Movement}
+\item 
+\hyperlink{events_8h_a806e49f23c86e099276162f4cbe76ce5}{bunny\-\_\-set\-\_\-context} \& \hyperlink{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{Context}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_lapin_8cpp_a8405940958626b9bd74115cc36a99cd3}{\index{Lapin.\-cpp@{Lapin.\-cpp}!bunny\-\_\-enable\-\_\-full\-\_\-blit@{bunny\-\_\-enable\-\_\-full\-\_\-blit}}
+\index{bunny\-\_\-enable\-\_\-full\-\_\-blit@{bunny\-\_\-enable\-\_\-full\-\_\-blit}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{bunny\-\_\-enable\-\_\-full\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}bunny\-\_\-enable\-\_\-full\-\_\-blit (
+\begin{DoxyParamCaption}
+\item[{true}]{}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_a8405940958626b9bd74115cc36a99cd3}
+\hypertarget{_lapin_8cpp_a5376f7cc6e73b17875dbd3bde92f4cbd}{\index{Lapin.\-cpp@{Lapin.\-cpp}!get\-Lib@{get\-Lib}}
+\index{get\-Lib@{get\-Lib}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{get\-Lib}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-I\-Gfx\-Lib}$\ast$ get\-Lib (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_a5376f7cc6e73b17875dbd3bde92f4cbd}
+\hypertarget{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}{\index{Lapin.\-cpp@{Lapin.\-cpp}!if@{if}}
+\index{if@{if}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{{\bf Map}}]{ = {\ttfamily =~nullptr}}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_ac2ba351ccec34d894cf8a2f9f1379eed}
+\hypertarget{_lapin_8cpp_abf79c5f131a31d7123b4f9a0e0340868}{\index{Lapin.\-cpp@{Lapin.\-cpp}!if@{if}}
+\index{if@{if}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{{\bf Window}}]{ = {\ttfamily =~nullptr}}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_abf79c5f131a31d7123b4f9a0e0340868}
+\hypertarget{_lapin_8cpp_a10d6c1ca3670d2acf6b8571f42ce024e}{\index{Lapin.\-cpp@{Lapin.\-cpp}!keyboard\-Poll\-Events@{keyboard\-Poll\-Events}}
+\index{keyboard\-Poll\-Events@{keyboard\-Poll\-Events}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{keyboard\-Poll\-Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} keyboard\-Poll\-Events (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-event\-\_\-state}}]{state, }
+\item[{{\bf t\-\_\-bunny\-\_\-keysym}}]{symbole, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_a10d6c1ca3670d2acf6b8571f42ce024e}
+\hypertarget{_lapin_8cpp_ada1ee1ff9fde9690812ff4290e5ff05d}{\index{Lapin.\-cpp@{Lapin.\-cpp}!main\-Loop@{main\-Loop}}
+\index{main\-Loop@{main\-Loop}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{main\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} main\-Loop (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_ada1ee1ff9fde9690812ff4290e5ff05d}
+\hypertarget{_lapin_8cpp_a14d8e1a1da582550cfd5bc03b8d2e55e}{\index{Lapin.\-cpp@{Lapin.\-cpp}!mouse\-Movement@{mouse\-Movement}}
+\index{mouse\-Movement@{mouse\-Movement}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{mouse\-Movement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} mouse\-Movement (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$}]{pos, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_a14d8e1a1da582550cfd5bc03b8d2e55e}
+\hypertarget{_lapin_8cpp_a2abd6ba30f686b1048b7a5cfa1adf802}{\index{Lapin.\-cpp@{Lapin.\-cpp}!mouse\-Poll\-Events@{mouse\-Poll\-Events}}
+\index{mouse\-Poll\-Events@{mouse\-Poll\-Events}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{mouse\-Poll\-Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} mouse\-Poll\-Events (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-event\-\_\-state}}]{state, }
+\item[{{\bf t\-\_\-bunny\-\_\-mouse\-\_\-button}}]{button, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{_lapin_8cpp_a2abd6ba30f686b1048b7a5cfa1adf802}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_lapin_8cpp_a8ec4ca7fdc10441c3b9cd361a023820d}{\index{Lapin.\-cpp@{Lapin.\-cpp}!click@{click}}
+\index{click@{click}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context} click = {\bf mouse\-Poll\-Events}}}\label{_lapin_8cpp_a8ec4ca7fdc10441c3b9cd361a023820d}
+\hypertarget{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}{\index{Lapin.\-cpp@{Lapin.\-cpp}!Context@{Context}}
+\index{Context@{Context}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bunny\-\_\-set\-\_\-context}\& Context}}\label{_lapin_8cpp_a38b255b6d376188b80a96ae7b356947c}
+\hypertarget{_lapin_8cpp_a932411f3292c57b7c05604b25312a33c}{\index{Lapin.\-cpp@{Lapin.\-cpp}!key@{key}}
+\index{key@{key}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context} {\bf key} = {\bf keyboard\-Poll\-Events}}}\label{_lapin_8cpp_a932411f3292c57b7c05604b25312a33c}
+\hypertarget{_lapin_8cpp_ae75dc9a105e970734a903222f40b464c}{\index{Lapin.\-cpp@{Lapin.\-cpp}!loop@{loop}}
+\index{loop@{loop}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context} loop = {\bf main\-Loop}}}\label{_lapin_8cpp_ae75dc9a105e970734a903222f40b464c}
+\hypertarget{_lapin_8cpp_afdfce14f0d12266a9956f9fe5e4fe1fd}{\index{Lapin.\-cpp@{Lapin.\-cpp}!Map@{Map}}
+\index{Map@{Map}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map = {\bf bunny\-\_\-new\-\_\-picture}(Width, Height)}}\label{_lapin_8cpp_afdfce14f0d12266a9956f9fe5e4fe1fd}
+\hypertarget{_lapin_8cpp_a258b4567b154d2250af0bc0277b0b6de}{\index{Lapin.\-cpp@{Lapin.\-cpp}!move@{move}}
+\index{move@{move}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context} move = {\bf mouse\-Movement}}}\label{_lapin_8cpp_a258b4567b154d2250af0bc0277b0b6de}
+\hypertarget{_lapin_8cpp_a6f567238a0aaa00ab1b336d0cf0faf4b}{\index{Lapin.\-cpp@{Lapin.\-cpp}!Window@{Window}}
+\index{Window@{Window}!Lapin.cpp@{Lapin.\-cpp}}
+\subsubsection[{Window}]{\setlength{\rightskip}{0pt plus 5cm}Window = {\bf bunny\-\_\-start}(Width, Height, {\bf false}, \char`\"{}Retro Furnace\char`\"{})}}\label{_lapin_8cpp_a6f567238a0aaa00ab1b336d0cf0faf4b}

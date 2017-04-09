@@ -1,0 +1,108 @@
+\hypertarget{compat_8h}{\section{lib/lapin/dep/lapin/compat.h File Reference}
+\label{compat_8h}\index{lib/lapin/dep/lapin/compat.\-h@{lib/lapin/dep/lapin/compat.\-h}}
+}
+{\ttfamily \#include \char`\"{}compat/ini.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{compat_8h_a34e214b26120d9a21212dcc57f25bca2}{bunny\-\_\-get\-\_\-screen\-\_\-size}()~$\ast$\hyperlink{window_8h_a5632ee4b262390d284f7dd96fd7617be}{bunny\-\_\-get\-\_\-screen\-\_\-resolution}()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}{t\-\_\-bunny\-\_\-color} \hyperlink{compat_8h_ab08d79d1b413d93361fae0f66f5445f5}{t\-\_\-color}
+\item 
+typedef \hyperlink{color_8h_ab574437c8cba7764e4ff7a5086a1ae96}{t\-\_\-bunny\-\_\-rgb} \hyperlink{compat_8h_a03aac2c12c243d721a1f9da64fcfc6b7}{t\-\_\-rgb}
+\item 
+typedef \hyperlink{enum_8h_a4f4c36d161b8d7bacebd032a774565a1}{t\-\_\-bunny\-\_\-mouse\-\_\-button} \hyperlink{compat_8h_af2156c3a714628456aca66d13d451c2f}{t\-\_\-bunny\-\_\-mousebutton}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{compat_8h_a4d742289977515481814e9d8c4786451}{bunny\-\_\-strnlen} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{curses_8priv_8h_affe776513b24d84b39af8ab0930fef7f}{max})
+\item 
+void \hyperlink{compat_8h_a732d85e87afc63ed33c87d535df4c3ce}{set\-\_\-max\-\_\-heap\-\_\-size} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} s)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{compat_8h_a6b086f8a90ed664f8834f1f9b9f61180}{memory\-\_\-check}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{compat_8h_aef74642c48c7826746846991ff7da9cf}{default\-\_\-scope}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{compat_8h_a45f13315a3e769dcc4d5fa284e7a3647}{erase\-\_\-scope}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{compat_8h_a0cf9869f95240a5d78260df59bc3ae29}{erase\-\_\-field}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{compat_8h_a8cde2b0d97a8c6568b5d7578b7611cf3}{erase\-\_\-index}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$ \hyperlink{compat_8h_a102bf5b72ccbb96b94939cf515f87e4f}{last\-\_\-scope}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header contains or include old symbols and or definitions that was used in previous version of the bunny library. So it is useful to make old programs written in older versions of the bunny library still compiling.
+
+So, consider things that are here as obsolete things. There is no removal planned, but no one knows in what the future is made, do not use anything that is here in your code.
+
+It also contains a few abstraction to port the bunny library on Windows. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{compat_8h_a34e214b26120d9a21212dcc57f25bca2}{\index{compat.\-h@{compat.\-h}!bunny\-\_\-get\-\_\-screen\-\_\-size@{bunny\-\_\-get\-\_\-screen\-\_\-size}}
+\index{bunny\-\_\-get\-\_\-screen\-\_\-size@{bunny\-\_\-get\-\_\-screen\-\_\-size}!compat.h@{compat.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-screen\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-get\-\_\-screen\-\_\-size(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~$\ast${\bf bunny\-\_\-get\-\_\-screen\-\_\-resolution}()}}\label{compat_8h_a34e214b26120d9a21212dcc57f25bca2}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{compat_8h_af2156c3a714628456aca66d13d451c2f}{\index{compat.\-h@{compat.\-h}!t\-\_\-bunny\-\_\-mousebutton@{t\-\_\-bunny\-\_\-mousebutton}}
+\index{t\-\_\-bunny\-\_\-mousebutton@{t\-\_\-bunny\-\_\-mousebutton}!compat.h@{compat.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-mousebutton}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-mouse\-\_\-button} {\bf t\-\_\-bunny\-\_\-mousebutton}}}\label{compat_8h_af2156c3a714628456aca66d13d451c2f}
+\hypertarget{compat_8h_ab08d79d1b413d93361fae0f66f5445f5}{\index{compat.\-h@{compat.\-h}!t\-\_\-color@{t\-\_\-color}}
+\index{t\-\_\-color@{t\-\_\-color}!compat.h@{compat.\-h}}
+\subsubsection[{t\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-color} {\bf t\-\_\-color}}}\label{compat_8h_ab08d79d1b413d93361fae0f66f5445f5}
+\hypertarget{compat_8h_a03aac2c12c243d721a1f9da64fcfc6b7}{\index{compat.\-h@{compat.\-h}!t\-\_\-rgb@{t\-\_\-rgb}}
+\index{t\-\_\-rgb@{t\-\_\-rgb}!compat.h@{compat.\-h}}
+\subsubsection[{t\-\_\-rgb}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-rgb} {\bf t\-\_\-rgb}}}\label{compat_8h_a03aac2c12c243d721a1f9da64fcfc6b7}
+
+
+\subsection{Function Documentation}
+\hypertarget{compat_8h_a4d742289977515481814e9d8c4786451}{\index{compat.\-h@{compat.\-h}!bunny\-\_\-strnlen@{bunny\-\_\-strnlen}}
+\index{bunny\-\_\-strnlen@{bunny\-\_\-strnlen}!compat.h@{compat.\-h}}
+\subsubsection[{bunny\-\_\-strnlen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} bunny\-\_\-strnlen (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{str, }
+\item[{{\bf size\-\_\-t}}]{max}
+\end{DoxyParamCaption}
+)}}\label{compat_8h_a4d742289977515481814e9d8c4786451}
+\hypertarget{compat_8h_a732d85e87afc63ed33c87d535df4c3ce}{\index{compat.\-h@{compat.\-h}!set\-\_\-max\-\_\-heap\-\_\-size@{set\-\_\-max\-\_\-heap\-\_\-size}}
+\index{set\-\_\-max\-\_\-heap\-\_\-size@{set\-\_\-max\-\_\-heap\-\_\-size}!compat.h@{compat.\-h}}
+\subsubsection[{set\-\_\-max\-\_\-heap\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}void set\-\_\-max\-\_\-heap\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{s}
+\end{DoxyParamCaption}
+)}}\label{compat_8h_a732d85e87afc63ed33c87d535df4c3ce}
+
+
+\subsection{Variable Documentation}
+\hypertarget{compat_8h_aef74642c48c7826746846991ff7da9cf}{\index{compat.\-h@{compat.\-h}!default\-\_\-scope@{default\-\_\-scope}}
+\index{default\-\_\-scope@{default\-\_\-scope}!compat.h@{compat.\-h}}
+\subsubsection[{default\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ default\-\_\-scope}}\label{compat_8h_aef74642c48c7826746846991ff7da9cf}
+\hypertarget{compat_8h_a0cf9869f95240a5d78260df59bc3ae29}{\index{compat.\-h@{compat.\-h}!erase\-\_\-field@{erase\-\_\-field}}
+\index{erase\-\_\-field@{erase\-\_\-field}!compat.h@{compat.\-h}}
+\subsubsection[{erase\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf unsigned} {\bf int} erase\-\_\-field}}\label{compat_8h_a0cf9869f95240a5d78260df59bc3ae29}
+\hypertarget{compat_8h_a8cde2b0d97a8c6568b5d7578b7611cf3}{\index{compat.\-h@{compat.\-h}!erase\-\_\-index@{erase\-\_\-index}}
+\index{erase\-\_\-index@{erase\-\_\-index}!compat.h@{compat.\-h}}
+\subsubsection[{erase\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ erase\-\_\-index}}\label{compat_8h_a8cde2b0d97a8c6568b5d7578b7611cf3}
+\hypertarget{compat_8h_a45f13315a3e769dcc4d5fa284e7a3647}{\index{compat.\-h@{compat.\-h}!erase\-\_\-scope@{erase\-\_\-scope}}
+\index{erase\-\_\-scope@{erase\-\_\-scope}!compat.h@{compat.\-h}}
+\subsubsection[{erase\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ erase\-\_\-scope}}\label{compat_8h_a45f13315a3e769dcc4d5fa284e7a3647}
+\hypertarget{compat_8h_a102bf5b72ccbb96b94939cf515f87e4f}{\index{compat.\-h@{compat.\-h}!last\-\_\-scope@{last\-\_\-scope}}
+\index{last\-\_\-scope@{last\-\_\-scope}!compat.h@{compat.\-h}}
+\subsubsection[{last\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} void$\ast$ last\-\_\-scope}}\label{compat_8h_a102bf5b72ccbb96b94939cf515f87e4f}
+\hypertarget{compat_8h_a6b086f8a90ed664f8834f1f9b9f61180}{\index{compat.\-h@{compat.\-h}!memory\-\_\-check@{memory\-\_\-check}}
+\index{memory\-\_\-check@{memory\-\_\-check}!compat.h@{compat.\-h}}
+\subsubsection[{memory\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} memory\-\_\-check}}\label{compat_8h_a6b086f8a90ed664f8834f1f9b9f61180}

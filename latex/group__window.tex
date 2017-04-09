@@ -1,0 +1,101 @@
+\hypertarget{group__window}{\section{Window module}
+\label{group__window}\index{Window module@{Window module}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsf_1_1_context}{sf\-::\-Context}
+\begin{DoxyCompactList}\small\item\em Class holding a valid drawing context. \end{DoxyCompactList}\item 
+class \hyperlink{structsf_1_1_context_settings}{sf\-::\-Context\-Settings}
+\begin{DoxyCompactList}\small\item\em Structure defining the settings of the Open\-G\-L context attached to a window. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_event}{sf\-::\-Event}
+\begin{DoxyCompactList}\small\item\em Defines a system event and its parameters. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_gl_resource}{sf\-::\-Gl\-Resource}
+\begin{DoxyCompactList}\small\item\em Base class for classes that require an Open\-G\-L context. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_joystick}{sf\-::\-Joystick}
+\begin{DoxyCompactList}\small\item\em Give access to the real-\/time state of the joysticks. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_keyboard}{sf\-::\-Keyboard}
+\begin{DoxyCompactList}\small\item\em Give access to the real-\/time state of the keyboard. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_mouse}{sf\-::\-Mouse}
+\begin{DoxyCompactList}\small\item\em Give access to the real-\/time state of the mouse. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_sensor}{sf\-::\-Sensor}
+\begin{DoxyCompactList}\small\item\em Give access to the real-\/time state of the sensors. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_touch}{sf\-::\-Touch}
+\begin{DoxyCompactList}\small\item\em Give access to the real-\/time state of the touches. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_video_mode}{sf\-::\-Video\-Mode}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classsf_1_1_video_mode}{Video\-Mode} defines a video mode (width, height, bpp) \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_window}{sf\-::\-Window}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classsf_1_1_window}{Window} that serves as a target for Open\-G\-L rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}{sf\-::\-Style\-::\-None} = 0, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}{sf\-::\-Style\-::\-Titlebar} = 1 $<$$<$ 0, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}{sf\-::\-Style\-::\-Resize} = 1 $<$$<$ 1, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}{sf\-::\-Style\-::\-Close} = 1 $<$$<$ 2, 
+\\*
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}{sf\-::\-Style\-::\-Fullscreen} = 1 $<$$<$ 3, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}{sf\-::\-Style\-::\-Default} = Titlebar $\vert$ Resize $\vert$ Close
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the window styles. \end{DoxyCompactList}\item 
+enum \{ \\*
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}{sf\-::\-Style\-::\-None} = 0, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}{sf\-::\-Style\-::\-Titlebar} = 1 $<$$<$ 0, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}{sf\-::\-Style\-::\-Resize} = 1 $<$$<$ 1, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}{sf\-::\-Style\-::\-Close} = 1 $<$$<$ 2, 
+\\*
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}{sf\-::\-Style\-::\-Fullscreen} = 1 $<$$<$ 3, 
+\hyperlink{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}{sf\-::\-Style\-::\-Default} = Titlebar $\vert$ Resize $\vert$ Close
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the window styles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides Open\-G\-L-\/based windows, and abstractions for events and input handling. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__window_ga7fad03da2bbc1cd45178e90d48e6718f}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{group__window_ga7fad03da2bbc1cd45178e90d48e6718f}
+
+
+Enumeration of the window styles. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!Window module@{Window module}}\index{Window module@{Window module}!None@{None}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}{None}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}
+}]No border / title bar (this flag and all others are mutually exclusive) \index{Titlebar@{Titlebar}!Window module@{Window module}}\index{Window module@{Window module}!Titlebar@{Titlebar}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}{Titlebar}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}
+}]Title bar + fixed border. \index{Resize@{Resize}!Window module@{Window module}}\index{Window module@{Window module}!Resize@{Resize}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}{Resize}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}
+}]Title bar + resizable border + maximize button. \index{Close@{Close}!Window module@{Window module}}\index{Window module@{Window module}!Close@{Close}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}{Close}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}
+}]Title bar + close button. \index{Fullscreen@{Fullscreen}!Window module@{Window module}}\index{Window module@{Window module}!Fullscreen@{Fullscreen}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}{Fullscreen}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}
+}]Fullscreen mode (this flag and all others are mutually exclusive) \index{Default@{Default}!Window module@{Window module}}\index{Window module@{Window module}!Default@{Default}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}{Default}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}
+}]Default window style. \end{description}
+\end{Desc}
+\hypertarget{group__window_ga363853f6419f9ca64dcd85eae2e5caa9}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{group__window_ga363853f6419f9ca64dcd85eae2e5caa9}
+
+
+Enumeration of the window styles. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{None@{None}!Window module@{Window module}}\index{Window module@{Window module}!None@{None}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}{None}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac2b155f5f7b49b49c7fb99655f8da86e}
+}]No border / title bar (this flag and all others are mutually exclusive) \index{Titlebar@{Titlebar}!Window module@{Window module}}\index{Window module@{Window module}!Titlebar@{Titlebar}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}{Titlebar}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9abf046c6fcae63075c651812c6774e389}
+}]Title bar + fixed border. \index{Resize@{Resize}!Window module@{Window module}}\index{Window module@{Window module}!Resize@{Resize}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}{Resize}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aa7c6f765bd5c0cdd9f81b47871508f3e}
+}]Title bar + resizable border + maximize button. \index{Close@{Close}!Window module@{Window module}}\index{Window module@{Window module}!Close@{Close}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}{Close}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9a76bbd82b28e359cc0feec9e5ec123b40}
+}]Title bar + close button. \index{Fullscreen@{Fullscreen}!Window module@{Window module}}\index{Window module@{Window module}!Fullscreen@{Fullscreen}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}{Fullscreen}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9ac0b0bcb071d1ae40aefb7a1a7464f079}
+}]Fullscreen mode (this flag and all others are mutually exclusive) \index{Default@{Default}!Window module@{Window module}}\index{Window module@{Window module}!Default@{Default}}\item[{\em 
+\hypertarget{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}{Default}\label{group__window_gga363853f6419f9ca64dcd85eae2e5caa9aaf73ca9c9fa787f9da9c1d7527d42734}
+}]Default window style. \end{description}
+\end{Desc}

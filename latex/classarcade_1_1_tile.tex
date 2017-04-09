@@ -1,0 +1,247 @@
+\hypertarget{classarcade_1_1_tile}{\section{arcade\-:\-:Tile Class Reference}
+\label{classarcade_1_1_tile}\index{arcade\-::\-Tile@{arcade\-::\-Tile}}
+}
+
+
+{\ttfamily \#include $<$Tile.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Tile\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_tile}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_tile_a38f5ed9f2ae16dbd42fa736ed5c984a6}{$\sim$\-Tile} ()
+\item 
+\hyperlink{classarcade_1_1_tile_af1100b8701dcd96579dd6e2b7a3415bd}{Tile} ()
+\item 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} \hyperlink{classarcade_1_1_tile_a83bd8295ca7bf4e952c372581fcbd337}{get\-Type} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} \hyperlink{classarcade_1_1_tile_a8a81d038b707ae5b2d38e6ff820c8c92}{get\-Type\-Ev} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{classarcade_1_1_tile_afe29bdead41e0a17d84860bccb07542f}{get\-Color} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the color of the tile. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_tile_a2584f423e04a31332578a6cde00822a6}{has\-Sprite} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Returns if the \hyperlink{classarcade_1_1_tile}{Tile} has a sprite affected, if not, use \hyperlink{classarcade_1_1_tile_afe29bdead41e0a17d84860bccb07542f}{get\-Color()} \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_tile_ac4ba05e83420a4d781a200480ed59e88}{get\-Sprite\-Id} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the sprite I\-D (0 if none) \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_tile_ae50881d237ce87d6d07e36b8e465e4c3}{get\-Sprite\-Pos} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the sprite position in it's animation. \end{DoxyCompactList}\item 
+double \hyperlink{classarcade_1_1_tile_a801efba62fbc37558992fbe30b94f3f1}{get\-Shift\-X} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the tile position shift on x. \end{DoxyCompactList}\item 
+double \hyperlink{classarcade_1_1_tile_a7dad12cd10b4a89a3754b0db4dbc0cf1}{get\-Shift\-Y} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the tile position shift on y. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_tile_aefde0ece0a81584556ad5fdb17bb08a4}{set\-Type} (\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type})
+\item 
+void \hyperlink{classarcade_1_1_tile_afc58836782a8b5436b46f28afd6bd171}{set\-Type\-Evo} (\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} type\-Evo)
+\item 
+void \hyperlink{classarcade_1_1_tile_a92b2fb3cf340193f8309922ca3dfbc82}{set\-Sprite\-Id} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} id)
+\item 
+void \hyperlink{classarcade_1_1_tile_a155bb58d04cfebb632cec14aa22c8b6d}{set\-Sprite\-Pos} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} pos)
+\item 
+void \hyperlink{classarcade_1_1_tile_a1f7ee0701e4625c54bcdc361e76d11cd}{set\-Shift\-X} (double shift)
+\item 
+void \hyperlink{classarcade_1_1_tile_ae345cf2965c81cd7d3b882e8adf94568}{set\-Shift\-Y} (double shift)
+\item 
+\hyperlink{classarcade_1_1_tile}{Tile} \& \hyperlink{classarcade_1_1_tile_a0d91a41444ac3ef906e641d7dc8f02ac}{operator=} (\hyperlink{classarcade_1_1_entity}{Entity} \&entity)
+\item 
+\hyperlink{classarcade_1_1_tile}{Tile} \& \hyperlink{classarcade_1_1_tile_a0b6119379038e88cdbbe1645870df26f}{operator=} (\hyperlink{classarcade_1_1_tile}{Tile} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&tile)
+\item 
+\hyperlink{classarcade_1_1_tile}{Tile} \& \hyperlink{classarcade_1_1_tile_a3d24d5422d32454f0eac84acba7e9df2}{operator$<$$<$} (\hyperlink{classarcade_1_1_entity}{Entity} \&entity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_tile_a38f5ed9f2ae16dbd42fa736ed5c984a6}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!$\sim$\-Tile@{$\sim$\-Tile}}
+\index{$\sim$\-Tile@{$\sim$\-Tile}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{$\sim$\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Tile\-::$\sim$\-Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classarcade_1_1_tile_a38f5ed9f2ae16dbd42fa736ed5c984a6}
+\hypertarget{classarcade_1_1_tile_af1100b8701dcd96579dd6e2b7a3415bd}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{Tile}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Tile\-::\-Tile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_af1100b8701dcd96579dd6e2b7a3415bd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_tile_afe29bdead41e0a17d84860bccb07542f}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Color@{get\-Color}}
+\index{get\-Color@{get\-Color}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Color} arcade\-::\-Tile\-::get\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_afe29bdead41e0a17d84860bccb07542f}
+
+
+Get the color of the tile. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_adb20cb553bc2ce17dc23125eb70b8329}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_a801efba62fbc37558992fbe30b94f3f1}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Shift\-X@{get\-Shift\-X}}
+\index{get\-Shift\-X@{get\-Shift\-X}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Shift\-X}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Tile\-::get\-Shift\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_a801efba62fbc37558992fbe30b94f3f1}
+
+
+Get the tile position shift on x. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_aaa83bd96759c2c9f369be4b00b8a72d2}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_a7dad12cd10b4a89a3754b0db4dbc0cf1}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Shift\-Y@{get\-Shift\-Y}}
+\index{get\-Shift\-Y@{get\-Shift\-Y}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Shift\-Y}]{\setlength{\rightskip}{0pt plus 5cm}double arcade\-::\-Tile\-::get\-Shift\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_a7dad12cd10b4a89a3754b0db4dbc0cf1}
+
+
+Get the tile position shift on y. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_af7ca3cfb598eda00ac5b5f15f096e32f}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_ac4ba05e83420a4d781a200480ed59e88}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Sprite\-Id@{get\-Sprite\-Id}}
+\index{get\-Sprite\-Id@{get\-Sprite\-Id}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Sprite\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Tile\-::get\-Sprite\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_ac4ba05e83420a4d781a200480ed59e88}
+
+
+Get the sprite I\-D (0 if none) 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_a4c09e2ac12d75fe12e3d4d1ca4e08150}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_ae50881d237ce87d6d07e36b8e465e4c3}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Sprite\-Pos@{get\-Sprite\-Pos}}
+\index{get\-Sprite\-Pos@{get\-Sprite\-Pos}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Sprite\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Tile\-::get\-Sprite\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_ae50881d237ce87d6d07e36b8e465e4c3}
+
+
+Get the sprite position in it's animation. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_a3e5cec4407ef6afb7e10d82fb1c93f5e}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_a83bd8295ca7bf4e952c372581fcbd337}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile\-Type} arcade\-::\-Tile\-::get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_tile_a83bd8295ca7bf4e952c372581fcbd337}
+\hypertarget{classarcade_1_1_tile_a8a81d038b707ae5b2d38e6ff820c8c92}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!get\-Type\-Ev@{get\-Type\-Ev}}
+\index{get\-Type\-Ev@{get\-Type\-Ev}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{get\-Type\-Ev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile\-Type\-Evolution} arcade\-::\-Tile\-::get\-Type\-Ev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_tile_a8a81d038b707ae5b2d38e6ff820c8c92}
+\hypertarget{classarcade_1_1_tile_a2584f423e04a31332578a6cde00822a6}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!has\-Sprite@{has\-Sprite}}
+\index{has\-Sprite@{has\-Sprite}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{has\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Tile\-::has\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_tile_a2584f423e04a31332578a6cde00822a6}
+
+
+Returns if the \hyperlink{classarcade_1_1_tile}{Tile} has a sprite affected, if not, use \hyperlink{classarcade_1_1_tile_afe29bdead41e0a17d84860bccb07542f}{get\-Color()} 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_tile_ab2d6a5f8d4cfc6c606b8ad13d8dd88a4}{arcade\-::\-I\-Tile}.
+
+\hypertarget{classarcade_1_1_tile_a3d24d5422d32454f0eac84acba7e9df2}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile} \& arcade\-::\-Tile\-::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Entity} \&}]{entity}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a3d24d5422d32454f0eac84acba7e9df2}
+\hypertarget{classarcade_1_1_tile_a0d91a41444ac3ef906e641d7dc8f02ac}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!operator=@{operator=}}
+\index{operator=@{operator=}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile} \& arcade\-::\-Tile\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Entity} \&}]{entity}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a0d91a41444ac3ef906e641d7dc8f02ac}
+\hypertarget{classarcade_1_1_tile_a0b6119379038e88cdbbe1645870df26f}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!operator=@{operator=}}
+\index{operator=@{operator=}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile} \& arcade\-::\-Tile\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Tile} {\bf const} \&}]{tile}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a0b6119379038e88cdbbe1645870df26f}
+\hypertarget{classarcade_1_1_tile_a1f7ee0701e4625c54bcdc361e76d11cd}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Shift\-X@{set\-Shift\-X}}
+\index{set\-Shift\-X@{set\-Shift\-X}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Shift\-X}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Shift\-X (
+\begin{DoxyParamCaption}
+\item[{double}]{shift}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a1f7ee0701e4625c54bcdc361e76d11cd}
+\hypertarget{classarcade_1_1_tile_ae345cf2965c81cd7d3b882e8adf94568}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Shift\-Y@{set\-Shift\-Y}}
+\index{set\-Shift\-Y@{set\-Shift\-Y}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Shift\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Shift\-Y (
+\begin{DoxyParamCaption}
+\item[{double}]{shift}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_ae345cf2965c81cd7d3b882e8adf94568}
+\hypertarget{classarcade_1_1_tile_a92b2fb3cf340193f8309922ca3dfbc82}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Sprite\-Id@{set\-Sprite\-Id}}
+\index{set\-Sprite\-Id@{set\-Sprite\-Id}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Sprite\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Sprite\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{id}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a92b2fb3cf340193f8309922ca3dfbc82}
+\hypertarget{classarcade_1_1_tile_a155bb58d04cfebb632cec14aa22c8b6d}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Sprite\-Pos@{set\-Sprite\-Pos}}
+\index{set\-Sprite\-Pos@{set\-Sprite\-Pos}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Sprite\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Sprite\-Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{pos}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_a155bb58d04cfebb632cec14aa22c8b6d}
+\hypertarget{classarcade_1_1_tile_aefde0ece0a81584556ad5fdb17bb08a4}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Tile\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_aefde0ece0a81584556ad5fdb17bb08a4}
+\hypertarget{classarcade_1_1_tile_afc58836782a8b5436b46f28afd6bd171}{\index{arcade\-::\-Tile@{arcade\-::\-Tile}!set\-Type\-Evo@{set\-Type\-Evo}}
+\index{set\-Type\-Evo@{set\-Type\-Evo}!arcade::Tile@{arcade\-::\-Tile}}
+\subsubsection[{set\-Type\-Evo}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Tile\-::set\-Type\-Evo (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Tile\-Type\-Evolution}}]{type\-Evo}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_tile_afc58836782a8b5436b46f28afd6bd171}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{_tile_8hpp}{Tile.\-hpp}\item 
+games/common/src/\hyperlink{_tile_8cpp}{Tile.\-cpp}\end{DoxyCompactItemize}

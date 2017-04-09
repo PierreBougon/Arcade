@@ -1,0 +1,339 @@
+\hypertarget{classsf_1_1_file_input_stream}{\section{sf\-:\-:File\-Input\-Stream Class Reference}
+\label{classsf_1_1_file_input_stream}\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}}
+}
+
+
+Implementation of input stream based on a file.  
+
+
+
+
+{\ttfamily \#include $<$File\-Input\-Stream.\-hpp$>$}
+
+Inheritance diagram for sf\-:\-:File\-Input\-Stream\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsf_1_1_file_input_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}{File\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}{$\sim$\-File\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em Open the stream from a file path. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}{read} (void $\ast$data, \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} size)
+\begin{DoxyCompactList}\small\item\em Read data from the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}{seek} (\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} position)
+\begin{DoxyCompactList}\small\item\em Change the current reading position. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}{tell} ()
+\begin{DoxyCompactList}\small\item\em Get the current reading position in the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}{get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Return the size of the stream. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}{File\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}{$\sim$\-File\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em Open the stream from a file path. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}{read} (void $\ast$data, \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} size)
+\begin{DoxyCompactList}\small\item\em Read data from the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}{seek} (\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} position)
+\begin{DoxyCompactList}\small\item\em Change the current reading position. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}{tell} ()
+\begin{DoxyCompactList}\small\item\em Get the current reading position in the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}{get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Return the size of the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of input stream based on a file. 
+
+This class is a specialization of \hyperlink{classsf_1_1_input_stream}{Input\-Stream} that reads from a file on disk.
+
+It wraps a file in the common \hyperlink{classsf_1_1_input_stream}{Input\-Stream} interface and therefore allows to use generic classes or functions that accept such a stream, with a file on disk as the data source.
+
+In addition to the virtual functions inherited from \hyperlink{classsf_1_1_input_stream}{Input\-Stream}, \hyperlink{classsf_1_1_file_input_stream}{File\-Input\-Stream} adds a function to specify the file to open.
+
+S\-F\-M\-L resource classes can usually be loaded directly from a filename, so this class shouldn't be useful to you unless you create your own algorithms that operate on an \hyperlink{classsf_1_1_input_stream}{Input\-Stream}.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} process(InputStream& stream);
+
+\hyperlink{class_file_input_stream}{FileInputStream} stream;
+\textcolor{keywordflow}{if} (stream.open(\textcolor{stringliteral}{"some\_file.dat"}))
+   process(stream);
+\end{DoxyCode}
+
+
+\hyperlink{classsf_1_1_input_stream}{Input\-Stream}, \hyperlink{classsf_1_1_memory_input_stream}{Memory\-Input\-Stream} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!File\-Input\-Stream@{File\-Input\-Stream}}
+\index{File\-Input\-Stream@{File\-Input\-Stream}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{File\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-File\-Input\-Stream\-::\-File\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}
+
+
+Default constructor. 
+
+\hypertarget{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!$\sim$\-File\-Input\-Stream@{$\sim$\-File\-Input\-Stream}}
+\index{$\sim$\-File\-Input\-Stream@{$\sim$\-File\-Input\-Stream}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{$\sim$\-File\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\-::\-File\-Input\-Stream\-::$\sim$\-File\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}
+
+
+Default destructor. 
+
+\hypertarget{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!File\-Input\-Stream@{File\-Input\-Stream}}
+\index{File\-Input\-Stream@{File\-Input\-Stream}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{File\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-File\-Input\-Stream\-::\-File\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_file_input_stream_a9a321e273f41ff7f187899061fcae9be}
+
+
+Default constructor. 
+
+\hypertarget{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!$\sim$\-File\-Input\-Stream@{$\sim$\-File\-Input\-Stream}}
+\index{$\sim$\-File\-Input\-Stream@{$\sim$\-File\-Input\-Stream}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{$\sim$\-File\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\-::\-File\-Input\-Stream\-::$\sim$\-File\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_ad49ae2025ff2183f80067943a7d0276d}
+
+
+Default destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}
+
+
+Return the size of the stream. 
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes available in the stream, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a311eaaaa65d636728e5153b574b72d5d}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_aabdcaa315e088e008eeb9711ecc796e8}
+
+
+Return the size of the stream. 
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes available in the stream, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a311eaaaa65d636728e5153b574b72d5d}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!open@{open}}
+\index{open@{open}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} sf\-::\-File\-Input\-Stream\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}
+
+
+Open the stream from a file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file to open\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, false on error 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!open@{open}}
+\index{open@{open}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} sf\-::\-File\-Input\-Stream\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_file_input_stream_a87a95dc3a71746097a99c86ee58bb353}
+
+
+Open the stream from a file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file to open\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, false on error 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!read@{read}}
+\index{read@{read}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf Int64}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}
+
+
+Read data from the stream. 
+
+After reading, the stream's reading position must be advanced by the amount of bytes read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Buffer where to copy the read data \\
+\hline
+{\em size} & Desired number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a8dd89c74c1acb693203f50e750c6ae53}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!read@{read}}
+\index{read@{read}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf Int64}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_ad1e94c4152429f485db224c44ee1eb50}
+
+
+Read data from the stream. 
+
+After reading, the stream's reading position must be advanced by the amount of bytes read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Buffer where to copy the read data \\
+\hline
+{\em size} & Desired number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a8dd89c74c1acb693203f50e750c6ae53}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!seek@{seek}}
+\index{seek@{seek}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf Int64}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}
+
+
+Change the current reading position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to seek to, from the beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position actually sought to, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a76aba8e5d5cf9b1c5902d5e04f7864fc}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!seek@{seek}}
+\index{seek@{seek}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf Int64}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_abdaf5700d4e1de07568e7829106b4eb9}
+
+
+Change the current reading position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to seek to, from the beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position actually sought to, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a76aba8e5d5cf9b1c5902d5e04f7864fc}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!tell@{tell}}
+\index{tell@{tell}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{tell}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}
+
+
+Get the current reading position in the stream. 
+
+\begin{DoxyReturn}{Returns}
+The current position, or -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a599515b9ccdbddb6fef5a98424fd559c}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}{\index{sf\-::\-File\-Input\-Stream@{sf\-::\-File\-Input\-Stream}!tell@{tell}}
+\index{tell@{tell}!sf::FileInputStream@{sf\-::\-File\-Input\-Stream}}
+\subsubsection[{tell}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-File\-Input\-Stream\-::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_file_input_stream_a768c5fdb3be79e2d71d1bce911f8741c}
+
+
+Get the current reading position in the stream. 
+
+\begin{DoxyReturn}{Returns}
+The current position, or -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a599515b9ccdbddb6fef5a98424fd559c}{sf\-::\-Input\-Stream}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-System/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_system_2_file_input_stream_8hpp}{File\-Input\-Stream.\-hpp}\end{DoxyCompactItemize}

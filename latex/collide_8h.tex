@@ -1,0 +1,133 @@
+\hypertarget{collide_8h}{\section{lib/lapin/dep/lapin/collide.h File Reference}
+\label{collide_8h}\index{lib/lapin/dep/lapin/collide.\-h@{lib/lapin/dep/lapin/collide.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{collide_8h_a223212c35bf67e9cac2d3015592cb440}{bunny\-\_\-circle\-\_\-collision}(a, r1, b, r2)~\hyperlink{collide_8h_a6fed49a76786bdf0ddb3c20f10300b47}{bunny\-\_\-circle\-\_\-collision\-\_\-dot}(elem, dot, r1 + r2)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{collide_8h_a6fed49a76786bdf0ddb3c20f10300b47}{bunny\-\_\-circle\-\_\-collision\-\_\-dot} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$elem, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$dot, double radius)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{collide_8h_a40691fe1348de0f81ae3962ca8d4fb60}{bunny\-\_\-retangular\-\_\-collision\-\_\-dot} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$elem, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$dot)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{collide_8h_a65ae566903f75307c5306d740ea6b1b5}{bunny\-\_\-rectangular\-\_\-collision} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$b)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{collide_8h_a811867351bf3508aca25788e6044b07e}{bunny\-\_\-triangle\-\_\-collision\-\_\-dot} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$v3, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$dot)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{collide_8h_a2971504baebf606f2c3b5ad53e3b309b}{bunny\-\_\-quad\-\_\-collision\-\_\-dot} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$v4, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$dot)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to detect collisions 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{collide_8h_a223212c35bf67e9cac2d3015592cb440}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-circle\-\_\-collision@{bunny\-\_\-circle\-\_\-collision}}
+\index{bunny\-\_\-circle\-\_\-collision@{bunny\-\_\-circle\-\_\-collision}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-circle\-\_\-collision}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-circle\-\_\-collision(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{r1, }
+\item[{}]{b, }
+\item[{}]{r2}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-circle\-\_\-collision\-\_\-dot}(elem, dot, r1 + r2)}}\label{collide_8h_a223212c35bf67e9cac2d3015592cb440}
+
+
+\subsection{Function Documentation}
+\hypertarget{collide_8h_a6fed49a76786bdf0ddb3c20f10300b47}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-circle\-\_\-collision\-\_\-dot@{bunny\-\_\-circle\-\_\-collision\-\_\-dot}}
+\index{bunny\-\_\-circle\-\_\-collision\-\_\-dot@{bunny\-\_\-circle\-\_\-collision\-\_\-dot}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-circle\-\_\-collision\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-circle\-\_\-collision\-\_\-dot (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$}]{elem, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$}]{dot, }
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}}\label{collide_8h_a6fed49a76786bdf0ddb3c20f10300b47}
+Return true if the distance elem-\/dot is inferior to radius 
+\begin{DoxyParams}{Parameters}
+{\em elem} & The elem to collide with \\
+\hline
+{\em dot} & The dot to collide with \\
+\hline
+{\em radius} & The distance between elem and dot that indicates a collision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if elem-\/$>$dot $<$ radius 
+\end{DoxyReturn}
+\hypertarget{collide_8h_a2971504baebf606f2c3b5ad53e3b309b}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-quad\-\_\-collision\-\_\-dot@{bunny\-\_\-quad\-\_\-collision\-\_\-dot}}
+\index{bunny\-\_\-quad\-\_\-collision\-\_\-dot@{bunny\-\_\-quad\-\_\-collision\-\_\-dot}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-quad\-\_\-collision\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-quad\-\_\-collision\-\_\-dot (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$}]{v4, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$}]{dot}
+\end{DoxyParamCaption}
+)}}\label{collide_8h_a2971504baebf606f2c3b5ad53e3b309b}
+Return true if dot is inside the quad. 
+\begin{DoxyParams}{Parameters}
+{\em v4} & A 4 elements vertex\-\_\-array \\
+\hline
+{\em dot} & The position to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it collides. 
+\end{DoxyReturn}
+\hypertarget{collide_8h_a65ae566903f75307c5306d740ea6b1b5}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-rectangular\-\_\-collision@{bunny\-\_\-rectangular\-\_\-collision}}
+\index{bunny\-\_\-rectangular\-\_\-collision@{bunny\-\_\-rectangular\-\_\-collision}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-rectangular\-\_\-collision}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-rectangular\-\_\-collision (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$}]{a, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{collide_8h_a65ae566903f75307c5306d740ea6b1b5}
+Return true if a and b rectangle collides. 
+\begin{DoxyParams}{Parameters}
+{\em a} & A first rectangle \\
+\hline
+{\em b} & A second rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if rectangles overlaps. 
+\end{DoxyReturn}
+\hypertarget{collide_8h_a40691fe1348de0f81ae3962ca8d4fb60}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-retangular\-\_\-collision\-\_\-dot@{bunny\-\_\-retangular\-\_\-collision\-\_\-dot}}
+\index{bunny\-\_\-retangular\-\_\-collision\-\_\-dot@{bunny\-\_\-retangular\-\_\-collision\-\_\-dot}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-retangular\-\_\-collision\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-retangular\-\_\-collision\-\_\-dot (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-area} $\ast$}]{elem, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$}]{dot}
+\end{DoxyParamCaption}
+)}}\label{collide_8h_a40691fe1348de0f81ae3962ca8d4fb60}
+Return true if dot is inside area. 
+\begin{DoxyParams}{Parameters}
+{\em area} & The zone in which it collides \\
+\hline
+{\em dot} & The dot that may collide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it collides 
+\end{DoxyReturn}
+\hypertarget{collide_8h_a811867351bf3508aca25788e6044b07e}{\index{collide.\-h@{collide.\-h}!bunny\-\_\-triangle\-\_\-collision\-\_\-dot@{bunny\-\_\-triangle\-\_\-collision\-\_\-dot}}
+\index{bunny\-\_\-triangle\-\_\-collision\-\_\-dot@{bunny\-\_\-triangle\-\_\-collision\-\_\-dot}!collide.h@{collide.\-h}}
+\subsubsection[{bunny\-\_\-triangle\-\_\-collision\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-triangle\-\_\-collision\-\_\-dot (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$}]{v3, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} $\ast$}]{dot}
+\end{DoxyParamCaption}
+)}}\label{collide_8h_a811867351bf3508aca25788e6044b07e}
+Return true if dot is inside the triangle. 
+\begin{DoxyParams}{Parameters}
+{\em v3} & A 3 elements vertex\-\_\-array \\
+\hline
+{\em dot} & The position to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it collides. 
+\end{DoxyReturn}

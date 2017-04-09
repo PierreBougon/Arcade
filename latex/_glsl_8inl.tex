@@ -1,0 +1,79 @@
+\hypertarget{_glsl_8inl}{\section{lib/sfml/dep/\-S\-F\-M\-L-\/2.4.2/include/\-S\-F\-M\-L/\-Graphics/\-Glsl.inl File Reference}
+\label{_glsl_8inl}\index{lib/sfml/dep/\-S\-F\-M\-L-\/2.\-4.\-2/include/\-S\-F\-M\-L/\-Graphics/\-Glsl.\-inl@{lib/sfml/dep/\-S\-F\-M\-L-\/2.\-4.\-2/include/\-S\-F\-M\-L/\-Graphics/\-Glsl.\-inl}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_matrix}{Matrix$<$ Columns, Rows $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_matrix}{Matrix} type, used to set uniforms in G\-L\-S\-L. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vector4}{Vector4$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em 4\-D vector type, used to set uniforms in G\-L\-S\-L \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sfml_2dep_2_s_f_m_l-2_84_82_2include_2_s_f_m_l_2_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} \hyperlink{_glsl_8inl_aad1baaf4188242e642326ce2230aaa74}{copy\-Matrix} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Transform \&source, \hyperlink{struct_matrix}{Matrix}$<$ 3, 3 $>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Helper functions to copy \hyperlink{classsf_1_1_transform}{sf\-::\-Transform} to \hyperlink{namespacesf_1_1_glsl_a1bf4595b60b08c79473a882e2c1dbff8}{sf\-::\-Glsl\-::\-Mat3}/4. \end{DoxyCompactList}\item 
+void \hyperlink{sfml_2dep_2_s_f_m_l-2_84_82_2include_2_s_f_m_l_2_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} \hyperlink{_glsl_8inl_a6b1fb08aee1f3eb5f03b9305ac86b315}{copy\-Matrix} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Transform \&source, \hyperlink{struct_matrix}{Matrix}$<$ 4, 4 $>$ \&dest)
+\item 
+void \hyperlink{sfml_2dep_2_s_f_m_l-2_84_82_2include_2_s_f_m_l_2_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} \hyperlink{_glsl_8inl_ad7522005ab0c281c82e885693abe1ee4}{copy\-Matrix} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} float $\ast$source, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{std\-::size\-\_\-t} elements, float $\ast$dest)
+\begin{DoxyCompactList}\small\item\em Copy array-\/based matrix with given number of elements. \end{DoxyCompactList}\item 
+void \hyperlink{sfml_2dep_2_s_f_m_l-2_84_82_2include_2_s_f_m_l_2_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} \hyperlink{_glsl_8inl_ab1bc299570e63d80e79c69e572cda030}{copy\-Vector} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Color \&source, \hyperlink{struct_vector4}{Vector4}$<$ float $>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Helper functions to copy \hyperlink{classsf_1_1_color}{sf\-::\-Color} to \hyperlink{namespacesf_1_1_glsl_a862f8df4771d2403de28653328fac5d0}{sf\-::\-Glsl\-::\-Vec4}/\-Ivec4. \end{DoxyCompactList}\item 
+void \hyperlink{sfml_2dep_2_s_f_m_l-2_84_82_2include_2_s_f_m_l_2_graphics_2_export_8hpp_ab84c9f1035e146917de3bc0f98d72b35}{S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} \hyperlink{_glsl_8inl_ac6b9cce1ecf6143f69b4417bf73f2883}{copy\-Vector} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Color \&source, \hyperlink{struct_vector4}{Vector4}$<$ \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $>$ \&dest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_glsl_8inl_aad1baaf4188242e642326ce2230aaa74}{\index{Glsl.\-inl@{Glsl.\-inl}!copy\-Matrix@{copy\-Matrix}}
+\index{copy\-Matrix@{copy\-Matrix}!Glsl.inl@{Glsl.\-inl}}
+\subsubsection[{copy\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} copy\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Transform \&}]{source, }
+\item[{{\bf Matrix}$<$ 3, 3 $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{_glsl_8inl_aad1baaf4188242e642326ce2230aaa74}
+
+
+Helper functions to copy \hyperlink{classsf_1_1_transform}{sf\-::\-Transform} to \hyperlink{namespacesf_1_1_glsl_a1bf4595b60b08c79473a882e2c1dbff8}{sf\-::\-Glsl\-::\-Mat3}/4. 
+
+\hypertarget{_glsl_8inl_a6b1fb08aee1f3eb5f03b9305ac86b315}{\index{Glsl.\-inl@{Glsl.\-inl}!copy\-Matrix@{copy\-Matrix}}
+\index{copy\-Matrix@{copy\-Matrix}!Glsl.inl@{Glsl.\-inl}}
+\subsubsection[{copy\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} copy\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Transform \&}]{source, }
+\item[{{\bf Matrix}$<$ 4, 4 $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{_glsl_8inl_a6b1fb08aee1f3eb5f03b9305ac86b315}
+\hypertarget{_glsl_8inl_ad7522005ab0c281c82e885693abe1ee4}{\index{Glsl.\-inl@{Glsl.\-inl}!copy\-Matrix@{copy\-Matrix}}
+\index{copy\-Matrix@{copy\-Matrix}!Glsl.inl@{Glsl.\-inl}}
+\subsubsection[{copy\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} copy\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf const} float $\ast$}]{source, }
+\item[{{\bf std\-::size\-\_\-t}}]{elements, }
+\item[{float $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}}\label{_glsl_8inl_ad7522005ab0c281c82e885693abe1ee4}
+
+
+Copy array-\/based matrix with given number of elements. 
+
+Indirection to std\-::copy() to avoid inclusion of $<$algorithm$>$ and M\-S\-V\-C's annoying 4996 warning in header \hypertarget{_glsl_8inl_ab1bc299570e63d80e79c69e572cda030}{\index{Glsl.\-inl@{Glsl.\-inl}!copy\-Vector@{copy\-Vector}}
+\index{copy\-Vector@{copy\-Vector}!Glsl.inl@{Glsl.\-inl}}
+\subsubsection[{copy\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} copy\-Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Color \&}]{source, }
+\item[{{\bf Vector4}$<$ float $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{_glsl_8inl_ab1bc299570e63d80e79c69e572cda030}
+
+
+Helper functions to copy \hyperlink{classsf_1_1_color}{sf\-::\-Color} to \hyperlink{namespacesf_1_1_glsl_a862f8df4771d2403de28653328fac5d0}{sf\-::\-Glsl\-::\-Vec4}/\-Ivec4. 
+
+\hypertarget{_glsl_8inl_ac6b9cce1ecf6143f69b4417bf73f2883}{\index{Glsl.\-inl@{Glsl.\-inl}!copy\-Vector@{copy\-Vector}}
+\index{copy\-Vector@{copy\-Vector}!Glsl.inl@{Glsl.\-inl}}
+\subsubsection[{copy\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\-F\-M\-L\-\_\-\-G\-R\-A\-P\-H\-I\-C\-S\-\_\-\-A\-P\-I} copy\-Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Color \&}]{source, }
+\item[{{\bf Vector4}$<$ {\bf int} $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{_glsl_8inl_ac6b9cce1ecf6143f69b4417bf73f2883}

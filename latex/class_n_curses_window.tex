@@ -1,0 +1,1375 @@
+\hypertarget{class_n_curses_window}{\section{N\-Curses\-Window Class Reference}
+\label{class_n_curses_window}\index{N\-Curses\-Window@{N\-Curses\-Window}}
+}
+
+
+{\ttfamily \#include $<$cursesw.\-h$>$}
+
+Inheritance diagram for N\-Curses\-Window\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.835443cm]{class_n_curses_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_curses_window_add6885b98eae08a26ec194571237ce96}{N\-Curses\-Window} (\hyperlink{curses_8priv_8h_aa64cc90e7a4df667d6c7249b77890d39}{W\-I\-N\-D\-O\-W} $\ast$window)
+\item 
+\hyperlink{class_n_curses_window_aa16a4c86b2dabeafbdc6c3b5ae8fe425}{N\-Curses\-Window} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} nlines, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} ncols, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-x)
+\item 
+\hyperlink{class_n_curses_window_a4f3a7c35666bac46b4d2d79f05dbc550}{N\-Curses\-Window} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{class_n_curses_window_a4e7da34aee4bba11c8d07447b85fcacb}{par}, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} nlines, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} ncols, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-x, char absrel= 'a')
+\item 
+\hyperlink{class_n_curses_window_a2ccda26689fa63f7ff27b116fc0243ae}{N\-Curses\-Window} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{class_n_curses_window_a4e7da34aee4bba11c8d07447b85fcacb}{par}, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} do\-\_\-box=T\-R\-U\-E)
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} \& \hyperlink{class_n_curses_window_a403701800693b1d18d124a5be20b62aa}{operator=} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_window}{N\-Curses\-Window} \&rhs)
+\item 
+\hyperlink{class_n_curses_window_ad326181f10dd9796e506315ea0b09788}{N\-Curses\-Window} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_window}{N\-Curses\-Window} \&rhs)
+\item 
+virtual \hyperlink{class_n_curses_window_a1721c7139b6defd6e5ea3d3600a9bf46}{$\sim$\-N\-Curses\-Window} ()
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} \hyperlink{class_n_curses_window_a96253c5e9be99259fe3ffc89b8f06281}{Clone} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_acb6d201ad53e06fb07ba7a8c320ec6cf}{lines} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_afe55cc0287ad040cd1221f30ab440216}{cols} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a2570ac0fa603d29c564448e1b61fd121}{tabsize} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af470cf5d502800c5e460e899e020ce2b}{colors} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a224d510fbc9a32e6eaeacc0bbe12684d}{height} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a041a766dd2ac65a342131e8d86bbc6f7}{width} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a4a7deab45e658817aa06608c96b4dc32}{begx} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a456f46cc3a288e47530c241b8595527d}{begy} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a88bc5e33eb8c6d9895bd0f3c150706c8}{curx} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a91e7591fdc5eeec23b58de4fe53e9830}{cury} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_acb9c877669158b9a70de9064c1f53bd7}{maxx} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ad407b64051686162efe0942303611b4d}{maxy} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T \hyperlink{class_n_curses_window_a775a84d01db4186d0645c721e007e85e}{getcolor} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T \hyperlink{class_n_curses_window_a70f9db473ace588be1af635644d2dfb3}{foreground} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T \hyperlink{class_n_curses_window_ab9c965dc9eaceacd6ee134069f9e0537}{background} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a9a8d57332e8eeb17877bd3f441be8604}{setpalette} (N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T fore, N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T back)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a8911fba9e1049a6f96255b2a24cfae92}{setcolor} (N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T pair)
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a16a143dfe0f3e2151aa467f9ff3238a4}{mvwin} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} begin\-\_\-x)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a46431a0d98b988b168854501cc2275d0}{move} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x)
+\item 
+void \hyperlink{class_n_curses_window_a2fc82071d52649afa847f330947cb2ce}{getyx} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&x) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_window_a7f40f6cd45f55bc812b14962cd3af87a}{getbegyx} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&x) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_window_ab08323ea820c8fe2851bbdd71215d353}{getmaxyx} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&x) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{class_n_curses_window_adafff1d1625330f77a4ee2fa619f4557}{getparyx} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \&x) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a619f28a30b5a9382c6b40abf38db2cfd}{mvcur} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} oldrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} oldcol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} newrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} newcol) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a9cb0d276d09d7ee1fbd49f324d43ec7f}{getch} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a61cdec6afc8efa46349a6078b39e03b4}{getch} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a48fe049a71c73c33250ff07314b9f24f}{getstr} (char $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a1937b46689c2d166b6d169eda253dab7}{getstr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, char $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a6f69f45efe776a0508c3d37785416825}{instr} (char $\ast$s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ae12684564354139b354b28696742b821}{instr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, char $\ast$s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_adc8cbd53c57caa2d05263b16ef6112fa}{scanw} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt,...)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a6e14f16d4f30898513158d5a2cf5e7c2}{scanw} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$, \hyperlink{curses_8priv_8h_a9c8867ac8e6bd700b30cfdc05b3b5253}{va\-\_\-list})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a74285e3d1bf9333cc81432e9e8dd8a03}{scanw} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt,...)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ae7597ed29fbdb6541976384a1b06fec4}{scanw} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt, \hyperlink{curses_8priv_8h_a9c8867ac8e6bd700b30cfdc05b3b5253}{va\-\_\-list})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a3849353ae77f0e1162a9230a5f03bdb8}{addch} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a4cc26cc450f09d749f229867ea22e723}{addch} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a7e6d2559ce1a835a0ac07edf0a70afca}{echochar} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a51520fde5a7a78a881ccac4b8271cb1a}{addstr} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a3003febcd9c4c7756d5d3ea311dab71f}{addstr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af89e4677ac21cbb28c7630434250fa9c}{addchstr} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a468ac9bfa1b6987b768bef9064db410a}{addchstr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a5b907bc3c349e4fb5071ddf967d1a7af}{printw} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt,...)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a34bf51c2a7f3d13755fdd98ed754d9e5}{printw} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt,...)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a737719e8d965ae06a43b208441505a90}{printw} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt, \hyperlink{curses_8priv_8h_a9c8867ac8e6bd700b30cfdc05b3b5253}{va\-\_\-list} args)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aeab26eb62ba8cde92e93c901fe1945db}{printw} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$fmt, \hyperlink{curses_8priv_8h_a9c8867ac8e6bd700b30cfdc05b3b5253}{va\-\_\-list} args)
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_window_a4bea4c2873eb81ac2f3c077b787d1ffd}{inch} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_window_a2510993bddbca70ee19d9720e42f768e}{inch} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a3237bd065a3bb7b6d2275be25a13fc7a}{inchstr} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a26d0e214f0ab6d89fb76e23019218bd7}{inchstr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} $\ast$str, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ad43fcb7e87221361ef06c0829ef82270}{insch} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aae876c90c61919d980601c31428322ec}{insch} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a3c41b39242f3b7299aed35656f4deb6b}{insertln} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a2eedcb0c4eb0a9a59f7f3cf237ea14dc}{insdelln} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aff91feec445d232ec802b202858146c9}{insstr} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a5974b71397a6d0236f57dccf08d225bf}{insstr} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n=-\/1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ae7b89508eb065770c65e473a1e422a1c}{attron} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} at)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a94d6ef7df07c82cb087cc2c080fa5dae}{attroff} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} at)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aa2cde0b20edcae2bbdef7decc71d878e}{attrset} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} at)
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_window_ab47d267fef2e7debbcab4033a649bd76}{attrget} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aabc53207870370ce60d876f43d875704}{color\-\_\-set} (N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T color\-\_\-pair\-\_\-number, void $\ast$opts=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a94f745c9a3b5b181574c6fb28a79af6e}{chgat} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n, attr\-\_\-t attr, N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$opts=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af8d308b081a9bdfd80964dbdc2f88ced}{chgat} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n, attr\-\_\-t attr, N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$opts=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L})
+\item 
+\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{class_n_curses_window_a58d850bb487960769820b2c8da82b8f5}{getbkgd} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a1c799ccdafec1b5edec8ae548b91f7a4}{bkgd} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+void \hyperlink{class_n_curses_window_a6616e03ccc45c816a318358992c1a297}{bkgdset} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a5c5654bc441f03c566257fe7010d4f00}{box} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} vert=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} hor=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a0a84958476f612c20ddf03b5814fc1fe}{border} (\hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} left=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} right=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_af93f4f37fc2ad9c37af4a715423b110c}{top}=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} bottom=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} top\-\_\-left=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} top\-\_\-right=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} bottom\-\_\-left=0, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} bottom\-\_\-right=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aec61a5176b8cba1fb5b32366982b622d}{hline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch}=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_affed3edab649c7bf1a4bd7696d2d2ac6}{hline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch}=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ad172dba2c48b7573adaabaa55f111757}{vline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch}=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a62e7e5b637b1a638d40f71c99d10f812}{vline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch}=0)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aa9788b401bac1ab706c5bd8e63c38d28}{erase} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a9707af32e067d8ec94c33ef66f1d293a}{clear} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a2f00af4d1db578f00a87f4a64a4b745d}{clearok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aa7fbf7e1b24de0b5fcc38dfce1fd50ac}{clrtobot} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a7f1dd0aa5172f35bca1e0a783884e4b5}{clrtoeol} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af2ba438121996e2e65a24146e75d4301}{delch} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a03553fc0d197f3cc38c550d8a1de8b57}{delch} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a3d823849eaf40b39afe098780184a4d3}{deleteln} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aa71b5cdf806c5ca23a1454a525c510ae}{scroll} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} amount=1)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a47bf6b22849f0df9ecb5aa5ea7ebeba5}{scrollok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ab70caf48fda5ed9911a5c8829ee17352}{setscrreg} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} from, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_to_8hpp_a3cd6f3665a7a8fc813ef3ee062a3b21b}{to})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ad7239449ec324e94399169b2b2641a54}{idlok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+void \hyperlink{class_n_curses_window_a534d4aad0418cf436266de3df74603c3}{idcok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af30cade6e227134c005cc9113fdba183}{touchline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} c)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a5fd82b47ee5d3970fef04cb515415ff7}{touchwin} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a2267252d7c465c2a3425771285428b1b}{untouchwin} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a1e703a2cbe65ca323f7f6bfc83c6517e}{touchln} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} s, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} cnt, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} changed=T\-R\-U\-E)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_window_a644d8a9db14532ab18e8479560b97c4d}{is\-\_\-linetouched} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} line) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_window_a18086fd14dfc79ec2669dbb2da25fd69}{is\-\_\-wintouched} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ac5e211e226b224e221b8356c6a3b5ff4}{leaveok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a6548fd2f9d379c51b91acc86431f9ff8}{redrawln} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} from, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} n)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a7137d493a6de456c798f751b12648b18}{redrawwin} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_aeefa08277112d9ca9ba416c0d58b7113}{doupdate} ()
+\item 
+void \hyperlink{class_n_curses_window_a62533522d1d022e55ecf86af848abf3c}{syncdown} ()
+\item 
+void \hyperlink{class_n_curses_window_aaa5468cc8b4f702871eea0443672caf8}{syncup} ()
+\item 
+void \hyperlink{class_n_curses_window_ae12da3667779d1c588255a968b488740}{cursyncup} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af57273ea63285934a1056fae6f0b3adb}{syncok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+void \hyperlink{class_n_curses_window_a329e1ba4f1afb4ee331f10e0645b2a5e}{immedok} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_affa4e4920d30f7a6ac7e9e6f3b081ad7}{intrflush} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a1d4f23cc973a39479e10b300eaa2f374}{keypad} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a6d12ead94547cc5de490833bd4488943}{nodelay} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a8e0a0dcfd1bd1648ea35724200664e4b}{meta} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} bf)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ac6d8530fa9b03de2f08d8f24b70764b5}{standout} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ae66f15f4d0cfcc59374d5087d59211c2}{standend} ()
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a98862f6bbcabadb168dcf4b46d1369fc}{refresh} ()
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a8b2c23bf8acdada2b0dbb06f870009bb}{noutrefresh} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a94e231c3c169adcb377a5a7fa8ea1f16}{overlay} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a93a33b695e6720f7a3a3bbd7c8c2c67b}{overwrite} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_a182aa3516f9c714b0d3cafd6c86dd958}{copywin} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} sminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} dminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} dmincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} dmaxrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} dmaxcol, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} overlaywin=T\-R\-U\-E)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_window_a9e195787cefa106c10dde0409bbcd0da}{has\-\_\-mouse} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_ab303c8a57cef13dc8faec2f653c7c8cb}{child} ()
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_ab9e31dae65fe9964e91da4bcde098083}{sibling} ()
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_a060d3388577449baf1a03948f6957958}{parent} ()
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_window_a88432172ad4c076a9486a1703a399962}{is\-Descendant} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_n_curses_window_a6cf48d32b78c5b11a47a4849669af6e8}{use\-Colors} (void)
+\item 
+static \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_af84cac5b8bec92db9ebacd43f450631c}{ripoffline} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} ripoff\-\_\-lines, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int}($\ast$init)(\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}))
+\item 
+static \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_ae6d17b7defdd6ef0aca5d5244b554612}{Number\-Of\-Colors} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_n_curses_window_a7a9dd0b35ce34fd358d9dde3c369d3b9}{err\-\_\-handler} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} T\-H\-R\-O\-W\-S(N\-Curses\-Exception)
+\item 
+void \hyperlink{class_n_curses_window_a71a8ae4943745624e62de16353c16172}{kill\-\_\-subwindows} ()
+\item 
+\hyperlink{class_n_curses_window_a54e025337e5f0cb21fdb563d74d03766}{N\-Curses\-Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{curses_8priv_8h_aa64cc90e7a4df667d6c7249b77890d39}{W\-I\-N\-D\-O\-W} $\ast$ \hyperlink{class_n_curses_window_a72826363344950e11235001ee68a6228}{w}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{class_n_curses_window_a6a520256e76e5f1fb16a482891b2b3c3}{alloced}
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_a4e7da34aee4bba11c8d07447b85fcacb}{par}
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_af71bd8f44435f1b279d058096aad2154}{subwins}
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_window_a57fe372c9249af60c89e5d2a6375f071}{sib}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static long \hyperlink{class_n_curses_window_a77fd91029b36a2e10fd327ad2cf8f6ae}{count}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_n_curses_window_abc3a7d96608af08df374875467e10000}{N\-Curses\-Menu}
+\item 
+class \hyperlink{class_n_curses_window_a4ce5a13a8b35977630ef1c99997ddb78}{N\-Curses\-Form}
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_window_afed78980fd0257126048688146a8baab}{\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init} (\hyperlink{curses_8priv_8h_aa64cc90e7a4df667d6c7249b77890d39}{W\-I\-N\-D\-O\-W} $\ast$, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int})
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_curses_window_a54e025337e5f0cb21fdb563d74d03766}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a54e025337e5f0cb21fdb563d74d03766}
+\hypertarget{class_n_curses_window_add6885b98eae08a26ec194571237ce96}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-I\-N\-D\-O\-W} $\ast$}]{window}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_add6885b98eae08a26ec194571237ce96}
+\hypertarget{class_n_curses_window_aa16a4c86b2dabeafbdc6c3b5ae8fe425}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{nlines, }
+\item[{{\bf int}}]{ncols, }
+\item[{{\bf int}}]{begin\-\_\-y, }
+\item[{{\bf int}}]{begin\-\_\-x}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_aa16a4c86b2dabeafbdc6c3b5ae8fe425}
+\hypertarget{class_n_curses_window_a4f3a7c35666bac46b4d2d79f05dbc550}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{par, }
+\item[{{\bf int}}]{nlines, }
+\item[{{\bf int}}]{ncols, }
+\item[{{\bf int}}]{begin\-\_\-y, }
+\item[{{\bf int}}]{begin\-\_\-x, }
+\item[{char}]{absrel = {\ttfamily 'a'}}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a4f3a7c35666bac46b4d2d79f05dbc550}
+\hypertarget{class_n_curses_window_a2ccda26689fa63f7ff27b116fc0243ae}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{par, }
+\item[{{\bf bool}}]{do\-\_\-box = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a2ccda26689fa63f7ff27b116fc0243ae}
+\hypertarget{class_n_curses_window_ad326181f10dd9796e506315ea0b09788}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Window@{N\-Curses\-Window}}
+\index{N\-Curses\-Window@{N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Window\-::\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Window} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ad326181f10dd9796e506315ea0b09788}
+\hypertarget{class_n_curses_window_a1721c7139b6defd6e5ea3d3600a9bf46}{\index{N\-Curses\-Window@{N\-Curses\-Window}!$\sim$\-N\-Curses\-Window@{$\sim$\-N\-Curses\-Window}}
+\index{$\sim$\-N\-Curses\-Window@{$\sim$\-N\-Curses\-Window}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{$\sim$\-N\-Curses\-Window}]{\setlength{\rightskip}{0pt plus 5cm}virtual N\-Curses\-Window\-::$\sim$\-N\-Curses\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_window_a1721c7139b6defd6e5ea3d3600a9bf46}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_curses_window_a3849353ae77f0e1162a9230a5f03bdb8}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addch@{addch}}
+\index{addch@{addch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addch (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a3849353ae77f0e1162a9230a5f03bdb8}
+\hypertarget{class_n_curses_window_a4cc26cc450f09d749f229867ea22e723}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addch@{addch}}
+\index{addch@{addch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addch (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} {\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a4cc26cc450f09d749f229867ea22e723}
+\hypertarget{class_n_curses_window_af89e4677ac21cbb28c7630434250fa9c}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addchstr@{addchstr}}
+\index{addchstr@{addchstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addchstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addchstr (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf chtype} $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af89e4677ac21cbb28c7630434250fa9c}
+\hypertarget{class_n_curses_window_a468ac9bfa1b6987b768bef9064db410a}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addchstr@{addchstr}}
+\index{addchstr@{addchstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addchstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addchstr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} {\bf chtype} $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a468ac9bfa1b6987b768bef9064db410a}
+\hypertarget{class_n_curses_window_a51520fde5a7a78a881ccac4b8271cb1a}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addstr@{addstr}}
+\index{addstr@{addstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addstr (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a51520fde5a7a78a881ccac4b8271cb1a}
+\hypertarget{class_n_curses_window_a3003febcd9c4c7756d5d3ea311dab71f}{\index{N\-Curses\-Window@{N\-Curses\-Window}!addstr@{addstr}}
+\index{addstr@{addstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{addstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::addstr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a3003febcd9c4c7756d5d3ea311dab71f}
+\hypertarget{class_n_curses_window_ab47d267fef2e7debbcab4033a649bd76}{\index{N\-Curses\-Window@{N\-Curses\-Window}!attrget@{attrget}}
+\index{attrget@{attrget}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{attrget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Window\-::attrget (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab47d267fef2e7debbcab4033a649bd76}
+\hypertarget{class_n_curses_window_a94d6ef7df07c82cb087cc2c080fa5dae}{\index{N\-Curses\-Window@{N\-Curses\-Window}!attroff@{attroff}}
+\index{attroff@{attroff}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{attroff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::attroff (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{at}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a94d6ef7df07c82cb087cc2c080fa5dae}
+\hypertarget{class_n_curses_window_ae7b89508eb065770c65e473a1e422a1c}{\index{N\-Curses\-Window@{N\-Curses\-Window}!attron@{attron}}
+\index{attron@{attron}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{attron}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::attron (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{at}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ae7b89508eb065770c65e473a1e422a1c}
+\hypertarget{class_n_curses_window_aa2cde0b20edcae2bbdef7decc71d878e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!attrset@{attrset}}
+\index{attrset@{attrset}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{attrset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::attrset (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{at}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aa2cde0b20edcae2bbdef7decc71d878e}
+\hypertarget{class_n_curses_window_ab9c965dc9eaceacd6ee134069f9e0537}{\index{N\-Curses\-Window@{N\-Curses\-Window}!background@{background}}
+\index{background@{background}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{background}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T N\-Curses\-Window\-::background (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab9c965dc9eaceacd6ee134069f9e0537}
+\hypertarget{class_n_curses_window_a4a7deab45e658817aa06608c96b4dc32}{\index{N\-Curses\-Window@{N\-Curses\-Window}!begx@{begx}}
+\index{begx@{begx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{begx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::begx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a4a7deab45e658817aa06608c96b4dc32}
+\hypertarget{class_n_curses_window_a456f46cc3a288e47530c241b8595527d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!begy@{begy}}
+\index{begy@{begy}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{begy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::begy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a456f46cc3a288e47530c241b8595527d}
+\hypertarget{class_n_curses_window_a1c799ccdafec1b5edec8ae548b91f7a4}{\index{N\-Curses\-Window@{N\-Curses\-Window}!bkgd@{bkgd}}
+\index{bkgd@{bkgd}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{bkgd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::bkgd (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a1c799ccdafec1b5edec8ae548b91f7a4}
+\hypertarget{class_n_curses_window_a6616e03ccc45c816a318358992c1a297}{\index{N\-Curses\-Window@{N\-Curses\-Window}!bkgdset@{bkgdset}}
+\index{bkgdset@{bkgdset}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{bkgdset}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::bkgdset (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a6616e03ccc45c816a318358992c1a297}
+\hypertarget{class_n_curses_window_a0a84958476f612c20ddf03b5814fc1fe}{\index{N\-Curses\-Window@{N\-Curses\-Window}!border@{border}}
+\index{border@{border}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{border}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::border (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{left = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{right = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{top = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{bottom = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{top\-\_\-left = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{top\-\_\-right = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{bottom\-\_\-left = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{bottom\-\_\-right = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a0a84958476f612c20ddf03b5814fc1fe}
+\hypertarget{class_n_curses_window_a5c5654bc441f03c566257fe7010d4f00}{\index{N\-Curses\-Window@{N\-Curses\-Window}!box@{box}}
+\index{box@{box}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::box (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{vert = {\ttfamily 0}, }
+\item[{{\bf chtype}}]{hor = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a5c5654bc441f03c566257fe7010d4f00}
+\hypertarget{class_n_curses_window_a94f745c9a3b5b181574c6fb28a79af6e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!chgat@{chgat}}
+\index{chgat@{chgat}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{chgat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::chgat (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{n, }
+\item[{attr\-\_\-t}]{attr, }
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T}]{color, }
+\item[{{\bf const} void $\ast$}]{opts = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a94f745c9a3b5b181574c6fb28a79af6e}
+\hypertarget{class_n_curses_window_af8d308b081a9bdfd80964dbdc2f88ced}{\index{N\-Curses\-Window@{N\-Curses\-Window}!chgat@{chgat}}
+\index{chgat@{chgat}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{chgat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::chgat (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{n, }
+\item[{attr\-\_\-t}]{attr, }
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T}]{color, }
+\item[{{\bf const} void $\ast$}]{opts = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af8d308b081a9bdfd80964dbdc2f88ced}
+\hypertarget{class_n_curses_window_ab303c8a57cef13dc8faec2f653c7c8cb}{\index{N\-Curses\-Window@{N\-Curses\-Window}!child@{child}}
+\index{child@{child}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab303c8a57cef13dc8faec2f653c7c8cb}
+\hypertarget{class_n_curses_window_a9707af32e067d8ec94c33ef66f1d293a}{\index{N\-Curses\-Window@{N\-Curses\-Window}!clear@{clear}}
+\index{clear@{clear}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a9707af32e067d8ec94c33ef66f1d293a}
+\hypertarget{class_n_curses_window_a2f00af4d1db578f00a87f4a64a4b745d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!clearok@{clearok}}
+\index{clearok@{clearok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{clearok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::clearok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2f00af4d1db578f00a87f4a64a4b745d}
+\hypertarget{class_n_curses_window_a96253c5e9be99259fe3ffc89b8f06281}{\index{N\-Curses\-Window@{N\-Curses\-Window}!Clone@{Clone}}
+\index{Clone@{Clone}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window} N\-Curses\-Window\-::\-Clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a96253c5e9be99259fe3ffc89b8f06281}
+\hypertarget{class_n_curses_window_aa7fbf7e1b24de0b5fcc38dfce1fd50ac}{\index{N\-Curses\-Window@{N\-Curses\-Window}!clrtobot@{clrtobot}}
+\index{clrtobot@{clrtobot}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{clrtobot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::clrtobot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aa7fbf7e1b24de0b5fcc38dfce1fd50ac}
+\hypertarget{class_n_curses_window_a7f1dd0aa5172f35bca1e0a783884e4b5}{\index{N\-Curses\-Window@{N\-Curses\-Window}!clrtoeol@{clrtoeol}}
+\index{clrtoeol@{clrtoeol}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{clrtoeol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::clrtoeol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a7f1dd0aa5172f35bca1e0a783884e4b5}
+\hypertarget{class_n_curses_window_aabc53207870370ce60d876f43d875704}{\index{N\-Curses\-Window@{N\-Curses\-Window}!color\-\_\-set@{color\-\_\-set}}
+\index{color\-\_\-set@{color\-\_\-set}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{color\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::color\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T}]{color\-\_\-pair\-\_\-number, }
+\item[{void $\ast$}]{opts = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aabc53207870370ce60d876f43d875704}
+\hypertarget{class_n_curses_window_af470cf5d502800c5e460e899e020ce2b}{\index{N\-Curses\-Window@{N\-Curses\-Window}!colors@{colors}}
+\index{colors@{colors}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::colors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af470cf5d502800c5e460e899e020ce2b}
+\hypertarget{class_n_curses_window_afe55cc0287ad040cd1221f30ab440216}{\index{N\-Curses\-Window@{N\-Curses\-Window}!cols@{cols}}
+\index{cols@{cols}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{cols}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_afe55cc0287ad040cd1221f30ab440216}
+\hypertarget{class_n_curses_window_a182aa3516f9c714b0d3cafd6c86dd958}{\index{N\-Curses\-Window@{N\-Curses\-Window}!copywin@{copywin}}
+\index{copywin@{copywin}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{copywin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::copywin (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{win, }
+\item[{{\bf int}}]{sminrow, }
+\item[{{\bf int}}]{smincol, }
+\item[{{\bf int}}]{dminrow, }
+\item[{{\bf int}}]{dmincol, }
+\item[{{\bf int}}]{dmaxrow, }
+\item[{{\bf int}}]{dmaxcol, }
+\item[{{\bf bool}}]{overlaywin = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a182aa3516f9c714b0d3cafd6c86dd958}
+\hypertarget{class_n_curses_window_ae12da3667779d1c588255a968b488740}{\index{N\-Curses\-Window@{N\-Curses\-Window}!cursyncup@{cursyncup}}
+\index{cursyncup@{cursyncup}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{cursyncup}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::cursyncup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ae12da3667779d1c588255a968b488740}
+\hypertarget{class_n_curses_window_a88bc5e33eb8c6d9895bd0f3c150706c8}{\index{N\-Curses\-Window@{N\-Curses\-Window}!curx@{curx}}
+\index{curx@{curx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{curx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::curx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a88bc5e33eb8c6d9895bd0f3c150706c8}
+\hypertarget{class_n_curses_window_a91e7591fdc5eeec23b58de4fe53e9830}{\index{N\-Curses\-Window@{N\-Curses\-Window}!cury@{cury}}
+\index{cury@{cury}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{cury}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::cury (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a91e7591fdc5eeec23b58de4fe53e9830}
+\hypertarget{class_n_curses_window_af2ba438121996e2e65a24146e75d4301}{\index{N\-Curses\-Window@{N\-Curses\-Window}!delch@{delch}}
+\index{delch@{delch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{delch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::delch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af2ba438121996e2e65a24146e75d4301}
+\hypertarget{class_n_curses_window_a03553fc0d197f3cc38c550d8a1de8b57}{\index{N\-Curses\-Window@{N\-Curses\-Window}!delch@{delch}}
+\index{delch@{delch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{delch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::delch (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a03553fc0d197f3cc38c550d8a1de8b57}
+\hypertarget{class_n_curses_window_a3d823849eaf40b39afe098780184a4d3}{\index{N\-Curses\-Window@{N\-Curses\-Window}!deleteln@{deleteln}}
+\index{deleteln@{deleteln}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{deleteln}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::deleteln (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a3d823849eaf40b39afe098780184a4d3}
+\hypertarget{class_n_curses_window_aeefa08277112d9ca9ba416c0d58b7113}{\index{N\-Curses\-Window@{N\-Curses\-Window}!doupdate@{doupdate}}
+\index{doupdate@{doupdate}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{doupdate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::doupdate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aeefa08277112d9ca9ba416c0d58b7113}
+\hypertarget{class_n_curses_window_a7e6d2559ce1a835a0ac07edf0a70afca}{\index{N\-Curses\-Window@{N\-Curses\-Window}!echochar@{echochar}}
+\index{echochar@{echochar}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{echochar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::echochar (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a7e6d2559ce1a835a0ac07edf0a70afca}
+\hypertarget{class_n_curses_window_aa9788b401bac1ab706c5bd8e63c38d28}{\index{N\-Curses\-Window@{N\-Curses\-Window}!erase@{erase}}
+\index{erase@{erase}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::erase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aa9788b401bac1ab706c5bd8e63c38d28}
+\hypertarget{class_n_curses_window_a7a9dd0b35ce34fd358d9dde3c369d3b9}{\index{N\-Curses\-Window@{N\-Curses\-Window}!err\-\_\-handler@{err\-\_\-handler}}
+\index{err\-\_\-handler@{err\-\_\-handler}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{err\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Window\-::err\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_window_a7a9dd0b35ce34fd358d9dde3c369d3b9}
+\hypertarget{class_n_curses_window_a70f9db473ace588be1af635644d2dfb3}{\index{N\-Curses\-Window@{N\-Curses\-Window}!foreground@{foreground}}
+\index{foreground@{foreground}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{foreground}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T N\-Curses\-Window\-::foreground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a70f9db473ace588be1af635644d2dfb3}
+\hypertarget{class_n_curses_window_a7f40f6cd45f55bc812b14962cd3af87a}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getbegyx@{getbegyx}}
+\index{getbegyx@{getbegyx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getbegyx}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::getbegyx (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{y, }
+\item[{{\bf int} \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a7f40f6cd45f55bc812b14962cd3af87a}
+\hypertarget{class_n_curses_window_a58d850bb487960769820b2c8da82b8f5}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getbkgd@{getbkgd}}
+\index{getbkgd@{getbkgd}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getbkgd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Window\-::getbkgd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a58d850bb487960769820b2c8da82b8f5}
+\hypertarget{class_n_curses_window_a9cb0d276d09d7ee1fbd49f324d43ec7f}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getch@{getch}}
+\index{getch@{getch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::getch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a9cb0d276d09d7ee1fbd49f324d43ec7f}
+\hypertarget{class_n_curses_window_a61cdec6afc8efa46349a6078b39e03b4}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getch@{getch}}
+\index{getch@{getch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::getch (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a61cdec6afc8efa46349a6078b39e03b4}
+\hypertarget{class_n_curses_window_a775a84d01db4186d0645c721e007e85e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getcolor@{getcolor}}
+\index{getcolor@{getcolor}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getcolor}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T N\-Curses\-Window\-::getcolor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_n_curses_window_a775a84d01db4186d0645c721e007e85e}
+\hypertarget{class_n_curses_window_ab08323ea820c8fe2851bbdd71215d353}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getmaxyx@{getmaxyx}}
+\index{getmaxyx@{getmaxyx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getmaxyx}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::getmaxyx (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{y, }
+\item[{{\bf int} \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab08323ea820c8fe2851bbdd71215d353}
+\hypertarget{class_n_curses_window_adafff1d1625330f77a4ee2fa619f4557}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getparyx@{getparyx}}
+\index{getparyx@{getparyx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getparyx}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::getparyx (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{y, }
+\item[{{\bf int} \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_adafff1d1625330f77a4ee2fa619f4557}
+\hypertarget{class_n_curses_window_a48fe049a71c73c33250ff07314b9f24f}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getstr@{getstr}}
+\index{getstr@{getstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::getstr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a48fe049a71c73c33250ff07314b9f24f}
+\hypertarget{class_n_curses_window_a1937b46689c2d166b6d169eda253dab7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getstr@{getstr}}
+\index{getstr@{getstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::getstr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{char $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a1937b46689c2d166b6d169eda253dab7}
+\hypertarget{class_n_curses_window_a2fc82071d52649afa847f330947cb2ce}{\index{N\-Curses\-Window@{N\-Curses\-Window}!getyx@{getyx}}
+\index{getyx@{getyx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{getyx}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::getyx (
+\begin{DoxyParamCaption}
+\item[{{\bf int} \&}]{y, }
+\item[{{\bf int} \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2fc82071d52649afa847f330947cb2ce}
+\hypertarget{class_n_curses_window_a9e195787cefa106c10dde0409bbcd0da}{\index{N\-Curses\-Window@{N\-Curses\-Window}!has\-\_\-mouse@{has\-\_\-mouse}}
+\index{has\-\_\-mouse@{has\-\_\-mouse}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{has\-\_\-mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Window\-::has\-\_\-mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_n_curses_window_a9e195787cefa106c10dde0409bbcd0da}
+\hypertarget{class_n_curses_window_a224d510fbc9a32e6eaeacc0bbe12684d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!height@{height}}
+\index{height@{height}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a224d510fbc9a32e6eaeacc0bbe12684d}
+\hypertarget{class_n_curses_window_aec61a5176b8cba1fb5b32366982b622d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!hline@{hline}}
+\index{hline@{hline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{hline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::hline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{len, }
+\item[{{\bf chtype}}]{ch = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aec61a5176b8cba1fb5b32366982b622d}
+\hypertarget{class_n_curses_window_affed3edab649c7bf1a4bd7696d2d2ac6}{\index{N\-Curses\-Window@{N\-Curses\-Window}!hline@{hline}}
+\index{hline@{hline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{hline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::hline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{len, }
+\item[{{\bf chtype}}]{ch = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_affed3edab649c7bf1a4bd7696d2d2ac6}
+\hypertarget{class_n_curses_window_a534d4aad0418cf436266de3df74603c3}{\index{N\-Curses\-Window@{N\-Curses\-Window}!idcok@{idcok}}
+\index{idcok@{idcok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{idcok}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::idcok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a534d4aad0418cf436266de3df74603c3}
+\hypertarget{class_n_curses_window_ad7239449ec324e94399169b2b2641a54}{\index{N\-Curses\-Window@{N\-Curses\-Window}!idlok@{idlok}}
+\index{idlok@{idlok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{idlok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::idlok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ad7239449ec324e94399169b2b2641a54}
+\hypertarget{class_n_curses_window_a329e1ba4f1afb4ee331f10e0645b2a5e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!immedok@{immedok}}
+\index{immedok@{immedok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{immedok}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::immedok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a329e1ba4f1afb4ee331f10e0645b2a5e}
+\hypertarget{class_n_curses_window_a4bea4c2873eb81ac2f3c077b787d1ffd}{\index{N\-Curses\-Window@{N\-Curses\-Window}!inch@{inch}}
+\index{inch@{inch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{inch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Window\-::inch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a4bea4c2873eb81ac2f3c077b787d1ffd}
+\hypertarget{class_n_curses_window_a2510993bddbca70ee19d9720e42f768e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!inch@{inch}}
+\index{inch@{inch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{inch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chtype} N\-Curses\-Window\-::inch (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2510993bddbca70ee19d9720e42f768e}
+\hypertarget{class_n_curses_window_a3237bd065a3bb7b6d2275be25a13fc7a}{\index{N\-Curses\-Window@{N\-Curses\-Window}!inchstr@{inchstr}}
+\index{inchstr@{inchstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{inchstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::inchstr (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype} $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a3237bd065a3bb7b6d2275be25a13fc7a}
+\hypertarget{class_n_curses_window_a26d0e214f0ab6d89fb76e23019218bd7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!inchstr@{inchstr}}
+\index{inchstr@{inchstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{inchstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::inchstr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf chtype} $\ast$}]{str, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a26d0e214f0ab6d89fb76e23019218bd7}
+\hypertarget{class_n_curses_window_ad43fcb7e87221361ef06c0829ef82270}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insch@{insch}}
+\index{insch@{insch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insch (
+\begin{DoxyParamCaption}
+\item[{{\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ad43fcb7e87221361ef06c0829ef82270}
+\hypertarget{class_n_curses_window_aae876c90c61919d980601c31428322ec}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insch@{insch}}
+\index{insch@{insch}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insch (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aae876c90c61919d980601c31428322ec}
+\hypertarget{class_n_curses_window_a2eedcb0c4eb0a9a59f7f3cf237ea14dc}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insdelln@{insdelln}}
+\index{insdelln@{insdelln}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insdelln}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insdelln (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{n = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2eedcb0c4eb0a9a59f7f3cf237ea14dc}
+\hypertarget{class_n_curses_window_a3c41b39242f3b7299aed35656f4deb6b}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insertln@{insertln}}
+\index{insertln@{insertln}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insertln}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insertln (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a3c41b39242f3b7299aed35656f4deb6b}
+\hypertarget{class_n_curses_window_aff91feec445d232ec802b202858146c9}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insstr@{insstr}}
+\index{insstr@{insstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insstr (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{s, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aff91feec445d232ec802b202858146c9}
+\hypertarget{class_n_curses_window_a5974b71397a6d0236f57dccf08d225bf}{\index{N\-Curses\-Window@{N\-Curses\-Window}!insstr@{insstr}}
+\index{insstr@{insstr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{insstr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::insstr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{s, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a5974b71397a6d0236f57dccf08d225bf}
+\hypertarget{class_n_curses_window_a6f69f45efe776a0508c3d37785416825}{\index{N\-Curses\-Window@{N\-Curses\-Window}!instr@{instr}}
+\index{instr@{instr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{instr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::instr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a6f69f45efe776a0508c3d37785416825}
+\hypertarget{class_n_curses_window_ae12684564354139b354b28696742b821}{\index{N\-Curses\-Window@{N\-Curses\-Window}!instr@{instr}}
+\index{instr@{instr}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{instr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::instr (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{char $\ast$}]{s, }
+\item[{{\bf int}}]{n = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ae12684564354139b354b28696742b821}
+\hypertarget{class_n_curses_window_affa4e4920d30f7a6ac7e9e6f3b081ad7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!intrflush@{intrflush}}
+\index{intrflush@{intrflush}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{intrflush}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::intrflush (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_affa4e4920d30f7a6ac7e9e6f3b081ad7}
+\hypertarget{class_n_curses_window_a644d8a9db14532ab18e8479560b97c4d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!is\-\_\-linetouched@{is\-\_\-linetouched}}
+\index{is\-\_\-linetouched@{is\-\_\-linetouched}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{is\-\_\-linetouched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Window\-::is\-\_\-linetouched (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{line}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a644d8a9db14532ab18e8479560b97c4d}
+\hypertarget{class_n_curses_window_a18086fd14dfc79ec2669dbb2da25fd69}{\index{N\-Curses\-Window@{N\-Curses\-Window}!is\-\_\-wintouched@{is\-\_\-wintouched}}
+\index{is\-\_\-wintouched@{is\-\_\-wintouched}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{is\-\_\-wintouched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Window\-::is\-\_\-wintouched (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a18086fd14dfc79ec2669dbb2da25fd69}
+\hypertarget{class_n_curses_window_a88432172ad4c076a9486a1703a399962}{\index{N\-Curses\-Window@{N\-Curses\-Window}!is\-Descendant@{is\-Descendant}}
+\index{is\-Descendant@{is\-Descendant}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{is\-Descendant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Window\-::is\-Descendant (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{win}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a88432172ad4c076a9486a1703a399962}
+\hypertarget{class_n_curses_window_a1d4f23cc973a39479e10b300eaa2f374}{\index{N\-Curses\-Window@{N\-Curses\-Window}!keypad@{keypad}}
+\index{keypad@{keypad}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{keypad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::keypad (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a1d4f23cc973a39479e10b300eaa2f374}
+\hypertarget{class_n_curses_window_a71a8ae4943745624e62de16353c16172}{\index{N\-Curses\-Window@{N\-Curses\-Window}!kill\-\_\-subwindows@{kill\-\_\-subwindows}}
+\index{kill\-\_\-subwindows@{kill\-\_\-subwindows}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{kill\-\_\-subwindows}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::kill\-\_\-subwindows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a71a8ae4943745624e62de16353c16172}
+\hypertarget{class_n_curses_window_ac5e211e226b224e221b8356c6a3b5ff4}{\index{N\-Curses\-Window@{N\-Curses\-Window}!leaveok@{leaveok}}
+\index{leaveok@{leaveok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{leaveok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::leaveok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ac5e211e226b224e221b8356c6a3b5ff4}
+\hypertarget{class_n_curses_window_acb6d201ad53e06fb07ba7a8c320ec6cf}{\index{N\-Curses\-Window@{N\-Curses\-Window}!lines@{lines}}
+\index{lines@{lines}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_acb6d201ad53e06fb07ba7a8c320ec6cf}
+\hypertarget{class_n_curses_window_acb9c877669158b9a70de9064c1f53bd7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!maxx@{maxx}}
+\index{maxx@{maxx}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{maxx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::maxx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_acb9c877669158b9a70de9064c1f53bd7}
+\hypertarget{class_n_curses_window_ad407b64051686162efe0942303611b4d}{\index{N\-Curses\-Window@{N\-Curses\-Window}!maxy@{maxy}}
+\index{maxy@{maxy}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{maxy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::maxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ad407b64051686162efe0942303611b4d}
+\hypertarget{class_n_curses_window_a8e0a0dcfd1bd1648ea35724200664e4b}{\index{N\-Curses\-Window@{N\-Curses\-Window}!meta@{meta}}
+\index{meta@{meta}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{meta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::meta (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a8e0a0dcfd1bd1648ea35724200664e4b}
+\hypertarget{class_n_curses_window_a46431a0d98b988b168854501cc2275d0}{\index{N\-Curses\-Window@{N\-Curses\-Window}!move@{move}}
+\index{move@{move}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::move (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a46431a0d98b988b168854501cc2275d0}
+\hypertarget{class_n_curses_window_a619f28a30b5a9382c6b40abf38db2cfd}{\index{N\-Curses\-Window@{N\-Curses\-Window}!mvcur@{mvcur}}
+\index{mvcur@{mvcur}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{mvcur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::mvcur (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{oldrow, }
+\item[{{\bf int}}]{oldcol, }
+\item[{{\bf int}}]{newrow, }
+\item[{{\bf int}}]{newcol}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a619f28a30b5a9382c6b40abf38db2cfd}
+\hypertarget{class_n_curses_window_a16a143dfe0f3e2151aa467f9ff3238a4}{\index{N\-Curses\-Window@{N\-Curses\-Window}!mvwin@{mvwin}}
+\index{mvwin@{mvwin}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{mvwin}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Window\-::mvwin (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{begin\-\_\-y, }
+\item[{{\bf int}}]{begin\-\_\-x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_window_a16a143dfe0f3e2151aa467f9ff3238a4}
+
+
+Reimplemented in \hyperlink{class_n_curses_panel_a89aeda6727d7333f1348eb0feff5f7ff}{N\-Curses\-Panel}.
+
+\hypertarget{class_n_curses_window_a6d12ead94547cc5de490833bd4488943}{\index{N\-Curses\-Window@{N\-Curses\-Window}!nodelay@{nodelay}}
+\index{nodelay@{nodelay}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{nodelay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::nodelay (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a6d12ead94547cc5de490833bd4488943}
+\hypertarget{class_n_curses_window_a8b2c23bf8acdada2b0dbb06f870009bb}{\index{N\-Curses\-Window@{N\-Curses\-Window}!noutrefresh@{noutrefresh}}
+\index{noutrefresh@{noutrefresh}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{noutrefresh}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Window\-::noutrefresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_window_a8b2c23bf8acdada2b0dbb06f870009bb}
+
+
+Reimplemented in \hyperlink{class_n_curses_pad_adb21093509cff7d62f340bf7a412e235}{N\-Curses\-Pad}, and \hyperlink{class_n_curses_panel_a00eda5edb018034e94cd44ec8fbfa21e}{N\-Curses\-Panel}.
+
+\hypertarget{class_n_curses_window_ae6d17b7defdd6ef0aca5d5244b554612}{\index{N\-Curses\-Window@{N\-Curses\-Window}!Number\-Of\-Colors@{Number\-Of\-Colors}}
+\index{Number\-Of\-Colors@{Number\-Of\-Colors}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{Number\-Of\-Colors}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf int} N\-Curses\-Window\-::\-Number\-Of\-Colors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_n_curses_window_ae6d17b7defdd6ef0aca5d5244b554612}
+\hypertarget{class_n_curses_window_a403701800693b1d18d124a5be20b62aa}{\index{N\-Curses\-Window@{N\-Curses\-Window}!operator=@{operator=}}
+\index{operator=@{operator=}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}\& N\-Curses\-Window\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Window} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a403701800693b1d18d124a5be20b62aa}
+\hypertarget{class_n_curses_window_a94e231c3c169adcb377a5a7fa8ea1f16}{\index{N\-Curses\-Window@{N\-Curses\-Window}!overlay@{overlay}}
+\index{overlay@{overlay}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::overlay (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{win}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a94e231c3c169adcb377a5a7fa8ea1f16}
+\hypertarget{class_n_curses_window_a93a33b695e6720f7a3a3bbd7c8c2c67b}{\index{N\-Curses\-Window@{N\-Curses\-Window}!overwrite@{overwrite}}
+\index{overwrite@{overwrite}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{overwrite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::overwrite (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{win}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a93a33b695e6720f7a3a3bbd7c8c2c67b}
+\hypertarget{class_n_curses_window_a060d3388577449baf1a03948f6957958}{\index{N\-Curses\-Window@{N\-Curses\-Window}!parent@{parent}}
+\index{parent@{parent}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a060d3388577449baf1a03948f6957958}
+\hypertarget{class_n_curses_window_a5b907bc3c349e4fb5071ddf967d1a7af}{\index{N\-Curses\-Window@{N\-Curses\-Window}!printw@{printw}}
+\index{printw@{printw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{printw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::printw (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a5b907bc3c349e4fb5071ddf967d1a7af}
+\hypertarget{class_n_curses_window_a34bf51c2a7f3d13755fdd98ed754d9e5}{\index{N\-Curses\-Window@{N\-Curses\-Window}!printw@{printw}}
+\index{printw@{printw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{printw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::printw (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a34bf51c2a7f3d13755fdd98ed754d9e5}
+\hypertarget{class_n_curses_window_a737719e8d965ae06a43b208441505a90}{\index{N\-Curses\-Window@{N\-Curses\-Window}!printw@{printw}}
+\index{printw@{printw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{printw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::printw (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{{\bf va\-\_\-list}}]{args}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a737719e8d965ae06a43b208441505a90}
+\hypertarget{class_n_curses_window_aeab26eb62ba8cde92e93c901fe1945db}{\index{N\-Curses\-Window@{N\-Curses\-Window}!printw@{printw}}
+\index{printw@{printw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{printw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::printw (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{{\bf va\-\_\-list}}]{args}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_aeab26eb62ba8cde92e93c901fe1945db}
+\hypertarget{class_n_curses_window_a6548fd2f9d379c51b91acc86431f9ff8}{\index{N\-Curses\-Window@{N\-Curses\-Window}!redrawln@{redrawln}}
+\index{redrawln@{redrawln}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{redrawln}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::redrawln (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{from, }
+\item[{{\bf int}}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a6548fd2f9d379c51b91acc86431f9ff8}
+\hypertarget{class_n_curses_window_a7137d493a6de456c798f751b12648b18}{\index{N\-Curses\-Window@{N\-Curses\-Window}!redrawwin@{redrawwin}}
+\index{redrawwin@{redrawwin}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{redrawwin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::redrawwin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a7137d493a6de456c798f751b12648b18}
+\hypertarget{class_n_curses_window_a98862f6bbcabadb168dcf4b46d1369fc}{\index{N\-Curses\-Window@{N\-Curses\-Window}!refresh@{refresh}}
+\index{refresh@{refresh}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Window\-::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_window_a98862f6bbcabadb168dcf4b46d1369fc}
+
+
+Reimplemented in \hyperlink{class_n_curses_pad_a1c1943edcae1c3f802810818b0bb3f4f}{N\-Curses\-Pad}, and \hyperlink{class_n_curses_panel_a66ce8d1e6c3d06e2c718d86c1bd5a819}{N\-Curses\-Panel}.
+
+\hypertarget{class_n_curses_window_af84cac5b8bec92db9ebacd43f450631c}{\index{N\-Curses\-Window@{N\-Curses\-Window}!ripoffline@{ripoffline}}
+\index{ripoffline@{ripoffline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{ripoffline}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf int} N\-Curses\-Window\-::ripoffline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{ripoff\-\_\-lines, }
+\item[{{\bf int}($\ast$)({\bf N\-Curses\-Window} \&{\bf win})}]{init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_n_curses_window_af84cac5b8bec92db9ebacd43f450631c}
+\hypertarget{class_n_curses_window_adc8cbd53c57caa2d05263b16ef6112fa}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scanw@{scanw}}
+\index{scanw@{scanw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scanw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scanw (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_adc8cbd53c57caa2d05263b16ef6112fa}
+\hypertarget{class_n_curses_window_a6e14f16d4f30898513158d5a2cf5e7c2}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scanw@{scanw}}
+\index{scanw@{scanw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scanw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scanw (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{, }
+\item[{{\bf va\-\_\-list}}]{}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a6e14f16d4f30898513158d5a2cf5e7c2}
+\hypertarget{class_n_curses_window_a74285e3d1bf9333cc81432e9e8dd8a03}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scanw@{scanw}}
+\index{scanw@{scanw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scanw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scanw (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a74285e3d1bf9333cc81432e9e8dd8a03}
+\hypertarget{class_n_curses_window_ae7597ed29fbdb6541976384a1b06fec4}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scanw@{scanw}}
+\index{scanw@{scanw}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scanw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scanw (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf const} char $\ast$}]{fmt, }
+\item[{{\bf va\-\_\-list}}]{}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_ae7597ed29fbdb6541976384a1b06fec4}
+\hypertarget{class_n_curses_window_aa71b5cdf806c5ca23a1454a525c510ae}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scroll@{scroll}}
+\index{scroll@{scroll}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scroll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scroll (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{amount = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aa71b5cdf806c5ca23a1454a525c510ae}
+\hypertarget{class_n_curses_window_a47bf6b22849f0df9ecb5aa5ea7ebeba5}{\index{N\-Curses\-Window@{N\-Curses\-Window}!scrollok@{scrollok}}
+\index{scrollok@{scrollok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{scrollok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::scrollok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a47bf6b22849f0df9ecb5aa5ea7ebeba5}
+\hypertarget{class_n_curses_window_a8911fba9e1049a6f96255b2a24cfae92}{\index{N\-Curses\-Window@{N\-Curses\-Window}!setcolor@{setcolor}}
+\index{setcolor@{setcolor}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{setcolor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::setcolor (
+\begin{DoxyParamCaption}
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-P\-A\-I\-R\-S\-\_\-\-T}]{pair}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a8911fba9e1049a6f96255b2a24cfae92}
+\hypertarget{class_n_curses_window_a9a8d57332e8eeb17877bd3f441be8604}{\index{N\-Curses\-Window@{N\-Curses\-Window}!setpalette@{setpalette}}
+\index{setpalette@{setpalette}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{setpalette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::setpalette (
+\begin{DoxyParamCaption}
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T}]{fore, }
+\item[{N\-C\-U\-R\-S\-E\-S\-\_\-\-C\-O\-L\-O\-R\-\_\-\-T}]{back}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_window_a9a8d57332e8eeb17877bd3f441be8604}
+\hypertarget{class_n_curses_window_ab70caf48fda5ed9911a5c8829ee17352}{\index{N\-Curses\-Window@{N\-Curses\-Window}!setscrreg@{setscrreg}}
+\index{setscrreg@{setscrreg}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{setscrreg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::setscrreg (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{from, }
+\item[{{\bf int}}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab70caf48fda5ed9911a5c8829ee17352}
+\hypertarget{class_n_curses_window_ab9e31dae65fe9964e91da4bcde098083}{\index{N\-Curses\-Window@{N\-Curses\-Window}!sibling@{sibling}}
+\index{sibling@{sibling}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{sibling}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::sibling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ab9e31dae65fe9964e91da4bcde098083}
+\hypertarget{class_n_curses_window_ae66f15f4d0cfcc59374d5087d59211c2}{\index{N\-Curses\-Window@{N\-Curses\-Window}!standend@{standend}}
+\index{standend@{standend}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{standend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::standend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ae66f15f4d0cfcc59374d5087d59211c2}
+\hypertarget{class_n_curses_window_ac6d8530fa9b03de2f08d8f24b70764b5}{\index{N\-Curses\-Window@{N\-Curses\-Window}!standout@{standout}}
+\index{standout@{standout}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{standout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::standout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ac6d8530fa9b03de2f08d8f24b70764b5}
+\hypertarget{class_n_curses_window_a62533522d1d022e55ecf86af848abf3c}{\index{N\-Curses\-Window@{N\-Curses\-Window}!syncdown@{syncdown}}
+\index{syncdown@{syncdown}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{syncdown}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::syncdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a62533522d1d022e55ecf86af848abf3c}
+\hypertarget{class_n_curses_window_af57273ea63285934a1056fae6f0b3adb}{\index{N\-Curses\-Window@{N\-Curses\-Window}!syncok@{syncok}}
+\index{syncok@{syncok}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{syncok}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::syncok (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af57273ea63285934a1056fae6f0b3adb}
+\hypertarget{class_n_curses_window_aaa5468cc8b4f702871eea0443672caf8}{\index{N\-Curses\-Window@{N\-Curses\-Window}!syncup@{syncup}}
+\index{syncup@{syncup}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{syncup}]{\setlength{\rightskip}{0pt plus 5cm}void N\-Curses\-Window\-::syncup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_aaa5468cc8b4f702871eea0443672caf8}
+\hypertarget{class_n_curses_window_a2570ac0fa603d29c564448e1b61fd121}{\index{N\-Curses\-Window@{N\-Curses\-Window}!tabsize@{tabsize}}
+\index{tabsize@{tabsize}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{tabsize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::tabsize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2570ac0fa603d29c564448e1b61fd121}
+\hypertarget{class_n_curses_window_af30cade6e227134c005cc9113fdba183}{\index{N\-Curses\-Window@{N\-Curses\-Window}!touchline@{touchline}}
+\index{touchline@{touchline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{touchline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::touchline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{s, }
+\item[{{\bf int}}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_af30cade6e227134c005cc9113fdba183}
+\hypertarget{class_n_curses_window_a1e703a2cbe65ca323f7f6bfc83c6517e}{\index{N\-Curses\-Window@{N\-Curses\-Window}!touchln@{touchln}}
+\index{touchln@{touchln}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{touchln}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::touchln (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{s, }
+\item[{{\bf int}}]{cnt, }
+\item[{{\bf bool}}]{changed = {\ttfamily TRUE}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a1e703a2cbe65ca323f7f6bfc83c6517e}
+\hypertarget{class_n_curses_window_a5fd82b47ee5d3970fef04cb515415ff7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!touchwin@{touchwin}}
+\index{touchwin@{touchwin}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{touchwin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::touchwin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a5fd82b47ee5d3970fef04cb515415ff7}
+\hypertarget{class_n_curses_window_a2267252d7c465c2a3425771285428b1b}{\index{N\-Curses\-Window@{N\-Curses\-Window}!untouchwin@{untouchwin}}
+\index{untouchwin@{untouchwin}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{untouchwin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::untouchwin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a2267252d7c465c2a3425771285428b1b}
+\hypertarget{class_n_curses_window_a6cf48d32b78c5b11a47a4849669af6e8}{\index{N\-Curses\-Window@{N\-Curses\-Window}!use\-Colors@{use\-Colors}}
+\index{use\-Colors@{use\-Colors}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{use\-Colors}]{\setlength{\rightskip}{0pt plus 5cm}static void N\-Curses\-Window\-::use\-Colors (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_n_curses_window_a6cf48d32b78c5b11a47a4849669af6e8}
+\hypertarget{class_n_curses_window_ad172dba2c48b7573adaabaa55f111757}{\index{N\-Curses\-Window@{N\-Curses\-Window}!vline@{vline}}
+\index{vline@{vline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{vline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::vline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{len, }
+\item[{{\bf chtype}}]{ch = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_ad172dba2c48b7573adaabaa55f111757}
+\hypertarget{class_n_curses_window_a62e7e5b637b1a638d40f71c99d10f812}{\index{N\-Curses\-Window@{N\-Curses\-Window}!vline@{vline}}
+\index{vline@{vline}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{vline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::vline (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{y, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{len, }
+\item[{{\bf chtype}}]{ch = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a62e7e5b637b1a638d40f71c99d10f812}
+\hypertarget{class_n_curses_window_a041a766dd2ac65a342131e8d86bbc6f7}{\index{N\-Curses\-Window@{N\-Curses\-Window}!width@{width}}
+\index{width@{width}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Window\-::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_window_a041a766dd2ac65a342131e8d86bbc6f7}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_n_curses_window_afed78980fd0257126048688146a8baab}{\index{N\-Curses\-Window@{N\-Curses\-Window}!\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init@{\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init}}
+\index{\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init@{\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{\-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} \-\_\-nc\-\_\-xx\-\_\-ripoff\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf W\-I\-N\-D\-O\-W} $\ast$}]{, }
+\item[{{\bf int}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_n_curses_window_afed78980fd0257126048688146a8baab}
+\hypertarget{class_n_curses_window_a4ce5a13a8b35977630ef1c99997ddb78}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Form@{N\-Curses\-Form}}
+\index{N\-Curses\-Form@{N\-Curses\-Form}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Form}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf N\-Curses\-Form}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_n_curses_window_a4ce5a13a8b35977630ef1c99997ddb78}
+\hypertarget{class_n_curses_window_abc3a7d96608af08df374875467e10000}{\index{N\-Curses\-Window@{N\-Curses\-Window}!N\-Curses\-Menu@{N\-Curses\-Menu}}
+\index{N\-Curses\-Menu@{N\-Curses\-Menu}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{N\-Curses\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf N\-Curses\-Menu}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_n_curses_window_abc3a7d96608af08df374875467e10000}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_curses_window_a6a520256e76e5f1fb16a482891b2b3c3}{\index{N\-Curses\-Window@{N\-Curses\-Window}!alloced@{alloced}}
+\index{alloced@{alloced}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{alloced}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} N\-Curses\-Window\-::alloced\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a6a520256e76e5f1fb16a482891b2b3c3}
+\hypertarget{class_n_curses_window_a77fd91029b36a2e10fd327ad2cf8f6ae}{\index{N\-Curses\-Window@{N\-Curses\-Window}!count@{count}}
+\index{count@{count}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}long N\-Curses\-Window\-::count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_n_curses_window_a77fd91029b36a2e10fd327ad2cf8f6ae}
+\hypertarget{class_n_curses_window_a4e7da34aee4bba11c8d07447b85fcacb}{\index{N\-Curses\-Window@{N\-Curses\-Window}!par@{par}}
+\index{par@{par}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{par}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::par\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a4e7da34aee4bba11c8d07447b85fcacb}
+\hypertarget{class_n_curses_window_a57fe372c9249af60c89e5d2a6375f071}{\index{N\-Curses\-Window@{N\-Curses\-Window}!sib@{sib}}
+\index{sib@{sib}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{sib}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::sib\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a57fe372c9249af60c89e5d2a6375f071}
+\hypertarget{class_n_curses_window_af71bd8f44435f1b279d058096aad2154}{\index{N\-Curses\-Window@{N\-Curses\-Window}!subwins@{subwins}}
+\index{subwins@{subwins}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{subwins}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Window\-::subwins\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_af71bd8f44435f1b279d058096aad2154}
+\hypertarget{class_n_curses_window_a72826363344950e11235001ee68a6228}{\index{N\-Curses\-Window@{N\-Curses\-Window}!w@{w}}
+\index{w@{w}!NCursesWindow@{N\-Curses\-Window}}
+\subsubsection[{w}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-I\-N\-D\-O\-W}$\ast$ N\-Curses\-Window\-::w\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_window_a72826363344950e11235001ee68a6228}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/ndk/dep/\hyperlink{cursesw_8h}{cursesw.\-h}\end{DoxyCompactItemize}

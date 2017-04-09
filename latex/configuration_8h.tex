@@ -1,0 +1,637 @@
+\hypertarget{configuration_8h}{\section{lib/lapin/dep/lapin/configuration.h File Reference}
+\label{configuration_8h}\index{lib/lapin/dep/lapin/configuration.\-h@{lib/lapin/dep/lapin/configuration.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636}{e\-\_\-bunny\-\_\-configuration\-\_\-type} \hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type}
+\item 
+typedef void \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration}
+\item 
+typedef \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$($\ast$ \hyperlink{configuration_8h_aa6d25152b83ea96116377b52db50e5fa}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration} )(\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} t, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$code, \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+typedef char $\ast$($\ast$ \hyperlink{configuration_8h_ab789a97cd3fc2a67e2013d6dd6fb64a3}{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration} )(\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} t, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636}{e\-\_\-bunny\-\_\-configuration\-\_\-type} \{ \\*
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636a1d995ca99486cd6025a655a0ae3419b5}{B\-C\-\_\-\-I\-N\-I}, 
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636adc5f0e740c8a9ce2eebdce7831649573}{B\-C\-\_\-\-D\-A\-B\-S\-I\-C}, 
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636a53d353026ff255589f7b53f7f45c1a33}{B\-C\-\_\-\-X\-M\-L}, 
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636a807ef91983717b0a8a84127565bb8334}{B\-C\-\_\-\-L\-U\-A}, 
+\\*
+\hyperlink{configuration_8h_a56902f5d2c10086f0908f113718bd636a09557cf3557b328ad8bc3afac5ebbd03}{B\-C\-\_\-\-C\-U\-S\-T\-O\-M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a1377a6dac4481695c5586fca70d319c2}{bunny\-\_\-new\-\_\-configuration} (void)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a74cd86ecfddc871773d2babd72372e1b}{bunny\-\_\-load\-\_\-configuration} (\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_a4a579d9cb5c9caa0f28bd6a21ea3f959}{bunny\-\_\-save\-\_\-configuration} (\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_ad965b7cd9d93c8c605c71242cd625756}{bunny\-\_\-read\-\_\-configuration} (\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$code, \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+char $\ast$ \hyperlink{configuration_8h_a128bd679ff31260b761b63b1d9218bdd}{bunny\-\_\-write\-\_\-configuration} (\hyperlink{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{t\-\_\-bunny\-\_\-configuration\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+void \hyperlink{configuration_8h_a6c4e3ed622bc25759470359cca4aa1da}{bunny\-\_\-delete\-\_\-configuration} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+void \hyperlink{configuration_8h_a8c62c50cf1ab38d5370d2fcc3a363fd7}{bunny\-\_\-configuration\-\_\-create\-\_\-mode} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} cmode)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a33980583486b7228bda846ad8d0e4253}{bunny\-\_\-configuration\-\_\-get\-\_\-parent} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{configuration_8h_a0797efe309a96135458d7d8aacd2f321}{bunny\-\_\-configuration\-\_\-get\-\_\-name} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_ab92f00e81b6b78d418e09f224d990ee3}{bunny\-\_\-configuration\-\_\-get\-\_\-child} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$child)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_ac46e0cbf1cd29e378560546a07f65c59}{bunny\-\_\-configuration\-\_\-get\-\_\-case} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} i)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_ae19503cd3b9adcd28eeae728eab04e55}{bunny\-\_\-configuration\-\_\-get\-\_\-string} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$$\ast$str)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_a34f94253b68949be7d11216ef97efd59}{bunny\-\_\-configuration\-\_\-get\-\_\-double} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, double $\ast$val)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_adb189d123cece2c2aea11ccd91019b37}{bunny\-\_\-configuration\-\_\-get\-\_\-int} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$val)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a8a5419a478811a5ec315d7ff52fcc1be}{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_af76f3778c819df852a141e788a894ea6}{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$$\ast$val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_aaf747d4a5846af591b1f190694ad067c}{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, double $\ast$val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_adf83ad51d6fe7990c445dbf61e07f680}{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+void \hyperlink{configuration_8h_a3b91a362a037b76b86400221d0c5998e}{bunny\-\_\-configuration\-\_\-set\-\_\-string} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str)
+\item 
+void \hyperlink{configuration_8h_ac1c64879641abc6a47b986844bab5d1b}{bunny\-\_\-configuration\-\_\-set\-\_\-double} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, double val)
+\item 
+void \hyperlink{configuration_8h_aaa7733ca86439cc528a84260e211748b}{bunny\-\_\-configuration\-\_\-set\-\_\-int} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} val)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_abcc1bc741169b14b2527d466eabadc53}{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_ae5c69ea422f13de465d2e7eead80f3c3}{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, double val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{configuration_8h_a229d5c4f33c5acbb33a38768db0f6571}{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} val, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nbr,...)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a0d928242549157f1397ad7c1fefe4d8d}{bunny\-\_\-configuration\-\_\-first} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_a4216edc5d9b0422a65708be27568e803}{bunny\-\_\-configuration\-\_\-next} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\item 
+\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$ \hyperlink{configuration_8h_afe7308451e0168c84d3f0efb2680fc32}{bunny\-\_\-configuration\-\_\-end} (\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$config)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{configuration_8h_aa6d25152b83ea96116377b52db50e5fa}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration} \hyperlink{configuration_8h_a23bb984181b3be02e23d09f1c327aab1}{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}
+\item 
+\hyperlink{configuration_8h_ab789a97cd3fc2a67e2013d6dd6fb64a3}{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration} \hyperlink{configuration_8h_a734181c71a14c5a93bddd1b561c04685}{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The compat I\-N\-I file contains functions that were used by previous version of the Lib\-Lapin to handle I\-N\-I file.
+
+A I\-N\-I file data structure is defined like this\-: \#here, we are in D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E \mbox{[}scopename\mbox{]} \#here, we are in scopename fieldname=index0,index1,index2,index3 \#this is the field fieldname in scopename
+
+These symbols and functions are obsolete and should not be used anymore. Insteadk use the new bunny\-\_\-configuration A\-P\-I that can be found inside \hyperlink{configuration_8h}{configuration.\-h}. These functions are still present for backward compatibility
+
+\subsection{Typedef Documentation}
+\hypertarget{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{\index{configuration.\-h@{configuration.\-h}!t\-\_\-bunny\-\_\-configuration@{t\-\_\-bunny\-\_\-configuration}}
+\index{t\-\_\-bunny\-\_\-configuration@{t\-\_\-bunny\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf t\-\_\-bunny\-\_\-configuration}}}\label{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}
+\hypertarget{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}{\index{configuration.\-h@{configuration.\-h}!t\-\_\-bunny\-\_\-configuration\-\_\-type@{t\-\_\-bunny\-\_\-configuration\-\_\-type}}
+\index{t\-\_\-bunny\-\_\-configuration\-\_\-type@{t\-\_\-bunny\-\_\-configuration\-\_\-type}!configuration.h@{configuration.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-configuration\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-configuration\-\_\-type}			 {\bf t\-\_\-bunny\-\_\-configuration\-\_\-type}}}\label{configuration_8h_a6404b3ce5ddfad6d6a133ade60df91b9}
+\hypertarget{configuration_8h_aa6d25152b83ea96116377b52db50e5fa}{\index{configuration.\-h@{configuration.\-h}!t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration@{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration@{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-configuration}$\ast$($\ast$ t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration)({\bf t\-\_\-bunny\-\_\-configuration\-\_\-type} t, {\bf const} char $\ast$code, {\bf t\-\_\-bunny\-\_\-configuration} $\ast$config)}}\label{configuration_8h_aa6d25152b83ea96116377b52db50e5fa}
+The type of the function that will be called by bunny\-\_\-read\-\_\-configuration if type is greater or equal to B\-C\-\_\-\-C\-U\-S\-T\-O\-M. Note that config will be allocated by bunny\-\_\-read\-\_\-configuration if it was N\-U\-L\-L. Also note that it will be freed by bunny\-\_\-read\-\_\-configuration if you return N\-U\-L\-L. \hypertarget{configuration_8h_ab789a97cd3fc2a67e2013d6dd6fb64a3}{\index{configuration.\-h@{configuration.\-h}!t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration@{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration@{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}typedef char$\ast$($\ast$ t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration)({\bf t\-\_\-bunny\-\_\-configuration\-\_\-type} t, {\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$config)}}\label{configuration_8h_ab789a97cd3fc2a67e2013d6dd6fb64a3}
+The type of the function that will be called by bunny\-\_\-write\-\_\-configuration if type is greater or equal to B\-C\-\_\-\-C\-U\-S\-T\-O\-M. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636}{\index{configuration.\-h@{configuration.\-h}!e\-\_\-bunny\-\_\-configuration\-\_\-type@{e\-\_\-bunny\-\_\-configuration\-\_\-type}}
+\index{e\-\_\-bunny\-\_\-configuration\-\_\-type@{e\-\_\-bunny\-\_\-configuration\-\_\-type}!configuration.h@{configuration.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-configuration\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-configuration\-\_\-type}}}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-C\-\_\-\-I\-N\-I@{B\-C\-\_\-\-I\-N\-I}!configuration.\-h@{configuration.\-h}}\index{configuration.\-h@{configuration.\-h}!B\-C\-\_\-\-I\-N\-I@{B\-C\-\_\-\-I\-N\-I}}\item[{\em 
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636a1d995ca99486cd6025a655a0ae3419b5}{B\-C\-\_\-\-I\-N\-I}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636a1d995ca99486cd6025a655a0ae3419b5}
+}]\index{B\-C\-\_\-\-D\-A\-B\-S\-I\-C@{B\-C\-\_\-\-D\-A\-B\-S\-I\-C}!configuration.\-h@{configuration.\-h}}\index{configuration.\-h@{configuration.\-h}!B\-C\-\_\-\-D\-A\-B\-S\-I\-C@{B\-C\-\_\-\-D\-A\-B\-S\-I\-C}}\item[{\em 
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636adc5f0e740c8a9ce2eebdce7831649573}{B\-C\-\_\-\-D\-A\-B\-S\-I\-C}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636adc5f0e740c8a9ce2eebdce7831649573}
+}]\index{B\-C\-\_\-\-X\-M\-L@{B\-C\-\_\-\-X\-M\-L}!configuration.\-h@{configuration.\-h}}\index{configuration.\-h@{configuration.\-h}!B\-C\-\_\-\-X\-M\-L@{B\-C\-\_\-\-X\-M\-L}}\item[{\em 
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636a53d353026ff255589f7b53f7f45c1a33}{B\-C\-\_\-\-X\-M\-L}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636a53d353026ff255589f7b53f7f45c1a33}
+}]\index{B\-C\-\_\-\-L\-U\-A@{B\-C\-\_\-\-L\-U\-A}!configuration.\-h@{configuration.\-h}}\index{configuration.\-h@{configuration.\-h}!B\-C\-\_\-\-L\-U\-A@{B\-C\-\_\-\-L\-U\-A}}\item[{\em 
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636a807ef91983717b0a8a84127565bb8334}{B\-C\-\_\-\-L\-U\-A}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636a807ef91983717b0a8a84127565bb8334}
+}]\index{B\-C\-\_\-\-C\-U\-S\-T\-O\-M@{B\-C\-\_\-\-C\-U\-S\-T\-O\-M}!configuration.\-h@{configuration.\-h}}\index{configuration.\-h@{configuration.\-h}!B\-C\-\_\-\-C\-U\-S\-T\-O\-M@{B\-C\-\_\-\-C\-U\-S\-T\-O\-M}}\item[{\em 
+\hypertarget{configuration_8h_a56902f5d2c10086f0908f113718bd636a09557cf3557b328ad8bc3afac5ebbd03}{B\-C\-\_\-\-C\-U\-S\-T\-O\-M}\label{configuration_8h_a56902f5d2c10086f0908f113718bd636a09557cf3557b328ad8bc3afac5ebbd03}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{configuration_8h_a8c62c50cf1ab38d5370d2fcc3a363fd7}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-create\-\_\-mode@{bunny\-\_\-configuration\-\_\-create\-\_\-mode}}
+\index{bunny\-\_\-configuration\-\_\-create\-\_\-mode@{bunny\-\_\-configuration\-\_\-create\-\_\-mode}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-create\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-configuration\-\_\-create\-\_\-mode (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{cmode}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a8c62c50cf1ab38d5370d2fcc3a363fd7}
+Set the create mode to on or off. If the create mode is on, every node required to handle get child or get case will be created on the fly. On the contrary, functions will return N\-U\-L\-L if nodes does not exists. 
+\begin{DoxyParams}{Parameters}
+{\em cmode} & Set or unset the create mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_afe7308451e0168c84d3f0efb2680fc32}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-end@{bunny\-\_\-configuration\-\_\-end}}
+\index{bunny\-\_\-configuration\-\_\-end@{bunny\-\_\-configuration\-\_\-end}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-end (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_afe7308451e0168c84d3f0efb2680fc32}
+Return a recognizable element that is after the last children of config (N\-U\-L\-L...) 
+\begin{DoxyParams}{Parameters}
+{\em The} & node that we want the children terminating symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a0d928242549157f1397ad7c1fefe4d8d}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-first@{bunny\-\_\-configuration\-\_\-first}}
+\index{bunny\-\_\-configuration\-\_\-first@{bunny\-\_\-configuration\-\_\-first}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-first (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a0d928242549157f1397ad7c1fefe4d8d}
+Return the first children of the sent node. 
+\begin{DoxyParams}{Parameters}
+{\em The} & node to browse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first chil. Return N\-U\-L\-L (\char`\"{}bunny\-\_\-configuration\-\_\-end\char`\"{}) if there is no child. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_ac46e0cbf1cd29e378560546a07f65c59}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-case@{bunny\-\_\-configuration\-\_\-get\-\_\-case}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-case@{bunny\-\_\-configuration\-\_\-get\-\_\-case}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-get\-\_\-case (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf size\-\_\-t}}]{i}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ac46e0cbf1cd29e378560546a07f65c59}
+Get the children of the sent config that match the sent index. If create mode is true (It is not by default), the child will be created if it does not exists. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The configuration to search in \\
+\hline
+{\em child} & The child index to fetch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the child, N\-U\-L\-L if there is no child at this index and create\-\_\-mode false, N\-U\-L\-L if create\-\_\-mode is true but here is no more memory. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_ab92f00e81b6b78d418e09f224d990ee3}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-child@{bunny\-\_\-configuration\-\_\-get\-\_\-child}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-child@{bunny\-\_\-configuration\-\_\-get\-\_\-child}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-get\-\_\-child (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf const} char $\ast$}]{child}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ab92f00e81b6b78d418e09f224d990ee3}
+Get the children of the sent config that match the sent name. If create mode is true (It is not by default), the child will be created if it does not exists. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The configuration to search in \\
+\hline
+{\em child} & The child name to fetch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the child, N\-U\-L\-L if there is no child with this name and create\-\_\-mode is false, N\-U\-L\-L if create\-\_\-mode is true but there is no more memory. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a34f94253b68949be7d11216ef97efd59}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-double@{bunny\-\_\-configuration\-\_\-get\-\_\-double}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-double@{bunny\-\_\-configuration\-\_\-get\-\_\-double}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-get\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{double $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a34f94253b68949be7d11216ef97efd59}
+Get the value inside the node as a double. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to read \\
+\hline
+{\em val} & A pointer to the space that will be used to contain the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was set. Can fail if no value was ever set or if the value cannot be converted into a double. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_adb189d123cece2c2aea11ccd91019b37}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-int@{bunny\-\_\-configuration\-\_\-get\-\_\-int}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-int@{bunny\-\_\-configuration\-\_\-get\-\_\-int}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-get\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf int} $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_adb189d123cece2c2aea11ccd91019b37}
+Get the value inside the node as an integer. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to read \\
+\hline
+{\em val} & A pointer to the space that will be used to contain the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was set. Can fail if no value was ever set or if the value cannot be converted into an integer. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a0797efe309a96135458d7d8aacd2f321}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-name@{bunny\-\_\-configuration\-\_\-get\-\_\-name}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-name@{bunny\-\_\-configuration\-\_\-get\-\_\-name}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-configuration\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a0797efe309a96135458d7d8aacd2f321}
+Get the name of the current node. Note that this name may be different from the one you used to fetch it in its parent node, especially if it was a fetch by index\-: For example, an X\-M\-L node may be inserted in an array, but still have a name. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to fetch the name of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the node. Is always valid. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a33980583486b7228bda846ad8d0e4253}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-parent@{bunny\-\_\-configuration\-\_\-get\-\_\-parent}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-parent@{bunny\-\_\-configuration\-\_\-get\-\_\-parent}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-get\-\_\-parent (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a33980583486b7228bda846ad8d0e4253}
+Get the parent of the sent configuration node. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The config we want to parent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the parent or N\-U\-L\-L if config was a root. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_ae19503cd3b9adcd28eeae728eab04e55}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-get\-\_\-string@{bunny\-\_\-configuration\-\_\-get\-\_\-string}}
+\index{bunny\-\_\-configuration\-\_\-get\-\_\-string@{bunny\-\_\-configuration\-\_\-get\-\_\-string}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-get\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-get\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf const} char $\ast$$\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ae19503cd3b9adcd28eeae728eab04e55}
+Get the value inside the node as a string. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to read \\
+\hline
+{\em str} & A pointer to the space that will be used to contain the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was set. Can fail if no value was ever set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_aaf747d4a5846af591b1f190694ad067c}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-double\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{double $\ast$}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_aaf747d4a5846af591b1f190694ad067c}
+Go to the describded node and get its value as a double 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the double you want t get \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the output value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_adf83ad51d6fe7990c445dbf61e07f680}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-int\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf int} $\ast$}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_adf83ad51d6fe7990c445dbf61e07f680}
+Go to the describded node and get its value as an integer. 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the integer you want to get \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the output value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a8a5419a478811a5ec315d7ff52fcc1be}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-node\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a8a5419a478811a5ec315d7ff52fcc1be}
+Get the requested node from config. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The configuration to browse. \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matching node 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_af76f3778c819df852a141e788a894ea6}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-get\-\_\-string\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf const} char $\ast$$\ast$}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_af76f3778c819df852a141e788a894ea6}
+Go to the describded node and get its value as a string. 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the string you want t get \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the output value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_ae5c69ea422f13de465d2e7eead80f3c3}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-double\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{double}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ae5c69ea422f13de465d2e7eead80f3c3}
+Go to the describded node and set its value to a double. 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the double you want to set \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a229d5c4f33c5acbb33a38768db0f6571}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-int\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf int}}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a229d5c4f33c5acbb33a38768db0f6571}
+Go to the describded node and set its value to an integer. 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the integer you want to set \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the output value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_abcc1bc741169b14b2527d466eabadc53}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va}}
+\index{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va@{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-configuration\-\_\-go\-\_\-set\-\_\-string\-\_\-va (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf const} char $\ast$}]{val, }
+\item[{{\bf size\-\_\-t}}]{nbr, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_abcc1bc741169b14b2527d466eabadc53}
+Go to the describded node and set its value to a string. 
+\begin{DoxyParams}{Parameters}
+{\em config} & T\-He configuration to browse \\
+\hline
+{\em val} & A pointer where to store the string you want to set \\
+\hline
+{\em nbr} & The number of fieldname and integers you sent as variadic parameters. \\
+\hline
+{\em ...} & nbr parameters that can be strings or integers. All integers must be negative or 0 or they will be considered as pointers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was set. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a4216edc5d9b0422a65708be27568e803}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-next@{bunny\-\_\-configuration\-\_\-next}}
+\index{bunny\-\_\-configuration\-\_\-next@{bunny\-\_\-configuration\-\_\-next}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-configuration\-\_\-next (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a4216edc5d9b0422a65708be27568e803}
+Return the next children of config-\/$>$father, directly after config. 
+\begin{DoxyParams}{Parameters}
+{\em The} & node that have a father we want the next child. \\
+\hline
+{\em The} & next child. Return N\-U\-L\-L (\char`\"{}bunny\-\_\-configuration\-\_\-end\char`\"{}() if it was the last. \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_ac1c64879641abc6a47b986844bab5d1b}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-set\-\_\-double@{bunny\-\_\-configuration\-\_\-set\-\_\-double}}
+\index{bunny\-\_\-configuration\-\_\-set\-\_\-double@{bunny\-\_\-configuration\-\_\-set\-\_\-double}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-set\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-configuration\-\_\-set\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ac1c64879641abc6a47b986844bab5d1b}
+Set the value inside the node to a double. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to set \\
+\hline
+{\em val} & The value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_aaa7733ca86439cc528a84260e211748b}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-set\-\_\-int@{bunny\-\_\-configuration\-\_\-set\-\_\-int}}
+\index{bunny\-\_\-configuration\-\_\-set\-\_\-int@{bunny\-\_\-configuration\-\_\-set\-\_\-int}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-set\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-configuration\-\_\-set\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf int}}]{val}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_aaa7733ca86439cc528a84260e211748b}
+Set the value inside the node to an integer. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to set \\
+\hline
+{\em val} & The value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_a3b91a362a037b76b86400221d0c5998e}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-configuration\-\_\-set\-\_\-string@{bunny\-\_\-configuration\-\_\-set\-\_\-string}}
+\index{bunny\-\_\-configuration\-\_\-set\-\_\-string@{bunny\-\_\-configuration\-\_\-set\-\_\-string}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-configuration\-\_\-set\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-configuration\-\_\-set\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config, }
+\item[{{\bf const} char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a3b91a362a037b76b86400221d0c5998e}
+Set the value inside the node to a string. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The node to set \\
+\hline
+{\em str} & The value to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_a6c4e3ed622bc25759470359cca4aa1da}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-delete\-\_\-configuration@{bunny\-\_\-delete\-\_\-configuration}}
+\index{bunny\-\_\-delete\-\_\-configuration@{bunny\-\_\-delete\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a6c4e3ed622bc25759470359cca4aa1da}
+Delete the sent configuration node. All children will be destroyed as well. If the configuration is a child, it will remove itself cleanly from its parent. 
+\begin{DoxyParams}{Parameters}
+{\em config} & The configuration node to delete. \\
+\hline
+\end{DoxyParams}
+\hypertarget{configuration_8h_a74cd86ecfddc871773d2babd72372e1b}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-load\-\_\-configuration@{bunny\-\_\-load\-\_\-configuration}}
+\index{bunny\-\_\-load\-\_\-configuration@{bunny\-\_\-load\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-load\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration\-\_\-type}}]{type, }
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a74cd86ecfddc871773d2babd72372e1b}
+Load a file into a configuration node and its children. You can send N\-U\-L\-L as config to create a completly new one. If it is not N\-U\-L\-L, the sent node will be filled with new data and then returned. Some fields may be overwritten. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The configuration format to load and read \\
+\hline
+{\em file} & The file to load \\
+\hline
+{\em config} & An existing config to fill, or N\-U\-L\-L to create a new one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+config if it is not N\-U\-L\-L else a new node if everything went well, N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a1377a6dac4481695c5586fca70d319c2}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-new\-\_\-configuration@{bunny\-\_\-new\-\_\-configuration}}
+\index{bunny\-\_\-new\-\_\-configuration@{bunny\-\_\-new\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-new\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a1377a6dac4481695c5586fca70d319c2}
+Create an empty configuration node. \begin{DoxyReturn}{Returns}
+N\-U\-L\-L on error, if no more memory is available. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_ad965b7cd9d93c8c605c71242cd625756}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-read\-\_\-configuration@{bunny\-\_\-read\-\_\-configuration}}
+\index{bunny\-\_\-read\-\_\-configuration@{bunny\-\_\-read\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-read\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-configuration}$\ast$ bunny\-\_\-read\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration\-\_\-type}}]{type, }
+\item[{{\bf const} char $\ast$}]{code, }
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_ad965b7cd9d93c8c605c71242cd625756}
+Read the content of the string and convert it to a configuration node. You can send N\-U\-L\-L as config to generate a new one. If it is not N\-U\-L\-L, the sent node will be filled with new data and then returned. Some fields may be overwritten. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The configuration format to read \\
+\hline
+{\em code} & The string to parse \\
+\hline
+{\em config} & An existing config to fill or N\-U\-L\-L to create a new one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+config if it is not N\-U\-L\-L else a new node if everything went well, N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a4a579d9cb5c9caa0f28bd6a21ea3f959}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-save\-\_\-configuration@{bunny\-\_\-save\-\_\-configuration}}
+\index{bunny\-\_\-save\-\_\-configuration@{bunny\-\_\-save\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-save\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-save\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration\-\_\-type}}]{type, }
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a4a579d9cb5c9caa0f28bd6a21ea3f959}
+Save a configuration into a file. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The configuration format that will be used to export \\
+\hline
+{\em file} & The name of the file to save \\
+\hline
+{\em config} & The configuration to save \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on error. 
+\end{DoxyReturn}
+\hypertarget{configuration_8h_a128bd679ff31260b761b63b1d9218bdd}{\index{configuration.\-h@{configuration.\-h}!bunny\-\_\-write\-\_\-configuration@{bunny\-\_\-write\-\_\-configuration}}
+\index{bunny\-\_\-write\-\_\-configuration@{bunny\-\_\-write\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{bunny\-\_\-write\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ bunny\-\_\-write\-\_\-configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-configuration\-\_\-type}}]{type, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{config}
+\end{DoxyParamCaption}
+)}}\label{configuration_8h_a128bd679ff31260b761b63b1d9218bdd}
+Convert the sent configuration into a string of type format. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The configuraton format to write \\
+\hline
+{\em config} & The node to convert into string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string if everything went well, N\-U\-L\-L on error. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{configuration_8h_a23bb984181b3be02e23d09f1c327aab1}{\index{configuration.\-h@{configuration.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration@{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration@{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration} gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}}\label{configuration_8h_a23bb984181b3be02e23d09f1c327aab1}
+The function pointer that will be used by bunny\-\_\-read\-\_\-configuration if type is greater or equal to B\-C\-\_\-\-C\-U\-S\-T\-O\-M. Note that config will be allocated by bunny\-\_\-read\-\_\-configuration if it was N\-U\-L\-L. Also note that it will be freed by bunny\-\_\-read\-\_\-configuration if you return N\-U\-L\-L. \hypertarget{configuration_8h_a734181c71a14c5a93bddd1b561c04685}{\index{configuration.\-h@{configuration.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration@{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration@{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}!configuration.h@{configuration.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration} gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}}\label{configuration_8h_a734181c71a14c5a93bddd1b561c04685}
+The function pointer that will be used by bunny\-\_\-write\-\_\-configuration if type is greater or equal to B\-C\-\_\-\-C\-U\-S\-T\-O\-M. 

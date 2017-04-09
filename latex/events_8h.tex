@@ -1,0 +1,547 @@
+\hypertarget{events_8h}{\section{lib/lapin/dep/lapin/events.h File Reference}
+\label{events_8h}\index{lib/lapin/dep/lapin/events.\-h@{lib/lapin/dep/lapin/events.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__joystick}{s\-\_\-bunny\-\_\-joystick}
+\item 
+struct \hyperlink{structs__bunny__context}{s\-\_\-bunny\-\_\-context}
+\item 
+struct \hyperlink{structs__bunny__anonymous__context}{s\-\_\-bunny\-\_\-anonymous\-\_\-context}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48}{e\-\_\-bunny\-\_\-response} \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}
+\item 
+typedef enum \hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20}{e\-\_\-bunny\-\_\-event\-\_\-state} \hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state}
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a923505573510fc2245f6b458eb46e682}{t\-\_\-bunny\-\_\-key} )(\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} sta, \hyperlink{enum_8h_a6bd88cacb5dbe63a85e8cededa379eb4}{t\-\_\-bunny\-\_\-keysym} sym, void $\ast$dat)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}{t\-\_\-bunny\-\_\-type} )(uint32\-\_\-t unicode, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a10892e056f3e976b4bba845d113b83d3}{t\-\_\-bunny\-\_\-click} )(\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} sta, \hyperlink{enum_8h_a4f4c36d161b8d7bacebd032a774565a1}{t\-\_\-bunny\-\_\-mouse\-\_\-button} but, void $\ast$dat)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_adca2c49e1e58405923f93a011f1c7213}{t\-\_\-bunny\-\_\-move} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$relative, void $\ast$dat)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}{t\-\_\-bunny\-\_\-wheel} )(\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} wheelid, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} delta, void $\ast$data)
+\item 
+typedef struct \hyperlink{structs__bunny__joystick}{s\-\_\-bunny\-\_\-joystick} \hyperlink{events_8h_a21ee2192565a30eaeb8958a8d14f102c}{t\-\_\-bunny\-\_\-joystick}
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a41e34e419406c012af86c340c97068bb}{t\-\_\-bunny\-\_\-joy\-\_\-connect} )(\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} state, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} joyid, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{events_8h_a21ee2192565a30eaeb8958a8d14f102c}{t\-\_\-bunny\-\_\-joystick} $\ast$joyinfo, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a762d924743c3e275802ee599cb2b13a5}{t\-\_\-bunny\-\_\-joy\-\_\-axis} )(\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} joyid, \hyperlink{enum_8h_ace1137c24b070f37cfb6c227a3a55a87}{t\-\_\-bunny\-\_\-axis} axis, float \hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value}, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a349a528991e49278fe9cb485452ba6c5}{t\-\_\-bunny\-\_\-joy\-\_\-button} )(\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state} state, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} joyid, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} button, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a14890b94609d8b3721fd3375bd76f215}{t\-\_\-bunny\-\_\-get\-\_\-focus} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}{t\-\_\-bunny\-\_\-lost\-\_\-focus} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_afd5ceaa3b3efadb30569c28164d39187}{t\-\_\-bunny\-\_\-resize} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$siz, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a99955d212b8a4b9e07177e28628434f6}{t\-\_\-bunny\-\_\-close} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}{t\-\_\-bunny\-\_\-display} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$data)
+\item 
+typedef \hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}($\ast$ \hyperlink{events_8h_ae4bd2301727bd9badea4701c67ee7a26}{t\-\_\-bunny\-\_\-loop} )(void $\ast$dat)
+\item 
+typedef struct \hyperlink{structs__bunny__context}{s\-\_\-bunny\-\_\-context} \hyperlink{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}{t\-\_\-bunny\-\_\-context}
+\item 
+typedef struct \\*
+\hyperlink{structs__bunny__anonymous__context}{s\-\_\-bunny\-\_\-anonymous\-\_\-context} \hyperlink{events_8h_a7cb47fb9cfbb38bdda16871b99209f10}{t\-\_\-bunny\-\_\-anonymous\-\_\-context}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48}{e\-\_\-bunny\-\_\-response} \{ \\*
+\hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48ae6b556812808a34702361daf7ed1184f}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48a23df545784f8052ce0b35ee132e4b3f0}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S}, 
+\hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48adac1d6823307f5a95b2d6110a2d6d9a2}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S}, 
+\hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48af272b87ed31dd0a1119d71c5ce757164}{S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T}, 
+\\*
+\hyperlink{events_8h_ac5e05767d0de2fa30049627c05003c48a3085fa1d584916445b7ed83dfddee5ac}{G\-O\-\_\-\-O\-N}
+ \}
+\item 
+enum \hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20}{e\-\_\-bunny\-\_\-event\-\_\-state} \{ \\*
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20ab68ccb0c69b35011226f5ee8a86b72fb}{G\-O\-\_\-\-D\-O\-W\-N}, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20accb858b7f81551ea21cf16254bf8dbd9}{G\-O\-\_\-\-U\-P}, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a02093576fa134c093dd9c73a74470fab}{L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S} = G\-O\-\_\-\-D\-O\-W\-N, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a4a5ac6860d1dbbbdb3e53bf4d5d99a2e}{G\-O\-T\-\_\-\-F\-O\-C\-U\-S} = G\-O\-\_\-\-U\-P, 
+\\*
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a7a691a2430ec26878897b5fbc9c22a4c}{C\-O\-N\-N\-E\-C\-T\-E\-D} = G\-O\-\_\-\-D\-O\-W\-N, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20acdaad1112073e3e2ea032424c38c34e1}{D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D} = G\-O\-\_\-\-U\-P, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a1b1d1d8a1be5f842b89019837dbc4d17}{E\-N\-T\-E\-R\-I\-N\-G} = G\-O\-\_\-\-D\-O\-W\-N, 
+\hyperlink{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20aa577b6ae24fb703fe74e7ad7363b052a}{L\-E\-A\-V\-I\-N\-G} = G\-O\-\_\-\-U\-P
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{events_8h_a3467f4ea2b2b750ade53a9fb898b6853}{bunny\-\_\-set\-\_\-key\-\_\-response} (\hyperlink{events_8h_a923505573510fc2245f6b458eb46e682}{t\-\_\-bunny\-\_\-key} \hyperlink{unionkey}{key})
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} $\ast$ \hyperlink{events_8h_abb8c9cd33cffe2b74043def929b378d5}{bunny\-\_\-get\-\_\-keyboard} (void)
+\item 
+void \hyperlink{events_8h_a8fb798b07bd28ab0b5a91cd9ec93354f}{bunny\-\_\-set\-\_\-text\-\_\-response} (\hyperlink{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}{t\-\_\-bunny\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type})
+\item 
+void \hyperlink{events_8h_a0549c715d2f5e5822c3e5cb56abe7fc7}{bunny\-\_\-set\-\_\-click\-\_\-response} (\hyperlink{events_8h_a10892e056f3e976b4bba845d113b83d3}{t\-\_\-bunny\-\_\-click} cli)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} $\ast$ \hyperlink{events_8h_a5f975e243fb900ad2c03500a10075926}{bunny\-\_\-get\-\_\-mouse\-\_\-button} (void)
+\item 
+void \hyperlink{events_8h_a8eac7a8c52c34af50c35c925ba8e6fa6}{bunny\-\_\-set\-\_\-move\-\_\-response} (\hyperlink{events_8h_adca2c49e1e58405923f93a011f1c7213}{t\-\_\-bunny\-\_\-move} mov)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$ \hyperlink{events_8h_a798750cd5d0609170af272da33aa8134}{bunny\-\_\-get\-\_\-mouse\-\_\-position} (void)
+\item 
+void \hyperlink{events_8h_ac062ca9f36f46d3ac1989271ffecc12e}{bunny\-\_\-set\-\_\-wheel\-\_\-response} (\hyperlink{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}{t\-\_\-bunny\-\_\-wheel} wheel)
+\item 
+void \hyperlink{events_8h_ae8c84a0592c8309fd4afdad10496da53}{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response} (\hyperlink{events_8h_a41e34e419406c012af86c340c97068bb}{t\-\_\-bunny\-\_\-joy\-\_\-connect} joy)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{events_8h_a21ee2192565a30eaeb8958a8d14f102c}{t\-\_\-bunny\-\_\-joystick} $\ast$ \hyperlink{events_8h_a67244ebd654f7d13ad657048a4e34830}{bunny\-\_\-get\-\_\-joy\-\_\-info} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} id)
+\item 
+void \hyperlink{events_8h_a844b880ab862d70e3c5dae1e53897d3b}{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response} (\hyperlink{events_8h_a762d924743c3e275802ee599cb2b13a5}{t\-\_\-bunny\-\_\-joy\-\_\-axis} axis)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} float($\ast$ \hyperlink{events_8h_a92be65813e544b12eeb0b51d4df90096}{bunny\-\_\-get\-\_\-joy\-\_\-axis} (void))\mbox{[}\hyperlink{enum_8h_a72f76e0dcf34adcfc7c3110fe40b92b0a29cfb00b9a66bef32cda5859e7154c41}{L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-A\-X\-I\-S}\mbox{]}
+\item 
+void \hyperlink{events_8h_a69d5c2e9b0bff08aa21b8446db3f4a54}{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response} (\hyperlink{events_8h_a349a528991e49278fe9cb485452ba6c5}{t\-\_\-bunny\-\_\-joy\-\_\-button} button)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool}($\ast$ \hyperlink{events_8h_ab0b9aff26d5f01e8b7b64433da038fb8}{bunny\-\_\-get\-\_\-joy\-\_\-button} (void))\mbox{[}\hyperlink{enum_8h_a64f4f3273b014ee7be4db4332d1628a6}{L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-B\-U\-T\-T\-O\-N}\mbox{]}
+\item 
+void \hyperlink{events_8h_abb41bc2a54523b994126a37598385255}{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response} (\hyperlink{events_8h_a14890b94609d8b3721fd3375bd76f215}{t\-\_\-bunny\-\_\-get\-\_\-focus} getf)
+\item 
+void \hyperlink{events_8h_ac326e9cb6508b1cf38fad8a5462d1d6d}{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response} (\hyperlink{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}{t\-\_\-bunny\-\_\-lost\-\_\-focus} lost)
+\item 
+void \hyperlink{events_8h_ac8e8164c74bcf057675712da7ab79aa7}{bunny\-\_\-set\-\_\-resize\-\_\-response} (\hyperlink{events_8h_afd5ceaa3b3efadb30569c28164d39187}{t\-\_\-bunny\-\_\-resize} resize)
+\item 
+void \hyperlink{events_8h_a364e700f280b2e82e420765433714e65}{bunny\-\_\-set\-\_\-close\-\_\-response} (\hyperlink{events_8h_a99955d212b8a4b9e07177e28628434f6}{t\-\_\-bunny\-\_\-close} close)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$ \hyperlink{events_8h_afd6a293c930efa07b3b0f2ff7852d88a}{bunny\-\_\-get\-\_\-window} (void)
+\item 
+void \hyperlink{events_8h_ad81e5cb0cbd8f867f5269c804c822661}{bunny\-\_\-set\-\_\-display\-\_\-function} (\hyperlink{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}{t\-\_\-bunny\-\_\-display} display)
+\item 
+void \hyperlink{events_8h_ad0b5295388b6af2ef6fb0d90f20c7588}{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function} (\hyperlink{events_8h_ae4bd2301727bd9badea4701c67ee7a26}{t\-\_\-bunny\-\_\-loop} lop)
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{events_8h_a18560e03634aa67ca9cffa7b82710546}{bunny\-\_\-loop} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, uint8\-\_\-t freq, void $\ast$dat)
+\item 
+\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response} \hyperlink{events_8h_a675a41ff0069986ce5fac982e2b15568}{bunny\-\_\-loop\-\_\-mw} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$$\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nwin, uint8\-\_\-t freq, void $\ast$data)
+\item 
+void \hyperlink{events_8h_a806e49f23c86e099276162f4cbe76ce5}{bunny\-\_\-set\-\_\-context} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}{t\-\_\-bunny\-\_\-context} $\ast$context)
+\item 
+void \hyperlink{events_8h_a0c7d5d3ee7538ffef4ea3df2ec5fec9c}{bunny\-\_\-get\-\_\-context} (\hyperlink{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}{t\-\_\-bunny\-\_\-context} $\ast$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The events module allow you to handle user actions\-: keyboard, joystick, mouse, etc. The bunny library is callback driven. You have to define functions that will be called if a specific category of event occurs. 
+
+\subsection{Typedef Documentation}
+\hypertarget{events_8h_a7cb47fb9cfbb38bdda16871b99209f10}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-anonymous\-\_\-context@{t\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\index{t\-\_\-bunny\-\_\-anonymous\-\_\-context@{t\-\_\-bunny\-\_\-anonymous\-\_\-context}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-anonymous\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-anonymous\-\_\-context}				 {\bf t\-\_\-bunny\-\_\-anonymous\-\_\-context}}}\label{events_8h_a7cb47fb9cfbb38bdda16871b99209f10}
+The t\-\_\-bunny\-\_\-anonymous\-\_\-context serves the same purpose as t\-\_\-bunny\-\_\-context but present a tiny advantage\-: because all types like t\-\_\-bunny\-\_\-key takes a void$\ast$, your callbacks must all takes a void$\ast$, or you have to cast their types into a t\-\_\-bunny\-\_\-key to set it. In order to allow you to define a more precise type than void$\ast$ for the data that is set to all callbacks, there is this structure.
+
+By using void$\ast$ instead of function pointer, you can freely assign your function pointers to it, even if the last parameter of them is not a void$\ast$ but a t\-\_\-game$\ast$ for example. This, without a cast.
+
+Of course it breaks the type safety, but at least, you are free to choose. \hypertarget{events_8h_a10892e056f3e976b4bba845d113b83d3}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-click@{t\-\_\-bunny\-\_\-click}}
+\index{t\-\_\-bunny\-\_\-click@{t\-\_\-bunny\-\_\-click}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-click}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-click)({\bf t\-\_\-bunny\-\_\-event\-\_\-state} sta, {\bf t\-\_\-bunny\-\_\-mouse\-\_\-button} but, void $\ast$dat)}}\label{events_8h_a10892e056f3e976b4bba845d113b83d3}
+The type of the function that will handle mouse click event. t\-\_\-bunny\-\_\-event\-\_\-state is the action\-: the button was pressed or released. t\-\_\-bunny\-\_\-mouse\-\_\-button is the button that was pressed or released. See \hyperlink{enum_8h}{enum.\-h} for more informations. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a99955d212b8a4b9e07177e28628434f6}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-close@{t\-\_\-bunny\-\_\-close}}
+\index{t\-\_\-bunny\-\_\-close@{t\-\_\-bunny\-\_\-close}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-close)({\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast${\bf win}, void $\ast$data)}}\label{events_8h_a99955d212b8a4b9e07177e28628434f6}
+The type of the function that will handle the close window event. This function type can only be used if you use bunny\-\_\-loow\-\_\-mw as real-\/time loop. The sent window is the one that was requested to close. The void$\ast$ pointer can be anything, it is what you sent to bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S may be a nice choice for this case. \hypertarget{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-context@{t\-\_\-bunny\-\_\-context}}
+\index{t\-\_\-bunny\-\_\-context@{t\-\_\-bunny\-\_\-context}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-context}				 {\bf t\-\_\-bunny\-\_\-context}}}\label{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}
+The t\-\_\-bunny\-\_\-context structure is a collection of function pointer of various types. These types match all function pointer that can be sent with bunny\-\_\-set\-\_\-$\ast$\-\_\-response, buny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function or bunny\-\_\-set\-\_\-display\-\_\-function. This structure is made to define a lot of callbacks in a single call, by defining a t\-\_\-bunny\-\_\-context somewhere (or an array...) and give it to bunny\-\_\-set\-\_\-context.
+
+A N\-U\-L\-L pointer is a deactivated callback. \hypertarget{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-display@{t\-\_\-bunny\-\_\-display}}
+\index{t\-\_\-bunny\-\_\-display@{t\-\_\-bunny\-\_\-display}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-display)({\bf const} void $\ast$data)}}\label{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}
+The type of the function that will be called if at least one call to the loop main function was made during the last refresh cycle. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a77d6083e762e1559d47116c11f734958}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-event\-\_\-state@{t\-\_\-bunny\-\_\-event\-\_\-state}}
+\index{t\-\_\-bunny\-\_\-event\-\_\-state@{t\-\_\-bunny\-\_\-event\-\_\-state}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-event\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-event\-\_\-state}				 {\bf t\-\_\-bunny\-\_\-event\-\_\-state}}}\label{events_8h_a77d6083e762e1559d47116c11f734958}
+Most events are linked to a specific action\-: something was pressed or released. The t\-\_\-bunny\-\_\-event\-\_\-state enumeration handle this. G\-O\-\_\-\-D\-O\-W\-N means something was pressed. G\-O\-\_\-\-U\-P means something was released. C\-O\-N\-N\-E\-C\-T\-E\-D and D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D are equivalent, but more clear when you write something like joystick connection/disconnection routine \hypertarget{events_8h_a14890b94609d8b3721fd3375bd76f215}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-get\-\_\-focus@{t\-\_\-bunny\-\_\-get\-\_\-focus}}
+\index{t\-\_\-bunny\-\_\-get\-\_\-focus@{t\-\_\-bunny\-\_\-get\-\_\-focus}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-get\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-get\-\_\-focus)({\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast${\bf win}, void $\ast$data)}}\label{events_8h_a14890b94609d8b3721fd3375bd76f215}
+The type of the function that will handle the get focus event. t\-\_\-bunny\-\_\-window is the address of the window that got the focus The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last\-\_\-parameter Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a762d924743c3e275802ee599cb2b13a5}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-joy\-\_\-axis@{t\-\_\-bunny\-\_\-joy\-\_\-axis}}
+\index{t\-\_\-bunny\-\_\-joy\-\_\-axis@{t\-\_\-bunny\-\_\-joy\-\_\-axis}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-joy\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-joy\-\_\-axis)({\bf int} joyid, {\bf t\-\_\-bunny\-\_\-axis} axis, float {\bf value}, void $\ast$data)}}\label{events_8h_a762d924743c3e275802ee599cb2b13a5}
+The tpye of the function that will handle any changing on a joystick axis. joyid is the id of the joystick that got a changing axis t\-\_\-bunny\-\_\-axis is the axis that changed value is the new value of the axis The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a349a528991e49278fe9cb485452ba6c5}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-joy\-\_\-button@{t\-\_\-bunny\-\_\-joy\-\_\-button}}
+\index{t\-\_\-bunny\-\_\-joy\-\_\-button@{t\-\_\-bunny\-\_\-joy\-\_\-button}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-joy\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-joy\-\_\-button)({\bf t\-\_\-bunny\-\_\-event\-\_\-state} state, {\bf int} joyid, {\bf int} button, void $\ast$data)}}\label{events_8h_a349a528991e49278fe9cb485452ba6c5}
+The type of the function that will handle joystick button event. t\-\_\-bunny\-\_\-event\-\_\-state is the action\-: the button was pressed or release. joyid is the id of the joystick that got a changing button button is the number of the changing button The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a41e34e419406c012af86c340c97068bb}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-joy\-\_\-connect@{t\-\_\-bunny\-\_\-joy\-\_\-connect}}
+\index{t\-\_\-bunny\-\_\-joy\-\_\-connect@{t\-\_\-bunny\-\_\-joy\-\_\-connect}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-joy\-\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-joy\-\_\-connect)({\bf t\-\_\-bunny\-\_\-event\-\_\-state} state, {\bf int} joyid, {\bf const} {\bf t\-\_\-bunny\-\_\-joystick} $\ast$joyinfo, void $\ast$data)}}\label{events_8h_a41e34e419406c012af86c340c97068bb}
+The type of the function that will handle joystick connection and disconnection. t\-\_\-bunny\-\_\-event\-\_\-state is the action\-: connected or disconnected joyid is the id of the joystick. The Lib\-Lapin supports L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K joysticks. t\-\_\-bunny\-\_\-joystick contains information about the connected or disconnected joystick. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a21ee2192565a30eaeb8958a8d14f102c}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-joystick@{t\-\_\-bunny\-\_\-joystick}}
+\index{t\-\_\-bunny\-\_\-joystick@{t\-\_\-bunny\-\_\-joystick}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-joystick}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-joystick}				 {\bf t\-\_\-bunny\-\_\-joystick}}}\label{events_8h_a21ee2192565a30eaeb8958a8d14f102c}
+The t\-\_\-bunny\-\_\-joystick structure contains all informations about a joystick slot. The connected attribute indicates if the slot is used. The name attribute is the name of the joystick The vendor attribute is the I\-D of the vendor The product attribute is the I\-D of the product. The nb\-\_\-button attribute is how many buttons there is The axis attribute is how many axis there is\-: horizontal, vertical, etc. See the \hyperlink{enum_8h}{enum.\-h} file for more informations. \hypertarget{events_8h_a923505573510fc2245f6b458eb46e682}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-key@{t\-\_\-bunny\-\_\-key}}
+\index{t\-\_\-bunny\-\_\-key@{t\-\_\-bunny\-\_\-key}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-key)({\bf t\-\_\-bunny\-\_\-event\-\_\-state} sta, {\bf t\-\_\-bunny\-\_\-keysym} sym, void $\ast$dat)}}\label{events_8h_a923505573510fc2245f6b458eb46e682}
+The type of the function that will handle keyboard event. t\-\_\-bunny\-\_\-event\-\_\-state is the action\-: the key was pressed or released. t\-\_\-bunny\-\_\-keysym is the key that was pressed or released. See \hyperlink{enum_8h}{enum.\-h} for more informations. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_ae4bd2301727bd9badea4701c67ee7a26}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-loop@{t\-\_\-bunny\-\_\-loop}}
+\index{t\-\_\-bunny\-\_\-loop@{t\-\_\-bunny\-\_\-loop}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-loop)(void $\ast$dat)}}\label{events_8h_ae4bd2301727bd9badea4701c67ee7a26}
+The type of the function that will be called at a specific frequency, specified thanks to the second parameter of bunny\-\_\-loop or the third of bunny\-\_\-loop\-\_\-mw. This is useful to create a \char`\"{}main function\char`\"{}. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-lost\-\_\-focus@{t\-\_\-bunny\-\_\-lost\-\_\-focus}}
+\index{t\-\_\-bunny\-\_\-lost\-\_\-focus@{t\-\_\-bunny\-\_\-lost\-\_\-focus}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-lost\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-lost\-\_\-focus)({\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast${\bf win}, void $\ast$data)}}\label{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}
+The type of the function that will handle the lost focus event. t\-\_\-bunny\-\_\-window is the address of the window that lost the focus The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last\-\_\-parameter Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_adca2c49e1e58405923f93a011f1c7213}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-move@{t\-\_\-bunny\-\_\-move}}
+\index{t\-\_\-bunny\-\_\-move@{t\-\_\-bunny\-\_\-move}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-move)({\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$relative, void $\ast$dat)}}\label{events_8h_adca2c49e1e58405923f93a011f1c7213}
+The type of the function that will handle mouse movement event. t\-\_\-bunny\-\_\-position is the difference between the cursor now and previously. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_afd5ceaa3b3efadb30569c28164d39187}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-resize@{t\-\_\-bunny\-\_\-resize}}
+\index{t\-\_\-bunny\-\_\-resize@{t\-\_\-bunny\-\_\-resize}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-resize)({\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast${\bf win}, {\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$siz, void $\ast$data)}}\label{events_8h_afd5ceaa3b3efadb30569c28164d39187}
+The type of the function that will handle the resize window event. t\-\_\-bunny\-\_\-window is the address of the window that was resize t\-\_\-bunny\-\_\-position the new size of the window The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last\-\_\-parameter Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-response@{t\-\_\-bunny\-\_\-response}}
+\index{t\-\_\-bunny\-\_\-response@{t\-\_\-bunny\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-response}				 {\bf t\-\_\-bunny\-\_\-response}}}\label{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}
+The t\-\_\-bunny\-\_\-response enumeration contains values that can be returned from a callback used by the event handling system. The value, under some specific conditions, can be returned by the bunny\-\_\-loop function and the bunny\-\_\-loop\-\_\-mw function. Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R break the bunny\-\_\-loop, making it returns E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S should not be used\-: it is used by the window closing mecanism Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S break the bunny\-\_\-loop, making it returns E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S Returning S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T break the bunny\-\_\-loop, making it returns S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T Returning G\-O\-\_\-\-O\-N does not break the bunny\-\_\-loop, it simply goes on. \hypertarget{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-type@{t\-\_\-bunny\-\_\-type}}
+\index{t\-\_\-bunny\-\_\-type@{t\-\_\-bunny\-\_\-type}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-type)(uint32\-\_\-t unicode, void $\ast$data)}}\label{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}
+The type of the function that will handle the keyboard typing event. There is a difference with the keyboard pressed or released event\-: here, we are talking about text, that means that keys like shift or alt are working automatically and that special characters may be managed. The uint32\-\_\-t unicode is the character that was typed. The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. \hypertarget{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}{\index{events.\-h@{events.\-h}!t\-\_\-bunny\-\_\-wheel@{t\-\_\-bunny\-\_\-wheel}}
+\index{t\-\_\-bunny\-\_\-wheel@{t\-\_\-bunny\-\_\-wheel}!events.h@{events.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-wheel}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-response}($\ast$ t\-\_\-bunny\-\_\-wheel)({\bf int} wheelid, {\bf int} delta, void $\ast$data)}}\label{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}
+The type of the function that will handle mouse wheel event. wheelid is the id of the wheel that was moved. delta is how much the wheel moved The void$\ast$ pointer can be anything\-: it is what you sent to bunny\-\_\-loop or bunny\-\_\-loop\-\_\-mw as last parameter. Return a t\-\_\-bunny\-\_\-response in order to keep the loop or break it. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20}{\index{events.\-h@{events.\-h}!e\-\_\-bunny\-\_\-event\-\_\-state@{e\-\_\-bunny\-\_\-event\-\_\-state}}
+\index{e\-\_\-bunny\-\_\-event\-\_\-state@{e\-\_\-bunny\-\_\-event\-\_\-state}!events.h@{events.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-event\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-event\-\_\-state}}}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20}
+Most events are linked to a specific action\-: something was pressed or released. The t\-\_\-bunny\-\_\-event\-\_\-state enumeration handle this. G\-O\-\_\-\-D\-O\-W\-N means something was pressed. G\-O\-\_\-\-U\-P means something was released. C\-O\-N\-N\-E\-C\-T\-E\-D and D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D are equivalent, but more clear when you write something like joystick connection/disconnection routine \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\-O\-\_\-\-D\-O\-W\-N@{G\-O\-\_\-\-D\-O\-W\-N}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!G\-O\-\_\-\-D\-O\-W\-N@{G\-O\-\_\-\-D\-O\-W\-N}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20ab68ccb0c69b35011226f5ee8a86b72fb}{G\-O\-\_\-\-D\-O\-W\-N}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20ab68ccb0c69b35011226f5ee8a86b72fb}
+}]\index{G\-O\-\_\-\-U\-P@{G\-O\-\_\-\-U\-P}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!G\-O\-\_\-\-U\-P@{G\-O\-\_\-\-U\-P}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20accb858b7f81551ea21cf16254bf8dbd9}{G\-O\-\_\-\-U\-P}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20accb858b7f81551ea21cf16254bf8dbd9}
+}]\index{L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S@{L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S@{L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a02093576fa134c093dd9c73a74470fab}{L\-O\-S\-T\-\_\-\-F\-O\-C\-U\-S}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a02093576fa134c093dd9c73a74470fab}
+}]\index{G\-O\-T\-\_\-\-F\-O\-C\-U\-S@{G\-O\-T\-\_\-\-F\-O\-C\-U\-S}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!G\-O\-T\-\_\-\-F\-O\-C\-U\-S@{G\-O\-T\-\_\-\-F\-O\-C\-U\-S}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a4a5ac6860d1dbbbdb3e53bf4d5d99a2e}{G\-O\-T\-\_\-\-F\-O\-C\-U\-S}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a4a5ac6860d1dbbbdb3e53bf4d5d99a2e}
+}]\index{C\-O\-N\-N\-E\-C\-T\-E\-D@{C\-O\-N\-N\-E\-C\-T\-E\-D}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!C\-O\-N\-N\-E\-C\-T\-E\-D@{C\-O\-N\-N\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a7a691a2430ec26878897b5fbc9c22a4c}{C\-O\-N\-N\-E\-C\-T\-E\-D}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a7a691a2430ec26878897b5fbc9c22a4c}
+}]\index{D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20acdaad1112073e3e2ea032424c38c34e1}{D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20acdaad1112073e3e2ea032424c38c34e1}
+}]\index{E\-N\-T\-E\-R\-I\-N\-G@{E\-N\-T\-E\-R\-I\-N\-G}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!E\-N\-T\-E\-R\-I\-N\-G@{E\-N\-T\-E\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a1b1d1d8a1be5f842b89019837dbc4d17}{E\-N\-T\-E\-R\-I\-N\-G}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20a1b1d1d8a1be5f842b89019837dbc4d17}
+}]\index{L\-E\-A\-V\-I\-N\-G@{L\-E\-A\-V\-I\-N\-G}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!L\-E\-A\-V\-I\-N\-G@{L\-E\-A\-V\-I\-N\-G}}\item[{\em 
+\hypertarget{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20aa577b6ae24fb703fe74e7ad7363b052a}{L\-E\-A\-V\-I\-N\-G}\label{events_8h_ac70df54c0f2f49be9df1ccfbe10f3d20aa577b6ae24fb703fe74e7ad7363b052a}
+}]\end{description}
+\end{Desc}
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48}{\index{events.\-h@{events.\-h}!e\-\_\-bunny\-\_\-response@{e\-\_\-bunny\-\_\-response}}
+\index{e\-\_\-bunny\-\_\-response@{e\-\_\-bunny\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-response}}}\label{events_8h_ac5e05767d0de2fa30049627c05003c48}
+The t\-\_\-bunny\-\_\-response enumeration contains values that can be returned from a callback used by the event handling system. The value, under some specific conditions, can be returned by the bunny\-\_\-loop function and the bunny\-\_\-loop\-\_\-mw function. Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R break the bunny\-\_\-loop, making it returns E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S should not be used\-: it is used by the window closing mecanism Returning E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S break the bunny\-\_\-loop, making it returns E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S Returning S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T break the bunny\-\_\-loop, making it returns S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T Returning G\-O\-\_\-\-O\-N does not break the bunny\-\_\-loop, it simply goes on. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48ae6b556812808a34702361daf7ed1184f}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-E\-R\-R\-O\-R}\label{events_8h_ac5e05767d0de2fa30049627c05003c48ae6b556812808a34702361daf7ed1184f}
+}]\index{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S}}\item[{\em 
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48a23df545784f8052ce0b35ee132e4b3f0}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-C\-R\-O\-S\-S}\label{events_8h_ac5e05767d0de2fa30049627c05003c48a23df545784f8052ce0b35ee132e4b3f0}
+}]\index{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S@{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S}}\item[{\em 
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48adac1d6823307f5a95b2d6110a2d6d9a2}{E\-X\-I\-T\-\_\-\-O\-N\-\_\-\-S\-U\-C\-C\-E\-S\-S}\label{events_8h_ac5e05767d0de2fa30049627c05003c48adac1d6823307f5a95b2d6110a2d6d9a2}
+}]\index{S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T@{S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T@{S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T}}\item[{\em 
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48af272b87ed31dd0a1119d71c5ce757164}{S\-W\-I\-T\-C\-H\-\_\-\-C\-O\-N\-T\-E\-X\-T}\label{events_8h_ac5e05767d0de2fa30049627c05003c48af272b87ed31dd0a1119d71c5ce757164}
+}]\index{G\-O\-\_\-\-O\-N@{G\-O\-\_\-\-O\-N}!events.\-h@{events.\-h}}\index{events.\-h@{events.\-h}!G\-O\-\_\-\-O\-N@{G\-O\-\_\-\-O\-N}}\item[{\em 
+\hypertarget{events_8h_ac5e05767d0de2fa30049627c05003c48a3085fa1d584916445b7ed83dfddee5ac}{G\-O\-\_\-\-O\-N}\label{events_8h_ac5e05767d0de2fa30049627c05003c48a3085fa1d584916445b7ed83dfddee5ac}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{events_8h_a0c7d5d3ee7538ffef4ea3df2ec5fec9c}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-context@{bunny\-\_\-get\-\_\-context}}
+\index{bunny\-\_\-get\-\_\-context@{bunny\-\_\-get\-\_\-context}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-get\-\_\-context (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a0c7d5d3ee7538ffef4ea3df2ec5fec9c}
+Get the event context. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The event context. \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a92be65813e544b12eeb0b51d4df90096}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-joy\-\_\-axis@{bunny\-\_\-get\-\_\-joy\-\_\-axis}}
+\index{bunny\-\_\-get\-\_\-joy\-\_\-axis@{bunny\-\_\-get\-\_\-joy\-\_\-axis}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-joy\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} float($\ast$ bunny\-\_\-get\-\_\-joy\-\_\-axis (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+))\mbox{[}\-L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-A\-X\-I\-S\mbox{]}}}\label{events_8h_a92be65813e544b12eeb0b51d4df90096}
+Get an array of array of axis. The first dimension is the joystick, the second is the axis. The axis value array is updated O\-N\-L\-Y if a callback was registered for the joystick axis event with the bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response function. The maximum joystick value is L\-A\-P\-I\-N\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K and the maximum value for axis is L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-A\-X\-I\-S. Use it this way\-: \hyperlink{events_8h_a92be65813e544b12eeb0b51d4df90096}{bunny\-\_\-get\-\_\-joy\-\_\-axis()}\mbox{[}3\mbox{]}\mbox{[}4\mbox{]} \hypertarget{events_8h_ab0b9aff26d5f01e8b7b64433da038fb8}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-joy\-\_\-button@{bunny\-\_\-get\-\_\-joy\-\_\-button}}
+\index{bunny\-\_\-get\-\_\-joy\-\_\-button@{bunny\-\_\-get\-\_\-joy\-\_\-button}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-joy\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf bool}($\ast$ bunny\-\_\-get\-\_\-joy\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+))\mbox{[}\-L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-B\-U\-T\-T\-O\-N\mbox{]}}}\label{events_8h_ab0b9aff26d5f01e8b7b64433da038fb8}
+Get an array of array of buttons. The first dimension is the joystick, the second is the button. The button value array is updated O\-N\-L\-Y if a callback was registered for the joystick button event with the bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response function. The maximum joystick value is L\-A\-P\-I\-N\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K and the maximum value for buttons is L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-B\-U\-T\-T\-O\-N. Use it this way\-: \hyperlink{events_8h_ab0b9aff26d5f01e8b7b64433da038fb8}{bunny\-\_\-get\-\_\-joy\-\_\-button()}\mbox{[}3\mbox{]}\mbox{[}4\mbox{]} \hypertarget{events_8h_a67244ebd654f7d13ad657048a4e34830}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-joy\-\_\-info@{bunny\-\_\-get\-\_\-joy\-\_\-info}}
+\index{bunny\-\_\-get\-\_\-joy\-\_\-info@{bunny\-\_\-get\-\_\-joy\-\_\-info}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-joy\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-joystick}$\ast$ bunny\-\_\-get\-\_\-joy\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{id}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a67244ebd654f7d13ad657048a4e34830}
+Get informations about a specific joystick. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the joystick you wanna get the info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the informations of the requested joystick. N\-U\-L\-L if id was invalid. 
+\end{DoxyReturn}
+\hypertarget{events_8h_abb8c9cd33cffe2b74043def929b378d5}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-keyboard@{bunny\-\_\-get\-\_\-keyboard}}
+\index{bunny\-\_\-get\-\_\-keyboard@{bunny\-\_\-get\-\_\-keyboard}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-keyboard}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf bool}$\ast$ bunny\-\_\-get\-\_\-keyboard (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{events_8h_abb8c9cd33cffe2b74043def929b378d5}
+Get the array of keyboard states. \hyperlink{events_8h_abb8c9cd33cffe2b74043def929b378d5}{bunny\-\_\-get\-\_\-keyboard()}\mbox{[}K\-E\-Y\-S\-Y\-M\mbox{]} returns if the K\-E\-Y\-S\-Y\-M key is up (false) or down (true). The array of keyboard states is updated O\-N\-L\-Y if a callback was registered for the keyboard with the bunny\-\_\-set\-\_\-key\-\_\-response function. \hypertarget{events_8h_a5f975e243fb900ad2c03500a10075926}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-mouse\-\_\-button@{bunny\-\_\-get\-\_\-mouse\-\_\-button}}
+\index{bunny\-\_\-get\-\_\-mouse\-\_\-button@{bunny\-\_\-get\-\_\-mouse\-\_\-button}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-mouse\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf bool}$\ast$ bunny\-\_\-get\-\_\-mouse\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a5f975e243fb900ad2c03500a10075926}
+Get the array of mouse button states. \hyperlink{events_8h_a5f975e243fb900ad2c03500a10075926}{bunny\-\_\-get\-\_\-mouse\-\_\-button()}\mbox{[}B\-U\-T\-T\-O\-N\-I\-D\mbox{]} returns if the button is up (false) or down (true). The array of mouse button is updated O\-N\-L\-Y if a callback was registered for the mouse click with the bunny\-\_\-set\-\_\-click\-\_\-response function. \hypertarget{events_8h_a798750cd5d0609170af272da33aa8134}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-mouse\-\_\-position@{bunny\-\_\-get\-\_\-mouse\-\_\-position}}
+\index{bunny\-\_\-get\-\_\-mouse\-\_\-position@{bunny\-\_\-get\-\_\-mouse\-\_\-position}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-mouse\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-position}$\ast$ bunny\-\_\-get\-\_\-mouse\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a798750cd5d0609170af272da33aa8134}
+Get the mouse position. The mouse position structure is updated O\-N\-L\-Y if a callback was registered for the mouse movement event with the bunny\-\_\-set\-\_\-move\-\_\-response function. \hypertarget{events_8h_afd6a293c930efa07b3b0f2ff7852d88a}{\index{events.\-h@{events.\-h}!bunny\-\_\-get\-\_\-window@{bunny\-\_\-get\-\_\-window}}
+\index{bunny\-\_\-get\-\_\-window@{bunny\-\_\-get\-\_\-window}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-window}$\ast$ bunny\-\_\-get\-\_\-window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{events_8h_afd6a293c930efa07b3b0f2ff7852d88a}
+Get a pointer to the window that handle the current event Call this function only in an event manager function, not in the loop main function or the display function. 
+\begin{DoxyParams}{Parameters}
+{\em The} & window that handle the current event \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a18560e03634aa67ca9cffa7b82710546}{\index{events.\-h@{events.\-h}!bunny\-\_\-loop@{bunny\-\_\-loop}}
+\index{bunny\-\_\-loop@{bunny\-\_\-loop}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} bunny\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{uint8\-\_\-t}]{freq, }
+\item[{void $\ast$}]{dat}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a18560e03634aa67ca9cffa7b82710546}
+The bunny\-\_\-loop function is a real-\/time loop that also manage events previously registered thanks to bunny\-\_\-set\-\_\-$\ast$\-\_\-response. The function that have been given to bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function is garantee to be called freq time per seconds on average\-: if a treatment takes more time and that the frequency cannot be respected on a specific cycle, then the loop will catch up the missing frames on the next cycle. For this reason, you must when you use the bunny library take care to N\-E\-V\-E\-R ask too much C\-P\-U or a too high frequency, making the loop always late\-: it would try to catch up its late and looping at high speed on a following treatment that would not need so much C\-P\-U. The display function is called at best one time after each call to the main function, but if several calls were made to the main function because of a slow down, then display would be called only once. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window that is the source of events \\
+\hline
+{\em freq} & How many times the main function will be called per seconds \\
+\hline
+{\em dat} & A pointer that will be sent to A\-L\-L functions given to callbacks setters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value returned by any callback, which cannot be G\-O\-\_\-\-O\-N. 
+\end{DoxyReturn}
+\hypertarget{events_8h_a675a41ff0069986ce5fac982e2b15568}{\index{events.\-h@{events.\-h}!bunny\-\_\-loop\-\_\-mw@{bunny\-\_\-loop\-\_\-mw}}
+\index{bunny\-\_\-loop\-\_\-mw@{bunny\-\_\-loop\-\_\-mw}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-loop\-\_\-mw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-response} bunny\-\_\-loop\-\_\-mw (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$$\ast$}]{win, }
+\item[{{\bf size\-\_\-t}}]{nwin, }
+\item[{uint8\-\_\-t}]{freq, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a675a41ff0069986ce5fac982e2b15568}
+The bunny\-\_\-loop\-\_\-mw function is a real-\/time loop that also manage events previously registered thanks to bunny\-\_\-set\-\_\-$\ast$\-\_\-response. The function that have been given to bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function is garantee to be called freq time per seconds on average\-: if a treatment takes more time and that the frequency cannot be respected on a specific cycle, then the loop will catch up the missing frames on the next cycle. For this reason, you must when you use the bunny library take care to N\-E\-V\-E\-R ask too much C\-P\-U or a too high frequency, making the loop always late\-: it would try to catch up its late and looping at high speed on a following treatment that would not need so much C\-P\-U. The display function is called at best one time after each call to the main function, but if several calls were made to the main function because of a slow down, then display would be called only once. This function is exactly the same as bunny\-\_\-loop but can manage several window. The window management is only made on events\-: loop and display functions are still unique. 
+\begin{DoxyParams}{Parameters}
+{\em win} & An array of pointer to window \\
+\hline
+{\em nwin} & The length of the array of pointer to window \\
+\hline
+{\em freq} & How many times the main function will be called per seconds \\
+\hline
+{\em dat} & A pointer that will be sent to A\-L\-L functions given to callbacks setters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value returned by any callback, which cannot be G\-O\-\_\-\-O\-N. 
+\end{DoxyReturn}
+\hypertarget{events_8h_a0549c715d2f5e5822c3e5cb56abe7fc7}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-click\-\_\-response@{bunny\-\_\-set\-\_\-click\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-click\-\_\-response@{bunny\-\_\-set\-\_\-click\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-click\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-click\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-click}}]{cli}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a0549c715d2f5e5822c3e5cb56abe7fc7}
+Register the sent function in order to call it when a mouse blick event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em cli} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a364e700f280b2e82e420765433714e65}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-close\-\_\-response@{bunny\-\_\-set\-\_\-close\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-close\-\_\-response@{bunny\-\_\-set\-\_\-close\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-close\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-close\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-close}}]{close}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a364e700f280b2e82e420765433714e65}
+Register the sent function in order to call it when a window close event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em close} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a806e49f23c86e099276162f4cbe76ce5}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-context@{bunny\-\_\-set\-\_\-context}}
+\index{bunny\-\_\-set\-\_\-context@{bunny\-\_\-set\-\_\-context}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-context (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a806e49f23c86e099276162f4cbe76ce5}
+Set the event context. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The event context. \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ad81e5cb0cbd8f867f5269c804c822661}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-display\-\_\-function@{bunny\-\_\-set\-\_\-display\-\_\-function}}
+\index{bunny\-\_\-set\-\_\-display\-\_\-function@{bunny\-\_\-set\-\_\-display\-\_\-function}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-display\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-display\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-display}}]{display}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ad81e5cb0cbd8f867f5269c804c822661}
+Register the sent function in order to call it under certain circumstances. 
+\begin{DoxyParams}{Parameters}
+{\em display} & The function to call. \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_abb41bc2a54523b994126a37598385255}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response@{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response@{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-get\-\_\-focus}}]{getf}
+\end{DoxyParamCaption}
+)}}\label{events_8h_abb41bc2a54523b994126a37598385255}
+Register the sent function in order to call it when a get focus event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em getf} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a844b880ab862d70e3c5dae1e53897d3b}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-joy\-\_\-axis}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a844b880ab862d70e3c5dae1e53897d3b}
+Register the sent function in order to call it when a joystick axis event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em axis} & The function to call. \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a69d5c2e9b0bff08aa21b8446db3f4a54}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-joy\-\_\-button}}]{button}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a69d5c2e9b0bff08aa21b8446db3f4a54}
+Register the sent function in order to call it when a joystick button event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em button} & The function to call. \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ae8c84a0592c8309fd4afdad10496da53}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response@{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-joy\-\_\-connect}}]{joy}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ae8c84a0592c8309fd4afdad10496da53}
+Register the sent function in order to call it when a joystick connection event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em joy} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a3467f4ea2b2b750ade53a9fb898b6853}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-key\-\_\-response@{bunny\-\_\-set\-\_\-key\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-key\-\_\-response@{bunny\-\_\-set\-\_\-key\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-key\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-key\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-key}}]{key}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a3467f4ea2b2b750ade53a9fb898b6853}
+Register the sent function in order to call it when a keyboard event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ad0b5295388b6af2ef6fb0d90f20c7588}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function@{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function}}
+\index{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function@{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-loop}}]{lop}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ad0b5295388b6af2ef6fb0d90f20c7588}
+Register the sent function in order to call it at the given frequency (throught the second parameter of bunny\-\_\-loop or the third one of bunny\-\_\-loop\-\_\-mw). 
+\begin{DoxyParams}{Parameters}
+{\em lop} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ac326e9cb6508b1cf38fad8a5462d1d6d}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response@{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response@{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-lost\-\_\-focus}}]{lost}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ac326e9cb6508b1cf38fad8a5462d1d6d}
+Register the sent function in order to call it when a lost focus event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em getf} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a8eac7a8c52c34af50c35c925ba8e6fa6}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-move\-\_\-response@{bunny\-\_\-set\-\_\-move\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-move\-\_\-response@{bunny\-\_\-set\-\_\-move\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-move\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-move\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-move}}]{mov}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a8eac7a8c52c34af50c35c925ba8e6fa6}
+Register the sent function in order to call it when a mouse movement event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em mov} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ac8e8164c74bcf057675712da7ab79aa7}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-resize\-\_\-response@{bunny\-\_\-set\-\_\-resize\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-resize\-\_\-response@{bunny\-\_\-set\-\_\-resize\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-resize\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-resize\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-resize}}]{resize}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ac8e8164c74bcf057675712da7ab79aa7}
+Register the sent function in order to call it when a window resize event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em getf} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_a8fb798b07bd28ab0b5a91cd9ec93354f}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-text\-\_\-response@{bunny\-\_\-set\-\_\-text\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-text\-\_\-response@{bunny\-\_\-set\-\_\-text\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-text\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-text\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{events_8h_a8fb798b07bd28ab0b5a91cd9ec93354f}
+Register the sent function in order to call it when a type event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The function to call \\
+\hline
+\end{DoxyParams}
+\hypertarget{events_8h_ac062ca9f36f46d3ac1989271ffecc12e}{\index{events.\-h@{events.\-h}!bunny\-\_\-set\-\_\-wheel\-\_\-response@{bunny\-\_\-set\-\_\-wheel\-\_\-response}}
+\index{bunny\-\_\-set\-\_\-wheel\-\_\-response@{bunny\-\_\-set\-\_\-wheel\-\_\-response}!events.h@{events.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-wheel\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-wheel\-\_\-response (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-wheel}}]{wheel}
+\end{DoxyParamCaption}
+)}}\label{events_8h_ac062ca9f36f46d3ac1989271ffecc12e}
+Register the sent function in order to call it when a mouse wheel event occurs. 
+\begin{DoxyParams}{Parameters}
+{\em wheel} & The function to call \\
+\hline
+\end{DoxyParams}

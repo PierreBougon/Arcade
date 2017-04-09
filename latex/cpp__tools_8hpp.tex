@@ -1,0 +1,71 @@
+\hypertarget{cpp__tools_8hpp}{\section{lib/lapin/dep/lapin/cpp\-\_\-tools.hpp File Reference}
+\label{cpp__tools_8hpp}\index{lib/lapin/dep/lapin/cpp\-\_\-tools.\-hpp@{lib/lapin/dep/lapin/cpp\-\_\-tools.\-hpp}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cpp__tools_8hpp_ac9d1319605f9af19bf004bb0b338eb68}{cascade}~virtual
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Vector $>$ }\\Vector \hyperlink{cpp__tools_8hpp_a46f70e25ee31a52dbd5e24e07375ea68}{operator+} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&b)
+\item 
+{\footnotesize template$<$typename Vector $>$ }\\Vector \hyperlink{cpp__tools_8hpp_a01c0306f796b8c7378164bc7b6868950}{operator-\/} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&b)
+\item 
+{\footnotesize template$<$typename Vector $>$ }\\Vector \& \hyperlink{cpp__tools_8hpp_a6804ac12a60d4b2fa419c213fa569ddd}{operator+=} (Vector \&a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&b)
+\item 
+{\footnotesize template$<$typename Vector $>$ }\\Vector \& \hyperlink{cpp__tools_8hpp_ad510b5b4e560b5691eac77a0aa6717da}{operator-\/=} (Vector \&a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Vector \&b)
+\item 
+{\footnotesize template$<$typename Chunk1 , typename Chunk2 $>$ }\\void \hyperlink{cpp__tools_8hpp_ae4920885b26ea1125f1d59ce38c8c627}{bunny\-\_\-raw\-\_\-copy} (Chunk1 \&a, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} Chunk2 \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{cpp__tools_8hpp_ac9d1319605f9af19bf004bb0b338eb68}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!cascade@{cascade}}
+\index{cascade@{cascade}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{cascade}]{\setlength{\rightskip}{0pt plus 5cm}\#define cascade~virtual}}\label{cpp__tools_8hpp_ac9d1319605f9af19bf004bb0b338eb68}
+\char`\"{}cascade\char`\"{} means each level of the inheritance that overload the function must call the previous level at its end or beginning. It is here to allow you to specify you need this behaviour. It won't force anything. 
+
+\subsection{Function Documentation}
+\hypertarget{cpp__tools_8hpp_ae4920885b26ea1125f1d59ce38c8c627}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!bunny\-\_\-raw\-\_\-copy@{bunny\-\_\-raw\-\_\-copy}}
+\index{bunny\-\_\-raw\-\_\-copy@{bunny\-\_\-raw\-\_\-copy}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{bunny\-\_\-raw\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Chunk1 , typename Chunk2 $>$ void bunny\-\_\-raw\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{Chunk1 \&}]{a, }
+\item[{{\bf const} Chunk2 \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{cpp__tools_8hpp_ae4920885b26ea1125f1d59ce38c8c627}
+\hypertarget{cpp__tools_8hpp_a46f70e25ee31a52dbd5e24e07375ea68}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!operator+@{operator+}}
+\index{operator+@{operator+}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector $>$ Vector operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Vector \&}]{a, }
+\item[{{\bf const} Vector \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{cpp__tools_8hpp_a46f70e25ee31a52dbd5e24e07375ea68}
+\hypertarget{cpp__tools_8hpp_a6804ac12a60d4b2fa419c213fa569ddd}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector $>$ Vector\& operator+= (
+\begin{DoxyParamCaption}
+\item[{Vector \&}]{a, }
+\item[{{\bf const} Vector \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{cpp__tools_8hpp_a6804ac12a60d4b2fa419c213fa569ddd}
+\hypertarget{cpp__tools_8hpp_a01c0306f796b8c7378164bc7b6868950}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector $>$ Vector operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf const} Vector \&}]{a, }
+\item[{{\bf const} Vector \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{cpp__tools_8hpp_a01c0306f796b8c7378164bc7b6868950}
+\hypertarget{cpp__tools_8hpp_ad510b5b4e560b5691eac77a0aa6717da}{\index{cpp\-\_\-tools.\-hpp@{cpp\-\_\-tools.\-hpp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!cpp_tools.hpp@{cpp\-\_\-tools.\-hpp}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vector $>$ Vector\& operator-\/= (
+\begin{DoxyParamCaption}
+\item[{Vector \&}]{a, }
+\item[{{\bf const} Vector \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{cpp__tools_8hpp_ad510b5b4e560b5691eac77a0aa6717da}

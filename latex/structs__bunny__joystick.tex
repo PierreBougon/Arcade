@@ -1,0 +1,51 @@
+\hypertarget{structs__bunny__joystick}{\section{s\-\_\-bunny\-\_\-joystick Struct Reference}
+\label{structs__bunny__joystick}\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}}
+}
+
+
+{\ttfamily \#include $<$events.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{structs__bunny__joystick_af8a00efee0de4a774de005bcba5c57f1}{connected}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{structs__bunny__joystick_aef701af9b1eac34dcadb2c3a03212fba}{name}
+\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{structs__bunny__joystick_a74d111731235abb1b62cf8b83d84c350}{vendor}
+\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{structs__bunny__joystick_adc746fe783c3346f40287c899b88d033}{product}
+\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{structs__bunny__joystick_a589742fe4069ab75deac27b0e9b9ce62}{nb\-\_\-button}
+\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \hyperlink{structs__bunny__joystick_a2032cd0f083d487475862ff7cf84b7ae}{axis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-joystick structure contains all informations about a joystick slot. The connected attribute indicates if the slot is used. The name attribute is the name of the joystick The vendor attribute is the I\-D of the vendor The product attribute is the I\-D of the product. The nb\-\_\-button attribute is how many buttons there is The axis attribute is how many axis there is\-: horizontal, vertical, etc. See the \hyperlink{enum_8h}{enum.\-h} file for more informations. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__joystick_a2032cd0f083d487475862ff7cf84b7ae}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!axis@{axis}}
+\index{axis@{axis}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{axis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} char s\-\_\-bunny\-\_\-joystick\-::axis}}\label{structs__bunny__joystick_a2032cd0f083d487475862ff7cf84b7ae}
+\hypertarget{structs__bunny__joystick_af8a00efee0de4a774de005bcba5c57f1}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!connected@{connected}}
+\index{connected@{connected}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{connected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} s\-\_\-bunny\-\_\-joystick\-::connected}}\label{structs__bunny__joystick_af8a00efee0de4a774de005bcba5c57f1}
+\hypertarget{structs__bunny__joystick_aef701af9b1eac34dcadb2c3a03212fba}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!name@{name}}
+\index{name@{name}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ s\-\_\-bunny\-\_\-joystick\-::name}}\label{structs__bunny__joystick_aef701af9b1eac34dcadb2c3a03212fba}
+\hypertarget{structs__bunny__joystick_a589742fe4069ab75deac27b0e9b9ce62}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!nb\-\_\-button@{nb\-\_\-button}}
+\index{nb\-\_\-button@{nb\-\_\-button}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{nb\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} s\-\_\-bunny\-\_\-joystick\-::nb\-\_\-button}}\label{structs__bunny__joystick_a589742fe4069ab75deac27b0e9b9ce62}
+\hypertarget{structs__bunny__joystick_adc746fe783c3346f40287c899b88d033}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!product@{product}}
+\index{product@{product}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} s\-\_\-bunny\-\_\-joystick\-::product}}\label{structs__bunny__joystick_adc746fe783c3346f40287c899b88d033}
+\hypertarget{structs__bunny__joystick_a74d111731235abb1b62cf8b83d84c350}{\index{s\-\_\-bunny\-\_\-joystick@{s\-\_\-bunny\-\_\-joystick}!vendor@{vendor}}
+\index{vendor@{vendor}!s_bunny_joystick@{s\-\_\-bunny\-\_\-joystick}}
+\subsubsection[{vendor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} s\-\_\-bunny\-\_\-joystick\-::vendor}}\label{structs__bunny__joystick_a74d111731235abb1b62cf8b83d84c350}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{events_8h}{events.\-h}\end{DoxyCompactItemize}

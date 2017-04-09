@@ -1,0 +1,53 @@
+\hypertarget{unionu__bunny__color}{\section{u\-\_\-bunny\-\_\-color Union Reference}
+\label{unionu__bunny__color}\index{u\-\_\-bunny\-\_\-color@{u\-\_\-bunny\-\_\-color}}
+}
+
+
+{\ttfamily \#include $<$color.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{unionu__bunny__color_a4f04c3adea96c3bfed398cdc0661490f}{full}
+\item 
+uint8\-\_\-t \hyperlink{unionu__bunny__color_a7330b391a73e6d90e8c64ffaaa1315e5}{argb} \mbox{[}4\mbox{]}
+\item 
+int8\-\_\-t \hyperlink{unionu__bunny__color_a8e82ba841d3953edfff632732c2893b1}{mod} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-color union represents a pixel color. This union allow you to manipulate the color in different convenient ways.
+
+The first way is throught the \char`\"{}full\char`\"{} attribute\-: The full attribute allow you to copy, erase or assign the complete color in one single operation like this\-:
+\begin{DoxyItemize}
+\item clr.\-full = B\-L\-A\-C\-K;
+\item clr2.\-full = clr.\-full;
+\end{DoxyItemize}
+
+The second way is throught the argb array. The arbg array allow you to access to every color components separately. Combined with the t\-\_\-bunny\-\_\-rgb, it allows you to write clear code about what you are managing.
+\begin{DoxyItemize}
+\item clr.\-full = clrx.\-full;
+\item clr.\-argb\mbox{[}R\-E\-D\-\_\-\-C\-M\-P\mbox{]} = 0;
+\end{DoxyItemize}
+
+The third way is throught the mod array. The mod array look likes the argb array but is different in its usage. The argb array is useful to set or read color components. The mod array is useful to modify other colors, as a \char`\"{}color speed\char`\"{} or offset. The mod array being an array of signed integers allows these offets to be negative.
+\begin{DoxyItemize}
+\item back\-\_\-color.\-argb\mbox{[}G\-R\-E\-E\-N\-\_\-\-C\-M\-P\mbox{]} += color\-\_\-modifier.\-mod\mbox{[}G\-R\-E\-E\-N\-\_\-\-C\-M\-P\mbox{]} 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\hypertarget{unionu__bunny__color_a7330b391a73e6d90e8c64ffaaa1315e5}{\index{u\-\_\-bunny\-\_\-color@{u\-\_\-bunny\-\_\-color}!argb@{argb}}
+\index{argb@{argb}!u_bunny_color@{u\-\_\-bunny\-\_\-color}}
+\subsubsection[{argb}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t u\-\_\-bunny\-\_\-color\-::argb\mbox{[}4\mbox{]}}}\label{unionu__bunny__color_a7330b391a73e6d90e8c64ffaaa1315e5}
+\hypertarget{unionu__bunny__color_a4f04c3adea96c3bfed398cdc0661490f}{\index{u\-\_\-bunny\-\_\-color@{u\-\_\-bunny\-\_\-color}!full@{full}}
+\index{full@{full}!u_bunny_color@{u\-\_\-bunny\-\_\-color}}
+\subsubsection[{full}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t u\-\_\-bunny\-\_\-color\-::full}}\label{unionu__bunny__color_a4f04c3adea96c3bfed398cdc0661490f}
+\hypertarget{unionu__bunny__color_a8e82ba841d3953edfff632732c2893b1}{\index{u\-\_\-bunny\-\_\-color@{u\-\_\-bunny\-\_\-color}!mod@{mod}}
+\index{mod@{mod}!u_bunny_color@{u\-\_\-bunny\-\_\-color}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}int8\-\_\-t u\-\_\-bunny\-\_\-color\-::mod\mbox{[}4\mbox{]}}}\label{unionu__bunny__color_a8e82ba841d3953edfff632732c2893b1}
+
+
+The documentation for this union was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{color_8h}{color.\-h}\end{DoxyCompactItemize}

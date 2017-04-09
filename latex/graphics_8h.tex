@@ -1,0 +1,803 @@
+\hypertarget{graphics_8h}{\section{lib/lapin/dep/lapin/graphics.h File Reference}
+\label{graphics_8h}\index{lib/lapin/dep/lapin/graphics.\-h@{lib/lapin/dep/lapin/graphics.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__clipable}{s\-\_\-bunny\-\_\-clipable}
+\item 
+struct \hyperlink{structs__bunny__pixelarray}{s\-\_\-bunny\-\_\-pixelarray}
+\item 
+struct \hyperlink{structs__bunny__vertex}{s\-\_\-bunny\-\_\-vertex}
+\item 
+struct \hyperlink{structs__bunny__vertex__array}{s\-\_\-bunny\-\_\-vertex\-\_\-array}
+\item 
+struct \hyperlink{structs__bunny__vector__font__line__coord}{s\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}
+\item 
+struct \hyperlink{structs__bunny__letter}{s\-\_\-bunny\-\_\-letter}
+\item 
+struct \hyperlink{structs__bunny__transform}{s\-\_\-bunny\-\_\-transform}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__clipable}{s\-\_\-bunny\-\_\-clipable} \hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable}
+\item 
+typedef struct \hyperlink{structs__bunny__pixelarray}{s\-\_\-bunny\-\_\-pixelarray} \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray}
+\item 
+typedef \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$($\ast$ \hyperlink{graphics_8h_a17159169c0b46298e02a813c2e81c271}{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+typedef \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$($\ast$ \hyperlink{graphics_8h_aa6460d4d730a3d058ae464c1bcd0b330}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$buf)
+\item 
+typedef \hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable} \hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture}
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_a68fc711f4c1ed09cce61deafebc7a3c7}{t\-\_\-bunny\-\_\-my\-\_\-blit} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$in, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos)
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_a188a6ea5064d4b3db770d5ab5003ae59}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} pos, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_ae3e6d73aa32b42d2cebc72d63b8a5e25}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} pos, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} radius, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_a24b1da13a899d271d2f5f6a935d340d7}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$col)
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_a40ae04b22eb7de11ee44b99068a526ef}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$\hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_aabff273b4a55fcad934e34e345fcf4cb}{t\-\_\-bunny\-\_\-my\-\_\-fill} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_a56ca74f68dfbe8237d65ed6e0504f347}{t\-\_\-bunny\-\_\-my\-\_\-clear} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+typedef enum \hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71}{e\-\_\-bunny\-\_\-geometry} \hyperlink{graphics_8h_a2867494f04267b27e251dc6253f5438c}{t\-\_\-bunny\-\_\-geometry}
+\item 
+typedef struct \hyperlink{structs__bunny__vertex}{s\-\_\-bunny\-\_\-vertex} \hyperlink{graphics_8h_af00166dd6e68ece1b8aedc2a68f24c34}{t\-\_\-bunny\-\_\-vertex}
+\item 
+typedef struct \hyperlink{structs__bunny__vertex__array}{s\-\_\-bunny\-\_\-vertex\-\_\-array} \hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array}
+\item 
+typedef void($\ast$ \hyperlink{graphics_8h_ad65e53fdc4fe95201f5670f248b3349d}{t\-\_\-bunny\-\_\-my\-\_\-geometry} )(\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, \hyperlink{graphics_8h_a2867494f04267b27e251dc6253f5438c}{t\-\_\-bunny\-\_\-geometry} geometry, \hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$array, \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$picture)
+\item 
+typedef struct \\*
+\hyperlink{structs__bunny__vector__font__line__coord}{s\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord} \hyperlink{graphics_8h_ac19938f2a1d45203f2c767d7e849789a}{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}
+\item 
+typedef struct \hyperlink{structs__bunny__letter}{s\-\_\-bunny\-\_\-letter} \hyperlink{graphics_8h_ad20ad5c56782e9e8f388e5d4fb000f39}{t\-\_\-bunny\-\_\-letter}
+\item 
+typedef void \hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader}
+\item 
+typedef enum \hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50}{e\-\_\-bunny\-\_\-variable\-\_\-type} \hyperlink{graphics_8h_a593688b077dbb319b30aba3c95cb9bd8}{t\-\_\-bunny\-\_\-variable\-\_\-type}
+\item 
+typedef struct \hyperlink{structs__bunny__transform}{s\-\_\-bunny\-\_\-transform} \hyperlink{graphics_8h_a9b27ac56597e66e9078b211543b29c4d}{t\-\_\-bunny\-\_\-transform}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71}{e\-\_\-bunny\-\_\-geometry} \{ \\*
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71ae769b4b77f4e6bbe708a12efe64fc983}{B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71a73b56ea210d96300f24781060fecbab2}{B\-G\-Y\-\_\-\-L\-I\-N\-E\-S}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71af6cf99a3692b5f852802d5158a6f3027}{B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71a4b7d7d779667f0bbecc60220fbe2c798}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S}, 
+\\*
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71a856f9c6bb24219aa4794dae0eef49e5d}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71abd1e03f53b021805be17c632d5156944}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71aac2a69d75b17c103df113138289841be}{B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S}, 
+\hyperlink{graphics_8h_a627172b33faa4064058d6c6a0b472d71acb7b0eb6d2ae0dbde72fc52c4a6c5b69}{L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y}
+ \}
+\item 
+enum \hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50}{e\-\_\-bunny\-\_\-variable\-\_\-type} \{ \\*
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50adb85f6b410f7ecefe77a3729fb0d3d52}{B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a4ff183356c04ec2680611c46bc5aff94}{B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a28a68ee2960d86b3bc1ff3831bbf6188}{B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a3f7c486e3eb4b7d38936a5afee754b8c}{B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T}, 
+\\*
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a866212eb362221b876e3d81d09fd0c1a}{B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a357bdbc8a501d9101ff9e59e8fcf15d7}{B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a2ca3e48b24bb626d70039de36c09399b}{B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E}, 
+\hyperlink{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a24da7c339e505ee693aa71090ef0fd58}{B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$ \hyperlink{graphics_8h_a06e913548f14d59c396f3093a2e46514}{bunny\-\_\-new\-\_\-pixelarray} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} wid, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} hei)
+\item 
+\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$ \hyperlink{graphics_8h_a0b718732050ef6d5664f6e2a123e7b87}{bunny\-\_\-load\-\_\-pixelarray} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$ \hyperlink{graphics_8h_abd0be114c043b0c4e8eeaf0aca9bba46}{bunny\-\_\-read\-\_\-pixelarray} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$buffer)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{graphics_8h_a5b7052ed27917aecd2e9a2a8d2584a20}{bunny\-\_\-save\-\_\-pixelarray} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray} $\ast$buf, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture} $\ast$ \hyperlink{graphics_8h_a0f006839183de6217dcb23dd6dbe1017}{bunny\-\_\-new\-\_\-picture} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} wid, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} hei)
+\item 
+\hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture} $\ast$ \hyperlink{graphics_8h_a75d6ba3e2b3b51558848d103cfc8e4f0}{bunny\-\_\-load\-\_\-picture} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture} $\ast$ \hyperlink{graphics_8h_aac78fc03b915c813dfae30baafcd34b4}{bunny\-\_\-read\-\_\-picture} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$pic, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} l)
+\item 
+void \hyperlink{graphics_8h_ae7d46c824180d32844e3be5bae73fae4}{bunny\-\_\-delete\-\_\-clipable} (\hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable} $\ast$clp)
+\item 
+void \hyperlink{graphics_8h_a1b4a802ccfd87ec1a2920d847ec86b6b}{bunny\-\_\-blit} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buf, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable} $\ast$clp, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos)
+\item 
+void \hyperlink{graphics_8h_a6e191c7709e60f11a1622f123d53ed01}{bunny\-\_\-draw} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture} $\ast$picture)
+\item 
+void \hyperlink{graphics_8h_a96e32a35f159c08ec1028fb45835f0d3}{bunny\-\_\-set\-\_\-pixel} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buf, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} pos, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} col)
+\item 
+void \hyperlink{graphics_8h_ad5aa910bc634e7e20dc4b64719447aef}{bunny\-\_\-set\-\_\-circle} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buf, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} pos, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} rad, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+void \hyperlink{graphics_8h_a79f9d50659c186ae1ac90dd4751d5a7f}{bunny\-\_\-set\-\_\-line} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buf, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$col)
+\item 
+void \hyperlink{graphics_8h_a6096840cf79eb8ad6bc7136d9260f5eb}{bunny\-\_\-set\-\_\-polygon} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buf, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$pos, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} $\ast$col)
+\item 
+void \hyperlink{graphics_8h_a2526935e39f3b8f0f129923f1deef1c8}{bunny\-\_\-fill} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+void \hyperlink{graphics_8h_ac01c253005b66e93585e176569b6479f}{bunny\-\_\-clear} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_entity_8cpp_a864889304a90873adb9c6e289a54bcf4}{color})
+\item 
+void \hyperlink{graphics_8h_abab44e764ba7e313f6a0dd441dc2e89f}{bunny\-\_\-set\-\_\-geometry} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buffer, \hyperlink{graphics_8h_a2867494f04267b27e251dc6253f5438c}{t\-\_\-bunny\-\_\-geometry} geometry, \hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$array, \hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable} $\ast$clipable)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{graphics_8h_a7653686fa07c36c12d513fd98d575fc5}{bunny\-\_\-is\-\_\-shader\-\_\-available} (void)
+\item 
+\hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader} $\ast$ \hyperlink{graphics_8h_acd7761372f628ebf1c7b77c09b49840d}{bunny\-\_\-new\-\_\-shader} (void)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{graphics_8h_a3c652b05c130de1d1508dc2f71f4e030}{bunny\-\_\-load\-\_\-shader} (\hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader} $\ast$sha, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$vertex\-\_\-file, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$frag\-\_\-file)
+\item 
+void \hyperlink{graphics_8h_a68e21db66d9418882042040d2bec6f85}{bunny\-\_\-shader\-\_\-set\-\_\-variable} (\hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader} $\ast$sha, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$varname, \hyperlink{graphics_8h_a593688b077dbb319b30aba3c95cb9bd8}{t\-\_\-bunny\-\_\-variable\-\_\-type} \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type},...)
+\item 
+void \hyperlink{graphics_8h_af97f1ca3cdb667b2c21296ef50eed890}{bunny\-\_\-blit\-\_\-shader} (\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} $\ast$buffer, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture} $\ast$picture, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} $\ast$position, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader} $\ast$shader)
+\item 
+void \hyperlink{graphics_8h_a9cfea98aaa50f0e94233ac631de5baf4}{bunny\-\_\-delete\-\_\-shader} (\hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader} $\ast$shader)
+\item 
+void \hyperlink{graphics_8h_a1868fbaf6bed445c28bdbf62292b41b4}{bunny\-\_\-enable\-\_\-full\-\_\-blit} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} enable)
+\item 
+void \hyperlink{graphics_8h_afc9b21b80a2a35a66ff164be588cce85}{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$pic)
+\item 
+void \hyperlink{graphics_8h_a006870bf42a34b5868accbfc2152b474}{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$pic)
+\item 
+void \hyperlink{graphics_8h_a242a71a9beb63e763ae4509e1a251171}{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$pic)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphics_8h_a17159169c0b46298e02a813c2e81c271}{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray} \hyperlink{graphics_8h_a4b5267df6cfa9c07f815ee859c3a85ac}{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}
+\item 
+\hyperlink{graphics_8h_aa6460d4d730a3d058ae464c1bcd0b330}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray} \hyperlink{graphics_8h_a8116a6b7e2a3d7e75e72e2750de3b7e4}{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}
+\item 
+\hyperlink{graphics_8h_a68fc711f4c1ed09cce61deafebc7a3c7}{t\-\_\-bunny\-\_\-my\-\_\-blit} \hyperlink{graphics_8h_ac6b62ac82ca5fc2ad4c99fbff8bd12b5}{gl\-\_\-bunny\-\_\-my\-\_\-blit}
+\item 
+\hyperlink{graphics_8h_a188a6ea5064d4b3db770d5ab5003ae59}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel} \hyperlink{graphics_8h_ae940dd7642155e239c22a9519a0d9e9e}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}
+\item 
+\hyperlink{graphics_8h_ae3e6d73aa32b42d2cebc72d63b8a5e25}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle} \hyperlink{graphics_8h_a563e663c45c537351900e2b940fcd4fb}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}
+\item 
+\hyperlink{graphics_8h_a24b1da13a899d271d2f5f6a935d340d7}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line} \hyperlink{graphics_8h_a496f0dfa0f79ae037c677cf9f2b16d75}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}
+\item 
+\hyperlink{graphics_8h_a40ae04b22eb7de11ee44b99068a526ef}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon} \hyperlink{graphics_8h_a8126968be5f55a545753e9ec4ec13f6a}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}
+\item 
+\hyperlink{graphics_8h_aabff273b4a55fcad934e34e345fcf4cb}{t\-\_\-bunny\-\_\-my\-\_\-fill} \hyperlink{graphics_8h_a3f602989ed5f61fca84f99a1592e5a7c}{gl\-\_\-bunny\-\_\-my\-\_\-fill}
+\item 
+\hyperlink{graphics_8h_a56ca74f68dfbe8237d65ed6e0504f347}{t\-\_\-bunny\-\_\-my\-\_\-clear} \hyperlink{graphics_8h_aba933f15b2541b837ab8a9e4f8a21276}{gl\-\_\-bunny\-\_\-my\-\_\-clear}
+\item 
+\hyperlink{graphics_8h_ad65e53fdc4fe95201f5670f248b3349d}{t\-\_\-bunny\-\_\-my\-\_\-geometry} \hyperlink{graphics_8h_acaf96e969dba2c8550b111025815b2a5}{gl\-\_\-bunny\-\_\-my\-\_\-geometry}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{graphics_8h_ad20ad5c56782e9e8f388e5d4fb000f39}{t\-\_\-bunny\-\_\-letter} \hyperlink{graphics_8h_a3de9e577f4ee1205fc979313d6218ccd}{gl\-\_\-vector\-\_\-font} \mbox{[}\hyperlink{enum_8h_af7cf1ccfb8958956ff30f78bf43d2494af8972b7c3722a29d9f6c6568d8fb0bbe}{L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-F\-O\-N\-T}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The graphics module contains every function that is useful to create picture from scratch or from file and to draw inside them. The graphics module also contains an incomplete vector font and brings shader ability. 
+
+\subsection{Typedef Documentation}
+\hypertarget{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-clipable@{t\-\_\-bunny\-\_\-clipable}}
+\index{t\-\_\-bunny\-\_\-clipable@{t\-\_\-bunny\-\_\-clipable}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-clipable}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-clipable}				 {\bf t\-\_\-bunny\-\_\-clipable}}}\label{graphics_8h_aaa6d80d1b603099239f56736e2f24575}
+The t\-\_\-bunny\-\_\-clipable structure contains informations about a graphic element.
+
+It first contains a t\-\_\-bunny\-\_\-buffer with the height and width of the graphic element. It also contains four clipping fields\-: clip\-\_\-x\-\_\-position, clip\-\_\-y\-\_\-position, clip\-\_\-width and clip\-\_\-height.
+
+These clipping attributes are useful to select only a subpart of the graphic element to be used by functions. For example, bunny\-\_\-blit will only copy the configured clip. By default, clip\-\_\-x\-\_\-position and clip\-\_\-y\-\_\-position are set to 0 and clip\-\_\-width and clip\-\_\-height to buffer.\-width and buffer.\-height.
+
+The attribute origin is useful to specify a hot spot. When blitting the graphic element to a specific position, for example, the origin define the point that will be drawn at the asked position throught the third parameter of bunny\-\_\-blit. The origin also specify the rotation axis. By default, it is (0,0).
+
+Scale allow you to magnify or shrink the graphic element. The original size is multiplied by the scale to obtain the final size. By default, it is (1,1).
+
+The rotation is in degree and is the rotation of the graphic element when blitted. By default, it is 0.
+
+The color mask is a binary mask that will be applied to all pixel draw. By default, it is W\-H\-I\-T\-E (0x\-F\-F\-F\-F\-F\-F\-F\-F) \hypertarget{graphics_8h_a2867494f04267b27e251dc6253f5438c}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-geometry@{t\-\_\-bunny\-\_\-geometry}}
+\index{t\-\_\-bunny\-\_\-geometry@{t\-\_\-bunny\-\_\-geometry}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-geometry}				 {\bf t\-\_\-bunny\-\_\-geometry}}}\label{graphics_8h_a2867494f04267b27e251dc6253f5438c}
+The t\-\_\-bunny\-\_\-geometry enumeration is useful to inform the bunny\-\_\-set\-\_\-geometry function about the content of the t\-\_\-bunny\-\_\-vertex\-\_\-array structure. Each value make bunny\-\_\-set\-\_\-geometry interpret coordinates differently. \hypertarget{graphics_8h_ad20ad5c56782e9e8f388e5d4fb000f39}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-letter@{t\-\_\-bunny\-\_\-letter}}
+\index{t\-\_\-bunny\-\_\-letter@{t\-\_\-bunny\-\_\-letter}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-letter}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-letter}				 {\bf t\-\_\-bunny\-\_\-letter}}}\label{graphics_8h_ad20ad5c56782e9e8f388e5d4fb000f39}
+The t\-\_\-bunny\-\_\-letter structure contains the amount of lines for a letter of the gl\-\_\-vector font, and an array of nb\-\_\-edge t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord. \hypertarget{graphics_8h_a68fc711f4c1ed09cce61deafebc7a3c7}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-blit@{t\-\_\-bunny\-\_\-my\-\_\-blit}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-blit@{t\-\_\-bunny\-\_\-my\-\_\-blit}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-blit)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf const} {\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$in, {\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$pos)}}\label{graphics_8h_a68fc711f4c1ed09cce61deafebc7a3c7}
+The t\-\_\-bunny\-\_\-my\-\_\-blit type is the type you have to respect if you wish to expand the bunny library with your blitting function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-blit pointer to add it to the library. \hypertarget{graphics_8h_a56ca74f68dfbe8237d65ed6e0504f347}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-clear@{t\-\_\-bunny\-\_\-my\-\_\-clear}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-clear@{t\-\_\-bunny\-\_\-my\-\_\-clear}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-clear)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf unsigned} {\bf int} {\bf color})}}\label{graphics_8h_a56ca74f68dfbe8237d65ed6e0504f347}
+The t\-\_\-bunny\-\_\-my\-\_\-clear type is the type you have to respect if you wish to expand the bunny library with your own color filling function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-clear function pointer to add it to the library. \hypertarget{graphics_8h_aabff273b4a55fcad934e34e345fcf4cb}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-fill@{t\-\_\-bunny\-\_\-my\-\_\-fill}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-fill@{t\-\_\-bunny\-\_\-my\-\_\-fill}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-fill)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf unsigned} {\bf int} {\bf color})}}\label{graphics_8h_aabff273b4a55fcad934e34e345fcf4cb}
+The t\-\_\-bunny\-\_\-my\-\_\-fill type is the type you have to respect if you wish to expand the bunny library with your own color filling function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-fill function pointer to add it to the library. \hypertarget{graphics_8h_ad65e53fdc4fe95201f5670f248b3349d}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-geometry@{t\-\_\-bunny\-\_\-my\-\_\-geometry}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-geometry@{t\-\_\-bunny\-\_\-my\-\_\-geometry}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-geometry)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf t\-\_\-bunny\-\_\-geometry} geometry, {\bf t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$array, {\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$picture)}}\label{graphics_8h_ad65e53fdc4fe95201f5670f248b3349d}
+The t\-\_\-bunny\-\_\-my\-\_\-geometry type is the type you have to respect if you wish to expand the bunny library with your own geometry drawing function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-geometry function pointer to add it to the library. The bunny\-\_\-self\-\_\-test does not currently evaluate the gl\-\_\-bunny\-\_\-my\-\_\-geometry. \hypertarget{graphics_8h_a17159169c0b46298e02a813c2e81c271}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray@{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray@{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-pixelarray}$\ast$($\ast$ t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray)({\bf const} char $\ast$file)}}\label{graphics_8h_a17159169c0b46298e02a813c2e81c271}
+The t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray type is currently unused by the library. It is the type of the function you have to implement to make the bunny library support specific formats it does not know how to manage (Like 32 bits bitmap) The self test function does not currently evaluate the function you would assign to gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray. \hypertarget{graphics_8h_aa6460d4d730a3d058ae464c1bcd0b330}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray@{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray@{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-pixelarray}$\ast$($\ast$ t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray)({\bf const} void $\ast$buf)}}\label{graphics_8h_aa6460d4d730a3d058ae464c1bcd0b330}
+The t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray type is currently unused by the library. It is the type of the function you have to implement to make the bunny library support specific formats it does not know how to manage (Like 32 bits bitmap) The self test function does not currently evaluate the function you would assign to gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray. \hypertarget{graphics_8h_ae3e6d73aa32b42d2cebc72d63b8a5e25}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf t\-\_\-bunny\-\_\-position} pos, {\bf t\-\_\-bunny\-\_\-position} radius, {\bf unsigned} {\bf int} {\bf color})}}\label{graphics_8h_ae3e6d73aa32b42d2cebc72d63b8a5e25}
+The t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle type is the type you have to respect if you wish to expand the bunny library with your own circle drawing function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle function pointer to add it to the library. \hypertarget{graphics_8h_a24b1da13a899d271d2f5f6a935d340d7}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$pos, {\bf const} {\bf unsigned} {\bf int} $\ast$col)}}\label{graphics_8h_a24b1da13a899d271d2f5f6a935d340d7}
+The t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line type is the type you have to respect if you wish to expand the bunny library with your own line drawing function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line function pointer to add it to the library. \hypertarget{graphics_8h_a188a6ea5064d4b3db770d5ab5003ae59}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf t\-\_\-bunny\-\_\-position} pos, {\bf unsigned} {\bf int} {\bf color})}}\label{graphics_8h_a188a6ea5064d4b3db770d5ab5003ae59}
+The t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel type is the type you have to respect if you wish to expand the bunny library with your own pixel drawing function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel function pointer to add it to the library. \hypertarget{graphics_8h_a40ae04b22eb7de11ee44b99068a526ef}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon@{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon)({\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$pix, {\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$pos, {\bf const} {\bf unsigned} {\bf int} $\ast${\bf color})}}\label{graphics_8h_a40ae04b22eb7de11ee44b99068a526ef}
+The t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon type is the type you have to respect if you wish to expand the bunny library with your own polygon drawing function. Set your function to the gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon function pointer to add it to the library. \hypertarget{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-picture@{t\-\_\-bunny\-\_\-picture}}
+\index{t\-\_\-bunny\-\_\-picture@{t\-\_\-bunny\-\_\-picture}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-clipable} {\bf t\-\_\-bunny\-\_\-picture}}}\label{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}
+The t\-\_\-bunny\-\_\-picture type is a graphic element that is fast and stored inside the graphic memory, on your graphic card. There is no fast way to access to pixels easily like in t\-\_\-bunny\-\_\-pixelarray but operation like blitting or drawing complex shape are infinitly faster on t\-\_\-bunny\-\_\-picture than on t\-\_\-bunny\-\_\-pixelarray
+
+Note that every t\-\_\-bunny\-\_\-clipable attributes are fully working with t\-\_\-bunny\-\_\-picture. \hypertarget{graphics_8h_a809c146139b8e44e620e76e5de640050}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-pixelarray@{t\-\_\-bunny\-\_\-pixelarray}}
+\index{t\-\_\-bunny\-\_\-pixelarray@{t\-\_\-bunny\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-pixelarray}				 {\bf t\-\_\-bunny\-\_\-pixelarray}}}\label{graphics_8h_a809c146139b8e44e620e76e5de640050}
+The t\-\_\-bunny\-\_\-pixelarray is a graphic element that is convenient to access pixels per pixel. It contains a t\-\_\-bunny\-\_\-clipable attribute that does not have any effect by default. (Except the clipping attributes, but only if you draw on a window or a t\-\_\-bunny\-\_\-picture, not on another t\-\_\-bunny\-\_\-pixelarray)
+
+To activate the t\-\_\-bunny\-\_\-clipable of the t\-\_\-bunny\-\_\-pixelarray, you have to provide the functionnality by yourself, implement your own blitter and set the gl\-\_\-bunny\-\_\-my\-\_\-blit pointer to your t\-\_\-bunny\-\_\-my\-\_\-blit function.
+
+The pixels attribute is an array of pixels. The first pixels is the top left one and it comes line after line. The last pixel is to bottom right one.
+
+The library do not bring any functionnality to draw on pixelarrays, you have to implement your functions. There is a lot of gl\-\_\-bunny\-\_\-my\-\_\-$\ast$ function pointers that will activate bunny\-\_\-set\-\_\-$\ast$ pixelarray functionnalities if correct functions are set to them\-: gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon gl\-\_\-bunny\-\_\-my\-\_\-fill gl\-\_\-bunny\-\_\-my\-\_\-clear
+
+The bunny\-\_\-self\-\_\-test function will help you by testing you functions after you set them to these function pointers. \hypertarget{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-shader@{t\-\_\-bunny\-\_\-shader}}
+\index{t\-\_\-bunny\-\_\-shader@{t\-\_\-bunny\-\_\-shader}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf t\-\_\-bunny\-\_\-shader}}}\label{graphics_8h_ac74296e8b4475c15ae6baa88de019472}
+The t\-\_\-bunny\-\_\-shader element is an effect that will be applied while blitting. The type is entirely private, so you cannot making anything else that use a pointer to it, there is no attribute. \hypertarget{graphics_8h_a9b27ac56597e66e9078b211543b29c4d}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-transform@{t\-\_\-bunny\-\_\-transform}}
+\index{t\-\_\-bunny\-\_\-transform@{t\-\_\-bunny\-\_\-transform}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-transform}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-transform}				 {\bf t\-\_\-bunny\-\_\-transform}}}\label{graphics_8h_a9b27ac56597e66e9078b211543b29c4d}
+The t\-\_\-bunny\-\_\-transform structure is useful to specify in only one call to bunny\-\_\-shader\-\_\-set\-\_\-variable an entire set of transformations\-: moving the origin of the element, placing it on the output graphic, change its scale and its rotation. \hypertarget{graphics_8h_a593688b077dbb319b30aba3c95cb9bd8}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-variable\-\_\-type@{t\-\_\-bunny\-\_\-variable\-\_\-type}}
+\index{t\-\_\-bunny\-\_\-variable\-\_\-type@{t\-\_\-bunny\-\_\-variable\-\_\-type}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-variable\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-variable\-\_\-type}				 {\bf t\-\_\-bunny\-\_\-variable\-\_\-type}}}\label{graphics_8h_a593688b077dbb319b30aba3c95cb9bd8}
+The bunny\-\_\-shader\-\_\-set\-\_\-variable function can takes several different types of values as parameter thanks to its variading design. In order to specify which type you wish to send, specify it thanks to this enumartion. \hypertarget{graphics_8h_ac19938f2a1d45203f2c767d7e849789a}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord@{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}}
+\index{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord@{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}				 {\bf t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}}}\label{graphics_8h_ac19938f2a1d45203f2c767d7e849789a}
+The t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord contains two sets of coordinates that represent a complete line. It is used by the t\-\_\-bunny\-\_\-letter structure in order to store coordinates of the gl\-\_\-vector font. \hypertarget{graphics_8h_af00166dd6e68ece1b8aedc2a68f24c34}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-vertex@{t\-\_\-bunny\-\_\-vertex}}
+\index{t\-\_\-bunny\-\_\-vertex@{t\-\_\-bunny\-\_\-vertex}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-vertex}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-vertex}				 {\bf t\-\_\-bunny\-\_\-vertex}}}\label{graphics_8h_af00166dd6e68ece1b8aedc2a68f24c34}
+The t\-\_\-bunny\-\_\-vertex structure contains all information a shape may need to represent one single coordinate\-:
+\begin{DoxyItemize}
+\item A position in the 2\-D space
+\item The matching texture position (if there is a texture)
+\item The color of the position (if there is no texture) 
+\end{DoxyItemize}\hypertarget{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{\index{graphics.\-h@{graphics.\-h}!t\-\_\-bunny\-\_\-vertex\-\_\-array@{t\-\_\-bunny\-\_\-vertex\-\_\-array}}
+\index{t\-\_\-bunny\-\_\-vertex\-\_\-array@{t\-\_\-bunny\-\_\-vertex\-\_\-array}!graphics.h@{graphics.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-vertex\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-vertex\-\_\-array}				 {\bf t\-\_\-bunny\-\_\-vertex\-\_\-array}}}\label{graphics_8h_a69b50b7e60771d7c8791f231367f1797}
+The t\-\_\-bunny\-\_\-vertex\-\_\-array is a structure that is useful to contains a collection of t\-\_\-bunny\-\_\-vertex. In order to use it, you have to manually reserve a specific amount of data depending of what you wish to store. For example, if you wish to draw two pixels\-:
+
+t\-\_\-bunny\-\_\-vertex\-\_\-array $\ast$array = alloca(sizeof($\ast$array) + 2 $\ast$ sizeof(array-\/$>$vertex\mbox{[}0\mbox{]}));
+
+array-\/$>$lenght = 2; fill(\&array-\/$>$vertex\mbox{[}0\mbox{]}); fill(\&array-\/$>$vertex\mbox{[}1\mbox{]}); 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71}{\index{graphics.\-h@{graphics.\-h}!e\-\_\-bunny\-\_\-geometry@{e\-\_\-bunny\-\_\-geometry}}
+\index{e\-\_\-bunny\-\_\-geometry@{e\-\_\-bunny\-\_\-geometry}!graphics.h@{graphics.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-geometry}}}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71}
+The t\-\_\-bunny\-\_\-geometry enumeration is useful to inform the bunny\-\_\-set\-\_\-geometry function about the content of the t\-\_\-bunny\-\_\-vertex\-\_\-array structure. Each value make bunny\-\_\-set\-\_\-geometry interpret coordinates differently. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S@{B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S@{B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71ae769b4b77f4e6bbe708a12efe64fc983}{B\-G\-Y\-\_\-\-P\-I\-X\-E\-L\-S}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71ae769b4b77f4e6bbe708a12efe64fc983}
+}]\index{B\-G\-Y\-\_\-\-L\-I\-N\-E\-S@{B\-G\-Y\-\_\-\-L\-I\-N\-E\-S}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-L\-I\-N\-E\-S@{B\-G\-Y\-\_\-\-L\-I\-N\-E\-S}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71a73b56ea210d96300f24781060fecbab2}{B\-G\-Y\-\_\-\-L\-I\-N\-E\-S}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71a73b56ea210d96300f24781060fecbab2}
+}]\index{B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P@{B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P@{B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71af6cf99a3692b5f852802d5158a6f3027}{B\-G\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71af6cf99a3692b5f852802d5158a6f3027}
+}]\index{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71a4b7d7d779667f0bbecc60220fbe2c798}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-S}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71a4b7d7d779667f0bbecc60220fbe2c798}
+}]\index{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71a856f9c6bb24219aa4794dae0eef49e5d}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71a856f9c6bb24219aa4794dae0eef49e5d}
+}]\index{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N@{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71abd1e03f53b021805be17c632d5156944}{B\-G\-Y\-\_\-\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71abd1e03f53b021805be17c632d5156944}
+}]\index{B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S@{B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S@{B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71aac2a69d75b17c103df113138289841be}{B\-G\-Y\-\_\-\-Q\-U\-A\-D\-S}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71aac2a69d75b17c103df113138289841be}
+}]\index{L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y@{L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y@{L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y}}\item[{\em 
+\hypertarget{graphics_8h_a627172b33faa4064058d6c6a0b472d71acb7b0eb6d2ae0dbde72fc52c4a6c5b69}{L\-A\-S\-T\-\_\-\-G\-E\-O\-M\-E\-T\-R\-Y}\label{graphics_8h_a627172b33faa4064058d6c6a0b472d71acb7b0eb6d2ae0dbde72fc52c4a6c5b69}
+}]\end{description}
+\end{Desc}
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50}{\index{graphics.\-h@{graphics.\-h}!e\-\_\-bunny\-\_\-variable\-\_\-type@{e\-\_\-bunny\-\_\-variable\-\_\-type}}
+\index{e\-\_\-bunny\-\_\-variable\-\_\-type@{e\-\_\-bunny\-\_\-variable\-\_\-type}!graphics.h@{graphics.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-variable\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-variable\-\_\-type}}}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50}
+The bunny\-\_\-shader\-\_\-set\-\_\-variable function can takes several different types of values as parameter thanks to its variading design. In order to specify which type you wish to send, specify it thanks to this enumartion. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50adb85f6b410f7ecefe77a3729fb0d3d52}{B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50adb85f6b410f7ecefe77a3729fb0d3d52}
+}]\index{B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a4ff183356c04ec2680611c46bc5aff94}{B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a4ff183356c04ec2680611c46bc5aff94}
+}]\index{B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T@{B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a28a68ee2960d86b3bc1ff3831bbf6188}{B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a28a68ee2960d86b3bc1ff3831bbf6188}
+}]\index{B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T@{B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T@{B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a3f7c486e3eb4b7d38936a5afee754b8c}{B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a3f7c486e3eb4b7d38936a5afee754b8c}
+}]\index{B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R@{B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R@{B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a866212eb362221b876e3d81d09fd0c1a}{B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a866212eb362221b876e3d81d09fd0c1a}
+}]\index{B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M@{B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M@{B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a357bdbc8a501d9101ff9e59e8fcf15d7}{B\-V\-T\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a357bdbc8a501d9101ff9e59e8fcf15d7}
+}]\index{B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E@{B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E@{B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a2ca3e48b24bb626d70039de36c09399b}{B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a2ca3e48b24bb626d70039de36c09399b}
+}]\index{B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E@{B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E}!graphics.\-h@{graphics.\-h}}\index{graphics.\-h@{graphics.\-h}!B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E@{B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E}}\item[{\em 
+\hypertarget{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a24da7c339e505ee693aa71090ef0fd58}{B\-V\-T\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E}\label{graphics_8h_a580eff2cbc78e625d23722410c5b1b50a24da7c339e505ee693aa71090ef0fd58}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{graphics_8h_a1b4a802ccfd87ec1a2920d847ec86b6b}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-blit@{bunny\-\_\-blit}}
+\index{bunny\-\_\-blit@{bunny\-\_\-blit}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-blit (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buf, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-clipable} $\ast$}]{clp, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$}]{pos}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a1b4a802ccfd87ec1a2920d847ec86b6b}
+The bunny\-\_\-blit function allow you to draw a picture on another picture. Because the first parameter is a t\-\_\-bunny\-\_\-buffer, you can use a t\-\_\-bunny\-\_\-pixelarray, a t\-\_\-bunny\-\_\-picture or a t\-\_\-bunny\-\_\-window as argument, because all of these structures got one t\-\_\-bunny\-\_\-buffer structure. The second parameter is a t\-\_\-bunny\-\_\-clipable, so you can use either a t\-\_\-bunny\-\_\-picture or a t\-\_\-bunny\-\_\-pixelarray as second parameter. The third parameter is the position where you wish to draw clp on buf. It may apply different transformations depending of the content of the t\-\_\-bunny\-\_\-clipable attributes (clip\-\_\-$\ast$, scale, origin, rotation, color mask, ...) 
+\begin{DoxyParams}{Parameters}
+{\em buf} & A t\-\_\-bunny\-\_\-buffer pointer that can be a t\-\_\-bunny\-\_\-window attribute or a a t\-\_\-bunny\-\_\-picture attribute or a t\-\_\-bunny\-\_\-clipable attribute inside a t\-\_\-bunny\-\_\-pixelarray attribute. \\
+\hline
+{\em clp} & The clipable picture that will be the source of pixels. \\
+\hline
+{\em pos} & The position in buf where to draw clp. Sending N\-U\-L\-L means (0, 0) \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_af97f1ca3cdb667b2c21296ef50eed890}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-blit\-\_\-shader@{bunny\-\_\-blit\-\_\-shader}}
+\index{bunny\-\_\-blit\-\_\-shader@{bunny\-\_\-blit\-\_\-shader}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-blit\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-blit\-\_\-shader (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buffer, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-picture} $\ast$}]{picture, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$}]{position, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-shader} $\ast$}]{shader}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_af97f1ca3cdb667b2c21296ef50eed890}
+Do the same thing as bunny\-\_\-blit and works almost the same way. Here are the differences\-:
+\begin{DoxyItemize}
+\item It applies the sent shader on the sent picture.
+\item buffer cannot be a pixelarray
+\item picture cannot be a pixelarray 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The surface where to draw, may be a t\-\_\-bunny\-\_\-window or a t\-\_\-bunny\-\_\-picture. \\
+\hline
+{\em picture} & The surface to draw. t\-\_\-bunny\-\_\-pixelarray is not a valid parameter. \\
+\hline
+{\em position} & The position where the picture will be blended. \\
+\hline
+{\em shader} & The shader that will be used while blitting picture on buffer. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{graphics_8h_ac01c253005b66e93585e176569b6479f}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-clear@{bunny\-\_\-clear}}
+\index{bunny\-\_\-clear@{bunny\-\_\-clear}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{color}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_ac01c253005b66e93585e176569b6479f}
+The bunny\-\_\-clear function set pixels from the clipped part of the sent picture to color. Because it sets colors, it ignores alpha.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-clear function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em color} & The color to set in the t\-\_\-bunny\-\_\-buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_ae7d46c824180d32844e3be5bae73fae4}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-delete\-\_\-clipable@{bunny\-\_\-delete\-\_\-clipable}}
+\index{bunny\-\_\-delete\-\_\-clipable@{bunny\-\_\-delete\-\_\-clipable}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-clipable}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-clipable (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-clipable} $\ast$}]{clp}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_ae7d46c824180d32844e3be5bae73fae4}
+Destroy a clipable element. If the element is a t\-\_\-bunny\-\_\-pixelarray, you have to cast its address to the t\-\_\-bunny\-\_\-clipable$\ast$ type or give the address of the clipable attribute of the pixelarray to the function. 
+\begin{DoxyParams}{Parameters}
+{\em clp} & A pointer to a t\-\_\-bunny\-\_\-clipable structure to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a9cfea98aaa50f0e94233ac631de5baf4}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-delete\-\_\-shader@{bunny\-\_\-delete\-\_\-shader}}
+\index{bunny\-\_\-delete\-\_\-shader@{bunny\-\_\-delete\-\_\-shader}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-shader (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-shader} $\ast$}]{shader}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a9cfea98aaa50f0e94233ac631de5baf4}
+This function delete a shader created with bunny\-\_\-new\-\_\-shader. 
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader to destroy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a6e191c7709e60f11a1622f123d53ed01}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-draw@{bunny\-\_\-draw}}
+\index{bunny\-\_\-draw@{bunny\-\_\-draw}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-draw}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-draw (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-picture} $\ast$}]{picture}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a6e191c7709e60f11a1622f123d53ed01}
+The bunny\-\_\-draw function ask to the graphic board to compute every drawing made previously. You should call bunny\-\_\-draw on t\-\_\-bunny\-\_\-picture before using them as source for a bunny\-\_\-blit. 
+\begin{DoxyParams}{Parameters}
+{\em picture} & The t\-\_\-bunny\-\_\-picture to render. \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a1868fbaf6bed445c28bdbf62292b41b4}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-enable\-\_\-full\-\_\-blit@{bunny\-\_\-enable\-\_\-full\-\_\-blit}}
+\index{bunny\-\_\-enable\-\_\-full\-\_\-blit@{bunny\-\_\-enable\-\_\-full\-\_\-blit}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-enable\-\_\-full\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-enable\-\_\-full\-\_\-blit (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{enable}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a1868fbaf6bed445c28bdbf62292b41b4}
+This function enable the full support of t\-\_\-bunny\-\_\-pixelarray in bunny\-\_\-blit. It enable the support of every t\-\_\-bunny\-\_\-clipable attributes and of the alpha channel. 
+\begin{DoxyParams}{Parameters}
+{\em enable} & True to enable full support, false to disable it. False is the default. \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a2526935e39f3b8f0f129923f1deef1c8}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-fill@{bunny\-\_\-fill}}
+\index{bunny\-\_\-fill@{bunny\-\_\-fill}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-fill (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{color}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a2526935e39f3b8f0f129923f1deef1c8}
+The bunny\-\_\-fill function apply a color on the top of the clipped part of the sent picture. Because it applies a color, it means it apply alpha.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-fill function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em color} & The color to apply on the t\-\_\-bunny\-\_\-buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a242a71a9beb63e763ae4509e1a251171}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states}}
+\index{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{pic}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a242a71a9beb63e763ae4509e1a251171}
+\hypertarget{graphics_8h_a006870bf42a34b5868accbfc2152b474}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-\-G\-L\-\_\-push\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states}}
+\index{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-\-G\-L\-\_\-push\-\_\-states (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{pic}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a006870bf42a34b5868accbfc2152b474}
+\hypertarget{graphics_8h_afc9b21b80a2a35a66ff164be588cce85}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states}}
+\index{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states@{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{pic}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_afc9b21b80a2a35a66ff164be588cce85}
+This function reset Open\-G\-L states. \hypertarget{graphics_8h_a7653686fa07c36c12d513fd98d575fc5}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-is\-\_\-shader\-\_\-available@{bunny\-\_\-is\-\_\-shader\-\_\-available}}
+\index{bunny\-\_\-is\-\_\-shader\-\_\-available@{bunny\-\_\-is\-\_\-shader\-\_\-available}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-is\-\_\-shader\-\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-is\-\_\-shader\-\_\-available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a7653686fa07c36c12d513fd98d575fc5}
+The bunny\-\_\-is\-\_\-shader\-\_\-available return true or false depending of the availibility of the shader system. If they are not available, do not try to use them. \begin{DoxyReturn}{Returns}
+True if shaders are available, else false. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a75d6ba3e2b3b51558848d103cfc8e4f0}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-load\-\_\-picture@{bunny\-\_\-load\-\_\-picture}}
+\index{bunny\-\_\-load\-\_\-picture@{bunny\-\_\-load\-\_\-picture}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-picture}$\ast$ bunny\-\_\-load\-\_\-picture (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a75d6ba3e2b3b51558848d103cfc8e4f0}
+The bunny\-\_\-load\-\_\-picture load a picture from a file. Supported formats are .png, .jpg, .gif and 24 bits bitmap. Output is a fast picture. The reserved memory to handle it is outside the bunny\-\_\-malloc space. 
+\begin{DoxyParams}{Parameters}
+{\em The} & file to open and read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a t\-\_\-bunny\-\_\-picture filled with the picture or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a0b718732050ef6d5664f6e2a123e7b87}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-load\-\_\-pixelarray@{bunny\-\_\-load\-\_\-pixelarray}}
+\index{bunny\-\_\-load\-\_\-pixelarray@{bunny\-\_\-load\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-pixelarray}$\ast$ bunny\-\_\-load\-\_\-pixelarray (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a0b718732050ef6d5664f6e2a123e7b87}
+The bunny\-\_\-load\-\_\-pixelarray load a picture from a file. Supported formats are .png, .jpg, .gif and 24 bits bitmap. Output is a manual access picture. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to open and read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a t\-\_\-bunny\-\_\-pixelarray filled with the picture or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a3c652b05c130de1d1508dc2f71f4e030}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-load\-\_\-shader@{bunny\-\_\-load\-\_\-shader}}
+\index{bunny\-\_\-load\-\_\-shader@{bunny\-\_\-load\-\_\-shader}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-load\-\_\-shader (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-shader} $\ast$}]{sha, }
+\item[{{\bf const} char $\ast$}]{vertex\-\_\-file, }
+\item[{{\bf const} char $\ast$}]{frag\-\_\-file}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a3c652b05c130de1d1508dc2f71f4e030}
+The bunny\-\_\-load\-\_\-shader function load two files and compile their code inside the sent shader. The vertex\-\_\-file is optionnal and N\-U\-L\-L may be sent. 
+\begin{DoxyParams}{Parameters}
+{\em sha} & The shader that was previously created with bunny\-\_\-new\-\_\-shader. \\
+\hline
+{\em vertex\-\_\-file} & A file that contains the vertex side of the G\-L\-S\-L code. \\
+\hline
+{\em frag\-\_\-file} & A file that contains the fragment side of the G\-L\-S\-L code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well. False on error. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a0f006839183de6217dcb23dd6dbe1017}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-new\-\_\-picture@{bunny\-\_\-new\-\_\-picture}}
+\index{bunny\-\_\-new\-\_\-picture@{bunny\-\_\-new\-\_\-picture}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-picture}$\ast$ bunny\-\_\-new\-\_\-picture (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{wid, }
+\item[{{\bf unsigned} {\bf int}}]{hei}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a0f006839183de6217dcb23dd6dbe1017}
+The bunny\-\_\-new\-\_\-picture creates a picture in the graphic memory. The t\-\_\-bunny\-\_\-picture is fast when you need to draw complex shapes and other pictures to and from it. The reserved memory to handle it is outside the bunny\-\_\-malloc space. 
+\begin{DoxyParams}{Parameters}
+{\em wid} & The width of the picture \\
+\hline
+{\em hei} & The height of the picture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a valid t\-\_\-bunny\-\_\-picture structure or N\-U\-L\-L if there is not enough memory available. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a06e913548f14d59c396f3093a2e46514}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-new\-\_\-pixelarray@{bunny\-\_\-new\-\_\-pixelarray}}
+\index{bunny\-\_\-new\-\_\-pixelarray@{bunny\-\_\-new\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-pixelarray}$\ast$ bunny\-\_\-new\-\_\-pixelarray (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{wid, }
+\item[{{\bf unsigned} {\bf int}}]{hei}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a06e913548f14d59c396f3093a2e46514}
+The bunny\-\_\-new\-\_\-pixelarray creates a manual access picture. The t\-\_\-bunny\-\_\-pixelarray picture is the system memory and is fast when you need to access each pixels one per one. The bunny\-\_\-new\-\_\-pixelarray picture is stored inside the bunny\-\_\-malloc space. 
+\begin{DoxyParams}{Parameters}
+{\em wid} & The width of the picture \\
+\hline
+{\em hei} & The height of the picture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a valid t\-\_\-bunny\-\_\-pixelarray structure or N\-U\-L\-L if there is not enough memory available. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_acd7761372f628ebf1c7b77c09b49840d}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-new\-\_\-shader@{bunny\-\_\-new\-\_\-shader}}
+\index{bunny\-\_\-new\-\_\-shader@{bunny\-\_\-new\-\_\-shader}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-shader}$\ast$ bunny\-\_\-new\-\_\-shader (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_acd7761372f628ebf1c7b77c09b49840d}
+The bunny\-\_\-new\-\_\-shader function creates an empty shader. \begin{DoxyReturn}{Returns}
+N\-U\-L\-L if there is not enough memory. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_aac78fc03b915c813dfae30baafcd34b4}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-read\-\_\-picture@{bunny\-\_\-read\-\_\-picture}}
+\index{bunny\-\_\-read\-\_\-picture@{bunny\-\_\-read\-\_\-picture}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-read\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-picture}$\ast$ bunny\-\_\-read\-\_\-picture (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{pic, }
+\item[{{\bf size\-\_\-t}}]{l}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_aac78fc03b915c813dfae30baafcd34b4}
+The bunny\-\_\-read\-\_\-picture load a picture from memory. Supported formats are .png, .jpg, .gif and 24 bits bitmap. Output is a fast picture. The reserved memory to handle it is outside the bunny\-\_\-malloc space. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a t\-\_\-bunny\-\_\-picture filled with the picture or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_abd0be114c043b0c4e8eeaf0aca9bba46}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-read\-\_\-pixelarray@{bunny\-\_\-read\-\_\-pixelarray}}
+\index{bunny\-\_\-read\-\_\-pixelarray@{bunny\-\_\-read\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-pixelarray}$\ast$ bunny\-\_\-read\-\_\-pixelarray (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_abd0be114c043b0c4e8eeaf0aca9bba46}
+The bunny\-\_\-read\-\_\-pixelarray load a picture from memory. Supported formats are .png, .jpg, .gif and 24 bits bitmap. Output is a manual access picture. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer that contains the loaded in memory picture file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a t\-\_\-bunny\-\_\-pixelarray filled with the picture or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a5b7052ed27917aecd2e9a2a8d2584a20}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-save\-\_\-pixelarray@{bunny\-\_\-save\-\_\-pixelarray}}
+\index{bunny\-\_\-save\-\_\-pixelarray@{bunny\-\_\-save\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-save\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-save\-\_\-pixelarray (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-pixelarray} $\ast$}]{buf, }
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a5b7052ed27917aecd2e9a2a8d2584a20}
+The bunny\-\_\-save\-\_\-pixelarray save a t\-\_\-bunny\-\_\-pixelarray content into a picture file. Supported formats are .png, .jpg, .gif and .bmp. The alpha channel saving depends on the output file format. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The picture to save \\
+\hline
+{\em file} & The file in which the content of the picture will be saved. \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_ad5aa910bc634e7e20dc4b64719447aef}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-set\-\_\-circle@{bunny\-\_\-set\-\_\-circle}}
+\index{bunny\-\_\-set\-\_\-circle@{bunny\-\_\-set\-\_\-circle}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-circle (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buf, }
+\item[{{\bf t\-\_\-bunny\-\_\-position}}]{pos, }
+\item[{{\bf t\-\_\-bunny\-\_\-position}}]{rad, }
+\item[{{\bf unsigned} {\bf int}}]{color}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_ad5aa910bc634e7e20dc4b64719447aef}
+The bunny\-\_\-set\-\_\-pixel function draw a circle (1 pixel thick) on the sent t\-\_\-bunny\-\_\-buffer.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em pos} & The position of the middle of the circle \\
+\hline
+{\em rad} & The radius of the circle \\
+\hline
+{\em col} & The color of the pixel to draw \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_abab44e764ba7e313f6a0dd441dc2e89f}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-set\-\_\-geometry@{bunny\-\_\-set\-\_\-geometry}}
+\index{bunny\-\_\-set\-\_\-geometry@{bunny\-\_\-set\-\_\-geometry}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-geometry (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buffer, }
+\item[{{\bf t\-\_\-bunny\-\_\-geometry}}]{geometry, }
+\item[{{\bf t\-\_\-bunny\-\_\-vertex\-\_\-array} $\ast$}]{array, }
+\item[{{\bf t\-\_\-bunny\-\_\-clipable} $\ast$}]{clipable}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_abab44e764ba7e313f6a0dd441dc2e89f}
+The bunny\-\_\-set\-\_\-geometry function draw a shape in a buffer. The shape is determined by every sent coordinates and eventually the texture. /!\textbackslash{} It is impossible to mix t\-\_\-bunny\-\_\-picture and t\-\_\-bunny\-\_\-pixelarray. If clipable is a pixelarray, then buffer must be a pixelarray. If clipable is a picture, then buffer must be a picture or a window. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em geometry} & The type of shape that is describded by the array of vertex. \\
+\hline
+{\em array} & A t\-\_\-bunny\-\_\-vertex\-\_\-array that contains coordinates of the shape \\
+\hline
+{\em clipable} & The texture to use to draw the shape. May be N\-U\-L\-L to use color instead. \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a79f9d50659c186ae1ac90dd4751d5a7f}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-set\-\_\-line@{bunny\-\_\-set\-\_\-line}}
+\index{bunny\-\_\-set\-\_\-line@{bunny\-\_\-set\-\_\-line}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buf, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$}]{pos, }
+\item[{{\bf const} {\bf unsigned} {\bf int} $\ast$}]{col}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a79f9d50659c186ae1ac90dd4751d5a7f}
+The bunny\-\_\-set\-\_\-line function draw a single line on the sent t\-\_\-bunny\-\_\-buffer.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em pos} & Coordinates of the line in pos\mbox{[}0\mbox{]} and pos\mbox{[}1\mbox{]} \\
+\hline
+{\em col} & The color of the line, from its start with col\mbox{[}0\mbox{]} to its end with col\mbox{[}1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a96e32a35f159c08ec1028fb45835f0d3}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-set\-\_\-pixel@{bunny\-\_\-set\-\_\-pixel}}
+\index{bunny\-\_\-set\-\_\-pixel@{bunny\-\_\-set\-\_\-pixel}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buf, }
+\item[{{\bf t\-\_\-bunny\-\_\-position}}]{pos, }
+\item[{{\bf unsigned} {\bf int}}]{col}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a96e32a35f159c08ec1028fb45835f0d3}
+The bunny\-\_\-set\-\_\-pixel function draw a single pixel on the sent t\-\_\-bunny\-\_\-buffer. /!\textbackslash{} Because t\-\_\-bunny\-\_\-picture need a graphic board access to draw something, using this function with them will result in poor performences.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em pos} & The position where to write on the sent t\-\_\-bunny\-\_\-buffer \\
+\hline
+{\em col} & The color of the pixel to draw \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a6096840cf79eb8ad6bc7136d9260f5eb}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-set\-\_\-polygon@{bunny\-\_\-set\-\_\-polygon}}
+\index{bunny\-\_\-set\-\_\-polygon@{bunny\-\_\-set\-\_\-polygon}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-polygon (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-buffer} $\ast$}]{buf, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-position} $\ast$}]{pos, }
+\item[{{\bf const} {\bf unsigned} {\bf int} $\ast$}]{col}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a6096840cf79eb8ad6bc7136d9260f5eb}
+The bunny\-\_\-set\-\_\-polygon function draw a single line on the sent t\-\_\-bunny\-\_\-buffer.
+
+This funtion will not work on t\-\_\-bunny\-\_\-pixelarray if you did not have set a correct function to its associated gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon function pointer. You can test your function with the bunny\-\_\-self\-\_\-test function. /!\textbackslash{} It will also test the alpha management and gradiants features.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The t\-\_\-bunny\-\_\-buffer where to draw \\
+\hline
+{\em pos} & Coordinates of the polygon in pos\mbox{[}0\mbox{]}, pos\mbox{[}1\mbox{]} and pos\mbox{[}2\mbox{]} \\
+\hline
+{\em col} & The color of the polygon, from col\mbox{[}0\mbox{]} to col\mbox{[}2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{graphics_8h_a68e21db66d9418882042040d2bec6f85}{\index{graphics.\-h@{graphics.\-h}!bunny\-\_\-shader\-\_\-set\-\_\-variable@{bunny\-\_\-shader\-\_\-set\-\_\-variable}}
+\index{bunny\-\_\-shader\-\_\-set\-\_\-variable@{bunny\-\_\-shader\-\_\-set\-\_\-variable}!graphics.h@{graphics.\-h}}
+\subsubsection[{bunny\-\_\-shader\-\_\-set\-\_\-variable}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-shader\-\_\-set\-\_\-variable (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-shader} $\ast$}]{sha, }
+\item[{{\bf const} char $\ast$}]{varname, }
+\item[{{\bf t\-\_\-bunny\-\_\-variable\-\_\-type}}]{type, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a68e21db66d9418882042040d2bec6f85}
+Set a variable inside the G\-L\-S\-L code with a value from your program. 
+\begin{DoxyParams}{Parameters}
+{\em sha} & The shader where your variable is from. \\
+\hline
+{\em varname} & The name of the variable inside your G\-L\-S\-L. \\
+\hline
+{\em type} & The type of the data you will send as fourth parameter. \\
+\hline
+{\em ...} & If type is B\-V\-T\-\_\-1\-\_\-\-F\-L\-O\-A\-T, ... must be 1 float. If type is B\-V\-T\-\_\-2\-\_\-\-F\-L\-O\-A\-T, ... must be 2 float. If type is B\-V\-T\-\_\-3\-\_\-\-F\-L\-O\-A\-T, ... must be 3 float. If type is B\-V\-T\-\_\-4\-\_\-\-C\-O\-L\-O\-R\-\_\-\-C\-O\-M\-P\-O\-N\-E\-N\-T, ... must be 4 int If type is B\-V\-T\-\_\-\-F\-U\-L\-L\-\_\-\-C\-O\-L\-O\-R, ... must be an unsigned int If type is B\-T\-V\-\_\-\-T\-R\-A\-N\-S\-F\-O\-R\-M, ... must be a t\-\_\-bunny\-\_\-transform$\ast$ If type is B\-V\-T\-\_\-\-P\-I\-C\-T\-U\-R\-E, ... must be a t\-\_\-bunny\-\_\-picture$\ast$ If type if B\-T\-V\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-T\-E\-X\-T\-U\-R\-E\-\_\-\-T\-Y\-P\-E, ... must be nothing. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{graphics_8h_ac6b62ac82ca5fc2ad4c99fbff8bd12b5}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-blit@{gl\-\_\-bunny\-\_\-my\-\_\-blit}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-blit@{gl\-\_\-bunny\-\_\-my\-\_\-blit}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-blit} gl\-\_\-bunny\-\_\-my\-\_\-blit}}\label{graphics_8h_ac6b62ac82ca5fc2ad4c99fbff8bd12b5}
+The gl\-\_\-bunny\-\_\-my\-\_\-blit function pointer is used when you call bunny\-\_\-blit with two t\-\_\-bunny\-\_\-pixelarray as first and second parameter. By default, this function pointer 's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-blit works for two pixelarrays. \hypertarget{graphics_8h_aba933f15b2541b837ab8a9e4f8a21276}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-clear@{gl\-\_\-bunny\-\_\-my\-\_\-clear}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-clear@{gl\-\_\-bunny\-\_\-my\-\_\-clear}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-clear} gl\-\_\-bunny\-\_\-my\-\_\-clear}}\label{graphics_8h_aba933f15b2541b837ab8a9e4f8a21276}
+The gl\-\_\-bunny\-\_\-my\-\_\-clear pointer is used when you call bunny\-\_\-clear with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-clear works for pixelarrays. \hypertarget{graphics_8h_a3f602989ed5f61fca84f99a1592e5a7c}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-fill@{gl\-\_\-bunny\-\_\-my\-\_\-fill}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-fill@{gl\-\_\-bunny\-\_\-my\-\_\-fill}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-fill} gl\-\_\-bunny\-\_\-my\-\_\-fill}}\label{graphics_8h_a3f602989ed5f61fca84f99a1592e5a7c}
+The gl\-\_\-bunny\-\_\-my\-\_\-fill pointer is used when you call bunny\-\_\-fill with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-fill works for pixelarrays. \hypertarget{graphics_8h_acaf96e969dba2c8550b111025815b2a5}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-geometry@{gl\-\_\-bunny\-\_\-my\-\_\-geometry}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-geometry@{gl\-\_\-bunny\-\_\-my\-\_\-geometry}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-geometry} gl\-\_\-bunny\-\_\-my\-\_\-geometry}}\label{graphics_8h_acaf96e969dba2c8550b111025815b2a5}
+The gl\-\_\-bunny\-\_\-my\-\_\-geometry pointer is used when you call bunny\-\_\-clear with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-set\-\_\-geometry works for pixelarrays. The bunny\-\_\-self\-\_\-test does not currently evaluate the gl\-\_\-bunny\-\_\-my\-\_\-geometry. \hypertarget{graphics_8h_a4b5267df6cfa9c07f815ee859c3a85ac}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray@{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray@{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray} gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}}\label{graphics_8h_a4b5267df6cfa9c07f815ee859c3a85ac}
+The gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray is supposed to be the function pointer to set in order to expand bunny\-\_\-load\-\_\-pixelarray functionnalities to manage new types of picture and having your function evaluate by bunny\-\_\-self\-\_\-test, but it is currently unused.\-p \hypertarget{graphics_8h_a8116a6b7e2a3d7e75e72e2750de3b7e4}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray@{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray@{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray} gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}}\label{graphics_8h_a8116a6b7e2a3d7e75e72e2750de3b7e4}
+The gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray is supposed to be the function pointer to set in order to expand bunny\-\_\-read\-\_\-pixelarray functionnalities to manage new types of picture and having your function evaluate by bunny\-\_\-self\-\_\-test, but it is currently unused.\-p \hypertarget{graphics_8h_a563e663c45c537351900e2b940fcd4fb}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle} gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}}\label{graphics_8h_a563e663c45c537351900e2b940fcd4fb}
+The gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle pointer is used when you call bunny\-\_\-set\-\_\-circle with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-set\-\_\-circle works for pixelarrays. \hypertarget{graphics_8h_a496f0dfa0f79ae037c677cf9f2b16d75}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line} gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}}\label{graphics_8h_a496f0dfa0f79ae037c677cf9f2b16d75}
+The gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line pointer is used when you call bunny\-\_\-set\-\_\-line with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-set\-\_\-line works for pixelarrays. \hypertarget{graphics_8h_ae940dd7642155e239c22a9519a0d9e9e}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel} gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}}\label{graphics_8h_ae940dd7642155e239c22a9519a0d9e9e}
+The gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel pointer is used when you call bunny\-\_\-set\-\_\-pixel with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-set\-\_\-pixel works for pixelarrays. \hypertarget{graphics_8h_a8126968be5f55a545753e9ec4ec13f6a}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon@{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon} gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}}\label{graphics_8h_a8126968be5f55a545753e9ec4ec13f6a}
+The gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon pointer is used when you call bunny\-\_\-set\-\_\-polygon with a t\-\_\-bunny\-\_\-pixelarray. By default, this function pointer's value is N\-U\-L\-L and so does not work. By setting your function to it, you can make bunny\-\_\-set\-\_\-polygon works for pixelarrays. \hypertarget{graphics_8h_a3de9e577f4ee1205fc979313d6218ccd}{\index{graphics.\-h@{graphics.\-h}!gl\-\_\-vector\-\_\-font@{gl\-\_\-vector\-\_\-font}}
+\index{gl\-\_\-vector\-\_\-font@{gl\-\_\-vector\-\_\-font}!graphics.h@{graphics.\-h}}
+\subsubsection[{gl\-\_\-vector\-\_\-font}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-letter} gl\-\_\-vector\-\_\-font\mbox{[}{\bf L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-F\-O\-N\-T}\mbox{]}}}\label{graphics_8h_a3de9e577f4ee1205fc979313d6218ccd}
+The gl\-\_\-vector constant is a collection of letters, which are a collection of lines. Drawing thoses lines makes appeir a letter. The gl\-\_\-vector contains letters in this order\-: a-\/z0-\/9!. There is a enumeration that describe completly how the gl\-\_\-vector is made in the \hyperlink{enum_8h}{enum.\-h} file\-: t\-\_\-bunny\-\_\-letter\-\_\-tab. 

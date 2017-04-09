@@ -1,0 +1,251 @@
+\hypertarget{class_n_curses_pad}{\section{N\-Curses\-Pad Class Reference}
+\label{class_n_curses_pad}\index{N\-Curses\-Pad@{N\-Curses\-Pad}}
+}
+
+
+{\ttfamily \#include $<$cursesw.\-h$>$}
+
+Inheritance diagram for N\-Curses\-Pad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_n_curses_pad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_curses_pad_ac4bdfeec38dd3cbd6d09ab8c69e33520}{N\-Curses\-Pad} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} nlines, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} ncols)
+\item 
+\hyperlink{class_n_curses_pad}{N\-Curses\-Pad} \& \hyperlink{class_n_curses_pad_a5cb184c87578533d516d5a3f05ae4330}{operator=} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_pad}{N\-Curses\-Pad} \&rhs)
+\item 
+\hyperlink{class_n_curses_pad_a75511e015313923be78e99c21830b954}{N\-Curses\-Pad} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{class_n_curses_pad}{N\-Curses\-Pad} \&rhs)
+\item 
+virtual \hyperlink{class_n_curses_pad_a529e680c08d5e000b229877390943624}{$\sim$\-N\-Curses\-Pad} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_a7e00fbd33f22b33f17e409313f5aaff9}{echochar} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{curses_8priv_8h_ad21482314c581139d01159829e841e51}{chtype} \hyperlink{curses_8priv_8h_a49725d2659c0161681c55e3763942f68}{ch})
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_a1c1943edcae1c3f802810818b0bb3f4f}{refresh} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_a4857cf3756c7b12b56de3aebe83b1c7c}{refresh} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pmincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} sminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smaxrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smaxcol)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_adb21093509cff7d62f340bf7a412e235}{noutrefresh} ()
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_a57e8e632c1087434e43bbb82258f9887}{noutrefresh} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pmincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} sminrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smincol, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smaxrow, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} smaxcol)
+\item 
+virtual void \hyperlink{class_n_curses_pad_a05af68c8f685758d9c033290c42817e5}{set\-Window} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&view, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} v\-\_\-grid=1, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} h\-\_\-grid=1)
+\item 
+virtual void \hyperlink{class_n_curses_pad_ae24f9df00586a59fe4d48d7f8b8b9001}{set\-Sub\-Window} (\hyperlink{class_n_curses_window}{N\-Curses\-Window} \&sub)
+\item 
+virtual void \hyperlink{class_n_curses_pad_ac81aa45cfd71d7337bba68996a2a2541}{operator()} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_pad_a2d8a3942ade1ea8354ab1b0ef62883d0}{Win} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_pad_a1398dab9179307c138b3d3f46ebfd7fe}{get\-Window} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{class_n_curses_window}{N\-Curses\-Window} $\ast$ \hyperlink{class_n_curses_pad_a9547eac91ca66e9ced882521811d884f}{get\-Sub\-Window} (void) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_affc124960bec33989e3a48fa74d4039c}{driver} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{unionkey}{key})
+\item 
+virtual void \hyperlink{class_n_curses_pad_aaef29fce270aa0a7d64fe8ea22b47fe0}{On\-Unknown\-Operation} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pad\-\_\-req)
+\item 
+virtual void \hyperlink{class_n_curses_pad_a39db8a92c230519452d46b91af8e7056}{On\-Navigation\-Error} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pad\-\_\-req)
+\item 
+virtual void \hyperlink{class_n_curses_pad_a8da76a70ce153214c275c0741ea7cdfb}{On\-Operation} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} pad\-\_\-req)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_a6115be549d8b7bfdb24dcf8a740faf97}{min\-\_\-row}
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{class_n_curses_pad_ac636d841416a8a7357d050818be1f609}{min\-\_\-col}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_n_curses_pad_ac4bdfeec38dd3cbd6d09ab8c69e33520}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!N\-Curses\-Pad@{N\-Curses\-Pad}}
+\index{N\-Curses\-Pad@{N\-Curses\-Pad}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{N\-Curses\-Pad}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Pad\-::\-N\-Curses\-Pad (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{nlines, }
+\item[{{\bf int}}]{ncols}
+\end{DoxyParamCaption}
+)}}\label{class_n_curses_pad_ac4bdfeec38dd3cbd6d09ab8c69e33520}
+\hypertarget{class_n_curses_pad_a75511e015313923be78e99c21830b954}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!N\-Curses\-Pad@{N\-Curses\-Pad}}
+\index{N\-Curses\-Pad@{N\-Curses\-Pad}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{N\-Curses\-Pad}]{\setlength{\rightskip}{0pt plus 5cm}N\-Curses\-Pad\-::\-N\-Curses\-Pad (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Pad} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_pad_a75511e015313923be78e99c21830b954}
+\hypertarget{class_n_curses_pad_a529e680c08d5e000b229877390943624}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!$\sim$\-N\-Curses\-Pad@{$\sim$\-N\-Curses\-Pad}}
+\index{$\sim$\-N\-Curses\-Pad@{$\sim$\-N\-Curses\-Pad}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{$\sim$\-N\-Curses\-Pad}]{\setlength{\rightskip}{0pt plus 5cm}virtual N\-Curses\-Pad\-::$\sim$\-N\-Curses\-Pad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_n_curses_pad_a529e680c08d5e000b229877390943624}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_n_curses_pad_affc124960bec33989e3a48fa74d4039c}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!driver@{driver}}
+\index{driver@{driver}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{driver}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int} N\-Curses\-Pad\-::driver (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_pad_affc124960bec33989e3a48fa74d4039c}
+\hypertarget{class_n_curses_pad_a7e00fbd33f22b33f17e409313f5aaff9}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!echochar@{echochar}}
+\index{echochar@{echochar}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{echochar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::echochar (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf chtype}}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_pad_a7e00fbd33f22b33f17e409313f5aaff9}
+\hypertarget{class_n_curses_pad_a9547eac91ca66e9ced882521811d884f}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!get\-Sub\-Window@{get\-Sub\-Window}}
+\index{get\-Sub\-Window@{get\-Sub\-Window}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{get\-Sub\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Pad\-::get\-Sub\-Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_pad_a9547eac91ca66e9ced882521811d884f}
+\hypertarget{class_n_curses_pad_a1398dab9179307c138b3d3f46ebfd7fe}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!get\-Window@{get\-Window}}
+\index{get\-Window@{get\-Window}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{get\-Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Pad\-::get\-Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_pad_a1398dab9179307c138b3d3f46ebfd7fe}
+\hypertarget{class_n_curses_pad_adb21093509cff7d62f340bf7a412e235}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!noutrefresh@{noutrefresh}}
+\index{noutrefresh@{noutrefresh}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{noutrefresh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::noutrefresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_pad_adb21093509cff7d62f340bf7a412e235}
+
+
+Reimplemented from \hyperlink{class_n_curses_window_a8b2c23bf8acdada2b0dbb06f870009bb}{N\-Curses\-Window}.
+
+\hypertarget{class_n_curses_pad_a57e8e632c1087434e43bbb82258f9887}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!noutrefresh@{noutrefresh}}
+\index{noutrefresh@{noutrefresh}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{noutrefresh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::noutrefresh (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{pminrow, }
+\item[{{\bf int}}]{pmincol, }
+\item[{{\bf int}}]{sminrow, }
+\item[{{\bf int}}]{smincol, }
+\item[{{\bf int}}]{smaxrow, }
+\item[{{\bf int}}]{smaxcol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_pad_a57e8e632c1087434e43bbb82258f9887}
+\hypertarget{class_n_curses_pad_a39db8a92c230519452d46b91af8e7056}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!On\-Navigation\-Error@{On\-Navigation\-Error}}
+\index{On\-Navigation\-Error@{On\-Navigation\-Error}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{On\-Navigation\-Error}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::\-On\-Navigation\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{pad\-\_\-req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_pad_a39db8a92c230519452d46b91af8e7056}
+\hypertarget{class_n_curses_pad_a8da76a70ce153214c275c0741ea7cdfb}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!On\-Operation@{On\-Operation}}
+\index{On\-Operation@{On\-Operation}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{On\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::\-On\-Operation (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{pad\-\_\-req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_pad_a8da76a70ce153214c275c0741ea7cdfb}
+
+
+Reimplemented in \hyperlink{class_n_curses_framed_pad_adb88a4531b1339efdd942009b5e3c250}{N\-Curses\-Framed\-Pad}.
+
+\hypertarget{class_n_curses_pad_aaef29fce270aa0a7d64fe8ea22b47fe0}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!On\-Unknown\-Operation@{On\-Unknown\-Operation}}
+\index{On\-Unknown\-Operation@{On\-Unknown\-Operation}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{On\-Unknown\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::\-On\-Unknown\-Operation (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{pad\-\_\-req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_n_curses_pad_aaef29fce270aa0a7d64fe8ea22b47fe0}
+\hypertarget{class_n_curses_pad_ac81aa45cfd71d7337bba68996a2a2541}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!operator()@{operator()}}
+\index{operator()@{operator()}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::operator() (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_pad_ac81aa45cfd71d7337bba68996a2a2541}
+\hypertarget{class_n_curses_pad_a5cb184c87578533d516d5a3f05ae4330}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!operator=@{operator=}}
+\index{operator=@{operator=}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Pad}\& N\-Curses\-Pad\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf N\-Curses\-Pad} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_pad_a5cb184c87578533d516d5a3f05ae4330}
+\hypertarget{class_n_curses_pad_a1c1943edcae1c3f802810818b0bb3f4f}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!refresh@{refresh}}
+\index{refresh@{refresh}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_pad_a1c1943edcae1c3f802810818b0bb3f4f}
+
+
+Reimplemented from \hyperlink{class_n_curses_window_a98862f6bbcabadb168dcf4b46d1369fc}{N\-Curses\-Window}.
+
+\hypertarget{class_n_curses_pad_a4857cf3756c7b12b56de3aebe83b1c7c}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!refresh@{refresh}}
+\index{refresh@{refresh}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::refresh (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{pminrow, }
+\item[{{\bf int}}]{pmincol, }
+\item[{{\bf int}}]{sminrow, }
+\item[{{\bf int}}]{smincol, }
+\item[{{\bf int}}]{smaxrow, }
+\item[{{\bf int}}]{smaxcol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_n_curses_pad_a4857cf3756c7b12b56de3aebe83b1c7c}
+\hypertarget{class_n_curses_pad_ae24f9df00586a59fe4d48d7f8b8b9001}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!set\-Sub\-Window@{set\-Sub\-Window}}
+\index{set\-Sub\-Window@{set\-Sub\-Window}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{set\-Sub\-Window}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::set\-Sub\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{sub}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_pad_ae24f9df00586a59fe4d48d7f8b8b9001}
+
+
+Reimplemented in \hyperlink{class_n_curses_framed_pad_aeed65a75e84ca5393c6e0758dd58d014}{N\-Curses\-Framed\-Pad}.
+
+\hypertarget{class_n_curses_pad_a05af68c8f685758d9c033290c42817e5}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!set\-Window@{set\-Window}}
+\index{set\-Window@{set\-Window}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{set\-Window}]{\setlength{\rightskip}{0pt plus 5cm}virtual void N\-Curses\-Pad\-::set\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf N\-Curses\-Window} \&}]{view, }
+\item[{{\bf int}}]{v\-\_\-grid = {\ttfamily 1}, }
+\item[{{\bf int}}]{h\-\_\-grid = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_n_curses_pad_a05af68c8f685758d9c033290c42817e5}
+
+
+Reimplemented in \hyperlink{class_n_curses_framed_pad_a177435ea5253c1b54469c9bf0b5786fc}{N\-Curses\-Framed\-Pad}.
+
+\hypertarget{class_n_curses_pad_a2d8a3942ade1ea8354ab1b0ef62883d0}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!Win@{Win}}
+\index{Win@{Win}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{Win}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-Curses\-Window}$\ast$ N\-Curses\-Pad\-::\-Win (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_n_curses_pad_a2d8a3942ade1ea8354ab1b0ef62883d0}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_n_curses_pad_ac636d841416a8a7357d050818be1f609}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!min\-\_\-col@{min\-\_\-col}}
+\index{min\-\_\-col@{min\-\_\-col}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{min\-\_\-col}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::min\-\_\-col\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_pad_ac636d841416a8a7357d050818be1f609}
+\hypertarget{class_n_curses_pad_a6115be549d8b7bfdb24dcf8a740faf97}{\index{N\-Curses\-Pad@{N\-Curses\-Pad}!min\-\_\-row@{min\-\_\-row}}
+\index{min\-\_\-row@{min\-\_\-row}!NCursesPad@{N\-Curses\-Pad}}
+\subsubsection[{min\-\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} N\-Curses\-Pad\-::min\-\_\-row\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_n_curses_pad_a6115be549d8b7bfdb24dcf8a740faf97}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/ndk/dep/\hyperlink{cursesw_8h}{cursesw.\-h}\end{DoxyCompactItemize}

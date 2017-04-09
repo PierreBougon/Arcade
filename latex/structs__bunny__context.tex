@@ -1,0 +1,93 @@
+\hypertarget{structs__bunny__context}{\section{s\-\_\-bunny\-\_\-context Struct Reference}
+\label{structs__bunny__context}\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}}
+}
+
+
+{\ttfamily \#include $<$events.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{events_8h_a923505573510fc2245f6b458eb46e682}{t\-\_\-bunny\-\_\-key} \hyperlink{structs__bunny__context_ad4dae332c9d39800a10216eb3dd22173}{key}
+\item 
+\hyperlink{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}{t\-\_\-bunny\-\_\-type} \hyperlink{structs__bunny__context_a09e78fc6f235790fb307e3d754a37cc7}{type}
+\item 
+\hyperlink{events_8h_a10892e056f3e976b4bba845d113b83d3}{t\-\_\-bunny\-\_\-click} \hyperlink{structs__bunny__context_a4ea9bf3ea84a7b4fe872ccc26c46a309}{click}
+\item 
+\hyperlink{events_8h_adca2c49e1e58405923f93a011f1c7213}{t\-\_\-bunny\-\_\-move} \hyperlink{structs__bunny__context_abb695dc2284c1372ded629b6d09886a2}{move}
+\item 
+\hyperlink{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}{t\-\_\-bunny\-\_\-wheel} \hyperlink{structs__bunny__context_a43f726e270fb1747ee94bb5bbcae8f86}{wheel}
+\item 
+\hyperlink{events_8h_a41e34e419406c012af86c340c97068bb}{t\-\_\-bunny\-\_\-joy\-\_\-connect} \hyperlink{structs__bunny__context_a7707c3166e06b3e64544c201520469ce}{connect}
+\item 
+\hyperlink{events_8h_a349a528991e49278fe9cb485452ba6c5}{t\-\_\-bunny\-\_\-joy\-\_\-button} \hyperlink{structs__bunny__context_af1bcaa6ef42b26493c314f6908a3873b}{button}
+\item 
+\hyperlink{events_8h_a762d924743c3e275802ee599cb2b13a5}{t\-\_\-bunny\-\_\-joy\-\_\-axis} \hyperlink{structs__bunny__context_a7bc1317c234a07200917b7432475d879}{axis}
+\item 
+\hyperlink{events_8h_a14890b94609d8b3721fd3375bd76f215}{t\-\_\-bunny\-\_\-get\-\_\-focus} \hyperlink{structs__bunny__context_a3329aec27dda8cde860c8b555e8d436f}{get\-\_\-focus}
+\item 
+\hyperlink{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}{t\-\_\-bunny\-\_\-lost\-\_\-focus} \hyperlink{structs__bunny__context_a05bb6e290cf8bac68dd5142e39406a31}{lost\-\_\-focus}
+\item 
+\hyperlink{events_8h_afd5ceaa3b3efadb30569c28164d39187}{t\-\_\-bunny\-\_\-resize} \hyperlink{structs__bunny__context_a90ca6419f3b754ca9bdce2340f388ad1}{resize}
+\item 
+\hyperlink{events_8h_ae4bd2301727bd9badea4701c67ee7a26}{t\-\_\-bunny\-\_\-loop} \hyperlink{structs__bunny__context_a50035481a3133992151c740746721bbf}{loop}
+\item 
+\hyperlink{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}{t\-\_\-bunny\-\_\-display} \hyperlink{structs__bunny__context_a4b91f4106732164b9e9fba2a8235489f}{display}
+\item 
+\hyperlink{events_8h_a99955d212b8a4b9e07177e28628434f6}{t\-\_\-bunny\-\_\-close} \hyperlink{structs__bunny__context_af9e8da8ba747848573ad01f39adb3b73}{close}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-context structure is a collection of function pointer of various types. These types match all function pointer that can be sent with bunny\-\_\-set\-\_\-$\ast$\-\_\-response, buny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function or bunny\-\_\-set\-\_\-display\-\_\-function. This structure is made to define a lot of callbacks in a single call, by defining a t\-\_\-bunny\-\_\-context somewhere (or an array...) and give it to bunny\-\_\-set\-\_\-context.
+
+A N\-U\-L\-L pointer is a deactivated callback. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__context_a7bc1317c234a07200917b7432475d879}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!axis@{axis}}
+\index{axis@{axis}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{axis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-joy\-\_\-axis} s\-\_\-bunny\-\_\-context\-::axis}}\label{structs__bunny__context_a7bc1317c234a07200917b7432475d879}
+\hypertarget{structs__bunny__context_af1bcaa6ef42b26493c314f6908a3873b}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!button@{button}}
+\index{button@{button}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-joy\-\_\-button} s\-\_\-bunny\-\_\-context\-::button}}\label{structs__bunny__context_af1bcaa6ef42b26493c314f6908a3873b}
+\hypertarget{structs__bunny__context_a4ea9bf3ea84a7b4fe872ccc26c46a309}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!click@{click}}
+\index{click@{click}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-click} s\-\_\-bunny\-\_\-context\-::click}}\label{structs__bunny__context_a4ea9bf3ea84a7b4fe872ccc26c46a309}
+\hypertarget{structs__bunny__context_af9e8da8ba747848573ad01f39adb3b73}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!close@{close}}
+\index{close@{close}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-close} s\-\_\-bunny\-\_\-context\-::close}}\label{structs__bunny__context_af9e8da8ba747848573ad01f39adb3b73}
+\hypertarget{structs__bunny__context_a7707c3166e06b3e64544c201520469ce}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!connect@{connect}}
+\index{connect@{connect}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-joy\-\_\-connect} s\-\_\-bunny\-\_\-context\-::connect}}\label{structs__bunny__context_a7707c3166e06b3e64544c201520469ce}
+\hypertarget{structs__bunny__context_a4b91f4106732164b9e9fba2a8235489f}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!display@{display}}
+\index{display@{display}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-display} s\-\_\-bunny\-\_\-context\-::display}}\label{structs__bunny__context_a4b91f4106732164b9e9fba2a8235489f}
+\hypertarget{structs__bunny__context_a3329aec27dda8cde860c8b555e8d436f}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!get\-\_\-focus@{get\-\_\-focus}}
+\index{get\-\_\-focus@{get\-\_\-focus}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{get\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-get\-\_\-focus} s\-\_\-bunny\-\_\-context\-::get\-\_\-focus}}\label{structs__bunny__context_a3329aec27dda8cde860c8b555e8d436f}
+\hypertarget{structs__bunny__context_ad4dae332c9d39800a10216eb3dd22173}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!key@{key}}
+\index{key@{key}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-key} s\-\_\-bunny\-\_\-context\-::key}}\label{structs__bunny__context_ad4dae332c9d39800a10216eb3dd22173}
+\hypertarget{structs__bunny__context_a50035481a3133992151c740746721bbf}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!loop@{loop}}
+\index{loop@{loop}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-loop} s\-\_\-bunny\-\_\-context\-::loop}}\label{structs__bunny__context_a50035481a3133992151c740746721bbf}
+\hypertarget{structs__bunny__context_a05bb6e290cf8bac68dd5142e39406a31}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!lost\-\_\-focus@{lost\-\_\-focus}}
+\index{lost\-\_\-focus@{lost\-\_\-focus}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{lost\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-lost\-\_\-focus} s\-\_\-bunny\-\_\-context\-::lost\-\_\-focus}}\label{structs__bunny__context_a05bb6e290cf8bac68dd5142e39406a31}
+\hypertarget{structs__bunny__context_abb695dc2284c1372ded629b6d09886a2}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!move@{move}}
+\index{move@{move}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-move} s\-\_\-bunny\-\_\-context\-::move}}\label{structs__bunny__context_abb695dc2284c1372ded629b6d09886a2}
+\hypertarget{structs__bunny__context_a90ca6419f3b754ca9bdce2340f388ad1}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!resize@{resize}}
+\index{resize@{resize}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-resize} s\-\_\-bunny\-\_\-context\-::resize}}\label{structs__bunny__context_a90ca6419f3b754ca9bdce2340f388ad1}
+\hypertarget{structs__bunny__context_a09e78fc6f235790fb307e3d754a37cc7}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!type@{type}}
+\index{type@{type}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-type} s\-\_\-bunny\-\_\-context\-::type}}\label{structs__bunny__context_a09e78fc6f235790fb307e3d754a37cc7}
+\hypertarget{structs__bunny__context_a43f726e270fb1747ee94bb5bbcae8f86}{\index{s\-\_\-bunny\-\_\-context@{s\-\_\-bunny\-\_\-context}!wheel@{wheel}}
+\index{wheel@{wheel}!s_bunny_context@{s\-\_\-bunny\-\_\-context}}
+\subsubsection[{wheel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-wheel} s\-\_\-bunny\-\_\-context\-::wheel}}\label{structs__bunny__context_a43f726e270fb1747ee94bb5bbcae8f86}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{events_8h}{events.\-h}\end{DoxyCompactItemize}

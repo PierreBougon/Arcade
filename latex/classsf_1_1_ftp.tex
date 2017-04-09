@@ -1,0 +1,1010 @@
+\hypertarget{classsf_1_1_ftp}{\section{sf\-:\-:Ftp Class Reference}
+\label{classsf_1_1_ftp}\index{sf\-::\-Ftp@{sf\-::\-Ftp}}
+}
+
+
+A F\-T\-P client.  
+
+
+
+
+{\ttfamily \#include $<$Ftp.\-hpp$>$}
+
+Inheritance diagram for sf\-:\-:Ftp\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsf_1_1_ftp}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsf_1_1_ftp_1_1_directory_response}{Directory\-Response}
+\begin{DoxyCompactList}\small\item\em Specialization of F\-T\-P response returning a directory. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_ftp_1_1_listing_response}{Listing\-Response}
+\begin{DoxyCompactList}\small\item\em Specialization of F\-T\-P response returning a filename listing. \end{DoxyCompactList}\item 
+class \hyperlink{classsf_1_1_ftp_1_1_response}{Response}
+\begin{DoxyCompactList}\small\item\em Define a F\-T\-P response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} \{ \\*
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}, 
+\\*
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of transfer modes. \end{DoxyCompactList}\item 
+enum \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} \{ \\*
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}, 
+\\*
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}, 
+\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of transfer modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}{$\sim$\-Ftp} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{connect} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classsf_1_1_ip_address}{Ip\-Address} \&server, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} short port=21, \hyperlink{classsf_1_1_time}{Time} \hyperlink{_ndk_8cpp_a174cf046f3b5dbb1258515b3f138b8c7}{timeout}=\hyperlink{classsf_1_1_time_aa343e67f43a940e7b3b51aa10a495f2f}{Time\-::\-Zero})
+\begin{DoxyCompactList}\small\item\em Connect to the specified F\-T\-P server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em Close the connection with the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}{login} ()
+\begin{DoxyCompactList}\small\item\em Log in using an anonymous account. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}{login} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&password)
+\begin{DoxyCompactList}\small\item\em Log in using a username and a password. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}{keep\-Alive} ()
+\begin{DoxyCompactList}\small\item\em Send a null command to keep the connection alive. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_directory_response}{Directory\-Response} \hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory} ()
+\begin{DoxyCompactList}\small\item\em Get the current working directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_listing_response}{Listing\-Response} \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&directory=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Get the contents of the given directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&directory)
+\begin{DoxyCompactList}\small\item\em Change the current working directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} ()
+\begin{DoxyCompactList}\small\item\em Go to the parent directory of the current one. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{create\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Create a new directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{delete\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove an existing directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{rename\-File} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&file, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&new\-Name)
+\begin{DoxyCompactList}\small\item\em Rename an existing file. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{delete\-File} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove an existing file. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{download} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&remote\-File, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&local\-Path, \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} mode=\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary})
+\begin{DoxyCompactList}\small\item\em Download a file from the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{upload} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&local\-File, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&remote\-Path, \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} mode=\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary})
+\begin{DoxyCompactList}\small\item\em Upload a file to the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{send\-Command} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&command, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&parameter=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Send a command to the F\-T\-P server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}{$\sim$\-Ftp} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{connect} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classsf_1_1_ip_address}{Ip\-Address} \&server, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} short port=21, \hyperlink{classsf_1_1_time}{Time} \hyperlink{_ndk_8cpp_a174cf046f3b5dbb1258515b3f138b8c7}{timeout}=\hyperlink{classsf_1_1_time_aa343e67f43a940e7b3b51aa10a495f2f}{Time\-::\-Zero})
+\begin{DoxyCompactList}\small\item\em Connect to the specified F\-T\-P server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em Close the connection with the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}{login} ()
+\begin{DoxyCompactList}\small\item\em Log in using an anonymous account. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}{login} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&password)
+\begin{DoxyCompactList}\small\item\em Log in using a username and a password. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}{keep\-Alive} ()
+\begin{DoxyCompactList}\small\item\em Send a null command to keep the connection alive. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_directory_response}{Directory\-Response} \hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory} ()
+\begin{DoxyCompactList}\small\item\em Get the current working directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_listing_response}{Listing\-Response} \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&directory=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Get the contents of the given directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&directory)
+\begin{DoxyCompactList}\small\item\em Change the current working directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} ()
+\begin{DoxyCompactList}\small\item\em Go to the parent directory of the current one. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{create\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Create a new directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{delete\-Directory} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove an existing directory. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{rename\-File} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&file, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&new\-Name)
+\begin{DoxyCompactList}\small\item\em Rename an existing file. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{delete\-File} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove an existing file. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{download} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&remote\-File, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&local\-Path, \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} mode=\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary})
+\begin{DoxyCompactList}\small\item\em Download a file from the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{upload} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&local\-File, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&remote\-Path, \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{Transfer\-Mode} mode=\hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary})
+\begin{DoxyCompactList}\small\item\em Upload a file to the server. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_ftp_1_1_response}{Response} \hyperlink{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{send\-Command} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&command, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&parameter=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Send a command to the F\-T\-P server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsf_1_1_ftp_aafee9e6471e9ba6590613dc367c65503}{Data\-Channel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A F\-T\-P client. 
+
+\hyperlink{classsf_1_1_ftp}{sf\-::\-Ftp} is a very simple F\-T\-P client that allows you to communicate with a F\-T\-P server. The F\-T\-P protocol allows you to manipulate a remote file system (list files, upload, download, create, remove, ...).
+
+Using the F\-T\-P client consists of 4 parts\-: \begin{DoxyItemize}
+\item Connecting to the F\-T\-P server \item Logging in (either as a registered user or anonymously) \item Sending commands to the server \item Disconnecting (this part can be done implicitly by the destructor)\end{DoxyItemize}
+Every command returns a F\-T\-P response, which contains the status code as well as a message from the server. Some commands such as \hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory()} and \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing()} return additional data, and use a class derived from \hyperlink{classsf_1_1_ftp_1_1_response}{sf\-::\-Ftp\-::\-Response} to provide this data. The most often used commands are directly provided as member functions, but it is also possible to use specific commands with the \hyperlink{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{send\-Command()} function.
+
+Note that response statuses $>$= 1000 are not part of the F\-T\-P standard, they are generated by S\-F\-M\-L when an internal error occurs.
+
+All commands, especially upload and download, may take some time to complete. This is important to know if you don't want to block your application while the server is completing the task.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create a new FTP client}
+\hyperlink{classsf_1_1_ftp}{sf::Ftp} ftp;
+
+\textcolor{comment}{// Connect to the server}
+\hyperlink{classsf_1_1_ftp_1_1_response}{sf::Ftp::Response} response = ftp.\hyperlink{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{connect}(\textcolor{stringliteral}{"ftp://ftp.myserver.com"});
+\textcolor{keywordflow}{if} (response.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"Connected"} << std::endl;
+
+\textcolor{comment}{// Log in}
+response = ftp.\hyperlink{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}{login}(\textcolor{stringliteral}{"laurent"}, \textcolor{stringliteral}{"dF6Zm89D"});
+\textcolor{keywordflow}{if} (response.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"Logged in"} << std::endl;
+
+\textcolor{comment}{// Print the working directory}
+\hyperlink{classsf_1_1_ftp_1_1_directory_response}{sf::Ftp::DirectoryResponse} directory = ftp.
+      \hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{getWorkingDirectory}();
+\textcolor{keywordflow}{if} (directory.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"Working directory: "} << directory.\hyperlink{classsf_1_1_ftp_1_1_directory_response_a500793778ad0ed223aa86ed8fbee28a3}{getDirectory}() << std::endl;
+
+\textcolor{comment}{// Create a new directory}
+response = ftp.\hyperlink{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{createDirectory}(\textcolor{stringliteral}{"files"});
+\textcolor{keywordflow}{if} (response.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"Created new directory"} << std::endl;
+
+\textcolor{comment}{// Upload a file to this new directory}
+response = ftp.\hyperlink{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{upload}(\textcolor{stringliteral}{"local-path/file.txt"}, \textcolor{stringliteral}{"files"}, \hyperlink{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{sf::Ftp::Ascii});
+\textcolor{keywordflow}{if} (response.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"File uploaded"} << std::endl;
+
+\textcolor{comment}{// Send specific commands (here: FEAT to list supported FTP features)}
+response = ftp.\hyperlink{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{sendCommand}(\textcolor{stringliteral}{"FEAT"});
+\textcolor{keywordflow}{if} (response.\hyperlink{classsf_1_1_ftp_1_1_response_a4dadbe0fe0a3ef2d571a017e1645e675}{isOk}())
+    std::cout << \textcolor{stringliteral}{"Feature list:\(\backslash\)n"} << response.\hyperlink{classsf_1_1_ftp_1_1_response_a0015675c528a4a84a671484b9e5499d6}{getMessage}() << std::endl;
+
+\textcolor{comment}{// Disconnect from the server (optional)}
+ftp.\hyperlink{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{disconnect}();
+\end{DoxyCode}
+ 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Transfer\-Mode@{Transfer\-Mode}}
+\index{Transfer\-Mode@{Transfer\-Mode}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{Transfer\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sf\-::\-Ftp\-::\-Transfer\-Mode}}}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}
+
+
+Enumeration of transfer modes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Binary@{Binary}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Binary@{Binary}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}
+}]Binary mode (file is transfered as a sequence of bytes) \index{Ascii@{Ascii}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ascii@{Ascii}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}
+}]\hyperlink{classsf_1_1_text}{Text} mode using A\-S\-C\-I\-I encoding. \index{Ebcdic@{Ebcdic}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ebcdic@{Ebcdic}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}
+}]\hyperlink{classsf_1_1_text}{Text} mode using E\-B\-C\-D\-I\-C encoding. \index{Binary@{Binary}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Binary@{Binary}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}
+}]Binary mode (file is transfered as a sequence of bytes) \index{Ascii@{Ascii}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ascii@{Ascii}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}
+}]\hyperlink{classsf_1_1_text}{Text} mode using A\-S\-C\-I\-I encoding. \index{Ebcdic@{Ebcdic}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ebcdic@{Ebcdic}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}
+}]\hyperlink{classsf_1_1_text}{Text} mode using E\-B\-C\-D\-I\-C encoding. \end{description}
+\end{Desc}
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Transfer\-Mode@{Transfer\-Mode}}
+\index{Transfer\-Mode@{Transfer\-Mode}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{Transfer\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sf\-::\-Ftp\-::\-Transfer\-Mode}}}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cb}
+
+
+Enumeration of transfer modes. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Binary@{Binary}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Binary@{Binary}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}
+}]Binary mode (file is transfered as a sequence of bytes) \index{Ascii@{Ascii}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ascii@{Ascii}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}
+}]\hyperlink{classsf_1_1_text}{Text} mode using A\-S\-C\-I\-I encoding. \index{Ebcdic@{Ebcdic}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ebcdic@{Ebcdic}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}
+}]\hyperlink{classsf_1_1_text}{Text} mode using E\-B\-C\-D\-I\-C encoding. \index{Binary@{Binary}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Binary@{Binary}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}{Binary}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8d9a3497be63da2bf7ed663b1bfd7449}
+}]Binary mode (file is transfered as a sequence of bytes) \index{Ascii@{Ascii}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ascii@{Ascii}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}{Ascii}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cba8576756172e84a60a8b3410b95273557}
+}]\hyperlink{classsf_1_1_text}{Text} mode using A\-S\-C\-I\-I encoding. \index{Ebcdic@{Ebcdic}!sf\-::\-Ftp@{sf\-::\-Ftp}}\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Ebcdic@{Ebcdic}}\item[{\em 
+\hypertarget{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}{Ebcdic}\label{classsf_1_1_ftp_a1cd6b89ad23253f6d97e6d4ca4d558cbaae2f269da401c71e5cfe5206726a9f30}
+}]\hyperlink{classsf_1_1_text}{Text} mode using E\-B\-C\-D\-I\-C encoding. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!$\sim$\-Ftp@{$\sim$\-Ftp}}
+\index{$\sim$\-Ftp@{$\sim$\-Ftp}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{$\sim$\-Ftp}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Ftp\-::$\sim$\-Ftp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}
+
+
+Destructor. 
+
+Automatically closes the connection with the server if it is still opened. \hypertarget{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!$\sim$\-Ftp@{$\sim$\-Ftp}}
+\index{$\sim$\-Ftp@{$\sim$\-Ftp}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{$\sim$\-Ftp}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Ftp\-::$\sim$\-Ftp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a2edfa8e9009caf27bce74459ae76dc52}
+
+
+Destructor. 
+
+Automatically closes the connection with the server if it is still opened. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!change\-Directory@{change\-Directory}}
+\index{change\-Directory@{change\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{change\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::change\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{directory}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}
+
+
+Change the current working directory. 
+
+The new directory must be relative to the current one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & New working directory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!change\-Directory@{change\-Directory}}
+\index{change\-Directory@{change\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{change\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::change\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{directory}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}
+
+
+Change the current working directory. 
+
+The new directory must be relative to the current one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & New working directory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!connect@{connect}}
+\index{connect@{connect}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::connect (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Ip\-Address} \&}]{server, }
+\item[{{\bf unsigned} short}]{port = {\ttfamily 21}, }
+\item[{{\bf Time}}]{timeout = {\ttfamily {\bf Time\-::\-Zero}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}
+
+
+Connect to the specified F\-T\-P server. 
+
+The port has a default value of 21, which is the standard port used by the F\-T\-P protocol. You shouldn't use a different value, unless you really know what you do. This function tries to connect to the server so it may take a while to complete, especially if the server is not reachable. To avoid blocking your application for too long, you can use a timeout. The default value, \hyperlink{classsf_1_1_time_aa343e67f43a940e7b3b51aa10a495f2f}{Time\-::\-Zero}, means that the system timeout will be used (which is usually pretty long).
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & Name or address of the F\-T\-P server to connect to \\
+\hline
+{\em port} & Port used for the connection \\
+\hline
+{\em timeout} & Maximum time to wait\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{disconnect} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!connect@{connect}}
+\index{connect@{connect}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::connect (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Ip\-Address} \&}]{server, }
+\item[{{\bf unsigned} short}]{port = {\ttfamily 21}, }
+\item[{{\bf Time}}]{timeout = {\ttfamily {\bf Time\-::\-Zero}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}
+
+
+Connect to the specified F\-T\-P server. 
+
+The port has a default value of 21, which is the standard port used by the F\-T\-P protocol. You shouldn't use a different value, unless you really know what you do. This function tries to connect to the server so it may take a while to complete, especially if the server is not reachable. To avoid blocking your application for too long, you can use a timeout. The default value, \hyperlink{classsf_1_1_time_aa343e67f43a940e7b3b51aa10a495f2f}{Time\-::\-Zero}, means that the system timeout will be used (which is usually pretty long).
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & Name or address of the F\-T\-P server to connect to \\
+\hline
+{\em port} & Port used for the connection \\
+\hline
+{\em timeout} & Maximum time to wait\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{disconnect} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!create\-Directory@{create\-Directory}}
+\index{create\-Directory@{create\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{create\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::create\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}
+
+
+Create a new directory. 
+
+The new directory is created as a child of the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the directory to create\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{delete\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!create\-Directory@{create\-Directory}}
+\index{create\-Directory@{create\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{create\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::create\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}
+
+
+Create a new directory. 
+
+The new directory is created as a child of the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the directory to create\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{delete\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!delete\-Directory@{delete\-Directory}}
+\index{delete\-Directory@{delete\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{delete\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::delete\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}
+
+
+Remove an existing directory. 
+
+The directory to remove must be relative to the current working directory. Use this function with caution, the directory will be removed permanently!
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the directory to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{create\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!delete\-Directory@{delete\-Directory}}
+\index{delete\-Directory@{delete\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{delete\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::delete\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a2a8a7ef9144204b5b319c9a4be8806c2}
+
+
+Remove an existing directory. 
+
+The directory to remove must be relative to the current working directory. Use this function with caution, the directory will be removed permanently!
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the directory to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a247b84c4b25da37804218c2b748c4787}{create\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!delete\-File@{delete\-File}}
+\index{delete\-File@{delete\-File}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{delete\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::delete\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}
+
+
+Remove an existing file. 
+
+The file name must be relative to the current working directory. Use this function with caution, the file will be removed permanently!
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & File to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{rename\-File} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!delete\-File@{delete\-File}}
+\index{delete\-File@{delete\-File}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{delete\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::delete\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}
+
+
+Remove an existing file. 
+
+The file name must be relative to the current working directory. Use this function with caution, the file will be removed permanently!
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & File to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{rename\-File} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}
+
+
+Close the connection with the server. 
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{connect} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_acf7459926f3391cd06bf84337ed6a0f4}
+
+
+Close the connection with the server. 
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_af02fb3de3f450a50a27981961c69c860}{connect} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!download@{download}}
+\index{download@{download}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{download}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::download (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{remote\-File, }
+\item[{{\bf const} std\-::string \&}]{local\-Path, }
+\item[{{\bf Transfer\-Mode}}]{mode = {\ttfamily {\bf Binary}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}
+
+
+Download a file from the server. 
+
+The filename of the distant file is relative to the current working directory of the server, and the local destination path is relative to the current directory of your application. If a file with the same filename as the distant file already exists in the local destination path, it will be overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em remote\-File} & Filename of the distant file to download \\
+\hline
+{\em local\-Path} & The directory in which to put the file on the local computer \\
+\hline
+{\em mode} & Transfer mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{upload} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!download@{download}}
+\index{download@{download}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{download}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::download (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{remote\-File, }
+\item[{{\bf const} std\-::string \&}]{local\-Path, }
+\item[{{\bf Transfer\-Mode}}]{mode = {\ttfamily {\bf Binary}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}
+
+
+Download a file from the server. 
+
+The filename of the distant file is relative to the current working directory of the server, and the local destination path is relative to the current directory of your application. If a file with the same filename as the distant file already exists in the local destination path, it will be overwritten.
+
+
+\begin{DoxyParams}{Parameters}
+{\em remote\-File} & Filename of the distant file to download \\
+\hline
+{\em local\-Path} & The directory in which to put the file on the local computer \\
+\hline
+{\em mode} & Transfer mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{upload} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!get\-Directory\-Listing@{get\-Directory\-Listing}}
+\index{get\-Directory\-Listing@{get\-Directory\-Listing}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{get\-Directory\-Listing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Listing\-Response} sf\-::\-Ftp\-::get\-Directory\-Listing (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{directory = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}
+
+
+Get the contents of the given directory. 
+
+This function retrieves the sub-\/directories and files contained in the given directory. It is not recursive. The {\itshape directory} parameter is relative to the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Directory to list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!get\-Directory\-Listing@{get\-Directory\-Listing}}
+\index{get\-Directory\-Listing@{get\-Directory\-Listing}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{get\-Directory\-Listing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Listing\-Response} sf\-::\-Ftp\-::get\-Directory\-Listing (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{directory = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}
+
+
+Get the contents of the given directory. 
+
+This function retrieves the sub-\/directories and files contained in the given directory. It is not recursive. The {\itshape directory} parameter is relative to the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Directory to list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!get\-Working\-Directory@{get\-Working\-Directory}}
+\index{get\-Working\-Directory@{get\-Working\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{get\-Working\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Directory\-Response} sf\-::\-Ftp\-::get\-Working\-Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}
+
+
+Get the current working directory. 
+
+The working directory is the root path for subsequent operations involving directories and/or filenames.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!get\-Working\-Directory@{get\-Working\-Directory}}
+\index{get\-Working\-Directory@{get\-Working\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{get\-Working\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Directory\-Response} sf\-::\-Ftp\-::get\-Working\-Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}
+
+
+Get the current working directory. 
+
+The working directory is the root path for subsequent operations involving directories and/or filenames.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory}, \hyperlink{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{parent\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!keep\-Alive@{keep\-Alive}}
+\index{keep\-Alive@{keep\-Alive}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{keep\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::keep\-Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}
+
+
+Send a null command to keep the connection alive. 
+
+This command is useful because the server may close the connection automatically if no command is sent.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!keep\-Alive@{keep\-Alive}}
+\index{keep\-Alive@{keep\-Alive}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{keep\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::keep\-Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_aa1127d442b4acb2105aa8060a39d04fc}
+
+
+Send a null command to keep the connection alive. 
+
+This command is useful because the server may close the connection automatically if no command is sent.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!login@{login}}
+\index{login@{login}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::login (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}
+
+
+Log in using an anonymous account. 
+
+Logging in is mandatory after connecting to the server. Users that are not logged in cannot perform any operation.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!login@{login}}
+\index{login@{login}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::login (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a686262bc377584cd50e52e1576aa3a9b}
+
+
+Log in using an anonymous account. 
+
+Logging in is mandatory after connecting to the server. Users that are not logged in cannot perform any operation.
+
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!login@{login}}
+\index{login@{login}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::login (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name, }
+\item[{{\bf const} std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}
+
+
+Log in using a username and a password. 
+
+Logging in is mandatory after connecting to the server. Users that are not logged in cannot perform any operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & User name \\
+\hline
+{\em password} & Password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!login@{login}}
+\index{login@{login}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{login}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::login (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{name, }
+\item[{{\bf const} std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a99d8114793c1659e9d51d45cecdcd965}
+
+
+Log in using a username and a password. 
+
+Logging in is mandatory after connecting to the server. Users that are not logged in cannot perform any operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & User name \\
+\hline
+{\em password} & Password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!parent\-Directory@{parent\-Directory}}
+\index{parent\-Directory@{parent\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{parent\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::parent\-Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}
+
+
+Go to the parent directory of the current one. 
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!parent\-Directory@{parent\-Directory}}
+\index{parent\-Directory@{parent\-Directory}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{parent\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::parent\-Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_ad295cf77f30f9ad07b5c401fd9849189}
+
+
+Go to the parent directory of the current one. 
+
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a79c654fcdd0c81e68c4fa29af3b45e0c}{get\-Working\-Directory}, \hyperlink{classsf_1_1_ftp_a8f37258e461fcb9e2a0655e9df0be4a0}{get\-Directory\-Listing}, \hyperlink{classsf_1_1_ftp_a7e93488ea6330dd4dd76e428da9bb6d3}{change\-Directory} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!rename\-File@{rename\-File}}
+\index{rename\-File@{rename\-File}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{rename\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::rename\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{file, }
+\item[{{\bf const} std\-::string \&}]{new\-Name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}
+
+
+Rename an existing file. 
+
+The filenames must be relative to the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to rename \\
+\hline
+{\em new\-Name} & New name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{delete\-File} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!rename\-File@{rename\-File}}
+\index{rename\-File@{rename\-File}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{rename\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::rename\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{file, }
+\item[{{\bf const} std\-::string \&}]{new\-Name}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a8f99251d7153e1dc26723e4006deb764}
+
+
+Rename an existing file. 
+
+The filenames must be relative to the current working directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to rename \\
+\hline
+{\em new\-Name} & New name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a8aa272b0eb7769a850006e70fcad370f}{delete\-File} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!send\-Command@{send\-Command}}
+\index{send\-Command@{send\-Command}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{send\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::send\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{command, }
+\item[{{\bf const} std\-::string \&}]{parameter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}
+
+
+Send a command to the F\-T\-P server. 
+
+While the most often used commands are provided as member functions in the \hyperlink{classsf_1_1_ftp}{sf\-::\-Ftp} class, this method can be used to send any F\-T\-P command to the server. If the command requires one or more parameters, they can be specified in {\itshape parameter}. If the server returns information, you can extract it from the response using \hyperlink{classsf_1_1_ftp_1_1_response_a0015675c528a4a84a671484b9e5499d6}{Response\-::get\-Message()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to send \\
+\hline
+{\em parameter} & Command parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!send\-Command@{send\-Command}}
+\index{send\-Command@{send\-Command}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{send\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::send\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{command, }
+\item[{{\bf const} std\-::string \&}]{parameter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a44e095103ecbce175a33eaf0820440ff}
+
+
+Send a command to the F\-T\-P server. 
+
+While the most often used commands are provided as member functions in the \hyperlink{classsf_1_1_ftp}{sf\-::\-Ftp} class, this method can be used to send any F\-T\-P command to the server. If the command requires one or more parameters, they can be specified in {\itshape parameter}. If the server returns information, you can extract it from the response using \hyperlink{classsf_1_1_ftp_1_1_response_a0015675c528a4a84a671484b9e5499d6}{Response\-::get\-Message()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to send \\
+\hline
+{\em parameter} & Command parameter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!upload@{upload}}
+\index{upload@{upload}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{upload}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::upload (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{local\-File, }
+\item[{{\bf const} std\-::string \&}]{remote\-Path, }
+\item[{{\bf Transfer\-Mode}}]{mode = {\ttfamily {\bf Binary}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}
+
+
+Upload a file to the server. 
+
+The name of the local file is relative to the current working directory of your application, and the remote path is relative to the current directory of the F\-T\-P server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\-File} & Path of the local file to upload \\
+\hline
+{\em remote\-Path} & The directory in which to put the file on the server \\
+\hline
+{\em mode} & Transfer mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{download} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!upload@{upload}}
+\index{upload@{upload}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{upload}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Response} sf\-::\-Ftp\-::upload (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{local\-File, }
+\item[{{\bf const} std\-::string \&}]{remote\-Path, }
+\item[{{\bf Transfer\-Mode}}]{mode = {\ttfamily {\bf Binary}}}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_ftp_a46d6e15cddd719288b5a08b685e11765}
+
+
+Upload a file to the server. 
+
+The name of the local file is relative to the current working directory of your application, and the remote path is relative to the current directory of the F\-T\-P server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\-File} & Path of the local file to upload \\
+\hline
+{\em remote\-Path} & The directory in which to put the file on the server \\
+\hline
+{\em mode} & Transfer mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server response to the request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_ftp_a20c1600ec5fd6f5a2ad1429ab8aa5df4}{download} 
+\end{DoxySeeAlso}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classsf_1_1_ftp_aafee9e6471e9ba6590613dc367c65503}{\index{sf\-::\-Ftp@{sf\-::\-Ftp}!Data\-Channel@{Data\-Channel}}
+\index{Data\-Channel@{Data\-Channel}!sf::Ftp@{sf\-::\-Ftp}}
+\subsubsection[{Data\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}Data\-Channel\hspace{0.3cm}{\ttfamily [friend]}}}\label{classsf_1_1_ftp_aafee9e6471e9ba6590613dc367c65503}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-Network/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_network_2_ftp_8hpp}{Ftp.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,286 @@
+\hypertarget{window_8h}{\section{lib/lapin/dep/lapin/window.h File Reference}
+\label{window_8h}\index{lib/lapin/dep/lapin/window.\-h@{lib/lapin/dep/lapin/window.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__window}{s\-\_\-bunny\-\_\-window}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__window}{s\-\_\-bunny\-\_\-window} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window}
+\item 
+typedef enum \hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9}{e\-\_\-bunny\-\_\-window\-\_\-style} \hyperlink{window_8h_a0454dd25b63995ed532c1cd5dcd343e4}{t\-\_\-bunny\-\_\-window\-\_\-style}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9}{e\-\_\-bunny\-\_\-window\-\_\-style} \{ \\*
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a2fcf3c9ce3f39ff118fc4e667c4e2cc6}{N\-O\-\_\-\-B\-O\-R\-D\-E\-R} = 0, 
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ac71a6abc011bb153511f925db520d651}{T\-I\-T\-L\-E\-B\-A\-R} = 1, 
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a794e3246733ba8466d1d581f5f46a2b3}{R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N} = 2, 
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a6ef66813848f4e498d4d287ba35b3266}{C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N} = 4, 
+\\*
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a5f039f23ee85ddea038ca1ab88ca6755}{F\-U\-L\-L\-S\-C\-R\-E\-E\-N} = 9, 
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab7414ec7b9ac78538cf2dd03073a81c1}{D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E} = T\-I\-T\-L\-E\-B\-A\-R $\vert$ R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N $\vert$ C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N, 
+\hyperlink{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab3e1eff02eaf48bffcee57e05867193e}{A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G} = 16
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$ \hyperlink{window_8h_a7e7b5c288f76371a901e9d506eefdfdf}{bunny\-\_\-start} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} wid, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} hei, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} ful, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$nam)
+\item 
+void \hyperlink{window_8h_aa8da7e7fd1f07b4d085b5124b01cad77}{bunny\-\_\-stop} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\item 
+void \hyperlink{window_8h_add09107175d696be5ce80acb956c9361}{bunny\-\_\-display} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{placement_8h_a5fa5b3645e929a3786e814f837f3a738}{t\-\_\-bunny\-\_\-size} $\ast$ \hyperlink{window_8h_a5632ee4b262390d284f7dd96fd7617be}{bunny\-\_\-get\-\_\-screen\-\_\-resolution} (void)
+\item 
+\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$ \hyperlink{window_8h_a5a93b7a75f548d2fd57d9eaa2296bf41}{bunny\-\_\-start\-\_\-style} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} wid, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} hei, \hyperlink{window_8h_a0454dd25b63995ed532c1cd5dcd343e4}{t\-\_\-bunny\-\_\-window\-\_\-style} sty, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$nam)
+\item 
+void \hyperlink{window_8h_a296e720b4732a4638b546b88d5fc9311}{bunny\-\_\-set\-\_\-key\-\_\-repeat} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} active)
+\item 
+void \hyperlink{window_8h_a9abd4b83d05f733e86cc6c88bfb64ef7}{bunny\-\_\-set\-\_\-mouse\-\_\-visibility} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} visible)
+\item 
+void \hyperlink{window_8h_aa2a01bef244f24c84ef2c7f2f7f3bc7c}{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y)
+\item 
+void \hyperlink{window_8h_a2c6cda9903b1535254e7e40ab18799fb}{bunny\-\_\-set\-\_\-mouse\-\_\-position} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} x, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} y)
+\item 
+void \hyperlink{window_8h_ac46cc6f9583983531d5a37d396ca711e}{bunny\-\_\-request\-\_\-focus} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win})
+\item 
+void \hyperlink{window_8h_ab57b3fc875fc67a2dd4dae41b7f0cf29}{bunny\-\_\-move\-\_\-window} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} pos)
+\item 
+void \hyperlink{window_8h_aa74c77c7315030aec53d836186fb7aba}{bunny\-\_\-resize\-\_\-window} (\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window} $\ast$\hyperlink{_ndk_8cpp_a3b51c79a7f111d2be9d347ac9bfe3abd}{win}, \hyperlink{placement_8h_a5fa5b3645e929a3786e814f837f3a738}{t\-\_\-bunny\-\_\-size} siz)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The window module contains what you need to open, close and manipulates windows. Getting informations from the system and control a few elements from it like mouse is also in this module. 
+
+\subsection{Typedef Documentation}
+\hypertarget{window_8h_a962ea29731c474a667f24a5f9624b4b1}{\index{window.\-h@{window.\-h}!t\-\_\-bunny\-\_\-window@{t\-\_\-bunny\-\_\-window}}
+\index{t\-\_\-bunny\-\_\-window@{t\-\_\-bunny\-\_\-window}!window.h@{window.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-window}				 {\bf t\-\_\-bunny\-\_\-window}}}\label{window_8h_a962ea29731c474a667f24a5f9624b4b1}
+The t\-\_\-bunny\-\_\-window represents an opened window. It contains a t\-\_\-bunny\-\_\-buffer with size informations and also a name. \hypertarget{window_8h_a0454dd25b63995ed532c1cd5dcd343e4}{\index{window.\-h@{window.\-h}!t\-\_\-bunny\-\_\-window\-\_\-style@{t\-\_\-bunny\-\_\-window\-\_\-style}}
+\index{t\-\_\-bunny\-\_\-window\-\_\-style@{t\-\_\-bunny\-\_\-window\-\_\-style}!window.h@{window.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-window\-\_\-style}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-window\-\_\-style}				 {\bf t\-\_\-bunny\-\_\-window\-\_\-style}}}\label{window_8h_a0454dd25b63995ed532c1cd5dcd343e4}
+The t\-\_\-bunny\-\_\-window\-\_\-style enumeration is a collection of values that will allow you, throught the bunny\-\_\-start\-\_\-style function, to open a window with a specific aspect. You can mix these values thanks to a binary or $\vert$. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9}{\index{window.\-h@{window.\-h}!e\-\_\-bunny\-\_\-window\-\_\-style@{e\-\_\-bunny\-\_\-window\-\_\-style}}
+\index{e\-\_\-bunny\-\_\-window\-\_\-style@{e\-\_\-bunny\-\_\-window\-\_\-style}!window.h@{window.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-window\-\_\-style}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-window\-\_\-style}}}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9}
+The t\-\_\-bunny\-\_\-window\-\_\-style enumeration is a collection of values that will allow you, throught the bunny\-\_\-start\-\_\-style function, to open a window with a specific aspect. You can mix these values thanks to a binary or $\vert$. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\-O\-\_\-\-B\-O\-R\-D\-E\-R@{N\-O\-\_\-\-B\-O\-R\-D\-E\-R}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!N\-O\-\_\-\-B\-O\-R\-D\-E\-R@{N\-O\-\_\-\-B\-O\-R\-D\-E\-R}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a2fcf3c9ce3f39ff118fc4e667c4e2cc6}{N\-O\-\_\-\-B\-O\-R\-D\-E\-R}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a2fcf3c9ce3f39ff118fc4e667c4e2cc6}
+}]\index{T\-I\-T\-L\-E\-B\-A\-R@{T\-I\-T\-L\-E\-B\-A\-R}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!T\-I\-T\-L\-E\-B\-A\-R@{T\-I\-T\-L\-E\-B\-A\-R}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ac71a6abc011bb153511f925db520d651}{T\-I\-T\-L\-E\-B\-A\-R}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ac71a6abc011bb153511f925db520d651}
+}]\index{R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N@{R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N@{R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a794e3246733ba8466d1d581f5f46a2b3}{R\-E\-S\-I\-Z\-E\-\_\-\-B\-U\-T\-T\-O\-N}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a794e3246733ba8466d1d581f5f46a2b3}
+}]\index{C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N@{C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N@{C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a6ef66813848f4e498d4d287ba35b3266}{C\-L\-O\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a6ef66813848f4e498d4d287ba35b3266}
+}]\index{F\-U\-L\-L\-S\-C\-R\-E\-E\-N@{F\-U\-L\-L\-S\-C\-R\-E\-E\-N}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!F\-U\-L\-L\-S\-C\-R\-E\-E\-N@{F\-U\-L\-L\-S\-C\-R\-E\-E\-N}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a5f039f23ee85ddea038ca1ab88ca6755}{F\-U\-L\-L\-S\-C\-R\-E\-E\-N}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9a5f039f23ee85ddea038ca1ab88ca6755}
+}]\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab7414ec7b9ac78538cf2dd03073a81c1}{D\-E\-F\-A\-U\-L\-T\-\_\-\-W\-I\-N\-\_\-\-S\-T\-Y\-L\-E}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab7414ec7b9ac78538cf2dd03073a81c1}
+}]\index{A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G@{A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G}!window.\-h@{window.\-h}}\index{window.\-h@{window.\-h}!A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G@{A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G}}\item[{\em 
+\hypertarget{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab3e1eff02eaf48bffcee57e05867193e}{A\-N\-T\-I\-A\-L\-I\-A\-S\-I\-N\-G}\label{window_8h_ad0740c3aa517ffc2aae9d5b33d2e83f9ab3e1eff02eaf48bffcee57e05867193e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{window_8h_add09107175d696be5ce80acb956c9361}{\index{window.\-h@{window.\-h}!bunny\-\_\-display@{bunny\-\_\-display}}
+\index{bunny\-\_\-display@{bunny\-\_\-display}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-display (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}\label{window_8h_add09107175d696be5ce80acb956c9361}
+Refresh the content of the window on screen. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window to refresh. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_a5632ee4b262390d284f7dd96fd7617be}{\index{window.\-h@{window.\-h}!bunny\-\_\-get\-\_\-screen\-\_\-resolution@{bunny\-\_\-get\-\_\-screen\-\_\-resolution}}
+\index{bunny\-\_\-get\-\_\-screen\-\_\-resolution@{bunny\-\_\-get\-\_\-screen\-\_\-resolution}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-screen\-\_\-resolution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-size}$\ast$ bunny\-\_\-get\-\_\-screen\-\_\-resolution (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a5632ee4b262390d284f7dd96fd7617be}
+Return the current resolution of the screen/desktop. This size is valid as fullscreen window resolution. \begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-size with x and y fields for width and height of the screen. 
+\end{DoxyReturn}
+\hypertarget{window_8h_ab57b3fc875fc67a2dd4dae41b7f0cf29}{\index{window.\-h@{window.\-h}!bunny\-\_\-move\-\_\-window@{bunny\-\_\-move\-\_\-window}}
+\index{bunny\-\_\-move\-\_\-window@{bunny\-\_\-move\-\_\-window}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-move\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-move\-\_\-window (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{{\bf t\-\_\-bunny\-\_\-position}}]{pos}
+\end{DoxyParamCaption}
+)}}\label{window_8h_ab57b3fc875fc67a2dd4dae41b7f0cf29}
+Ask the system to move the window on the desktop. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window to move. \\
+\hline
+{\em pos} & The position on the desktop. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_ac46cc6f9583983531d5a37d396ca711e}{\index{window.\-h@{window.\-h}!bunny\-\_\-request\-\_\-focus@{bunny\-\_\-request\-\_\-focus}}
+\index{bunny\-\_\-request\-\_\-focus@{bunny\-\_\-request\-\_\-focus}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-request\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-request\-\_\-focus (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}\label{window_8h_ac46cc6f9583983531d5a37d396ca711e}
+Ask to the system the focus for the current window. The system may refuse. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window that need the focus. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_aa74c77c7315030aec53d836186fb7aba}{\index{window.\-h@{window.\-h}!bunny\-\_\-resize\-\_\-window@{bunny\-\_\-resize\-\_\-window}}
+\index{bunny\-\_\-resize\-\_\-window@{bunny\-\_\-resize\-\_\-window}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-resize\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-resize\-\_\-window (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{{\bf t\-\_\-bunny\-\_\-size}}]{siz}
+\end{DoxyParamCaption}
+)}}\label{window_8h_aa74c77c7315030aec53d836186fb7aba}
+Resize the sent window. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window to resize. \\
+\hline
+{\em siz} & The new size of the window \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_a296e720b4732a4638b546b88d5fc9311}{\index{window.\-h@{window.\-h}!bunny\-\_\-set\-\_\-key\-\_\-repeat@{bunny\-\_\-set\-\_\-key\-\_\-repeat}}
+\index{bunny\-\_\-set\-\_\-key\-\_\-repeat@{bunny\-\_\-set\-\_\-key\-\_\-repeat}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-key\-\_\-repeat}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-key\-\_\-repeat (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{{\bf bool}}]{active}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a296e720b4732a4638b546b88d5fc9311}
+The bunny\-\_\-set\-\_\-key\-\_\-repeat function activate or deactivate the key repetition when someone is holding a key pressed down. The repetition is useful in software where typing text is needed. In video game, it should be disabled. The key repeat is true by default. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window where to activate or deactivate the key repetition. \\
+\hline
+{\em active} & True to active, false to disable. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_a2c6cda9903b1535254e7e40ab18799fb}{\index{window.\-h@{window.\-h}!bunny\-\_\-set\-\_\-mouse\-\_\-position@{bunny\-\_\-set\-\_\-mouse\-\_\-position}}
+\index{bunny\-\_\-set\-\_\-mouse\-\_\-position@{bunny\-\_\-set\-\_\-mouse\-\_\-position}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-mouse\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-mouse\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{y}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a2c6cda9903b1535254e7e40ab18799fb}
+Place the mouse cursor at the sent position, relatively to the top left corner of the desktop. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The horizontal position where the cursor will be moved. \\
+\hline
+{\em y} & The horizontal position where the cursor will be moved. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_aa2a01bef244f24c84ef2c7f2f7f3bc7c}{\index{window.\-h@{window.\-h}!bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window@{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window}}
+\index{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window@{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{{\bf int}}]{x, }
+\item[{{\bf int}}]{y}
+\end{DoxyParamCaption}
+)}}\label{window_8h_aa2a01bef244f24c84ef2c7f2f7f3bc7c}
+Place the mouse cursor at the sent position, relatively to the top left corner of the sent window. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window on which you wish to set the mouse position. \\
+\hline
+{\em x} & The horizontal position where the cursor will be moved. \\
+\hline
+{\em y} & The vertical position where the cursor will be moved. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_a9abd4b83d05f733e86cc6c88bfb64ef7}{\index{window.\-h@{window.\-h}!bunny\-\_\-set\-\_\-mouse\-\_\-visibility@{bunny\-\_\-set\-\_\-mouse\-\_\-visibility}}
+\index{bunny\-\_\-set\-\_\-mouse\-\_\-visibility@{bunny\-\_\-set\-\_\-mouse\-\_\-visibility}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-mouse\-\_\-visibility}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-mouse\-\_\-visibility (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win, }
+\item[{{\bf bool}}]{visible}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a9abd4b83d05f733e86cc6c88bfb64ef7}
+The bunny\-\_\-set\-\_\-mouse\-\_\-visibility function make the mouse appeir or disappeir when moving on the top of a sent window. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window where to change the mouse visibility \\
+\hline
+{\em True} & to make the mouse appeir when on top of win, false to make hidden it. \\
+\hline
+\end{DoxyParams}
+\hypertarget{window_8h_a7e7b5c288f76371a901e9d506eefdfdf}{\index{window.\-h@{window.\-h}!bunny\-\_\-start@{bunny\-\_\-start}}
+\index{bunny\-\_\-start@{bunny\-\_\-start}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-window}$\ast$ bunny\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{wid, }
+\item[{{\bf unsigned} {\bf int}}]{hei, }
+\item[{{\bf bool}}]{ful, }
+\item[{{\bf const} char $\ast$}]{nam}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a7e7b5c288f76371a901e9d506eefdfdf}
+Open a new window. The function need informations about size, if the window must be fullscreen or not and its name. If the window must be opened in a fullscreen fashion, then, its size must match a valid fullscreen resolution. It highly depends of the system your program will run, but a lot of standards resolution work everywhere\-:
+\begin{DoxyItemize}
+\item 640x480 -\/ 800x600 -\/ 1024x768 . . . 1920x1080, for example 
+\begin{DoxyParams}{Parameters}
+{\em wid} & The width of the new window \\
+\hline
+{\em hei} & The height of the new window \\
+\hline
+{\em ful} & If the window must be opened fullscreen (true) or not (false). \\
+\hline
+{\em nam} & The name of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer on a t\-\_\-bunny\-\_\-window. Returns N\-U\-L\-L on error. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{window_8h_a5a93b7a75f548d2fd57d9eaa2296bf41}{\index{window.\-h@{window.\-h}!bunny\-\_\-start\-\_\-style@{bunny\-\_\-start\-\_\-style}}
+\index{bunny\-\_\-start\-\_\-style@{bunny\-\_\-start\-\_\-style}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-start\-\_\-style}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-window}$\ast$ bunny\-\_\-start\-\_\-style (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{wid, }
+\item[{{\bf unsigned} {\bf int}}]{hei, }
+\item[{{\bf t\-\_\-bunny\-\_\-window\-\_\-style}}]{sty, }
+\item[{{\bf const} char $\ast$}]{nam}
+\end{DoxyParamCaption}
+)}}\label{window_8h_a5a93b7a75f548d2fd57d9eaa2296bf41}
+bunny\-\_\-start\-\_\-style works the same way as bunny\-\_\-start but allow you to specify more precisly the aspect of the window you need. See bunny\-\_\-start for more informations. 
+\begin{DoxyParams}{Parameters}
+{\em wid} & The width of the window. \\
+\hline
+{\em hei} & The height of the window. \\
+\hline
+{\em sty} & The style of the window. May be any t\-\_\-bunny\-\_\-window\-\_\-style values or any composition made with these value. Note that F\-U\-L\-L\-S\-C\-R\-E\-E\-N must be exclusive. \\
+\hline
+{\em nam} & The name of the window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer on a t\-\_\-bunny\-\_\-window. Returns N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{window_8h_aa8da7e7fd1f07b4d085b5124b01cad77}{\index{window.\-h@{window.\-h}!bunny\-\_\-stop@{bunny\-\_\-stop}}
+\index{bunny\-\_\-stop@{bunny\-\_\-stop}!window.h@{window.\-h}}
+\subsubsection[{bunny\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-stop (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-window} $\ast$}]{win}
+\end{DoxyParamCaption}
+)}}\label{window_8h_aa8da7e7fd1f07b4d085b5124b01cad77}
+Destroy the given window. Restore the previous resolution if the window was fullscreen and if the resolution was changed when it was launched. 
+\begin{DoxyParams}{Parameters}
+{\em win} & The window to destroy. \\
+\hline
+\end{DoxyParams}

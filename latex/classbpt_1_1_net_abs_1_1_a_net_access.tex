@@ -1,0 +1,222 @@
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access}{\section{bpt\-:\-:Net\-Abs\-:\-:A\-Net\-Access Class Reference}
+\label{classbpt_1_1_net_abs_1_1_a_net_access}\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+}
+
+
+{\ttfamily \#include $<$A\-Net\-Access.\-hpp$>$}
+
+Inheritance diagram for bpt\-:\-:Net\-Abs\-:\-:A\-Net\-Access\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classbpt_1_1_net_abs_1_1_a_net_access}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} $\ast$ \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a704ebe8ad1301c925fd457208d873267}{New\-Info} (void)
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_ab9d3a7d419e31c11605b73f8c256dac9}{Open\-Socket} (\hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a4464fb7197d6a70c84c93aadaae560f6}{Protocol} protocol, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&port, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&ip=\char`\"{}\char`\"{}) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a41ce9143a1101150acc9f8755ed83dc3}{Bind} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a3af04974bf3fe002d622900f35598b27}{Listen} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} $\ast$ \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_aa6e3e1919e1691fd78b47883826fbbc5}{Accept} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&newinfo) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a9aa09d429a6fb7b83abdea96622ebcee}{Close} (\hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_ae5a8cad46f8006b85b535f126b697efc}{Socket} \&socket) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_aa849c5661a3548f5eca797839270a973}{Connect} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a0a3533d154ef0d28da658d4d940ec28f}{Recv\-From} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info, char $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} $\ast$newinfo=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_aa9e29deb2022f7eb601554990a8d452a}{Send\-To} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} \&master\-\_\-info, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} len, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_info}{Info} $\ast$info=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a3324f59b90393e765198fddbc5f6d144}{Select} (\hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_ae5a8cad46f8006b85b535f126b697efc}{Socket} \hyperlink{curses_8priv_8h_affe776513b24d84b39af8ab0930fef7f}{max}, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_watched_socket}{Watched\-Socket} $\ast$read=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_watched_socket}{Watched\-Socket} $\ast$write=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_1_1_watched_socket}{Watched\-Socket} $\ast$exception=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}, \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a0bbbaf7492f6c93185acd8b359a347d1}{Delay} $\ast$delay=\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\item 
+\hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_a4baab577685f9a020bffd796cd16aacc}{A\-Net\-Access} (void)
+\item 
+virtual \hyperlink{classbpt_1_1_net_abs_1_1_a_net_access_aa7c691a088c3079e19c8c1fe8d484d33}{$\sim$\-A\-Net\-Access} (void)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a4baab577685f9a020bffd796cd16aacc}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!A\-Net\-Access@{A\-Net\-Access}}
+\index{A\-Net\-Access@{A\-Net\-Access}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{A\-Net\-Access}]{\setlength{\rightskip}{0pt plus 5cm}bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-A\-Net\-Access (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a4baab577685f9a020bffd796cd16aacc}
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_aa7c691a088c3079e19c8c1fe8d484d33}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!$\sim$\-A\-Net\-Access@{$\sim$\-A\-Net\-Access}}
+\index{$\sim$\-A\-Net\-Access@{$\sim$\-A\-Net\-Access}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{$\sim$\-A\-Net\-Access}]{\setlength{\rightskip}{0pt plus 5cm}virtual bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::$\sim$\-A\-Net\-Access (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_aa7c691a088c3079e19c8c1fe8d484d33}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_aa6e3e1919e1691fd78b47883826fbbc5}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Accept@{Accept}}
+\index{Accept@{Accept}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Accept}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Info}$\ast$ bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Accept (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info, }
+\item[{{\bf Info} \&}]{newinfo}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_aa6e3e1919e1691fd78b47883826fbbc5}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a265382fbdec811b69eb6580863fd95b6}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a7349321957d773a3402e102a26cb5745}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a41ce9143a1101150acc9f8755ed83dc3}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Bind@{Bind}}
+\index{Bind@{Bind}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Bind}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Bind (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a41ce9143a1101150acc9f8755ed83dc3}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_ab4babd68c6e19916da11ab1b9bd24b19}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a81684ad7585728b70476d884d0aa5efb}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a9aa09d429a6fb7b83abdea96622ebcee}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Close@{Close}}
+\index{Close@{Close}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} \&}]{socket}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a9aa09d429a6fb7b83abdea96622ebcee}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a59dd021671ae67a45345e0562b2fd301}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a133e0a7dd782f2ca9a3df8914dc4ec71}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_aa849c5661a3548f5eca797839270a973}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Connect@{Connect}}
+\index{Connect@{Connect}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Connect}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Connect (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_aa849c5661a3548f5eca797839270a973}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_af621f2a00ba43eb77149afb08c0c09d0}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_aba17ffc8b3deefb7543b4ff3a2a8fecb}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a3af04974bf3fe002d622900f35598b27}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Listen@{Listen}}
+\index{Listen@{Listen}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Listen}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Listen (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a3af04974bf3fe002d622900f35598b27}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_ade0377433ef800f4926fa26f823fee70}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a3438a35a8da8354c6cb26e3c80886248}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a704ebe8ad1301c925fd457208d873267}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!New\-Info@{New\-Info}}
+\index{New\-Info@{New\-Info}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{New\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Info}$\ast$ bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-New\-Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a704ebe8ad1301c925fd457208d873267}
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_ab9d3a7d419e31c11605b73f8c256dac9}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Open\-Socket@{Open\-Socket}}
+\index{Open\-Socket@{Open\-Socket}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Open\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Open\-Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf Protocol}}]{protocol, }
+\item[{{\bf Info} \&}]{master\-\_\-info, }
+\item[{{\bf const} std\-::string \&}]{port, }
+\item[{{\bf const} std\-::string \&}]{ip = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_ab9d3a7d419e31c11605b73f8c256dac9}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_ad81e355a67a36d1049d9cc3cc2a83a07}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a5d2d121e83ff058f5ee521d8a81d3992}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a0a3533d154ef0d28da658d4d940ec28f}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Recv\-From@{Recv\-From}}
+\index{Recv\-From@{Recv\-From}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Recv\-From}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf unsigned} {\bf int} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Recv\-From (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info, }
+\item[{char $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{len, }
+\item[{{\bf Info} $\ast$}]{newinfo = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a0a3533d154ef0d28da658d4d940ec28f}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a94eec68d89dcef755d303fc425f9a434}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a7be7d2f2cf769b9b83f0664768c945b0}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_a3324f59b90393e765198fddbc5f6d144}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Select@{Select}}
+\index{Select@{Select}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Select}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Select (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket}}]{max, }
+\item[{{\bf Watched\-Socket} $\ast$}]{read = {\ttfamily {\bf N\-U\-L\-L}}, }
+\item[{{\bf Watched\-Socket} $\ast$}]{write = {\ttfamily {\bf N\-U\-L\-L}}, }
+\item[{{\bf Watched\-Socket} $\ast$}]{exception = {\ttfamily {\bf N\-U\-L\-L}}, }
+\item[{{\bf Delay} $\ast$}]{delay = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_a3324f59b90393e765198fddbc5f6d144}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a8b01c8101a5d0439bbe7bc800e9e721f}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a3bcaf101474e0a9d214140038eb0ae19}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+\hypertarget{classbpt_1_1_net_abs_1_1_a_net_access_aa9e29deb2022f7eb601554990a8d452a}{\index{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}!Send\-To@{Send\-To}}
+\index{Send\-To@{Send\-To}!bpt::NetAbs::ANetAccess@{bpt\-::\-Net\-Abs\-::\-A\-Net\-Access}}
+\subsubsection[{Send\-To}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf unsigned} {\bf int} bpt\-::\-Net\-Abs\-::\-A\-Net\-Access\-::\-Send\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Info} \&}]{master\-\_\-info, }
+\item[{{\bf const} char $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{len, }
+\item[{{\bf const} {\bf Info} $\ast$}]{info = {\ttfamily {\bf N\-U\-L\-L}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classbpt_1_1_net_abs_1_1_a_net_access_aa9e29deb2022f7eb601554990a8d452a}
+
+
+Implements \hyperlink{classbpt_1_1_net_abs_1_1_i_net_access_a198eeff6f48aab578ba8c5bf4bd09697}{bpt\-::\-Net\-Abs\-::\-I\-Net\-Access}.
+
+
+
+Implemented in \hyperlink{classbpt_1_1_net_abs_1_1_net_unix_a225d2b22fa769f6e3f09d287586289b1}{bpt\-::\-Net\-Abs\-::\-Net\-Unix}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_a_net_access_8hpp}{A\-Net\-Access.\-hpp}\end{DoxyCompactItemize}

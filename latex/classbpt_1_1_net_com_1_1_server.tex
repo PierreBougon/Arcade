@@ -1,0 +1,138 @@
+\hypertarget{classbpt_1_1_net_com_1_1_server}{\section{bpt\-:\-:Net\-Com\-:\-:Server Class Reference}
+\label{classbpt_1_1_net_com_1_1_server}\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}}
+}
+
+
+{\ttfamily \#include $<$Server.\-hpp$>$}
+
+Inheritance diagram for bpt\-:\-:Net\-Com\-:\-:Server\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classbpt_1_1_net_com_1_1_server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacebpt_1_1_net_com_af30d27373a967c6e6bcbf97963e2ab1d}{Communication} \& \hyperlink{classbpt_1_1_net_com_1_1_server_aaa0781df1b28b8f6f55bf7b4445bf9a9}{operator()} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{_ndk_8cpp_a174cf046f3b5dbb1258515b3f138b8c7}{timeout}=\hyperlink{_i_net_access_8hpp_a3376075b6c1085b71a316b5c03838992}{U\-M\-A\-X})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_a6a49e37492133b1a3608351e1cbbffa2}{Write} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$buffer, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} size, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} client=-\/1)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_aed780a441fb1a28176316ea71e9ff44b}{Any\-Full\-Packet} (void)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_a49cab35be59c448ab074bfff9686c361}{Kill\-Client} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} client)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_a12f8445f23fc2cee9fba6d80be011bf8}{Doom\-Client} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} client)
+\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classbpt_1_1_net_com_1_1_server_a3a201490e72856b033b52172a7ca9d30}{Get\-I\-P} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} usr)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_a9a27020be55075686ea85695b1e4c1db}{Start} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classbpt_1_1_net_com_1_1_server_a6d96755ef4082b108acbc07b48a6647b}{Stop} (void)
+\item 
+\hyperlink{classbpt_1_1_net_com_1_1_server_a154eccb991131f110adc7f1bad9ffc71}{Server} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port}=\char`\"{}\char`\"{})  throw (int)
+\item 
+\hyperlink{classbpt_1_1_net_com_1_1_server_a83f3820fc512482c4893b037b57d1f0c}{Server} (\hyperlink{namespacebpt_1_1_net_com_ae55ee05019d82af5d3cc17e7e0ebedff}{Packet\-Protocol} \hyperlink{classbpt_1_1_net_com_1_1_communicator_aac1e2e8c0b91c11f347c042e56f46041}{protocol}, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&\hyperlink{classbpt_1_1_net_com_1_1_communicator_a6b6676ed095581315ffc75dd7d9a1ceb}{port}=\char`\"{}\char`\"{})  throw (int)
+\item 
+virtual \hyperlink{classbpt_1_1_net_com_1_1_server_a4567255323f117920db4175e26fea252}{$\sim$\-Server} (void)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a154eccb991131f110adc7f1bad9ffc71}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Server@{Server}}
+\index{Server@{Server}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Server}]{\setlength{\rightskip}{0pt plus 5cm}bpt\-::\-Net\-Com\-::\-Server\-::\-Server (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{port = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) throw  {\bf int}) }}\label{classbpt_1_1_net_com_1_1_server_a154eccb991131f110adc7f1bad9ffc71}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a83f3820fc512482c4893b037b57d1f0c}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Server@{Server}}
+\index{Server@{Server}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Server}]{\setlength{\rightskip}{0pt plus 5cm}bpt\-::\-Net\-Com\-::\-Server\-::\-Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Packet\-Protocol}}]{protocol, }
+\item[{{\bf const} std\-::string \&}]{port = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) throw  {\bf int}) }}\label{classbpt_1_1_net_com_1_1_server_a83f3820fc512482c4893b037b57d1f0c}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a4567255323f117920db4175e26fea252}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!$\sim$\-Server@{$\sim$\-Server}}
+\index{$\sim$\-Server@{$\sim$\-Server}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{$\sim$\-Server}]{\setlength{\rightskip}{0pt plus 5cm}virtual bpt\-::\-Net\-Com\-::\-Server\-::$\sim$\-Server (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_server_a4567255323f117920db4175e26fea252}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpt_1_1_net_com_1_1_server_aed780a441fb1a28176316ea71e9ff44b}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Any\-Full\-Packet@{Any\-Full\-Packet}}
+\index{Any\-Full\-Packet@{Any\-Full\-Packet}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Any\-Full\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Any\-Full\-Packet (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_aed780a441fb1a28176316ea71e9ff44b}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a12f8445f23fc2cee9fba6d80be011bf8}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Doom\-Client@{Doom\-Client}}
+\index{Doom\-Client@{Doom\-Client}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Doom\-Client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Doom\-Client (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{client}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_a12f8445f23fc2cee9fba6d80be011bf8}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a3a201490e72856b033b52172a7ca9d30}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Get\-I\-P@{Get\-I\-P}}
+\index{Get\-I\-P@{Get\-I\-P}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Get\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} bpt\-::\-Net\-Com\-::\-Server\-::\-Get\-I\-P (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{usr}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_a3a201490e72856b033b52172a7ca9d30}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a49cab35be59c448ab074bfff9686c361}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Kill\-Client@{Kill\-Client}}
+\index{Kill\-Client@{Kill\-Client}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Kill\-Client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Kill\-Client (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{client}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_a49cab35be59c448ab074bfff9686c361}
+\hypertarget{classbpt_1_1_net_com_1_1_server_aaa0781df1b28b8f6f55bf7b4445bf9a9}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!operator()@{operator()}}
+\index{operator()@{operator()}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf const} {\bf Communication}\& bpt\-::\-Net\-Com\-::\-Server\-::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{timeout = {\ttfamily {\bf U\-M\-A\-X}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_server_aaa0781df1b28b8f6f55bf7b4445bf9a9}
+
+
+Implements \hyperlink{classbpt_1_1_net_com_1_1_communicator_ab7e2be99f24a3250c99b0c4230b73323}{bpt\-::\-Net\-Com\-::\-Communicator}.
+
+\hypertarget{classbpt_1_1_net_com_1_1_server_a9a27020be55075686ea85695b1e4c1db}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Start@{Start}}
+\index{Start@{Start}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Start (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{port}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_a9a27020be55075686ea85695b1e4c1db}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a6d96755ef4082b108acbc07b48a6647b}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Stop@{Stop}}
+\index{Stop@{Stop}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classbpt_1_1_net_com_1_1_server_a6d96755ef4082b108acbc07b48a6647b}
+\hypertarget{classbpt_1_1_net_com_1_1_server_a6a49e37492133b1a3608351e1cbbffa2}{\index{bpt\-::\-Net\-Com\-::\-Server@{bpt\-::\-Net\-Com\-::\-Server}!Write@{Write}}
+\index{Write@{Write}!bpt::NetCom::Server@{bpt\-::\-Net\-Com\-::\-Server}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bpt\-::\-Net\-Com\-::\-Server\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{buffer, }
+\item[{{\bf unsigned} {\bf int}}]{size, }
+\item[{{\bf unsigned} {\bf int}}]{client = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpt_1_1_net_com_1_1_server_a6a49e37492133b1a3608351e1cbbffa2}
+
+
+Implements \hyperlink{classbpt_1_1_net_com_1_1_communicator_a4c405127bb3b4ce96506a4750568d075}{bpt\-::\-Net\-Com\-::\-Communicator}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_server_8hpp}{Server.\-hpp}\end{DoxyCompactItemize}

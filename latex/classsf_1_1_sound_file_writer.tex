@@ -1,0 +1,192 @@
+\hypertarget{classsf_1_1_sound_file_writer}{\section{sf\-:\-:Sound\-File\-Writer Class Reference}
+\label{classsf_1_1_sound_file_writer}\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}}
+}
+
+
+Abstract base class for sound file encoding.  
+
+
+
+
+{\ttfamily \#include $<$Sound\-File\-Writer.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{$\sim$\-Sound\-File\-Writer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&filename, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} sample\-Rate, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} channel\-Count)=0
+\begin{DoxyCompactList}\small\item\em Open a sound file for writing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{write} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16} $\ast$samples, \hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64} count)=0
+\begin{DoxyCompactList}\small\item\em Write audio samples to the open file. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{$\sim$\-Sound\-File\-Writer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&filename, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} sample\-Rate, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} channel\-Count)=0
+\begin{DoxyCompactList}\small\item\em Open a sound file for writing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{write} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{Int16} $\ast$samples, \hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{Uint64} count)=0
+\begin{DoxyCompactList}\small\item\em Write audio samples to the open file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for sound file encoding. 
+
+This class allows users to write audio file formats not natively supported by S\-F\-M\-L, and thus extend the set of supported writable audio formats.
+
+A valid sound file writer must override the open and write functions, as well as providing a static check function; the latter is used by S\-F\-M\-L to find a suitable writer for a given filename.
+
+To register a new writer, use the \hyperlink{classsf_1_1_sound_file_factory_a3a59140e6ccf1f252f721b790eddd661}{sf\-::\-Sound\-File\-Factory\-::register\-Writer} template function.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keyword}{class }MySoundFileWriter : \textcolor{keyword}{public} \hyperlink{classsf_1_1_sound_file_writer}{sf::SoundFileWriter}
+\{
+\textcolor{keyword}{public}:
+
+    \textcolor{keyword}{static} \textcolor{keywordtype}{bool} check(\textcolor{keyword}{const} std::string& filename)
+    \{
+        \textcolor{comment}{// typically, check the extension}
+        \textcolor{comment}{// return true if the writer can handle the format}
+    \}
+
+    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \hyperlink{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{open}(\textcolor{keyword}{const} std::string& filename, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampleRate, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} channelCount)
+    \{
+        \textcolor{comment}{// open the file 'filename' for writing,}
+        \textcolor{comment}{// write the given sample rate and channel count to the file header}
+        \textcolor{comment}{// return true on success}
+    \}
+
+    \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{write}(\textcolor{keyword}{const} \hyperlink{namespacesf_a3c8e10435e2a310a7741755e66b5c94e}{sf::Int16}* samples, \hyperlink{namespacesf_add9ac83466d96b9f50a009b9f4064266}{sf::Uint64} count)
+    \{
+        \textcolor{comment}{// write 'count' samples stored at address 'samples',}
+        \textcolor{comment}{// convert them (for example to normalized float) if the format requires it}
+    \}
+\};
+
+sf::SoundFileFactory::registerWriter<MySoundFileWriter>();
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_output_sound_file}{sf\-::\-Output\-Sound\-File}, \hyperlink{classsf_1_1_sound_file_factory}{sf\-::\-Sound\-File\-Factory}, \hyperlink{classsf_1_1_sound_file_reader}{sf\-::\-Sound\-File\-Reader} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!$\sim$\-Sound\-File\-Writer@{$\sim$\-Sound\-File\-Writer}}
+\index{$\sim$\-Sound\-File\-Writer@{$\sim$\-Sound\-File\-Writer}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{$\sim$\-Sound\-File\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\-::\-Sound\-File\-Writer\-::$\sim$\-Sound\-File\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}
+
+
+Virtual destructor. 
+
+\hypertarget{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!$\sim$\-Sound\-File\-Writer@{$\sim$\-Sound\-File\-Writer}}
+\index{$\sim$\-Sound\-File\-Writer@{$\sim$\-Sound\-File\-Writer}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{$\sim$\-Sound\-File\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual sf\-::\-Sound\-File\-Writer\-::$\sim$\-Sound\-File\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classsf_1_1_sound_file_writer_a76944fc158688f35050bd5b592c90270}
+
+
+Virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!open@{open}}
+\index{open@{open}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} sf\-::\-Sound\-File\-Writer\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{filename, }
+\item[{{\bf unsigned} {\bf int}}]{sample\-Rate, }
+\item[{{\bf unsigned} {\bf int}}]{channel\-Count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}
+
+
+Open a sound file for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the file to open \\
+\hline
+{\em sample\-Rate} & Sample rate of the sound \\
+\hline
+{\em channel\-Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file was successfully opened 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!open@{open}}
+\index{open@{open}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf bool} sf\-::\-Sound\-File\-Writer\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{filename, }
+\item[{{\bf unsigned} {\bf int}}]{sample\-Rate, }
+\item[{{\bf unsigned} {\bf int}}]{channel\-Count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classsf_1_1_sound_file_writer_a5c92bcaaa880ef4d3eaab18dae1d3d07}
+
+
+Open a sound file for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the file to open \\
+\hline
+{\em sample\-Rate} & Sample rate of the sound \\
+\hline
+{\em channel\-Count} & Number of channels of the sound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the file was successfully opened 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!write@{write}}
+\index{write@{write}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void sf\-::\-Sound\-File\-Writer\-::write (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Int16} $\ast$}]{samples, }
+\item[{{\bf Uint64}}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}
+
+
+Write audio samples to the open file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}{\index{sf\-::\-Sound\-File\-Writer@{sf\-::\-Sound\-File\-Writer}!write@{write}}
+\index{write@{write}!sf::SoundFileWriter@{sf\-::\-Sound\-File\-Writer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void sf\-::\-Sound\-File\-Writer\-::write (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Int16} $\ast$}]{samples, }
+\item[{{\bf Uint64}}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classsf_1_1_sound_file_writer_a4ce597e7682d22c5b2c98d77e931a1da}
+
+
+Write audio samples to the open file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples} & Pointer to the sample array to write \\
+\hline
+{\em count} & Number of samples to write \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-Audio/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_audio_2_sound_file_writer_8hpp}{Sound\-File\-Writer.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,361 @@
+\hypertarget{network_8h}{\section{lib/lapin/dep/lapin/network.h File Reference}
+\label{network_8h}\index{lib/lapin/dep/lapin/network.\-h@{lib/lapin/dep/lapin/network.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__error}{s\-\_\-bunny\-\_\-error}
+\item 
+struct \hyperlink{structs__bunny__expired}{s\-\_\-bunny\-\_\-expired}
+\item 
+struct \hyperlink{structs__bunny__connected}{s\-\_\-bunny\-\_\-connected}
+\item 
+struct \hyperlink{structs__bunny__disconnected}{s\-\_\-bunny\-\_\-disconnected}
+\item 
+struct \hyperlink{structs__bunny__message}{s\-\_\-bunny\-\_\-message}
+\item 
+union \hyperlink{unionu__bunny__communication}{u\-\_\-bunny\-\_\-communication}
+\item 
+struct \hyperlink{structs__bunny__server}{s\-\_\-bunny\-\_\-server}
+\item 
+struct \hyperlink{structs__bunny__client}{s\-\_\-bunny\-\_\-client}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337d}{e\-\_\-bunny\-\_\-comtype} \hyperlink{network_8h_ac01621d0080b82d3bebc95c8338b24ce}{t\-\_\-bunny\-\_\-comtype}
+\item 
+typedef enum \hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196f}{e\-\_\-bunny\-\_\-comerror} \hyperlink{network_8h_adabfc6181c56bb211bb36b04c892ed6b}{t\-\_\-bunny\-\_\-comerror}
+\item 
+typedef struct \hyperlink{structs__bunny__error}{s\-\_\-bunny\-\_\-error} \hyperlink{network_8h_ac78e4fcb3c2044f557b3bb8e62078eab}{t\-\_\-bunny\-\_\-error}
+\item 
+typedef struct \hyperlink{structs__bunny__expired}{s\-\_\-bunny\-\_\-expired} \hyperlink{network_8h_af327a71bccc8f8d86c446a1bf3d78a2b}{t\-\_\-bunny\-\_\-expired}
+\item 
+typedef struct \hyperlink{structs__bunny__connected}{s\-\_\-bunny\-\_\-connected} \hyperlink{network_8h_aed705485393480b2d1008f924632b613}{t\-\_\-bunny\-\_\-connected}
+\item 
+typedef struct \hyperlink{structs__bunny__disconnected}{s\-\_\-bunny\-\_\-disconnected} \hyperlink{network_8h_abd0e42d86a4509a1acfbc111b27ae505}{t\-\_\-bunny\-\_\-disconnected}
+\item 
+typedef struct \hyperlink{structs__bunny__message}{s\-\_\-bunny\-\_\-message} \hyperlink{network_8h_ab76d939939694146c153bc27fca03484}{t\-\_\-bunny\-\_\-message}
+\item 
+typedef union \hyperlink{unionu__bunny__communication}{u\-\_\-bunny\-\_\-communication} \hyperlink{network_8h_a1491926c6886a47a9462045f5b9328fe}{t\-\_\-bunny\-\_\-communication}
+\item 
+typedef struct \hyperlink{structs__bunny__server}{s\-\_\-bunny\-\_\-server} \hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server}
+\item 
+typedef struct \hyperlink{structs__bunny__client}{s\-\_\-bunny\-\_\-client} \hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337d}{e\-\_\-bunny\-\_\-comtype} \{ \\*
+\hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337da2fd6f336d08340583bd620a7f5694c90}{E\-R\-R\-O\-R} = 0, 
+\hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337dad64c9726f24e01be64f489fe57967d56}{E\-X\-P\-I\-R\-E\-D} = 1, 
+\hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337daae09241b2eaf0cde865d93a1a9233a1b}{N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D} = 2, 
+\hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337da05088fe3c3ea776248fedc9a5c96aa2b}{N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D} = 3, 
+\\*
+\hyperlink{network_8h_a83fa4344692763c0b0f7ed04615d337dab3e6d7e18839259526a01001f558200f}{M\-E\-S\-S\-A\-G\-E} = 4
+ \}
+\item 
+enum \hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196f}{e\-\_\-bunny\-\_\-comerror} \{ \\*
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa0c323f91c1647f84a66429af8b425fe0}{S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L} = 0, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196faaeb55470698d7811a3c9f77ff7bf3f26}{S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L} = 1, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa6fba11b8b450a0722d51c26fe474a031}{A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L} = 2, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa796fa8284ff7b15524d8fe1ead842150}{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L} = 3, 
+\\*
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa5430fc9d2ab5df893a86c1755b82a673}{R\-E\-A\-D\-\_\-\-F\-A\-I\-L} = 4, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fabb98882f7e0238a6ec5db2c3aba45f47}{A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L} = 5, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fafed0c2406fed7e3c4647ed3ff82f6c9d}{G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L} = 6, 
+\hyperlink{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa1e3c8dca9cab43654c5f4eefa1ff5f65}{L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$ \hyperlink{network_8h_a250ab0c876a3aef463fd034239ac1fce}{bunny\-\_\-new\-\_\-server} (uint16\-\_\-t port)
+\item 
+void \hyperlink{network_8h_a6a5c590812c7a1e162555730270fd471}{bunny\-\_\-delete\-\_\-server} (\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$srv)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{network_8h_a1491926c6886a47a9462045f5b9328fe}{t\-\_\-bunny\-\_\-communication} $\ast$ \hyperlink{network_8h_a798c6322d2c75bdc4ba9ffeae85decba}{bunny\-\_\-server\-\_\-poll} (\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$srv, uint32\-\_\-t timout)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{network_8h_ab58c764a0f244b8696cbd6cc653ab835}{bunny\-\_\-server\-\_\-write} (\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$srv, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$dat, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} fd)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{network_8h_aa6c39e7f7b44a1594780ac3aa52690d1}{bunny\-\_\-server\-\_\-packet\-\_\-ready} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$srv)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{network_8h_a51271a6eb74fec42e74dc173f8caf8b3}{bunny\-\_\-server\-\_\-doom\-\_\-client} (\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server} $\ast$srv, \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} fd)
+\item 
+\hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client} $\ast$ \hyperlink{network_8h_a27275cddb41c2828843f8ebd3cf5f473}{bunny\-\_\-new\-\_\-client} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$host, uint16\-\_\-t port)
+\item 
+void \hyperlink{network_8h_aacfd6b205788513506dcfc6ae9370de3}{bunny\-\_\-delete\-\_\-client} (\hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client} $\ast$clt)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{network_8h_a1491926c6886a47a9462045f5b9328fe}{t\-\_\-bunny\-\_\-communication} $\ast$ \hyperlink{network_8h_af134ff5fa286ab1b93e62649e234eaa6}{bunny\-\_\-client\-\_\-poll} (\hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client} $\ast$clt, uint32\-\_\-t timout)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{network_8h_ae5d8106c7f2363f218e7835248968965}{bunny\-\_\-client\-\_\-write} (\hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client} $\ast$clt, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The network module contains facilities to create an asynchronous T\-C\-P server and a T\-C\-P client. 
+
+\subsection{Typedef Documentation}
+\hypertarget{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-client@{t\-\_\-bunny\-\_\-client}}
+\index{t\-\_\-bunny\-\_\-client@{t\-\_\-bunny\-\_\-client}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-client}				 {\bf t\-\_\-bunny\-\_\-client}}}\label{network_8h_a29fb0957aa8af615cea3cd23f54a0136}
+The t\-\_\-bunny\-\_\-client contains data abouth the T\-C\-P client. It starts with private fields you cannot access. The fd attribute is the file descriptor of the client. The host attribute is the I\-P of the server. The port attribute is the port we are talking with on the server. \hypertarget{network_8h_adabfc6181c56bb211bb36b04c892ed6b}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-comerror@{t\-\_\-bunny\-\_\-comerror}}
+\index{t\-\_\-bunny\-\_\-comerror@{t\-\_\-bunny\-\_\-comerror}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-comerror}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-comerror}				 {\bf t\-\_\-bunny\-\_\-comerror}}}\label{network_8h_adabfc6181c56bb211bb36b04c892ed6b}
+Errors that can occur when the polling is made. \hypertarget{network_8h_a1491926c6886a47a9462045f5b9328fe}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-communication@{t\-\_\-bunny\-\_\-communication}}
+\index{t\-\_\-bunny\-\_\-communication@{t\-\_\-bunny\-\_\-communication}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-communication}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf u\-\_\-bunny\-\_\-communication}				 {\bf t\-\_\-bunny\-\_\-communication}}}\label{network_8h_a1491926c6886a47a9462045f5b9328fe}
+The t\-\_\-bunny\-\_\-communication union contains every previous structure. In order to know which one is really in the union, you need to read comtype. The t\-\_\-bunny\-\_\-communication union is returned by polling functions. \hypertarget{network_8h_ac01621d0080b82d3bebc95c8338b24ce}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-comtype@{t\-\_\-bunny\-\_\-comtype}}
+\index{t\-\_\-bunny\-\_\-comtype@{t\-\_\-bunny\-\_\-comtype}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-comtype}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-comtype}				 {\bf t\-\_\-bunny\-\_\-comtype}}}\label{network_8h_ac01621d0080b82d3bebc95c8338b24ce}
+Five types of answers are possible when you poll a network element\-:
+\begin{DoxyItemize}
+\item An error happened
+\item Nothing happened
+\item A new connection has been opened
+\item A connection was closed
+\item A message was received There is currently no \char`\"{}\-Packet sent\char`\"{} notification. This enumeration is the incarnation of this mechanism. 
+\end{DoxyItemize}\hypertarget{network_8h_aed705485393480b2d1008f924632b613}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-connected@{t\-\_\-bunny\-\_\-connected}}
+\index{t\-\_\-bunny\-\_\-connected@{t\-\_\-bunny\-\_\-connected}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-connected}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-connected}				 {\bf t\-\_\-bunny\-\_\-connected}}}\label{network_8h_aed705485393480b2d1008f924632b613}
+This structure resumes all informations about the new connection that was opened. The time attribute is the remaining time before the polling was suppose to end. The fd attribute is the file descriptor of the connection. Do not try to read or write on it, use functions instead. \hypertarget{network_8h_abd0e42d86a4509a1acfbc111b27ae505}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-disconnected@{t\-\_\-bunny\-\_\-disconnected}}
+\index{t\-\_\-bunny\-\_\-disconnected@{t\-\_\-bunny\-\_\-disconnected}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-disconnected}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-disconnected}				 {\bf t\-\_\-bunny\-\_\-disconnected}}}\label{network_8h_abd0e42d86a4509a1acfbc111b27ae505}
+This structure resumes all informations about the connection that was lost. The time attribute is the remaining time before the polling was suppose to end. The fd attribute is the file descriptor of the connection that was closed. Do not use it, it is closed. \hypertarget{network_8h_ac78e4fcb3c2044f557b3bb8e62078eab}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-error@{t\-\_\-bunny\-\_\-error}}
+\index{t\-\_\-bunny\-\_\-error@{t\-\_\-bunny\-\_\-error}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-error}				 {\bf t\-\_\-bunny\-\_\-error}}}\label{network_8h_ac78e4fcb3c2044f557b3bb8e62078eab}
+This structure resumes all informations about the error that occured while polling. The time attribute is the remaining time before the polling was suppose to end. \hypertarget{network_8h_af327a71bccc8f8d86c446a1bf3d78a2b}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-expired@{t\-\_\-bunny\-\_\-expired}}
+\index{t\-\_\-bunny\-\_\-expired@{t\-\_\-bunny\-\_\-expired}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-expired}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-expired}				 {\bf t\-\_\-bunny\-\_\-expired}}}\label{network_8h_af327a71bccc8f8d86c446a1bf3d78a2b}
+This structure resumes all informations about the nothingness that happened while polling. The time attribute is the remaining time before the polling was suppose to end. In this case, it is 0. \hypertarget{network_8h_ab76d939939694146c153bc27fca03484}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-message@{t\-\_\-bunny\-\_\-message}}
+\index{t\-\_\-bunny\-\_\-message@{t\-\_\-bunny\-\_\-message}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-message}				 {\bf t\-\_\-bunny\-\_\-message}}}\label{network_8h_ab76d939939694146c153bc27fca03484}
+This structure resumes all informations about a received packet. The time attribute is the remaining time before the polling was suppose to end. The fd attribute if the file descriptor from where the message is coming. The size attribute is the size of the data. The buffer attribute is the received data. Its length is size. Duplicate it if you want to keep it. It will be freed by the system on the next polling. \hypertarget{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{\index{network.\-h@{network.\-h}!t\-\_\-bunny\-\_\-server@{t\-\_\-bunny\-\_\-server}}
+\index{t\-\_\-bunny\-\_\-server@{t\-\_\-bunny\-\_\-server}!network.h@{network.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-server}				 {\bf t\-\_\-bunny\-\_\-server}}}\label{network_8h_a57e833ed95d032a6fc1d0a13894cb895}
+The t\-\_\-bunny\-\_\-server contains data about the T\-C\-P server. It starts with private fields you cannot access. The fd attribute is the file descriptor of the server\-: the listening socket. The port attribute is the port where the server is listening. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196f}{\index{network.\-h@{network.\-h}!e\-\_\-bunny\-\_\-comerror@{e\-\_\-bunny\-\_\-comerror}}
+\index{e\-\_\-bunny\-\_\-comerror@{e\-\_\-bunny\-\_\-comerror}!network.h@{network.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-comerror}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-comerror}}}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196f}
+Errors that can occur when the polling is made. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L@{S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L@{S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa0c323f91c1647f84a66429af8b425fe0}{S\-Y\-S\-T\-E\-M\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa0c323f91c1647f84a66429af8b425fe0}
+}]\index{S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L@{S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L@{S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196faaeb55470698d7811a3c9f77ff7bf3f26}{S\-E\-L\-E\-C\-T\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196faaeb55470698d7811a3c9f77ff7bf3f26}
+}]\index{A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L@{A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L@{A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa6fba11b8b450a0722d51c26fe474a031}{A\-C\-C\-E\-P\-T\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa6fba11b8b450a0722d51c26fe474a031}
+}]\index{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L@{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L@{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa796fa8284ff7b15524d8fe1ead842150}{W\-R\-I\-T\-E\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa796fa8284ff7b15524d8fe1ead842150}
+}]\index{R\-E\-A\-D\-\_\-\-F\-A\-I\-L@{R\-E\-A\-D\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!R\-E\-A\-D\-\_\-\-F\-A\-I\-L@{R\-E\-A\-D\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa5430fc9d2ab5df893a86c1755b82a673}{R\-E\-A\-D\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa5430fc9d2ab5df893a86c1755b82a673}
+}]\index{A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L@{A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L@{A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fabb98882f7e0238a6ec5db2c3aba45f47}{A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fabb98882f7e0238a6ec5db2c3aba45f47}
+}]\index{G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L@{G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L@{G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fafed0c2406fed7e3c4647ed3ff82f6c9d}{G\-E\-T\-T\-I\-M\-E\-\_\-\-F\-A\-I\-L}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fafed0c2406fed7e3c4647ed3ff82f6c9d}
+}]\index{L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R@{L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R@{L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa1e3c8dca9cab43654c5f4eefa1ff5f65}{L\-A\-S\-T\-\_\-\-E\-R\-R\-O\-R}\label{network_8h_af3ab73db5a3c4daca4d696efa1ec196fa1e3c8dca9cab43654c5f4eefa1ff5f65}
+}]\end{description}
+\end{Desc}
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337d}{\index{network.\-h@{network.\-h}!e\-\_\-bunny\-\_\-comtype@{e\-\_\-bunny\-\_\-comtype}}
+\index{e\-\_\-bunny\-\_\-comtype@{e\-\_\-bunny\-\_\-comtype}!network.h@{network.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-comtype}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-comtype}}}\label{network_8h_a83fa4344692763c0b0f7ed04615d337d}
+Five types of answers are possible when you poll a network element\-:
+\begin{DoxyItemize}
+\item An error happened
+\item Nothing happened
+\item A new connection has been opened
+\item A connection was closed
+\item A message was received There is currently no \char`\"{}\-Packet sent\char`\"{} notification. This enumeration is the incarnation of this mechanism. 
+\end{DoxyItemize}\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-R\-R\-O\-R@{E\-R\-R\-O\-R}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!E\-R\-R\-O\-R@{E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337da2fd6f336d08340583bd620a7f5694c90}{E\-R\-R\-O\-R}\label{network_8h_a83fa4344692763c0b0f7ed04615d337da2fd6f336d08340583bd620a7f5694c90}
+}]\index{E\-X\-P\-I\-R\-E\-D@{E\-X\-P\-I\-R\-E\-D}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!E\-X\-P\-I\-R\-E\-D@{E\-X\-P\-I\-R\-E\-D}}\item[{\em 
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337dad64c9726f24e01be64f489fe57967d56}{E\-X\-P\-I\-R\-E\-D}\label{network_8h_a83fa4344692763c0b0f7ed04615d337dad64c9726f24e01be64f489fe57967d56}
+}]\index{N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D@{N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D@{N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337daae09241b2eaf0cde865d93a1a9233a1b}{N\-E\-T\-C\-O\-N\-N\-E\-C\-T\-E\-D}\label{network_8h_a83fa4344692763c0b0f7ed04615d337daae09241b2eaf0cde865d93a1a9233a1b}
+}]\index{N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337da05088fe3c3ea776248fedc9a5c96aa2b}{N\-E\-T\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}\label{network_8h_a83fa4344692763c0b0f7ed04615d337da05088fe3c3ea776248fedc9a5c96aa2b}
+}]\index{M\-E\-S\-S\-A\-G\-E@{M\-E\-S\-S\-A\-G\-E}!network.\-h@{network.\-h}}\index{network.\-h@{network.\-h}!M\-E\-S\-S\-A\-G\-E@{M\-E\-S\-S\-A\-G\-E}}\item[{\em 
+\hypertarget{network_8h_a83fa4344692763c0b0f7ed04615d337dab3e6d7e18839259526a01001f558200f}{M\-E\-S\-S\-A\-G\-E}\label{network_8h_a83fa4344692763c0b0f7ed04615d337dab3e6d7e18839259526a01001f558200f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{network_8h_af134ff5fa286ab1b93e62649e234eaa6}{\index{network.\-h@{network.\-h}!bunny\-\_\-client\-\_\-poll@{bunny\-\_\-client\-\_\-poll}}
+\index{bunny\-\_\-client\-\_\-poll@{bunny\-\_\-client\-\_\-poll}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-client\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-communication}$\ast$ bunny\-\_\-client\-\_\-poll (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-client} $\ast$}]{clt, }
+\item[{uint32\-\_\-t}]{timout}
+\end{DoxyParamCaption}
+)}}\label{network_8h_af134ff5fa286ab1b93e62649e234eaa6}
+Try to read and write on the socket. 
+\begin{DoxyParams}{Parameters}
+{\em clt} & The T\-C\-P client \\
+\hline
+{\em timout} & The maximum time to wait before returning an \char`\"{}expired packet\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-communication. It cannot be N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{network_8h_ae5d8106c7f2363f218e7835248968965}{\index{network.\-h@{network.\-h}!bunny\-\_\-client\-\_\-write@{bunny\-\_\-client\-\_\-write}}
+\index{bunny\-\_\-client\-\_\-write@{bunny\-\_\-client\-\_\-write}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-client\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-client\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-client} $\ast$}]{clt, }
+\item[{{\bf const} void $\ast$}]{data, }
+\item[{{\bf size\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{network_8h_ae5d8106c7f2363f218e7835248968965}
+Ask to the client to write data at the next call to bunny\-\_\-client\-\_\-write. 
+\begin{DoxyParams}{Parameters}
+{\em clt} & The T\-C\-P client \\
+\hline
+{\em data} & The data to write \\
+\hline
+{\em len} & The length of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on error\-: not enough memory or the connection is dead. 
+\end{DoxyReturn}
+\hypertarget{network_8h_aacfd6b205788513506dcfc6ae9370de3}{\index{network.\-h@{network.\-h}!bunny\-\_\-delete\-\_\-client@{bunny\-\_\-delete\-\_\-client}}
+\index{bunny\-\_\-delete\-\_\-client@{bunny\-\_\-delete\-\_\-client}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-client (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-client} $\ast$}]{clt}
+\end{DoxyParamCaption}
+)}}\label{network_8h_aacfd6b205788513506dcfc6ae9370de3}
+The bunny\-\_\-delete\-\_\-client function destroy a T\-C\-P client. 
+\begin{DoxyParams}{Parameters}
+{\em clt} & The client to close. \\
+\hline
+\end{DoxyParams}
+\hypertarget{network_8h_a6a5c590812c7a1e162555730270fd471}{\index{network.\-h@{network.\-h}!bunny\-\_\-delete\-\_\-server@{bunny\-\_\-delete\-\_\-server}}
+\index{bunny\-\_\-delete\-\_\-server@{bunny\-\_\-delete\-\_\-server}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-server} $\ast$}]{srv}
+\end{DoxyParamCaption}
+)}}\label{network_8h_a6a5c590812c7a1e162555730270fd471}
+The bunny\-\_\-delete\-\_\-server function destroy a T\-C\-P server. All connections dies when the listening socket is closed. 
+\begin{DoxyParams}{Parameters}
+{\em srv} & The server to close. \\
+\hline
+\end{DoxyParams}
+\hypertarget{network_8h_a27275cddb41c2828843f8ebd3cf5f473}{\index{network.\-h@{network.\-h}!bunny\-\_\-new\-\_\-client@{bunny\-\_\-new\-\_\-client}}
+\index{bunny\-\_\-new\-\_\-client@{bunny\-\_\-new\-\_\-client}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-client}$\ast$ bunny\-\_\-new\-\_\-client (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{host, }
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{network_8h_a27275cddb41c2828843f8ebd3cf5f473}
+The bunny\-\_\-new\-\_\-client function creates a T\-C\-P client that will talk with a distant server. 
+\begin{DoxyParams}{Parameters}
+{\em host} & The I\-P address of the server. \\
+\hline
+{\em port} & The port on the server \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-client or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{network_8h_a250ab0c876a3aef463fd034239ac1fce}{\index{network.\-h@{network.\-h}!bunny\-\_\-new\-\_\-server@{bunny\-\_\-new\-\_\-server}}
+\index{bunny\-\_\-new\-\_\-server@{bunny\-\_\-new\-\_\-server}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-server}$\ast$ bunny\-\_\-new\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{network_8h_a250ab0c876a3aef463fd034239ac1fce}
+The bunny\-\_\-new\-\_\-server function creates a T\-C\-P server that listen on a specific port. 
+\begin{DoxyParams}{Parameters}
+{\em port} & The port where to listen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer on a t\-\_\-bunny\-\_\-server, N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{network_8h_a51271a6eb74fec42e74dc173f8caf8b3}{\index{network.\-h@{network.\-h}!bunny\-\_\-server\-\_\-doom\-\_\-client@{bunny\-\_\-server\-\_\-doom\-\_\-client}}
+\index{bunny\-\_\-server\-\_\-doom\-\_\-client@{bunny\-\_\-server\-\_\-doom\-\_\-client}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-server\-\_\-doom\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-server\-\_\-doom\-\_\-client (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-server} $\ast$}]{srv, }
+\item[{{\bf int}}]{fd}
+\end{DoxyParamCaption}
+)}}\label{network_8h_a51271a6eb74fec42e74dc173f8caf8b3}
+Close the given connection after it have sent every datas he was requested to send. 
+\begin{DoxyParams}{Parameters}
+{\em srv} & The T\-C\-P server that created fd. \\
+\hline
+{\em fd} & The connection to close \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on error\-: fd was not found. 
+\end{DoxyReturn}
+\hypertarget{network_8h_aa6c39e7f7b44a1594780ac3aa52690d1}{\index{network.\-h@{network.\-h}!bunny\-\_\-server\-\_\-packet\-\_\-ready@{bunny\-\_\-server\-\_\-packet\-\_\-ready}}
+\index{bunny\-\_\-server\-\_\-packet\-\_\-ready@{bunny\-\_\-server\-\_\-packet\-\_\-ready}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-server\-\_\-packet\-\_\-ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-server\-\_\-packet\-\_\-ready (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-server} $\ast$}]{srv}
+\end{DoxyParamCaption}
+)}}\label{network_8h_aa6c39e7f7b44a1594780ac3aa52690d1}
+Return true if there is a ready packet inside the T\-C\-P server. In this case, calling bunny\-\_\-server\-\_\-poll returns immediatly. 
+\begin{DoxyParams}{Parameters}
+{\em srv} & The server to look at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there is completed packets. 
+\end{DoxyReturn}
+\hypertarget{network_8h_a798c6322d2c75bdc4ba9ffeae85decba}{\index{network.\-h@{network.\-h}!bunny\-\_\-server\-\_\-poll@{bunny\-\_\-server\-\_\-poll}}
+\index{bunny\-\_\-server\-\_\-poll@{bunny\-\_\-server\-\_\-poll}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-server\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-communication}$\ast$ bunny\-\_\-server\-\_\-poll (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-server} $\ast$}]{srv, }
+\item[{uint32\-\_\-t}]{timout}
+\end{DoxyParamCaption}
+)}}\label{network_8h_a798c6322d2c75bdc4ba9ffeae85decba}
+Try to read and write on every connection and look if there is new or closed connection on the sent server. Return a t\-\_\-bunny\-\_\-communication that resume what happened. If a full packet is ready to be returned, timout is ignored and it returns immediatly. 
+\begin{DoxyParams}{Parameters}
+{\em srv} & The T\-C\-P server. \\
+\hline
+{\em timout} & The maximum time to wait before returning an \char`\"{}expired packet\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-communication. It cannot be N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{network_8h_ab58c764a0f244b8696cbd6cc653ab835}{\index{network.\-h@{network.\-h}!bunny\-\_\-server\-\_\-write@{bunny\-\_\-server\-\_\-write}}
+\index{bunny\-\_\-server\-\_\-write@{bunny\-\_\-server\-\_\-write}!network.h@{network.\-h}}
+\subsubsection[{bunny\-\_\-server\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-server\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-server} $\ast$}]{srv, }
+\item[{{\bf const} void $\ast$}]{dat, }
+\item[{{\bf size\-\_\-t}}]{len, }
+\item[{{\bf int}}]{fd}
+\end{DoxyParamCaption}
+)}}\label{network_8h_ab58c764a0f244b8696cbd6cc653ab835}
+Ask to the server to write a data at the next call to bunny\-\_\-server\-\_\-poll. 
+\begin{DoxyParams}{Parameters}
+{\em srv} & The server from where is the fd \\
+\hline
+{\em dat} & The data to send \\
+\hline
+{\em len} & The length of data \\
+\hline
+{\em fd} & The connection where to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on error\-: not enough memory or the connection was doomed or fd was not found. 
+\end{DoxyReturn}

@@ -1,0 +1,204 @@
+\hypertarget{classarcade_1_1_lapin}{\section{arcade\-:\-:Lapin Class Reference}
+\label{classarcade_1_1_lapin}\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}}
+}
+
+
+{\ttfamily \#include $<$Lapin.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Lapin\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_lapin}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_lapin_ae2490de966029d69df9d591a18a9d45c}{$\sim$\-Lapin} ()
+\item 
+\hyperlink{classarcade_1_1_lapin_a8d583dbae3df65d066cf799085ae6000}{Lapin} ()
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_lapin_a34cb3f58188a6ff0ade94bd24320547f}{does\-Support\-Sound} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Ask if the library support sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a4b043e858f23034b942e6fb887688b84}{clear} ()
+\begin{DoxyCompactList}\small\item\em Ask the lib to clear the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a96b9054a64f7ca3cdf869ffb6be7f0d9}{sound\-Control} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{structarcade_1_1_sound}{Sound} \&sound)
+\begin{DoxyCompactList}\small\item\em Ask the lib to play a sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a3578cca0004ff22d70183a2fc5d3d3b4}{load\-Sprites} (std\-::vector$<$ std\-::unique\-\_\-ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\-Sprite} $>$$>$ \&\&sprites)
+\begin{DoxyCompactList}\small\item\em Load sprites in the lib from the paths given by the game. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_lapin_adaa52d31c23ba7205aaa31a5a8de9191}{poll\-Event} (\hyperlink{structarcade_1_1_event}{Event} \&e)
+\begin{DoxyCompactList}\small\item\em Function to poll events from the graphic lib. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a71367e02f6bd38c5045891e59cb3e509}{update\-G\-U\-I} (\hyperlink{classarcade_1_1_i_g_u_i}{I\-G\-U\-I} \&gui)
+\begin{DoxyCompactList}\small\item\em Update the G\-U\-I displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a013f747f928f39afdb2119437a180022}{load\-Sounds} (std\-::vector$<$ std\-::pair$<$ std\-::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{Sound\-Type} $>$ $>$ \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&sounds) override
+\begin{DoxyCompactList}\small\item\em Ask the lib to remove and load new sounds. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a4ae960b8ba5c0cebd6bc6eb887a5ecd8}{update\-Map} (\hyperlink{classarcade_1_1_i_map}{I\-Map} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&map)
+\begin{DoxyCompactList}\small\item\em Update the map displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_lapin_a95d86cd69c04db673d76f0cd38c58f4b}{display} ()
+\begin{DoxyCompactList}\small\item\em Display the map and G\-U\-I. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_lapin_ae2490de966029d69df9d591a18a9d45c}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!$\sim$\-Lapin@{$\sim$\-Lapin}}
+\index{$\sim$\-Lapin@{$\sim$\-Lapin}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{$\sim$\-Lapin}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Lapin\-::$\sim$\-Lapin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_lapin_ae2490de966029d69df9d591a18a9d45c}
+\hypertarget{classarcade_1_1_lapin_a8d583dbae3df65d066cf799085ae6000}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!Lapin@{Lapin}}
+\index{Lapin@{Lapin}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{Lapin}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Lapin\-::\-Lapin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_lapin_a8d583dbae3df65d066cf799085ae6000}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_lapin_a4b043e858f23034b942e6fb887688b84}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!clear@{clear}}
+\index{clear@{clear}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a4b043e858f23034b942e6fb887688b84}
+
+
+Ask the lib to clear the screen. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a4116b3d4f503c4a795539b584f77a73d}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a95d86cd69c04db673d76f0cd38c58f4b}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!display@{display}}
+\index{display@{display}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a95d86cd69c04db673d76f0cd38c58f4b}
+
+
+Display the map and G\-U\-I. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a7f280525c718a44c1e05cfe0ba5304c3}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a34cb3f58188a6ff0ade94bd24320547f}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!does\-Support\-Sound@{does\-Support\-Sound}}
+\index{does\-Support\-Sound@{does\-Support\-Sound}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{does\-Support\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Lapin\-::does\-Support\-Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a34cb3f58188a6ff0ade94bd24320547f}
+
+
+Ask if the library support sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a68cfbc987dfecca5b1405e36e00157b2}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a013f747f928f39afdb2119437a180022}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!load\-Sounds@{load\-Sounds}}
+\index{load\-Sounds@{load\-Sounds}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{load\-Sounds}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::load\-Sounds (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::pair$<$ std\-::string, {\bf Sound\-Type} $>$ $>$ {\bf const} \&}]{sounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a013f747f928f39afdb2119437a180022}
+
+
+Ask the lib to remove and load new sounds. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a725faf0722d284d15eb389b0a1891a27}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a3578cca0004ff22d70183a2fc5d3d3b4}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!load\-Sprites@{load\-Sprites}}
+\index{load\-Sprites@{load\-Sprites}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{load\-Sprites}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::load\-Sprites (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::unique\-\_\-ptr$<$ {\bf I\-Sprite} $>$$>$ \&\&}]{sprites}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a3578cca0004ff22d70183a2fc5d3d3b4}
+
+
+Load sprites in the lib from the paths given by the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprites} & to pass the path of your sprites to give your lib the way to search your assets \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a1cdbd2504ca685f10ea2af3cd26a9f5a}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_adaa52d31c23ba7205aaa31a5a8de9191}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!poll\-Event@{poll\-Event}}
+\index{poll\-Event@{poll\-Event}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{poll\-Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Lapin\-::poll\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Event} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_adaa52d31c23ba7205aaa31a5a8de9191}
+
+
+Function to poll events from the graphic lib. 
+
+If there is an event to poll, e is filled and true is returned. If not, false is returned. 
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a82cdd82f168ca898ef81edf82ca6147a}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a96b9054a64f7ca3cdf869ffb6be7f0d9}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!sound\-Control@{sound\-Control}}
+\index{sound\-Control@{sound\-Control}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{sound\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::sound\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Sound} \&}]{sound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a96b9054a64f7ca3cdf869ffb6be7f0d9}
+
+
+Ask the lib to play a sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a0b965ed555739ef366b27583799d794c}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a71367e02f6bd38c5045891e59cb3e509}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!update\-G\-U\-I@{update\-G\-U\-I}}
+\index{update\-G\-U\-I@{update\-G\-U\-I}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{update\-G\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::update\-G\-U\-I (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-G\-U\-I} \&}]{gui}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a71367e02f6bd38c5045891e59cb3e509}
+
+
+Update the G\-U\-I displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_ae3f443cc341512433815e8bf2dee3e0d}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_lapin_a4ae960b8ba5c0cebd6bc6eb887a5ecd8}{\index{arcade\-::\-Lapin@{arcade\-::\-Lapin}!update\-Map@{update\-Map}}
+\index{update\-Map@{update\-Map}!arcade::Lapin@{arcade\-::\-Lapin}}
+\subsubsection[{update\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Lapin\-::update\-Map (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Map} {\bf const} \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_lapin_a4ae960b8ba5c0cebd6bc6eb887a5ecd8}
+
+
+Update the map displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_addc883f69b75e6ec4927027aad94f5b5}{arcade\-::\-I\-Gfx\-Lib}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/include/\hyperlink{_lapin_8hpp}{Lapin.\-hpp}\item 
+lib/lapin/src/\hyperlink{_lapin_8cpp}{Lapin.\-cpp}\end{DoxyCompactItemize}

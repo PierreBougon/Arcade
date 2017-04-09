@@ -1,0 +1,123 @@
+\hypertarget{nc__alloc_8h}{\section{lib/ndk/dep/nc\-\_\-alloc.h File Reference}
+\label{nc__alloc_8h}\index{lib/ndk/dep/nc\-\_\-alloc.\-h@{lib/ndk/dep/nc\-\_\-alloc.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{nc__alloc_8h_ac1da633c9ce80cb7f43a72efc61a3c6d}{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C}~0
+\item 
+\#define \hyperlink{nc__alloc_8h_a8986c48e17ea2fa40d527730c595f35a}{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C}~0
+\item 
+\#define \hyperlink{nc__alloc_8h_a75dff0b44a54c78d8aff35538e1f3df0}{H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L}~0
+\item 
+\#define \hyperlink{nc__alloc_8h_ac206743ed102d1633427a4401eb9a6ce}{N\-O\-\_\-\-L\-E\-A\-K\-S}~0
+\item 
+\#define \hyperlink{nc__alloc_8h_a7ed96d55d1a6596e749db25620d5c4ab}{H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L}~0
+\item 
+\#define \hyperlink{nc__alloc_8h_a88fa12a68bb9f6fd8b4512967abb3982}{Exit\-Program}(code)~exit(code)
+\item 
+\#define \hyperlink{nc__alloc_8h_a9254b089d435892385cf14d0ab4a7a2d}{strdup}~\-\_\-nc\-\_\-strdup
+\item 
+\#define \hyperlink{nc__alloc_8h_ae2c05a4cc858c6aed5df0ab775ce4aa1}{type\-Malloc}(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, elts)~(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type} $\ast$)malloc((\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t})(elts)$\ast$sizeof(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}))
+\item 
+\#define \hyperlink{nc__alloc_8h_aacd0ef6962f761f16e4270cafb730c73}{type\-Calloc}(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, elts)~(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type} $\ast$)calloc((\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t})(elts),sizeof(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}))
+\item 
+\#define \hyperlink{nc__alloc_8h_ae5898d4f35e0113f7d2940ee6256e9e0}{type\-Realloc}(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}, elts, ptr)~(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type} $\ast$)\-\_\-nc\-\_\-doalloc(ptr, (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t})(elts)$\ast$sizeof(\hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nc__alloc_8h_af5398ff3be7c9ea846e41e2f07409160}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (void $\ast$) \-\_\-nc\-\_\-doalloc(void $\ast$
+\item 
+\hyperlink{nc__alloc_8h_a9ab75e67e76959bebd3ffc21c1112229}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (char $\ast$) \-\_\-nc\-\_\-strdup(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$)
+\item 
+\hyperlink{nc__alloc_8h_ace850bdaae1b1da6de161fa4c0952848}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (void) \-\_\-nc\-\_\-leaks\-\_\-tinfo(void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{nc__alloc_8h_a88fa12a68bb9f6fd8b4512967abb3982}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!Exit\-Program@{Exit\-Program}}
+\index{Exit\-Program@{Exit\-Program}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{Exit\-Program}]{\setlength{\rightskip}{0pt plus 5cm}\#define Exit\-Program(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)~exit(code)}}\label{nc__alloc_8h_a88fa12a68bb9f6fd8b4512967abb3982}
+\hypertarget{nc__alloc_8h_a8986c48e17ea2fa40d527730c595f35a}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C@{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C}}
+\index{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C@{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-B\-M\-A\-L\-L\-O\-C~0}}\label{nc__alloc_8h_a8986c48e17ea2fa40d527730c595f35a}
+\hypertarget{nc__alloc_8h_ac1da633c9ce80cb7f43a72efc61a3c6d}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C@{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C}}
+\index{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C@{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-V\-E\-\_\-\-L\-I\-B\-D\-M\-A\-L\-L\-O\-C~0}}\label{nc__alloc_8h_ac1da633c9ce80cb7f43a72efc61a3c6d}
+\hypertarget{nc__alloc_8h_a75dff0b44a54c78d8aff35538e1f3df0}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L@{H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L}}
+\index{H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L@{H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-V\-E\-\_\-\-L\-I\-B\-M\-P\-A\-T\-R\-O\-L~0}}\label{nc__alloc_8h_a75dff0b44a54c78d8aff35538e1f3df0}
+\hypertarget{nc__alloc_8h_a7ed96d55d1a6596e749db25620d5c4ab}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L@{H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L}}
+\index{H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L@{H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-V\-E\-\_\-\-N\-C\-\_\-\-F\-R\-E\-E\-A\-L\-L~0}}\label{nc__alloc_8h_a7ed96d55d1a6596e749db25620d5c4ab}
+\hypertarget{nc__alloc_8h_ac206743ed102d1633427a4401eb9a6ce}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!N\-O\-\_\-\-L\-E\-A\-K\-S@{N\-O\-\_\-\-L\-E\-A\-K\-S}}
+\index{N\-O\-\_\-\-L\-E\-A\-K\-S@{N\-O\-\_\-\-L\-E\-A\-K\-S}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{N\-O\-\_\-\-L\-E\-A\-K\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-L\-E\-A\-K\-S~0}}\label{nc__alloc_8h_ac206743ed102d1633427a4401eb9a6ce}
+\hypertarget{nc__alloc_8h_a9254b089d435892385cf14d0ab4a7a2d}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!strdup@{strdup}}
+\index{strdup@{strdup}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{strdup}]{\setlength{\rightskip}{0pt plus 5cm}\#define strdup~\-\_\-nc\-\_\-strdup}}\label{nc__alloc_8h_a9254b089d435892385cf14d0ab4a7a2d}
+\hypertarget{nc__alloc_8h_aacd0ef6962f761f16e4270cafb730c73}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!type\-Calloc@{type\-Calloc}}
+\index{type\-Calloc@{type\-Calloc}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{type\-Calloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define type\-Calloc(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf type}, }
+\item[{}]{elts}
+\end{DoxyParamCaption}
+)~({\bf type} $\ast$)calloc(({\bf size\-\_\-t})(elts),sizeof({\bf type}))}}\label{nc__alloc_8h_aacd0ef6962f761f16e4270cafb730c73}
+\hypertarget{nc__alloc_8h_ae2c05a4cc858c6aed5df0ab775ce4aa1}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!type\-Malloc@{type\-Malloc}}
+\index{type\-Malloc@{type\-Malloc}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{type\-Malloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define type\-Malloc(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf type}, }
+\item[{}]{elts}
+\end{DoxyParamCaption}
+)~({\bf type} $\ast$)malloc(({\bf size\-\_\-t})(elts)$\ast$sizeof({\bf type}))}}\label{nc__alloc_8h_ae2c05a4cc858c6aed5df0ab775ce4aa1}
+\hypertarget{nc__alloc_8h_ae5898d4f35e0113f7d2940ee6256e9e0}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!type\-Realloc@{type\-Realloc}}
+\index{type\-Realloc@{type\-Realloc}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{type\-Realloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define type\-Realloc(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf type}, }
+\item[{}]{elts, }
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~({\bf type} $\ast$)\-\_\-nc\-\_\-doalloc(ptr, ({\bf size\-\_\-t})(elts)$\ast$sizeof({\bf type}))}}\label{nc__alloc_8h_ae5898d4f35e0113f7d2940ee6256e9e0}
+
+
+\subsection{Function Documentation}
+\hypertarget{nc__alloc_8h_af5398ff3be7c9ea846e41e2f07409160}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{nc__alloc_8h_af5398ff3be7c9ea846e41e2f07409160}
+\hypertarget{nc__alloc_8h_a9ab75e67e76959bebd3ffc21c1112229}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{}
+\end{DoxyParamCaption}
+) const}}\label{nc__alloc_8h_a9ab75e67e76959bebd3ffc21c1112229}
+\hypertarget{nc__alloc_8h_ace850bdaae1b1da6de161fa4c0952848}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{nc__alloc_8h_ace850bdaae1b1da6de161fa4c0952848}
+
+
+\subsection{Variable Documentation}
+\hypertarget{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{\index{nc\-\_\-alloc.\-h@{nc\-\_\-alloc.\-h}!size\-\_\-t@{size\-\_\-t}}
+\index{size\-\_\-t@{size\-\_\-t}!nc_alloc.h@{nc\-\_\-alloc.\-h}}
+\subsubsection[{size\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t}}\label{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}

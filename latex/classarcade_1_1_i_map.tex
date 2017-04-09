@@ -1,0 +1,120 @@
+\hypertarget{classarcade_1_1_i_map}{\section{arcade\-:\-:I\-Map Class Reference}
+\label{classarcade_1_1_i_map}\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}}
+}
+
+
+Interface representing a \hyperlink{classarcade_1_1_map}{Map}.  
+
+
+
+
+{\ttfamily \#include $<$I\-Map.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:I\-Map\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_i_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}{$\sim$\-I\-Map} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor of the interface. \end{DoxyCompactList}\item 
+virtual \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}{get\-Layer\-Nb} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\begin{DoxyCompactList}\small\item\em Get the number of layers. \end{DoxyCompactList}\item 
+virtual \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}{get\-Width} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\begin{DoxyCompactList}\small\item\em Get the width of the map. \end{DoxyCompactList}\item 
+virtual \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}{get\-Height} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\begin{DoxyCompactList}\small\item\em Get the height of the map. \end{DoxyCompactList}\item 
+virtual \hyperlink{classarcade_1_1_i_tile}{I\-Tile} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \& \hyperlink{classarcade_1_1_i_map_ab856c3bcc5a39d987d2a40fd05c35d0e}{at} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} x, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} y) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} =0
+\begin{DoxyCompactList}\small\item\em Get a specific \hyperlink{classarcade_1_1_i_tile}{I\-Tile} of the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface representing a \hyperlink{classarcade_1_1_map}{Map}. 
+
+A map is composed of layers, which contain tiles. Your \hyperlink{classarcade_1_1_map}{Map} must support them from its own If you want to access to the tile x\-:3 y\-:8 of the layer 2 you have to use the at method like I\-Map\-::at(2, 3, 8); 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}{\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}!$\sim$\-I\-Map@{$\sim$\-I\-Map}}
+\index{$\sim$\-I\-Map@{$\sim$\-I\-Map}!arcade::IMap@{arcade\-::\-I\-Map}}
+\subsubsection[{$\sim$\-I\-Map}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-I\-Map\-::$\sim$\-I\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_i_map_aaa3aa1b624552b9ab830067ab42f78dd}
+
+
+Virtual destructor of the interface. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_i_map_ab856c3bcc5a39d987d2a40fd05c35d0e}{\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}!at@{at}}
+\index{at@{at}!arcade::IMap@{arcade\-::\-I\-Map}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-Tile} {\bf const} \& arcade\-::\-I\-Map\-::at (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{layer, }
+\item[{{\bf size\-\_\-t}}]{x, }
+\item[{{\bf size\-\_\-t}}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_i_map_ab856c3bcc5a39d987d2a40fd05c35d0e}
+
+
+Get a specific \hyperlink{classarcade_1_1_i_tile}{I\-Tile} of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a999ff5376aff11492828167cab3de5bd}{arcade\-::\-Map}.
+
+\hypertarget{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}{\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!arcade::IMap@{arcade\-::\-I\-Map}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-I\-Map\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}
+
+
+Get the height of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a0ff5ecb8be07f6e121665200d636ac40}{arcade\-::\-Map}.
+
+\hypertarget{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}{\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}!get\-Layer\-Nb@{get\-Layer\-Nb}}
+\index{get\-Layer\-Nb@{get\-Layer\-Nb}!arcade::IMap@{arcade\-::\-I\-Map}}
+\subsubsection[{get\-Layer\-Nb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-I\-Map\-::get\-Layer\-Nb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}
+
+
+Get the number of layers. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a208c3c498f82871a844cc0bb8e29f8eb}{arcade\-::\-Map}.
+
+\hypertarget{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}{\index{arcade\-::\-I\-Map@{arcade\-::\-I\-Map}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!arcade::IMap@{arcade\-::\-I\-Map}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-I\-Map\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}
+
+
+Get the width of the map. 
+
+
+
+Implemented in \hyperlink{classarcade_1_1_map_a55d2afd98fcc471f5075a99357673700}{arcade\-::\-Map}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+interfaces/\hyperlink{_i_map_8hpp}{I\-Map.\-hpp}\end{DoxyCompactItemize}
