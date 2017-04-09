@@ -82,7 +82,7 @@ void arcade::CentipedeGame::notifyNetwork(std::vector<arcade::NetworkPacket> &&_
     (void)events;
 }
 
-std::vector<arcade::NetworkPacket> &&arcade::CentipedeGame::getNetworkToSend()
+std::vector<arcade::NetworkPacket> arcade::CentipedeGame::getNetworkToSend()
 {
     std::vector<arcade::NetworkPacket> npt;
     return std::move(npt);
@@ -200,10 +200,6 @@ const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const
     return _centipedeKiller.getAbs();
 }
 
-arcade::tick_t arcade::CentipedeGame::getTickRate() const {
-    return SPEED;
-}
-
 void arcade::CentipedeGame::bulletAndMushrooms()
 {
     std::list<arcade::Mushroom *>::iterator it;
@@ -231,6 +227,11 @@ void arcade::CentipedeGame::removeDeadCentipedes()
                         });
     if (it != _centipedes.end())
         _centipedes.erase(it, _centipedes.end());
+}
+
+bool arcade::CentipedeGame::hasNetwork() const
+{
+    return false;
 }
 
 extern "C" arcade::IGame *getGame()

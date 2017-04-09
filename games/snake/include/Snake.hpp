@@ -44,12 +44,10 @@ namespace arcade
     public:
         Snake();
 
-        tick_t getTickRate() const override;
-
         GameState getGameState() const;
         void notifyEvent(std::vector<Event> &&events);
         void notifyNetwork(std::vector<NetworkPacket> &&events);
-        std::vector<NetworkPacket> &&getNetworkToSend();
+        std::vector<NetworkPacket> getNetworkToSend();
         void process();
         std::vector<std::unique_ptr<ISprite>> getSpritesToLoad() const;
         std::vector<std::pair<std::string, arcade::SoundType>> getSoundsToLoad() const;
@@ -59,6 +57,8 @@ namespace arcade
         const arcade::Map &getMouliMap() const;
         const IMap &getCurrentMap() const;
         const IGUI &getGUI() const;
+
+        bool hasNetwork() const override;
 
         IGUI &getGUI() override;
     };

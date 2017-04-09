@@ -38,7 +38,7 @@ void arcade::Snake::notifyNetwork(std::vector<arcade::NetworkPacket> &&)
 {
 }
 
-std::vector<arcade::NetworkPacket> &&arcade::Snake::getNetworkToSend()
+std::vector<arcade::NetworkPacket> arcade::Snake::getNetworkToSend()
 {
     std::vector<arcade::NetworkPacket> tmp;
     return std::move(tmp);
@@ -348,11 +348,6 @@ arcade::IGUI &arcade::Snake::getGUI()
     return gameGui;
 }
 
-arcade::tick_t arcade::Snake::getTickRate() const
-{
-    return 60;
-}
-
 std::vector<arcade::Vector2s> arcade::Snake::getPlayerpos()
 {
     std::vector<Vector2s> pos;
@@ -445,6 +440,11 @@ void arcade::Snake::settingScore()
         i += 0.10;
         gameGui.addComponent(Component(i, 0.05, 0.1, 0.1, score.getSpiteId()[pos][score.getPos()[pos]], Color::Blue, "", Color(1)));
     }
+}
+
+bool arcade::Snake::hasNetwork() const
+{
+    return false;
 }
 
 extern "C" arcade::IGame *getGame()
