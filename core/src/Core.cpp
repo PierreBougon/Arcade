@@ -2,6 +2,7 @@
 // Created by Pierre Bougon on 15/03/17.
 //
 
+#include <unistd.h>
 #include <algorithm>
 #include "DLLoader.hpp"
 #include "Logger.hpp"
@@ -76,7 +77,9 @@ void arcade::Core::run()
         {
             //TODO: display arcade menu
         }
+        currentLib->clear();
         currentLib->display();
+        usleep(100);
     }
 }
 
@@ -155,6 +158,7 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
         return nullptr;
     }
     IGame *found = tabGame[it - pars.getVecGame().begin()]->getInstance("getGame");
+    posGame = static_cast<size_t >(it - pars.getVecGame().begin());
     if (!found)
     {
         Logger::log(Logger::Warning, game + " : This game is corrupted and cannot be loaded");
@@ -175,6 +179,7 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
         return nullptr;
     }
     IGfxLib *found = tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
+    posLib = static_cast<size_t >(it - pars.getVecLib().begin());
     if (!found)
     {
         Logger::log(Logger::Warning, lib + " : This lib is corrupted and cannot be loaded");
@@ -211,10 +216,28 @@ void arcade::Core::setLib(const std::string &lib)
         throw DLLoadingError(ALL_LIB_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::LIBRARIES_CORRUPTED);
 }
 
+void arcade::Core::nextGame()
+{
+    currentGame = tabGame[++posGame]->getInstance("getGame");
+}
+
+void arcade::Core::prevGame()
+{
+    currentGame = tabGame[--posGame]->getInstance("getGame");
+}
+
+void arcade::Core::nextLib()
+{
+    currentLib = tabLib[++posLib]->getInstance("getLib");
+}
+
+void arcade::Core::prevLib()
+{
+    currentLib = tabLib[++posLib]->getInstance("getLib");
+}
 
 void arcade::Core::drawFrame()
 {
-    currentLib->clear();
     currentLib->updateMap(currentGame->getCurrentMap());
     currentLib->updateGUI(currentGame->getGUI());
 }
@@ -263,6 +286,9 @@ void arcade::Core::manageEvents()
             case EventType::ET_QUIT :
                 open = false;
                 break;
+            case EventType::ET_KEYBOARD :
+                if (coreEvent(event))
+                    break;
             default:
                 _events.push_back(event);
                 break;
@@ -272,6 +298,31 @@ void arcade::Core::manageEvents()
         currentGame->notifyEvent(std::move(_events));
     else
         events = _events;
+}
+
+bool arcade::Core::coreEvent(const arcade::Event &event)
+{
+    if (event.action == ActionType::AT_PRESSED)
+    {
+        switch (event.kb_key)
+        {
+            case KB_2:
+                prevLib();
+                return true;
+            case KB_3:
+                nextLib();
+                return true;
+            case KB_4:
+                prevGame();
+                return true;
+            case KB_5:
+                nextGame();
+                return true;
+            default:
+                return false;
+        }
+    }
+    return false;
 }
 
 void arcade::Core::loadDependencies()
