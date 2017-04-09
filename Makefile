@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Sun Apr  9 06:27:00 2017 bougon_p
+## Last update Sun Apr  9 10:02:27 2017 bougon_p
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -34,7 +34,7 @@ all:
 lib:	fcleanlib libpath dependencies game libs
 
 libpath:
-	@export LD_LIBRARY_PATH=soundManager/
+	@export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:../soundManager/:sfml/dep/SFML-2.4.2/lib:lapin/dep/SFML-2.3/lib
 
 dependencies:
 	@$(ECHO) "$(BLUE)/=================================\\"
