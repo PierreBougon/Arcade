@@ -28,9 +28,9 @@ NAME    =      	../lib_arcade_sfml.so
 INC     =       -Iinclude \
 		-I../../interfaces \
 		-I../../soundManager/include \
-		-I./dep/SFML-2.4.2/include
+		-I../lapin/dep/SFML-2.3/include
 
-LDFLAGS	+=	-L./dep/SFML-2.4.2/lib/		\
+LDFLAGS	+=	-L../lapin/dep/SFML-2.3/lib/		\
 		-lsfml-graphics			\
 		-lsfml-window			\
 		-lsfml-system			\

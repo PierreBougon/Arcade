@@ -143,10 +143,7 @@ bool arcade::Entity::hasSprite() const
 
 void arcade::Entity::setSprite(std::vector<size_t> id, std::vector<size_t> spriteCount, size_t index)
 {
-    for (size_t i = 0; i < sprite.size(); ++i)
-    {
-        sprite.erase(sprite.begin());
-    }
+    sprite.clear();
     for (size_t i = 0; i < id.size(); ++i)
     {
         sprite.push_back(Sprite(id[i], spriteCount[i]));

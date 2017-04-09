@@ -85,8 +85,8 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
     tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snake/assets/img/", "snake_head_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_V", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_H", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_right", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_right", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_right", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("u", "./games/snake/assets/img/", "snake_tail_up", 1, ".png"));
@@ -118,7 +118,7 @@ std::vector<std::pair<std::string, arcade::SoundType>> arcade::Snake::getSoundsT
 std::vector<arcade::Sound> arcade::Snake::getSoundsToPlay()
 {
     std::vector<arcade::Sound> tmp;
-   return tmp;
+    return tmp;
 }
 
 const arcade::IMap &arcade::Snake::getCurrentMap() const
@@ -388,25 +388,25 @@ void arcade::Snake::setSprites()
         posPrev = snakes[i - 1].getAbs();
         posNext = snakes[i + 1].getAbs();
         if ((pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x && pos.y == posNext.y) ||
-                (pos.x == posNext.x && pos.y < posNext.y && pos.y == posPrev.y && pos.x < posPrev.x))
+            (pos.x == posNext.x && pos.y < posNext.y && pos.y == posPrev.y && pos.x < posPrev.x))
         {
             snakes[i].setSprite(corner, count, Orientation::UP);
             snakes[i].setColor(Color(Color::Cyan));
         }
         else if ((pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x && pos.y == posNext.y) ||
-                (pos.x == posNext.x && pos.x > posPrev.x && pos.y == posPrev.y && pos.y < posNext.y))
+                 (pos.x == posNext.x && pos.x > posPrev.x && pos.y == posPrev.y && pos.y < posNext.y))
         {
             snakes[i].setSprite(corner, count, Orientation::RIGHT);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if ((pos.y == posPrev.y && pos.x > posPrev.x && pos.y > posNext.y && pos.x == posNext.x)||
-                (pos.y == posNext.y && pos.x == posPrev.x && pos.y > posPrev.y && pos.x > posNext.x))
+        else if ((pos.y == posPrev.y && pos.x < posPrev.x && pos.y > posNext.y && pos.x == posNext.x)||
+                 (pos.y == posNext.y && pos.x == posPrev.x && pos.y > posPrev.y && pos.x < posNext.x))
         {
             snakes[i].setSprite(corner, count, Orientation::LEFT);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if ((pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y && pos.x == posNext.x) ||
-                (pos.x == posPrev.x && pos.x < posNext.x && pos.y > posPrev.y && pos.y == posNext.y))
+        else if ((pos.x > posPrev.x && pos.y == posPrev.y && pos.y > posNext.y && pos.x == posNext.x) ||
+                 (pos.x == posPrev.x && pos.x > posNext.x && pos.y > posPrev.y && pos.y == posNext.y))
         {
             snakes[i].setSprite(corner, count, Orientation::DOWN);
             snakes[i].setColor(Color(Color::Cyan));
@@ -498,18 +498,18 @@ extern "C" void Play()
         switch (command)
         {
             case arcade::CommandType::WHERE_AM_I:
-            pos = gam.getPlayerpos();
+                pos = gam.getPlayerpos();
                 player->lenght = static_cast<uint16_t >(pos.size());
                 for (size_t i = 0; i < pos.size(); i++)
                 {
                     player->position[i].x = static_cast<uint16_t >(pos[i].x);
                     player->position[i].y = static_cast<uint16_t >(pos[i].y);
                 }
-            std::cout.write(reinterpret_cast<const char *>(player), whereAmISize);
+                std::cout.write(reinterpret_cast<const char *>(player), whereAmISize);
                 break;
             case arcade::CommandType::GET_MAP:
 
-            std::cout.write(reinterpret_cast<const char *>(maps), mapSize);
+                std::cout.write(reinterpret_cast<const char *>(maps), mapSize);
                 break;
             case arcade::CommandType::GO_UP:
                 event.kb_key = arcade::KB_Z;
