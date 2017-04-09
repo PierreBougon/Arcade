@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sun Apr  2 00:32:42 2017 bougon_p
-## Last update Sat Apr  8 17:58:38 2017 bougon_p
+## Last update Sun Apr  9 06:30:58 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -16,18 +16,21 @@ PROJECT_NAME	=	SFML Graphic arcade library
 
 ## Lib variab
 
-SRC		=		src/SFMLCore.cpp		\
-				src/GfxSprite.cpp		\
-				../../interfaces/Sound.cpp	\
-				../../interfaces/Color.cpp
+SRC	=	src/SFMLCore.cpp		\
+		src/GfxSprite.cpp		\
+		../../interfaces/Sound.cpp	\
+		../../interfaces/Color.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	../lib_arcade_sfml.so
 
-INC     =       -Iinclude -I../../interfaces -I../../soundManager/include
+INC     =       -Iinclude \
+		-I../../interfaces \
+		-I../../soundManager/include \
+		-I./dep/SFML-2.4.2/include
 
-LDFLAGS	+=	-L./dep/SFML/			\
+LDFLAGS	+=	-L./dep/SFML/lib/		\
 		-lsfml-graphics			\
 		-lsfml-window			\
 		-lsfml-system			\
