@@ -1,4 +1,16 @@
+##
+## Makefile for Makefile in /home/bougon_p/rendu/TEK2/cpp_arcade
+## 
+## Made by bougon_p
+## Login   <bougon_p@epitech.net>
+## 
+## Started on  Sun Apr  9 05:18:28 2017 bougon_p
+## Last update Sun Apr  9 05:18:42 2017 bougon_p
+##
+
 include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
+
+PROJECT_NAME	=	Snake Game
 
 ## Core variables
 
