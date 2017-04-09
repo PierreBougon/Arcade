@@ -156,6 +156,8 @@ void arcade::SFMLCore::drawSprite(ITile const *tile, IMap const &map, size_t x, 
                      getTilePosY(y, map) + static_cast<float>(tile->getShiftY()));
     GfxSprite &sprite = sprites[tile->getSpriteId()];
 
+    if (sprite.corrupted)
+        return;
     sprite.sprite.setScale(1 / (sprite.texture.getSize().x / getTileSize(map).x),
                            1 / (sprite.texture.getSize().y / getTileSize(map).y));
     sprite.sprite.setPosition(pos);
@@ -166,6 +168,8 @@ void arcade::SFMLCore::drawSprite(IComponent *component)
 {
     GfxSprite &sprite = sprites[component->getBackgroundId()];
 
+    if (sprite.corrupted)
+        return;
     sprite.sprite.setScale(static_cast<float>(component->getWidth() * width),
                            static_cast<float>(component->getHeight() * height));
     sprite.sprite.setPosition(static_cast<float>(component->getX()), static_cast<float>(component->getY()));

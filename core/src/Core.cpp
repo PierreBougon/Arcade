@@ -198,12 +198,13 @@ void arcade::Core::setGame(const std::string &game)
     currentGame = nullptr;
     while (!currentGame && nbTested < tabGame.size())
     {
-        currentGame = findGame(*it);
-        initGame();
-        ++it;
-        ++nbTested;
         if (it == pars.getVecGame().end())
             it = pars.getVecGame().begin();
+        currentGame = findGame(*it);
+        if (currentGame)
+            initGame();
+        ++it;
+        ++nbTested;
     }
     if (nbTested == tabGame.size())
         throw DLLoadingError(ALL_GAME_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::GAMES_CORRUPTED);
@@ -217,11 +218,11 @@ void arcade::Core::setLib(const std::string &lib)
     currentLib = nullptr;
     while (!currentLib && nbTested < tabLib.size())
     {
+        if (it == pars.getVecLib().end())
+            it = pars.getVecLib().begin();
         currentLib = findLib(*it);
         ++it;
         ++nbTested;
-        if (it == pars.getVecLib().end())
-            it = pars.getVecLib().begin();
     }
     if (nbTested == tabLib.size())
         throw DLLoadingError(ALL_LIB_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::LIBRARIES_CORRUPTED);

@@ -4,9 +4,12 @@
 
 #include "GfxSprite.hpp"
 
-arcade::GfxSprite::GfxSprite(const std::string &path) : path(path)
+arcade::GfxSprite::GfxSprite(const std::string &path) : path(path), corrupted(false)
 {
     if (!texture.loadFromFile(path))
-        throw std::bad_alloc();
+    {
+        corrupted = true;
+        return ;
+    }
     sprite.setTexture(texture);
 }

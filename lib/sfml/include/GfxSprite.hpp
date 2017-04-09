@@ -20,6 +20,7 @@ namespace arcade
     public:
         sf::Texture     texture;
         sf::Sprite      sprite;
+        bool            corrupted;
 
         GfxSprite(const std::string &path);
     };
