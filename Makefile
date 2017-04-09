@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Sun Apr  9 10:02:27 2017 bougon_p
+## Last update Sun Apr  9 10:32:50 2017 bougon_p
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -41,7 +41,7 @@ dependencies:
 	@$(ECHO) "=======### $(BOLD_WHITE)DEPENDENCIES$(BLUE) ###========"
 	@$(ECHO) "\=================================/ $(WHITE)"
 	@$(ECHO)
-	@make -s -C $(SOUND) DLL=YES
+	@make -s -C $(SOUND) STATIC=YES
 
 game:
 	@$(ECHO) "$(BLUE)/=================================\\"
@@ -63,7 +63,7 @@ libs:
 arcade: re lib
 
 sound:
-	@make -s -C $(SOUND) DLL=YES
+	@make -s -C $(SOUND) STATIC=YES
 
 sfml:
 	@make -s -C $(SFML) DLL=YES

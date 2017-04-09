@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Sun Apr  2 00:32:42 2017 bougon_p
-## Last update Sun Apr  9 09:57:12 2017 bougon_p
+## Last update Sun Apr  9 11:42:53 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -35,7 +35,7 @@ LDFLAGS	+=	-L./dep/SFML-2.4.2/lib/		\
 		-lsfml-window			\
 		-lsfml-system			\
 		-lsfml-audio			\
-		-L../../soundManager/		\
+		-L../../soundManager		\
 		-l_sound_manager
 
 ## Lib rules
