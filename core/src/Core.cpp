@@ -193,7 +193,9 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 void arcade::Core::setGame(const std::string &game)
 {
     size_t nbTested = 0;
-    std::vector<std::string>::const_iterator it = std::find(pars.getVecGame().begin(), pars.getVecGame().end(), game);
+    std::vector<std::string>::const_iterator it = std::find_if(pars.getVecGame().cbegin(), pars.getVecGame().cend(), [game](std::string const &_game){
+        return _game == game.substr((game.find_last_of("/") == game.npos) ? 0 : game.find_last_of("/") + 1);
+    });
 
     currentGame = nullptr;
     while (!currentGame && nbTested < pars.getVecGame().size())
@@ -213,8 +215,8 @@ void arcade::Core::setGame(const std::string &game)
 void arcade::Core::setLib(const std::string &lib)
 {
     size_t nbTested = 0;
-    std::vector<std::string>::const_iterator it = std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &str){
-        return lib == "./lib/" + str;
+    std::vector<std::string>::const_iterator it = std::find_if(pars.getVecLib().cbegin(), pars.getVecLib().cend(), [lib](std::string const &_lib){
+        return _lib == lib.substr((lib.find_last_of("/") == lib.npos) ? 0 : lib.find_last_of("/") + 1);
     });
 
     currentLib = nullptr;

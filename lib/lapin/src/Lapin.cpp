@@ -185,26 +185,7 @@ void arcade::Lapin::printText(t_bunny_position const &, std::string const &)
 
 void arcade::Lapin::updateGUI(arcade::IGUI &gui)
 {
-    t_bunny_position pos;
-    uint32_t width;
-    uint32_t height;
-
-    for (size_t i = 0; i < gui.size(); ++i)
-    {
- /*       IComponent &component = gui.at(i);
-
-        pos.x = static_cast<int>(component.getX() * static_cast<double>(Width));
-        pos.y = static_cast<int>(component.getY() * static_cast<double>(Height));
-        width = static_cast<uint32_t>(component.getWidth() * static_cast<double>(Width));
-        height = static_cast<uint32_t>(component.getHeight() * static_cast<double>(Height));
-
-        if (component.hasSprite() && Sprites[component.getBackgroundId()][0] != nullptr)
-            printOneSprite(pos, *Sprites[component.getBackgroundId()][0]);
-        else
-            printOneColor(pos, component.getBackgroundColor(), width, height);
-
-        printText(pos, component.getText()); */
-    }
+    (void)gui;
 }
 
 void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
