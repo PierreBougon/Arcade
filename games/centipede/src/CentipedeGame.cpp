@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <algorithm>
 #include "SpriteGenerator.hpp"
+#include "Sound.hpp"
 #include "LifelessEntity.hpp"
 #include "CentipedeGame.hpp"
 #include "Protocol.hpp"
@@ -35,6 +36,8 @@ arcade::CentipedeGame::CentipedeGame() :
             _map.updateLayer(*part, CentipedeLayers::CENTIPEDE);
     this->updateMap();
     _tick = 0;
+    shot = false;
+    alive = false;
     _gameState = GameState::INGAME;
 }
 
@@ -107,6 +110,13 @@ void arcade::CentipedeGame::process()
         _centipedeKiller.move(_bullet, _map, _mushrooms);
         _centipedeKiller.touched(_centipedes);
         _centipedeKiller.action(_bullet);
+        if (_bullet.isAlive() && !shot && !alive)
+        {
+            alive = true;
+            shot = true;
+        }
+        if (!_bullet.isAlive())
+            alive = false;
         bulletAndMushrooms();
         _centipedeKiller.bulletVsCentipede(_bullet, _centipedes, _mushrooms);
         removeDeadCentipedes();
@@ -146,6 +156,7 @@ std::vector<std::pair<std::string, arcade::SoundType>> arcade::CentipedeGame::ge
 {
     std::vector<std::pair<std::string, arcade::SoundType>> sounds;
 
+    sounds.push_back(std::pair<std::string, arcade::SoundType>({"./soundManager/assets/Pew_Pew.mp3", SoundType::SOUND}));
     return sounds;
 
 }
@@ -154,7 +165,12 @@ std::vector<arcade::Sound> arcade::CentipedeGame::getSoundsToPlay()
 {
     std::vector<Sound> sounds;
 
-    return sounds;
+    if (shot)
+    {
+        sounds.push_back(Sound(0, SoundAction::PLAY));
+        shot = false;
+    }
+    return std::move(sounds);
 }
 
 const arcade::IMap &arcade::CentipedeGame::getCurrentMap() const

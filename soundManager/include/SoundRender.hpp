@@ -23,6 +23,8 @@ namespace arcade
         sf::Sound       sound;
         sf::Music       music;
 
+        bool            error;
+
     public:
         SoundRender(unsigned int id, SoundAction mode = SoundAction::UNIQUE,
                     float volume = 50.0f, SoundType type = SoundType::MUSIC);
