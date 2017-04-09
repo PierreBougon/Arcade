@@ -6,6 +6,7 @@
 #define CPP_ARCADE_SNAKE_HPP
 
 
+#include <Score.hpp>
 #include "IGame.hpp"
 #include "Gui.hpp"
 #include "Map.hpp"
@@ -26,7 +27,7 @@ namespace arcade
         std::vector<std::unique_ptr<arcade::ISprite>> sprites;
         Entity empty;
         size_t tick;
-        size_t score;
+        Score  score;
         size_t snakeSpeed;
 
 
@@ -38,9 +39,7 @@ namespace arcade
         void putFoodInMap();
         void moveBody();
         void setSprites();
-
-
-        void moveSnake();
+        void settingScore();
     public:
         Snake();
 

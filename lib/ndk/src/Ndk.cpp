@@ -47,7 +47,9 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
     start_color();
-    init_pair(1, COLOR_RED, COLOR_BLACK);
+    init_pair(2, COLOR_BLACK, COLOR_GREEN);
+    init_pair(3, COLOR_BLACK, COLOR_YELLOW);
+    init_pair(4, COLOR_BLACK, COLOR_CYAN);
     for (i = 0; i < layer; ++i)
     {
         for (j = 0; j < map.getHeight(); ++j)
@@ -57,8 +59,10 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
                 ITile const& tile = map.at(i, k, j);
                 if (tile.hasSprite())
                 {
+                    wattron(win, COLOR_PAIR(tile.getColor().full) | A_BOLD);
                     tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
                     mvwprintw(win, static_cast<int>(j) + 1, static_cast<int>(k) + 1, tmp.c_str());
+                    wattroff(win, COLOR_PAIR(tile.getColor().full) | A_BOLD);
                 }
             }
         }
@@ -177,6 +181,7 @@ arcade::Ndk::Ndk() : keyboard({
     initscr();
     keypad(stdscr, true);
     timeout(0);
+    win = NULL;
     pass = false;
 }
 
@@ -220,7 +225,7 @@ void arcade::Ndk::updateGUI(arcade::IGUI &gui)
         IComponent &component = gui.at(i);
         if (component.getText() != "")
         {
-            std::cerr << static_cast<int>(component.getX() * getmaxx(stdscr)) << " && " << static_cast<int>(component.getY() * getmaxy(stdscr)) << std::endl;
+            //std::cerr << static_cast<int>(component.getX() * getmaxx(stdscr)) << " && " << static_cast<int>(component.getY() * getmaxy(stdscr)) << std::endl;
             start_color();
             init_pair(1, COLOR_RED, COLOR_BLACK);
             wattron(stdscr, COLOR_PAIR(component.getTextColor().full));

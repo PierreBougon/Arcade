@@ -93,9 +93,19 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
     tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snakes/assets/img/", "tailLeft", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("^", "./games/snakes/assets/img/", "tailRight", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snakes/assets/img/", "tailDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("Y", "./games/snakes/assets/img/", "food", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("@", "./games/snakes/assets/img/", "food", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>(" ", "./games/snakes/assets/img/", "empty", 1, ".png"));
-
+    tmp.push_back(std::make_unique<SpriteGenerator>("Score", "./games/snakes/assets/img/", "score", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("0", "./games/snakes/assets/img/", "zero", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("1", "./games/snakes/assets/img/", "one", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("2", "./games/snakes/assets/img/", "two", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("3", "./games/snakes/assets/img/", "three", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("4", "./games/snakes/assets/img/", "four", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("5", "./games/snakes/assets/img/", "five", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("6", "./games/snakes/assets/img/", "six", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("7", "./games/snakes/assets/img/", "seven", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("8", "./games/snakes/assets/img/", "eight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("9", "./games/snakes/assets/img/", "nine", 1, ".png"));
     return std::move(tmp);
 }
 
@@ -121,15 +131,12 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake()
-        : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}),
-                                                       Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY,
-                                                       Color::Black, false)), tick(0), score(4), snakeSpeed(4)
+arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0), score(Score()), snakeSpeed(4)
 {
     state = LOADING;
     createPlayer();
     putFoodInMap();
-    gameGui.addComponent(Component(0.05, 0.05, 0.1, 0.1, 17, Color::Blue, "Score : " + std::to_string(score), Color(1)));
+    settingScore();
     state = INGAME;
 }
 
@@ -147,13 +154,20 @@ void arcade::Snake::createPlayer()
     pos.x = x;
     pos.y = y;
     snakes.push_back(PlayerControlSnake(pos, head, count, Orientation::LEFT));
+    snakes[0].setColor(Color(4));
     for (int i = 1; i < 4; ++i)
     {
         pos.x = x + i;
         if (i == 3)
+        {
             snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
+            snakes[i].setColor(Color(3));
+        }
         else
+        {
             snakes.push_back(PlayerControlSnake(pos, body, countBody, Orientation::RIGHT));
+            snakes[i].setColor(Color(2));
+        }
     }
 }
 
@@ -181,6 +195,7 @@ void arcade::Snake::putFoodInMap()
         pos.y = rand() % gameMap.getHeight();
     }
     cherry.push_back(DestroyableObject(pos, food, count, Orientation::UP));
+    cherry[0].setColor(Color(1));
 }
 
 void arcade::Snake::checkEat()
@@ -197,21 +212,26 @@ void arcade::Snake::feedingSnakes()
     std::vector<size_t> tail = {10, 11, 12, 13};
     std::vector<size_t> count = {1, 1, 1, 1};
 
-    score += 1;
-    static_cast<Component&>(gameGui.at(0)).setText("Score : " + std::to_string(score));
+    score.setScore(score.getScore() + 1);
+    static_cast<Component&>(gameGui.at(0)).setText("Score : " + std::to_string(score.getScore()));
+    for (size_t posi = 0; posi < score.getPos().size(); ++posi)
+    {
+        static_cast<Component&>(gameGui.at(posi + 1)).setSprite(score.getSpiteId()[posi][score.getPos()[posi]]);
+    }
+
     pos.x = snakes.back().getAbs().x + 1;
     pos.y = snakes.back().getAbs().y;
     if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
-        snakes[snakes.size() - 1].setColor(Color(2));
+        snakes[snakes.size() - 1].setColor(Color(3));
         return;
     }
     pos.x -= 2;
     if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::RIGHT));
-        snakes[snakes.size() - 1].setColor(Color(2));
+        snakes[snakes.size() - 1].setColor(Color(3));
         return;
     }
     pos.x += 1;
@@ -219,14 +239,14 @@ void arcade::Snake::feedingSnakes()
     if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::DOWN));
-        snakes[snakes.size() - 1].setColor(Color(2));
+        snakes[snakes.size() - 1].setColor(Color(3));
         return;
     }
     pos.y -= 2;
     if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
-        snakes[snakes.size() - 1].setColor(Color(2));
+        snakes[snakes.size() - 1].setColor(Color(3));
         return;
     }
     state = GameState::MENU;
@@ -316,7 +336,7 @@ arcade::IGUI &arcade::Snake::getGUI()
 
 arcade::tick_t arcade::Snake::getTickRate() const
 {
-    return 60;
+    return 30;
 }
 
 std::vector<arcade::Vector2s> arcade::Snake::getPlayerpos()
@@ -348,23 +368,42 @@ void arcade::Snake::setSprites()
         snakes[0].setNewDir(Orientation::DOWN);
     else
         snakes[0].setNewDir(Orientation::UP);
+    snakes[0].setColor(Color(4));
     for (size_t i = 1; i < snakes.size() - 1; i++)
     {
         pos = snakes[i].getAbs();
         posPrev = snakes[i - 1].getAbs();
         posNext = snakes[i + 1].getAbs();
         if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x)
+        {
             snakes[i].setSprite(corner, count, Orientation::UP);
+            snakes[i].setColor(Color(2));
+        }
         else if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x)
+        {
             snakes[i].setSprite(corner, count, Orientation::RIGHT);
+            snakes[i].setColor(Color(2));
+        }
         else if (pos.x > posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+        {
             snakes[i].setSprite(corner, count, Orientation::LEFT);
+            snakes[i].setColor(Color(2));
+        }
         else if (pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+        {
             snakes[i].setSprite(corner, count, Orientation::DOWN);
+            snakes[i].setColor(Color(2));
+        }
         else if (pos.x == posPrev.x && pos.x == posNext.x)
+        {
             snakes[i].setSprite(body, countBody, Orientation::UP);
+            snakes[i].setColor(Color(2));
+        }
         else if (pos.y == posPrev.y && pos.y  == posNext.y)
+        {
             snakes[i].setSprite(body, countBody, Orientation::RIGHT);
+            snakes[i].setColor(Color(2));
+        }
     }
     pos = snakes[snakes.size() - 1].getAbs();
     posPrev = snakes[snakes.size() - 2].getAbs();
@@ -376,6 +415,18 @@ void arcade::Snake::setSprites()
         snakes[snakes.size() - 1].setNewDir(Orientation::LEFT);
     else if (pos.y == posPrev.y && pos.x < posPrev.x)
         snakes[snakes.size() - 1].setNewDir(Orientation::RIGHT);
+}
+
+void arcade::Snake::settingScore()
+{
+    double i(0.05);
+
+    gameGui.addComponent(Component(0.05, 0.05, 0.1, 0.1, 17, Color::Blue, "Score : " + std::to_string(score.getScore()), Color(1)));
+    for (size_t pos = 0; pos < score.getPos().size(); ++pos)
+    {
+        i += 0.10;
+        gameGui.addComponent(Component(i, 0.05, 0.1, 0.1, score.getSpiteId()[pos][score.getPos()[pos]], Color::Blue, "", Color(1)));
+    }
 }
 
 extern "C" arcade::IGame *getGame()

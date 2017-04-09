@@ -152,3 +152,8 @@ void arcade::Component::setText(std::string text)
 {
     _text = text;
 }
+
+void arcade::Component::setSprite(size_t id)
+{
+    _spriteId = id;
+}

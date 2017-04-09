@@ -33,7 +33,8 @@ COMMON_FIL = AIControlled.cpp \
              Entity.cpp \
              LifelessEntity.cpp \
              Map.cpp \
-	     Gui.cpp \
+	         Gui.cpp \
+	         Score.cpp \
              MapLoader.cpp \
              Sprite.cpp \
              SpriteGenerator.cpp \

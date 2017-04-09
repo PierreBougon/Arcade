@@ -55,9 +55,9 @@ extern "C" {
 **		Boolean Section, containing the values of all of the
 **				boolean capabilities
 **				A null byte may be inserted here to make
-**				sure that the Number Section begins on an
+**				sure that the Score Section begins on an
 **				even word boundary.
-**		Number Section, containing the values of all of the numeric
+**		Score Section, containing the values of all of the numeric
 **				capabilities, each as a short integer
 **		String Section, containing short integer offsets into the
 **				String Table, one per string capability
