@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ## 
 ## Started on  Wed Apr  5 21:11:25 2017 bougon_p
-## Last update Wed Apr  5 22:10:58 2017 bougon_p
+## Last update Sun Apr  9 10:30:32 2017 bougon_p
 ##
 
 ## Include colors and basic commands
@@ -24,7 +24,7 @@ SRC	=	src/SoundManager.cpp	\
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
-NAME    =      	lib_sound_manager.so
+NAME    =      	lib_sound_manager.a
 
 INC     =       -Iinclude -I../interfaces
 

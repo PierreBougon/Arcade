@@ -7,12 +7,26 @@
 
 void arcade::PlayerControlSnake::move()
 {
+    shift.x = 0;
+    shift.y = 0;
     switch (input)
     {
         case MOVE_UP: prev = abs; abs.y--; break;
         case MOVE_DOWW: prev = abs; abs.y++; break;
         case MOVE_RIGHT: prev = abs; abs.x++; break;
         case MOVE_LEFT: prev = abs; abs.x--;  break;
+        default: break;
+    }
+}
+
+void arcade::PlayerControlSnake::moveShift(size_t numTick, size_t maxTick)
+{
+    switch (input)
+    {
+        case MOVE_UP: shift.y = abs.y - (numTick / maxTick); break;
+        case MOVE_DOWW: shift.y = abs.y + (numTick / maxTick); break;
+        case MOVE_RIGHT: shift.x = abs.x + (numTick / maxTick); break;
+        case MOVE_LEFT: shift.x = abs.x - (numTick / maxTick);  break;
         default: break;
     }
 }

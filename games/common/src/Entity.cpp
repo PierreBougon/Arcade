@@ -212,3 +212,8 @@ arcade::Entity &arcade::Entity::operator=(const arcade::Entity &cpy)
     }
     return *this;
 }
+
+arcade::Orientation arcade::Entity::getOrientation() const
+{
+    return curSprite;
+}

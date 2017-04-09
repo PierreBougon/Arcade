@@ -39,6 +39,7 @@ namespace arcade
                            Color col = Color::Cyan,
                            size_t hp = 1, bool collide = true);
         void move();
+        void moveShift(size_t numTick, size_t maxTick);
         void action();
 
         void updatePlayerInput(std::vector<Event> &events);

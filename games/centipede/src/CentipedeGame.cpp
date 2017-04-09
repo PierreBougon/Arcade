@@ -63,6 +63,16 @@ void arcade::CentipedeGame::notifyEvent(std::vector<arcade::Event> &&_events)
 {
     std::vector<arcade::Event> events = std::move(_events);
 
+    for (arcade::Event &event : events)
+    {
+        if (event.kb_key == arcade::KeyboardKey::KB_ESCAPE)
+        {
+            std::cerr << "QUIT THIS GAME" << std::endl;
+            _gameState = arcade::GameState::MENU;
+            return ;
+        }
+    }
+
     _centipedeKiller.updatePlayerInput(events);
 }
 
@@ -92,7 +102,8 @@ void arcade::CentipedeGame::process()
     _tick++;
     if (!(_tick % (SPEED / 5)) || talinette)
     {
-        _centipedeKiller.move(_map, _mushrooms);
+        _centipedeKiller.move(_bullet, _map, _mushrooms);
+        _centipedeKiller.touched(_centipedes);
         _centipedeKiller.action(_bullet);
         bulletAndMushrooms();
         _centipedeKiller.bulletVsCentipede(_bullet, _centipedes, _mushrooms);
@@ -110,12 +121,10 @@ void arcade::CentipedeGame::process()
             centipede->oneTurn(_centipedes, _mushrooms, _map);
         }
 
-        _centipedeKiller.touched(_centipedes);
-
         this->updateMap();
 
         if (!_centipedeKiller.getHp())
-            _gameState = QUIT;
+            _gameState = MENU;
     }
 }
 
@@ -183,9 +192,6 @@ const arcade::Map &arcade::CentipedeGame::getMouliMap() const {
 
 arcade::CentipedeGame::~CentipedeGame()
 {
-    for (Mushroom *mush : _mushrooms)
-        if (mush)
-            delete mush;
 }
 
 const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const

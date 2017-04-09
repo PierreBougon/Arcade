@@ -5,7 +5,11 @@ $(NAME):	$(OBJ)
 		@$(ECHO) "$(BLUE) Flags used \t  : $(BOLD_WHITE)$(CXXFLAGS)$(CLEAR)"
 		@$(ECHO) "$(BLUE) Dependencies  :$(BOLD_WHITE)$(LDFLAGS)$(CLEAR)"
 		@$(ECHO) "$(BLUE) == $(BOLD_WHITE) $(PROJECT_NAME)  Compiled $(BLUE) == $(CLEAR)\n\n"
+ifeq ($(STATIC), YES)
+		@$(LINKER) -o $(NAME) $(OBJ)
+else
 		@$(CXX) $(OBJ) -o $(NAME) $(INC) $(LDFLAGS)
+endif
 		@$(eval PROJECT_NAME=)
 		@$(eval LDFLAGS=)
 		@$(eval DLL=NO)

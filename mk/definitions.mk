@@ -1,3 +1,4 @@
+
 ## Some basic C++ definitions for arcade Makefiles
 
 # MODE
@@ -27,6 +28,9 @@ endif
 ifeq ($(DLL), YES)
 CXXFLAGS	+=	-fPIC -ldl
 endif
+ifeq ($(STATIC), YES)
+CXXFLAGS	+=	-fPIC
+endif
 
 ifeq ($(SANITIZE), YES)
 CXXFLAGS	+=	-fsanitize=memory -fsanitize-memory-track-origins=2 -fomit-frame-pointer
@@ -41,5 +45,5 @@ CXX	+= -shared
 endif
 
 ifeq ($(STATIC), YES)
-LINKER = ar rcs
+LINKER = ar -rcs
 endif

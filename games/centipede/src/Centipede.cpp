@@ -108,11 +108,15 @@ bool arcade::Centipede::hitByBullet(arcade::Bullet &bullet,
         if (pos == 1) {
             mushrooms.push_back(new Mushroom((*it)->getAbs()));
             _body.pop_front();
-            if (_body.size())
+            if (_body.size()) {
                 setBody();
+                centipedes.front()->getBody().front()->setColor(Color::White);
+            }
         } else if (pos == _body.size()) {
             mushrooms.push_back(new Mushroom((*it)->getAbs()));
             _body.pop_back();
+            if (_body.size() == 1)
+                centipedes.front()->getBody().front()->setColor(Color::White);
         } else {
             split(pos, mushrooms, centipedes);
             _poped = 0;
@@ -139,9 +143,9 @@ void arcade::Centipede::split(size_t pos, std::list<Mushroom*> &mushrooms,
     mushrooms.push_back(new Mushroom(newCentipede.front()->getAbs()));
     newCentipede.pop_front();
     centipedes.push_back(new Centipede(newCentipede.front()->getAbs(), _poped));
+    newCentipede.front()->setColor(Color::White.full);
     centipedes.back()->setBody(newCentipede);
     centipedes.back()->setBody();
-    centipedes.front()->getBody().front()->setColor(Color::White);
 }
 
 arcade::Centipede &arcade::Centipede::operator=(const arcade::Centipede &centipede) {
@@ -286,13 +290,6 @@ void arcade::Centipede::moveBody()
 }
 
 arcade::Centipede::~Centipede() {
-    if (_body.size())
-    {
-        for (CentipedePart *part : _body)
-        {
-            if (part)
-                delete part;
-        }
-    }
+
 }
 

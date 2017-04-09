@@ -28,6 +28,8 @@ namespace arcade
         Entity empty;
         size_t tick;
         Score  score;
+        size_t snakeSpeed;
+
 
         bool checkInSnake(Vector2s const& pos);
         void checkEat();
@@ -35,9 +37,10 @@ namespace arcade
         void feedingSnakes();
         void createPlayer();
         void putFoodInMap();
-        void moveBody();
+        void moveBody(bool movePysic);
         void setSprites();
         void settingScore();
+        void moveSnake();
     public:
         Snake();
 
