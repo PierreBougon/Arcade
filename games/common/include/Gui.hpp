@@ -44,6 +44,7 @@ namespace arcade
         Color getBackgroundColor() const;
         const std::string &getText() const;
         void setText(std::string text);
+        void setSprite(size_t id);
         void setClicked();
         Color getTextColor() const;
 

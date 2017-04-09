@@ -855,28 +855,28 @@ public:
   // terminal status
   // -------------------------------------------------------------------------
   int            lines() const { initialize(); return LINES; }
-  // Number of lines on terminal, *not* window
+  // Score of lines on terminal, *not* window
 
   int            cols() const { initialize(); return COLS; }
-  // Number of cols  on terminal, *not* window
+  // Score of cols  on terminal, *not* window
 
   int            tabsize() const { initialize(); return TABSIZE; }
   // Size of a tab on terminal, *not* window
 
   static int     NumberOfColors();
-  // Number of available colors
+  // Score of available colors
 
   int            colors() const { return NumberOfColors(); }
-  // Number of available colors
+  // Score of available colors
 
   // -------------------------------------------------------------------------
   // window status
   // -------------------------------------------------------------------------
   int            height() const { return maxy() + 1; }
-  // Number of lines in this window
+  // Score of lines in this window
 
   int            width() const { return maxx() + 1; }
-  // Number of columns in this window
+  // Score of columns in this window
 
   int            begx() const { return getbegx(w); }
   // Column of top left corner relative to stdscr

@@ -100,9 +100,9 @@ public:
   } Label_Layout;
 
 private:
-  static long NCURSES_IMPEXP count;               // Number of Key Sets
+  static long NCURSES_IMPEXP count;               // Score of Key Sets
   static Label_Layout NCURSES_IMPEXP  format;     // Layout of the Key Sets
-  static int  NCURSES_IMPEXP num_labels;          // Number Of Labels in Key Sets
+  static int  NCURSES_IMPEXP num_labels;          // Score Of Labels in Key Sets
   bool NCURSES_IMPEXP b_attrInit;                 // Are attributes initialized
 
   Soft_Label_Key *slk_array;       // The array of SLK's
