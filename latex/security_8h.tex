@@ -1,0 +1,269 @@
+\hypertarget{security_8h}{\section{lib/lapin/dep/lapin/security.h File Reference}
+\label{security_8h}\index{lib/lapin/dep/lapin/security.\-h@{lib/lapin/dep/lapin/security.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__cipher__key}{s\-\_\-bunny\-\_\-cipher\-\_\-key}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238}{e\-\_\-bunny\-\_\-ciphering} \hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering}
+\item 
+typedef struct \hyperlink{structs__bunny__cipher__key}{s\-\_\-bunny\-\_\-cipher\-\_\-key} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key}
+\item 
+typedef \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$($\ast$ \hyperlink{security_8h_acd515e75a90cf954f8a10c4a0cc1e4ff}{t\-\_\-bunny\-\_\-key\-\_\-twist} )(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$inkey, \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$outkey)
+\item 
+typedef void($\ast$ \hyperlink{security_8h_aaea6d881f5d577ed0ae6bc4f06cdd52a}{t\-\_\-bunny\-\_\-my\-\_\-cipher} )(\hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, char $\ast$buffer, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+typedef void($\ast$ \hyperlink{security_8h_acc9344771207806c5f4449c86730ac93}{t\-\_\-bunny\-\_\-my\-\_\-uncipher} )(\hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, char $\ast$buffer, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238}{e\-\_\-bunny\-\_\-ciphering} \{ \hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238a7d6c9c2ff01b1fa79df6da41ff440bd5}{B\-S\-\_\-\-X\-O\-R}, 
+\hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238aca508455cb2c98b6a90fa3aab8a4e881}{B\-S\-\_\-\-C\-A\-E\-S\-A\-R}, 
+\hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238a5891f94f26250372e71b94b1c76250fa}{B\-S\-\_\-\-S\-H\-A\-K\-E\-R}, 
+\hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238a28e683d5391d407cdc2e73d62ea77ac2}{B\-S\-\_\-\-C\-U\-S\-T\-O\-M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} \hyperlink{security_8h_a27fe7657795554536e7d582c95236af1}{bunny\-\_\-get\-\_\-ciphering} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$name)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$ \hyperlink{security_8h_a2362c45be992253191ce23ad97784e76}{bunny\-\_\-default\-\_\-key} (void)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{security_8h_a30088cfd783172ac8c8941c556896193}{bunny\-\_\-fill\-\_\-default\-\_\-key} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$bunny\-\_\-program, \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+\hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$ \hyperlink{security_8h_aff0ccd7574ff9dad2d5fa8b6f5ebae79}{bunny\-\_\-new\-\_\-key} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len)
+\item 
+void \hyperlink{security_8h_a1f75c787c2fa3502268930e4ef2a5d47}{bunny\-\_\-delete\-\_\-key} (\hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{security_8h_a3395f088e667ab68ab87b0073e065572}{bunny\-\_\-cipher\-\_\-file} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, \hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{security_8h_adf0273fb596c66e40de4b1152d73ba1b}{bunny\-\_\-uncipher\-\_\-file} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, \hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+void \hyperlink{security_8h_aa7053a80e7c4e8a8b06446be50468a30}{bunny\-\_\-cipher\-\_\-data} (void $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} datalen, \hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\item 
+void \hyperlink{security_8h_a90fa6d97872e0dc868cc12653c27170c}{bunny\-\_\-uncipher\-\_\-data} (void $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} data\-\_\-len, \hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering} ciphering, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$\hyperlink{unionkey}{key})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{security_8h_a273f886c9cd47efa5c3343a2a583d28f}{gl\-\_\-bunny\-\_\-ciphering\-\_\-table} \mbox{[}\hyperlink{security_8h_a6d0c8ae578fb1013140c8c0180951238a28e683d5391d407cdc2e73d62ea77ac2}{B\-S\-\_\-\-C\-U\-S\-T\-O\-M}\mbox{]}
+\item 
+\hyperlink{security_8h_acd515e75a90cf954f8a10c4a0cc1e4ff}{t\-\_\-bunny\-\_\-key\-\_\-twist} \hyperlink{security_8h_a8f08a96ae20a740b37621da1bbac0622}{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}
+\item 
+\hyperlink{security_8h_aaea6d881f5d577ed0ae6bc4f06cdd52a}{t\-\_\-bunny\-\_\-my\-\_\-cipher} \hyperlink{security_8h_ad27058bc6c3cb56a6e3157a1cb37fe27}{gl\-\_\-bunny\-\_\-my\-\_\-cipher}
+\item 
+\hyperlink{security_8h_acc9344771207806c5f4449c86730ac93}{t\-\_\-bunny\-\_\-my\-\_\-uncipher} \hyperlink{security_8h_ab154524ea4671dbcd2a110e5de57964a}{gl\-\_\-bunny\-\_\-my\-\_\-uncipher}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module is about weak security by ciphering. It allows you to cipher and uncipher files or buffers with a specified key that can also be an internally stored key.
+
+Note that this is not for true security reasons that this module is here\-: the real purpose is to prevent cheating. 
+
+\subsection{Typedef Documentation}
+\hypertarget{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{\index{security.\-h@{security.\-h}!t\-\_\-bunny\-\_\-cipher\-\_\-key@{t\-\_\-bunny\-\_\-cipher\-\_\-key}}
+\index{t\-\_\-bunny\-\_\-cipher\-\_\-key@{t\-\_\-bunny\-\_\-cipher\-\_\-key}!security.h@{security.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-cipher\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-cipher\-\_\-key}				 {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key}}}\label{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}
+A t\-\_\-bunny\-\_\-key represents a ciphering key. The first field is the length of the second in bytes. The second field is the key iteself. /!\textbackslash{} Thet are N\-O\-T characters, that's just bytes. There may be no null terminator, you have to use the length field to browse it if you wish to. \hypertarget{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{\index{security.\-h@{security.\-h}!t\-\_\-bunny\-\_\-ciphering@{t\-\_\-bunny\-\_\-ciphering}}
+\index{t\-\_\-bunny\-\_\-ciphering@{t\-\_\-bunny\-\_\-ciphering}!security.h@{security.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-ciphering}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-ciphering}				 {\bf t\-\_\-bunny\-\_\-ciphering}}}\label{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}
+t\-\_\-bunny\-\_\-ciphering's values are ciphering algorithm. B\-S\-\_\-\-X\-O\-R use the '$^\wedge$' operator to cipher. B\-S\-\_\-\-C\-A\-E\-S\-A\-R use the '+' / '-\/' operator to cipher / uncipher. B\-S\-\_\-\-S\-H\-A\-K\-E\-R swap the currently ciphered data chunk with another chunk at a specified offset B\-S\-\_\-\-C\-U\-S\-T\-O\-M (and greater values) means that you want to use a custom algorithm, so the system will call the function defined in gl\-\_\-bunny\-\_\-my\-\_\-cipher or gl\-\_\-bunny\-\_\-my\-\_\-uncipher. \hypertarget{security_8h_acd515e75a90cf954f8a10c4a0cc1e4ff}{\index{security.\-h@{security.\-h}!t\-\_\-bunny\-\_\-key\-\_\-twist@{t\-\_\-bunny\-\_\-key\-\_\-twist}}
+\index{t\-\_\-bunny\-\_\-key\-\_\-twist@{t\-\_\-bunny\-\_\-key\-\_\-twist}!security.h@{security.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-key\-\_\-twist}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key}$\ast$($\ast$ t\-\_\-bunny\-\_\-key\-\_\-twist)({\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$inkey, {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$outkey)}}\label{security_8h_acd515e75a90cf954f8a10c4a0cc1e4ff}
+The t\-\_\-bunny\-\_\-key\-\_\-twist function type is the type of the function that will be called to generate a cipher key from the inside hardcoded key. The purpose of this is to make more heavy the protection\-: the key used for ciphering will not be the one which is directly readable inside the program, but a temporary one generated from the key and an algorithm. Of course, you should avoid non deterministic behavior... \hypertarget{security_8h_aaea6d881f5d577ed0ae6bc4f06cdd52a}{\index{security.\-h@{security.\-h}!t\-\_\-bunny\-\_\-my\-\_\-cipher@{t\-\_\-bunny\-\_\-my\-\_\-cipher}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-cipher@{t\-\_\-bunny\-\_\-my\-\_\-cipher}!security.h@{security.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-cipher)({\bf t\-\_\-bunny\-\_\-ciphering} ciphering, char $\ast$buffer, {\bf size\-\_\-t} len, {\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast${\bf key})}}\label{security_8h_aaea6d881f5d577ed0ae6bc4f06cdd52a}
+The type of the gl\-\_\-bunny\-\_\-my\-\_\-cipher function pointer, that may be used if you wish to bring your own ciphering algorithm. The ciphering parameter is the value sent to bunny\-\_\-cipher\-\_\-$\ast$ as ciphering parameter\-: it should be B\-S\-\_\-\-C\-U\-S\-T\-O\-M or any greater value (You choose...) \hypertarget{security_8h_acc9344771207806c5f4449c86730ac93}{\index{security.\-h@{security.\-h}!t\-\_\-bunny\-\_\-my\-\_\-uncipher@{t\-\_\-bunny\-\_\-my\-\_\-uncipher}}
+\index{t\-\_\-bunny\-\_\-my\-\_\-uncipher@{t\-\_\-bunny\-\_\-my\-\_\-uncipher}!security.h@{security.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-my\-\_\-uncipher}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ t\-\_\-bunny\-\_\-my\-\_\-uncipher)({\bf t\-\_\-bunny\-\_\-ciphering} ciphering, char $\ast$buffer, {\bf size\-\_\-t} len, {\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast${\bf key})}}\label{security_8h_acc9344771207806c5f4449c86730ac93}
+The type of the gl\-\_\-bunny\-\_\-my\-\_\-uncipher function pointer, that may be used if you wish to bring your own unciphering algorithm. The ciphering parameter is the value sent to bunny\-\_\-uncipher\-\_\-$\ast$ as ciphering parameter\-: it should be B\-S\-\_\-\-C\-U\-S\-T\-O\-M or any greater value (You choose...) 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{security_8h_a6d0c8ae578fb1013140c8c0180951238}{\index{security.\-h@{security.\-h}!e\-\_\-bunny\-\_\-ciphering@{e\-\_\-bunny\-\_\-ciphering}}
+\index{e\-\_\-bunny\-\_\-ciphering@{e\-\_\-bunny\-\_\-ciphering}!security.h@{security.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-ciphering}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-ciphering}}}\label{security_8h_a6d0c8ae578fb1013140c8c0180951238}
+t\-\_\-bunny\-\_\-ciphering's values are ciphering algorithm. B\-S\-\_\-\-X\-O\-R use the '$^\wedge$' operator to cipher. B\-S\-\_\-\-C\-A\-E\-S\-A\-R use the '+' / '-\/' operator to cipher / uncipher. B\-S\-\_\-\-S\-H\-A\-K\-E\-R swap the currently ciphered data chunk with another chunk at a specified offset B\-S\-\_\-\-C\-U\-S\-T\-O\-M (and greater values) means that you want to use a custom algorithm, so the system will call the function defined in gl\-\_\-bunny\-\_\-my\-\_\-cipher or gl\-\_\-bunny\-\_\-my\-\_\-uncipher. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-S\-\_\-\-X\-O\-R@{B\-S\-\_\-\-X\-O\-R}!security.\-h@{security.\-h}}\index{security.\-h@{security.\-h}!B\-S\-\_\-\-X\-O\-R@{B\-S\-\_\-\-X\-O\-R}}\item[{\em 
+\hypertarget{security_8h_a6d0c8ae578fb1013140c8c0180951238a7d6c9c2ff01b1fa79df6da41ff440bd5}{B\-S\-\_\-\-X\-O\-R}\label{security_8h_a6d0c8ae578fb1013140c8c0180951238a7d6c9c2ff01b1fa79df6da41ff440bd5}
+}]\index{B\-S\-\_\-\-C\-A\-E\-S\-A\-R@{B\-S\-\_\-\-C\-A\-E\-S\-A\-R}!security.\-h@{security.\-h}}\index{security.\-h@{security.\-h}!B\-S\-\_\-\-C\-A\-E\-S\-A\-R@{B\-S\-\_\-\-C\-A\-E\-S\-A\-R}}\item[{\em 
+\hypertarget{security_8h_a6d0c8ae578fb1013140c8c0180951238aca508455cb2c98b6a90fa3aab8a4e881}{B\-S\-\_\-\-C\-A\-E\-S\-A\-R}\label{security_8h_a6d0c8ae578fb1013140c8c0180951238aca508455cb2c98b6a90fa3aab8a4e881}
+}]\index{B\-S\-\_\-\-S\-H\-A\-K\-E\-R@{B\-S\-\_\-\-S\-H\-A\-K\-E\-R}!security.\-h@{security.\-h}}\index{security.\-h@{security.\-h}!B\-S\-\_\-\-S\-H\-A\-K\-E\-R@{B\-S\-\_\-\-S\-H\-A\-K\-E\-R}}\item[{\em 
+\hypertarget{security_8h_a6d0c8ae578fb1013140c8c0180951238a5891f94f26250372e71b94b1c76250fa}{B\-S\-\_\-\-S\-H\-A\-K\-E\-R}\label{security_8h_a6d0c8ae578fb1013140c8c0180951238a5891f94f26250372e71b94b1c76250fa}
+}]\index{B\-S\-\_\-\-C\-U\-S\-T\-O\-M@{B\-S\-\_\-\-C\-U\-S\-T\-O\-M}!security.\-h@{security.\-h}}\index{security.\-h@{security.\-h}!B\-S\-\_\-\-C\-U\-S\-T\-O\-M@{B\-S\-\_\-\-C\-U\-S\-T\-O\-M}}\item[{\em 
+\hypertarget{security_8h_a6d0c8ae578fb1013140c8c0180951238a28e683d5391d407cdc2e73d62ea77ac2}{B\-S\-\_\-\-C\-U\-S\-T\-O\-M}\label{security_8h_a6d0c8ae578fb1013140c8c0180951238a28e683d5391d407cdc2e73d62ea77ac2}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{security_8h_aa7053a80e7c4e8a8b06446be50468a30}{\index{security.\-h@{security.\-h}!bunny\-\_\-cipher\-\_\-data@{bunny\-\_\-cipher\-\_\-data}}
+\index{bunny\-\_\-cipher\-\_\-data@{bunny\-\_\-cipher\-\_\-data}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-cipher\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-cipher\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf size\-\_\-t}}]{datalen, }
+\item[{{\bf t\-\_\-bunny\-\_\-ciphering}}]{ciphering, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_aa7053a80e7c4e8a8b06446be50468a30}
+Cipher the sent buffer. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The buffer to cipher \\
+\hline
+{\em datalen} & The length of the buffer to cipher. \\
+\hline
+{\em ciphering} & The algorithm to use. \\
+\hline
+{\em key} & The key used by the ciphering algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{security_8h_a3395f088e667ab68ab87b0073e065572}{\index{security.\-h@{security.\-h}!bunny\-\_\-cipher\-\_\-file@{bunny\-\_\-cipher\-\_\-file}}
+\index{bunny\-\_\-cipher\-\_\-file@{bunny\-\_\-cipher\-\_\-file}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-cipher\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-cipher\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{{\bf t\-\_\-bunny\-\_\-ciphering}}]{ciphering, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a3395f088e667ab68ab87b0073e065572}
+Open the given file, load its content, cipher it and save it right after. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to cipher. \\
+\hline
+{\em ciphering} & The algorithm to use. \\
+\hline
+{\em key} & The key used by the ciphering algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on errror. 
+\end{DoxyReturn}
+\hypertarget{security_8h_a2362c45be992253191ce23ad97784e76}{\index{security.\-h@{security.\-h}!bunny\-\_\-default\-\_\-key@{bunny\-\_\-default\-\_\-key}}
+\index{bunny\-\_\-default\-\_\-key@{bunny\-\_\-default\-\_\-key}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-default\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key}$\ast$ bunny\-\_\-default\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a2362c45be992253191ce23ad97784e76}
+Get the binary-\/embedded key. Its default value is plain 0 that are supposed to be replaced by a random value thanks to the bunny\-\_\-fill\-\_\-default\-\_\-key function. The ressources you wish to use are supposed to be ciphered with the same key after. \begin{DoxyReturn}{Returns}
+The binary-\/embedded key. 
+\end{DoxyReturn}
+\hypertarget{security_8h_a1f75c787c2fa3502268930e4ef2a5d47}{\index{security.\-h@{security.\-h}!bunny\-\_\-delete\-\_\-key@{bunny\-\_\-delete\-\_\-key}}
+\index{bunny\-\_\-delete\-\_\-key@{bunny\-\_\-delete\-\_\-key}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a1f75c787c2fa3502268930e4ef2a5d47}
+Delete the given key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to delete. \\
+\hline
+\end{DoxyParams}
+\hypertarget{security_8h_a30088cfd783172ac8c8941c556896193}{\index{security.\-h@{security.\-h}!bunny\-\_\-fill\-\_\-default\-\_\-key@{bunny\-\_\-fill\-\_\-default\-\_\-key}}
+\index{bunny\-\_\-fill\-\_\-default\-\_\-key@{bunny\-\_\-fill\-\_\-default\-\_\-key}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-fill\-\_\-default\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-fill\-\_\-default\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{bunny\-\_\-program, }
+\item[{{\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a30088cfd783172ac8c8941c556896193}
+Erase an unset binary-\/embedded key (filled with the plain 0 default value) of the sent file with a randomly generated key. By making so, it enables the cipher/unciphering capacity of the bunny security module (because the key used won't be 0 anymore) 
+\begin{DoxyParams}{Parameters}
+{\em bunny\-\_\-program} & A binary file, designed with Lib\-Lapin, to modify \\
+\hline
+{\em key} & The key to insert inside the binary. If N\-U\-L\-L, a key is generated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if every thing went well. 
+\end{DoxyReturn}
+\hypertarget{security_8h_a27fe7657795554536e7d582c95236af1}{\index{security.\-h@{security.\-h}!bunny\-\_\-get\-\_\-ciphering@{bunny\-\_\-get\-\_\-ciphering}}
+\index{bunny\-\_\-get\-\_\-ciphering@{bunny\-\_\-get\-\_\-ciphering}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-get\-\_\-ciphering}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ciphering} bunny\-\_\-get\-\_\-ciphering (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a27fe7657795554536e7d582c95236af1}
+Resolve the ciphering algorithm name with the gl\-\_\-bunny\-\_\-ciphering\-\_\-table tbale \hypertarget{security_8h_aff0ccd7574ff9dad2d5fa8b6f5ebae79}{\index{security.\-h@{security.\-h}!bunny\-\_\-new\-\_\-key@{bunny\-\_\-new\-\_\-key}}
+\index{bunny\-\_\-new\-\_\-key@{bunny\-\_\-new\-\_\-key}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-cipher\-\_\-key}$\ast$ bunny\-\_\-new\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{security_8h_aff0ccd7574ff9dad2d5fa8b6f5ebae79}
+Create a new key of the given size. The key is filled with random values. 
+\begin{DoxyParams}{Parameters}
+{\em len} & The size of the key. Should be greater than 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated key or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{security_8h_a90fa6d97872e0dc868cc12653c27170c}{\index{security.\-h@{security.\-h}!bunny\-\_\-uncipher\-\_\-data@{bunny\-\_\-uncipher\-\_\-data}}
+\index{bunny\-\_\-uncipher\-\_\-data@{bunny\-\_\-uncipher\-\_\-data}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-uncipher\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-uncipher\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf size\-\_\-t}}]{data\-\_\-len, }
+\item[{{\bf t\-\_\-bunny\-\_\-ciphering}}]{ciphering, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_a90fa6d97872e0dc868cc12653c27170c}
+Uncipher the sent buffer. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The buffer to uncipher \\
+\hline
+{\em datalen} & The length of the buffer to uncipher. \\
+\hline
+{\em ciphering} & The algorithm to use. \\
+\hline
+{\em key} & The key used by the unciphering algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{security_8h_adf0273fb596c66e40de4b1152d73ba1b}{\index{security.\-h@{security.\-h}!bunny\-\_\-uncipher\-\_\-file@{bunny\-\_\-uncipher\-\_\-file}}
+\index{bunny\-\_\-uncipher\-\_\-file@{bunny\-\_\-uncipher\-\_\-file}!security.h@{security.\-h}}
+\subsubsection[{bunny\-\_\-uncipher\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-uncipher\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{{\bf t\-\_\-bunny\-\_\-ciphering}}]{ciphering, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-cipher\-\_\-key} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{security_8h_adf0273fb596c66e40de4b1152d73ba1b}
+Open the given file, load its content, uncipher it and save it right after. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to uncipher. \\
+\hline
+{\em ciphering} & The algorithm to use. \\
+\hline
+{\em key} & The key used by the unciphering algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false on errror. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{security_8h_a273f886c9cd47efa5c3343a2a583d28f}{\index{security.\-h@{security.\-h}!gl\-\_\-bunny\-\_\-ciphering\-\_\-table@{gl\-\_\-bunny\-\_\-ciphering\-\_\-table}}
+\index{gl\-\_\-bunny\-\_\-ciphering\-\_\-table@{gl\-\_\-bunny\-\_\-ciphering\-\_\-table}!security.h@{security.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-ciphering\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ {\bf const} gl\-\_\-bunny\-\_\-ciphering\-\_\-table\mbox{[}{\bf B\-S\-\_\-\-C\-U\-S\-T\-O\-M}\mbox{]}}}\label{security_8h_a273f886c9cd47efa5c3343a2a583d28f}
+An associative table for an easy enumeration$<$-\/$>$string transaction \hypertarget{security_8h_ad27058bc6c3cb56a6e3157a1cb37fe27}{\index{security.\-h@{security.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-cipher@{gl\-\_\-bunny\-\_\-my\-\_\-cipher}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-cipher@{gl\-\_\-bunny\-\_\-my\-\_\-cipher}!security.h@{security.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-cipher} gl\-\_\-bunny\-\_\-my\-\_\-cipher}}\label{security_8h_ad27058bc6c3cb56a6e3157a1cb37fe27}
+A function pointer that contains a function that will be called if bunny\-\_\-cipher\-\_\-$\ast$ is called with B\-S\-\_\-\-C\-U\-S\-T\-O\-M or any greater value as ciphering algorithm. \hypertarget{security_8h_a8f08a96ae20a740b37621da1bbac0622}{\index{security.\-h@{security.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist@{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist@{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}!security.h@{security.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-key\-\_\-twist} gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}}\label{security_8h_a8f08a96ae20a740b37621da1bbac0622}
+The function that will be called to tweak the hardcoded key. If not set, a default algorithm will be applied. \hypertarget{security_8h_ab154524ea4671dbcd2a110e5de57964a}{\index{security.\-h@{security.\-h}!gl\-\_\-bunny\-\_\-my\-\_\-uncipher@{gl\-\_\-bunny\-\_\-my\-\_\-uncipher}}
+\index{gl\-\_\-bunny\-\_\-my\-\_\-uncipher@{gl\-\_\-bunny\-\_\-my\-\_\-uncipher}!security.h@{security.\-h}}
+\subsubsection[{gl\-\_\-bunny\-\_\-my\-\_\-uncipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-my\-\_\-uncipher} gl\-\_\-bunny\-\_\-my\-\_\-uncipher}}\label{security_8h_ab154524ea4671dbcd2a110e5de57964a}
+A function pointer that contains a function that will be called if bunny\-\_\-uncipher\-\_\-$\ast$ is called with B\-S\-\_\-\-C\-U\-S\-T\-O\-M or any greater value as ciphering algorithm. 

@@ -1,0 +1,194 @@
+\hypertarget{classsf_1_1_touch}{\section{sf\-:\-:Touch Class Reference}
+\label{classsf_1_1_touch}\index{sf\-::\-Touch@{sf\-::\-Touch}}
+}
+
+
+Give access to the real-\/time state of the touches.  
+
+
+
+
+{\ttfamily \#include $<$Touch.\-hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}{is\-Down} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \hyperlink{namespacesf_a0eed58bf66694ebbc55f72ca7de840d9}{Vector2i} \hyperlink{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{get\-Position} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \hyperlink{namespacesf_a0eed58bf66694ebbc55f72ca7de840d9}{Vector2i} \hyperlink{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}{get\-Position} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classsf_1_1_window}{Window} \&relative\-To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\item 
+static \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}{is\-Down} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger)
+\begin{DoxyCompactList}\small\item\em Check if a touch event is currently down. \end{DoxyCompactList}\item 
+static \hyperlink{namespacesf_a0eed58bf66694ebbc55f72ca7de840d9}{Vector2i} \hyperlink{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{get\-Position} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in desktop coordinates. \end{DoxyCompactList}\item 
+static \hyperlink{namespacesf_a0eed58bf66694ebbc55f72ca7de840d9}{Vector2i} \hyperlink{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}{get\-Position} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} finger, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classsf_1_1_window}{Window} \&relative\-To)
+\begin{DoxyCompactList}\small\item\em Get the current position of a touch in window coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Give access to the real-\/time state of the touches. 
+
+\hyperlink{classsf_1_1_touch}{sf\-::\-Touch} provides an interface to the state of the touches. It only contains static functions, so it's not meant to be instantiated.
+
+This class allows users to query the touches state at any time and directly, without having to deal with a window and its events. Compared to the Touch\-Began, Touch\-Moved and Touch\-Ended events, \hyperlink{classsf_1_1_touch}{sf\-::\-Touch} can retrieve the state of the touches at any time (you don't need to store and update a boolean on your side in order to know if a touch is down), and you always get the real state of the touches, even if they happen when your window is out of focus and no event is triggered.
+
+The get\-Position function can be used to retrieve the current position of a touch. There are two versions\-: one that operates in global coordinates (relative to the desktop) and one that operates in window coordinates (relative to a specific window).
+
+Touches are identified by an index (the \char`\"{}finger\char`\"{}), so that in multi-\/touch events, individual touches can be tracked correctly. As long as a finger touches the screen, it will keep the same index even if other fingers start or stop touching the screen in the meantime. As a consequence, active touch indices may not always be sequential (i.\-e. touch number 0 may be released while touch number 1 is still down).
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (\hyperlink{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}{sf::Touch::isDown}(0))
+\{
+    \textcolor{comment}{// touch 0 is down}
+\}
+
+\textcolor{comment}{// get global position of touch 1}
+\hyperlink{classsf_1_1_vector2}{sf::Vector2i} globalPos = \hyperlink{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{sf::Touch::getPosition}(1);
+
+\textcolor{comment}{// get position of touch 1 relative to a window}
+\hyperlink{classsf_1_1_vector2}{sf::Vector2i} relativePos = \hyperlink{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{sf::Touch::getPosition}(1, window);
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_joystick}{sf\-::\-Joystick}, \hyperlink{classsf_1_1_keyboard}{sf\-::\-Keyboard}, \hyperlink{classsf_1_1_mouse}{sf\-::\-Mouse} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{\index{sf\-::\-Touch@{sf\-::\-Touch}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Vector2i} sf\-::\-Touch\-::get\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current position of {\itshape finger}, or undefined if it's not down 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}{\index{sf\-::\-Touch@{sf\-::\-Touch}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Vector2i} sf\-::\-Touch\-::get\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_af1b7035be709091c7475075e43e2bc23}
+
+
+Get the current position of a touch in desktop coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current position of {\itshape finger}, or undefined if it's not down 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}{\index{sf\-::\-Touch@{sf\-::\-Touch}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Vector2i} sf\-::\-Touch\-::get\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger, }
+\item[{{\bf const} {\bf Window} \&}]{relative\-To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position relative to the given window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index \\
+\hline
+{\em relative\-To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current position of {\itshape finger}, or undefined if it's not down 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}{\index{sf\-::\-Touch@{sf\-::\-Touch}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Vector2i} sf\-::\-Touch\-::get\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger, }
+\item[{{\bf const} {\bf Window} \&}]{relative\-To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_a372acaba3c7ac70fca4614c16ac4a1bb}
+
+
+Get the current position of a touch in window coordinates. 
+
+This function returns the current touch position in global (desktop) coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index \\
+\hline
+{\em relative\-To} & Reference window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current position of {\itshape finger}, or undefined if it's not down 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}{\index{sf\-::\-Touch@{sf\-::\-Touch}!is\-Down@{is\-Down}}
+\index{is\-Down@{is\-Down}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{is\-Down}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf bool} sf\-::\-Touch\-::is\-Down (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}{\index{sf\-::\-Touch@{sf\-::\-Touch}!is\-Down@{is\-Down}}
+\index{is\-Down@{is\-Down}!sf::Touch@{sf\-::\-Touch}}
+\subsubsection[{is\-Down}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf bool} sf\-::\-Touch\-::is\-Down (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{finger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classsf_1_1_touch_a2f85297123ea4e401d02c346e50d48a3}
+
+
+Check if a touch event is currently down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finger} & Finger index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape finger} is currently touching the screen, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-Window/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_window_2_touch_8hpp}{Touch.\-hpp}\end{DoxyCompactItemize}

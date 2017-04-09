@@ -1,0 +1,191 @@
+\hypertarget{misc_8h}{\section{lib/lapin/dep/lapin/misc.h File Reference}
+\label{misc_8h}\index{lib/lapin/dep/lapin/misc.\-h@{lib/lapin/dep/lapin/misc.\-h}}
+}
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{misc_8h_a44a2117b200ec56e2933d7c980493d57}{L\-I\-T\-T\-E\-R\-A\-L}(fd, str)~write((fd), str \char`\"{}\textbackslash{}n\char`\"{}, sizeof(str \char`\"{}\textbackslash{}n\char`\"{}))
+\item 
+\#define \hyperlink{misc_8h_a38380c88ec4cb725eeb177986caea179}{B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G}(code)
+\item 
+\#define \hyperlink{misc_8h_a20478a8936fec1f72fdb8afc3cb7e5f2}{B\-U\-N\-N\-Y\-\_\-\-L\-O\-G}(code)
+\item 
+\#define \hyperlink{misc_8h_aa96399abe6151e874bf6826686985422}{bunny\-\_\-printl}(str)~\hyperlink{misc_8h_a44a2117b200ec56e2933d7c980493d57}{L\-I\-T\-T\-E\-R\-A\-L}(1,  str)
+\item 
+\#define \hyperlink{misc_8h_ad0dc656e42b8b65ecd3ac500022839a1}{bunny\-\_\-printlerr}(str)~\hyperlink{misc_8h_a44a2117b200ec56e2933d7c980493d57}{L\-I\-T\-T\-E\-R\-A\-L}(2,  str)
+\item 
+\#define \hyperlink{misc_8h_a3e3c5a69132ea6739494149aaef5367f}{bunny\-\_\-errno}~errno
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{misc_8h_a487d68ad94da1951ba68fea95781b9e5}{bunny\-\_\-strerror} (\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} errorcode)
+\item 
+void \hyperlink{misc_8h_a29b0e0ba49b43f0a42ebac1fbab079ba}{bunny\-\_\-perror} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$str)
+\item 
+ssize\-\_\-t \hyperlink{misc_8h_a20acd8139a8cf2dab1457cf14fe75ef2}{bunny\-\_\-load\-\_\-file} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, char $\ast$$\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $\ast$size)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{misc_8h_a62485bd0bcf9d1070222408d508a7eef}{bunny\-\_\-save\-\_\-file} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} len)
+\item 
+double \hyperlink{misc_8h_a82d2024a7c634e53fd65fbb06981fa56}{bunny\-\_\-evaluate} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$operation, \hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration} $\ast$env)
+\item 
+void \hyperlink{misc_8h_a4918f33082cf660aae8150bf3d9f751f}{bunny\-\_\-consistancy} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utilities 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{misc_8h_a38380c88ec4cb725eeb177986caea179}{\index{misc.\-h@{misc.\-h}!B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G@{B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G}}
+\index{B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G@{B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G}!misc.h@{misc.\-h}}
+\subsubsection[{B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-N\-N\-Y\-\_\-\-D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a38380c88ec4cb725eeb177986caea179}
+\hypertarget{misc_8h_a3e3c5a69132ea6739494149aaef5367f}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-errno@{bunny\-\_\-errno}}
+\index{bunny\-\_\-errno@{bunny\-\_\-errno}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-errno}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-errno~errno}}\label{misc_8h_a3e3c5a69132ea6739494149aaef5367f}
+The last error that occurs. \hypertarget{misc_8h_a20478a8936fec1f72fdb8afc3cb7e5f2}{\index{misc.\-h@{misc.\-h}!B\-U\-N\-N\-Y\-\_\-\-L\-O\-G@{B\-U\-N\-N\-Y\-\_\-\-L\-O\-G}}
+\index{B\-U\-N\-N\-Y\-\_\-\-L\-O\-G@{B\-U\-N\-N\-Y\-\_\-\-L\-O\-G}!misc.h@{misc.\-h}}
+\subsubsection[{B\-U\-N\-N\-Y\-\_\-\-L\-O\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-N\-N\-Y\-\_\-\-L\-O\-G(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a20478a8936fec1f72fdb8afc3cb7e5f2}
+\hypertarget{misc_8h_aa96399abe6151e874bf6826686985422}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-printl@{bunny\-\_\-printl}}
+\index{bunny\-\_\-printl@{bunny\-\_\-printl}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-printl}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-printl(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf L\-I\-T\-T\-E\-R\-A\-L}(1,  str)}}\label{misc_8h_aa96399abe6151e874bf6826686985422}
+Write a litteral string (defined in code, with two double quotes) on stdout. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The string litteral to write \\
+\hline
+\end{DoxyParams}
+\hypertarget{misc_8h_ad0dc656e42b8b65ecd3ac500022839a1}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-printlerr@{bunny\-\_\-printlerr}}
+\index{bunny\-\_\-printlerr@{bunny\-\_\-printlerr}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-printlerr}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-printlerr(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf L\-I\-T\-T\-E\-R\-A\-L}(2,  str)}}\label{misc_8h_ad0dc656e42b8b65ecd3ac500022839a1}
+Write a litteral string (defined in code, with two double quotes) on stderr. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The string litteral to write \\
+\hline
+\end{DoxyParams}
+\hypertarget{misc_8h_a44a2117b200ec56e2933d7c980493d57}{\index{misc.\-h@{misc.\-h}!L\-I\-T\-T\-E\-R\-A\-L@{L\-I\-T\-T\-E\-R\-A\-L}}
+\index{L\-I\-T\-T\-E\-R\-A\-L@{L\-I\-T\-T\-E\-R\-A\-L}!misc.h@{misc.\-h}}
+\subsubsection[{L\-I\-T\-T\-E\-R\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-T\-T\-E\-R\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{fd, }
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~write((fd), str \char`\"{}\textbackslash{}n\char`\"{}, sizeof(str \char`\"{}\textbackslash{}n\char`\"{}))}}\label{misc_8h_a44a2117b200ec56e2933d7c980493d57}
+
+
+\subsection{Function Documentation}
+\hypertarget{misc_8h_a4918f33082cf660aae8150bf3d9f751f}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-consistancy@{bunny\-\_\-consistancy}}
+\index{bunny\-\_\-consistancy@{bunny\-\_\-consistancy}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-consistancy}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-consistancy (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a4918f33082cf660aae8150bf3d9f751f}
+\hypertarget{misc_8h_a82d2024a7c634e53fd65fbb06981fa56}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-evaluate@{bunny\-\_\-evaluate}}
+\index{bunny\-\_\-evaluate@{bunny\-\_\-evaluate}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-evaluate}]{\setlength{\rightskip}{0pt plus 5cm}double bunny\-\_\-evaluate (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{operation, }
+\item[{{\bf t\-\_\-bunny\-\_\-configuration} $\ast$}]{env}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a82d2024a7c634e53fd65fbb06981fa56}
+Compute the operation sent as first parameter. Supported operators are\-: +, -\/, $\ast$, /, \%, $>$, $<$, $>$=, $<$=, !=, ==, ?\-: and () (not the function call but the priority modifier. Support doubles and integers and variables. You can use '.' to go inside a variable. 
+\begin{DoxyParams}{Parameters}
+{\em operation} & The operation to compute \\
+\hline
+{\em env} & The variable environment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result or nan(\char`\"{}\char`\"{}) on error. 
+\end{DoxyReturn}
+\hypertarget{misc_8h_a20acd8139a8cf2dab1457cf14fe75ef2}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-load\-\_\-file@{bunny\-\_\-load\-\_\-file}}
+\index{bunny\-\_\-load\-\_\-file@{bunny\-\_\-load\-\_\-file}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}ssize\-\_\-t bunny\-\_\-load\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{char $\ast$$\ast$}]{data, }
+\item[{{\bf size\-\_\-t} $\ast$}]{size}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a20acd8139a8cf2dab1457cf14fe75ef2}
+Load an entire file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name \\
+\hline
+{\em data} & A pointer to the content of the file (this param is an output) \\
+\hline
+{\em size} & A pointer to the size of the file (this param is an output) If size is N\-U\-L\-L, then an additionnal '\textbackslash{}0' is set at the end of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size of the file if everything went well, else -\/1
+\end{DoxyReturn}
+Note that data and size are only changed if everything went well. \hypertarget{misc_8h_a29b0e0ba49b43f0a42ebac1fbab079ba}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-perror@{bunny\-\_\-perror}}
+\index{bunny\-\_\-perror@{bunny\-\_\-perror}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-perror}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-perror (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a29b0e0ba49b43f0a42ebac1fbab079ba}
+Print the sent string followed by \char`\"{}\-: \char`\"{} if the string is not N\-U\-L\-L and if the first byte is not '\textbackslash{}0', followed by the last error description. Works the same way as perror(3)
+
+/!\textbackslash{} This function is not implemented yet
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & prefix to write before the error description. {\bfseries F\-U\-N\-C} or {\bfseries P\-R\-E\-T\-T\-Y\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N} may be a good idea, or the concatenation of {\bfseries F\-I\-L\-E} and {\bfseries L\-I\-N\-E}... Or the name of the function that provokes the error. \\
+\hline
+\end{DoxyParams}
+\hypertarget{misc_8h_a62485bd0bcf9d1070222408d508a7eef}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-save\-\_\-file@{bunny\-\_\-save\-\_\-file}}
+\index{bunny\-\_\-save\-\_\-file@{bunny\-\_\-save\-\_\-file}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-save\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-save\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file, }
+\item[{{\bf const} char $\ast$}]{data, }
+\item[{{\bf size\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a62485bd0bcf9d1070222408d508a7eef}
+Save the sent data into a file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The destination file \\
+\hline
+{\em data} & The data to save \\
+\hline
+{\em len} & The length of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well, false instead. 
+\end{DoxyReturn}
+\hypertarget{misc_8h_a487d68ad94da1951ba68fea95781b9e5}{\index{misc.\-h@{misc.\-h}!bunny\-\_\-strerror@{bunny\-\_\-strerror}}
+\index{bunny\-\_\-strerror@{bunny\-\_\-strerror}!misc.h@{misc.\-h}}
+\subsubsection[{bunny\-\_\-strerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-strerror (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{errorcode}
+\end{DoxyParamCaption}
+)}}\label{misc_8h_a487d68ad94da1951ba68fea95781b9e5}
+Return a string that contains the description of the sent error number in an human readable fashion. Works the same way as strerror(3).
+
+/!\textbackslash{} This function is not implemented yet
+
+
+\begin{DoxyParams}{Parameters}
+{\em An} & error number \\
+\hline
+\end{DoxyParams}

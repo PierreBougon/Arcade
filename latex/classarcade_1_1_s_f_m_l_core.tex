@@ -1,0 +1,196 @@
+\hypertarget{classarcade_1_1_s_f_m_l_core}{\section{arcade\-:\-:S\-F\-M\-L\-Core Class Reference}
+\label{classarcade_1_1_s_f_m_l_core}\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}}
+}
+
+
+{\ttfamily \#include $<$S\-F\-M\-L\-Core.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:S\-F\-M\-L\-Core\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_s_f_m_l_core}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_s_f_m_l_core_a4a28cd2f462bdff84880d8825be91a51}{S\-F\-M\-L\-Core} ()
+\item 
+\hyperlink{classarcade_1_1_s_f_m_l_core_a16b439a3c7c2c7bd23d1cf8df4637106}{$\sim$\-S\-F\-M\-L\-Core} () override
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_s_f_m_l_core_aa6fd1266021aee5f5b81ca8d7116a9da}{poll\-Event} (\hyperlink{structarcade_1_1_event}{Event} \&e) override
+\begin{DoxyCompactList}\small\item\em Function to poll events from the graphic lib. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_s_f_m_l_core_a3bd154756e59aa923be6a967044010b8}{does\-Support\-Sound} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} override
+\begin{DoxyCompactList}\small\item\em Ask if the library support sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_a04f25330d6e19aa9374f77ec49463f7c}{load\-Sounds} (std\-::vector$<$ std\-::pair$<$ std\-::string, \hyperlink{namespacearcade_a3bb4743a2eea59f3927e404e6549cae5}{arcade\-::\-Sound\-Type} $>$$>$ \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&sounds) override
+\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_ace78e5b9b783b1acd6e3512f9113a37e}{sound\-Control} (\hyperlink{structarcade_1_1_sound}{Sound} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&sound) override
+\begin{DoxyCompactList}\small\item\em Ask the lib to play a sound. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_a455e14cf3f8eb326de84f2cfb85e3ac4}{update\-Map} (\hyperlink{classarcade_1_1_i_map}{I\-Map} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&map) override
+\begin{DoxyCompactList}\small\item\em Update the map displayed. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_ac0de8cd81b98939527e2aff460a7c33f}{display} () override
+\begin{DoxyCompactList}\small\item\em Display the map and G\-U\-I. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_a979135a3dab9f70a85453feafb5aec24}{clear} () override
+\begin{DoxyCompactList}\small\item\em Ask the lib to clear the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_a807def019df641a707a1ce4e26d81d00}{load\-Sprites} (std\-::vector$<$ std\-::unique\-\_\-ptr$<$ \hyperlink{classarcade_1_1_i_sprite}{I\-Sprite} $>$$>$ \&\&sprites) override
+\begin{DoxyCompactList}\small\item\em Load sprites in the lib from the paths given by the game. \end{DoxyCompactList}\item 
+void \hyperlink{classarcade_1_1_s_f_m_l_core_ac795f9e42f2919287a0685c690594986}{update\-G\-U\-I} (\hyperlink{classarcade_1_1_i_g_u_i}{I\-G\-U\-I} \&gui) override
+\begin{DoxyCompactList}\small\item\em Update the G\-U\-I displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_s_f_m_l_core_a4a28cd2f462bdff84880d8825be91a51}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!S\-F\-M\-L\-Core@{S\-F\-M\-L\-Core}}
+\index{S\-F\-M\-L\-Core@{S\-F\-M\-L\-Core}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{S\-F\-M\-L\-Core}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-S\-F\-M\-L\-Core\-::\-S\-F\-M\-L\-Core (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_s_f_m_l_core_a4a28cd2f462bdff84880d8825be91a51}
+\hypertarget{classarcade_1_1_s_f_m_l_core_a16b439a3c7c2c7bd23d1cf8df4637106}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!$\sim$\-S\-F\-M\-L\-Core@{$\sim$\-S\-F\-M\-L\-Core}}
+\index{$\sim$\-S\-F\-M\-L\-Core@{$\sim$\-S\-F\-M\-L\-Core}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{$\sim$\-S\-F\-M\-L\-Core}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-S\-F\-M\-L\-Core\-::$\sim$\-S\-F\-M\-L\-Core (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classarcade_1_1_s_f_m_l_core_a16b439a3c7c2c7bd23d1cf8df4637106}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_s_f_m_l_core_a979135a3dab9f70a85453feafb5aec24}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!clear@{clear}}
+\index{clear@{clear}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_a979135a3dab9f70a85453feafb5aec24}
+
+
+Ask the lib to clear the screen. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a4116b3d4f503c4a795539b584f77a73d}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_ac0de8cd81b98939527e2aff460a7c33f}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!display@{display}}
+\index{display@{display}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_ac0de8cd81b98939527e2aff460a7c33f}
+
+
+Display the map and G\-U\-I. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a7f280525c718a44c1e05cfe0ba5304c3}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_a3bd154756e59aa923be6a967044010b8}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!does\-Support\-Sound@{does\-Support\-Sound}}
+\index{does\-Support\-Sound@{does\-Support\-Sound}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{does\-Support\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-S\-F\-M\-L\-Core\-::does\-Support\-Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_a3bd154756e59aa923be6a967044010b8}
+
+
+Ask if the library support sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a68cfbc987dfecca5b1405e36e00157b2}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_a04f25330d6e19aa9374f77ec49463f7c}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!load\-Sounds@{load\-Sounds}}
+\index{load\-Sounds@{load\-Sounds}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{load\-Sounds}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::load\-Sounds (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::pair$<$ std\-::string, {\bf arcade\-::\-Sound\-Type} $>$$>$ {\bf const} \&}]{sounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classarcade_1_1_s_f_m_l_core_a04f25330d6e19aa9374f77ec49463f7c}
+\hypertarget{classarcade_1_1_s_f_m_l_core_a807def019df641a707a1ce4e26d81d00}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!load\-Sprites@{load\-Sprites}}
+\index{load\-Sprites@{load\-Sprites}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{load\-Sprites}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::load\-Sprites (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::unique\-\_\-ptr$<$ {\bf I\-Sprite} $>$$>$ \&\&}]{sprites}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_a807def019df641a707a1ce4e26d81d00}
+
+
+Load sprites in the lib from the paths given by the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprites} & to pass the path of your sprites to give your lib the way to search your assets \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a1cdbd2504ca685f10ea2af3cd26a9f5a}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_aa6fd1266021aee5f5b81ca8d7116a9da}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!poll\-Event@{poll\-Event}}
+\index{poll\-Event@{poll\-Event}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{poll\-Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-S\-F\-M\-L\-Core\-::poll\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Event} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_aa6fd1266021aee5f5b81ca8d7116a9da}
+
+
+Function to poll events from the graphic lib. 
+
+If there is an event to poll, e is filled and true is returned. If not, false is returned. 
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a82cdd82f168ca898ef81edf82ca6147a}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_ace78e5b9b783b1acd6e3512f9113a37e}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!sound\-Control@{sound\-Control}}
+\index{sound\-Control@{sound\-Control}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{sound\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::sound\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Sound} {\bf const} \&}]{sound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_ace78e5b9b783b1acd6e3512f9113a37e}
+
+
+Ask the lib to play a sound. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_a0b965ed555739ef366b27583799d794c}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_ac795f9e42f2919287a0685c690594986}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!update\-G\-U\-I@{update\-G\-U\-I}}
+\index{update\-G\-U\-I@{update\-G\-U\-I}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{update\-G\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::update\-G\-U\-I (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-G\-U\-I} \&}]{gui}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_ac795f9e42f2919287a0685c690594986}
+
+
+Update the G\-U\-I displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_ae3f443cc341512433815e8bf2dee3e0d}{arcade\-::\-I\-Gfx\-Lib}.
+
+\hypertarget{classarcade_1_1_s_f_m_l_core_a455e14cf3f8eb326de84f2cfb85e3ac4}{\index{arcade\-::\-S\-F\-M\-L\-Core@{arcade\-::\-S\-F\-M\-L\-Core}!update\-Map@{update\-Map}}
+\index{update\-Map@{update\-Map}!arcade::SFMLCore@{arcade\-::\-S\-F\-M\-L\-Core}}
+\subsubsection[{update\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-S\-F\-M\-L\-Core\-::update\-Map (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Map} {\bf const} \&}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_s_f_m_l_core_a455e14cf3f8eb326de84f2cfb85e3ac4}
+
+
+Update the map displayed. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_gfx_lib_addc883f69b75e6ec4927027aad94f5b5}{arcade\-::\-I\-Gfx\-Lib}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/sfml/include/\hyperlink{_s_f_m_l_core_8hpp}{S\-F\-M\-L\-Core.\-hpp}\item 
+lib/sfml/src/\hyperlink{_s_f_m_l_core_8cpp}{S\-F\-M\-L\-Core.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\hypertarget{buffer_8h}{\section{lib/lapin/dep/lapin/buffer.h File Reference}
+\label{buffer_8h}\index{lib/lapin/dep/lapin/buffer.\-h@{lib/lapin/dep/lapin/buffer.\-h}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__buffer}{s\-\_\-bunny\-\_\-buffer}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__buffer}{s\-\_\-bunny\-\_\-buffer} \hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{buffer_8h}{buffer.\-h} file contains the header of every graphic elements in the bunny library. 
+
+\subsection{Typedef Documentation}
+\hypertarget{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{\index{buffer.\-h@{buffer.\-h}!t\-\_\-bunny\-\_\-buffer@{t\-\_\-bunny\-\_\-buffer}}
+\index{t\-\_\-bunny\-\_\-buffer@{t\-\_\-bunny\-\_\-buffer}!buffer.h@{buffer.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-buffer}				 {\bf t\-\_\-bunny\-\_\-buffer}}}\label{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}
+The t\-\_\-bunny\-\_\-buffer is a structure that contains foundamental informations about a 2\-D graphic space. It contains its width and its height. It also contains a private field which is used by the library only.
+
+Several other structure contains a t\-\_\-bunny\-\_\-buffer\-:
+\begin{DoxyItemize}
+\item t\-\_\-bunny\-\_\-window
+\item t\-\_\-bunny\-\_\-clipable / t\-\_\-bunny\-\_\-picture
+\item t\-\_\-bunny\-\_\-pixelarray, throught t\-\_\-bunny\-\_\-clipable 
+\end{DoxyItemize}

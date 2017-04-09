@@ -1,0 +1,35 @@
+\hypertarget{structs__bunny__vertex__array}{\section{s\-\_\-bunny\-\_\-vertex\-\_\-array Struct Reference}
+\label{structs__bunny__vertex__array}\index{s\-\_\-bunny\-\_\-vertex\-\_\-array@{s\-\_\-bunny\-\_\-vertex\-\_\-array}}
+}
+
+
+{\ttfamily \#include $<$graphics.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{structs__bunny__vertex__array_ac9aececfcb6b5d75089ddcaac5286c2b}{length}
+\item 
+\hyperlink{graphics_8h_af00166dd6e68ece1b8aedc2a68f24c34}{t\-\_\-bunny\-\_\-vertex} \hyperlink{structs__bunny__vertex__array_a6823a8c6591d86407701a66c03ea6907}{vertex} \mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-vertex\-\_\-array is a structure that is useful to contains a collection of t\-\_\-bunny\-\_\-vertex. In order to use it, you have to manually reserve a specific amount of data depending of what you wish to store. For example, if you wish to draw two pixels\-:
+
+t\-\_\-bunny\-\_\-vertex\-\_\-array $\ast$array = alloca(sizeof($\ast$array) + 2 $\ast$ sizeof(array-\/$>$vertex\mbox{[}0\mbox{]}));
+
+array-\/$>$lenght = 2; fill(\&array-\/$>$vertex\mbox{[}0\mbox{]}); fill(\&array-\/$>$vertex\mbox{[}1\mbox{]}); 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__vertex__array_ac9aececfcb6b5d75089ddcaac5286c2b}{\index{s\-\_\-bunny\-\_\-vertex\-\_\-array@{s\-\_\-bunny\-\_\-vertex\-\_\-array}!length@{length}}
+\index{length@{length}!s_bunny_vertex_array@{s\-\_\-bunny\-\_\-vertex\-\_\-array}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} s\-\_\-bunny\-\_\-vertex\-\_\-array\-::length}}\label{structs__bunny__vertex__array_ac9aececfcb6b5d75089ddcaac5286c2b}
+\hypertarget{structs__bunny__vertex__array_a6823a8c6591d86407701a66c03ea6907}{\index{s\-\_\-bunny\-\_\-vertex\-\_\-array@{s\-\_\-bunny\-\_\-vertex\-\_\-array}!vertex@{vertex}}
+\index{vertex@{vertex}!s_bunny_vertex_array@{s\-\_\-bunny\-\_\-vertex\-\_\-array}}
+\subsubsection[{vertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-vertex} s\-\_\-bunny\-\_\-vertex\-\_\-array\-::vertex\mbox{[}0\mbox{]}}}\label{structs__bunny__vertex__array_a6823a8c6591d86407701a66c03ea6907}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{graphics_8h}{graphics.\-h}\end{DoxyCompactItemize}

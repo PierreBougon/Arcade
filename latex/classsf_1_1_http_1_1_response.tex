@@ -1,0 +1,594 @@
+\hypertarget{classsf_1_1_http_1_1_response}{\section{sf\-:\-:Http\-:\-:Response Class Reference}
+\label{classsf_1_1_http_1_1_response}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}
+}
+
+
+Define a H\-T\-T\-P response.  
+
+
+
+
+{\ttfamily \#include $<$Http.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{Status} \{ \\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok} = 200, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created} = 201, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted} = 202, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content} = 204, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content} = 205, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content} = 206, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices} = 300, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently} = 301, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily} = 302, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified} = 304, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request} = 400, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized} = 401, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden} = 403, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found} = 404, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable} = 407, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error} = 500, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented} = 501, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway} = 502, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available} = 503, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout} = 504, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported} = 505, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response} = 1000, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed} = 1001, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok} = 200, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created} = 201, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted} = 202, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content} = 204, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content} = 205, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content} = 206, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices} = 300, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently} = 301, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily} = 302, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified} = 304, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request} = 400, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized} = 401, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden} = 403, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found} = 404, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable} = 407, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error} = 500, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented} = 501, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway} = 502, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available} = 503, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout} = 504, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported} = 505, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response} = 1000, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed} = 1001
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerate all the valid status codes for a response. \end{DoxyCompactList}\item 
+enum \hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{Status} \{ \\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok} = 200, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created} = 201, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted} = 202, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content} = 204, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content} = 205, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content} = 206, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices} = 300, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently} = 301, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily} = 302, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified} = 304, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request} = 400, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized} = 401, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden} = 403, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found} = 404, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable} = 407, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error} = 500, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented} = 501, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway} = 502, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available} = 503, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout} = 504, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported} = 505, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response} = 1000, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed} = 1001, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok} = 200, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created} = 201, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted} = 202, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content} = 204, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content} = 205, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content} = 206, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices} = 300, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently} = 301, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily} = 302, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified} = 304, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request} = 400, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized} = 401, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden} = 403, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found} = 404, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable} = 407, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error} = 500, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented} = 501, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway} = 502, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available} = 503, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout} = 504, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported} = 505, 
+\\*
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response} = 1000, 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed} = 1001
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerate all the valid status codes for a response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}{Response} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \& \hyperlink{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}{get\-Field} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&field) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the value of a field. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{Status} \hyperlink{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}{get\-Status} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the response status code. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{get\-Major\-Http\-Version} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the major H\-T\-T\-P version number of the response. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{get\-Minor\-Http\-Version} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the minor H\-T\-T\-P version number of the response. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \& \hyperlink{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}{get\-Body} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the body of the response. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}{Response} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \& \hyperlink{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}{get\-Field} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&field) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the value of a field. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{Status} \hyperlink{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}{get\-Status} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the response status code. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{get\-Major\-Http\-Version} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the major H\-T\-T\-P version number of the response. \end{DoxyCompactList}\item 
+\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{get\-Minor\-Http\-Version} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the minor H\-T\-T\-P version number of the response. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \& \hyperlink{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}{get\-Body} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the body of the response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsf_1_1_http_1_1_response_ad44371f4a337a0f6537733cdf6df8e76}{Http}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define a H\-T\-T\-P response. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Status@{Status}}
+\index{Status@{Status}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sf\-::\-Http\-::\-Response\-::\-Status}}}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}
+
+
+Enumerate all the valid status codes for a response. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Ok@{Ok}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Ok@{Ok}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}
+}]Most common code returned when operation was successful. \index{Created@{Created}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Created@{Created}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}
+}]The resource has successfully been created. \index{Accepted@{Accepted}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Accepted@{Accepted}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}
+}]The request has been accepted, but will be processed later by the server. \index{No\-Content@{No\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!No\-Content@{No\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}
+}]The server didn't send any data in return. \index{Reset\-Content@{Reset\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Reset\-Content@{Reset\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}
+}]The server informs the client that it should clear the view (form) that caused the request to be sent. \index{Partial\-Content@{Partial\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Partial\-Content@{Partial\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}
+}]The server has sent a part of the resource, as a response to a partial G\-E\-T request. \index{Multiple\-Choices@{Multiple\-Choices}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Multiple\-Choices@{Multiple\-Choices}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}
+}]The requested page can be accessed from several locations. \index{Moved\-Permanently@{Moved\-Permanently}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Permanently@{Moved\-Permanently}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}
+}]The requested page has permanently moved to a new location. \index{Moved\-Temporarily@{Moved\-Temporarily}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Temporarily@{Moved\-Temporarily}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}
+}]The requested page has temporarily moved to a new location. \index{Not\-Modified@{Not\-Modified}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Modified@{Not\-Modified}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}
+}]For conditional requests, means the requested page hasn't changed and doesn't need to be refreshed. \index{Bad\-Request@{Bad\-Request}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Request@{Bad\-Request}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}
+}]The server couldn't understand the request (syntax error) \index{Unauthorized@{Unauthorized}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Unauthorized@{Unauthorized}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}
+}]The requested page needs an authentication to be accessed. \index{Forbidden@{Forbidden}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Forbidden@{Forbidden}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}
+}]The requested page cannot be accessed at all, even with authentication. \index{Not\-Found@{Not\-Found}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Found@{Not\-Found}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}
+}]The requested page doesn't exist. \index{Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}
+}]The server can't satisfy the partial G\-E\-T request (with a \char`\"{}\-Range\char`\"{} header field) \index{Internal\-Server\-Error@{Internal\-Server\-Error}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Internal\-Server\-Error@{Internal\-Server\-Error}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}
+}]The server encountered an unexpected error. \index{Not\-Implemented@{Not\-Implemented}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Implemented@{Not\-Implemented}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}
+}]The server doesn't implement a requested feature. \index{Bad\-Gateway@{Bad\-Gateway}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Gateway@{Bad\-Gateway}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}
+}]The gateway server has received an error from the source server. \index{Service\-Not\-Available@{Service\-Not\-Available}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Service\-Not\-Available@{Service\-Not\-Available}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}
+}]The server is temporarily unavailable (overloaded, in maintenance, ...) \index{Gateway\-Timeout@{Gateway\-Timeout}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Gateway\-Timeout@{Gateway\-Timeout}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}
+}]The gateway server couldn't receive a response from the source server. \index{Version\-Not\-Supported@{Version\-Not\-Supported}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Version\-Not\-Supported@{Version\-Not\-Supported}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}
+}]The server doesn't support the requested H\-T\-T\-P version. \index{Invalid\-Response@{Invalid\-Response}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Invalid\-Response@{Invalid\-Response}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}
+}]\hyperlink{classsf_1_1_http_1_1_response}{Response} is not a valid H\-T\-T\-P one. \index{Connection\-Failed@{Connection\-Failed}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Connection\-Failed@{Connection\-Failed}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}
+}]Connection with server failed. \index{Ok@{Ok}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Ok@{Ok}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}
+}]Most common code returned when operation was successful. \index{Created@{Created}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Created@{Created}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}
+}]The resource has successfully been created. \index{Accepted@{Accepted}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Accepted@{Accepted}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}
+}]The request has been accepted, but will be processed later by the server. \index{No\-Content@{No\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!No\-Content@{No\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}
+}]The server didn't send any data in return. \index{Reset\-Content@{Reset\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Reset\-Content@{Reset\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}
+}]The server informs the client that it should clear the view (form) that caused the request to be sent. \index{Partial\-Content@{Partial\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Partial\-Content@{Partial\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}
+}]The server has sent a part of the resource, as a response to a partial G\-E\-T request. \index{Multiple\-Choices@{Multiple\-Choices}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Multiple\-Choices@{Multiple\-Choices}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}
+}]The requested page can be accessed from several locations. \index{Moved\-Permanently@{Moved\-Permanently}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Permanently@{Moved\-Permanently}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}
+}]The requested page has permanently moved to a new location. \index{Moved\-Temporarily@{Moved\-Temporarily}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Temporarily@{Moved\-Temporarily}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}
+}]The requested page has temporarily moved to a new location. \index{Not\-Modified@{Not\-Modified}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Modified@{Not\-Modified}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}
+}]For conditional requests, means the requested page hasn't changed and doesn't need to be refreshed. \index{Bad\-Request@{Bad\-Request}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Request@{Bad\-Request}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}
+}]The server couldn't understand the request (syntax error) \index{Unauthorized@{Unauthorized}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Unauthorized@{Unauthorized}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}
+}]The requested page needs an authentication to be accessed. \index{Forbidden@{Forbidden}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Forbidden@{Forbidden}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}
+}]The requested page cannot be accessed at all, even with authentication. \index{Not\-Found@{Not\-Found}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Found@{Not\-Found}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}
+}]The requested page doesn't exist. \index{Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}
+}]The server can't satisfy the partial G\-E\-T request (with a \char`\"{}\-Range\char`\"{} header field) \index{Internal\-Server\-Error@{Internal\-Server\-Error}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Internal\-Server\-Error@{Internal\-Server\-Error}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}
+}]The server encountered an unexpected error. \index{Not\-Implemented@{Not\-Implemented}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Implemented@{Not\-Implemented}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}
+}]The server doesn't implement a requested feature. \index{Bad\-Gateway@{Bad\-Gateway}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Gateway@{Bad\-Gateway}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}
+}]The gateway server has received an error from the source server. \index{Service\-Not\-Available@{Service\-Not\-Available}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Service\-Not\-Available@{Service\-Not\-Available}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}
+}]The server is temporarily unavailable (overloaded, in maintenance, ...) \index{Gateway\-Timeout@{Gateway\-Timeout}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Gateway\-Timeout@{Gateway\-Timeout}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}
+}]The gateway server couldn't receive a response from the source server. \index{Version\-Not\-Supported@{Version\-Not\-Supported}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Version\-Not\-Supported@{Version\-Not\-Supported}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}
+}]The server doesn't support the requested H\-T\-T\-P version. \index{Invalid\-Response@{Invalid\-Response}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Invalid\-Response@{Invalid\-Response}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}
+}]\hyperlink{classsf_1_1_http_1_1_response}{Response} is not a valid H\-T\-T\-P one. \index{Connection\-Failed@{Connection\-Failed}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Connection\-Failed@{Connection\-Failed}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}
+}]Connection with server failed. \end{description}
+\end{Desc}
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Status@{Status}}
+\index{Status@{Status}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sf\-::\-Http\-::\-Response\-::\-Status}}}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8}
+
+
+Enumerate all the valid status codes for a response. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Ok@{Ok}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Ok@{Ok}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}
+}]Most common code returned when operation was successful. \index{Created@{Created}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Created@{Created}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}
+}]The resource has successfully been created. \index{Accepted@{Accepted}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Accepted@{Accepted}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}
+}]The request has been accepted, but will be processed later by the server. \index{No\-Content@{No\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!No\-Content@{No\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}
+}]The server didn't send any data in return. \index{Reset\-Content@{Reset\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Reset\-Content@{Reset\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}
+}]The server informs the client that it should clear the view (form) that caused the request to be sent. \index{Partial\-Content@{Partial\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Partial\-Content@{Partial\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}
+}]The server has sent a part of the resource, as a response to a partial G\-E\-T request. \index{Multiple\-Choices@{Multiple\-Choices}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Multiple\-Choices@{Multiple\-Choices}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}
+}]The requested page can be accessed from several locations. \index{Moved\-Permanently@{Moved\-Permanently}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Permanently@{Moved\-Permanently}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}
+}]The requested page has permanently moved to a new location. \index{Moved\-Temporarily@{Moved\-Temporarily}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Temporarily@{Moved\-Temporarily}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}
+}]The requested page has temporarily moved to a new location. \index{Not\-Modified@{Not\-Modified}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Modified@{Not\-Modified}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}
+}]For conditional requests, means the requested page hasn't changed and doesn't need to be refreshed. \index{Bad\-Request@{Bad\-Request}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Request@{Bad\-Request}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}
+}]The server couldn't understand the request (syntax error) \index{Unauthorized@{Unauthorized}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Unauthorized@{Unauthorized}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}
+}]The requested page needs an authentication to be accessed. \index{Forbidden@{Forbidden}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Forbidden@{Forbidden}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}
+}]The requested page cannot be accessed at all, even with authentication. \index{Not\-Found@{Not\-Found}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Found@{Not\-Found}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}
+}]The requested page doesn't exist. \index{Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}
+}]The server can't satisfy the partial G\-E\-T request (with a \char`\"{}\-Range\char`\"{} header field) \index{Internal\-Server\-Error@{Internal\-Server\-Error}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Internal\-Server\-Error@{Internal\-Server\-Error}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}
+}]The server encountered an unexpected error. \index{Not\-Implemented@{Not\-Implemented}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Implemented@{Not\-Implemented}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}
+}]The server doesn't implement a requested feature. \index{Bad\-Gateway@{Bad\-Gateway}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Gateway@{Bad\-Gateway}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}
+}]The gateway server has received an error from the source server. \index{Service\-Not\-Available@{Service\-Not\-Available}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Service\-Not\-Available@{Service\-Not\-Available}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}
+}]The server is temporarily unavailable (overloaded, in maintenance, ...) \index{Gateway\-Timeout@{Gateway\-Timeout}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Gateway\-Timeout@{Gateway\-Timeout}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}
+}]The gateway server couldn't receive a response from the source server. \index{Version\-Not\-Supported@{Version\-Not\-Supported}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Version\-Not\-Supported@{Version\-Not\-Supported}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}
+}]The server doesn't support the requested H\-T\-T\-P version. \index{Invalid\-Response@{Invalid\-Response}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Invalid\-Response@{Invalid\-Response}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}
+}]\hyperlink{classsf_1_1_http_1_1_response}{Response} is not a valid H\-T\-T\-P one. \index{Connection\-Failed@{Connection\-Failed}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Connection\-Failed@{Connection\-Failed}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}
+}]Connection with server failed. \index{Ok@{Ok}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Ok@{Ok}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}{Ok}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1c0988840633e4f4836b7813c85a6720}
+}]Most common code returned when operation was successful. \index{Created@{Created}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Created@{Created}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}{Created}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a1459dbf2b1416eafbfeb4403c9f4eef0}
+}]The resource has successfully been created. \index{Accepted@{Accepted}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Accepted@{Accepted}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}{Accepted}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a9f0179fa235375694a0d6c1a71b6f1fe}
+}]The request has been accepted, but will be processed later by the server. \index{No\-Content@{No\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!No\-Content@{No\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}{No\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa71ad360db6281fd55c032c493820422}
+}]The server didn't send any data in return. \index{Reset\-Content@{Reset\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Reset\-Content@{Reset\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}{Reset\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ab9506a38cd6c00048aab39575d4469be}
+}]The server informs the client that it should clear the view (form) that caused the request to be sent. \index{Partial\-Content@{Partial\-Content}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Partial\-Content@{Partial\-Content}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}{Partial\-Content}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8acbd7e35a2e8f8844159941375c239a33}
+}]The server has sent a part of the resource, as a response to a partial G\-E\-T request. \index{Multiple\-Choices@{Multiple\-Choices}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Multiple\-Choices@{Multiple\-Choices}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}{Multiple\-Choices}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a4f330c14bd9ba09893ae577cfe7e31b4}
+}]The requested page can be accessed from several locations. \index{Moved\-Permanently@{Moved\-Permanently}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Permanently@{Moved\-Permanently}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}{Moved\-Permanently}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a2c6399724f8878ff5bd60eb5376985de}
+}]The requested page has permanently moved to a new location. \index{Moved\-Temporarily@{Moved\-Temporarily}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Moved\-Temporarily@{Moved\-Temporarily}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}{Moved\-Temporarily}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aa34b55eca3991ba5c17f3449b9dbef56}
+}]The requested page has temporarily moved to a new location. \index{Not\-Modified@{Not\-Modified}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Modified@{Not\-Modified}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}{Not\-Modified}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fe25fcb5fbee4b2d898973f7d64d12c}
+}]For conditional requests, means the requested page hasn't changed and doesn't need to be refreshed. \index{Bad\-Request@{Bad\-Request}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Request@{Bad\-Request}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}{Bad\-Request}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a12b181a7528db8ca10d6da300a176c08}
+}]The server couldn't understand the request (syntax error) \index{Unauthorized@{Unauthorized}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Unauthorized@{Unauthorized}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}{Unauthorized}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a02326af9c857a70c0829b78b9221e16c}
+}]The requested page needs an authentication to be accessed. \index{Forbidden@{Forbidden}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Forbidden@{Forbidden}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}{Forbidden}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a68bb764d75db3b5812fae71a3c0b64a9}
+}]The requested page cannot be accessed at all, even with authentication. \index{Not\-Found@{Not\-Found}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Found@{Not\-Found}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}{Not\-Found}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a3b265f3a2ba6b197f656b48c020c4abe}
+}]The requested page doesn't exist. \index{Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Range\-Not\-Satisfiable@{Range\-Not\-Satisfiable}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}{Range\-Not\-Satisfiable}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8abbea7e411ce71a938ffc1cb5cacc0a49}
+}]The server can't satisfy the partial G\-E\-T request (with a \char`\"{}\-Range\char`\"{} header field) \index{Internal\-Server\-Error@{Internal\-Server\-Error}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Internal\-Server\-Error@{Internal\-Server\-Error}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}{Internal\-Server\-Error}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a0386d3aef49049992f1de88aa2c74930}
+}]The server encountered an unexpected error. \index{Not\-Implemented@{Not\-Implemented}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Not\-Implemented@{Not\-Implemented}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}{Not\-Implemented}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a18a9af9b94e369281abaab667e3c479c}
+}]The server doesn't implement a requested feature. \index{Bad\-Gateway@{Bad\-Gateway}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Bad\-Gateway@{Bad\-Gateway}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}{Bad\-Gateway}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ac04a161c51d59bbf05d4bd9e17660520}
+}]The gateway server has received an error from the source server. \index{Service\-Not\-Available@{Service\-Not\-Available}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Service\-Not\-Available@{Service\-Not\-Available}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}{Service\-Not\-Available}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8af7bd449446db50f838fc5301fff40f27}
+}]The server is temporarily unavailable (overloaded, in maintenance, ...) \index{Gateway\-Timeout@{Gateway\-Timeout}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Gateway\-Timeout@{Gateway\-Timeout}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}{Gateway\-Timeout}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a6fc1b50bd2b35a899b086b8703f8672c}
+}]The gateway server couldn't receive a response from the source server. \index{Version\-Not\-Supported@{Version\-Not\-Supported}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Version\-Not\-Supported@{Version\-Not\-Supported}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}{Version\-Not\-Supported}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8a58a53b15904ee0204512cff7b4cb3dc7}
+}]The server doesn't support the requested H\-T\-T\-P version. \index{Invalid\-Response@{Invalid\-Response}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Invalid\-Response@{Invalid\-Response}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}{Invalid\-Response}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8aba1107912f392482733af9be4f33803e}
+}]\hyperlink{classsf_1_1_http_1_1_response}{Response} is not a valid H\-T\-T\-P one. \index{Connection\-Failed@{Connection\-Failed}!sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}}\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Connection\-Failed@{Connection\-Failed}}\item[{\em 
+\hypertarget{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}{Connection\-Failed}\label{classsf_1_1_http_1_1_response_a663e071978e30fbbeb20ed045be874d8ad75dc598ea9e428ca9222de7e8a429dc}
+}]Connection with server failed. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Response@{Response}}
+\index{Response@{Response}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{Response}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Http\-::\-Response\-::\-Response (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}
+
+
+Default constructor. 
+
+Constructs an empty response. \hypertarget{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Response@{Response}}
+\index{Response@{Response}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{Response}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Http\-::\-Response\-::\-Response (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_http_1_1_response_a2e51c89356fe6a007c448a841a9ec08c}
+
+
+Default constructor. 
+
+Constructs an empty response. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Body@{get\-Body}}
+\index{get\-Body@{get\-Body}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Body}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} std\-::string\& sf\-::\-Http\-::\-Response\-::get\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}
+
+
+Get the body of the response. 
+
+The body of a response may contain\-: \begin{DoxyItemize}
+\item the requested page (for G\-E\-T requests) \item a response from the server (for P\-O\-S\-T requests) \item nothing (for H\-E\-A\-D requests) \item an error message (in case of an error)\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+The response body 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Body@{get\-Body}}
+\index{get\-Body@{get\-Body}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Body}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} std\-::string\& sf\-::\-Http\-::\-Response\-::get\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a6b74ef73051a16ebb20041495c758e22}
+
+
+Get the body of the response. 
+
+The body of a response may contain\-: \begin{DoxyItemize}
+\item the requested page (for G\-E\-T requests) \item a response from the server (for P\-O\-S\-T requests) \item nothing (for H\-E\-A\-D requests) \item an error message (in case of an error)\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+The response body 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Field@{get\-Field}}
+\index{get\-Field@{get\-Field}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} std\-::string\& sf\-::\-Http\-::\-Response\-::get\-Field (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{field}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}
+
+
+Get the value of a field. 
+
+If the field {\itshape field} is not found in the response header, the empty string is returned. This function uses case-\/insensitive comparisons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Name of the field to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the field, or empty string if not found 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Field@{get\-Field}}
+\index{get\-Field@{get\-Field}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} std\-::string\& sf\-::\-Http\-::\-Response\-::get\-Field (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{field}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a25d7cf86538a1045d31e0b601090b8f0}
+
+
+Get the value of a field. 
+
+If the field {\itshape field} is not found in the response header, the empty string is returned. This function uses case-\/insensitive comparisons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Name of the field to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the field, or empty string if not found 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Major\-Http\-Version@{get\-Major\-Http\-Version}}
+\index{get\-Major\-Http\-Version@{get\-Major\-Http\-Version}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Major\-Http\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} sf\-::\-Http\-::\-Response\-::get\-Major\-Http\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}
+
+
+Get the major H\-T\-T\-P version number of the response. 
+
+\begin{DoxyReturn}{Returns}
+Major H\-T\-T\-P version number
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{get\-Minor\-Http\-Version} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Major\-Http\-Version@{get\-Major\-Http\-Version}}
+\index{get\-Major\-Http\-Version@{get\-Major\-Http\-Version}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Major\-Http\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} sf\-::\-Http\-::\-Response\-::get\-Major\-Http\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}
+
+
+Get the major H\-T\-T\-P version number of the response. 
+
+\begin{DoxyReturn}{Returns}
+Major H\-T\-T\-P version number
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{get\-Minor\-Http\-Version} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Minor\-Http\-Version@{get\-Minor\-Http\-Version}}
+\index{get\-Minor\-Http\-Version@{get\-Minor\-Http\-Version}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Minor\-Http\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} sf\-::\-Http\-::\-Response\-::get\-Minor\-Http\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}
+
+
+Get the minor H\-T\-T\-P version number of the response. 
+
+\begin{DoxyReturn}{Returns}
+Minor H\-T\-T\-P version number
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{get\-Major\-Http\-Version} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Minor\-Http\-Version@{get\-Minor\-Http\-Version}}
+\index{get\-Minor\-Http\-Version@{get\-Minor\-Http\-Version}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Minor\-Http\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf unsigned} {\bf int} sf\-::\-Http\-::\-Response\-::get\-Minor\-Http\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a1c2217a6a848695875380a70d060b239}
+
+
+Get the minor H\-T\-T\-P version number of the response. 
+
+\begin{DoxyReturn}{Returns}
+Minor H\-T\-T\-P version number
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classsf_1_1_http_1_1_response_a3da9c689318b945dd12cbe7167161dc6}{get\-Major\-Http\-Version} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Status@{get\-Status}}
+\index{get\-Status@{get\-Status}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} sf\-::\-Http\-::\-Response\-::get\-Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}
+
+
+Get the response status code. 
+
+The status code should be the first thing to be checked after receiving a response, it defines whether it is a success, a failure or anything else (see the Status enumeration).
+
+\begin{DoxyReturn}{Returns}
+Status code of the response 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!get\-Status@{get\-Status}}
+\index{get\-Status@{get\-Status}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{get\-Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status} sf\-::\-Http\-::\-Response\-::get\-Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_http_1_1_response_a542e9856b1dd260a83940eb982b7f19a}
+
+
+Get the response status code. 
+
+The status code should be the first thing to be checked after receiving a response, it defines whether it is a success, a failure or anything else (see the Status enumeration).
+
+\begin{DoxyReturn}{Returns}
+Status code of the response 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classsf_1_1_http_1_1_response_ad44371f4a337a0f6537733cdf6df8e76}{\index{sf\-::\-Http\-::\-Response@{sf\-::\-Http\-::\-Response}!Http@{Http}}
+\index{Http@{Http}!sf::Http::Response@{sf\-::\-Http\-::\-Response}}
+\subsubsection[{Http}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Http}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classsf_1_1_http_1_1_response_ad44371f4a337a0f6537733cdf6df8e76}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-Network/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_network_2_http_8hpp}{Http.\-hpp}\end{DoxyCompactItemize}

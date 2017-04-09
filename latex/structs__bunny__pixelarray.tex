@@ -1,0 +1,39 @@
+\hypertarget{structs__bunny__pixelarray}{\section{s\-\_\-bunny\-\_\-pixelarray Struct Reference}
+\label{structs__bunny__pixelarray}\index{s\-\_\-bunny\-\_\-pixelarray@{s\-\_\-bunny\-\_\-pixelarray}}
+}
+
+
+{\ttfamily \#include $<$graphics.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable} \hyperlink{structs__bunny__pixelarray_ac5284a889c44198e7d08fd1e65c94cdf}{clipable}
+\item 
+void $\ast$\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{structs__bunny__pixelarray_afb3766ff645f84f85ed5db24c7687462}{pixels}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-pixelarray is a graphic element that is convenient to access pixels per pixel. It contains a t\-\_\-bunny\-\_\-clipable attribute that does not have any effect by default. (Except the clipping attributes, but only if you draw on a window or a t\-\_\-bunny\-\_\-picture, not on another t\-\_\-bunny\-\_\-pixelarray)
+
+To activate the t\-\_\-bunny\-\_\-clipable of the t\-\_\-bunny\-\_\-pixelarray, you have to provide the functionnality by yourself, implement your own blitter and set the gl\-\_\-bunny\-\_\-my\-\_\-blit pointer to your t\-\_\-bunny\-\_\-my\-\_\-blit function.
+
+The pixels attribute is an array of pixels. The first pixels is the top left one and it comes line after line. The last pixel is to bottom right one.
+
+The library do not bring any functionnality to draw on pixelarrays, you have to implement your functions. There is a lot of gl\-\_\-bunny\-\_\-my\-\_\-$\ast$ function pointers that will activate bunny\-\_\-set\-\_\-$\ast$ pixelarray functionnalities if correct functions are set to them\-: gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon gl\-\_\-bunny\-\_\-my\-\_\-fill gl\-\_\-bunny\-\_\-my\-\_\-clear
+
+The bunny\-\_\-self\-\_\-test function will help you by testing you functions after you set them to these function pointers. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__pixelarray_ac5284a889c44198e7d08fd1e65c94cdf}{\index{s\-\_\-bunny\-\_\-pixelarray@{s\-\_\-bunny\-\_\-pixelarray}!clipable@{clipable}}
+\index{clipable@{clipable}!s_bunny_pixelarray@{s\-\_\-bunny\-\_\-pixelarray}}
+\subsubsection[{clipable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-clipable} s\-\_\-bunny\-\_\-pixelarray\-::clipable}}\label{structs__bunny__pixelarray_ac5284a889c44198e7d08fd1e65c94cdf}
+\hypertarget{structs__bunny__pixelarray_afb3766ff645f84f85ed5db24c7687462}{\index{s\-\_\-bunny\-\_\-pixelarray@{s\-\_\-bunny\-\_\-pixelarray}!pixels@{pixels}}
+\index{pixels@{pixels}!s_bunny_pixelarray@{s\-\_\-bunny\-\_\-pixelarray}}
+\subsubsection[{pixels}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf const} s\-\_\-bunny\-\_\-pixelarray\-::pixels}}\label{structs__bunny__pixelarray_afb3766ff645f84f85ed5db24c7687462}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{graphics_8h}{graphics.\-h}\end{DoxyCompactItemize}

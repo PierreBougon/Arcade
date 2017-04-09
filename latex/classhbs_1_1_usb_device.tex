@@ -1,0 +1,120 @@
+\hypertarget{classhbs_1_1_usb_device}{\section{hbs\-:\-:Usb\-Device Class Reference}
+\label{classhbs_1_1_usb_device}\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}}
+}
+
+
+Open U\-S\-B busses and provide some bit manipulation functions.  
+
+
+
+
+{\ttfamily \#include $<$Usb\-Device.\-hpp$>$}
+
+Inheritance diagram for hbs\-:\-:Usb\-Device\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhbs_1_1_usb_device}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classhbs_1_1_usb_device_a6d1ea9dbbef53b28fde7436cffd8b071}{Get\-Bit} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char range, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char pos) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Return the state of the bit pos in range. \end{DoxyCompactList}\item 
+void \hyperlink{classhbs_1_1_usb_device_a471373331014d2b0b4b5b1b8d07bfaae}{Set\-Bit} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char \&range, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char pos, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} val) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Set the bit pos in range to the value val. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_usb_device_a0ad7f6d5f5c91efc39193843ee8179b2}{Usb\-Device} (void)
+\begin{DoxyCompactList}\small\item\em Build the \hyperlink{classhbs_1_1_usb_device}{Usb\-Device}. Open U\-S\-B busses is not opened yet. \end{DoxyCompactList}\item 
+\hyperlink{classhbs_1_1_usb_device_a31b62a67b5169838cb7ff4ca71334758}{$\sim$\-Usb\-Device} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classhbs_1_1_usb_device}{Usb\-Device}. Does not close U\-S\-B busses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static struct \hyperlink{structusb__bus}{usb\-\_\-bus} $\ast$ \hyperlink{classhbs_1_1_usb_device_a413e973b7845d496de4b5d30fc4f38a9}{usb\-\_\-busses}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open U\-S\-B busses and provide some bit manipulation functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhbs_1_1_usb_device_a0ad7f6d5f5c91efc39193843ee8179b2}{\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}!Usb\-Device@{Usb\-Device}}
+\index{Usb\-Device@{Usb\-Device}!hbs::UsbDevice@{hbs\-::\-Usb\-Device}}
+\subsubsection[{Usb\-Device}]{\setlength{\rightskip}{0pt plus 5cm}hbs\-::\-Usb\-Device\-::\-Usb\-Device (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classhbs_1_1_usb_device_a0ad7f6d5f5c91efc39193843ee8179b2}
+
+
+Build the \hyperlink{classhbs_1_1_usb_device}{Usb\-Device}. Open U\-S\-B busses is not opened yet. 
+
+\hypertarget{classhbs_1_1_usb_device_a31b62a67b5169838cb7ff4ca71334758}{\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}!$\sim$\-Usb\-Device@{$\sim$\-Usb\-Device}}
+\index{$\sim$\-Usb\-Device@{$\sim$\-Usb\-Device}!hbs::UsbDevice@{hbs\-::\-Usb\-Device}}
+\subsubsection[{$\sim$\-Usb\-Device}]{\setlength{\rightskip}{0pt plus 5cm}hbs\-::\-Usb\-Device\-::$\sim$\-Usb\-Device (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classhbs_1_1_usb_device_a31b62a67b5169838cb7ff4ca71334758}
+
+
+Destroy the \hyperlink{classhbs_1_1_usb_device}{Usb\-Device}. Does not close U\-S\-B busses. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classhbs_1_1_usb_device_a6d1ea9dbbef53b28fde7436cffd8b071}{\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}!Get\-Bit@{Get\-Bit}}
+\index{Get\-Bit@{Get\-Bit}!hbs::UsbDevice@{hbs\-::\-Usb\-Device}}
+\subsubsection[{Get\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} hbs\-::\-Usb\-Device\-::\-Get\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} char}]{range, }
+\item[{{\bf unsigned} char}]{pos}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classhbs_1_1_usb_device_a6d1ea9dbbef53b28fde7436cffd8b071}
+
+
+Return the state of the bit pos in range. 
+
+Return the state of the bit pos in range. 
+\begin{DoxyParams}{Parameters}
+{\em range} & The original value. \\
+\hline
+{\em pos} & The bit you wish to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(range $>$$>$ pos) \& 1 
+\end{DoxyReturn}
+\hypertarget{classhbs_1_1_usb_device_a471373331014d2b0b4b5b1b8d07bfaae}{\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}!Set\-Bit@{Set\-Bit}}
+\index{Set\-Bit@{Set\-Bit}!hbs::UsbDevice@{hbs\-::\-Usb\-Device}}
+\subsubsection[{Set\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}void hbs\-::\-Usb\-Device\-::\-Set\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} char \&}]{range, }
+\item[{{\bf unsigned} char}]{pos, }
+\item[{{\bf bool}}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classhbs_1_1_usb_device_a471373331014d2b0b4b5b1b8d07bfaae}
+
+
+Set the bit pos in range to the value val. 
+
+Set the value val to the bit pos in range. 
+\begin{DoxyParams}{Parameters}
+{\em range} & The bit collection to edit \\
+\hline
+{\em pos} & The bit you wish to set \\
+\hline
+{\em val} & The value you wish to assign to the bit \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classhbs_1_1_usb_device_a413e973b7845d496de4b5d30fc4f38a9}{\index{hbs\-::\-Usb\-Device@{hbs\-::\-Usb\-Device}!usb\-\_\-busses@{usb\-\_\-busses}}
+\index{usb\-\_\-busses@{usb\-\_\-busses}!hbs::UsbDevice@{hbs\-::\-Usb\-Device}}
+\subsubsection[{usb\-\_\-busses}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf usb\-\_\-bus}$\ast$ hbs\-::\-Usb\-Device\-::usb\-\_\-busses\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classhbs_1_1_usb_device_a413e973b7845d496de4b5d30fc4f38a9}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_usb_device_8hpp}{Usb\-Device.\-hpp}\end{DoxyCompactItemize}

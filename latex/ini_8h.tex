@@ -1,0 +1,502 @@
+\hypertarget{ini_8h}{\section{lib/lapin/dep/lapin/compat/ini.h File Reference}
+\label{ini_8h}\index{lib/lapin/dep/lapin/compat/ini.\-h@{lib/lapin/dep/lapin/compat/ini.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ini_8h_a843ac4a1b5156694f23f12e31fcfe073}{E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_aa107bf66d879149169b0a704b538a1dd}{E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D}~((\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int})-\/1)
+\item 
+\#define \hyperlink{ini_8h_a7fef7ff4b3c2cc3116e3c1f05c012171}{E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_a75bf10bda4b4d16a096f20f6b794b316}{bunny\-\_\-ini\-\_\-first}(ini)~\hyperlink{ini_8h_af65e334fec33811126033ad7315047a3}{bunny\-\_\-ini\-\_\-first\-\_\-scope}(ini)
+\item 
+\#define \hyperlink{ini_8h_ab034baab1cf6f41dfbcec09d0f8e34e5}{bunny\-\_\-ini\-\_\-next}(ini, scope)~\hyperlink{ini_8h_a5b3ad73bdd5bf123babc7a70df341bd8}{bunny\-\_\-ini\-\_\-next\-\_\-scope}(ini, scope)
+\item 
+\#define \hyperlink{ini_8h_a73be55db585c3b802f055171e75d787a}{R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}, 0, \hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_a24b2f6bb163039c481e4d26feed85f4d}{R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D}~(\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int})-\/1, \hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_aa9da2cef087f8ebe3b440162da51fa68}{R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_a84933ded697dc8f4577f9c2c4e03fdd5}{L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\item 
+\#define \hyperlink{ini_8h_a2085a935448f8ef422d68bff7b7e8391}{L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D}~\hyperlink{internal_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\-U\-L\-L}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini}
+\item 
+typedef void \hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope}
+\item 
+typedef void \hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ \hyperlink{ini_8h_aa024a755c8af669e75b664204a11bf65}{bunny\-\_\-new\-\_\-ini} (void)
+\item 
+\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ \hyperlink{ini_8h_a50aafc096d3278f51a94b0682833686a}{bunny\-\_\-load\-\_\-ini} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ \hyperlink{ini_8h_a7565c272de3c673adfa34db7a8fd06be}{bunny\-\_\-read\-\_\-ini} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ini)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a3790a9210211982b27630327f3da0d05}{bunny\-\_\-ini\-\_\-get\-\_\-error} (void)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{ini_8h_a5227d310cf42ad7b31f0626c1ef1dd23}{bunny\-\_\-save\-\_\-ini} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$file)
+\item 
+char $\ast$ \hyperlink{ini_8h_ae2ae31aa68579d494bb58e85b84248e7}{bunny\-\_\-write\-\_\-ini} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a6a7784a144ddacea8a806cb1b6b178ee}{bunny\-\_\-ini\-\_\-get\-\_\-field} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$scope, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index)
+\item 
+void \hyperlink{ini_8h_a0abd9852cc46ca859bd89e659f6cd83b}{bunny\-\_\-ini\-\_\-set\-\_\-field} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$scope, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$\hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\item 
+void \hyperlink{ini_8h_a4e0daf6e5db60273ac54a2efee6a4da4}{bunny\-\_\-delete\-\_\-ini} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini)
+\item 
+\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$ \hyperlink{ini_8h_af65e334fec33811126033ad7315047a3}{bunny\-\_\-ini\-\_\-first\-\_\-scope} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini)
+\item 
+\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$ \hyperlink{ini_8h_a5b3ad73bdd5bf123babc7a70df341bd8}{bunny\-\_\-ini\-\_\-next\-\_\-scope} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_af43a09028e5636663214f2fa0b4c1a17}{bunny\-\_\-ini\-\_\-scope\-\_\-name} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a4cd25deec3e017b5e7cc9f912e721407}{bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index)
+\item 
+void \hyperlink{ini_8h_a783109157b359a06f8dc1ba203d8a9df}{bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field} (\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$\hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\item 
+\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$ \hyperlink{ini_8h_ac409b24b0fcbfdc3159245071afea841}{bunny\-\_\-ini\-\_\-get\-\_\-scope} (\hyperlink{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{t\-\_\-bunny\-\_\-ini} $\ast$ini, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$scope)
+\item 
+\hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$ \hyperlink{ini_8h_a1d13672db41ac2f1de771241d7580624}{bunny\-\_\-ini\-\_\-first\-\_\-field} (\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope)
+\item 
+\hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$ \hyperlink{ini_8h_a3d941c4bc49628bc9c33fb0338d57537}{bunny\-\_\-ini\-\_\-next\-\_\-field} (\hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope, \hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$field)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a4a6a2b44052b588828d99035b0e8994a}{bunny\-\_\-ini\-\_\-field\-\_\-name} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_a9331896b238c7bb3b60a15491065c89b}{t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$scope, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$field)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a57e497b9d1bc1085a1a86f31a406bfae}{bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index)
+\item 
+void \hyperlink{ini_8h_a220814364e99d3b64d2fea74d0269b84}{bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value} (\hyperlink{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$field, \hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} index, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$\hyperlink{curses_8priv_8h_a3772851912abe3ccbff5c659ff71f2ff}{value})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$ \hyperlink{ini_8h_a6d1564cee1f730e7cb38e5c787e05436}{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ini_8h_a75bf10bda4b4d16a096f20f6b794b316}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-first@{bunny\-\_\-ini\-\_\-first}}
+\index{bunny\-\_\-ini\-\_\-first@{bunny\-\_\-ini\-\_\-first}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-ini\-\_\-first(
+\begin{DoxyParamCaption}
+\item[{}]{ini}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-ini\-\_\-first\-\_\-scope}(ini)}}\label{ini_8h_a75bf10bda4b4d16a096f20f6b794b316}
+\hypertarget{ini_8h_ab034baab1cf6f41dfbcec09d0f8e34e5}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-next@{bunny\-\_\-ini\-\_\-next}}
+\index{bunny\-\_\-ini\-\_\-next@{bunny\-\_\-ini\-\_\-next}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}\#define bunny\-\_\-ini\-\_\-next(
+\begin{DoxyParamCaption}
+\item[{}]{ini, }
+\item[{}]{scope}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-ini\-\_\-next\-\_\-scope}(ini, scope)}}\label{ini_8h_ab034baab1cf6f41dfbcec09d0f8e34e5}
+\hypertarget{ini_8h_aa107bf66d879149169b0a704b538a1dd}{\index{ini.\-h@{ini.\-h}!E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D@{E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D}}
+\index{E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D@{E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D}!ini.h@{ini.\-h}}
+\subsubsection[{E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-R\-A\-S\-E\-\_\-\-F\-I\-E\-L\-D~(({\bf unsigned} {\bf int})-\/1)}}\label{ini_8h_aa107bf66d879149169b0a704b538a1dd}
+\hypertarget{ini_8h_a7fef7ff4b3c2cc3116e3c1f05c012171}{\index{ini.\-h@{ini.\-h}!E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X@{E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X}}
+\index{E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X@{E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X}!ini.h@{ini.\-h}}
+\subsubsection[{E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-R\-A\-S\-E\-\_\-\-I\-N\-D\-E\-X~{\bf N\-U\-L\-L}}}\label{ini_8h_a7fef7ff4b3c2cc3116e3c1f05c012171}
+\hypertarget{ini_8h_a843ac4a1b5156694f23f12e31fcfe073}{\index{ini.\-h@{ini.\-h}!E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E@{E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E}}
+\index{E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E@{E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E}!ini.h@{ini.\-h}}
+\subsubsection[{E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-R\-A\-S\-E\-\_\-\-S\-C\-O\-P\-E~{\bf N\-U\-L\-L}}}\label{ini_8h_a843ac4a1b5156694f23f12e31fcfe073}
+\hypertarget{ini_8h_a2085a935448f8ef422d68bff7b7e8391}{\index{ini.\-h@{ini.\-h}!L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D@{L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D}}
+\index{L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D@{L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D}!ini.h@{ini.\-h}}
+\subsubsection[{L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D~{\bf N\-U\-L\-L}}}\label{ini_8h_a2085a935448f8ef422d68bff7b7e8391}
+A symbolic constant to compare with the value return by bunny\-\_\-ini\-\_\-next\-\_\-field in order to know if the browse loop reached its end. \hypertarget{ini_8h_a84933ded697dc8f4577f9c2c4e03fdd5}{\index{ini.\-h@{ini.\-h}!L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E@{L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E}}
+\index{L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E@{L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E}!ini.h@{ini.\-h}}
+\subsubsection[{L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E~{\bf N\-U\-L\-L}}}\label{ini_8h_a84933ded697dc8f4577f9c2c4e03fdd5}
+A symbolic constant to compare with the value returned by bunny\-\_\-ini\-\_\-next\-\_\-scope in order to know if the browse loop reached its end. \hypertarget{ini_8h_a24b2f6bb163039c481e4d26feed85f4d}{\index{ini.\-h@{ini.\-h}!R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D@{R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D}}
+\index{R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D@{R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D}!ini.h@{ini.\-h}}
+\subsubsection[{R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D~({\bf unsigned} {\bf int})-\/1, {\bf N\-U\-L\-L}}}\label{ini_8h_a24b2f6bb163039c481e4d26feed85f4d}
+The R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D symbolic constant is useful to remove a field from a I\-N\-I configuration in a specific scope. Use it like this\-: bunny\-\_\-ini\-\_\-set\-\_\-field(ini, \char`\"{}scopename\char`\"{}, \char`\"{}fieldname\char`\"{}, R\-E\-M\-O\-V\-E\-\_\-\-F\-I\-E\-L\-D)
+
+This symbol is obsolete and should not be used anymore. The new bunny\-\_\-configuration A\-P\-I does not need it. \hypertarget{ini_8h_aa9da2cef087f8ebe3b440162da51fa68}{\index{ini.\-h@{ini.\-h}!R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X@{R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X}}
+\index{R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X@{R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X}!ini.h@{ini.\-h}}
+\subsubsection[{R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X~{\bf N\-U\-L\-L}}}\label{ini_8h_aa9da2cef087f8ebe3b440162da51fa68}
+The R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X symbolic constant is useful to remove a value from a field at a given address in a I\-N\-I configuration. Use it like this\-: bunny\-\_\-ini\-\_\-set\-\_\-field(ini, \char`\"{}scopename\char`\"{}, \char`\"{}fieldname\char`\"{}, index, R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X)
+
+This symbol is obsolete and should not be used anymore. The new bunny\-\_\-configuration A\-P\-I does not need it. \hypertarget{ini_8h_a73be55db585c3b802f055171e75d787a}{\index{ini.\-h@{ini.\-h}!R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E@{R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E}}
+\index{R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E@{R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E}!ini.h@{ini.\-h}}
+\subsubsection[{R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E~{\bf N\-U\-L\-L}, 0, {\bf N\-U\-L\-L}}}\label{ini_8h_a73be55db585c3b802f055171e75d787a}
+The R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E symbolic constant is useful to remove a scope from a I\-N\-I configuration. Use it like this\-: bunny\-\_\-ini\-\_\-set\-\_\-field(ini, \char`\"{}scopename\char`\"{}, R\-E\-M\-O\-V\-E\-\_\-\-S\-C\-O\-P\-E)
+
+This symbol is obsolete and should not be used anymore. The new bunny\-\_\-configuration A\-P\-I does not need it. 
+
+\subsection{Typedef Documentation}
+\hypertarget{ini_8h_a975e41ba98db7851e6f647ca68ca3370}{\index{ini.\-h@{ini.\-h}!t\-\_\-bunny\-\_\-ini@{t\-\_\-bunny\-\_\-ini}}
+\index{t\-\_\-bunny\-\_\-ini@{t\-\_\-bunny\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf t\-\_\-bunny\-\_\-ini}}}\label{ini_8h_a975e41ba98db7851e6f647ca68ca3370}
+A t\-\_\-bunny\-\_\-ini is a completly private type that contains a configuration tree that may be managed throught ini functions. Because it is fully private, you can only move a pointer on it and cannot make a copy directly.
+
+This type is obsolete and should not be used anymore. Please use t\-\_\-bunny\-\_\-configuration instead. \hypertarget{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}{\index{ini.\-h@{ini.\-h}!t\-\_\-bunny\-\_\-ini\-\_\-field@{t\-\_\-bunny\-\_\-ini\-\_\-field}}
+\index{t\-\_\-bunny\-\_\-ini\-\_\-field@{t\-\_\-bunny\-\_\-ini\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-ini\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf t\-\_\-bunny\-\_\-ini\-\_\-field}}}\label{ini_8h_ab8b31025ba9494a0ba41ac1b294ed248}
+The t\-\_\-bunny\-\_\-ini\-\_\-field is a fully private element that is useful to browse fields of a scope stored inside a I\-N\-I configuration. This is how you browse fields inside a scope\-: void browse(t\-\_\-bunny\-\_\-ini\-\_\-scope            $\ast$scp) \{ t\-\_\-bunny\-\_\-ini\-\_\-field $\ast$fld;
+
+for (fld = bunny\-\_\-ini\-\_\-first\-\_\-field(scp); fld != L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D; fld = bunny\-\_\-ini\-\_\-next\-\_\-field(scp, fdl)) \{\} \} \hypertarget{ini_8h_a9331896b238c7bb3b60a15491065c89b}{\index{ini.\-h@{ini.\-h}!t\-\_\-bunny\-\_\-ini\-\_\-scope@{t\-\_\-bunny\-\_\-ini\-\_\-scope}}
+\index{t\-\_\-bunny\-\_\-ini\-\_\-scope@{t\-\_\-bunny\-\_\-ini\-\_\-scope}!ini.h@{ini.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-ini\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf t\-\_\-bunny\-\_\-ini\-\_\-scope}}}\label{ini_8h_a9331896b238c7bb3b60a15491065c89b}
+The t\-\_\-bunny\-\_\-ini\-\_\-scope is a fully private element that is useful to browse scopes stored inside a I\-N\-I configuration. This is how you browse scopes inside a I\-N\-I configuration\-: void browse(t\-\_\-bunny\-\_\-ini              $\ast$cnf) \{ t\-\_\-bunny\-\_\-ini\-\_\-scope $\ast$scp;
+
+for (scp = bunny\-\_\-ini\-\_\-first\-\_\-scope(cnf); scp != L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E; scp = bunny\-\_\-ini\-\_\-next\-\_\-scope(cnf, scp)) \{\} \} 
+
+\subsection{Function Documentation}
+\hypertarget{ini_8h_a4e0daf6e5db60273ac54a2efee6a4da4}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-delete\-\_\-ini@{bunny\-\_\-delete\-\_\-ini}}
+\index{bunny\-\_\-delete\-\_\-ini@{bunny\-\_\-delete\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a4e0daf6e5db60273ac54a2efee6a4da4}
+The bunny\-\_\-delete\-\_\-ini destroy an I\-N\-I configuration. All strings returned by I\-N\-I function for this I\-N\-I configuration should be trashed, or your program may crash. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration to delete. \\
+\hline
+\end{DoxyParams}
+\hypertarget{ini_8h_a57e497b9d1bc1085a1a86f31a406bfae}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value@{bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value}}
+\index{bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value@{bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a57e497b9d1bc1085a1a86f31a406bfae}
+The bunny\-\_\-ini\-\_\-field\-\_\-get\-\_\-value returns a value stored in a specific point in the I\-N\-I configuration, if it exists. The field name does not need to be precised, neither the scope because the function takes a t\-\_\-bunny\-\_\-ini\-\_\-field and the search is already limited to it. 
+\begin{DoxyParams}{Parameters}
+{\em field} & The field where is the data you need \\
+\hline
+{\em index} & The index in the field you want to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a constant string (You have to duplicate it if you wanna keep it after closing the I\-N\-I configuration) if the data exists, else it returns N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a4a6a2b44052b588828d99035b0e8994a}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-field\-\_\-name@{bunny\-\_\-ini\-\_\-field\-\_\-name}}
+\index{bunny\-\_\-ini\-\_\-field\-\_\-name@{bunny\-\_\-ini\-\_\-field\-\_\-name}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-field\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-field\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$}]{field}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a4a6a2b44052b588828d99035b0e8994a}
+Get the name of the sent field. 
+\begin{DoxyParams}{Parameters}
+{\em scope} & The scope that own the field \\
+\hline
+{\em field} & The field you wanna get to name from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the field 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a220814364e99d3b64d2fea74d0269b84}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value@{bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value}}
+\index{bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value@{bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index, }
+\item[{{\bf const} char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a220814364e99d3b64d2fea74d0269b84}
+The bunny\-\_\-ini\-\_\-field\-\_\-set\-\_\-value function write a data inside a specific point in the I\-N\-I configuration. The field and scope are precised thanks to a t\-\_\-bunny\-\_\-ini\-\_\-field pointer instead of names. 
+\begin{DoxyParams}{Parameters}
+{\em field} & The field in which you wanna write. \\
+\hline
+{\em index} & The index in the field you wanna write in. \\
+\hline
+{\em value} & The value that will be inserted into the I\-N\-I configuration. Send R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X to remove the data instead of writing a new one. \\
+\hline
+\end{DoxyParams}
+\hypertarget{ini_8h_a1d13672db41ac2f1de771241d7580624}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-first\-\_\-field@{bunny\-\_\-ini\-\_\-first\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-first\-\_\-field@{bunny\-\_\-ini\-\_\-first\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-first\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini\-\_\-field}$\ast$ bunny\-\_\-ini\-\_\-first\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a1d13672db41ac2f1de771241d7580624}
+Get the first field inside a scope in a I\-N\-I configuration. 
+\begin{DoxyParams}{Parameters}
+{\em scope} & The scope to browse inside a I\-N\-I configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first field in the scope. N\-U\-L\-L if there is no scope. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_af65e334fec33811126033ad7315047a3}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-first\-\_\-scope@{bunny\-\_\-ini\-\_\-first\-\_\-scope}}
+\index{bunny\-\_\-ini\-\_\-first\-\_\-scope@{bunny\-\_\-ini\-\_\-first\-\_\-scope}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-first\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope}$\ast$ bunny\-\_\-ini\-\_\-first\-\_\-scope (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_af65e334fec33811126033ad7315047a3}
+Get the first scope inside the I\-N\-I configuration. The first scope should be D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration to browse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first scope in the I\-N\-I configuration. N\-U\-L\-L if there is no scope. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a3790a9210211982b27630327f3da0d05}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-get\-\_\-error@{bunny\-\_\-ini\-\_\-get\-\_\-error}}
+\index{bunny\-\_\-ini\-\_\-get\-\_\-error@{bunny\-\_\-ini\-\_\-get\-\_\-error}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-get\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-get\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a3790a9210211982b27630327f3da0d05}
+The bunny\-\_\-ini\-\_\-get\-\_\-error return a description of the last error encountered by the bunny\-\_\-load\-\_\-ini function. It will help you to know why it returned N\-U\-L\-L. \begin{DoxyReturn}{Returns}
+The last encountered error, N\-U\-L\-L if no error was encountered.
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-configuration\-\_\-get\-\_\-error instead. \hypertarget{ini_8h_a6a7784a144ddacea8a806cb1b6b178ee}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-get\-\_\-field@{bunny\-\_\-ini\-\_\-get\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-get\-\_\-field@{bunny\-\_\-ini\-\_\-get\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-get\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-get\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf const} char $\ast$}]{scope, }
+\item[{{\bf const} char $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a6a7784a144ddacea8a806cb1b6b178ee}
+The bunny\-\_\-ini\-\_\-get\-\_\-field function returns a value stored in a specific point in the I\-N\-I configuration, if it exists. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration \\
+\hline
+{\em scope} & The scope name where is the data you need. Use D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E to access to the fields that were written before any scope was precised in your I\-N\-I file. \\
+\hline
+{\em field} & The field name where is the data you need. \\
+\hline
+{\em index} & The index in the field you want to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a constant string (You have to duplicate it if you wanna keep it after closing the I\-N\-I configuration) if the data exists, else it returns N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_ac409b24b0fcbfdc3159245071afea841}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-get\-\_\-scope@{bunny\-\_\-ini\-\_\-get\-\_\-scope}}
+\index{bunny\-\_\-ini\-\_\-get\-\_\-scope@{bunny\-\_\-ini\-\_\-get\-\_\-scope}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-get\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope}$\ast$ bunny\-\_\-ini\-\_\-get\-\_\-scope (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf const} char $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_ac409b24b0fcbfdc3159245071afea841}
+Get a t\-\_\-bunny\-\_\-ini\-\_\-scope by name instead of browsing throught the I\-N\-I configuration. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration \\
+\hline
+{\em scope} & The name of the scope you wanna get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The requested t\-\_\-bunny\-\_\-ini\-\_\-scope. N\-U\-L\-L if it does not exist. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a3d941c4bc49628bc9c33fb0338d57537}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-next\-\_\-field@{bunny\-\_\-ini\-\_\-next\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-next\-\_\-field@{bunny\-\_\-ini\-\_\-next\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-next\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini\-\_\-field}$\ast$ bunny\-\_\-ini\-\_\-next\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope, }
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-field} $\ast$}]{field}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a3d941c4bc49628bc9c33fb0338d57537}
+Get the next field inside the given scope from an I\-N\-I configuration. 
+\begin{DoxyParams}{Parameters}
+{\em scope} & The scope to browse \\
+\hline
+{\em field} & The current field, which will become the previous one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the field after the given one, L\-A\-S\-T\-\_\-\-F\-I\-E\-L\-D if it was the last one. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a5b3ad73bdd5bf123babc7a70df341bd8}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-next\-\_\-scope@{bunny\-\_\-ini\-\_\-next\-\_\-scope}}
+\index{bunny\-\_\-ini\-\_\-next\-\_\-scope@{bunny\-\_\-ini\-\_\-next\-\_\-scope}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-next\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope}$\ast$ bunny\-\_\-ini\-\_\-next\-\_\-scope (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a5b3ad73bdd5bf123babc7a70df341bd8}
+Get the next scope inside the I\-N\-I configuration. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration \\
+\hline
+{\em scope} & The current scope, which will become the previous one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the scope after the given one. L\-A\-S\-T\-\_\-\-S\-C\-O\-P\-E if it was the last one. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a4cd25deec3e017b5e7cc9f912e721407}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field@{bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field@{bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope, }
+\item[{{\bf const} char $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a4cd25deec3e017b5e7cc9f912e721407}
+The bunny\-\_\-ini\-\_\-scope\-\_\-get\-\_\-field returns a value stored in a specific point in the I\-N\-I configuration, if it exists. The scope name does not need to be precised, because the function takes a t\-\_\-bunny\-\_\-ini\-\_\-scope and the search is already limited to it. 
+\begin{DoxyParams}{Parameters}
+{\em scope} & The scope where is the data you need. \\
+\hline
+{\em field} & The field name where is the data you need. \\
+\hline
+{\em index} & The index in the field you want to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a constant string (You have to duplicate it if you wanna keep it after closing the I\-N\-I configuration) if the data exists, else it returns N\-U\-L\-L. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_af43a09028e5636663214f2fa0b4c1a17}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-scope\-\_\-name@{bunny\-\_\-ini\-\_\-scope\-\_\-name}}
+\index{bunny\-\_\-ini\-\_\-scope\-\_\-name@{bunny\-\_\-ini\-\_\-scope\-\_\-name}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-scope\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ bunny\-\_\-ini\-\_\-scope\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_af43a09028e5636663214f2fa0b4c1a17}
+Get the name of the sent scope. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration \\
+\hline
+{\em scope} & The scope you wanna get the name from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the scope. 
+\end{DoxyReturn}
+\hypertarget{ini_8h_a783109157b359a06f8dc1ba203d8a9df}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field@{bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field@{bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-ini\-\_\-scope\-\_\-set\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini\-\_\-scope} $\ast$}]{scope, }
+\item[{{\bf const} char $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index, }
+\item[{{\bf const} char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a783109157b359a06f8dc1ba203d8a9df}
+The bunny\-\_\-ini\-\_\-set\-\_\-field function write a data inside a specific point in the I\-N\-I configuration. The scope is precised thanks to a t\-\_\-bunny\-\_\-ini\-\_\-scope pointer instead of its name. 
+\begin{DoxyParams}{Parameters}
+{\em scope} & The scope in which you wanna write. \\
+\hline
+{\em field} & The field in which you wanna write. \\
+\hline
+{\em index} & The index in the field you wanna write in. \\
+\hline
+{\em value} & The value that will be inserted into the I\-N\-I configuration. Send R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X to remove the data instead of writing a new one. \\
+\hline
+\end{DoxyParams}
+\hypertarget{ini_8h_a0abd9852cc46ca859bd89e659f6cd83b}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-ini\-\_\-set\-\_\-field@{bunny\-\_\-ini\-\_\-set\-\_\-field}}
+\index{bunny\-\_\-ini\-\_\-set\-\_\-field@{bunny\-\_\-ini\-\_\-set\-\_\-field}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-ini\-\_\-set\-\_\-field}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-ini\-\_\-set\-\_\-field (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf const} char $\ast$}]{scope, }
+\item[{{\bf const} char $\ast$}]{field, }
+\item[{{\bf unsigned} {\bf int}}]{index, }
+\item[{{\bf const} char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a0abd9852cc46ca859bd89e659f6cd83b}
+The bunny\-\_\-ini\-\_\-set\-\_\-field function write a data inside a specific point in the I\-N\-I configuration. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration \\
+\hline
+{\em scope} & The scope name in which you wanna write. Use D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E to access to the fields that were written before any scope was precised in your I\-N\-I file. \\
+\hline
+{\em field} & The field name in which you wanna write. \\
+\hline
+{\em index} & The index in the field you wanna write in. \\
+\hline
+{\em value} & The value that will be inserted into the I\-N\-I configuration. Send R\-E\-M\-O\-V\-E\-\_\-\-I\-N\-D\-E\-X to remove the data instead of writing a new one. \\
+\hline
+\end{DoxyParams}
+\hypertarget{ini_8h_a50aafc096d3278f51a94b0682833686a}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-load\-\_\-ini@{bunny\-\_\-load\-\_\-ini}}
+\index{bunny\-\_\-load\-\_\-ini@{bunny\-\_\-load\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-load\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini}$\ast$ bunny\-\_\-load\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a50aafc096d3278f51a94b0682833686a}
+The bunny\-\_\-load\-\_\-ini function open and read a file that is supposed to be a I\-N\-I file. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The I\-N\-I file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded I\-N\-I configuration or N\-U\-L\-L if an error happened.
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-load\-\_\-configuration instead. \hypertarget{ini_8h_aa024a755c8af669e75b664204a11bf65}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-new\-\_\-ini@{bunny\-\_\-new\-\_\-ini}}
+\index{bunny\-\_\-new\-\_\-ini@{bunny\-\_\-new\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini}$\ast$ bunny\-\_\-new\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_aa024a755c8af669e75b664204a11bf65}
+Create an I\-N\-I configuration. \begin{DoxyReturn}{Returns}
+Return a t\-\_\-bunny\-\_\-ini pointer or N\-U\-L\-L on error
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-new\-\_\-configuration instead. \hypertarget{ini_8h_a7565c272de3c673adfa34db7a8fd06be}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-read\-\_\-ini@{bunny\-\_\-read\-\_\-ini}}
+\index{bunny\-\_\-read\-\_\-ini@{bunny\-\_\-read\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-read\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-ini}$\ast$ bunny\-\_\-read\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{ini}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a7565c272de3c673adfa34db7a8fd06be}
+The bunny\-\_\-read\-\_\-ini function read I\-N\-I from the given string. 
+\begin{DoxyParams}{Parameters}
+{\em str} & The I\-N\-I string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The readed I\-N\-I
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-read\-\_\-configuration instead. \hypertarget{ini_8h_a5227d310cf42ad7b31f0626c1ef1dd23}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-save\-\_\-ini@{bunny\-\_\-save\-\_\-ini}}
+\index{bunny\-\_\-save\-\_\-ini@{bunny\-\_\-save\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-save\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-save\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini, }
+\item[{{\bf const} char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_a5227d310cf42ad7b31f0626c1ef1dd23}
+The bunny\-\_\-save\-\_\-ini function save the content of the sent t\-\_\-bunny\-\_\-ini in the specified file in the I\-N\-I file format. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I configuration to save. \\
+\hline
+{\em file} & The file where to save the configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if everything went well. False on error.
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-save\-\_\-configuration instead. \hypertarget{ini_8h_ae2ae31aa68579d494bb58e85b84248e7}{\index{ini.\-h@{ini.\-h}!bunny\-\_\-write\-\_\-ini@{bunny\-\_\-write\-\_\-ini}}
+\index{bunny\-\_\-write\-\_\-ini@{bunny\-\_\-write\-\_\-ini}!ini.h@{ini.\-h}}
+\subsubsection[{bunny\-\_\-write\-\_\-ini}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ bunny\-\_\-write\-\_\-ini (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-ini} $\ast$}]{ini}
+\end{DoxyParamCaption}
+)}}\label{ini_8h_ae2ae31aa68579d494bb58e85b84248e7}
+The bunny\-\_\-write\-\_\-ini function write I\-N\-I from the given I\-N\-I to a string. 
+\begin{DoxyParams}{Parameters}
+{\em ini} & The I\-N\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The written string
+\end{DoxyReturn}
+This type is obsolete and should not be used anymore. Use bunny\-\_\-write\-\_\-configuration instead. 
+
+\subsection{Variable Documentation}
+\hypertarget{ini_8h_a6d1564cee1f730e7cb38e5c787e05436}{\index{ini.\-h@{ini.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E}!ini.h@{ini.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} char$\ast$ D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E}}\label{ini_8h_a6d1564cee1f730e7cb38e5c787e05436}
+The D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E symbolic constant is useful to get fields from I\-N\-I file that was defined before any scope was defined. Use it like this\-: bunny\-\_\-ini\-\_\-get\-\_\-field(ini, D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-C\-O\-P\-E, \char`\"{}fieldname\char`\"{}, index)
+
+This symbol is obsolete and should not be used anymore. The new bunny\-\_\-configuration A\-P\-I does not need it. 

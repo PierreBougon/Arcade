@@ -1,0 +1,146 @@
+\hypertarget{classarcade_1_1_a_living_entity}{\section{arcade\-:\-:A\-Living\-Entity Class Reference}
+\label{classarcade_1_1_a_living_entity}\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}}
+}
+
+
+{\ttfamily \#include $<$A\-Living\-Entity.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:A\-Living\-Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.346369cm]{classarcade_1_1_a_living_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_a_living_entity_a98a8ef0ec817b737fd63924bed1b7425}{A\-Living\-Entity} (\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&pos, std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ id\-Sprite, std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ sprite\-Count, \hyperlink{namespacearcade_a370755573a2c68e25c59bedd4bce1342}{Orientation} dir, \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} Type, \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} Type\-Evolution, \hyperlink{unionarcade_1_1_color}{Color} col, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_a_living_entity_a47a3ed7e55199abbf84e2b80eb9df233}{hp}=1, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} collide=true)
+\item 
+\hyperlink{classarcade_1_1_a_living_entity_a6d930377c429a618b82a61ce777451ce}{A\-Living\-Entity} (\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&pos, \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} Type, \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} Type\-Evolution, \hyperlink{unionarcade_1_1_color}{Color} col, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_a_living_entity_a47a3ed7e55199abbf84e2b80eb9df233}{hp}=1, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} collide=true)
+\item 
+virtual \hyperlink{classarcade_1_1_a_living_entity_a61b9269f2c1420ee55ca864d281ef3f6}{$\sim$\-A\-Living\-Entity} ()
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_a_living_entity_acd313e68d1ca60a72d3df76c1a18ad40}{is\-Enemy} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_a_living_entity_a4121f6abd69ac69bdf199f92d37d2a63}{is\-Player} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_a_living_entity_a27f635aeaf1d176bbca08669ef7451cd}{get\-Hp} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+virtual void \hyperlink{classarcade_1_1_a_living_entity_ac0e3ae518b9548f845479ad87f3adc89}{move} ()=0
+\item 
+virtual void \hyperlink{classarcade_1_1_a_living_entity_afce22ef387a77976ae3b0121dd74ac82}{action} ()=0
+\item 
+virtual void \hyperlink{classarcade_1_1_a_living_entity_a73b611bacb561279a6118131f2692674}{update\-Player\-Input} (std\-::vector$<$ \hyperlink{structarcade_1_1_event}{Event} $>$ \&events)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_a_living_entity_a47a3ed7e55199abbf84e2b80eb9df233}{hp}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_a_living_entity_a98a8ef0ec817b737fd63924bed1b7425}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!A\-Living\-Entity@{A\-Living\-Entity}}
+\index{A\-Living\-Entity@{A\-Living\-Entity}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{A\-Living\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-A\-Living\-Entity\-::\-A\-Living\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Vector2s} {\bf const} \&}]{pos, }
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{id\-Sprite, }
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{sprite\-Count, }
+\item[{{\bf Orientation}}]{dir, }
+\item[{{\bf Tile\-Type}}]{Type, }
+\item[{{\bf Tile\-Type\-Evolution}}]{Type\-Evolution, }
+\item[{{\bf Color}}]{col, }
+\item[{{\bf size\-\_\-t}}]{hp = {\ttfamily 1}, }
+\item[{{\bf bool}}]{collide = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_a_living_entity_a98a8ef0ec817b737fd63924bed1b7425}
+\hypertarget{classarcade_1_1_a_living_entity_a6d930377c429a618b82a61ce777451ce}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!A\-Living\-Entity@{A\-Living\-Entity}}
+\index{A\-Living\-Entity@{A\-Living\-Entity}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{A\-Living\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-A\-Living\-Entity\-::\-A\-Living\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Vector2s} {\bf const} \&}]{pos, }
+\item[{{\bf arcade\-::\-Tile\-Type}}]{Type, }
+\item[{{\bf arcade\-::\-Tile\-Type\-Evolution}}]{Type\-Evolution, }
+\item[{{\bf arcade\-::\-Color}}]{col, }
+\item[{{\bf size\-\_\-t}}]{hp = {\ttfamily 1}, }
+\item[{{\bf bool}}]{collide = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_a_living_entity_a6d930377c429a618b82a61ce777451ce}
+\hypertarget{classarcade_1_1_a_living_entity_a61b9269f2c1420ee55ca864d281ef3f6}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!$\sim$\-A\-Living\-Entity@{$\sim$\-A\-Living\-Entity}}
+\index{$\sim$\-A\-Living\-Entity@{$\sim$\-A\-Living\-Entity}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{$\sim$\-A\-Living\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual arcade\-::\-A\-Living\-Entity\-::$\sim$\-A\-Living\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_a_living_entity_a61b9269f2c1420ee55ca864d281ef3f6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_a_living_entity_afce22ef387a77976ae3b0121dd74ac82}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!action@{action}}
+\index{action@{action}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}virtual void arcade\-::\-A\-Living\-Entity\-::action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_a_living_entity_afce22ef387a77976ae3b0121dd74ac82}
+
+
+Implemented in \hyperlink{classarcade_1_1_centipede_killer_a20731fd4c7998cc7110b03e2ba1b18ef}{arcade\-::\-Centipede\-Killer}, \hyperlink{classarcade_1_1_player_control_snake_a96cfe06df5a34d3febe73f9c3ea003d6}{arcade\-::\-Player\-Control\-Snake}, \hyperlink{classarcade_1_1_centipede_part_a6d1531fea950e8319229cb0eeea3dec9}{arcade\-::\-Centipede\-Part}, and \hyperlink{classarcade_1_1_a_i_controlled_a5455631e903ae47fa18070ab415b170e}{arcade\-::\-A\-I\-Controlled}.
+
+\hypertarget{classarcade_1_1_a_living_entity_a27f635aeaf1d176bbca08669ef7451cd}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!get\-Hp@{get\-Hp}}
+\index{get\-Hp@{get\-Hp}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{get\-Hp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-A\-Living\-Entity\-::get\-Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_a_living_entity_a27f635aeaf1d176bbca08669ef7451cd}
+\hypertarget{classarcade_1_1_a_living_entity_acd313e68d1ca60a72d3df76c1a18ad40}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!is\-Enemy@{is\-Enemy}}
+\index{is\-Enemy@{is\-Enemy}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{is\-Enemy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-A\-Living\-Entity\-::is\-Enemy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_a_living_entity_acd313e68d1ca60a72d3df76c1a18ad40}
+\hypertarget{classarcade_1_1_a_living_entity_a4121f6abd69ac69bdf199f92d37d2a63}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!is\-Player@{is\-Player}}
+\index{is\-Player@{is\-Player}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{is\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-A\-Living\-Entity\-::is\-Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_a_living_entity_a4121f6abd69ac69bdf199f92d37d2a63}
+\hypertarget{classarcade_1_1_a_living_entity_ac0e3ae518b9548f845479ad87f3adc89}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!move@{move}}
+\index{move@{move}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}virtual void arcade\-::\-A\-Living\-Entity\-::move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_a_living_entity_ac0e3ae518b9548f845479ad87f3adc89}
+
+
+Implemented in \hyperlink{classarcade_1_1_centipede_killer_a0535da7ea61e90ee69d38db7570ea11a}{arcade\-::\-Centipede\-Killer}, \hyperlink{classarcade_1_1_player_control_snake_a191618b38959920262a7c3125eaa54e3}{arcade\-::\-Player\-Control\-Snake}, \hyperlink{classarcade_1_1_centipede_part_aed1ed6a654d9d081d5c260f7c7101c75}{arcade\-::\-Centipede\-Part}, and \hyperlink{classarcade_1_1_a_i_controlled_a8d06a958ef71a8c8b8d12cd9e6b23246}{arcade\-::\-A\-I\-Controlled}.
+
+\hypertarget{classarcade_1_1_a_living_entity_a73b611bacb561279a6118131f2692674}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!update\-Player\-Input@{update\-Player\-Input}}
+\index{update\-Player\-Input@{update\-Player\-Input}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{update\-Player\-Input}]{\setlength{\rightskip}{0pt plus 5cm}virtual void arcade\-::\-A\-Living\-Entity\-::update\-Player\-Input (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Event} $>$ \&}]{events}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classarcade_1_1_a_living_entity_a73b611bacb561279a6118131f2692674}
+
+
+Implemented in \hyperlink{classarcade_1_1_centipede_killer_a34c73ec300bff3589353be22a9e543c8}{arcade\-::\-Centipede\-Killer}, \hyperlink{classarcade_1_1_player_control_snake_a9b719f8730b1d204bff380af3bbd1b98}{arcade\-::\-Player\-Control\-Snake}, and \hyperlink{classarcade_1_1_centipede_part_a45c3f651a41a6258de5a1a9e26a2a60a}{arcade\-::\-Centipede\-Part}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classarcade_1_1_a_living_entity_a47a3ed7e55199abbf84e2b80eb9df233}{\index{arcade\-::\-A\-Living\-Entity@{arcade\-::\-A\-Living\-Entity}!hp@{hp}}
+\index{hp@{hp}!arcade::ALivingEntity@{arcade\-::\-A\-Living\-Entity}}
+\subsubsection[{hp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-A\-Living\-Entity\-::hp\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_a_living_entity_a47a3ed7e55199abbf84e2b80eb9df233}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{_a_living_entity_8hpp}{A\-Living\-Entity.\-hpp}\item 
+games/common/src/\hyperlink{_a_living_entity_8cpp}{A\-Living\-Entity.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classhbs_1_1_work}{\section{hbs\-:\-:Work Class Reference}
+\label{classhbs_1_1_work}\index{hbs\-::\-Work@{hbs\-::\-Work}}
+}
+
+
+\hyperlink{classhbs_1_1_work}{Work} is an interface that allow classes to be threaded by the \hyperlink{classhbs_1_1_workers}{Workers} class.  
+
+
+
+
+{\ttfamily \#include $<$Work.\-hpp$>$}
+
+Inheritance diagram for hbs\-:\-:Work\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.025641cm]{classhbs_1_1_work}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{namespacehbs_a6d744a52db9bca0a9752a009118641f4}{hbs\-::\-Id\-Message} \hyperlink{classhbs_1_1_work_a22b695d863b04ef8a15adb4b2a981c6d}{operator()} (\hyperlink{namespacehbs_aab8d06205ac2b0b14186327fd6c1c0d6}{hbs\-::\-Id\-Task} detail=\hyperlink{namespacehbs_ad95bc3c367f3d09c0d70ff80c469a15ca18ab2d1bfa3ea7aaf3a8a3272c384667}{hbs\-::\-No\-Details})=0
+\begin{DoxyCompactList}\small\item\em The function that will be called by the thread pool. \end{DoxyCompactList}\item 
+virtual \hyperlink{classhbs_1_1_work_aac67f01529b5464dfe1451aab39ee2cb}{$\sim$\-Work} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classhbs_1_1_work}{Work} is an interface that allow classes to be threaded by the \hyperlink{classhbs_1_1_workers}{Workers} class. 
+
+The \hyperlink{classhbs_1_1_work}{Work} class is an interface that will allow the class which inherit to be used by the thread pool \hyperlink{classhbs_1_1_workers}{hbs\-::\-Workers}. The design is really simple\-: you the work is registered in the \hyperlink{classhbs_1_1_workers}{Workers} class with an integer that will be sent to the operator() function. The function will return another integer that will be stored inside the \hyperlink{classhbs_1_1_workers}{Workers} class until the Get\-Message function is called. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhbs_1_1_work_aac67f01529b5464dfe1451aab39ee2cb}{\index{hbs\-::\-Work@{hbs\-::\-Work}!$\sim$\-Work@{$\sim$\-Work}}
+\index{$\sim$\-Work@{$\sim$\-Work}!hbs::Work@{hbs\-::\-Work}}
+\subsubsection[{$\sim$\-Work}]{\setlength{\rightskip}{0pt plus 5cm}virtual hbs\-::\-Work\-::$\sim$\-Work (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classhbs_1_1_work_aac67f01529b5464dfe1451aab39ee2cb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classhbs_1_1_work_a22b695d863b04ef8a15adb4b2a981c6d}{\index{hbs\-::\-Work@{hbs\-::\-Work}!operator()@{operator()}}
+\index{operator()@{operator()}!hbs::Work@{hbs\-::\-Work}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf hbs\-::\-Id\-Message} hbs\-::\-Work\-::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf hbs\-::\-Id\-Task}}]{detail = {\ttfamily {\bf hbs\-::\-No\-Details}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classhbs_1_1_work_a22b695d863b04ef8a15adb4b2a981c6d}
+
+
+The function that will be called by the thread pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em detail} & Can be useful if a work class contains several tasks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Any kind of message that would need to be returned. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{structhbs_1_1_work_spec_1_1_work3_aae08bdf7dfb3167f8ca748eca40212f7}{hbs\-::\-Work\-Spec\-::\-Work3$<$ Class, P1, P2, P3 $>$}, \hyperlink{structhbs_1_1_work_spec_1_1_work2_acd0cc67099d12b7bae817b06d5fb0f6b}{hbs\-::\-Work\-Spec\-::\-Work2$<$ Class, P1, P2 $>$}, \hyperlink{structhbs_1_1_work_spec_1_1_work1_a90c7f3a80817ca63e96a4e9d8c9e6047}{hbs\-::\-Work\-Spec\-::\-Work1$<$ Class, P1 $>$}, and \hyperlink{structhbs_1_1_work_spec_1_1_work0_af20a59b9e8106ba7d0e5104cbf0dd9a9}{hbs\-::\-Work\-Spec\-::\-Work0$<$ Class $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/deps/\hyperlink{_work_8hpp}{Work.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{classarcade_1_1_map}{\section{arcade\-:\-:Map Class Reference}
+\label{classarcade_1_1_map}\index{arcade\-::\-Map@{arcade\-::\-Map}}
+}
+
+
+{\ttfamily \#include $<$Map.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Map\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_map_a3d7b4b20f74d90a75aa6a5398dd28ee5}{$\sim$\-Map} ()
+\item 
+\hyperlink{classarcade_1_1_map_a5ca6eb4bfac7e73267b4cced9901be24}{Map} (std\-::string \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&path, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} nb\-Layers=1)
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_map_a208c3c498f82871a844cc0bb8e29f8eb}{get\-Layer\-Nb} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the number of layers. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_map_a55d2afd98fcc471f5075a99357673700}{get\-Width} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the width of the map. \end{DoxyCompactList}\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_map_a0ff5ecb8be07f6e121665200d636ac40}{get\-Height} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get the height of the map. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classarcade_1_1_i_tile}{I\-Tile} \& \hyperlink{classarcade_1_1_map_a999ff5376aff11492828167cab3de5bd}{at} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} x, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} y) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\begin{DoxyCompactList}\small\item\em Get a specific \hyperlink{classarcade_1_1_i_tile}{I\-Tile} of the map. \end{DoxyCompactList}\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{classarcade_1_1_tile}{Tile} \& \hyperlink{classarcade_1_1_map_a5b352702cd45feba1dc769feeabf312d}{at\-Mouli} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} x, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} y) \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{classarcade_1_1_map_a5879a162517bb78cf73c3309bdee0837}{update\-Layer} (\hyperlink{classarcade_1_1_entity}{Entity} \&entity, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer)
+\item 
+void \hyperlink{classarcade_1_1_map_a1156b5471f3a94a70945f5048a56fc24}{reset\-Layer} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer)
+\item 
+void \hyperlink{classarcade_1_1_map_a4e8a5a82574e0dd8db4e1ffc0944d952}{reset\-Map\-From\-Layer} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} layer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_map_a3d7b4b20f74d90a75aa6a5398dd28ee5}{\index{arcade\-::\-Map@{arcade\-::\-Map}!$\sim$\-Map@{$\sim$\-Map}}
+\index{$\sim$\-Map@{$\sim$\-Map}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{$\sim$\-Map}]{\setlength{\rightskip}{0pt plus 5cm}virtual arcade\-::\-Map\-::$\sim$\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_map_a3d7b4b20f74d90a75aa6a5398dd28ee5}
+\hypertarget{classarcade_1_1_map_a5ca6eb4bfac7e73267b4cced9901be24}{\index{arcade\-::\-Map@{arcade\-::\-Map}!Map@{Map}}
+\index{Map@{Map}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Map\-::\-Map (
+\begin{DoxyParamCaption}
+\item[{std\-::string {\bf const} \&}]{path, }
+\item[{{\bf size\-\_\-t}}]{nb\-Layers = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_map_a5ca6eb4bfac7e73267b4cced9901be24}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_map_a999ff5376aff11492828167cab3de5bd}{\index{arcade\-::\-Map@{arcade\-::\-Map}!at@{at}}
+\index{at@{at}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-I\-Tile} \& arcade\-::\-Map\-::at (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{layer, }
+\item[{{\bf size\-\_\-t}}]{x, }
+\item[{{\bf size\-\_\-t}}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_map_a999ff5376aff11492828167cab3de5bd}
+
+
+Get a specific \hyperlink{classarcade_1_1_i_tile}{I\-Tile} of the map. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_map_ab856c3bcc5a39d987d2a40fd05c35d0e}{arcade\-::\-I\-Map}.
+
+\hypertarget{classarcade_1_1_map_a5b352702cd45feba1dc769feeabf312d}{\index{arcade\-::\-Map@{arcade\-::\-Map}!at\-Mouli@{at\-Mouli}}
+\index{at\-Mouli@{at\-Mouli}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{at\-Mouli}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Tile} \& arcade\-::\-Map\-::at\-Mouli (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{layer, }
+\item[{{\bf size\-\_\-t}}]{x, }
+\item[{{\bf size\-\_\-t}}]{y}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_map_a5b352702cd45feba1dc769feeabf312d}
+\hypertarget{classarcade_1_1_map_a0ff5ecb8be07f6e121665200d636ac40}{\index{arcade\-::\-Map@{arcade\-::\-Map}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Map\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_map_a0ff5ecb8be07f6e121665200d636ac40}
+
+
+Get the height of the map. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_map_a9282ac731fa61b8c18241a309efbd6a0}{arcade\-::\-I\-Map}.
+
+\hypertarget{classarcade_1_1_map_a208c3c498f82871a844cc0bb8e29f8eb}{\index{arcade\-::\-Map@{arcade\-::\-Map}!get\-Layer\-Nb@{get\-Layer\-Nb}}
+\index{get\-Layer\-Nb@{get\-Layer\-Nb}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{get\-Layer\-Nb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Map\-::get\-Layer\-Nb (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_map_a208c3c498f82871a844cc0bb8e29f8eb}
+
+
+Get the number of layers. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_map_a3e5fc4c5286f92fb49c8c7d0e79f4510}{arcade\-::\-I\-Map}.
+
+\hypertarget{classarcade_1_1_map_a55d2afd98fcc471f5075a99357673700}{\index{arcade\-::\-Map@{arcade\-::\-Map}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Map\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_map_a55d2afd98fcc471f5075a99357673700}
+
+
+Get the width of the map. 
+
+
+
+Implements \hyperlink{classarcade_1_1_i_map_a6e7534eeff05277f1429037f8b01e25f}{arcade\-::\-I\-Map}.
+
+\hypertarget{classarcade_1_1_map_a1156b5471f3a94a70945f5048a56fc24}{\index{arcade\-::\-Map@{arcade\-::\-Map}!reset\-Layer@{reset\-Layer}}
+\index{reset\-Layer@{reset\-Layer}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{reset\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Map\-::reset\-Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{layer}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_map_a1156b5471f3a94a70945f5048a56fc24}
+\hypertarget{classarcade_1_1_map_a4e8a5a82574e0dd8db4e1ffc0944d952}{\index{arcade\-::\-Map@{arcade\-::\-Map}!reset\-Map\-From\-Layer@{reset\-Map\-From\-Layer}}
+\index{reset\-Map\-From\-Layer@{reset\-Map\-From\-Layer}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{reset\-Map\-From\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Map\-::reset\-Map\-From\-Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{layer}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_map_a4e8a5a82574e0dd8db4e1ffc0944d952}
+\hypertarget{classarcade_1_1_map_a5879a162517bb78cf73c3309bdee0837}{\index{arcade\-::\-Map@{arcade\-::\-Map}!update\-Layer@{update\-Layer}}
+\index{update\-Layer@{update\-Layer}!arcade::Map@{arcade\-::\-Map}}
+\subsubsection[{update\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Map\-::update\-Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Entity} \&}]{entity, }
+\item[{{\bf size\-\_\-t}}]{layer}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_map_a5879a162517bb78cf73c3309bdee0837}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{_map_8hpp}{Map.\-hpp}\item 
+games/common/src/\hyperlink{_map_8cpp}{Map.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{hardware_8h}{\section{lib/lapin/dep/lapin/hardware.h File Reference}
+\label{hardware_8h}\index{lib/lapin/dep/lapin/hardware.\-h@{lib/lapin/dep/lapin/hardware.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__hardware}{s\-\_\-bunny\-\_\-hardware}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__hardware}{s\-\_\-bunny\-\_\-hardware} \hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware} $\ast$ \hyperlink{hardware_8h_a2896aa11742a711d5fde722208ad05cc}{bunny\-\_\-new\-\_\-hardware} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} id)
+\item 
+void \hyperlink{hardware_8h_abefef96feace60748089355704649133}{bunny\-\_\-delete\-\_\-hardware} (\hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware} $\ast$hrd)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{hardware_8h_ac68cb3e79fe2a498a401014ccbd34368}{bunny\-\_\-hardware\-\_\-read} (\hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware} $\ast$hrd)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{hardware_8h_a3cc374e89ff780b2d70f41433fdb21e9}{bunny\-\_\-hardware\-\_\-write} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware} $\ast$hdr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A little driver for a specific electronic board and later, some controlers builts on it. The electronic board is the Velleman V\-M110\-N. 
+
+\subsection{Typedef Documentation}
+\hypertarget{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{\index{hardware.\-h@{hardware.\-h}!t\-\_\-bunny\-\_\-hardware@{t\-\_\-bunny\-\_\-hardware}}
+\index{t\-\_\-bunny\-\_\-hardware@{t\-\_\-bunny\-\_\-hardware}!hardware.h@{hardware.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-hardware}				 {\bf t\-\_\-bunny\-\_\-hardware}}}\label{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}
+The t\-\_\-bunny\-\_\-hardware structure contains informations and buffers useful to handle the board.
+
+It starts with a private field.
+
+The id match the id of the board, that can be configured thanks to a jumper.
+
+The digital\-\_\-inputs and analog\-\_\-inputs are set by the bunny\-\_\-hardware\-\_\-read function and match the electronic state of the board. Digital inputs are boolean while analog\-\_\-inputs are double. The value of these double can vary between 0 and 5, matching the electronic states that can vary between 0 and 5 volts.
+
+The digital\-\_\-outputs and analog\-\_\-outputs are written on the board thanks to 
+
+\subsection{Function Documentation}
+\hypertarget{hardware_8h_abefef96feace60748089355704649133}{\index{hardware.\-h@{hardware.\-h}!bunny\-\_\-delete\-\_\-hardware@{bunny\-\_\-delete\-\_\-hardware}}
+\index{bunny\-\_\-delete\-\_\-hardware@{bunny\-\_\-delete\-\_\-hardware}!hardware.h@{hardware.\-h}}
+\subsubsection[{bunny\-\_\-delete\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-delete\-\_\-hardware (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-hardware} $\ast$}]{hrd}
+\end{DoxyParamCaption}
+)}}\label{hardware_8h_abefef96feace60748089355704649133}
+Destroy the hardware handler. 
+\begin{DoxyParams}{Parameters}
+{\em hdr} & The hardware handler to destroy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{hardware_8h_ac68cb3e79fe2a498a401014ccbd34368}{\index{hardware.\-h@{hardware.\-h}!bunny\-\_\-hardware\-\_\-read@{bunny\-\_\-hardware\-\_\-read}}
+\index{bunny\-\_\-hardware\-\_\-read@{bunny\-\_\-hardware\-\_\-read}!hardware.h@{hardware.\-h}}
+\subsubsection[{bunny\-\_\-hardware\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-hardware\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-bunny\-\_\-hardware} $\ast$}]{hrd}
+\end{DoxyParamCaption}
+)}}\label{hardware_8h_ac68cb3e79fe2a498a401014ccbd34368}
+Read states on the electronic board. Registered them inside digital\-\_\-inputs and analog\-\_\-inputs attributes of t\-\_\-bunny\-\_\-hardware. 
+\begin{DoxyParams}{Parameters}
+{\em hrd} & The board to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the reading was done. False on error. 
+\end{DoxyReturn}
+\hypertarget{hardware_8h_a3cc374e89ff780b2d70f41433fdb21e9}{\index{hardware.\-h@{hardware.\-h}!bunny\-\_\-hardware\-\_\-write@{bunny\-\_\-hardware\-\_\-write}}
+\index{bunny\-\_\-hardware\-\_\-write@{bunny\-\_\-hardware\-\_\-write}!hardware.h@{hardware.\-h}}
+\subsubsection[{bunny\-\_\-hardware\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} bunny\-\_\-hardware\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf t\-\_\-bunny\-\_\-hardware} $\ast$}]{hdr}
+\end{DoxyParamCaption}
+)}}\label{hardware_8h_a3cc374e89ff780b2d70f41433fdb21e9}
+Write states on the electronic board. Written states are stored inside digital\-\_\-outputs and analog\-\_\-outputs attributes of t\-\_\-bunny\-\_\-hardware. 
+\begin{DoxyParams}{Parameters}
+{\em hdr} & The board where to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the writing was done. False on error. 
+\end{DoxyReturn}
+\hypertarget{hardware_8h_a2896aa11742a711d5fde722208ad05cc}{\index{hardware.\-h@{hardware.\-h}!bunny\-\_\-new\-\_\-hardware@{bunny\-\_\-new\-\_\-hardware}}
+\index{bunny\-\_\-new\-\_\-hardware@{bunny\-\_\-new\-\_\-hardware}!hardware.h@{hardware.\-h}}
+\subsubsection[{bunny\-\_\-new\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-hardware}$\ast$ bunny\-\_\-new\-\_\-hardware (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{id}
+\end{DoxyParamCaption}
+)}}\label{hardware_8h_a2896aa11742a711d5fde722208ad05cc}
+Create a t\-\_\-bunny\-\_\-hardware associated with the board of the given id. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the board we want to control \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A t\-\_\-bunny\-\_\-hardware or N\-U\-L\-L on error. 
+\end{DoxyReturn}

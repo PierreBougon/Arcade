@@ -1,0 +1,352 @@
+\hypertarget{tic_8h}{\section{lib/ndk/dep/tic.h File Reference}
+\label{tic_8h}\index{lib/ndk/dep/tic.\-h@{lib/ndk/dep/tic.\-h}}
+}
+{\ttfamily \#include $<$curses.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtoken}{token}
+\item 
+struct \hyperlink{structtinfo__fkeys}{tinfo\-\_\-fkeys}
+\item 
+struct \hyperlink{structname__table__entry}{name\-\_\-table\-\_\-entry}
+\item 
+struct \hyperlink{struct_hash_data}{Hash\-Data}
+\item 
+struct \hyperlink{structalias}{alias}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tic_8h_a94630370ae389fb1189282fa0742f310}{M\-A\-G\-I\-C}~0432	/$\ast$ first two bytes of a compiled \hyperlink{structentry}{entry} $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p, n)~(\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char)((p)\mbox{[}n\mbox{]})
+\item 
+\#define \hyperlink{tic_8h_a21b9b9281879ab66523338603212580e}{I\-S\-\_\-\-N\-E\-G1}(p)~((\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,0) == 0377) \&\& (\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,1) == 0377))
+\item 
+\#define \hyperlink{tic_8h_a6801edddd9d2e53b2c13b53dd64ecb02}{I\-S\-\_\-\-N\-E\-G2}(p)~((\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,0) == 0376) \&\& (\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,1) == 0377))
+\item 
+\#define \hyperlink{tic_8h_a301ff967c1e7195a9674f0316b95638b}{L\-O\-W\-\_\-\-M\-S\-B}(p)~(\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,0) + 256$\ast$\hyperlink{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{B\-Y\-T\-E}(p,1))
+\item 
+\#define \hyperlink{tic_8h_a2848b8369117e3f403e4eac052fb0b17}{I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C}(p)~(\hyperlink{tic_8h_a301ff967c1e7195a9674f0316b95638b}{L\-O\-W\-\_\-\-M\-S\-B}(p) == \hyperlink{tic_8h_a94630370ae389fb1189282fa0742f310}{M\-A\-G\-I\-C})
+\item 
+\#define \hyperlink{tic_8h_abdc276a3da6aba2279ae3e4a69731d9f}{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E}~512	/$\ast$ maximum legal name field size (X\-S\-I\-:127) $\ast$/
+\item 
+\#define \hyperlink{tic_8h_ab98e64df0049cc6c7282602f0a8c1b4a}{M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E}~4096	/$\ast$ maximum legal \hyperlink{structentry}{entry} size $\ast$/
+\item 
+\#define \hyperlink{tic_8h_aaa0cecf844a83c126fe28812f62ca93b}{M\-A\-X\-\_\-\-A\-L\-I\-A\-S}~14	/$\ast$ S\-Vr3 filename length $\ast$/
+\item 
+\#define \hyperlink{tic_8h_ae23b587ae55701e189d3e4ae966be208}{P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O}~\char`\"{}\%s/.terminfo\char`\"{}	/$\ast$ plug getenv(\char`\"{}H\-O\-M\-E\char`\"{}) into \%s $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a18d5723f78024cc6ae507a57cbd18e15}{M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}~15
+\item 
+\#define \hyperlink{tic_8h_a5cef3cbc6a5adabfa7dc1c725a4a8779}{D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}(n)~((n) $<$$<$ T\-R\-A\-C\-E\-\_\-\-S\-H\-I\-F\-T)
+\item 
+\#define \hyperlink{tic_8h_aa8d330d376c38bc7a04fc89fe5947ec4}{set\-\_\-trace\-\_\-level}(n)
+\item 
+\#define \hyperlink{tic_8h_a34a43b2f701a707a1ae1277e0816014e}{D\-E\-B\-U\-G}(n, a)~/$\ast$nothing$\ast$/
+\item 
+\#define \hyperlink{tic_8h_a50168fdbaa52d4a0b1c287d476050f12}{B\-O\-O\-L\-E\-A\-N}~0		/$\ast$ Boolean capability $\ast$/
+\item 
+\#define \hyperlink{tic_8h_abc544a4ed22112e62773c113652c5063}{N\-U\-M\-B\-E\-R}~1		/$\ast$ Numeric capability $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a0f4d394a3ab4e09bff60f714c66dc5ee}{S\-T\-R\-I\-N\-G}~2		/$\ast$ String-\/valued capability $\ast$/
+\item 
+\#define \hyperlink{tic_8h_aa498dfb3e15bd0b6ad9ef32a24990e8c}{C\-A\-N\-C\-E\-L}~3		/$\ast$ Capability \hyperlink{_to_8hpp_a3cd6f3665a7a8fc813ef3ee062a3b21b}{to} be cancelled in following tc's $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a1224dbeb12320494fbd819c86fb3172b}{N\-A\-M\-E\-S}~4		/$\ast$ The names for a terminal \hyperlink{_entity_8cpp_aa209819775142a76b8e49319d79ecab2}{type} $\ast$/
+\item 
+\#define \hyperlink{tic_8h_abde25a67f4046530ae1c572cefeb5869}{U\-N\-D\-E\-F}~5		/$\ast$ Undefined $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a736b866878116eac61f43b08fdf535e4}{N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K}~-\/1	/$\ast$ used in pushtype \hyperlink{_to_8hpp_a3cd6f3665a7a8fc813ef3ee062a3b21b}{to} indicate no pushback $\ast$/
+\item 
+\#define \hyperlink{tic_8h_ad96490cc68537c8d1797ed2a62489836}{N\-O\-T\-F\-O\-U\-N\-D}~((struct \hyperlink{structname__table__entry}{name\-\_\-table\-\_\-entry} $\ast$) 0)
+\item 
+\#define \hyperlink{tic_8h_a8229f23212c884a832c136e43425e85b}{A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N}~((signed char)-\/1)	/$\ast$ 255 $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a9804c9c4acb35e6c45d3e298bb32127e}{A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C}~(-\/1)
+\item 
+\#define \hyperlink{tic_8h_a4802737c5f7a52cf03d7a1360726b9a0}{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G}~(char $\ast$)0
+\item 
+\#define \hyperlink{tic_8h_ad5ee11ad6db0cfeeb309e3b62264b027}{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}~((signed char)-\/2)	/$\ast$ 254 $\ast$/
+\item 
+\#define \hyperlink{tic_8h_a5aa8aca18599a67ee4e31b3c6cb9e1b0}{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}~(-\/2)
+\item 
+\#define \hyperlink{tic_8h_a386b1098340f563032dc8cbf7ed8001b}{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G}~(char $\ast$)(-\/1)
+\item 
+\#define \hyperlink{tic_8h_a71c11747f3a66ebb56b02fd05d41e00a}{V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}(s)~((\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} char)(s) $<$= 1) /$\ast$ reject \char`\"{}-\/1\char`\"{} $\ast$/
+\item 
+\#define \hyperlink{tic_8h_ab23e1692571872de77f6b7b9c28f53fd}{V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}(s)~((s) $>$= 0)
+\item 
+\#define \hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(s)~((s) != \hyperlink{tic_8h_a386b1098340f563032dc8cbf7ed8001b}{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G} \&\& (s) != \hyperlink{tic_8h_a4802737c5f7a52cf03d7a1360726b9a0}{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G})
+\item 
+\#define \hyperlink{tic_8h_adef5bcabaf322f976067806cedf90fcc}{M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H}~1023
+\item 
+\#define \hyperlink{tic_8h_a2de492c2d7099ea194707811ce0a5f3c}{M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H}~4096
+\item 
+\#define \hyperlink{tic_8h_a70de1a8cf83f659a23ed4450354b1dc7}{T\-E\-R\-M\-I\-N\-F\-O}~\char`\"{}/usr/share/terminfo\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef short \hyperlink{tic_8h_a0abca0b033672183ce7cbf1d4e18f4ce}{Hash\-Value}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tic_8h_aeab15e940e88eb3e1d57f262f90161ae}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned}) \-\_\-nc\-\_\-tracing
+\item 
+\hyperlink{tic_8h_a6274aaf21c3710627e7a3c8f38309582}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (void) \-\_\-nc\-\_\-tracef(char $\ast$
+\item 
+\hyperlink{tic_8h_a72f357f529c8039e7cb8d9a8d349202a}{G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E} (1, 2)
+\item 
+\hyperlink{tic_8h_aa4c1c2fe696a8c50b4e6cded204033fb}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$) \-\_\-nc\-\_\-visbuf(\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} char $\ast$)
+\item 
+\hyperlink{tic_8h_ac3d4b989ca64b0a9ddd106bed4e6c042}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R} (struct \hyperlink{structtoken}{token}) \-\_\-nc\-\_\-curr\-\_\-token
+\item 
+\hyperlink{tic_8h_a546041baff5a0a518ef4f7d68484354b}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} struct \hyperlink{structtinfo__fkeys}{tinfo\-\_\-fkeys}) \-\_\-nc\-\_\-tinfo\-\_\-fkeys\mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{tic_8h_a37b7d5c024a40b85498cdde65eefe651}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} struct \hyperlink{structname__table__entry}{name\-\_\-table\-\_\-entry} $\ast$) \-\_\-nc\-\_\-get\-\_\-table(\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool})
+\item 
+\hyperlink{tic_8h_ad05213fd73119b47243a0ae38f0a57a8}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{struct_hash_data}{Hash\-Data} $\ast$) \-\_\-nc\-\_\-get\-\_\-hash\-\_\-info(\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool})
+\item 
+\hyperlink{tic_8h_a9072293b6b7b8fd915702c762046524b}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{tic_8h_a0abca0b033672183ce7cbf1d4e18f4ce}{Hash\-Value} $\ast$) \-\_\-nc\-\_\-get\-\_\-hash\-\_\-table(\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool})
+\item 
+\hyperlink{tic_8h_a0f68b065b9ffa165fb9102e96bc79ac4}{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} struct \hyperlink{structalias}{alias} $\ast$) \-\_\-nc\-\_\-get\-\_\-alias\-\_\-table(\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{tic_8h_a8229f23212c884a832c136e43425e85b}{\index{tic.\-h@{tic.\-h}!A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N@{A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N}}
+\index{A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N@{A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N}!tic.h@{tic.\-h}}
+\subsubsection[{A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-B\-S\-E\-N\-T\-\_\-\-B\-O\-O\-L\-E\-A\-N~((signed char)-\/1)	/$\ast$ 255 $\ast$/}}\label{tic_8h_a8229f23212c884a832c136e43425e85b}
+\hypertarget{tic_8h_a9804c9c4acb35e6c45d3e298bb32127e}{\index{tic.\-h@{tic.\-h}!A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C@{A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C}}
+\index{A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C@{A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C}!tic.h@{tic.\-h}}
+\subsubsection[{A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-B\-S\-E\-N\-T\-\_\-\-N\-U\-M\-E\-R\-I\-C~(-\/1)}}\label{tic_8h_a9804c9c4acb35e6c45d3e298bb32127e}
+\hypertarget{tic_8h_a4802737c5f7a52cf03d7a1360726b9a0}{\index{tic.\-h@{tic.\-h}!A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G@{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G@{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G}!tic.h@{tic.\-h}}
+\subsubsection[{A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G~(char $\ast$)0}}\label{tic_8h_a4802737c5f7a52cf03d7a1360726b9a0}
+\hypertarget{tic_8h_a50168fdbaa52d4a0b1c287d476050f12}{\index{tic.\-h@{tic.\-h}!B\-O\-O\-L\-E\-A\-N@{B\-O\-O\-L\-E\-A\-N}}
+\index{B\-O\-O\-L\-E\-A\-N@{B\-O\-O\-L\-E\-A\-N}!tic.h@{tic.\-h}}
+\subsubsection[{B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-O\-L\-E\-A\-N~0		/$\ast$ Boolean capability $\ast$/}}\label{tic_8h_a50168fdbaa52d4a0b1c287d476050f12}
+\hypertarget{tic_8h_a59f6af1552f94a965d6bd4089a27a541}{\index{tic.\-h@{tic.\-h}!B\-Y\-T\-E@{B\-Y\-T\-E}}
+\index{B\-Y\-T\-E@{B\-Y\-T\-E}!tic.h@{tic.\-h}}
+\subsubsection[{B\-Y\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-Y\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf unsigned} char)((p)\mbox{[}n\mbox{]})}}\label{tic_8h_a59f6af1552f94a965d6bd4089a27a541}
+\hypertarget{tic_8h_aa498dfb3e15bd0b6ad9ef32a24990e8c}{\index{tic.\-h@{tic.\-h}!C\-A\-N\-C\-E\-L@{C\-A\-N\-C\-E\-L}}
+\index{C\-A\-N\-C\-E\-L@{C\-A\-N\-C\-E\-L}!tic.h@{tic.\-h}}
+\subsubsection[{C\-A\-N\-C\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-N\-C\-E\-L~3		/$\ast$ Capability {\bf to} be cancelled in following tc's $\ast$/}}\label{tic_8h_aa498dfb3e15bd0b6ad9ef32a24990e8c}
+\hypertarget{tic_8h_ad5ee11ad6db0cfeeb309e3b62264b027}{\index{tic.\-h@{tic.\-h}!C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}}
+\index{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}!tic.h@{tic.\-h}}
+\subsubsection[{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N~((signed char)-\/2)	/$\ast$ 254 $\ast$/}}\label{tic_8h_ad5ee11ad6db0cfeeb309e3b62264b027}
+\hypertarget{tic_8h_a5aa8aca18599a67ee4e31b3c6cb9e1b0}{\index{tic.\-h@{tic.\-h}!C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}}
+\index{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}!tic.h@{tic.\-h}}
+\subsubsection[{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C~(-\/2)}}\label{tic_8h_a5aa8aca18599a67ee4e31b3c6cb9e1b0}
+\hypertarget{tic_8h_a386b1098340f563032dc8cbf7ed8001b}{\index{tic.\-h@{tic.\-h}!C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G@{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G}!tic.h@{tic.\-h}}
+\subsubsection[{C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G~(char $\ast$)(-\/1)}}\label{tic_8h_a386b1098340f563032dc8cbf7ed8001b}
+\hypertarget{tic_8h_a34a43b2f701a707a1ae1277e0816014e}{\index{tic.\-h@{tic.\-h}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!tic.h@{tic.\-h}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~/$\ast$nothing$\ast$/}}\label{tic_8h_a34a43b2f701a707a1ae1277e0816014e}
+\hypertarget{tic_8h_a5cef3cbc6a5adabfa7dc1c725a4a8779}{\index{tic.\-h@{tic.\-h}!D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L@{D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}}
+\index{D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L@{D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}!tic.h@{tic.\-h}}
+\subsubsection[{D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n) $<$$<$ T\-R\-A\-C\-E\-\_\-\-S\-H\-I\-F\-T)}}\label{tic_8h_a5cef3cbc6a5adabfa7dc1c725a4a8779}
+\hypertarget{tic_8h_a21b9b9281879ab66523338603212580e}{\index{tic.\-h@{tic.\-h}!I\-S\-\_\-\-N\-E\-G1@{I\-S\-\_\-\-N\-E\-G1}}
+\index{I\-S\-\_\-\-N\-E\-G1@{I\-S\-\_\-\-N\-E\-G1}!tic.h@{tic.\-h}}
+\subsubsection[{I\-S\-\_\-\-N\-E\-G1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-\_\-\-N\-E\-G1(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(({\bf B\-Y\-T\-E}(p,0) == 0377) \&\& ({\bf B\-Y\-T\-E}(p,1) == 0377))}}\label{tic_8h_a21b9b9281879ab66523338603212580e}
+\hypertarget{tic_8h_a6801edddd9d2e53b2c13b53dd64ecb02}{\index{tic.\-h@{tic.\-h}!I\-S\-\_\-\-N\-E\-G2@{I\-S\-\_\-\-N\-E\-G2}}
+\index{I\-S\-\_\-\-N\-E\-G2@{I\-S\-\_\-\-N\-E\-G2}!tic.h@{tic.\-h}}
+\subsubsection[{I\-S\-\_\-\-N\-E\-G2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-\_\-\-N\-E\-G2(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(({\bf B\-Y\-T\-E}(p,0) == 0376) \&\& ({\bf B\-Y\-T\-E}(p,1) == 0377))}}\label{tic_8h_a6801edddd9d2e53b2c13b53dd64ecb02}
+\hypertarget{tic_8h_a2848b8369117e3f403e4eac052fb0b17}{\index{tic.\-h@{tic.\-h}!I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C@{I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C}}
+\index{I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C@{I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C}!tic.h@{tic.\-h}}
+\subsubsection[{I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-\_\-\-T\-I\-C\-\_\-\-M\-A\-G\-I\-C(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~({\bf L\-O\-W\-\_\-\-M\-S\-B}(p) == {\bf M\-A\-G\-I\-C})}}\label{tic_8h_a2848b8369117e3f403e4eac052fb0b17}
+\hypertarget{tic_8h_a301ff967c1e7195a9674f0316b95638b}{\index{tic.\-h@{tic.\-h}!L\-O\-W\-\_\-\-M\-S\-B@{L\-O\-W\-\_\-\-M\-S\-B}}
+\index{L\-O\-W\-\_\-\-M\-S\-B@{L\-O\-W\-\_\-\-M\-S\-B}!tic.h@{tic.\-h}}
+\subsubsection[{L\-O\-W\-\_\-\-M\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-W\-\_\-\-M\-S\-B(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~({\bf B\-Y\-T\-E}(p,0) + 256$\ast${\bf B\-Y\-T\-E}(p,1))}}\label{tic_8h_a301ff967c1e7195a9674f0316b95638b}
+\hypertarget{tic_8h_a94630370ae389fb1189282fa0742f310}{\index{tic.\-h@{tic.\-h}!M\-A\-G\-I\-C@{M\-A\-G\-I\-C}}
+\index{M\-A\-G\-I\-C@{M\-A\-G\-I\-C}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-G\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-I\-C~0432	/$\ast$ first two bytes of a compiled {\bf entry} $\ast$/}}\label{tic_8h_a94630370ae389fb1189282fa0742f310}
+\hypertarget{tic_8h_aaa0cecf844a83c126fe28812f62ca93b}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-A\-L\-I\-A\-S@{M\-A\-X\-\_\-\-A\-L\-I\-A\-S}}
+\index{M\-A\-X\-\_\-\-A\-L\-I\-A\-S@{M\-A\-X\-\_\-\-A\-L\-I\-A\-S}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-A\-L\-I\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-A\-L\-I\-A\-S~14	/$\ast$ S\-Vr3 filename length $\ast$/}}\label{tic_8h_aaa0cecf844a83c126fe28812f62ca93b}
+\hypertarget{tic_8h_a18d5723f78024cc6ae507a57cbd18e15}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L@{M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}}
+\index{M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L@{M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-D\-E\-B\-U\-G\-\_\-\-L\-E\-V\-E\-L~15}}\label{tic_8h_a18d5723f78024cc6ae507a57cbd18e15}
+\hypertarget{tic_8h_ab98e64df0049cc6c7282602f0a8c1b4a}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-S\-I\-Z\-E~4096	/$\ast$ maximum legal {\bf entry} size $\ast$/}}\label{tic_8h_ab98e64df0049cc6c7282602f0a8c1b4a}
+\hypertarget{tic_8h_abdc276a3da6aba2279ae3e4a69731d9f}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-S\-I\-Z\-E~512	/$\ast$ maximum legal name field size (X\-S\-I\-:127) $\ast$/}}\label{tic_8h_abdc276a3da6aba2279ae3e4a69731d9f}
+\hypertarget{tic_8h_adef5bcabaf322f976067806cedf90fcc}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-T\-E\-R\-M\-C\-A\-P\-\_\-\-L\-E\-N\-G\-T\-H~1023}}\label{tic_8h_adef5bcabaf322f976067806cedf90fcc}
+\hypertarget{tic_8h_a2de492c2d7099ea194707811ce0a5f3c}{\index{tic.\-h@{tic.\-h}!M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H}!tic.h@{tic.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-T\-E\-R\-M\-I\-N\-F\-O\-\_\-\-L\-E\-N\-G\-T\-H~4096}}\label{tic_8h_a2de492c2d7099ea194707811ce0a5f3c}
+\hypertarget{tic_8h_a1224dbeb12320494fbd819c86fb3172b}{\index{tic.\-h@{tic.\-h}!N\-A\-M\-E\-S@{N\-A\-M\-E\-S}}
+\index{N\-A\-M\-E\-S@{N\-A\-M\-E\-S}!tic.h@{tic.\-h}}
+\subsubsection[{N\-A\-M\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-A\-M\-E\-S~4		/$\ast$ The names for a terminal {\bf type} $\ast$/}}\label{tic_8h_a1224dbeb12320494fbd819c86fb3172b}
+\hypertarget{tic_8h_a736b866878116eac61f43b08fdf535e4}{\index{tic.\-h@{tic.\-h}!N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K@{N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K}}
+\index{N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K@{N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K}!tic.h@{tic.\-h}}
+\subsubsection[{N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-P\-U\-S\-H\-B\-A\-C\-K~-\/1	/$\ast$ used in pushtype {\bf to} indicate no pushback $\ast$/}}\label{tic_8h_a736b866878116eac61f43b08fdf535e4}
+\hypertarget{tic_8h_ad96490cc68537c8d1797ed2a62489836}{\index{tic.\-h@{tic.\-h}!N\-O\-T\-F\-O\-U\-N\-D@{N\-O\-T\-F\-O\-U\-N\-D}}
+\index{N\-O\-T\-F\-O\-U\-N\-D@{N\-O\-T\-F\-O\-U\-N\-D}!tic.h@{tic.\-h}}
+\subsubsection[{N\-O\-T\-F\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-T\-F\-O\-U\-N\-D~((struct {\bf name\-\_\-table\-\_\-entry} $\ast$) 0)}}\label{tic_8h_ad96490cc68537c8d1797ed2a62489836}
+\hypertarget{tic_8h_abc544a4ed22112e62773c113652c5063}{\index{tic.\-h@{tic.\-h}!N\-U\-M\-B\-E\-R@{N\-U\-M\-B\-E\-R}}
+\index{N\-U\-M\-B\-E\-R@{N\-U\-M\-B\-E\-R}!tic.h@{tic.\-h}}
+\subsubsection[{N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-M\-B\-E\-R~1		/$\ast$ Numeric capability $\ast$/}}\label{tic_8h_abc544a4ed22112e62773c113652c5063}
+\hypertarget{tic_8h_ae23b587ae55701e189d3e4ae966be208}{\index{tic.\-h@{tic.\-h}!P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O@{P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O}}
+\index{P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O@{P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O}!tic.h@{tic.\-h}}
+\subsubsection[{P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-V\-A\-T\-E\-\_\-\-I\-N\-F\-O~\char`\"{}\%s/.terminfo\char`\"{}	/$\ast$ plug getenv(\char`\"{}H\-O\-M\-E\char`\"{}) into \%s $\ast$/}}\label{tic_8h_ae23b587ae55701e189d3e4ae966be208}
+\hypertarget{tic_8h_aa8d330d376c38bc7a04fc89fe5947ec4}{\index{tic.\-h@{tic.\-h}!set\-\_\-trace\-\_\-level@{set\-\_\-trace\-\_\-level}}
+\index{set\-\_\-trace\-\_\-level@{set\-\_\-trace\-\_\-level}!tic.h@{tic.\-h}}
+\subsubsection[{set\-\_\-trace\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}\#define set\-\_\-trace\-\_\-level(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_aa8d330d376c38bc7a04fc89fe5947ec4}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\_nc\_tracing &= \hyperlink{tic_8h_a5cef3cbc6a5adabfa7dc1c725a4a8779}{DEBUG\_LEVEL}(\hyperlink{tic_8h_a18d5723f78024cc6ae507a57cbd18e15}{MAX\_DEBUG\_LEVEL}), \(\backslash\)
+    \_nc\_tracing |= \hyperlink{tic_8h_a5cef3cbc6a5adabfa7dc1c725a4a8779}{DEBUG\_LEVEL}(n)
+\end{DoxyCode}
+\hypertarget{tic_8h_a0f4d394a3ab4e09bff60f714c66dc5ee}{\index{tic.\-h@{tic.\-h}!S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}}
+\index{S\-T\-R\-I\-N\-G@{S\-T\-R\-I\-N\-G}!tic.h@{tic.\-h}}
+\subsubsection[{S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-R\-I\-N\-G~2		/$\ast$ String-\/valued capability $\ast$/}}\label{tic_8h_a0f4d394a3ab4e09bff60f714c66dc5ee}
+\hypertarget{tic_8h_a70de1a8cf83f659a23ed4450354b1dc7}{\index{tic.\-h@{tic.\-h}!T\-E\-R\-M\-I\-N\-F\-O@{T\-E\-R\-M\-I\-N\-F\-O}}
+\index{T\-E\-R\-M\-I\-N\-F\-O@{T\-E\-R\-M\-I\-N\-F\-O}!tic.h@{tic.\-h}}
+\subsubsection[{T\-E\-R\-M\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-R\-M\-I\-N\-F\-O~\char`\"{}/usr/share/terminfo\char`\"{}}}\label{tic_8h_a70de1a8cf83f659a23ed4450354b1dc7}
+\hypertarget{tic_8h_abde25a67f4046530ae1c572cefeb5869}{\index{tic.\-h@{tic.\-h}!U\-N\-D\-E\-F@{U\-N\-D\-E\-F}}
+\index{U\-N\-D\-E\-F@{U\-N\-D\-E\-F}!tic.h@{tic.\-h}}
+\subsubsection[{U\-N\-D\-E\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-N\-D\-E\-F~5		/$\ast$ Undefined $\ast$/}}\label{tic_8h_abde25a67f4046530ae1c572cefeb5869}
+\hypertarget{tic_8h_a71c11747f3a66ebb56b02fd05d41e00a}{\index{tic.\-h@{tic.\-h}!V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N@{V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}}
+\index{V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N@{V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}!tic.h@{tic.\-h}}
+\subsubsection[{V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-A\-L\-I\-D\-\_\-\-B\-O\-O\-L\-E\-A\-N(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~(({\bf unsigned} char)(s) $<$= 1) /$\ast$ reject \char`\"{}-\/1\char`\"{} $\ast$/}}\label{tic_8h_a71c11747f3a66ebb56b02fd05d41e00a}
+\hypertarget{tic_8h_ab23e1692571872de77f6b7b9c28f53fd}{\index{tic.\-h@{tic.\-h}!V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C@{V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}}
+\index{V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C@{V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}!tic.h@{tic.\-h}}
+\subsubsection[{V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-A\-L\-I\-D\-\_\-\-N\-U\-M\-E\-R\-I\-C(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~((s) $>$= 0)}}\label{tic_8h_ab23e1692571872de77f6b7b9c28f53fd}
+\hypertarget{tic_8h_ad7d568307c674f5b43e204251a57422f}{\index{tic.\-h@{tic.\-h}!V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G@{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G@{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}!tic.h@{tic.\-h}}
+\subsubsection[{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~((s) != {\bf C\-A\-N\-C\-E\-L\-L\-E\-D\-\_\-\-S\-T\-R\-I\-N\-G} \&\& (s) != {\bf A\-B\-S\-E\-N\-T\-\_\-\-S\-T\-R\-I\-N\-G})}}\label{tic_8h_ad7d568307c674f5b43e204251a57422f}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{tic_8h_a0abca0b033672183ce7cbf1d4e18f4ce}{\index{tic.\-h@{tic.\-h}!Hash\-Value@{Hash\-Value}}
+\index{Hash\-Value@{Hash\-Value}!tic.h@{tic.\-h}}
+\subsubsection[{Hash\-Value}]{\setlength{\rightskip}{0pt plus 5cm}typedef short {\bf Hash\-Value}}}\label{tic_8h_a0abca0b033672183ce7cbf1d4e18f4ce}
+
+
+\subsection{Function Documentation}
+\hypertarget{tic_8h_a72f357f529c8039e7cb8d9a8d349202a}{\index{tic.\-h@{tic.\-h}!G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E@{G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E}}
+\index{G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E@{G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E}!tic.h@{tic.\-h}}
+\subsubsection[{G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E}]{\setlength{\rightskip}{0pt plus 5cm}G\-C\-C\-\_\-\-P\-R\-I\-N\-T\-F\-L\-I\-K\-E (
+\begin{DoxyParamCaption}
+\item[{1}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a72f357f529c8039e7cb8d9a8d349202a}
+\hypertarget{tic_8h_a6274aaf21c3710627e7a3c8f38309582}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a6274aaf21c3710627e7a3c8f38309582}
+\hypertarget{tic_8h_aa4c1c2fe696a8c50b4e6cded204033fb}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf const} char $\ast$}]{}
+\end{DoxyParamCaption}
+) const}}\label{tic_8h_aa4c1c2fe696a8c50b4e6cded204033fb}
+\hypertarget{tic_8h_a37b7d5c024a40b85498cdde65eefe651}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf const} struct {\bf name\-\_\-table\-\_\-entry} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a37b7d5c024a40b85498cdde65eefe651}
+\hypertarget{tic_8h_ad05213fd73119b47243a0ae38f0a57a8}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Hash\-Data} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_ad05213fd73119b47243a0ae38f0a57a8}
+\hypertarget{tic_8h_a9072293b6b7b8fd915702c762046524b}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Hash\-Value} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a9072293b6b7b8fd915702c762046524b}
+\hypertarget{tic_8h_a0f68b065b9ffa165fb9102e96bc79ac4}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf const} struct {\bf alias} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a0f68b065b9ffa165fb9102e96bc79ac4}
+\hypertarget{tic_8h_aeab15e940e88eb3e1d57f262f90161ae}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned}}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_aeab15e940e88eb3e1d57f262f90161ae}
+\hypertarget{tic_8h_ac3d4b989ca64b0a9ddd106bed4e6c042}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R (
+\begin{DoxyParamCaption}
+\item[{struct {\bf token}}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_ac3d4b989ca64b0a9ddd106bed4e6c042}
+\hypertarget{tic_8h_a546041baff5a0a518ef4f7d68484354b}{\index{tic.\-h@{tic.\-h}!N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}}
+\index{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R@{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}!tic.h@{tic.\-h}}
+\subsubsection[{N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}N\-C\-U\-R\-S\-E\-S\-\_\-\-E\-X\-P\-O\-R\-T\-\_\-\-V\-A\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf const} struct {\bf tinfo\-\_\-fkeys}}]{}
+\end{DoxyParamCaption}
+)}}\label{tic_8h_a546041baff5a0a518ef4f7d68484354b}

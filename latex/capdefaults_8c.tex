@@ -1,0 +1,58 @@
+\hypertarget{capdefaults_8c}{\section{lib/ndk/dep/capdefaults.c File Reference}
+\label{capdefaults_8c}\index{lib/ndk/dep/capdefaults.\-c@{lib/ndk/dep/capdefaults.\-c}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{capdefaults_8c_aff86ed6ed5f939ed790ed1130f4f41d8}{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}(str)~(short) (\hyperlink{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}{strp} = strchr(str, '$\ast$'), \hyperlink{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}{strp} ? atoi(\hyperlink{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}{strp}+1) \-: 0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{capdefaults_8c_a34a11e36b53d9a3eb8b3f310b173c35d}{if} (\hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(carriage\-\_\-return)\&\&(\hyperlink{capdefaults_8c_a522d7e8741a7e6880e64e41afaec6786}{capval}=\hyperlink{capdefaults_8c_aff86ed6ed5f939ed790ed1130f4f41d8}{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}(carriage\-\_\-return)))
+\item 
+\hyperlink{capdefaults_8c_acdbb92132b5df45649c6ff13a837e947}{if} (!\hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(termcap\-\_\-reset)\&\&\hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(reset\-\_\-2string)\&\&!\hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(reset\-\_\-1string)\&\&!\hyperlink{tic_8h_ad7d568307c674f5b43e204251a57422f}{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(reset\-\_\-3string))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}{strp}
+\item 
+short \hyperlink{capdefaults_8c_a522d7e8741a7e6880e64e41afaec6786}{capval}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{capdefaults_8c_aff86ed6ed5f939ed790ed1130f4f41d8}{\index{capdefaults.\-c@{capdefaults.\-c}!E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y@{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}}
+\index{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y@{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}!capdefaults.c@{capdefaults.\-c}}
+\subsubsection[{E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~(short) ({\bf strp} = strchr(str, '$\ast$'), {\bf strp} ? atoi({\bf strp}+1) \-: 0)}}\label{capdefaults_8c_aff86ed6ed5f939ed790ed1130f4f41d8}
+
+
+\subsection{Function Documentation}
+\hypertarget{capdefaults_8c_a34a11e36b53d9a3eb8b3f310b173c35d}{\index{capdefaults.\-c@{capdefaults.\-c}!if@{if}}
+\index{if@{if}!capdefaults.c@{capdefaults.\-c}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{{\bf V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G}(carriage\-\_\-return)\&\&({\bf capval}={\bf E\-X\-T\-R\-A\-C\-T\-\_\-\-D\-E\-L\-A\-Y}(carriage\-\_\-return))}]{}
+\end{DoxyParamCaption}
+)}}\label{capdefaults_8c_a34a11e36b53d9a3eb8b3f310b173c35d}
+\hypertarget{capdefaults_8c_acdbb92132b5df45649c6ff13a837e947}{\index{capdefaults.\-c@{capdefaults.\-c}!if@{if}}
+\index{if@{if}!capdefaults.c@{capdefaults.\-c}}
+\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!}]{V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-Gtermcap\-\_\-reset)\&\&\-V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G(reset\-\_\-2string)\&\&!\-V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G(reset\-\_\-1string)\&\&!\-V\-A\-L\-I\-D\-\_\-\-S\-T\-R\-I\-N\-G(reset\-\_\-3string}
+\end{DoxyParamCaption}
+)}}\label{capdefaults_8c_acdbb92132b5df45649c6ff13a837e947}
+
+
+\subsection{Variable Documentation}
+\hypertarget{capdefaults_8c_a522d7e8741a7e6880e64e41afaec6786}{\index{capdefaults.\-c@{capdefaults.\-c}!capval@{capval}}
+\index{capval@{capval}!capdefaults.c@{capdefaults.\-c}}
+\subsubsection[{capval}]{\setlength{\rightskip}{0pt plus 5cm}short capval}}\label{capdefaults_8c_a522d7e8741a7e6880e64e41afaec6786}
+\hypertarget{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}{\index{capdefaults.\-c@{capdefaults.\-c}!strp@{strp}}
+\index{strp@{strp}!capdefaults.c@{capdefaults.\-c}}
+\subsubsection[{strp}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strp}}\label{capdefaults_8c_a1e465392058bf4d71fa11973bbbc4935}

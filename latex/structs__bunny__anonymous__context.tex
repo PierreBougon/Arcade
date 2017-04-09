@@ -1,0 +1,95 @@
+\hypertarget{structs__bunny__anonymous__context}{\section{s\-\_\-bunny\-\_\-anonymous\-\_\-context Struct Reference}
+\label{structs__bunny__anonymous__context}\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+}
+
+
+{\ttfamily \#include $<$events.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_ac1775eb9c573160f0d103e707ac37bbd}{key}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a96080593e8d4538622ae7162c9408d28}{type}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_ae4984808492a19cd87311089e8432696}{click}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a4cbf73f6961d4da969a3781e78045246}{move}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a100036ec71cddf932a63cf5739875c96}{wheel}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a6929f895e02b19a624071c6328a12f00}{connect}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a58483eb52dcd4486be2e2b307259db23}{button}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a61fda382eeeb712785f94a26e11a5056}{axis}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_ab54ae5052dab4f4f794a1a03d7f9d3e5}{get\-\_\-focus}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_ab197fa495e70b0f61fe396c7386a3350}{lost\-\_\-focus}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a1b47f26baaefe3faf8e40cc0dd44892b}{resize}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_a47794faa6e79c9c196cafc8dd3ea7c96}{loop}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_aa1832019676dc0f6909c5fc629b5da4f}{display}
+\item 
+void $\ast$ \hyperlink{structs__bunny__anonymous__context_aefd9ae58571b39af5a26e76ae05bce5d}{close}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-anonymous\-\_\-context serves the same purpose as t\-\_\-bunny\-\_\-context but present a tiny advantage\-: because all types like t\-\_\-bunny\-\_\-key takes a void$\ast$, your callbacks must all takes a void$\ast$, or you have to cast their types into a t\-\_\-bunny\-\_\-key to set it. In order to allow you to define a more precise type than void$\ast$ for the data that is set to all callbacks, there is this structure.
+
+By using void$\ast$ instead of function pointer, you can freely assign your function pointers to it, even if the last parameter of them is not a void$\ast$ but a t\-\_\-game$\ast$ for example. This, without a cast.
+
+Of course it breaks the type safety, but at least, you are free to choose. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__anonymous__context_a61fda382eeeb712785f94a26e11a5056}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!axis@{axis}}
+\index{axis@{axis}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{axis}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::axis}}\label{structs__bunny__anonymous__context_a61fda382eeeb712785f94a26e11a5056}
+\hypertarget{structs__bunny__anonymous__context_a58483eb52dcd4486be2e2b307259db23}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!button@{button}}
+\index{button@{button}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{button}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::button}}\label{structs__bunny__anonymous__context_a58483eb52dcd4486be2e2b307259db23}
+\hypertarget{structs__bunny__anonymous__context_ae4984808492a19cd87311089e8432696}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!click@{click}}
+\index{click@{click}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::click}}\label{structs__bunny__anonymous__context_ae4984808492a19cd87311089e8432696}
+\hypertarget{structs__bunny__anonymous__context_aefd9ae58571b39af5a26e76ae05bce5d}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!close@{close}}
+\index{close@{close}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::close}}\label{structs__bunny__anonymous__context_aefd9ae58571b39af5a26e76ae05bce5d}
+\hypertarget{structs__bunny__anonymous__context_a6929f895e02b19a624071c6328a12f00}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!connect@{connect}}
+\index{connect@{connect}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::connect}}\label{structs__bunny__anonymous__context_a6929f895e02b19a624071c6328a12f00}
+\hypertarget{structs__bunny__anonymous__context_aa1832019676dc0f6909c5fc629b5da4f}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!display@{display}}
+\index{display@{display}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::display}}\label{structs__bunny__anonymous__context_aa1832019676dc0f6909c5fc629b5da4f}
+\hypertarget{structs__bunny__anonymous__context_ab54ae5052dab4f4f794a1a03d7f9d3e5}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!get\-\_\-focus@{get\-\_\-focus}}
+\index{get\-\_\-focus@{get\-\_\-focus}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{get\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::get\-\_\-focus}}\label{structs__bunny__anonymous__context_ab54ae5052dab4f4f794a1a03d7f9d3e5}
+\hypertarget{structs__bunny__anonymous__context_ac1775eb9c573160f0d103e707ac37bbd}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!key@{key}}
+\index{key@{key}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::key}}\label{structs__bunny__anonymous__context_ac1775eb9c573160f0d103e707ac37bbd}
+\hypertarget{structs__bunny__anonymous__context_a47794faa6e79c9c196cafc8dd3ea7c96}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!loop@{loop}}
+\index{loop@{loop}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::loop}}\label{structs__bunny__anonymous__context_a47794faa6e79c9c196cafc8dd3ea7c96}
+\hypertarget{structs__bunny__anonymous__context_ab197fa495e70b0f61fe396c7386a3350}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!lost\-\_\-focus@{lost\-\_\-focus}}
+\index{lost\-\_\-focus@{lost\-\_\-focus}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{lost\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::lost\-\_\-focus}}\label{structs__bunny__anonymous__context_ab197fa495e70b0f61fe396c7386a3350}
+\hypertarget{structs__bunny__anonymous__context_a4cbf73f6961d4da969a3781e78045246}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!move@{move}}
+\index{move@{move}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::move}}\label{structs__bunny__anonymous__context_a4cbf73f6961d4da969a3781e78045246}
+\hypertarget{structs__bunny__anonymous__context_a1b47f26baaefe3faf8e40cc0dd44892b}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!resize@{resize}}
+\index{resize@{resize}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::resize}}\label{structs__bunny__anonymous__context_a1b47f26baaefe3faf8e40cc0dd44892b}
+\hypertarget{structs__bunny__anonymous__context_a96080593e8d4538622ae7162c9408d28}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!type@{type}}
+\index{type@{type}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::type}}\label{structs__bunny__anonymous__context_a96080593e8d4538622ae7162c9408d28}
+\hypertarget{structs__bunny__anonymous__context_a100036ec71cddf932a63cf5739875c96}{\index{s\-\_\-bunny\-\_\-anonymous\-\_\-context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}!wheel@{wheel}}
+\index{wheel@{wheel}!s_bunny_anonymous_context@{s\-\_\-bunny\-\_\-anonymous\-\_\-context}}
+\subsubsection[{wheel}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ s\-\_\-bunny\-\_\-anonymous\-\_\-context\-::wheel}}\label{structs__bunny__anonymous__context_a100036ec71cddf932a63cf5739875c96}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{events_8h}{events.\-h}\end{DoxyCompactItemize}

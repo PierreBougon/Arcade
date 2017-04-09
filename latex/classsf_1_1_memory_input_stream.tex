@@ -1,0 +1,313 @@
+\hypertarget{classsf_1_1_memory_input_stream}{\section{sf\-:\-:Memory\-Input\-Stream Class Reference}
+\label{classsf_1_1_memory_input_stream}\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}}
+}
+
+
+Implementation of input stream based on a memory chunk.  
+
+
+
+
+{\ttfamily \#include $<$Memory\-Input\-Stream.\-hpp$>$}
+
+Inheritance diagram for sf\-:\-:Memory\-Input\-Stream\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsf_1_1_memory_input_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}{Memory\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{std\-::size\-\_\-t} size\-In\-Bytes)
+\begin{DoxyCompactList}\small\item\em Open the stream from its data. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}{read} (void $\ast$data, \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} size)
+\begin{DoxyCompactList}\small\item\em Read data from the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}{seek} (\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} position)
+\begin{DoxyCompactList}\small\item\em Change the current reading position. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}{tell} ()
+\begin{DoxyCompactList}\small\item\em Get the current reading position in the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}{get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Return the size of the stream. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}{Memory\-Input\-Stream} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}{open} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} void $\ast$data, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{std\-::size\-\_\-t} size\-In\-Bytes)
+\begin{DoxyCompactList}\small\item\em Open the stream from its data. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}{read} (void $\ast$data, \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} size)
+\begin{DoxyCompactList}\small\item\em Read data from the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}{seek} (\hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} position)
+\begin{DoxyCompactList}\small\item\em Change the current reading position. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}{tell} ()
+\begin{DoxyCompactList}\small\item\em Get the current reading position in the stream. \end{DoxyCompactList}\item 
+virtual \hyperlink{namespacesf_a2840579fed3494d9f330baf7a5a19903}{Int64} \hyperlink{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}{get\-Size} ()
+\begin{DoxyCompactList}\small\item\em Return the size of the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of input stream based on a memory chunk. 
+
+This class is a specialization of \hyperlink{classsf_1_1_input_stream}{Input\-Stream} that reads from data in memory.
+
+It wraps a memory chunk in the common \hyperlink{classsf_1_1_input_stream}{Input\-Stream} interface and therefore allows to use generic classes or functions that accept such a stream, with content already loaded in memory.
+
+In addition to the virtual functions inherited from \hyperlink{classsf_1_1_input_stream}{Input\-Stream}, \hyperlink{classsf_1_1_memory_input_stream}{Memory\-Input\-Stream} adds a function to specify the pointer and size of the data in memory.
+
+S\-F\-M\-L resource classes can usually be loaded directly from memory, so this class shouldn't be useful to you unless you create your own algorithms that operate on an \hyperlink{classsf_1_1_input_stream}{Input\-Stream}.
+
+Usage example\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} process(InputStream& stream);
+
+\hyperlink{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}{MemoryInputStream} stream;
+stream.open(thePtr, theSize);
+process(stream);
+\end{DoxyCode}
+
+
+\hyperlink{classsf_1_1_input_stream}{Input\-Stream}, \hyperlink{classsf_1_1_file_input_stream}{File\-Input\-Stream} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!Memory\-Input\-Stream@{Memory\-Input\-Stream}}
+\index{Memory\-Input\-Stream@{Memory\-Input\-Stream}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{Memory\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Memory\-Input\-Stream\-::\-Memory\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}
+
+
+Default constructor. 
+
+\hypertarget{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!Memory\-Input\-Stream@{Memory\-Input\-Stream}}
+\index{Memory\-Input\-Stream@{Memory\-Input\-Stream}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{Memory\-Input\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Memory\-Input\-Stream\-::\-Memory\-Input\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_memory_input_stream_a2d78851a69a8956a79872be41bcdfe0e}
+
+
+Default constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}
+
+
+Return the size of the stream. 
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes available in the stream, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a311eaaaa65d636728e5153b574b72d5d}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_a6ade3ca45de361ffa0a718595f0b6763}
+
+
+Return the size of the stream. 
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes available in the stream, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a311eaaaa65d636728e5153b574b72d5d}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!open@{open}}
+\index{open@{open}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void sf\-::\-Memory\-Input\-Stream\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{data, }
+\item[{{\bf std\-::size\-\_\-t}}]{size\-In\-Bytes}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}
+
+
+Open the stream from its data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the data in memory \\
+\hline
+{\em size\-In\-Bytes} & Size of the data, in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!open@{open}}
+\index{open@{open}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void sf\-::\-Memory\-Input\-Stream\-::open (
+\begin{DoxyParamCaption}
+\item[{{\bf const} void $\ast$}]{data, }
+\item[{{\bf std\-::size\-\_\-t}}]{size\-In\-Bytes}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_memory_input_stream_ad3cfb4f4f915f7803d6a0784e394ac19}
+
+
+Open the stream from its data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the data in memory \\
+\hline
+{\em size\-In\-Bytes} & Size of the data, in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!read@{read}}
+\index{read@{read}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf Int64}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}
+
+
+Read data from the stream. 
+
+After reading, the stream's reading position must be advanced by the amount of bytes read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Buffer where to copy the read data \\
+\hline
+{\em size} & Desired number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a8dd89c74c1acb693203f50e750c6ae53}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!read@{read}}
+\index{read@{read}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf Int64}}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_adff5270c521819639154d42d76fd4c34}
+
+
+Read data from the stream. 
+
+After reading, the stream's reading position must be advanced by the amount of bytes read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Buffer where to copy the read data \\
+\hline
+{\em size} & Desired number of bytes to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes actually read, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a8dd89c74c1acb693203f50e750c6ae53}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!seek@{seek}}
+\index{seek@{seek}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf Int64}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}
+
+
+Change the current reading position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to seek to, from the beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position actually sought to, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a76aba8e5d5cf9b1c5902d5e04f7864fc}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!seek@{seek}}
+\index{seek@{seek}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{seek}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::seek (
+\begin{DoxyParamCaption}
+\item[{{\bf Int64}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_aa2ac8fda2bdb4c95248ae90c71633034}
+
+
+Change the current reading position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to seek to, from the beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position actually sought to, or -\/1 on error 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a76aba8e5d5cf9b1c5902d5e04f7864fc}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!tell@{tell}}
+\index{tell@{tell}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{tell}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}
+
+
+Get the current reading position in the stream. 
+
+\begin{DoxyReturn}{Returns}
+The current position, or -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a599515b9ccdbddb6fef5a98424fd559c}{sf\-::\-Input\-Stream}.
+
+\hypertarget{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}{\index{sf\-::\-Memory\-Input\-Stream@{sf\-::\-Memory\-Input\-Stream}!tell@{tell}}
+\index{tell@{tell}!sf::MemoryInputStream@{sf\-::\-Memory\-Input\-Stream}}
+\subsubsection[{tell}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Int64} sf\-::\-Memory\-Input\-Stream\-::tell (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classsf_1_1_memory_input_stream_a7ad4bdf721f29de8f66421ff29e23ee4}
+
+
+Get the current reading position in the stream. 
+
+\begin{DoxyReturn}{Returns}
+The current position, or -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsf_1_1_input_stream_a599515b9ccdbddb6fef5a98424fd559c}{sf\-::\-Input\-Stream}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/\-S\-F\-M\-L-\/2.\-3/include/\-S\-F\-M\-L/\-System/\hyperlink{lapin_2dep_2_s_f_m_l-2_83_2include_2_s_f_m_l_2_system_2_memory_input_stream_8hpp}{Memory\-Input\-Stream.\-hpp}\end{DoxyCompactItemize}

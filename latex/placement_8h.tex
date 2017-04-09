@@ -1,0 +1,56 @@
+\hypertarget{placement_8h}{\section{lib/lapin/dep/lapin/placement.h File Reference}
+\label{placement_8h}\index{lib/lapin/dep/lapin/placement.\-h@{lib/lapin/dep/lapin/placement.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structs__bunny__position}{s\-\_\-bunny\-\_\-position}
+\item 
+struct \hyperlink{structs__bunny__accurate__position}{s\-\_\-bunny\-\_\-accurate\-\_\-position}
+\item 
+struct \hyperlink{structs__bunny__area}{s\-\_\-bunny\-\_\-area}
+\item 
+struct \hyperlink{structs__bunny__accurate__area}{s\-\_\-bunny\-\_\-accurate\-\_\-area}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structs__bunny__position}{s\-\_\-bunny\-\_\-position} \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position}
+\item 
+typedef \hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position} \hyperlink{placement_8h_a5fa5b3645e929a3786e814f837f3a738}{t\-\_\-bunny\-\_\-size}
+\item 
+typedef struct \\*
+\hyperlink{structs__bunny__accurate__position}{s\-\_\-bunny\-\_\-accurate\-\_\-position} \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position}
+\item 
+typedef \hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} \hyperlink{placement_8h_a4530d491ae52ed89d99c8adb07267eea}{t\-\_\-bunny\-\_\-accurate\-\_\-size}
+\item 
+typedef struct \hyperlink{structs__bunny__area}{s\-\_\-bunny\-\_\-area} \hyperlink{placement_8h_a499a91c0120b056da492686def48d0b6}{t\-\_\-bunny\-\_\-area}
+\item 
+typedef struct \\*
+\hyperlink{structs__bunny__accurate__area}{s\-\_\-bunny\-\_\-accurate\-\_\-area} \hyperlink{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{t\-\_\-bunny\-\_\-accurate\-\_\-area}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header contains structure that are useful to place elements on screen or to store datas about them. 
+
+\subsection{Typedef Documentation}
+\hypertarget{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-accurate\-\_\-area@{t\-\_\-bunny\-\_\-accurate\-\_\-area}}
+\index{t\-\_\-bunny\-\_\-accurate\-\_\-area@{t\-\_\-bunny\-\_\-accurate\-\_\-area}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-accurate\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-accurate\-\_\-area}				 {\bf t\-\_\-bunny\-\_\-accurate\-\_\-area}}}\label{placement_8h_a3e490822ccccf2b73f50ef8259832b90}
+The t\-\_\-bunny\-\_\-accurate\-\_\-area structure describes an area in a 2\-D space. It may be used to check collision between different areas. \hypertarget{placement_8h_a0871582e90d8efb086973027e2732c21}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-accurate\-\_\-position@{t\-\_\-bunny\-\_\-accurate\-\_\-position}}
+\index{t\-\_\-bunny\-\_\-accurate\-\_\-position@{t\-\_\-bunny\-\_\-accurate\-\_\-position}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-accurate\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-accurate\-\_\-position}				 {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position}}}\label{placement_8h_a0871582e90d8efb086973027e2732c21}
+The t\-\_\-bunny\-\_\-accurate\-\_\-position represents a position in a 2\-D space. It is useful to describe elements in a virtual and smooth space. Using t\-\_\-bunny\-\_\-accurate\-\_\-position allows you to use float or double to represent speed or any kind of physical concept that need to be precise in order to not being restrictive. For example, having a t\-\_\-bunny\-\_\-accurate\-\_\-position element on screen with double for x and y speed allows it to move in every direction at any speed. \hypertarget{placement_8h_a4530d491ae52ed89d99c8adb07267eea}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-accurate\-\_\-size@{t\-\_\-bunny\-\_\-accurate\-\_\-size}}
+\index{t\-\_\-bunny\-\_\-accurate\-\_\-size@{t\-\_\-bunny\-\_\-accurate\-\_\-size}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-accurate\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} {\bf t\-\_\-bunny\-\_\-accurate\-\_\-size}}}\label{placement_8h_a4530d491ae52ed89d99c8adb07267eea}
+The t\-\_\-bunny\-\_\-accurate\-\_\-size represents the size of an element in a 2\-D space with precision. \hypertarget{placement_8h_a499a91c0120b056da492686def48d0b6}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-area@{t\-\_\-bunny\-\_\-area}}
+\index{t\-\_\-bunny\-\_\-area@{t\-\_\-bunny\-\_\-area}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-area}				 {\bf t\-\_\-bunny\-\_\-area}}}\label{placement_8h_a499a91c0120b056da492686def48d0b6}
+The t\-\_\-bunny\-\_\-area structure describes an area in a 2\-D space. It may be used to check collision with fixed elements like tiles, that are often int-\/accurate only. \hypertarget{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-position@{t\-\_\-bunny\-\_\-position}}
+\index{t\-\_\-bunny\-\_\-position@{t\-\_\-bunny\-\_\-position}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf s\-\_\-bunny\-\_\-position}				 {\bf t\-\_\-bunny\-\_\-position}}}\label{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}
+The t\-\_\-bunny\-\_\-position structure represents a position in a 2\-D space. It is useful to access to memory space or tiles, but not to register position of elements in a virtual and smooth space. Use t\-\_\-bunny\-\_\-accurate\-\_\-position instead. \hypertarget{placement_8h_a5fa5b3645e929a3786e814f837f3a738}{\index{placement.\-h@{placement.\-h}!t\-\_\-bunny\-\_\-size@{t\-\_\-bunny\-\_\-size}}
+\index{t\-\_\-bunny\-\_\-size@{t\-\_\-bunny\-\_\-size}!placement.h@{placement.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf t\-\_\-bunny\-\_\-position} {\bf t\-\_\-bunny\-\_\-size}}}\label{placement_8h_a5fa5b3645e929a3786e814f837f3a738}
+The t\-\_\-bunny\-\_\-size structure represents the size of an element in a 2\-D space. It is useful to describe size of elements in memory or low resolution element size. If you wish more precision, use t\-\_\-bunny\-\_\-accurate\-\_\-size instead. 

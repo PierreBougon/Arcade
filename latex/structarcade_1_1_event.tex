@@ -1,0 +1,83 @@
+\hypertarget{structarcade_1_1_event}{\section{arcade\-:\-:Event Struct Reference}
+\label{structarcade_1_1_event}\index{arcade\-::\-Event@{arcade\-::\-Event}}
+}
+
+
+Description of an event.  
+
+
+
+
+{\ttfamily \#include $<$Event.\-hpp$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacearcade_a608583b2070905ecc26e957409bb4f93}{Event\-Type} \hyperlink{structarcade_1_1_event_a6e626bbe20fac99017e390ea0239b9a6}{type}
+\item 
+\hyperlink{namespacearcade_a1b6c05b243c7e94d71fb328705e619bd}{Action\-Type} \hyperlink{structarcade_1_1_event_a4c0d22bb440a9185fe94b9a66759823c}{action}
+\begin{DoxyCompactList}\small\item\em Type of the event. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{namespacearcade_a347918e3b31df21087660f19962ff80e}{KeyboardKey} \hyperlink{structarcade_1_1_event_aa6cca034ec9c2c6b3d9078e8a0ce8700}{kb\_key}\\
+\>\hyperlink{namespacearcade_a41017b6e882fbcad335f303c7950e4bf}{MouseKey} \hyperlink{structarcade_1_1_event_a52ed03f8b18613ade5ce903d36762f32}{m\_key}\\
+\>\>{\em Keyboard key. }\\
+\>\hyperlink{namespacearcade_a4281850c2b4199c96efad8ba85f8aa21}{ControllerKey} \hyperlink{structarcade_1_1_event_a9d837c85701594ddda4d04dc5b1d8a39}{c\_key}\\
+\>\>{\em Mouse key. }\\
+\}; \\
+
+\end{tabbing}\item 
+\hyperlink{structarcade_1_1_mouse_pos}{Mouse\-Pos} \hyperlink{structarcade_1_1_event_aa2b15c031d585e6ea86952bb579ca8ef}{pos\-\_\-rel}
+\item 
+\hyperlink{structarcade_1_1_mouse_pos}{Mouse\-Pos} \hyperlink{structarcade_1_1_event_a6fd21ebc551b688a77061cd44b01d425}{pos\-\_\-abs}
+\begin{DoxyCompactList}\small\item\em Relative position (since last event) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Description of an event. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structarcade_1_1_event_af7239e1001b65e42e8943daebf9188a2}{\subsubsection[{"@3}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structarcade_1_1_event_af7239e1001b65e42e8943daebf9188a2}
+\hypertarget{structarcade_1_1_event_a4c0d22bb440a9185fe94b9a66759823c}{\index{arcade\-::\-Event@{arcade\-::\-Event}!action@{action}}
+\index{action@{action}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action\-Type} arcade\-::\-Event\-::action}}\label{structarcade_1_1_event_a4c0d22bb440a9185fe94b9a66759823c}
+
+
+Type of the event. 
+
+\hypertarget{structarcade_1_1_event_a9d837c85701594ddda4d04dc5b1d8a39}{\index{arcade\-::\-Event@{arcade\-::\-Event}!c\-\_\-key@{c\-\_\-key}}
+\index{c\-\_\-key@{c\-\_\-key}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{c\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Controller\-Key} arcade\-::\-Event\-::c\-\_\-key}}\label{structarcade_1_1_event_a9d837c85701594ddda4d04dc5b1d8a39}
+
+
+Mouse key. 
+
+\hypertarget{structarcade_1_1_event_aa6cca034ec9c2c6b3d9078e8a0ce8700}{\index{arcade\-::\-Event@{arcade\-::\-Event}!kb\-\_\-key@{kb\-\_\-key}}
+\index{kb\-\_\-key@{kb\-\_\-key}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{kb\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keyboard\-Key} arcade\-::\-Event\-::kb\-\_\-key}}\label{structarcade_1_1_event_aa6cca034ec9c2c6b3d9078e8a0ce8700}
+\hypertarget{structarcade_1_1_event_a52ed03f8b18613ade5ce903d36762f32}{\index{arcade\-::\-Event@{arcade\-::\-Event}!m\-\_\-key@{m\-\_\-key}}
+\index{m\-\_\-key@{m\-\_\-key}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{m\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mouse\-Key} arcade\-::\-Event\-::m\-\_\-key}}\label{structarcade_1_1_event_a52ed03f8b18613ade5ce903d36762f32}
+
+
+Keyboard key. 
+
+\hypertarget{structarcade_1_1_event_a6fd21ebc551b688a77061cd44b01d425}{\index{arcade\-::\-Event@{arcade\-::\-Event}!pos\-\_\-abs@{pos\-\_\-abs}}
+\index{pos\-\_\-abs@{pos\-\_\-abs}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{pos\-\_\-abs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mouse\-Pos} arcade\-::\-Event\-::pos\-\_\-abs}}\label{structarcade_1_1_event_a6fd21ebc551b688a77061cd44b01d425}
+
+
+Relative position (since last event) 
+
+\hypertarget{structarcade_1_1_event_aa2b15c031d585e6ea86952bb579ca8ef}{\index{arcade\-::\-Event@{arcade\-::\-Event}!pos\-\_\-rel@{pos\-\_\-rel}}
+\index{pos\-\_\-rel@{pos\-\_\-rel}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{pos\-\_\-rel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mouse\-Pos} arcade\-::\-Event\-::pos\-\_\-rel}}\label{structarcade_1_1_event_aa2b15c031d585e6ea86952bb579ca8ef}
+\hypertarget{structarcade_1_1_event_a6e626bbe20fac99017e390ea0239b9a6}{\index{arcade\-::\-Event@{arcade\-::\-Event}!type@{type}}
+\index{type@{type}!arcade::Event@{arcade\-::\-Event}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\-Type} arcade\-::\-Event\-::type}}\label{structarcade_1_1_event_a6e626bbe20fac99017e390ea0239b9a6}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+interfaces/\hyperlink{interfaces_2_event_8hpp}{Event.\-hpp}\end{DoxyCompactItemize}

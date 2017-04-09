@@ -1,0 +1,64 @@
+
+\begin{DoxyRefList}
+\item[\label{deprecated__deprecated000001}%
+\hypertarget{deprecated__deprecated000001}{}%
+Class \hyperlink{structsf_1_1_event_1_1_mouse_wheel_event}{sf\-:\-:Event\-:\-:Mouse\-Wheel\-Event} ]This event is deprecated and potentially inaccurate. Use Mouse\-Wheel\-Scroll\-Event instead.
+
+This event is deprecated and potentially inaccurate. Use Mouse\-Wheel\-Scroll\-Event instead. 
+\item[\label{deprecated__deprecated000002}%
+\hypertarget{deprecated__deprecated000002}{}%
+Member \hyperlink{group__graphics_gga5ee56ac1339984909610713096283b1bafc070260a0222df367922706bbeb905a}{sf\-:\-:Lines\-Strip} ]Use Line\-Strip instead  
+\item[\label{deprecated__deprecated000005}%
+\hypertarget{deprecated__deprecated000005}{}%
+Member \hyperlink{classsf_1_1_render_window_acd1967616b6ef482026b48f44fbf2624}{sf\-:\-:Render\-Window\-:\-:capture} () const ]Use a \hyperlink{classsf_1_1_texture}{sf\-::\-Texture} and its \hyperlink{classsf_1_1_texture_ad3cceef238f7d5d2108a98dd38c17fc5}{sf\-::\-Texture\-::update(const Window\&)} function and copy its contents into an \hyperlink{classsf_1_1_image}{sf\-::\-Image} instead. 
+\begin{DoxyCode}
+\hyperlink{classsf_1_1_vector2}{sf::Vector2u} windowSize = window.getSize();
+\hyperlink{classsf_1_1_texture}{sf::Texture} texture;
+texture.\hyperlink{classsf_1_1_texture_a89b4c7d204acf1033c3a1b6e0a3ad0a3}{create}(windowSize.\hyperlink{classsf_1_1_vector2_a1e6ad77fa155f3753bfb92699bd28141}{x}, windowSize.\hyperlink{classsf_1_1_vector2_a420f2481b015f4eb929c75f2af564299}{y});
+texture.\hyperlink{classsf_1_1_texture_ae4eab5c6781316840b0c50ad08370963}{update}(window);
+\hyperlink{classsf_1_1_image}{sf::Image} screenshot = texture.\hyperlink{classsf_1_1_texture_aefc19bcd95565dd2348fd4cec0facddc}{copyToImage}();
+\end{DoxyCode}
+ 
+\item[\label{deprecated__deprecated000010}%
+\hypertarget{deprecated__deprecated000010}{}%
+Member \hyperlink{classsf_1_1_shader_aee671dda9a84f607b9b780b2796def74}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, const Vector2f \&vector)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec2\&) instead. 
+\item[\label{deprecated__deprecated000007}%
+\hypertarget{deprecated__deprecated000007}{}%
+Member \hyperlink{classsf_1_1_shader_a61f5cdb5847fc3b57335b095a2f3dad3}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, float x, float y)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec2\&) instead. 
+\item[\label{deprecated__deprecated000011}%
+\hypertarget{deprecated__deprecated000011}{}%
+Member \hyperlink{classsf_1_1_shader_abf1eb5e74f216c7bcfaf34d08c960ee0}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, const Vector3f \&vector)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec3\&) instead. 
+\item[\label{deprecated__deprecated000012}%
+\hypertarget{deprecated__deprecated000012}{}%
+Member \hyperlink{classsf_1_1_shader_a66e68e64c06ef5501e50dd5903cab51c}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, const Color \&color)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec4\&) instead. 
+\item[\label{deprecated__deprecated000014}%
+\hypertarget{deprecated__deprecated000014}{}%
+Member \hyperlink{classsf_1_1_shader_a08c7cafd4f73ab898319c4fd7d8b5501}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, const Texture \&texture)]Use set\-Uniform(const std\-::string\&, const Texture\&) instead. 
+\item[\label{deprecated__deprecated000008}%
+\hypertarget{deprecated__deprecated000008}{}%
+Member \hyperlink{classsf_1_1_shader_a1fa0fb11cabd8553ccd37e97c725c992}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, float x, float y, float z)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec3\&) instead. 
+\item[\label{deprecated__deprecated000013}%
+\hypertarget{deprecated__deprecated000013}{}%
+Member \hyperlink{classsf_1_1_shader_a398a802fc5295ab69b0317892b0f0c75}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, const Transform \&transform)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Mat4\&) instead. 
+\item[\label{deprecated__deprecated000009}%
+\hypertarget{deprecated__deprecated000009}{}%
+Member \hyperlink{classsf_1_1_shader_a6d6b84575a5f1a869d70a126df8d6478}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, float x, float y, float z, float w)]Use set\-Uniform(const std\-::string\&, const Glsl\-::\-Vec4\&) instead. 
+\item[\label{deprecated__deprecated000006}%
+\hypertarget{deprecated__deprecated000006}{}%
+Member \hyperlink{classsf_1_1_shader_a4d6ec78f6de1a0a2146c93ab09d7d762}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, float x)]Use set\-Uniform(const std\-::string\&, float) instead. 
+\item[\label{deprecated__deprecated000015}%
+\hypertarget{deprecated__deprecated000015}{}%
+Member \hyperlink{classsf_1_1_shader_a0fa7ecad14206e4d5edae1d6aa87f553}{sf\-:\-:Shader\-:\-:set\-Parameter} (const std\-::string \&name, Current\-Texture\-Type)]Use set\-Uniform(const std\-::string\&, Current\-Texture\-Type) instead. 
+\item[\label{deprecated__deprecated000017}%
+\hypertarget{deprecated__deprecated000017}{}%
+Member \hyperlink{classsf_1_1_text_a0fdc0ff583835760fa44509d1cdd23ff}{sf\-:\-:Text\-:\-:get\-Color} () const ]There is now fill and outline colors instead of a single global color. Use get\-Fill\-Color() or get\-Outline\-Color() instead. 
+\item[\label{deprecated__deprecated000016}%
+\hypertarget{deprecated__deprecated000016}{}%
+Member \hyperlink{classsf_1_1_text_a6ce65272d6d63ed01118366e92c68132}{sf\-:\-:Text\-:\-:set\-Color} (const Color \&color)]There is now fill and outline colors instead of a single global color. Use set\-Fill\-Color() or set\-Outline\-Color() instead. 
+\item[\label{deprecated__deprecated000004}%
+\hypertarget{deprecated__deprecated000004}{}%
+Member \hyperlink{group__graphics_gga5ee56ac1339984909610713096283b1ba698ecd8ec938b4132412b8da44a1a6be}{sf\-:\-:Triangles\-Fan} ]Use Triangle\-Fan instead  
+\item[\label{deprecated__deprecated000003}%
+\hypertarget{deprecated__deprecated000003}{}%
+Member \hyperlink{group__graphics_gga5ee56ac1339984909610713096283b1baf5ef0ffa5d13f9ea3e0eb18a2a8da7fb}{sf\-:\-:Triangles\-Strip} ]Use Triangle\-Strip instead 
+\end{DoxyRefList}

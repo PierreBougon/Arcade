@@ -1,0 +1,68 @@
+\hypertarget{_communicator_8hpp}{\section{lib/lapin/dep/deps/\-Communicator.hpp File Reference}
+\label{_communicator_8hpp}\index{lib/lapin/dep/deps/\-Communicator.\-hpp@{lib/lapin/dep/deps/\-Communicator.\-hpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+{\ttfamily \#include \char`\"{}Net\-Abs.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Communication.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbpt_1_1_net_com_1_1_communicator}{bpt\-::\-Net\-Com\-::\-Communicator}
+\item 
+union \hyperlink{unionbpt_1_1_net_com_1_1_communicator_1_1u___size_buffer}{bpt\-::\-Net\-Com\-::\-Communicator\-::u\-\_\-\-Size\-Buffer}
+\item 
+struct \hyperlink{structbpt_1_1_net_com_1_1_communicator_1_1s___write_request}{bpt\-::\-Net\-Com\-::\-Communicator\-::s\-\_\-\-Write\-Request}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacebpt}{bpt}
+\item 
+\hyperlink{namespacebpt_1_1_net_com}{bpt\-::\-Net\-Com}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_communicator_8hpp_aae649b66a7ec62565445a8f65c45c207}{U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R}~((char$\ast$)-\/1)
+\item 
+\#define \hyperlink{_communicator_8hpp_a420849ae4e166f6a0a224423d982f0ba}{T\-O\-O\-\_\-\-B\-I\-G}~((char$\ast$)-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{namespacebpt_1_1_net_com_a9fe17665f9f84a23e9f941d317acdd5e}{bpt\-::\-Net\-Com\-::e\-\_\-\-Packet\-Protocol} \hyperlink{namespacebpt_1_1_net_com_ae55ee05019d82af5d3cc17e7e0ebedff}{bpt\-::\-Net\-Com\-::\-Packet\-Protocol}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacebpt_1_1_net_com_a9fe17665f9f84a23e9f941d317acdd5e}{bpt\-::\-Net\-Com\-::e\-\_\-\-Packet\-Protocol} \{ \hyperlink{namespacebpt_1_1_net_com_a9fe17665f9f84a23e9f941d317acdd5eac65611a5a37f6a29b9d9eb5165a36122}{bpt\-::\-Net\-Com\-::\-R\-A\-W} = 0, 
+\hyperlink{namespacebpt_1_1_net_com_a9fe17665f9f84a23e9f941d317acdd5ea3a21f6df1ad6b471149132219220c7fa}{bpt\-::\-Net\-Com\-::\-S\-I\-Z\-A\-B\-L\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{curses_8priv_8h_a5ef253115820acf7d27f3c5c3b02a0f0}{T} \hyperlink{namespacebpt_1_1_net_com_aa7d8a46c22239819de32e017056ee2e9}{bpt\-::\-Net\-Com\-::\-To} (void $\ast$buffer)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{namespacebpt_1_1_net_com_a5938049449df6343027fef880dcc1768}{bpt\-::\-Net\-Com\-::operator==} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacebpt_1_1_net_com_af30d27373a967c6e6bcbf97963e2ab1d}{bpt\-::\-Net\-Com\-::\-Communication} \&com, \hyperlink{namespacebpt_1_1_net_com_a73b47b2b099bf7d28997dc72c921212c}{bpt\-::\-Net\-Com\-::\-Com\-Type} comtype)
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{namespacebpt_1_1_net_com_a8c3723f2c4e82e50fae7157a5d40278b}{bpt\-::\-Net\-Com\-::operator==} (\hyperlink{namespacebpt_1_1_net_com_a73b47b2b099bf7d28997dc72c921212c}{bpt\-::\-Net\-Com\-::\-Com\-Type} comtype, \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacebpt_1_1_net_com_af30d27373a967c6e6bcbf97963e2ab1d}{bpt\-::\-Net\-Com\-::\-Communication} \&com)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{namespacebpt_1_1_net_com_a34151047272d9eaf1e68367bc276e11a}{bpt\-::\-Net\-Com\-::\-E\-O\-C} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em E\-N\-D O\-F C\-O\-M\-M\-A\-N\-D ('' '\par
+' '\textbackslash{}0') \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_communicator_8hpp_a420849ae4e166f6a0a224423d982f0ba}{\index{Communicator.\-hpp@{Communicator.\-hpp}!T\-O\-O\-\_\-\-B\-I\-G@{T\-O\-O\-\_\-\-B\-I\-G}}
+\index{T\-O\-O\-\_\-\-B\-I\-G@{T\-O\-O\-\_\-\-B\-I\-G}!Communicator.hpp@{Communicator.\-hpp}}
+\subsubsection[{T\-O\-O\-\_\-\-B\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-O\-\_\-\-B\-I\-G~((char$\ast$)-\/1)}}\label{_communicator_8hpp_a420849ae4e166f6a0a224423d982f0ba}
+\hypertarget{_communicator_8hpp_aae649b66a7ec62565445a8f65c45c207}{\index{Communicator.\-hpp@{Communicator.\-hpp}!U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R@{U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R@{U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R}!Communicator.hpp@{Communicator.\-hpp}}
+\subsubsection[{U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-N\-U\-S\-E\-D\-\_\-\-B\-U\-F\-F\-E\-R~((char$\ast$)-\/1)}}\label{_communicator_8hpp_aae649b66a7ec62565445a8f65c45c207}

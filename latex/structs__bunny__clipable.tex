@@ -1,0 +1,83 @@
+\hypertarget{structs__bunny__clipable}{\section{s\-\_\-bunny\-\_\-clipable Struct Reference}
+\label{structs__bunny__clipable}\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}}
+}
+
+
+{\ttfamily \#include $<$graphics.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer} \hyperlink{structs__bunny__clipable_a75da2c183ce6977cf5c7129b08ffec9e}{buffer}
+\item 
+int32\-\_\-t \hyperlink{structs__bunny__clipable_aa826201c19bd319fb50077b94c727586}{clip\-\_\-x\-\_\-position}
+\item 
+int32\-\_\-t \hyperlink{structs__bunny__clipable_a996a3ad50bd02d7b43f242dc5c1a293f}{clip\-\_\-y\-\_\-position}
+\item 
+int32\-\_\-t \hyperlink{structs__bunny__clipable_a41417d3fe3821e2bcd88d5f59a41ff96}{clip\-\_\-width}
+\item 
+int32\-\_\-t \hyperlink{structs__bunny__clipable_aa742c9aac022401cfdb868f68287e376}{clip\-\_\-height}
+\item 
+\hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} \hyperlink{structs__bunny__clipable_adf79abda47d0b5eb60e4239ad35d8398}{position}
+\item 
+\hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} \hyperlink{structs__bunny__clipable_a87178add83237f9eb800b87b36ee4991}{origin}
+\item 
+\hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position} \hyperlink{structs__bunny__clipable_a05f2d5e80b1a6e07ad23b797dc73ac37}{scale}
+\item 
+double \hyperlink{structs__bunny__clipable_a8726c242b15a9273e6383ada05e96375}{rotation}
+\item 
+\hyperlink{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}{t\-\_\-bunny\-\_\-color} \hyperlink{structs__bunny__clipable_a457a53d43ab3cb965b66496e5e28f073}{color\-\_\-mask}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-clipable structure contains informations about a graphic element.
+
+It first contains a t\-\_\-bunny\-\_\-buffer with the height and width of the graphic element. It also contains four clipping fields\-: clip\-\_\-x\-\_\-position, clip\-\_\-y\-\_\-position, clip\-\_\-width and clip\-\_\-height.
+
+These clipping attributes are useful to select only a subpart of the graphic element to be used by functions. For example, bunny\-\_\-blit will only copy the configured clip. By default, clip\-\_\-x\-\_\-position and clip\-\_\-y\-\_\-position are set to 0 and clip\-\_\-width and clip\-\_\-height to buffer.\-width and buffer.\-height.
+
+The attribute origin is useful to specify a hot spot. When blitting the graphic element to a specific position, for example, the origin define the point that will be drawn at the asked position throught the third parameter of bunny\-\_\-blit. The origin also specify the rotation axis. By default, it is (0,0).
+
+Scale allow you to magnify or shrink the graphic element. The original size is multiplied by the scale to obtain the final size. By default, it is (1,1).
+
+The rotation is in degree and is the rotation of the graphic element when blitted. By default, it is 0.
+
+The color mask is a binary mask that will be applied to all pixel draw. By default, it is W\-H\-I\-T\-E (0x\-F\-F\-F\-F\-F\-F\-F\-F) 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__clipable_a75da2c183ce6977cf5c7129b08ffec9e}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!buffer@{buffer}}
+\index{buffer@{buffer}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-buffer} s\-\_\-bunny\-\_\-clipable\-::buffer}}\label{structs__bunny__clipable_a75da2c183ce6977cf5c7129b08ffec9e}
+\hypertarget{structs__bunny__clipable_aa742c9aac022401cfdb868f68287e376}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!clip\-\_\-height@{clip\-\_\-height}}
+\index{clip\-\_\-height@{clip\-\_\-height}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{clip\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t s\-\_\-bunny\-\_\-clipable\-::clip\-\_\-height}}\label{structs__bunny__clipable_aa742c9aac022401cfdb868f68287e376}
+\hypertarget{structs__bunny__clipable_a41417d3fe3821e2bcd88d5f59a41ff96}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!clip\-\_\-width@{clip\-\_\-width}}
+\index{clip\-\_\-width@{clip\-\_\-width}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{clip\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t s\-\_\-bunny\-\_\-clipable\-::clip\-\_\-width}}\label{structs__bunny__clipable_a41417d3fe3821e2bcd88d5f59a41ff96}
+\hypertarget{structs__bunny__clipable_aa826201c19bd319fb50077b94c727586}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!clip\-\_\-x\-\_\-position@{clip\-\_\-x\-\_\-position}}
+\index{clip\-\_\-x\-\_\-position@{clip\-\_\-x\-\_\-position}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{clip\-\_\-x\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t s\-\_\-bunny\-\_\-clipable\-::clip\-\_\-x\-\_\-position}}\label{structs__bunny__clipable_aa826201c19bd319fb50077b94c727586}
+\hypertarget{structs__bunny__clipable_a996a3ad50bd02d7b43f242dc5c1a293f}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!clip\-\_\-y\-\_\-position@{clip\-\_\-y\-\_\-position}}
+\index{clip\-\_\-y\-\_\-position@{clip\-\_\-y\-\_\-position}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{clip\-\_\-y\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t s\-\_\-bunny\-\_\-clipable\-::clip\-\_\-y\-\_\-position}}\label{structs__bunny__clipable_a996a3ad50bd02d7b43f242dc5c1a293f}
+\hypertarget{structs__bunny__clipable_a457a53d43ab3cb965b66496e5e28f073}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!color\-\_\-mask@{color\-\_\-mask}}
+\index{color\-\_\-mask@{color\-\_\-mask}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{color\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-color} s\-\_\-bunny\-\_\-clipable\-::color\-\_\-mask}}\label{structs__bunny__clipable_a457a53d43ab3cb965b66496e5e28f073}
+\hypertarget{structs__bunny__clipable_a87178add83237f9eb800b87b36ee4991}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!origin@{origin}}
+\index{origin@{origin}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{origin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} s\-\_\-bunny\-\_\-clipable\-::origin}}\label{structs__bunny__clipable_a87178add83237f9eb800b87b36ee4991}
+\hypertarget{structs__bunny__clipable_adf79abda47d0b5eb60e4239ad35d8398}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!position@{position}}
+\index{position@{position}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} s\-\_\-bunny\-\_\-clipable\-::position}}\label{structs__bunny__clipable_adf79abda47d0b5eb60e4239ad35d8398}
+\hypertarget{structs__bunny__clipable_a8726c242b15a9273e6383ada05e96375}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!rotation@{rotation}}
+\index{rotation@{rotation}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}double s\-\_\-bunny\-\_\-clipable\-::rotation}}\label{structs__bunny__clipable_a8726c242b15a9273e6383ada05e96375}
+\hypertarget{structs__bunny__clipable_a05f2d5e80b1a6e07ad23b797dc73ac37}{\index{s\-\_\-bunny\-\_\-clipable@{s\-\_\-bunny\-\_\-clipable}!scale@{scale}}
+\index{scale@{scale}!s_bunny_clipable@{s\-\_\-bunny\-\_\-clipable}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-accurate\-\_\-position} s\-\_\-bunny\-\_\-clipable\-::scale}}\label{structs__bunny__clipable_a05f2d5e80b1a6e07ad23b797dc73ac37}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{graphics_8h}{graphics.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\hypertarget{structs__bunny__effect}{\section{s\-\_\-bunny\-\_\-effect Struct Reference}
+\label{structs__bunny__effect}\index{s\-\_\-bunny\-\_\-effect@{s\-\_\-bunny\-\_\-effect}}
+}
+
+
+{\ttfamily \#include $<$sound.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound} \hyperlink{structs__bunny__effect_a7bdb04c4b5e7a9f2819dc9fdd44c1682}{sound}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{structs__bunny__effect_a81d7eb8e57b6dd5a8a0ad8638fdc35ff}{sample\-\_\-per\-\_\-second}
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} double \hyperlink{structs__bunny__effect_ae7b38147c77defa25b4f26d5c4ac1eb0}{duration}
+\item 
+int16\-\_\-t $\ast$\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{structs__bunny__effect_ae4f9bef6b6a6017a1109a67d2aeb962a}{sample}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The t\-\_\-bunny\-\_\-effect structure is useful to play, load and manage sound effects. It contains attributes like sample\-\_\-per\-\_\-second which contains how many int16\-\_\-t is neccessary to a one second sound. duration is the sound duration in seconds. and finaly sample which is the sound wave itself. sample is the sound equivalent of the t\-\_\-bunny\-\_\-pixelarray 's pixel field\-: it is an array of duration $\ast$ sample\-\_\-per\-\_\-second int16\-\_\-t. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structs__bunny__effect_ae7b38147c77defa25b4f26d5c4ac1eb0}{\index{s\-\_\-bunny\-\_\-effect@{s\-\_\-bunny\-\_\-effect}!duration@{duration}}
+\index{duration@{duration}!s_bunny_effect@{s\-\_\-bunny\-\_\-effect}}
+\subsubsection[{duration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} double s\-\_\-bunny\-\_\-effect\-::duration}}\label{structs__bunny__effect_ae7b38147c77defa25b4f26d5c4ac1eb0}
+\hypertarget{structs__bunny__effect_ae4f9bef6b6a6017a1109a67d2aeb962a}{\index{s\-\_\-bunny\-\_\-effect@{s\-\_\-bunny\-\_\-effect}!sample@{sample}}
+\index{sample@{sample}!s_bunny_effect@{s\-\_\-bunny\-\_\-effect}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t$\ast$ {\bf const} s\-\_\-bunny\-\_\-effect\-::sample}}\label{structs__bunny__effect_ae4f9bef6b6a6017a1109a67d2aeb962a}
+\hypertarget{structs__bunny__effect_a81d7eb8e57b6dd5a8a0ad8638fdc35ff}{\index{s\-\_\-bunny\-\_\-effect@{s\-\_\-bunny\-\_\-effect}!sample\-\_\-per\-\_\-second@{sample\-\_\-per\-\_\-second}}
+\index{sample\-\_\-per\-\_\-second@{sample\-\_\-per\-\_\-second}!s_bunny_effect@{s\-\_\-bunny\-\_\-effect}}
+\subsubsection[{sample\-\_\-per\-\_\-second}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf size\-\_\-t} s\-\_\-bunny\-\_\-effect\-::sample\-\_\-per\-\_\-second}}\label{structs__bunny__effect_a81d7eb8e57b6dd5a8a0ad8638fdc35ff}
+\hypertarget{structs__bunny__effect_a7bdb04c4b5e7a9f2819dc9fdd44c1682}{\index{s\-\_\-bunny\-\_\-effect@{s\-\_\-bunny\-\_\-effect}!sound@{sound}}
+\index{sound@{sound}!s_bunny_effect@{s\-\_\-bunny\-\_\-effect}}
+\subsubsection[{sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-bunny\-\_\-sound} s\-\_\-bunny\-\_\-effect\-::sound}}\label{structs__bunny__effect_a7bdb04c4b5e7a9f2819dc9fdd44c1682}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/lapin/dep/lapin/\hyperlink{sound_8h}{sound.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{classarcade_1_1_sound_render}{\section{arcade\-:\-:Sound\-Render Class Reference}
+\label{classarcade_1_1_sound_render}\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}}
+}
+
+
+{\ttfamily \#include $<$Sound\-Render.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Sound\-Render\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1_sound_render}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_sound_render_a615a63e0d5615dc9148c3be556ff90de}{Sound\-Render} (\hyperlink{curses_8priv_8h_aca40206900cfc164654362fa8d4ad1e6}{unsigned} \hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{structarcade_1_1_sound_a9bee48a44860d44ddb963621ceb9172b}{id}, \hyperlink{namespacearcade_a31ef30225775697d1aeaf59819ac5051}{Sound\-Action} \hyperlink{structarcade_1_1_sound_a67fc0884cb4d9445ad6c9d9a241a15ef}{mode}=Sound\-Action\-::\-U\-N\-I\-Q\-U\-E, float \hyperlink{structarcade_1_1_sound_aa80e8832313b76cefcf2e866c4a2e1cc}{volume}=50.\-0f, Sound\-Type type=\-Sound\-Type\-::\-M\-U\-S\-I\-C)
+\item 
+virtual \hyperlink{classarcade_1_1_sound_render_a6b7dd27ef7b422151445aa497ef55e93}{$\sim$\-Sound\-Render} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a1ad5df4a48684deb7d823ca995d16b88}{load\-From\-File} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} std\-::string \&file)
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a28513a1a7fc13be74de3b84c41ad1220}{refresh} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a3242d9008d606e9129180309df7b058a}{play} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a327bcd9f43f0cb72c5f20d112689ce4f}{pause} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_ac43d9a7cde02be60dda3e396186e26f2}{stop} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a928a37b14b5145ed4c4d25e6a7cc6329}{set\-Volume} ()
+\item 
+void \hyperlink{classarcade_1_1_sound_render_a2471f93998f152d3091b24df00da4a24}{set\-Volume} (float \hyperlink{structarcade_1_1_sound_aa80e8832313b76cefcf2e866c4a2e1cc}{volume})
+\item 
+void \hyperlink{classarcade_1_1_sound_render_ac56113c472d0cd4e0463d33b95e69eee}{set\-Loop} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} state)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_sound_render_a615a63e0d5615dc9148c3be556ff90de}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!Sound\-Render@{Sound\-Render}}
+\index{Sound\-Render@{Sound\-Render}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{Sound\-Render}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sound\-Render\-::\-Sound\-Render (
+\begin{DoxyParamCaption}
+\item[{{\bf unsigned} {\bf int}}]{id, }
+\item[{{\bf arcade\-::\-Sound\-Action}}]{mode = {\ttfamily SoundAction\-:\-:UNIQUE}, }
+\item[{float}]{volume = {\ttfamily 50.0f}, }
+\item[{{\bf Sound\-Type}}]{type = {\ttfamily SoundType\-:\-:MUSIC}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a615a63e0d5615dc9148c3be556ff90de}
+\hypertarget{classarcade_1_1_sound_render_a6b7dd27ef7b422151445aa497ef55e93}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!$\sim$\-Sound\-Render@{$\sim$\-Sound\-Render}}
+\index{$\sim$\-Sound\-Render@{$\sim$\-Sound\-Render}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{$\sim$\-Sound\-Render}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sound\-Render\-::$\sim$\-Sound\-Render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classarcade_1_1_sound_render_a6b7dd27ef7b422151445aa497ef55e93}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_sound_render_a1ad5df4a48684deb7d823ca995d16b88}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!load\-From\-File@{load\-From\-File}}
+\index{load\-From\-File@{load\-From\-File}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::load\-From\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf const} std\-::string \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a1ad5df4a48684deb7d823ca995d16b88}
+\hypertarget{classarcade_1_1_sound_render_a327bcd9f43f0cb72c5f20d112689ce4f}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!pause@{pause}}
+\index{pause@{pause}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a327bcd9f43f0cb72c5f20d112689ce4f}
+\hypertarget{classarcade_1_1_sound_render_a3242d9008d606e9129180309df7b058a}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!play@{play}}
+\index{play@{play}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a3242d9008d606e9129180309df7b058a}
+{\itshape Prefer using} the \hyperlink{classarcade_1_1_sound_render_a28513a1a7fc13be74de3b84c41ad1220}{refresh()}; method since it will set your sound with the attributes you chose Those methods only wrap S\-F\-M\-L sound methods to be able to deal with sound or music in the same class \hypertarget{classarcade_1_1_sound_render_a28513a1a7fc13be74de3b84c41ad1220}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!refresh@{refresh}}
+\index{refresh@{refresh}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{refresh}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a28513a1a7fc13be74de3b84c41ad1220}
+Use this method to set your sound with your \hyperlink{classarcade_1_1_sound_render}{Sound\-Render} attributes \hypertarget{classarcade_1_1_sound_render_ac56113c472d0cd4e0463d33b95e69eee}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!set\-Loop@{set\-Loop}}
+\index{set\-Loop@{set\-Loop}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{set\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::set\-Loop (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{state}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_ac56113c472d0cd4e0463d33b95e69eee}
+\hypertarget{classarcade_1_1_sound_render_a928a37b14b5145ed4c4d25e6a7cc6329}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!set\-Volume@{set\-Volume}}
+\index{set\-Volume@{set\-Volume}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{set\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::set\-Volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a928a37b14b5145ed4c4d25e6a7cc6329}
+\hypertarget{classarcade_1_1_sound_render_a2471f93998f152d3091b24df00da4a24}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!set\-Volume@{set\-Volume}}
+\index{set\-Volume@{set\-Volume}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{set\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::set\-Volume (
+\begin{DoxyParamCaption}
+\item[{float}]{volume}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_a2471f93998f152d3091b24df00da4a24}
+\hypertarget{classarcade_1_1_sound_render_ac43d9a7cde02be60dda3e396186e26f2}{\index{arcade\-::\-Sound\-Render@{arcade\-::\-Sound\-Render}!stop@{stop}}
+\index{stop@{stop}!arcade::SoundRender@{arcade\-::\-Sound\-Render}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sound\-Render\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sound_render_ac43d9a7cde02be60dda3e396186e26f2}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+sound\-Manager/include/\hyperlink{_sound_render_8hpp}{Sound\-Render.\-hpp}\item 
+sound\-Manager/src/\hyperlink{_sound_render_8cpp}{Sound\-Render.\-cpp}\end{DoxyCompactItemize}

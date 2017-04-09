@@ -1,0 +1,195 @@
+\hypertarget{color_8h}{\section{lib/lapin/dep/lapin/color.h File Reference}
+\label{color_8h}\index{lib/lapin/dep/lapin/color.\-h@{lib/lapin/dep/lapin/color.\-h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionu__bunny__color}{u\-\_\-bunny\-\_\-color}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{color_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K}~((uint32\-\_\-t)(255 $<$$<$ (\hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41af022c9d92fc7b854fdfa7e0ed2e245bf}{A\-L\-P\-H\-A\-\_\-\-C\-M\-P} $\ast$ 8)))
+\item 
+\#define \hyperlink{color_8h_a8d23feea868a983c8c2b661e1e16972f}{R\-E\-D}~((uint32\-\_\-t)(\hyperlink{color_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a43af9567fbcd5d941371ed9e7bcd9db3}{R\-E\-D\-\_\-\-C\-M\-P} $\ast$ 8)))
+\item 
+\#define \hyperlink{color_8h_acfbc006ea433ad708fdee3e82996e721}{G\-R\-E\-E\-N}~((uint32\-\_\-t)(\hyperlink{color_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a0404b1fdfea02bc6c29a3db236c934cb}{G\-R\-E\-E\-N\-\_\-\-C\-M\-P} $\ast$ 8)))
+\item 
+\#define \hyperlink{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\-L\-U\-E}~((uint32\-\_\-t)(\hyperlink{color_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a84b9894e100778fa1a473198b4f5b356}{B\-L\-U\-E\-\_\-\-C\-M\-P} $\ast$ 8)))
+\item 
+\#define \hyperlink{color_8h_a0bb0b009e7a7390473ace4d98bd843c0}{P\-U\-R\-P\-L\-E}~((uint32\-\_\-t)(\hyperlink{color_8h_a8d23feea868a983c8c2b661e1e16972f}{R\-E\-D} $\vert$ \hyperlink{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\-L\-U\-E}))
+\item 
+\#define \hyperlink{color_8h_a03e7881ce42823bcd8c3e798e03e7507}{T\-E\-A\-L}~((uint32\-\_\-t)(\hyperlink{color_8h_acfbc006ea433ad708fdee3e82996e721}{G\-R\-E\-E\-N} $\vert$ \hyperlink{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\-L\-U\-E}))
+\item 
+\#define \hyperlink{color_8h_abf681265909adf3d3e8116c93c0ba179}{Y\-E\-L\-L\-O\-W}~((uint32\-\_\-t)(\hyperlink{color_8h_a8d23feea868a983c8c2b661e1e16972f}{R\-E\-D} $\vert$ \hyperlink{color_8h_acfbc006ea433ad708fdee3e82996e721}{G\-R\-E\-E\-N}))
+\item 
+\#define \hyperlink{color_8h_a87b537f5fa5c109d3c05c13d6b18f382}{W\-H\-I\-T\-E}~((uint32\-\_\-t)(\hyperlink{color_8h_a8d23feea868a983c8c2b661e1e16972f}{R\-E\-D} $\vert$ \hyperlink{color_8h_acfbc006ea433ad708fdee3e82996e721}{G\-R\-E\-E\-N} $\vert$ \hyperlink{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\-L\-U\-E}))
+\item 
+\#define \hyperlink{color_8h_ada419fe3b48fcf19daed7cc57ccf1174}{P\-I\-N\-K}~((uint32\-\_\-t)0x\-F\-F7777\-F\-F)
+\item 
+\#define \hyperlink{color_8h_afe605a3089daccb7424e7d2544e94703}{P\-I\-N\-K2}~((uint32\-\_\-t)0x\-F\-F\-B469\-F\-F)
+\item 
+\#define \hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A}(a)~(((a) \& 0x\-F\-F) $<$$<$ (\-A\-L\-P\-H\-A\-\_\-\-C\-M\-P $\ast$ 8))
+\item 
+\#define \hyperlink{color_8h_ac20ffdbbdea26d004f27b0ec65ac9fe4}{T\-O\-\_\-\-R\-E\-D}(a)~(((a) \& 0x\-F\-F) $<$$<$ (\-R\-E\-D\-\_\-\-C\-M\-P $\ast$ 8))
+\item 
+\#define \hyperlink{color_8h_a80d1db75b534c393ac3e6faaa6096654}{T\-O\-\_\-\-G\-R\-E\-E\-N}(a)~(((a) \& 0x\-F\-F) $<$$<$ (\-G\-R\-E\-E\-N\-\_\-\-C\-M\-P $\ast$ 8))
+\item 
+\#define \hyperlink{color_8h_a1bc5cadebf02a4a1b58ae0e26d970886}{T\-O\-\_\-\-B\-L\-U\-E}(a)~(((a) \& 0x\-F\-F) $<$$<$ (\-B\-L\-U\-E\-\_\-\-C\-M\-P $\ast$ 8))
+\item 
+\#define \hyperlink{color_8h_ac10136d6b82a2a56d71d6fd66512ec4f}{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}(c)~((c) \& $\sim$\hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A}(255))
+\item 
+\#define \hyperlink{color_8h_a3f1422b202af94af06c38f07388cbd22}{A\-L\-P\-H\-A}(a, c)~(\hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A}(a) $\vert$ \hyperlink{color_8h_ac10136d6b82a2a56d71d6fd66512ec4f}{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}(c))
+\item 
+\#define \hyperlink{color_8h_a304ef8446d557fe6bd93ec6d87dcd8a8}{C\-O\-L\-O\-R}(a, r, g, b)~(\hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A}(a) $\vert$ \hyperlink{color_8h_ac20ffdbbdea26d004f27b0ec65ac9fe4}{T\-O\-\_\-\-R\-E\-D}(r) $\vert$ \hyperlink{color_8h_a80d1db75b534c393ac3e6faaa6096654}{T\-O\-\_\-\-G\-R\-E\-E\-N}(g) $\vert$ \hyperlink{color_8h_a1bc5cadebf02a4a1b58ae0e26d970886}{T\-O\-\_\-\-B\-L\-U\-E}(b))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41}{e\-\_\-bunny\-\_\-rgb} \hyperlink{color_8h_ab574437c8cba7764e4ff7a5086a1ae96}{t\-\_\-bunny\-\_\-rgb}
+\item 
+typedef union \hyperlink{unionu__bunny__color}{u\-\_\-bunny\-\_\-color} \hyperlink{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}{t\-\_\-bunny\-\_\-color}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41}{e\-\_\-bunny\-\_\-rgb} \{ \hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a43af9567fbcd5d941371ed9e7bcd9db3}{R\-E\-D\-\_\-\-C\-M\-P} = 0, 
+\hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a0404b1fdfea02bc6c29a3db236c934cb}{G\-R\-E\-E\-N\-\_\-\-C\-M\-P} = 1, 
+\hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a84b9894e100778fa1a473198b4f5b356}{B\-L\-U\-E\-\_\-\-C\-M\-P} = 2, 
+\hyperlink{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41af022c9d92fc7b854fdfa7e0ed2e245bf}{A\-L\-P\-H\-A\-\_\-\-C\-M\-P} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The color module contains symbolic constants useful to manage colors and use them in a easy way. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{color_8h_a3f1422b202af94af06c38f07388cbd22}{\index{color.\-h@{color.\-h}!A\-L\-P\-H\-A@{A\-L\-P\-H\-A}}
+\index{A\-L\-P\-H\-A@{A\-L\-P\-H\-A}!color.h@{color.\-h}}
+\subsubsection[{A\-L\-P\-H\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-P\-H\-A(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~({\bf T\-O\-\_\-\-A\-L\-P\-H\-A}(a) $\vert$ {\bf G\-E\-T\-\_\-\-C\-O\-L\-O\-R}(c))}}\label{color_8h_a3f1422b202af94af06c38f07388cbd22}
+The A\-L\-P\-H\-A macro generates set the alpha component of the color given in c to a. For example, \hyperlink{color_8h_a3f1422b202af94af06c38f07388cbd22}{A\-L\-P\-H\-A(128, R\-E\-D)} will return 0x800000\-F\-F (0x80 being 128 in hex and R\-E\-D being 0x\-F\-F0000\-F\-F). \hypertarget{color_8h_a7b3b25cba33b07c303f3060fe41887f6}{\index{color.\-h@{color.\-h}!B\-L\-A\-C\-K@{B\-L\-A\-C\-K}}
+\index{B\-L\-A\-C\-K@{B\-L\-A\-C\-K}!color.h@{color.\-h}}
+\subsubsection[{B\-L\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-A\-C\-K~((uint32\-\_\-t)(255 $<$$<$ ({\bf A\-L\-P\-H\-A\-\_\-\-C\-M\-P} $\ast$ 8)))}}\label{color_8h_a7b3b25cba33b07c303f3060fe41887f6}
+\hypertarget{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}{\index{color.\-h@{color.\-h}!B\-L\-U\-E@{B\-L\-U\-E}}
+\index{B\-L\-U\-E@{B\-L\-U\-E}!color.h@{color.\-h}}
+\subsubsection[{B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-U\-E~((uint32\-\_\-t)({\bf B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ {\bf B\-L\-U\-E\-\_\-\-C\-M\-P} $\ast$ 8)))}}\label{color_8h_a79d10e672abb49ad63eeaa8aaef57c38}
+\hypertarget{color_8h_a304ef8446d557fe6bd93ec6d87dcd8a8}{\index{color.\-h@{color.\-h}!C\-O\-L\-O\-R@{C\-O\-L\-O\-R}}
+\index{C\-O\-L\-O\-R@{C\-O\-L\-O\-R}!color.h@{color.\-h}}
+\subsubsection[{C\-O\-L\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-L\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{r, }
+\item[{}]{g, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~({\bf T\-O\-\_\-\-A\-L\-P\-H\-A}(a) $\vert$ {\bf T\-O\-\_\-\-R\-E\-D}(r) $\vert$ {\bf T\-O\-\_\-\-G\-R\-E\-E\-N}(g) $\vert$ {\bf T\-O\-\_\-\-B\-L\-U\-E}(b))}}\label{color_8h_a304ef8446d557fe6bd93ec6d87dcd8a8}
+Compose a color by component and return it as an int. \hypertarget{color_8h_ac10136d6b82a2a56d71d6fd66512ec4f}{\index{color.\-h@{color.\-h}!G\-E\-T\-\_\-\-C\-O\-L\-O\-R@{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}}
+\index{G\-E\-T\-\_\-\-C\-O\-L\-O\-R@{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}!color.h@{color.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-C\-O\-L\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~((c) \& $\sim${\bf T\-O\-\_\-\-A\-L\-P\-H\-A}(255))}}\label{color_8h_ac10136d6b82a2a56d71d6fd66512ec4f}
+The G\-E\-T\-\_\-\-C\-O\-L\-O\-R macro removes the alpha component of the given color. For example, \hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A(\-W\-H\-I\-T\-E)} will return 0x00\-F\-F\-F\-F\-F\-F (W\-H\-I\-T\-E being 0x\-F\-F\-F\-F\-F\-F\-F\-F) \hypertarget{color_8h_acfbc006ea433ad708fdee3e82996e721}{\index{color.\-h@{color.\-h}!G\-R\-E\-E\-N@{G\-R\-E\-E\-N}}
+\index{G\-R\-E\-E\-N@{G\-R\-E\-E\-N}!color.h@{color.\-h}}
+\subsubsection[{G\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-E\-E\-N~((uint32\-\_\-t)({\bf B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ {\bf G\-R\-E\-E\-N\-\_\-\-C\-M\-P} $\ast$ 8)))}}\label{color_8h_acfbc006ea433ad708fdee3e82996e721}
+\hypertarget{color_8h_ada419fe3b48fcf19daed7cc57ccf1174}{\index{color.\-h@{color.\-h}!P\-I\-N\-K@{P\-I\-N\-K}}
+\index{P\-I\-N\-K@{P\-I\-N\-K}!color.h@{color.\-h}}
+\subsubsection[{P\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-N\-K~((uint32\-\_\-t)0x\-F\-F7777\-F\-F)}}\label{color_8h_ada419fe3b48fcf19daed7cc57ccf1174}
+\hypertarget{color_8h_afe605a3089daccb7424e7d2544e94703}{\index{color.\-h@{color.\-h}!P\-I\-N\-K2@{P\-I\-N\-K2}}
+\index{P\-I\-N\-K2@{P\-I\-N\-K2}!color.h@{color.\-h}}
+\subsubsection[{P\-I\-N\-K2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-N\-K2~((uint32\-\_\-t)0x\-F\-F\-B469\-F\-F)}}\label{color_8h_afe605a3089daccb7424e7d2544e94703}
+My favorite color $<$3 \hypertarget{color_8h_a0bb0b009e7a7390473ace4d98bd843c0}{\index{color.\-h@{color.\-h}!P\-U\-R\-P\-L\-E@{P\-U\-R\-P\-L\-E}}
+\index{P\-U\-R\-P\-L\-E@{P\-U\-R\-P\-L\-E}!color.h@{color.\-h}}
+\subsubsection[{P\-U\-R\-P\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-U\-R\-P\-L\-E~((uint32\-\_\-t)({\bf R\-E\-D} $\vert$ {\bf B\-L\-U\-E}))}}\label{color_8h_a0bb0b009e7a7390473ace4d98bd843c0}
+\hypertarget{color_8h_a8d23feea868a983c8c2b661e1e16972f}{\index{color.\-h@{color.\-h}!R\-E\-D@{R\-E\-D}}
+\index{R\-E\-D@{R\-E\-D}!color.h@{color.\-h}}
+\subsubsection[{R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-D~((uint32\-\_\-t)({\bf B\-L\-A\-C\-K} $\vert$ (255 $<$$<$ {\bf R\-E\-D\-\_\-\-C\-M\-P} $\ast$ 8)))}}\label{color_8h_a8d23feea868a983c8c2b661e1e16972f}
+\hypertarget{color_8h_a03e7881ce42823bcd8c3e798e03e7507}{\index{color.\-h@{color.\-h}!T\-E\-A\-L@{T\-E\-A\-L}}
+\index{T\-E\-A\-L@{T\-E\-A\-L}!color.h@{color.\-h}}
+\subsubsection[{T\-E\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-A\-L~((uint32\-\_\-t)({\bf G\-R\-E\-E\-N} $\vert$ {\bf B\-L\-U\-E}))}}\label{color_8h_a03e7881ce42823bcd8c3e798e03e7507}
+\hypertarget{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{\index{color.\-h@{color.\-h}!T\-O\-\_\-\-A\-L\-P\-H\-A@{T\-O\-\_\-\-A\-L\-P\-H\-A}}
+\index{T\-O\-\_\-\-A\-L\-P\-H\-A@{T\-O\-\_\-\-A\-L\-P\-H\-A}!color.h@{color.\-h}}
+\subsubsection[{T\-O\-\_\-\-A\-L\-P\-H\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-\_\-\-A\-L\-P\-H\-A(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(((a) \& 0x\-F\-F) $<$$<$ (\-A\-L\-P\-H\-A\-\_\-\-C\-M\-P $\ast$ 8))}}\label{color_8h_a47d7024b84ffd36d93ec67384ab6101b}
+The T\-O\-\_\-\-A\-L\-P\-H\-A macro transforms the given parameter into an alpha component for a color. For example, \hyperlink{color_8h_a47d7024b84ffd36d93ec67384ab6101b}{T\-O\-\_\-\-A\-L\-P\-H\-A(42)} will return 0x2a000000 (0x2a being 42 in hex) \hypertarget{color_8h_a1bc5cadebf02a4a1b58ae0e26d970886}{\index{color.\-h@{color.\-h}!T\-O\-\_\-\-B\-L\-U\-E@{T\-O\-\_\-\-B\-L\-U\-E}}
+\index{T\-O\-\_\-\-B\-L\-U\-E@{T\-O\-\_\-\-B\-L\-U\-E}!color.h@{color.\-h}}
+\subsubsection[{T\-O\-\_\-\-B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-\_\-\-B\-L\-U\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(((a) \& 0x\-F\-F) $<$$<$ (\-B\-L\-U\-E\-\_\-\-C\-M\-P $\ast$ 8))}}\label{color_8h_a1bc5cadebf02a4a1b58ae0e26d970886}
+The T\-O\-\_\-\-B\-L\-U\-E macro transforms the given parameter into a blue component for a color. \hypertarget{color_8h_a80d1db75b534c393ac3e6faaa6096654}{\index{color.\-h@{color.\-h}!T\-O\-\_\-\-G\-R\-E\-E\-N@{T\-O\-\_\-\-G\-R\-E\-E\-N}}
+\index{T\-O\-\_\-\-G\-R\-E\-E\-N@{T\-O\-\_\-\-G\-R\-E\-E\-N}!color.h@{color.\-h}}
+\subsubsection[{T\-O\-\_\-\-G\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-\_\-\-G\-R\-E\-E\-N(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(((a) \& 0x\-F\-F) $<$$<$ (\-G\-R\-E\-E\-N\-\_\-\-C\-M\-P $\ast$ 8))}}\label{color_8h_a80d1db75b534c393ac3e6faaa6096654}
+The T\-O\-\_\-\-G\-R\-E\-E\-N macro transforms the given parameter into a green component for a color. \hypertarget{color_8h_ac20ffdbbdea26d004f27b0ec65ac9fe4}{\index{color.\-h@{color.\-h}!T\-O\-\_\-\-R\-E\-D@{T\-O\-\_\-\-R\-E\-D}}
+\index{T\-O\-\_\-\-R\-E\-D@{T\-O\-\_\-\-R\-E\-D}!color.h@{color.\-h}}
+\subsubsection[{T\-O\-\_\-\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-\_\-\-R\-E\-D(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(((a) \& 0x\-F\-F) $<$$<$ (\-R\-E\-D\-\_\-\-C\-M\-P $\ast$ 8))}}\label{color_8h_ac20ffdbbdea26d004f27b0ec65ac9fe4}
+The T\-O\-\_\-\-R\-E\-D macro transforms the given parameter into a red component for a color. \hypertarget{color_8h_a87b537f5fa5c109d3c05c13d6b18f382}{\index{color.\-h@{color.\-h}!W\-H\-I\-T\-E@{W\-H\-I\-T\-E}}
+\index{W\-H\-I\-T\-E@{W\-H\-I\-T\-E}!color.h@{color.\-h}}
+\subsubsection[{W\-H\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-H\-I\-T\-E~((uint32\-\_\-t)({\bf R\-E\-D} $\vert$ {\bf G\-R\-E\-E\-N} $\vert$ {\bf B\-L\-U\-E}))}}\label{color_8h_a87b537f5fa5c109d3c05c13d6b18f382}
+\hypertarget{color_8h_abf681265909adf3d3e8116c93c0ba179}{\index{color.\-h@{color.\-h}!Y\-E\-L\-L\-O\-W@{Y\-E\-L\-L\-O\-W}}
+\index{Y\-E\-L\-L\-O\-W@{Y\-E\-L\-L\-O\-W}!color.h@{color.\-h}}
+\subsubsection[{Y\-E\-L\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-E\-L\-L\-O\-W~((uint32\-\_\-t)({\bf R\-E\-D} $\vert$ {\bf G\-R\-E\-E\-N}))}}\label{color_8h_abf681265909adf3d3e8116c93c0ba179}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}{\index{color.\-h@{color.\-h}!t\-\_\-bunny\-\_\-color@{t\-\_\-bunny\-\_\-color}}
+\index{t\-\_\-bunny\-\_\-color@{t\-\_\-bunny\-\_\-color}!color.h@{color.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf u\-\_\-bunny\-\_\-color}				 {\bf t\-\_\-bunny\-\_\-color}}}\label{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}
+The t\-\_\-bunny\-\_\-color union represents a pixel color. This union allow you to manipulate the color in different convenient ways.
+
+The first way is throught the \char`\"{}full\char`\"{} attribute\-: The full attribute allow you to copy, erase or assign the complete color in one single operation like this\-:
+\begin{DoxyItemize}
+\item clr.\-full = B\-L\-A\-C\-K;
+\item clr2.\-full = clr.\-full;
+\end{DoxyItemize}
+
+The second way is throught the argb array. The arbg array allow you to access to every color components separately. Combined with the t\-\_\-bunny\-\_\-rgb, it allows you to write clear code about what you are managing.
+\begin{DoxyItemize}
+\item clr.\-full = clrx.\-full;
+\item clr.\-argb\mbox{[}R\-E\-D\-\_\-\-C\-M\-P\mbox{]} = 0;
+\end{DoxyItemize}
+
+The third way is throught the mod array. The mod array look likes the argb array but is different in its usage. The argb array is useful to set or read color components. The mod array is useful to modify other colors, as a \char`\"{}color speed\char`\"{} or offset. The mod array being an array of signed integers allows these offets to be negative.
+\begin{DoxyItemize}
+\item back\-\_\-color.\-argb\mbox{[}G\-R\-E\-E\-N\-\_\-\-C\-M\-P\mbox{]} += color\-\_\-modifier.\-mod\mbox{[}G\-R\-E\-E\-N\-\_\-\-C\-M\-P\mbox{]} 
+\end{DoxyItemize}\hypertarget{color_8h_ab574437c8cba7764e4ff7a5086a1ae96}{\index{color.\-h@{color.\-h}!t\-\_\-bunny\-\_\-rgb@{t\-\_\-bunny\-\_\-rgb}}
+\index{t\-\_\-bunny\-\_\-rgb@{t\-\_\-bunny\-\_\-rgb}!color.h@{color.\-h}}
+\subsubsection[{t\-\_\-bunny\-\_\-rgb}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf e\-\_\-bunny\-\_\-rgb}				 {\bf t\-\_\-bunny\-\_\-rgb}}}\label{color_8h_ab574437c8cba7764e4ff7a5086a1ae96}
+The t\-\_\-bunny\-\_\-rgb enumeration contains the index inside a color of every color components. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41}{\index{color.\-h@{color.\-h}!e\-\_\-bunny\-\_\-rgb@{e\-\_\-bunny\-\_\-rgb}}
+\index{e\-\_\-bunny\-\_\-rgb@{e\-\_\-bunny\-\_\-rgb}!color.h@{color.\-h}}
+\subsubsection[{e\-\_\-bunny\-\_\-rgb}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf e\-\_\-bunny\-\_\-rgb}}}\label{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41}
+The t\-\_\-bunny\-\_\-rgb enumeration contains the index inside a color of every color components. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-E\-D\-\_\-\-C\-M\-P@{R\-E\-D\-\_\-\-C\-M\-P}!color.\-h@{color.\-h}}\index{color.\-h@{color.\-h}!R\-E\-D\-\_\-\-C\-M\-P@{R\-E\-D\-\_\-\-C\-M\-P}}\item[{\em 
+\hypertarget{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a43af9567fbcd5d941371ed9e7bcd9db3}{R\-E\-D\-\_\-\-C\-M\-P}\label{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a43af9567fbcd5d941371ed9e7bcd9db3}
+}]\index{G\-R\-E\-E\-N\-\_\-\-C\-M\-P@{G\-R\-E\-E\-N\-\_\-\-C\-M\-P}!color.\-h@{color.\-h}}\index{color.\-h@{color.\-h}!G\-R\-E\-E\-N\-\_\-\-C\-M\-P@{G\-R\-E\-E\-N\-\_\-\-C\-M\-P}}\item[{\em 
+\hypertarget{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a0404b1fdfea02bc6c29a3db236c934cb}{G\-R\-E\-E\-N\-\_\-\-C\-M\-P}\label{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a0404b1fdfea02bc6c29a3db236c934cb}
+}]\index{B\-L\-U\-E\-\_\-\-C\-M\-P@{B\-L\-U\-E\-\_\-\-C\-M\-P}!color.\-h@{color.\-h}}\index{color.\-h@{color.\-h}!B\-L\-U\-E\-\_\-\-C\-M\-P@{B\-L\-U\-E\-\_\-\-C\-M\-P}}\item[{\em 
+\hypertarget{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a84b9894e100778fa1a473198b4f5b356}{B\-L\-U\-E\-\_\-\-C\-M\-P}\label{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41a84b9894e100778fa1a473198b4f5b356}
+}]\index{A\-L\-P\-H\-A\-\_\-\-C\-M\-P@{A\-L\-P\-H\-A\-\_\-\-C\-M\-P}!color.\-h@{color.\-h}}\index{color.\-h@{color.\-h}!A\-L\-P\-H\-A\-\_\-\-C\-M\-P@{A\-L\-P\-H\-A\-\_\-\-C\-M\-P}}\item[{\em 
+\hypertarget{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41af022c9d92fc7b854fdfa7e0ed2e245bf}{A\-L\-P\-H\-A\-\_\-\-C\-M\-P}\label{color_8h_a3b4ebcf820dec4697f3b99e0a5b29c41af022c9d92fc7b854fdfa7e0ed2e245bf}
+}]\end{description}
+\end{Desc}

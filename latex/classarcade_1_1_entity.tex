@@ -1,0 +1,388 @@
+\hypertarget{classarcade_1_1_entity}{\section{arcade\-:\-:Entity Class Reference}
+\label{classarcade_1_1_entity}\index{arcade\-::\-Entity@{arcade\-::\-Entity}}
+}
+
+
+{\ttfamily \#include $<$Entity.\-hpp$>$}
+
+Inheritance diagram for arcade\-:\-:Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.085661cm]{classarcade_1_1_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classarcade_1_1_entity_ab9ece5d5ebfb1bd777b3bb4679675038}{$\sim$\-Entity} ()
+\item 
+\hyperlink{classarcade_1_1_entity_a21ee1d86ac3296c2d00350a87d096133}{Entity} (\hyperlink{classarcade_1_1_entity}{Entity} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&cpy)
+\item 
+\hyperlink{classarcade_1_1_entity_a49c35920269301b6588ae657a821c9be}{Entity} (\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&pos, \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} Type, \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} Type\-Evolution, \hyperlink{unionarcade_1_1_color}{Color} col, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} collide)
+\item 
+\hyperlink{classarcade_1_1_entity_af8fd394535036b1602d5177205ebb8dc}{Entity} (\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&pos, std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ id, std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ sprite\-Count, \hyperlink{namespacearcade_a370755573a2c68e25c59bedd4bce1342}{Orientation} dir, \hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} Type, \hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} Type\-Evolution, \hyperlink{unionarcade_1_1_color}{Color} col, \hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} collide)
+\item 
+\hyperlink{classarcade_1_1_entity}{Entity} \& \hyperlink{classarcade_1_1_entity_ad21d88753349b1bf1b0972ba1d38f923}{operator=} (\hyperlink{classarcade_1_1_entity}{Entity} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&cpy)
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \& \hyperlink{classarcade_1_1_entity_acd44c89f38f0737cf483681aa88519c7}{get\-Abs} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_ad7fa150bb74a2e66cb4fa04d6fb79e97}{Vector2d} \& \hyperlink{classarcade_1_1_entity_aa39c2db232463e8d6a8a61651a3ab18d}{get\-Shift} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \& \hyperlink{classarcade_1_1_entity_a2d897aefdec2d146fe16c929e113b764}{get\-Prev} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_entity_ae75ee5d42003069981c556e340d1d24f}{has\-Sprite} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_entity_a5196a3209daf1d585384c151d8d0c018}{get\-Sprite\-Id} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} \hyperlink{classarcade_1_1_entity_afceddaa167b23eb12db75404266228aa}{get\-Type} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} \hyperlink{classarcade_1_1_entity_a4c7c55cd3cc42ea9b4215b537db1a675}{get\-Type\-Evolution} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \& \hyperlink{classarcade_1_1_entity_ae3ac671c48bf07ce93efa4d846a9b0ae}{get\-Color} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_entity_a52ba21dd0a42b2d4ceefac98ec6a1520}{get\-Sprite\-Count} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{namespacearcade_a370755573a2c68e25c59bedd4bce1342}{Orientation} \hyperlink{classarcade_1_1_entity_ab69c98f7385b7fac24200098dccafae9}{get\-Orientation} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+void \hyperlink{classarcade_1_1_entity_a9cad6bddf51b9a9ccf9fe0ef30570719}{set\-Abs} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \&\hyperlink{classarcade_1_1_entity_a1ac9b04966209d8ce0fb3a80448e4c24}{abs})
+\item 
+void \hyperlink{classarcade_1_1_entity_a293aa767edc0fb733a2408b09e2ad7be}{set\-Shift} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_ad7fa150bb74a2e66cb4fa04d6fb79e97}{Vector2d} \&\hyperlink{classarcade_1_1_entity_a77dc790cc43e3bac252a91ed54de86a2}{shift})
+\item 
+void \hyperlink{classarcade_1_1_entity_aaaf6dbefe8fa8f339b126fc8a27bbcb8}{set\-Prev} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \&\hyperlink{classarcade_1_1_entity_aa85d7facf49ca0a8dac81672be95c5f0}{prev})
+\item 
+void \hyperlink{classarcade_1_1_entity_abe4f34ae3e985096789348794a38df24}{set\-Type} (\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} \hyperlink{classarcade_1_1_entity_ae7c84a1d8dfb2e2581a745f3743409c5}{type})
+\item 
+void \hyperlink{classarcade_1_1_entity_a9927bab1649fc06f39df99574a2188bb}{set\-Type\-Evolution} (\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} \hyperlink{classarcade_1_1_entity_a01a2fd9e95413166c79f680995a9cf3a}{type\-Evolution})
+\item 
+void \hyperlink{classarcade_1_1_entity_a3382c1c787209613cf22ae09b3fb9886}{set\-Color} (\hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \hyperlink{unionarcade_1_1_color}{Color} \&\hyperlink{classarcade_1_1_entity_acaa60759203bf9cdeffb2e3303c7e68e}{color})
+\item 
+void \hyperlink{classarcade_1_1_entity_a6047dc6cc3a6302cfa577e57bc77e1ee}{set\-Sprite} (std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ id, std\-::vector$<$ \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} $>$ sprite\-Count, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} index=0)
+\item 
+void \hyperlink{classarcade_1_1_entity_aa243f964ec924d7969f0b3d7a3994f56}{un\-Set\-Sprite} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_ac08e5c8499771d96753596a8e9961ace}{set\-New\-Dir} (\hyperlink{namespacearcade_a370755573a2c68e25c59bedd4bce1342}{Orientation} dir)
+\item 
+void \hyperlink{classarcade_1_1_entity_a509de7e8929736e073ba2c3802969bec}{pause\-Animation} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_a6c3e46bbc37f68fb91ef0ac460a32a36}{play\-Animation} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_ac8edc7223abe24f75c175f7a867f9ff7}{reset\-Animation} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_ae0ee5f40f6125a8d188f53d7c7ad0180}{set\-Animation\-Repeat} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_ada9c9fb4e1924a5b04945988d2c07f50}{set\-Animation\-Unique} ()
+\item 
+void \hyperlink{classarcade_1_1_entity_a2d30e5792fd9639cb312d206723b131a}{set\-Animation\-Mode} (\hyperlink{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146}{arcade\-::\-Sprite\-::\-Sprite\-Mode} mode)
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_entity_a1c3b256aa8b5466d177a94722cd06e32}{advance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_entity_a56d9f9927d75b980594c7c4ee56f2f68}{Entity} ()=delete
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{classarcade_1_1_entity_a1ac9b04966209d8ce0fb3a80448e4c24}{abs}
+\item 
+\hyperlink{namespacearcade_ad7fa150bb74a2e66cb4fa04d6fb79e97}{Vector2d} \hyperlink{classarcade_1_1_entity_a77dc790cc43e3bac252a91ed54de86a2}{shift}
+\item 
+\hyperlink{namespacearcade_a8e527f7400fbff9c38dc31e0a3dd06a1}{Vector2s} \hyperlink{classarcade_1_1_entity_aa85d7facf49ca0a8dac81672be95c5f0}{prev}
+\item 
+\hyperlink{namespacearcade_a61ba576694ea309cdf2b4b66902408ca}{Tile\-Type} \hyperlink{classarcade_1_1_entity_ae7c84a1d8dfb2e2581a745f3743409c5}{type}
+\item 
+\hyperlink{namespacearcade_a2e0a64a64203f78c9efb84a1475a8cf4}{Tile\-Type\-Evolution} \hyperlink{classarcade_1_1_entity_a01a2fd9e95413166c79f680995a9cf3a}{type\-Evolution}
+\item 
+\hyperlink{unionarcade_1_1_color}{Color} \hyperlink{classarcade_1_1_entity_acaa60759203bf9cdeffb2e3303c7e68e}{color}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_entity_a5aeaf26710a73587ca961cfd1e8879a1}{sprite\-Set}
+\item 
+\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} \hyperlink{classarcade_1_1_entity_ae028e75117e13aa7848672626df867ad}{collidable}
+\item 
+\hyperlink{namespacearcade_a370755573a2c68e25c59bedd4bce1342}{Orientation} \hyperlink{classarcade_1_1_entity_a680d412f399a7fab4d0a104fd3f7d0bc}{cur\-Sprite}
+\item 
+std\-::vector$<$ \hyperlink{classarcade_1_1_sprite}{Sprite} $>$ \hyperlink{classarcade_1_1_entity_a609826b1c9d93e8b3aaa9362cb549bad}{sprite}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_entity_a56d9f9927d75b980594c7c4ee56f2f68}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{classarcade_1_1_entity_a56d9f9927d75b980594c7c4ee56f2f68}
+\hypertarget{classarcade_1_1_entity_ab9ece5d5ebfb1bd777b3bb4679675038}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!$\sim$\-Entity@{$\sim$\-Entity}}
+\index{$\sim$\-Entity@{$\sim$\-Entity}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{$\sim$\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}virtual arcade\-::\-Entity\-::$\sim$\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classarcade_1_1_entity_ab9ece5d5ebfb1bd777b3bb4679675038}
+\hypertarget{classarcade_1_1_entity_a21ee1d86ac3296c2d00350a87d096133}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Entity} {\bf const} \&}]{cpy}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a21ee1d86ac3296c2d00350a87d096133}
+\hypertarget{classarcade_1_1_entity_a49c35920269301b6588ae657a821c9be}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector2s} {\bf const} \&}]{pos, }
+\item[{{\bf arcade\-::\-Tile\-Type}}]{Type, }
+\item[{{\bf arcade\-::\-Tile\-Type\-Evolution}}]{Type\-Evolution, }
+\item[{{\bf arcade\-::\-Color}}]{col, }
+\item[{{\bf bool}}]{collide}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a49c35920269301b6588ae657a821c9be}
+\hypertarget{classarcade_1_1_entity_af8fd394535036b1602d5177205ebb8dc}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector2s} {\bf const} \&}]{pos, }
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{id, }
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{sprite\-Count, }
+\item[{{\bf Orientation}}]{dir, }
+\item[{{\bf arcade\-::\-Tile\-Type}}]{Type, }
+\item[{{\bf arcade\-::\-Tile\-Type\-Evolution}}]{Type\-Evolution, }
+\item[{{\bf arcade\-::\-Color}}]{col, }
+\item[{{\bf bool}}]{collide}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_af8fd394535036b1602d5177205ebb8dc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_entity_a1c3b256aa8b5466d177a94722cd06e32}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!advance@{advance}}
+\index{advance@{advance}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Entity\-::advance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a1c3b256aa8b5466d177a94722cd06e32}
+\hypertarget{classarcade_1_1_entity_acd44c89f38f0737cf483681aa88519c7}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Abs@{get\-Abs}}
+\index{get\-Abs@{get\-Abs}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Abs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Vector2s} \& arcade\-::\-Entity\-::get\-Abs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_acd44c89f38f0737cf483681aa88519c7}
+\hypertarget{classarcade_1_1_entity_ae3ac671c48bf07ce93efa4d846a9b0ae}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Color@{get\-Color}}
+\index{get\-Color@{get\-Color}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Color} \& arcade\-::\-Entity\-::get\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_ae3ac671c48bf07ce93efa4d846a9b0ae}
+\hypertarget{classarcade_1_1_entity_ab69c98f7385b7fac24200098dccafae9}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Orientation} arcade\-::\-Entity\-::get\-Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_ab69c98f7385b7fac24200098dccafae9}
+\hypertarget{classarcade_1_1_entity_a2d897aefdec2d146fe16c929e113b764}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Prev@{get\-Prev}}
+\index{get\-Prev@{get\-Prev}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Prev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Vector2s} \& arcade\-::\-Entity\-::get\-Prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_a2d897aefdec2d146fe16c929e113b764}
+\hypertarget{classarcade_1_1_entity_aa39c2db232463e8d6a8a61651a3ab18d}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Shift@{get\-Shift}}
+\index{get\-Shift@{get\-Shift}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Shift}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const} {\bf arcade\-::\-Vector2d} \& arcade\-::\-Entity\-::get\-Shift (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_aa39c2db232463e8d6a8a61651a3ab18d}
+\hypertarget{classarcade_1_1_entity_a52ba21dd0a42b2d4ceefac98ec6a1520}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Sprite\-Count@{get\-Sprite\-Count}}
+\index{get\-Sprite\-Count@{get\-Sprite\-Count}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Sprite\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Entity\-::get\-Sprite\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_a52ba21dd0a42b2d4ceefac98ec6a1520}
+\hypertarget{classarcade_1_1_entity_a5196a3209daf1d585384c151d8d0c018}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Sprite\-Id@{get\-Sprite\-Id}}
+\index{get\-Sprite\-Id@{get\-Sprite\-Id}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Sprite\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Entity\-::get\-Sprite\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_a5196a3209daf1d585384c151d8d0c018}
+\hypertarget{classarcade_1_1_entity_afceddaa167b23eb12db75404266228aa}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile\-Type} arcade\-::\-Entity\-::get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_afceddaa167b23eb12db75404266228aa}
+\hypertarget{classarcade_1_1_entity_a4c7c55cd3cc42ea9b4215b537db1a675}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!get\-Type\-Evolution@{get\-Type\-Evolution}}
+\index{get\-Type\-Evolution@{get\-Type\-Evolution}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{get\-Type\-Evolution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Tile\-Type\-Evolution} arcade\-::\-Entity\-::get\-Type\-Evolution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_a4c7c55cd3cc42ea9b4215b537db1a675}
+\hypertarget{classarcade_1_1_entity_ae75ee5d42003069981c556e340d1d24f}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!has\-Sprite@{has\-Sprite}}
+\index{has\-Sprite@{has\-Sprite}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{has\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Entity\-::has\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_entity_ae75ee5d42003069981c556e340d1d24f}
+\hypertarget{classarcade_1_1_entity_ad21d88753349b1bf1b0972ba1d38f923}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!operator=@{operator=}}
+\index{operator=@{operator=}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Entity} \& arcade\-::\-Entity\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} {\bf const} \&}]{cpy}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_ad21d88753349b1bf1b0972ba1d38f923}
+\hypertarget{classarcade_1_1_entity_a509de7e8929736e073ba2c3802969bec}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!pause\-Animation@{pause\-Animation}}
+\index{pause\-Animation@{pause\-Animation}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{pause\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::pause\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a509de7e8929736e073ba2c3802969bec}
+\hypertarget{classarcade_1_1_entity_a6c3e46bbc37f68fb91ef0ac460a32a36}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!play\-Animation@{play\-Animation}}
+\index{play\-Animation@{play\-Animation}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{play\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::play\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a6c3e46bbc37f68fb91ef0ac460a32a36}
+\hypertarget{classarcade_1_1_entity_ac8edc7223abe24f75c175f7a867f9ff7}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!reset\-Animation@{reset\-Animation}}
+\index{reset\-Animation@{reset\-Animation}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{reset\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::reset\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_ac8edc7223abe24f75c175f7a867f9ff7}
+\hypertarget{classarcade_1_1_entity_a9cad6bddf51b9a9ccf9fe0ef30570719}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Abs@{set\-Abs}}
+\index{set\-Abs@{set\-Abs}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Abs}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Abs (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Vector2s} \&}]{abs}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a9cad6bddf51b9a9ccf9fe0ef30570719}
+\hypertarget{classarcade_1_1_entity_a2d30e5792fd9639cb312d206723b131a}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Animation\-Mode@{set\-Animation\-Mode}}
+\index{set\-Animation\-Mode@{set\-Animation\-Mode}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Animation\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Animation\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Sprite\-::\-Sprite\-Mode}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a2d30e5792fd9639cb312d206723b131a}
+\hypertarget{classarcade_1_1_entity_ae0ee5f40f6125a8d188f53d7c7ad0180}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Animation\-Repeat@{set\-Animation\-Repeat}}
+\index{set\-Animation\-Repeat@{set\-Animation\-Repeat}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Animation\-Repeat}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Animation\-Repeat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_ae0ee5f40f6125a8d188f53d7c7ad0180}
+\hypertarget{classarcade_1_1_entity_ada9c9fb4e1924a5b04945988d2c07f50}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Animation\-Unique@{set\-Animation\-Unique}}
+\index{set\-Animation\-Unique@{set\-Animation\-Unique}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Animation\-Unique}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Animation\-Unique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_ada9c9fb4e1924a5b04945988d2c07f50}
+\hypertarget{classarcade_1_1_entity_a3382c1c787209613cf22ae09b3fb9886}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Color} \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a3382c1c787209613cf22ae09b3fb9886}
+\hypertarget{classarcade_1_1_entity_ac08e5c8499771d96753596a8e9961ace}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-New\-Dir@{set\-New\-Dir}}
+\index{set\-New\-Dir@{set\-New\-Dir}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-New\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-New\-Dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Orientation}}]{dir}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_ac08e5c8499771d96753596a8e9961ace}
+\hypertarget{classarcade_1_1_entity_aaaf6dbefe8fa8f339b126fc8a27bbcb8}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Prev@{set\-Prev}}
+\index{set\-Prev@{set\-Prev}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Prev}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Prev (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Vector2s} \&}]{prev}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_aaaf6dbefe8fa8f339b126fc8a27bbcb8}
+\hypertarget{classarcade_1_1_entity_a293aa767edc0fb733a2408b09e2ad7be}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Shift@{set\-Shift}}
+\index{set\-Shift@{set\-Shift}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Shift}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Shift (
+\begin{DoxyParamCaption}
+\item[{{\bf const} {\bf Vector2d} \&}]{shift}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a293aa767edc0fb733a2408b09e2ad7be}
+\hypertarget{classarcade_1_1_entity_a6047dc6cc3a6302cfa577e57bc77e1ee}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Sprite@{set\-Sprite}}
+\index{set\-Sprite@{set\-Sprite}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Sprite (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{id, }
+\item[{std\-::vector$<$ {\bf size\-\_\-t} $>$}]{sprite\-Count, }
+\item[{{\bf size\-\_\-t}}]{index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a6047dc6cc3a6302cfa577e57bc77e1ee}
+\hypertarget{classarcade_1_1_entity_abe4f34ae3e985096789348794a38df24}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Type@{set\-Type}}
+\index{set\-Type@{set\-Type}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Tile\-Type}}]{Type}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_abe4f34ae3e985096789348794a38df24}
+\hypertarget{classarcade_1_1_entity_a9927bab1649fc06f39df99574a2188bb}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!set\-Type\-Evolution@{set\-Type\-Evolution}}
+\index{set\-Type\-Evolution@{set\-Type\-Evolution}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{set\-Type\-Evolution}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::set\-Type\-Evolution (
+\begin{DoxyParamCaption}
+\item[{{\bf arcade\-::\-Tile\-Type\-Evolution}}]{Type\-Evolution}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_a9927bab1649fc06f39df99574a2188bb}
+\hypertarget{classarcade_1_1_entity_aa243f964ec924d7969f0b3d7a3994f56}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!un\-Set\-Sprite@{un\-Set\-Sprite}}
+\index{un\-Set\-Sprite@{un\-Set\-Sprite}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{un\-Set\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Entity\-::un\-Set\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_entity_aa243f964ec924d7969f0b3d7a3994f56}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classarcade_1_1_entity_a1ac9b04966209d8ce0fb3a80448e4c24}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!abs@{abs}}
+\index{abs@{abs}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2s} arcade\-::\-Entity\-::abs\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a1ac9b04966209d8ce0fb3a80448e4c24}
+\hypertarget{classarcade_1_1_entity_ae028e75117e13aa7848672626df867ad}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!collidable@{collidable}}
+\index{collidable@{collidable}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{collidable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Entity\-::collidable\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_ae028e75117e13aa7848672626df867ad}
+\hypertarget{classarcade_1_1_entity_acaa60759203bf9cdeffb2e3303c7e68e}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!color@{color}}
+\index{color@{color}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} arcade\-::\-Entity\-::color\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_acaa60759203bf9cdeffb2e3303c7e68e}
+\hypertarget{classarcade_1_1_entity_a680d412f399a7fab4d0a104fd3f7d0bc}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!cur\-Sprite@{cur\-Sprite}}
+\index{cur\-Sprite@{cur\-Sprite}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{cur\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Orientation} arcade\-::\-Entity\-::cur\-Sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a680d412f399a7fab4d0a104fd3f7d0bc}
+\hypertarget{classarcade_1_1_entity_aa85d7facf49ca0a8dac81672be95c5f0}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!prev@{prev}}
+\index{prev@{prev}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2s} arcade\-::\-Entity\-::prev\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_aa85d7facf49ca0a8dac81672be95c5f0}
+\hypertarget{classarcade_1_1_entity_a77dc790cc43e3bac252a91ed54de86a2}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!shift@{shift}}
+\index{shift@{shift}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{shift}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2d} arcade\-::\-Entity\-::shift\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a77dc790cc43e3bac252a91ed54de86a2}
+\hypertarget{classarcade_1_1_entity_a609826b1c9d93e8b3aaa9362cb549bad}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!sprite@{sprite}}
+\index{sprite@{sprite}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{sprite}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Sprite}$>$ arcade\-::\-Entity\-::sprite\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a609826b1c9d93e8b3aaa9362cb549bad}
+\hypertarget{classarcade_1_1_entity_a5aeaf26710a73587ca961cfd1e8879a1}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!sprite\-Set@{sprite\-Set}}
+\index{sprite\-Set@{sprite\-Set}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{sprite\-Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} arcade\-::\-Entity\-::sprite\-Set\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a5aeaf26710a73587ca961cfd1e8879a1}
+\hypertarget{classarcade_1_1_entity_ae7c84a1d8dfb2e2581a745f3743409c5}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!type@{type}}
+\index{type@{type}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile\-Type} arcade\-::\-Entity\-::type\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_ae7c84a1d8dfb2e2581a745f3743409c5}
+\hypertarget{classarcade_1_1_entity_a01a2fd9e95413166c79f680995a9cf3a}{\index{arcade\-::\-Entity@{arcade\-::\-Entity}!type\-Evolution@{type\-Evolution}}
+\index{type\-Evolution@{type\-Evolution}!arcade::Entity@{arcade\-::\-Entity}}
+\subsubsection[{type\-Evolution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tile\-Type\-Evolution} arcade\-::\-Entity\-::type\-Evolution\hspace{0.3cm}{\ttfamily [protected]}}}\label{classarcade_1_1_entity_a01a2fd9e95413166c79f680995a9cf3a}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{_entity_8hpp}{Entity.\-hpp}\item 
+games/common/src/\hyperlink{_entity_8cpp}{Entity.\-cpp}\end{DoxyCompactItemize}

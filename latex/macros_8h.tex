@@ -1,0 +1,1974 @@
+\hypertarget{macros_8h}{\section{lib/lapin/dep/lapin/macros.h File Reference}
+\label{macros_8h}\index{lib/lapin/dep/lapin/macros.\-h@{lib/lapin/dep/lapin/macros.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{macros_8h_a6e5967568ae1cc2e43e9d34a1419300b}{bal\-\_\-malloc}(siz)~\hyperlink{allocator_8h_a9c32c9f032e14d4640e23b4ea2d14106}{bunny\-\_\-malloc}(siz)
+\item 
+\#define \hyperlink{macros_8h_afcf00c614357435d0b3ea5a22e1e7fb1}{bal\-\_\-calloc}(num, siz)~\hyperlink{allocator_8h_ab52a4701101f4d448f0d98c04dce0718}{bunny\-\_\-calloc}(num, siz)
+\item 
+\#define \hyperlink{macros_8h_aedc0185ddc7fd17046c058f0e586b5e5}{bal\-\_\-realloc}(ptr, siz)~\hyperlink{allocator_8h_a5fa623b5b25f614bca258291536b5832}{bunny\-\_\-realloc}(ptr, siz)
+\item 
+\#define \hyperlink{macros_8h_ad027a58671df1f88d6140e2ea21b285e}{bal\-\_\-free}(ptr)~\hyperlink{allocator_8h_acc8287bc7fe000c7ef5bd9215a6ec9a8}{bunny\-\_\-free}(ptr)
+\item 
+\#define \hyperlink{macros_8h_a7558b8858394d593ed1ed57d90426b80}{bal\-\_\-set\-\_\-mem\-\_\-check}(chk)~\hyperlink{allocator_8h_a7229e2ebe869ffec0826e2b8d7d80a3e}{bunny\-\_\-set\-\_\-memory\-\_\-check}(chk)
+\item 
+\#define \hyperlink{macros_8h_af059b545c8c0b2335e4f2e29c2689269}{bal\-\_\-set\-\_\-max\-\_\-ram}(byt)~\hyperlink{allocator_8h_ab83561bad18a927b40a45c46ac4284e7}{bunny\-\_\-set\-\_\-maximum\-\_\-ram}(byt)
+\item 
+\#define \hyperlink{macros_8h_a97e2cca1390ddd35d8295e2d24961af9}{t\-\_\-call\-\_\-order}~\hyperlink{asynclock_8h_aff673a62aedb8946b2c0182ddae92a97}{t\-\_\-bunny\-\_\-call\-\_\-order}
+\item 
+\#define \hyperlink{macros_8h_a27874c9d94f150d38e110dcf5cb9cc10}{t\-\_\-trap\-\_\-function}~\hyperlink{asynclock_8h_a274714d28267198e48f559ec76a57309}{t\-\_\-bunny\-\_\-trap\-\_\-function}
+\item 
+\#define \hyperlink{macros_8h_a762891f8b9884b9d1be2520c926824cb}{t\-\_\-trap}~\hyperlink{asynclock_8h_abb57fa808183b5d33710f35995201bc7}{t\-\_\-bunny\-\_\-trap}
+\item 
+\#define \hyperlink{macros_8h_a6e3f2e4a2efe73f9c0df8aed182c3b6d}{bas\-\_\-trap}(func, order, stime, dur, par)~\hyperlink{asynclock_8h_abdcd87e14e15aea462b510d1188ecaa2}{bunny\-\_\-new\-\_\-trap}(func, order, stime, dur, par)
+\item 
+\#define \hyperlink{macros_8h_ad4234755b16b5783c666954ab6798958}{bas\-\_\-del\-\_\-trap}(trap)~\hyperlink{asynclock_8h_ada794a75d86630ebb94e1a9a21538abb}{bunny\-\_\-delete\-\_\-trap}(trap)
+\item 
+\#define \hyperlink{macros_8h_aff86a9f431f420f8512e7033f18d1e52}{bas\-\_\-asynclock}(elap, order)~bunny\-\_\-assynclock(elap, order)
+\item 
+\#define \hyperlink{macros_8h_ad50285f6b75f497bd4c5d6fe4ad1fb79}{bas\-\_\-reset\-\_\-clock}()~\hyperlink{asynclock_8h_a889042c2d64b5400951bc5a6b2f2830c}{bunny\-\_\-reset\-\_\-clock}()
+\item 
+\#define \hyperlink{macros_8h_a23dd2ffda721bfe538af4a11f0d68858}{bas\-\_\-current\-\_\-time}()~\hyperlink{asynclock_8h_a81c5228367be9ec4ef8cf4ce1354c763}{bunny\-\_\-get\-\_\-current\-\_\-time}()
+\item 
+\#define \hyperlink{macros_8h_a9c90489cc73ca6b027e8906aea77854d}{t\-\_\-buffer}~\hyperlink{buffer_8h_aaadbd154c7e3790c2d8ed734f79b64bd}{t\-\_\-bunny\-\_\-buffer}
+\item 
+\#define \hyperlink{macros_8h_afc5570890e738ccfcdfc4e1a58e07370}{bcol\-\_\-circle\-\_\-dot}(elem, dot, rad)~\hyperlink{collide_8h_a6fed49a76786bdf0ddb3c20f10300b47}{bunny\-\_\-circle\-\_\-collision\-\_\-dot}(elem, dot, rad)
+\item 
+\#define \hyperlink{macros_8h_abf8c5b7caaf486ffd02509eaac584cff}{bcol\-\_\-circle}(a, r1, b, r2)~\hyperlink{collide_8h_a223212c35bf67e9cac2d3015592cb440}{bunny\-\_\-circle\-\_\-collision}
+\item 
+\#define \hyperlink{macros_8h_a8c76d7fa791efce35b4392a13168381f}{bcol\-\_\-rect\-\_\-dot}(a, b)~bunny\-\_\-rectangular\-\_\-collision\-\_\-dot(a, b)
+\item 
+\#define \hyperlink{macros_8h_a2798a96b33470b984b7feedcecf2f479}{bcol\-\_\-rect}(a, b)~\hyperlink{collide_8h_a65ae566903f75307c5306d740ea6b1b5}{bunny\-\_\-rectangular\-\_\-collision}(a, b)
+\item 
+\#define \hyperlink{macros_8h_ad40a68ce34d14ae2a83b361bc11b976f}{bcol\-\_\-triangle\-\_\-dot}(a, b)~\hyperlink{collide_8h_a811867351bf3508aca25788e6044b07e}{bunny\-\_\-triangle\-\_\-collision\-\_\-dot}(a, b)
+\item 
+\#define \hyperlink{macros_8h_aa0b22db2683b522ff539ddb3072117a0}{bcol\-\_\-quad\-\_\-dot}(a, b)~\hyperlink{collide_8h_a2971504baebf606f2c3b5ad53e3b309b}{bunny\-\_\-quad\-\_\-collision\-\_\-dot}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a891d1955a21457d747c4deba016271fb}{t\-\_\-rgb}~\hyperlink{color_8h_ab574437c8cba7764e4ff7a5086a1ae96}{t\-\_\-bunny\-\_\-rgb}
+\item 
+\#define \hyperlink{macros_8h_a1d60d0a1191fb77465ac60261bae2e1d}{t\-\_\-color}~\hyperlink{color_8h_a731d74a9a3165b1f0e5f3102a15419ce}{t\-\_\-bunny\-\_\-color}
+\item 
+\#define \hyperlink{macros_8h_aa33e44d4d14a19ea2a4912b16d833d07}{t\-\_\-configuration}~\hyperlink{configuration_8h_acb18c71e4514b9d7d45e66ebba8c9ca3}{t\-\_\-bunny\-\_\-configuration}
+\item 
+\#define \hyperlink{macros_8h_a472d4e533bb61dd7f9e35be4ba05fa1c}{t\-\_\-read\-\_\-confifugration}~\hyperlink{configuration_8h_aa6d25152b83ea96116377b52db50e5fa}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}
+\item 
+\#define \hyperlink{macros_8h_acb4fd2620e2555b92ad01b9bfadc3d59}{gl\-\_\-read\-\_\-configuration}~\hyperlink{configuration_8h_a23bb984181b3be02e23d09f1c327aab1}{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}
+\item 
+\#define \hyperlink{macros_8h_a155249315edd9de91175401eda17febe}{t\-\_\-write\-\_\-confifugration}~\hyperlink{configuration_8h_ab789a97cd3fc2a67e2013d6dd6fb64a3}{t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}
+\item 
+\#define \hyperlink{macros_8h_ad92c143a105e57f7593fa1a23582ce3d}{gl\-\_\-write\-\_\-configuration}~\hyperlink{configuration_8h_a734181c71a14c5a93bddd1b561c04685}{gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}
+\item 
+\#define \hyperlink{macros_8h_a86709354a7aa18eed4a4d84efc29d5bc}{bc\-\_\-conf}()~\hyperlink{configuration_8h_a1377a6dac4481695c5586fca70d319c2}{bunny\-\_\-new\-\_\-configuration}()
+\item 
+\#define \hyperlink{macros_8h_a8351d7e82f0354e02c3e5e3da5f07726}{bc\-\_\-load\-\_\-conf}(t, f, c)~\hyperlink{configuration_8h_a74cd86ecfddc871773d2babd72372e1b}{bunny\-\_\-load\-\_\-configuration}(t, f, c)
+\item 
+\#define \hyperlink{macros_8h_a8709d524391a278fa0eab84afad8332d}{bc\-\_\-save\-\_\-conf}(t, f, c)~\hyperlink{configuration_8h_a4a579d9cb5c9caa0f28bd6a21ea3f959}{bunny\-\_\-save\-\_\-configuration}(t, f, c)
+\item 
+\#define \hyperlink{macros_8h_a990da7b1b25c4a29060070befde94529}{bc\-\_\-read\-\_\-conf}(t, cd, cn)~\hyperlink{configuration_8h_ad965b7cd9d93c8c605c71242cd625756}{bunny\-\_\-read\-\_\-configuration}(t, cd, cd)
+\item 
+\#define \hyperlink{macros_8h_a858356ea04c60153308742a4b681041b}{bc\-\_\-write\-\_\-conf}(t, c)~\hyperlink{configuration_8h_a128bd679ff31260b761b63b1d9218bdd}{bunny\-\_\-write\-\_\-configuration}(t, c)
+\item 
+\#define \hyperlink{macros_8h_aa9f635bbd4b0440c89580e9c20153dd7}{bc\-\_\-del\-\_\-conf}(c)~\hyperlink{configuration_8h_a6c4e3ed622bc25759470359cca4aa1da}{bunny\-\_\-delete\-\_\-configuration}(c)
+\item 
+\#define \hyperlink{macros_8h_a7547aed683d5afc6327021e30cacfd2f}{bc\-\_\-create\-\_\-mode}(b)~\hyperlink{configuration_8h_a8c62c50cf1ab38d5370d2fcc3a363fd7}{bunny\-\_\-configuration\-\_\-create\-\_\-mode}(b)
+\item 
+\#define \hyperlink{macros_8h_a55d38588dfcda2640325e2b27c53ae3b}{bc\-\_\-get\-\_\-parent}(c)~\hyperlink{configuration_8h_a33980583486b7228bda846ad8d0e4253}{bunny\-\_\-configuration\-\_\-get\-\_\-parent}(c)
+\item 
+\#define \hyperlink{macros_8h_a395937c4e244c578a756feac3680b017}{bc\-\_\-get\-\_\-name}(c)~\hyperlink{configuration_8h_a0797efe309a96135458d7d8aacd2f321}{bunny\-\_\-configuration\-\_\-get\-\_\-name}(c)
+\item 
+\#define \hyperlink{macros_8h_aae72fa8d543aea45fa0da91a1165e502}{bc\-\_\-get\-\_\-child}(cnf, c)~\hyperlink{configuration_8h_ab92f00e81b6b78d418e09f224d990ee3}{bunny\-\_\-configuration\-\_\-get\-\_\-child}(cnf, c)
+\item 
+\#define \hyperlink{macros_8h_a78bec9117f283ee7df6fe044f06e920a}{bc\-\_\-get\-\_\-case}(cnf, i)~\hyperlink{configuration_8h_ac46e0cbf1cd29e378560546a07f65c59}{bunny\-\_\-configuration\-\_\-get\-\_\-case}(cnf, i)
+\item 
+\#define \hyperlink{macros_8h_a98f573bb7fbd8b77dcb1c28376ebde12}{bc\-\_\-get\-\_\-string}(cnf, str)~\hyperlink{configuration_8h_ae19503cd3b9adcd28eeae728eab04e55}{bunny\-\_\-configuration\-\_\-get\-\_\-string}(cnf, str)
+\item 
+\#define \hyperlink{macros_8h_adc464fa1ab0c541e930946d17990e228}{bc\-\_\-get\-\_\-double}(cnf, val)~\hyperlink{configuration_8h_a34f94253b68949be7d11216ef97efd59}{bunny\-\_\-configuration\-\_\-get\-\_\-double}(cnf, val)
+\item 
+\#define \hyperlink{macros_8h_a8077849c0b45236e6b48945e698b3fe0}{bc\-\_\-get\-\_\-int}(cnf, val)~\hyperlink{configuration_8h_adb189d123cece2c2aea11ccd91019b37}{bunny\-\_\-configuration\-\_\-get\-\_\-int}(cnf, val)
+\item 
+\#define \hyperlink{macros_8h_a6cb456fd0d9c4f527d791d7026339df4}{bc\-\_\-set\-\_\-string}(cnf, str)~\hyperlink{configuration_8h_a3b91a362a037b76b86400221d0c5998e}{bunny\-\_\-configuration\-\_\-set\-\_\-string}(cnf, str)
+\item 
+\#define \hyperlink{macros_8h_a6ae8cd79d30cf0bfd2347bde0a69aefb}{bc\-\_\-set\-\_\-double}(cnf, val)~\hyperlink{configuration_8h_ac1c64879641abc6a47b986844bab5d1b}{bunny\-\_\-configuration\-\_\-set\-\_\-double}(cnf, val)
+\item 
+\#define \hyperlink{macros_8h_ac95358ec909cca4d32b278c5af904e60}{bc\-\_\-set\-\_\-int}(cnf, val)~\hyperlink{configuration_8h_aaa7733ca86439cc528a84260e211748b}{bunny\-\_\-configuration\-\_\-set\-\_\-int}(cnf, val)
+\item 
+\#define \hyperlink{macros_8h_a584044d0a16e221bb5cab49e9eff6d3e}{bc\-\_\-first}(c)~\hyperlink{configuration_8h_a0d928242549157f1397ad7c1fefe4d8d}{bunny\-\_\-configuration\-\_\-first}(c)
+\item 
+\#define \hyperlink{macros_8h_a43f09e65cdc3cfa0b20d8dfd3af30852}{bc\-\_\-next}(c)~\hyperlink{configuration_8h_a4216edc5d9b0422a65708be27568e803}{bunny\-\_\-configuration\-\_\-next}(c)
+\item 
+\#define \hyperlink{macros_8h_ab312d135adcd191ab8088f7bb7f1a236}{bc\-\_\-end}(c)~\hyperlink{configuration_8h_afe7308451e0168c84d3f0efb2680fc32}{bunny\-\_\-configuration\-\_\-end}(c)
+\item 
+\#define \hyperlink{macros_8h_a6505cb03672ac4de56d466eb0f474633}{L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N}~\hyperlink{enum_8h_a64f4f3273b014ee7be4db4332d1628a6}{L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-B\-U\-T\-T\-O\-N}
+\item 
+\#define \hyperlink{macros_8h_a434190aad9a91f28f47231fe67fa37de}{L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}~\hyperlink{enum_8h_a83f49c002f2aea74dc6fd45dd42e1b75}{L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}
+\item 
+\#define \hyperlink{macros_8h_a706a13dddd314b234568b7c62156db85}{t\-\_\-axis}~\hyperlink{enum_8h_ace1137c24b070f37cfb6c227a3a55a87}{t\-\_\-bunny\-\_\-axis}
+\item 
+\#define \hyperlink{macros_8h_a7fc03b6689a4ff2af4bd6e0f36612eaf}{t\-\_\-mouse\-\_\-button}~\hyperlink{enum_8h_a4f4c36d161b8d7bacebd032a774565a1}{t\-\_\-bunny\-\_\-mouse\-\_\-button}
+\item 
+\#define \hyperlink{macros_8h_a7240c6e1cafed7c4ce3949026353482a}{t\-\_\-keysym}~\hyperlink{enum_8h_a6bd88cacb5dbe63a85e8cededa379eb4}{t\-\_\-bunny\-\_\-keysym}
+\item 
+\#define \hyperlink{macros_8h_a277466c291350a5d300434da4b866c22}{t\-\_\-letter\-\_\-tab}~\hyperlink{enum_8h_a69e2282e8e24118605f91a01f805d72b}{t\-\_\-bunny\-\_\-letter\-\_\-tab}
+\item 
+\#define \hyperlink{macros_8h_afc7fe1399f95419eb274f35f18775ecd}{t\-\_\-response}~\hyperlink{events_8h_a42dc33a1f1839912c2fad4ea92bf4f30}{t\-\_\-bunny\-\_\-response}
+\item 
+\#define \hyperlink{macros_8h_a6fb306296bea0d9a3ccda8d548f61efd}{t\-\_\-event\-\_\-state}~\hyperlink{events_8h_a77d6083e762e1559d47116c11f734958}{t\-\_\-bunny\-\_\-event\-\_\-state}
+\item 
+\#define \hyperlink{macros_8h_ad297c53f22128093f4a9fd12c5d01cd2}{t\-\_\-key}~\hyperlink{events_8h_a923505573510fc2245f6b458eb46e682}{t\-\_\-bunny\-\_\-key}
+\item 
+\#define \hyperlink{macros_8h_aed05af23ef7ea31ebc7b5c20c1351beb}{t\-\_\-type}~\hyperlink{events_8h_a8f59b6ad23db7f96d0862c3f9d91ea8b}{t\-\_\-bunny\-\_\-type}
+\item 
+\#define \hyperlink{macros_8h_aca00091b31974337ff692d64e6cb04c2}{t\-\_\-click}~\hyperlink{events_8h_a10892e056f3e976b4bba845d113b83d3}{t\-\_\-bunny\-\_\-click}
+\item 
+\#define \hyperlink{macros_8h_a539e001d7146109c194996d5cf423cf4}{t\-\_\-move}~\hyperlink{events_8h_adca2c49e1e58405923f93a011f1c7213}{t\-\_\-bunny\-\_\-move}
+\item 
+\#define \hyperlink{macros_8h_a5020fb723c765fea761e3437cab4b02b}{t\-\_\-wheel}~\hyperlink{events_8h_a597cb9cea116b79a24ed5d91ef40cb32}{t\-\_\-bunny\-\_\-wheel}
+\item 
+\#define \hyperlink{macros_8h_a8906167abe0211a1da429d5db01df163}{t\-\_\-joystick}~\hyperlink{events_8h_a21ee2192565a30eaeb8958a8d14f102c}{t\-\_\-bunny\-\_\-joystick}
+\item 
+\#define \hyperlink{macros_8h_a7635439074fbddbfd9b6a2e6ab573651}{t\-\_\-joy\-\_\-connect}~\hyperlink{events_8h_a41e34e419406c012af86c340c97068bb}{t\-\_\-bunny\-\_\-joy\-\_\-connect}
+\item 
+\#define \hyperlink{macros_8h_ab8b48c263b1c7db478236026bda2768d}{t\-\_\-joy\-\_\-axis}~\hyperlink{events_8h_a762d924743c3e275802ee599cb2b13a5}{t\-\_\-bunny\-\_\-joy\-\_\-axis}
+\item 
+\#define \hyperlink{macros_8h_a87e6eed6398ab113fddf56535514cde0}{t\-\_\-joy\-\_\-button}~\hyperlink{events_8h_a349a528991e49278fe9cb485452ba6c5}{t\-\_\-bunny\-\_\-joy\-\_\-button}
+\item 
+\#define \hyperlink{macros_8h_a283ea711964ec90975e5b81429343380}{t\-\_\-get\-\_\-focus}~\hyperlink{events_8h_a14890b94609d8b3721fd3375bd76f215}{t\-\_\-bunny\-\_\-get\-\_\-focus}
+\item 
+\#define \hyperlink{macros_8h_a3bc968796b4431d3864a212e6eb2fe76}{t\-\_\-lost\-\_\-focus}~\hyperlink{events_8h_aa040457e55d20ff54f5cab67d7ecea6b}{t\-\_\-bunny\-\_\-lost\-\_\-focus}
+\item 
+\#define \hyperlink{macros_8h_a368b19c822e528b58d0952619f2e2850}{t\-\_\-resisze}~\hyperlink{events_8h_afd5ceaa3b3efadb30569c28164d39187}{t\-\_\-bunny\-\_\-resize}
+\item 
+\#define \hyperlink{macros_8h_a4814960df8ec864ab52cdc2be915c8c4}{t\-\_\-close}~\hyperlink{events_8h_a99955d212b8a4b9e07177e28628434f6}{t\-\_\-bunny\-\_\-close}
+\item 
+\#define \hyperlink{macros_8h_af7c2abab216a14970fadd0ad2e64401b}{t\-\_\-display}~\hyperlink{events_8h_a35c3d20f91259d6ffa5ff31bc3c37aaf}{t\-\_\-bunny\-\_\-display}
+\item 
+\#define \hyperlink{macros_8h_a1a789fed26548ed6c1b9ad2ce4d35911}{t\-\_\-loop}~\hyperlink{events_8h_ae4bd2301727bd9badea4701c67ee7a26}{t\-\_\-bunny\-\_\-loop}
+\item 
+\#define \hyperlink{macros_8h_af1a5f41fd25726ed5b8ee745bad61caf}{t\-\_\-context}~\hyperlink{events_8h_a09e815e35b0a4882f5dfc424bbc29e50}{t\-\_\-bunny\-\_\-context}
+\item 
+\#define \hyperlink{macros_8h_a1179d1de0d344229aae0c5e1acb9837f}{t\-\_\-acontext}~\hyperlink{events_8h_a7cb47fb9cfbb38bdda16871b99209f10}{t\-\_\-bunny\-\_\-anonymous\-\_\-context}
+\item 
+\#define \hyperlink{macros_8h_a06db118482fffce5a549cb2776273133}{bev\-\_\-key\-\_\-handler}(a)~\hyperlink{events_8h_a3467f4ea2b2b750ade53a9fb898b6853}{bunny\-\_\-set\-\_\-key\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_ac10fb1972cc52d52b8bae02a0113025c}{bev\-\_\-text\-\_\-handler}(a)~\hyperlink{events_8h_a8fb798b07bd28ab0b5a91cd9ec93354f}{bunny\-\_\-set\-\_\-text\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_abb0386690754b7f8b3282866e6f5e24f}{bev\-\_\-click\-\_\-handler}(a)~\hyperlink{events_8h_a0549c715d2f5e5822c3e5cb56abe7fc7}{bunny\-\_\-set\-\_\-click\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a40cedf33cbf45bf2609f27e129b1ead7}{bev\-\_\-get\-\_\-mouse\-\_\-button}()~\hyperlink{events_8h_a5f975e243fb900ad2c03500a10075926}{bunny\-\_\-get\-\_\-mouse\-\_\-button}()
+\item 
+\#define \hyperlink{macros_8h_ad09dd58c0c80aa847b1dda2304bb9977}{bev\-\_\-move\-\_\-handler}(a)~\hyperlink{events_8h_a8eac7a8c52c34af50c35c925ba8e6fa6}{bunny\-\_\-set\-\_\-move\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a0a3d4cffcb07ff9de3fa5c108260bf43}{bev\-\_\-get\-\_\-mouse\-\_\-position}()~\hyperlink{events_8h_a798750cd5d0609170af272da33aa8134}{bunny\-\_\-get\-\_\-mouse\-\_\-position}()
+\item 
+\#define \hyperlink{macros_8h_a63f0b7203f4fe385a381bc8b19b9be3f}{bev\-\_\-wheel\-\_\-handler}(a)~\hyperlink{events_8h_ac062ca9f36f46d3ac1989271ffecc12e}{bunny\-\_\-set\-\_\-wheel\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a12395c5dd20b3b69cefa7f21231b1a07}{bev\-\_\-joy\-\_\-connect\-\_\-handler}(a)~\hyperlink{events_8h_ae8c84a0592c8309fd4afdad10496da53}{bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_ae712713e4b1721d0365297047793fa4c}{bev\-\_\-get\-\_\-joy\-\_\-info}(id)~\hyperlink{events_8h_a67244ebd654f7d13ad657048a4e34830}{bunny\-\_\-get\-\_\-joy\-\_\-info}(id)
+\item 
+\#define \hyperlink{macros_8h_a07c4f4f43efc026250bfdc2b7323803b}{bev\-\_\-joy\-\_\-axis\-\_\-handler}(a)~\hyperlink{events_8h_a844b880ab862d70e3c5dae1e53897d3b}{bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a5a901bffc7831112d35ee333081cd4b3}{bev\-\_\-get\-\_\-joy\-\_\-axis}()~\hyperlink{events_8h_a92be65813e544b12eeb0b51d4df90096}{bunny\-\_\-get\-\_\-joy\-\_\-axis}()
+\item 
+\#define \hyperlink{macros_8h_af383469cd547dd45d5eebabe09fe344a}{bev\-\_\-joy\-\_\-button\-\_\-handler}(a)~\hyperlink{events_8h_a69d5c2e9b0bff08aa21b8446db3f4a54}{bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_aad557d0112aa1290cad68654a50442a8}{bev\-\_\-get\-\_\-joy\-\_\-button}()~\hyperlink{events_8h_ab0b9aff26d5f01e8b7b64433da038fb8}{bunny\-\_\-get\-\_\-joy\-\_\-button}()
+\item 
+\#define \hyperlink{macros_8h_a233976996e857b43ce55a9194dd7c07b}{bev\-\_\-get\-\_\-focus\-\_\-handler}(a)~\hyperlink{events_8h_abb41bc2a54523b994126a37598385255}{bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a70c1f197ec2a98d11733159df2b2bdec}{bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler}(a)~\hyperlink{events_8h_ac326e9cb6508b1cf38fad8a5462d1d6d}{bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_aa6c234d852cae60f65aa55d0fb6f7fca}{bev\-\_\-resize\-\_\-handler}(a)~\hyperlink{events_8h_ac8e8164c74bcf057675712da7ab79aa7}{bunny\-\_\-set\-\_\-resize\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_a26b4c7ec77fe0307b8e0bc9bbd818f8b}{bev\-\_\-close\-\_\-handler}(a)~\hyperlink{events_8h_a364e700f280b2e82e420765433714e65}{bunny\-\_\-set\-\_\-close\-\_\-response}(a)
+\item 
+\#define \hyperlink{macros_8h_add89ba6842148783f270e89968937bd7}{bev\-\_\-get\-\_\-window}()~\hyperlink{events_8h_afd6a293c930efa07b3b0f2ff7852d88a}{bunny\-\_\-get\-\_\-window}()
+\item 
+\#define \hyperlink{macros_8h_a934518c9e5aa45647ecf29708449f70d}{bev\-\_\-display\-\_\-handler}(a)~\hyperlink{events_8h_ad81e5cb0cbd8f867f5269c804c822661}{bunny\-\_\-set\-\_\-display\-\_\-function}(a)
+\item 
+\#define \hyperlink{macros_8h_a60d427830e4cd5e5d4567dd17d5542d1}{bev\-\_\-main\-\_\-loop}(a)~\hyperlink{events_8h_ad0b5295388b6af2ef6fb0d90f20c7588}{bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function}(a)
+\item 
+\#define \hyperlink{macros_8h_a0c1988e73e787b9d3b4e9c0626e9e807}{bev\-\_\-loop}(a, b, c)~\hyperlink{events_8h_a18560e03634aa67ca9cffa7b82710546}{bunny\-\_\-loop}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_af78e4fda63d68a9761b396041b89ed24}{bev\-\_\-loop\-\_\-mw}(a, b, c, d)~\hyperlink{events_8h_a675a41ff0069986ce5fac982e2b15568}{bunny\-\_\-loop\-\_\-mw}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a037791b0cf0d6c1152fc6408fce3fc31}{bev\-\_\-context}(a)~\hyperlink{events_8h_a806e49f23c86e099276162f4cbe76ce5}{bunny\-\_\-set\-\_\-context}(a)
+\item 
+\#define \hyperlink{macros_8h_a4771a5f22d50e567c7b21a393f81b6ef}{bev\-\_\-get\-\_\-context}(a)~\hyperlink{events_8h_a0c7d5d3ee7538ffef4ea3df2ec5fec9c}{bunny\-\_\-get\-\_\-context}(a)
+\item 
+\#define \hyperlink{macros_8h_a49431f62eebefb440586974b8e8d2318}{t\-\_\-clipable}~\hyperlink{graphics_8h_aaa6d80d1b603099239f56736e2f24575}{t\-\_\-bunny\-\_\-clipable}
+\item 
+\#define \hyperlink{macros_8h_a4f5fdc957ada414324b828397e9c6f1b}{t\-\_\-pixelray}~\hyperlink{graphics_8h_a809c146139b8e44e620e76e5de640050}{t\-\_\-bunny\-\_\-pixelarray}
+\item 
+\#define \hyperlink{macros_8h_adfab2323a864440f47b1616fd063dcae}{t\-\_\-load\-\_\-pixelarray}~\hyperlink{graphics_8h_a17159169c0b46298e02a813c2e81c271}{t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}
+\item 
+\#define \hyperlink{macros_8h_ac13df11e0dd1a009ac36c0c8a78c03d8}{t\-\_\-read\-\_\-pixelarray}~\hyperlink{graphics_8h_aa6460d4d730a3d058ae464c1bcd0b330}{t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}
+\item 
+\#define \hyperlink{macros_8h_a857f622ef787ebd3d55bbeb3bbe630ef}{gl\-\_\-load\-\_\-pixelarray}~\hyperlink{graphics_8h_a4b5267df6cfa9c07f815ee859c3a85ac}{gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}
+\item 
+\#define \hyperlink{macros_8h_ad0fc6078c15d03c05ec20adf514a309a}{gl\-\_\-read\-\_\-pixelarray}~\hyperlink{graphics_8h_a8116a6b7e2a3d7e75e72e2750de3b7e4}{gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}
+\item 
+\#define \hyperlink{macros_8h_a9bca41b11ae07ab0c016a0b8c0644e0c}{t\-\_\-picture}~\hyperlink{graphics_8h_a70b002fbe9ec08437fc16a50be0c5686}{t\-\_\-bunny\-\_\-picture}
+\item 
+\#define \hyperlink{macros_8h_a5e49420122e05ed7e4b8d70260536ec7}{t\-\_\-blit}~\hyperlink{graphics_8h_a68fc711f4c1ed09cce61deafebc7a3c7}{t\-\_\-bunny\-\_\-my\-\_\-blit}
+\item 
+\#define \hyperlink{macros_8h_ac5aeb4bf6aa11d7b3088f338f069bd36}{gl\-\_\-blit}~\hyperlink{graphics_8h_ac6b62ac82ca5fc2ad4c99fbff8bd12b5}{gl\-\_\-bunny\-\_\-my\-\_\-blit}
+\item 
+\#define \hyperlink{macros_8h_adaf5089b9ca1429a49a7f5ab97d6c327}{t\-\_\-set\-\_\-pixel}~\hyperlink{graphics_8h_a188a6ea5064d4b3db770d5ab5003ae59}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}
+\item 
+\#define \hyperlink{macros_8h_ad114f844b2c73bed08fe45d4d8fd2456}{gl\-\_\-set\-\_\-pixel}~\hyperlink{graphics_8h_ae940dd7642155e239c22a9519a0d9e9e}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}
+\item 
+\#define \hyperlink{macros_8h_aa2b1d39d1665ab0250ee47201363908a}{t\-\_\-set\-\_\-circle}~\hyperlink{graphics_8h_ae3e6d73aa32b42d2cebc72d63b8a5e25}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}
+\item 
+\#define \hyperlink{macros_8h_ac2256fa48a5054aff8cab89e2c580bb8}{gl\-\_\-set\-\_\-circle}~\hyperlink{graphics_8h_a563e663c45c537351900e2b940fcd4fb}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}
+\item 
+\#define \hyperlink{macros_8h_a90b49c42323f5b5cf54f63881fe82bba}{t\-\_\-set\-\_\-line}~\hyperlink{graphics_8h_a24b1da13a899d271d2f5f6a935d340d7}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}
+\item 
+\#define \hyperlink{macros_8h_a183f63d0c4e5e9a4ac87f159ee3aa07c}{gl\-\_\-set\-\_\-line}~\hyperlink{graphics_8h_a496f0dfa0f79ae037c677cf9f2b16d75}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}
+\item 
+\#define \hyperlink{macros_8h_a051764edf2cc1f7d103cfe1a06a74029}{t\-\_\-set\-\_\-polygon}~\hyperlink{graphics_8h_a40ae04b22eb7de11ee44b99068a526ef}{t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}
+\item 
+\#define \hyperlink{macros_8h_adfea3d611bf25e6eb4d689ccca514c57}{gl\-\_\-set\-\_\-poylgon}~\hyperlink{graphics_8h_a8126968be5f55a545753e9ec4ec13f6a}{gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}
+\item 
+\#define \hyperlink{macros_8h_a70c6a065c4fe92b29614f275770205b4}{t\-\_\-fill}~\hyperlink{graphics_8h_aabff273b4a55fcad934e34e345fcf4cb}{t\-\_\-bunny\-\_\-my\-\_\-fill}
+\item 
+\#define \hyperlink{macros_8h_a846e9e278840f46d385188bcc7dec6f7}{gl\-\_\-fill}~\hyperlink{graphics_8h_a3f602989ed5f61fca84f99a1592e5a7c}{gl\-\_\-bunny\-\_\-my\-\_\-fill}
+\item 
+\#define \hyperlink{macros_8h_a595fb9004232116d34e2715510721725}{t\-\_\-clear}~\hyperlink{graphics_8h_a56ca74f68dfbe8237d65ed6e0504f347}{t\-\_\-bunny\-\_\-my\-\_\-clear}
+\item 
+\#define \hyperlink{macros_8h_ae12157150a66b46f1c539464b3be670c}{gl\-\_\-clear}~\hyperlink{graphics_8h_aba933f15b2541b837ab8a9e4f8a21276}{gl\-\_\-bunny\-\_\-my\-\_\-clear}
+\item 
+\#define \hyperlink{macros_8h_aa490888739cde86b14f738b679453b98}{t\-\_\-geometry}~\hyperlink{graphics_8h_a2867494f04267b27e251dc6253f5438c}{t\-\_\-bunny\-\_\-geometry}
+\item 
+\#define \hyperlink{macros_8h_a279e632b93867cf841c87a6dfc7c7719}{t\-\_\-vertex}~\hyperlink{graphics_8h_af00166dd6e68ece1b8aedc2a68f24c34}{t\-\_\-bunny\-\_\-vertex}
+\item 
+\#define \hyperlink{macros_8h_aba9c2c0b09df0ae5c2eb1d0ff57f86b6}{t\-\_\-vertex\-\_\-array}~\hyperlink{graphics_8h_a69b50b7e60771d7c8791f231367f1797}{t\-\_\-bunny\-\_\-vertex\-\_\-array}
+\item 
+\#define \hyperlink{macros_8h_ae8c340e9c529a0e84d38779e68c781f5}{t\-\_\-set\-\_\-geometry}~\hyperlink{graphics_8h_ad65e53fdc4fe95201f5670f248b3349d}{t\-\_\-bunny\-\_\-my\-\_\-geometry}
+\item 
+\#define \hyperlink{macros_8h_ad7efddf2e1ce315c014e0115efa5257f}{gl\-\_\-geomtry}~\hyperlink{graphics_8h_acaf96e969dba2c8550b111025815b2a5}{gl\-\_\-bunny\-\_\-my\-\_\-geometry}
+\item 
+\#define \hyperlink{macros_8h_afbd31ed6b32b7e90527fc3efeb1c6c65}{t\-\_\-vfont\-\_\-line\-\_\-coord}~\hyperlink{graphics_8h_ac19938f2a1d45203f2c767d7e849789a}{t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}
+\item 
+\#define \hyperlink{macros_8h_a819777c661097f138844463c57460dc9}{t\-\_\-letter}~\hyperlink{graphics_8h_ad20ad5c56782e9e8f388e5d4fb000f39}{t\-\_\-bunny\-\_\-letter}
+\item 
+\#define \hyperlink{macros_8h_a85ae4bc2e96835a673685ebb69b42c00}{gl\-\_\-vfont}~\hyperlink{graphics_8h_a3de9e577f4ee1205fc979313d6218ccd}{gl\-\_\-vector\-\_\-font}
+\item 
+\#define \hyperlink{macros_8h_a48a4c29560d3883917116a9a762927ef}{t\-\_\-shader}~\hyperlink{graphics_8h_ac74296e8b4475c15ae6baa88de019472}{t\-\_\-bunny\-\_\-shader}
+\item 
+\#define \hyperlink{macros_8h_a95c31a5d76d5c606e9520fd4f7b83654}{t\-\_\-vartype}~\hyperlink{graphics_8h_a593688b077dbb319b30aba3c95cb9bd8}{t\-\_\-bunny\-\_\-variable\-\_\-type}
+\item 
+\#define \hyperlink{macros_8h_a610db16f84f1d198578fbba521030afc}{t\-\_\-transform}~\hyperlink{graphics_8h_a9b27ac56597e66e9078b211543b29c4d}{t\-\_\-bunny\-\_\-transform}
+\item 
+\#define \hyperlink{macros_8h_a3ab8c398f24dc67b4e10814bc3710b7e}{bg\-\_\-pixelarray}(w, h)~\hyperlink{graphics_8h_a06e913548f14d59c396f3093a2e46514}{bunny\-\_\-new\-\_\-pixelarray}(w, h)
+\item 
+\#define \hyperlink{macros_8h_a7ad0c213c19564ecde22c039c5fd0e57}{bg\-\_\-load\-\_\-pixelarray}(f)~\hyperlink{graphics_8h_a0b718732050ef6d5664f6e2a123e7b87}{bunny\-\_\-load\-\_\-pixelarray}(f)
+\item 
+\#define \hyperlink{macros_8h_ae4a175758660cde4cb15daca8e6f10e4}{bg\-\_\-read\-\_\-pixelarray}(v)~\hyperlink{graphics_8h_abd0be114c043b0c4e8eeaf0aca9bba46}{bunny\-\_\-read\-\_\-pixelarray}(v)
+\item 
+\#define \hyperlink{macros_8h_ae1e53a2b63668a1b0aef71b69f5c9b1d}{bg\-\_\-save\-\_\-pixelarray}(b, f)~\hyperlink{graphics_8h_a5b7052ed27917aecd2e9a2a8d2584a20}{bunny\-\_\-save\-\_\-pixelarray}(b, f)
+\item 
+\#define \hyperlink{macros_8h_aef8e60fe158cee1d93a8fb6364d37705}{bg\-\_\-picture}(w, h)~\hyperlink{graphics_8h_a0f006839183de6217dcb23dd6dbe1017}{bunny\-\_\-new\-\_\-picture}(w, h)
+\item 
+\#define \hyperlink{macros_8h_adcc118ecb9bc0f7cb3f5c2a64952487b}{bg\-\_\-load\-\_\-pic}(f)~\hyperlink{graphics_8h_a75d6ba3e2b3b51558848d103cfc8e4f0}{bunny\-\_\-load\-\_\-picture}(f)
+\item 
+\#define \hyperlink{macros_8h_a6bb09cd30d7bbcdb5ad487684f6fc5f6}{bg\-\_\-read\-\_\-pic}(p, l)~\hyperlink{graphics_8h_aac78fc03b915c813dfae30baafcd34b4}{bunny\-\_\-read\-\_\-picture}(p, l)
+\item 
+\#define \hyperlink{macros_8h_a10d2d77dbd883f33f58ffc5177c34803}{bg\-\_\-del\-\_\-pic}(c)~\hyperlink{graphics_8h_ae7d46c824180d32844e3be5bae73fae4}{bunny\-\_\-delete\-\_\-clipable}(c)
+\item 
+\#define \hyperlink{macros_8h_aa5d385e8fed5516bc63a0729eac4ec36}{bg\-\_\-blit}(a, b, c)~\hyperlink{graphics_8h_a1b4a802ccfd87ec1a2920d847ec86b6b}{bunny\-\_\-blit}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_af0f07ca1f48626980b5caaf1ad86f7bc}{bg\-\_\-draw}(a)~\hyperlink{graphics_8h_a6e191c7709e60f11a1622f123d53ed01}{bunny\-\_\-draw}(a)
+\item 
+\#define \hyperlink{macros_8h_a41ab526f527d49efe5294eeea822a7d4}{bg\-\_\-pixel}(a, b, c)~\hyperlink{graphics_8h_a96e32a35f159c08ec1028fb45835f0d3}{bunny\-\_\-set\-\_\-pixel}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a3162f8fc7620bd736e0dcc1169f16a7d}{bg\-\_\-circle}(a, b, c, d)~\hyperlink{graphics_8h_ad5aa910bc634e7e20dc4b64719447aef}{bunny\-\_\-set\-\_\-circle}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_ab8700a480390503ede87c09536bc2a17}{bg\-\_\-line}(a, b, c)~\hyperlink{graphics_8h_a79f9d50659c186ae1ac90dd4751d5a7f}{bunny\-\_\-set\-\_\-line}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a6ca85e7a6da9c4e7dc774dce70b91b5e}{bg\-\_\-polygon}(a, b, c)~\hyperlink{graphics_8h_a6096840cf79eb8ad6bc7136d9260f5eb}{bunny\-\_\-set\-\_\-polygon}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a49b48e70850efdde2b0e927b7526ea46}{bg\-\_\-fill}(a, b)~\hyperlink{graphics_8h_a2526935e39f3b8f0f129923f1deef1c8}{bunny\-\_\-fill}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a66c9b07dd8e7234300038870f3106cf7}{bg\-\_\-clear}(a, b)~\hyperlink{graphics_8h_ac01c253005b66e93585e176569b6479f}{bunny\-\_\-clear}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a7ed7a9621a9dd803879f93b3dc171612}{bg\-\_\-geometry}(a, b, c, d)~\hyperlink{graphics_8h_abab44e764ba7e313f6a0dd441dc2e89f}{bunny\-\_\-set\-\_\-geometry}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_aced9aff20d5a78870d10db5e8ff67886}{bg\-\_\-shader\-\_\-available}()~\hyperlink{graphics_8h_a7653686fa07c36c12d513fd98d575fc5}{bunny\-\_\-is\-\_\-shader\-\_\-available}()
+\item 
+\#define \hyperlink{macros_8h_a1f80f6baa89b4cb870d006034bf5cd9f}{bg\-\_\-shader}()~\hyperlink{graphics_8h_acd7761372f628ebf1c7b77c09b49840d}{bunny\-\_\-new\-\_\-shader}()
+\item 
+\#define \hyperlink{macros_8h_a2b625be4c2cff66e844ab9ca9303a808}{bg\-\_\-load\-\_\-shader}(a, b, c)~\hyperlink{graphics_8h_a3c652b05c130de1d1508dc2f71f4e030}{bunny\-\_\-load\-\_\-shader}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a7ad85793b7522c1a929db5e4133109d0}{bg\-\_\-blit\-\_\-shader}(a, b, c, d)~\hyperlink{graphics_8h_af97f1ca3cdb667b2c21296ef50eed890}{bunny\-\_\-blit\-\_\-shader}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a66011800e37eff56359fef2b6bc6c2e9}{bg\-\_\-del\-\_\-shader}(a)~\hyperlink{graphics_8h_a9cfea98aaa50f0e94233ac631de5baf4}{bunny\-\_\-delete\-\_\-shader}(a)
+\item 
+\#define \hyperlink{macros_8h_ae1b3428a0e5cbf406ebf6cbc4c534e91}{bg\-\_\-full\-\_\-blit}(a)~\hyperlink{_lapin_8cpp_a8405940958626b9bd74115cc36a99cd3}{bunny\-\_\-enable\-\_\-full\-\_\-blit}(a)
+\item 
+\#define \hyperlink{macros_8h_a7c6c9242efd94c3f836ee50723ed3955}{bg\-\_\-gl\-\_\-reset}(a)~\hyperlink{graphics_8h_afc9b21b80a2a35a66ff164be588cce85}{bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states}(a)
+\item 
+\#define \hyperlink{macros_8h_a814b9848b238e8e4fb11f61dcc1e55a7}{bg\-\_\-gl\-\_\-push}(a)~\hyperlink{graphics_8h_a006870bf42a34b5868accbfc2152b474}{bunny\-\_\-\-G\-L\-\_\-push\-\_\-states}(a)
+\item 
+\#define \hyperlink{macros_8h_a533e8d15b3f4cb475c16934abeb991f8}{bg\-\_\-gl\-\_\-pop}(a)~\hyperlink{graphics_8h_a242a71a9beb63e763ae4509e1a251171}{bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states}(a)
+\item 
+\#define \hyperlink{macros_8h_aa9849d07bf5fbb3248710ce185b319b2}{t\-\_\-hardware}~\hyperlink{hardware_8h_a46c4ba574d2574edbb8cea2abd55824a}{t\-\_\-bunny\-\_\-hardware}
+\item 
+\#define \hyperlink{macros_8h_afb313343a1cf1c1566dbfa8f9cb4e66c}{bh\-\_\-hardware}(id)~\hyperlink{hardware_8h_a2896aa11742a711d5fde722208ad05cc}{bunny\-\_\-new\-\_\-hardware}(id)
+\item 
+\#define \hyperlink{macros_8h_ac077dc995cb4f8beffe5f55e7cf372f1}{bh\-\_\-del\-\_\-hardware}(hrd)~\hyperlink{hardware_8h_abefef96feace60748089355704649133}{bunny\-\_\-delete\-\_\-hardware}(hrd)
+\item 
+\#define \hyperlink{macros_8h_a2a3a8354d2889889d02452902b2de88e}{bh\-\_\-read}(hrd)~\hyperlink{hardware_8h_ac68cb3e79fe2a498a401014ccbd34368}{bunny\-\_\-hardware\-\_\-read}(hrd)
+\item 
+\#define \hyperlink{macros_8h_ad13be0df4e409d09fd3e40d026099a75}{bh\-\_\-write}(hrd)~\hyperlink{hardware_8h_a3cc374e89ff780b2d70f41433fdb21e9}{bunny\-\_\-hardware\-\_\-write}(hrd)
+\item 
+\#define \hyperlink{macros_8h_a2121e1e99fcd045ef2a286cea91c0659}{t\-\_\-hash}~\hyperlink{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{t\-\_\-bunny\-\_\-hash}
+\item 
+\#define \hyperlink{macros_8h_aa95c963a91606e6e143153abcfe13167}{t\-\_\-my\-\_\-hash}~\hyperlink{hash_8h_aa0ceb6ecc3a53213caebc9e46a8e7c86}{t\-\_\-bunny\-\_\-hash}
+\item 
+\#define \hyperlink{macros_8h_a33c10eaead21de2e3764e5cf5d15aae0}{gl\-\_\-my\-\_\-hash}~\hyperlink{hash_8h_af96209a7fb7b7ee4b340d7574083ad03}{gl\-\_\-bunny\-\_\-my\-\_\-hash}
+\item 
+\#define \hyperlink{macros_8h_a0de7ba664fdd27b950068495f1073b38}{bh\-\_\-hash}(a, b, c)~\hyperlink{hash_8h_a40e84a40901cc8cd9e933ac067f6d768}{bunny\-\_\-hash}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_af18e7fa51f55e94e033c1e800ea07c6b}{bm\-\_\-printl}(str)~\hyperlink{misc_8h_aa96399abe6151e874bf6826686985422}{bunny\-\_\-printl}(str)
+\item 
+\#define \hyperlink{macros_8h_a5c13e54ad1cc2b422bfc5b2f1283b130}{bm\-\_\-printlerr}(str)~\hyperlink{misc_8h_ad0dc656e42b8b65ecd3ac500022839a1}{bunny\-\_\-printlerr}(str)
+\item 
+\#define \hyperlink{macros_8h_a126717706ea1c919ce525429d0e40970}{bm\-\_\-errno}~\hyperlink{misc_8h_a3e3c5a69132ea6739494149aaef5367f}{bunny\-\_\-errno}
+\item 
+\#define \hyperlink{macros_8h_ad78c7d4a317884d78b69aa36c2326e11}{bm\-\_\-strerror}(e)~\hyperlink{misc_8h_a487d68ad94da1951ba68fea95781b9e5}{bunny\-\_\-strerror}(e)
+\item 
+\#define \hyperlink{macros_8h_a48e3e9214577d1e543c2858eaf71c5eb}{bm\-\_\-perror}(s)~\hyperlink{misc_8h_a29b0e0ba49b43f0a42ebac1fbab079ba}{bunny\-\_\-perror}(s)
+\item 
+\#define \hyperlink{macros_8h_aaf0f82bc349944813ae0a09c8ec992e5}{bm\-\_\-load\-\_\-file}(f, d, s)~\hyperlink{misc_8h_a20acd8139a8cf2dab1457cf14fe75ef2}{bunny\-\_\-load\-\_\-file}(f, d, s)
+\item 
+\#define \hyperlink{macros_8h_a19448d87914452499ed549b7dada6c66}{bm\-\_\-save\-\_\-file}(f, d, l)~\hyperlink{misc_8h_a62485bd0bcf9d1070222408d508a7eef}{bunny\-\_\-save\-\_\-file}(f, d, l)
+\item 
+\#define \hyperlink{macros_8h_aca23ed91176b20b83945dd0a6d4dd8a3}{bm\-\_\-eval}(a, b)~\hyperlink{misc_8h_a82d2024a7c634e53fd65fbb06981fa56}{bunny\-\_\-evaluate}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a4adccda75415d55a3a47af5e0798d82a}{t\-\_\-comtype}~\hyperlink{network_8h_ac01621d0080b82d3bebc95c8338b24ce}{t\-\_\-bunny\-\_\-comtype}
+\item 
+\#define \hyperlink{macros_8h_a44da4e2e0a5b0ae8267d043e785ac031}{t\-\_\-comerror}~\hyperlink{network_8h_adabfc6181c56bb211bb36b04c892ed6b}{t\-\_\-bunny\-\_\-comerror}
+\item 
+\#define \hyperlink{macros_8h_a800c73c633a0fb053c94f90697902814}{t\-\_\-error}~\hyperlink{network_8h_ac78e4fcb3c2044f557b3bb8e62078eab}{t\-\_\-bunny\-\_\-error}
+\item 
+\#define \hyperlink{macros_8h_a59b6ee792e54af0085b2eb3a29a9fada}{t\-\_\-comexpire}~\hyperlink{network_8h_af327a71bccc8f8d86c446a1bf3d78a2b}{t\-\_\-bunny\-\_\-expired}
+\item 
+\#define \hyperlink{macros_8h_ad1251bbea9d7fbe3e0367d2133c890ca}{t\-\_\-comconnect}~\hyperlink{network_8h_aed705485393480b2d1008f924632b613}{t\-\_\-bunny\-\_\-connected}
+\item 
+\#define \hyperlink{macros_8h_aff89c69f9048c8acf980e3e92c1315b2}{t\-\_\-comdisconnect}~\hyperlink{network_8h_abd0e42d86a4509a1acfbc111b27ae505}{t\-\_\-bunny\-\_\-disconnected}
+\item 
+\#define \hyperlink{macros_8h_af0e240aff25a34dc671a137b6b33aa92}{t\-\_\-message}~\hyperlink{network_8h_ab76d939939694146c153bc27fca03484}{t\-\_\-bunny\-\_\-message}
+\item 
+\#define \hyperlink{macros_8h_ae9da19f463c6e778a51f17c107273294}{t\-\_\-communication}~\hyperlink{network_8h_a1491926c6886a47a9462045f5b9328fe}{t\-\_\-bunny\-\_\-communication}
+\item 
+\#define \hyperlink{macros_8h_ab1b607e9b91b7b48233f189e95dda0d2}{t\-\_\-server}~\hyperlink{network_8h_a57e833ed95d032a6fc1d0a13894cb895}{t\-\_\-bunny\-\_\-server}
+\item 
+\#define \hyperlink{macros_8h_a00e76f73c584d423d9c55cd718791218}{t\-\_\-client}~\hyperlink{network_8h_a29fb0957aa8af615cea3cd23f54a0136}{t\-\_\-bunny\-\_\-client}
+\item 
+\#define \hyperlink{macros_8h_a762faa70d55f8dba8615b82d6e319d62}{bn\-\_\-server}(p)~\hyperlink{network_8h_a250ab0c876a3aef463fd034239ac1fce}{bunny\-\_\-new\-\_\-server}(p)
+\item 
+\#define \hyperlink{macros_8h_a47c10524689793f366c870abb2635438}{bn\-\_\-del\-\_\-server}(p)~\hyperlink{network_8h_a6a5c590812c7a1e162555730270fd471}{bunny\-\_\-delete\-\_\-server}(p)
+\item 
+\#define \hyperlink{macros_8h_aff3c21ee7cd4ba211e883dd9e12c41db}{bn\-\_\-srv\-\_\-poll}(a, b)~\hyperlink{network_8h_a798c6322d2c75bdc4ba9ffeae85decba}{bunny\-\_\-server\-\_\-poll}(a, b)
+\item 
+\#define \hyperlink{macros_8h_ae83b58f296f9a51db7d41ebcc8150385}{bn\-\_\-srv\-\_\-write}(a, b, c, d)~\hyperlink{network_8h_ab58c764a0f244b8696cbd6cc653ab835}{bunny\-\_\-server\-\_\-write}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a1abfa6955c773605130d369f77fea489}{bn\-\_\-srv\-\_\-packetok}(a)~bunny\-\_\-server\-\_\-packed\-\_\-ready(a)
+\item 
+\#define \hyperlink{macros_8h_a6337e2fa61efdcc19d71966a6f7961a4}{bn\-\_\-srv\-\_\-doom}(a, b)~\hyperlink{network_8h_a51271a6eb74fec42e74dc173f8caf8b3}{bunny\-\_\-server\-\_\-doom\-\_\-client}(a, b)
+\item 
+\#define \hyperlink{macros_8h_ad8165340d3bcc68fcb270882e4e05d59}{bn\-\_\-client}(a, b)~\hyperlink{network_8h_a27275cddb41c2828843f8ebd3cf5f473}{bunny\-\_\-new\-\_\-client}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a153406c3b16c60bb738390191b494b87}{bn\-\_\-del\-\_\-client}(a)~\hyperlink{network_8h_aacfd6b205788513506dcfc6ae9370de3}{bunny\-\_\-delete\-\_\-client}(a)
+\item 
+\#define \hyperlink{macros_8h_a4a386c35816b78fd047988abca87159a}{bn\-\_\-clt\-\_\-poll}(a, b)~\hyperlink{network_8h_af134ff5fa286ab1b93e62649e234eaa6}{bunny\-\_\-client\-\_\-poll}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a8c969922672d49d95711adb17cf36666}{bn\-\_\-clt\-\_\-write}(a, b, c)~\hyperlink{network_8h_ae5d8106c7f2363f218e7835248968965}{bunny\-\_\-client\-\_\-write}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a2710a26c82ca8e1765ccc544b2706e96}{t\-\_\-position}~\hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position}
+\item 
+\#define \hyperlink{macros_8h_ae1fb68decf677ca4bbabf95d3015b1f8}{t\-\_\-2d}~\hyperlink{placement_8h_ac188709ed3c01e1ec071dd6c19bb1499}{t\-\_\-bunny\-\_\-position}
+\item 
+\#define \hyperlink{macros_8h_ad9dea3cca6ff1b9bcff7aae0b3361282}{t\-\_\-size}~\hyperlink{placement_8h_a5fa5b3645e929a3786e814f837f3a738}{t\-\_\-bunny\-\_\-size}
+\item 
+\#define \hyperlink{macros_8h_a613645ae93708395d344b1da156b5413}{t\-\_\-fposition}~\hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position}
+\item 
+\#define \hyperlink{macros_8h_ad87486172e235c284c9584eb9d20e588}{t\-\_\-2df}~\hyperlink{placement_8h_a0871582e90d8efb086973027e2732c21}{t\-\_\-bunny\-\_\-accurate\-\_\-position}
+\item 
+\#define \hyperlink{macros_8h_ad91b1bb7ee22c9554e51187ae5514c39}{t\-\_\-fsize}~\hyperlink{placement_8h_a4530d491ae52ed89d99c8adb07267eea}{t\-\_\-bunny\-\_\-accurate\-\_\-size}
+\item 
+\#define \hyperlink{macros_8h_a234cded727f4a8481ce920c384ca6546}{t\-\_\-area}~\hyperlink{placement_8h_a499a91c0120b056da492686def48d0b6}{t\-\_\-bunny\-\_\-area}
+\item 
+\#define \hyperlink{macros_8h_a95d6d1c95dca15eca93fa91939648aa5}{t\-\_\-farea}~\hyperlink{placement_8h_a3e490822ccccf2b73f50ef8259832b90}{t\-\_\-bunny\-\_\-accurate\-\_\-area}
+\item 
+\#define \hyperlink{macros_8h_ad9d181587cc74c30524341e55c412ae9}{t\-\_\-ciphering}~\hyperlink{security_8h_a1d13ef4b81a9afe2e5fd07b87c82e4e9}{t\-\_\-bunny\-\_\-ciphering}
+\item 
+\#define \hyperlink{macros_8h_ad7131492656dc4007a10def7039860e4}{gl\-\_\-ciphering}~\hyperlink{security_8h_a273f886c9cd47efa5c3343a2a583d28f}{gl\-\_\-bunny\-\_\-ciphering\-\_\-table}
+\item 
+\#define \hyperlink{macros_8h_a7d2b931688049cc0edfb4191faea5a9b}{t\-\_\-cipher\-\_\-key}~\hyperlink{security_8h_a06ac8bb5bca7b0334d6e2c14d3037685}{t\-\_\-bunny\-\_\-cipher\-\_\-key}
+\item 
+\#define \hyperlink{macros_8h_a2c30ebf8a0be2607326475a5a5c9d5e5}{t\-\_\-key\-\_\-twist}~\hyperlink{security_8h_acd515e75a90cf954f8a10c4a0cc1e4ff}{t\-\_\-bunny\-\_\-key\-\_\-twist}
+\item 
+\#define \hyperlink{macros_8h_adfde45dd5178eda6f541c895db8410b9}{gl\-\_\-key\-\_\-twist}~\hyperlink{security_8h_a8f08a96ae20a740b37621da1bbac0622}{gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}
+\item 
+\#define \hyperlink{macros_8h_a7bf204300f2fe53501de815f35e9e3a8}{t\-\_\-cipher}~\hyperlink{security_8h_aaea6d881f5d577ed0ae6bc4f06cdd52a}{t\-\_\-bunny\-\_\-my\-\_\-cipher}
+\item 
+\#define \hyperlink{macros_8h_a3deec563d804163d44049b0c9d0c67f6}{gl\-\_\-cipher}~\hyperlink{security_8h_ad27058bc6c3cb56a6e3157a1cb37fe27}{gl\-\_\-bunny\-\_\-my\-\_\-cipher}
+\item 
+\#define \hyperlink{macros_8h_a6bacb14d98da722dd1836f4bcba10468}{t\-\_\-uncipher}~\hyperlink{security_8h_acc9344771207806c5f4449c86730ac93}{t\-\_\-bunny\-\_\-my\-\_\-uncipher}
+\item 
+\#define \hyperlink{macros_8h_ac61cd2af13b1ddd819a08ec82a7425c5}{gl\-\_\-uncipher}~\hyperlink{security_8h_ab154524ea4671dbcd2a110e5de57964a}{gl\-\_\-bunny\-\_\-my\-\_\-uncipher}
+\item 
+\#define \hyperlink{macros_8h_ac6941670417098c21fcfd03c29a2ba9a}{bs\-\_\-get\-\_\-cipher\-\_\-name}(a)~\hyperlink{security_8h_a27fe7657795554536e7d582c95236af1}{bunny\-\_\-get\-\_\-ciphering}(a)
+\item 
+\#define \hyperlink{macros_8h_a8b997a8a22bd656f8e78e05af5be52ba}{bs\-\_\-fill\-\_\-defkey}(a, b)~\hyperlink{security_8h_a30088cfd783172ac8c8941c556896193}{bunny\-\_\-fill\-\_\-default\-\_\-key}(a, b)
+\item 
+\#define \hyperlink{macros_8h_ae5381d67edbc2240f03bf4e59306abd7}{bs\-\_\-key}(a)~\hyperlink{security_8h_aff0ccd7574ff9dad2d5fa8b6f5ebae79}{bunny\-\_\-new\-\_\-key}(a)
+\item 
+\#define \hyperlink{macros_8h_a703dacacb7978c618f391f52c889420b}{bs\-\_\-del\-\_\-key}(a)~\hyperlink{security_8h_a1f75c787c2fa3502268930e4ef2a5d47}{bunny\-\_\-delete\-\_\-key}(a)
+\item 
+\#define \hyperlink{macros_8h_ada45b7fb019e007b417199476b88fe80}{bs\-\_\-cipher\-\_\-file}(a, b, c)~\hyperlink{security_8h_a3395f088e667ab68ab87b0073e065572}{bunny\-\_\-cipher\-\_\-file}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a867d0999e60988e0670b0c7968a234ce}{bs\-\_\-uncipher\-\_\-file}(a, b, c)~\hyperlink{security_8h_adf0273fb596c66e40de4b1152d73ba1b}{bunny\-\_\-uncipher\-\_\-file}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_a8da4019f312abcc4a0ca620e65f5b552}{bs\-\_\-cipher\-\_\-data}(a, b, c, d)~\hyperlink{security_8h_aa7053a80e7c4e8a8b06446be50468a30}{bunny\-\_\-cipher\-\_\-data}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a6a0def7dd13e7003ae2a8fcad461044e}{bs\-\_\-uncipher\-\_\-data}(a, b, c, d)~\hyperlink{security_8h_a90fa6d97872e0dc868cc12653c27170c}{bunny\-\_\-uncipher\-\_\-data}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a4741431a59bdf8bcff51c37e095ebf8e}{t\-\_\-sound}~\hyperlink{sound_8h_af5566812e76e3d6b601768a24d114a14}{t\-\_\-bunny\-\_\-sound}
+\item 
+\#define \hyperlink{macros_8h_a5ba104c7aa9fffe884023651b6c4f7ff}{t\-\_\-music}~\hyperlink{sound_8h_a827604e20c529171582f21e8a5e7badd}{t\-\_\-bunny\-\_\-music}
+\item 
+\#define \hyperlink{macros_8h_aae26f80a32356057b6e2732e25b55560}{t\-\_\-sfx}~\hyperlink{sound_8h_a2310e6e079e3cadef9f01d443383c7d9}{t\-\_\-bunny\-\_\-effect}
+\item 
+\#define \hyperlink{macros_8h_a51600712387ae8ad9a9f2138ea23ec13}{bs\-\_\-load\-\_\-music}(a)~\hyperlink{sound_8h_a9392b3b823e2ec6b174574d6196a762a}{bunny\-\_\-load\-\_\-music}(a)
+\item 
+\#define \hyperlink{macros_8h_a9e03edfb33f63ca15863d25523e66f94}{bs\-\_\-sfx}(a)~\hyperlink{sound_8h_a4897e19ccd3a6c4a110b3ae29c4ee728}{bunny\-\_\-new\-\_\-effect}(a)
+\item 
+\#define \hyperlink{macros_8h_ac9be13b3f70c6925d0f5c59e2f407ad9}{bs\-\_\-load\-\_\-sfx}(a)~\hyperlink{sound_8h_a19084d9ba60f2194e6f7e4a30f6331a1}{bunny\-\_\-load\-\_\-effect}(a)
+\item 
+\#define \hyperlink{macros_8h_ae7cd5f479691a60cbf714606a7c0fbab}{bs\-\_\-save\-\_\-sfx}(a, b)~\hyperlink{sound_8h_ae79f53273195f31240bdeee050929d6d}{bunny\-\_\-save\-\_\-effect}(a, b)
+\item 
+\#define \hyperlink{macros_8h_accc9a47f311984dd24cf6819dbcae0d2}{bs\-\_\-compute\-\_\-sfx}(a)~\hyperlink{sound_8h_ab892264c783801b5bdfda5da5fcee0f1}{bunny\-\_\-compute\-\_\-effect}(a)
+\item 
+\#define \hyperlink{macros_8h_a4a655a8764583b1b6e0290f1dcbd2c79}{bs\-\_\-sound\-\_\-vol}(a, b)~\hyperlink{sound_8h_a75623551f96d72bf6197f73b89d9dda9}{bunny\-\_\-sound\-\_\-volume}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a261740527699813904add292e78b15be}{bs\-\_\-sound\-\_\-pitch}(a, b)~\hyperlink{sound_8h_a922ceb537efb0b85987f6abae40bfc4e}{bunny\-\_\-sound\-\_\-pitch}(a, b)
+\item 
+\#define \hyperlink{macros_8h_ac59b1da8ae8938f729f4138cb3415eda}{bs\-\_\-sound\-\_\-loop}(a, b)~\hyperlink{sound_8h_aac7ff0385c596d46c5d65000cab61831}{bunny\-\_\-sound\-\_\-loop}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a5dc261581ba2f91676fcdd7f40b264a3}{bs\-\_\-sound\-\_\-pos}(a, b, c, d)~\hyperlink{sound_8h_a6044c010adacc5b8fe31889b397512d7}{bunny\-\_\-sound\-\_\-position}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_adfc34b5ecd38fe6cd29bb54118d1544e}{bs\-\_\-play}(a)~\hyperlink{sound_8h_a419b4b8591c8f61fbb39e1f53da96402}{bunny\-\_\-sound\-\_\-play}(a)
+\item 
+\#define \hyperlink{macros_8h_aeb2f0bb5fcca7dbe477f1547dd92997e}{bs\-\_\-stop}(a)~\hyperlink{sound_8h_aee838c50a0866db79e76f6be3ac3a1a8}{bunny\-\_\-sound\-\_\-stop}(a)
+\item 
+\#define \hyperlink{macros_8h_a2d741b69a9c570542b7c079fc50cd34e}{bs\-\_\-get\-\_\-cursor}(a)~\hyperlink{sound_8h_a6f1b3a4e9db8e69b4ffe6a39d9ed26f7}{bunny\-\_\-music\-\_\-get\-\_\-cursor}(a)
+\item 
+\#define \hyperlink{macros_8h_aa425bbb0371f6b65da69d2ab6f6cd645}{bs\-\_\-del\-\_\-sound}(a)~\hyperlink{sound_8h_a6c6526eb176aeb94b26756f1c3878772}{bunny\-\_\-delete\-\_\-sound}(a)
+\item 
+\#define \hyperlink{macros_8h_af71d7750eddadf94e892ce184cd09a2e}{t\-\_\-threadpool}~\hyperlink{threads_8h_a9f5e05b349b86259c900ba3e7fcbfb1b}{t\-\_\-bunny\-\_\-threadpool}
+\item 
+\#define \hyperlink{macros_8h_ad032d0dc8313d330a9496a3ebe02658b}{t\-\_\-function}~\hyperlink{threads_8h_ac13366a2552634d48d943312ff7ebc23}{t\-\_\-bunny\-\_\-function}
+\item 
+\#define \hyperlink{macros_8h_afe56b6b4cc887c84de5458565a32ec2e}{bt\-\_\-threadpool}(nbr)~bunny\-\_\-new\-\_\-thredapool(nbr)
+\item 
+\#define \hyperlink{macros_8h_ae060225a978a87c4bb4082eca7c563c9}{bt\-\_\-del\-\_\-threadpool}(p)~\hyperlink{threads_8h_afbdce3a915c4f9b61f415c4162fd159d}{bunny\-\_\-delete\-\_\-threadpool}(p)
+\item 
+\#define \hyperlink{macros_8h_a3dd56d7a35b52a6468d0ef89f8fc570c}{bt\-\_\-foreach}(a, b, c, d, e, f)~\hyperlink{threads_8h_ae0d7b4efff46332c92f21a58e369da2b}{bunny\-\_\-thread\-\_\-foreach}(a, b, c, d, e)
+\item 
+\#define \hyperlink{macros_8h_ac6aa41a36f71875363c89f0f135fda27}{bt\-\_\-wait}(p)~\hyperlink{threads_8h_aa7b490060c88a16581713f723cbe631c}{bunny\-\_\-thread\-\_\-wait\-\_\-completion}(p)
+\item 
+\#define \hyperlink{macros_8h_a96ce2858dc90b633dcc86770196804e3}{t\-\_\-window}~\hyperlink{window_8h_a962ea29731c474a667f24a5f9624b4b1}{t\-\_\-bunny\-\_\-window}
+\item 
+\#define \hyperlink{macros_8h_a523bd87853cd70ab87a36c78cb16bacf}{t\-\_\-win\-\_\-style}~\hyperlink{window_8h_a0454dd25b63995ed532c1cd5dcd343e4}{t\-\_\-bunny\-\_\-window\-\_\-style}
+\item 
+\#define \hyperlink{macros_8h_ad9cae36d12c216b9890def25abd91139}{bw\-\_\-start}(a, b, c, d)~\hyperlink{window_8h_a7e7b5c288f76371a901e9d506eefdfdf}{bunny\-\_\-start}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a4a88eeef2bb13d6c00ec2af89c085bcd}{bw\-\_\-stop}(a)~\hyperlink{window_8h_aa8da7e7fd1f07b4d085b5124b01cad77}{bunny\-\_\-stop}(a)
+\item 
+\#define \hyperlink{macros_8h_a5a874ce622b8d985e31298fd33427515}{bw\-\_\-display}(a)~\hyperlink{window_8h_add09107175d696be5ce80acb956c9361}{bunny\-\_\-display}(a)
+\item 
+\#define \hyperlink{macros_8h_a42ba4542c0d76b1e1e69ea43d731eb6a}{bw\-\_\-resolution}()~\hyperlink{window_8h_a5632ee4b262390d284f7dd96fd7617be}{bunny\-\_\-get\-\_\-screen\-\_\-resolution}()
+\item 
+\#define \hyperlink{macros_8h_afbba514f40f67652efc5bce2da92356e}{bw\-\_\-start\-\_\-style}(a, b, c, d)~\hyperlink{window_8h_a5a93b7a75f548d2fd57d9eaa2296bf41}{bunny\-\_\-start\-\_\-style}(a, b, c, d)
+\item 
+\#define \hyperlink{macros_8h_a9060845ece7538acfefefa2122f70a21}{bw\-\_\-key\-\_\-repeat}(a, b)~\hyperlink{window_8h_a296e720b4732a4638b546b88d5fc9311}{bunny\-\_\-set\-\_\-key\-\_\-repeat}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a87245291602224602ab2d06bcad8f20c}{bw\-\_\-mouse\-\_\-hide}(a, b)~\hyperlink{window_8h_a9abd4b83d05f733e86cc6c88bfb64ef7}{bunny\-\_\-set\-\_\-mouse\-\_\-visibility}(a, !b)
+\item 
+\#define \hyperlink{macros_8h_a95bcd5764b4f649adfaf188fc63d18fc}{bw\-\_\-mouse\-\_\-winpos}(a, b, c)~\hyperlink{window_8h_aa2a01bef244f24c84ef2c7f2f7f3bc7c}{bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window}(a, b, c)
+\item 
+\#define \hyperlink{macros_8h_aee3a4709616312804feef6e281cc647c}{bw\-\_\-mouse\-\_\-pos}(a, b)~\hyperlink{window_8h_a2c6cda9903b1535254e7e40ab18799fb}{bunny\-\_\-set\-\_\-mouse\-\_\-position}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a13fcc5922c52b75e5cfcd0b9e21df1e9}{bw\-\_\-focus}(a)~\hyperlink{window_8h_ac46cc6f9583983531d5a37d396ca711e}{bunny\-\_\-request\-\_\-focus}(a)
+\item 
+\#define \hyperlink{macros_8h_a7dedbe467e57e392f1697c027b6f4838}{bw\-\_\-move}(a, b)~\hyperlink{window_8h_ab57b3fc875fc67a2dd4dae41b7f0cf29}{bunny\-\_\-move\-\_\-window}(a, b)
+\item 
+\#define \hyperlink{macros_8h_a0b5b956b37dab7711992449ad1fc6ddb}{bw\-\_\-resize}(a, b)~\hyperlink{window_8h_aa74c77c7315030aec53d836186fb7aba}{bunny\-\_\-resize\-\_\-window}(a, b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains shorter names for liblapin 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{macros_8h_afcf00c614357435d0b3ea5a22e1e7fb1}{\index{macros.\-h@{macros.\-h}!bal\-\_\-calloc@{bal\-\_\-calloc}}
+\index{bal\-\_\-calloc@{bal\-\_\-calloc}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-calloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-calloc(
+\begin{DoxyParamCaption}
+\item[{}]{num, }
+\item[{}]{siz}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-calloc}(num, siz)}}\label{macros_8h_afcf00c614357435d0b3ea5a22e1e7fb1}
+\hypertarget{macros_8h_ad027a58671df1f88d6140e2ea21b285e}{\index{macros.\-h@{macros.\-h}!bal\-\_\-free@{bal\-\_\-free}}
+\index{bal\-\_\-free@{bal\-\_\-free}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-free(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-free}(ptr)}}\label{macros_8h_ad027a58671df1f88d6140e2ea21b285e}
+\hypertarget{macros_8h_a6e5967568ae1cc2e43e9d34a1419300b}{\index{macros.\-h@{macros.\-h}!bal\-\_\-malloc@{bal\-\_\-malloc}}
+\index{bal\-\_\-malloc@{bal\-\_\-malloc}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-malloc(
+\begin{DoxyParamCaption}
+\item[{}]{siz}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-malloc}(siz)}}\label{macros_8h_a6e5967568ae1cc2e43e9d34a1419300b}
+For those who don't type fast. \hypertarget{macros_8h_aedc0185ddc7fd17046c058f0e586b5e5}{\index{macros.\-h@{macros.\-h}!bal\-\_\-realloc@{bal\-\_\-realloc}}
+\index{bal\-\_\-realloc@{bal\-\_\-realloc}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-realloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-realloc(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{siz}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-realloc}(ptr, siz)}}\label{macros_8h_aedc0185ddc7fd17046c058f0e586b5e5}
+\hypertarget{macros_8h_af059b545c8c0b2335e4f2e29c2689269}{\index{macros.\-h@{macros.\-h}!bal\-\_\-set\-\_\-max\-\_\-ram@{bal\-\_\-set\-\_\-max\-\_\-ram}}
+\index{bal\-\_\-set\-\_\-max\-\_\-ram@{bal\-\_\-set\-\_\-max\-\_\-ram}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-set\-\_\-max\-\_\-ram}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-set\-\_\-max\-\_\-ram(
+\begin{DoxyParamCaption}
+\item[{}]{byt}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-maximum\-\_\-ram}(byt)}}\label{macros_8h_af059b545c8c0b2335e4f2e29c2689269}
+\hypertarget{macros_8h_a7558b8858394d593ed1ed57d90426b80}{\index{macros.\-h@{macros.\-h}!bal\-\_\-set\-\_\-mem\-\_\-check@{bal\-\_\-set\-\_\-mem\-\_\-check}}
+\index{bal\-\_\-set\-\_\-mem\-\_\-check@{bal\-\_\-set\-\_\-mem\-\_\-check}!macros.h@{macros.\-h}}
+\subsubsection[{bal\-\_\-set\-\_\-mem\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}\#define bal\-\_\-set\-\_\-mem\-\_\-check(
+\begin{DoxyParamCaption}
+\item[{}]{chk}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-memory\-\_\-check}(chk)}}\label{macros_8h_a7558b8858394d593ed1ed57d90426b80}
+\hypertarget{macros_8h_aff86a9f431f420f8512e7033f18d1e52}{\index{macros.\-h@{macros.\-h}!bas\-\_\-asynclock@{bas\-\_\-asynclock}}
+\index{bas\-\_\-asynclock@{bas\-\_\-asynclock}!macros.h@{macros.\-h}}
+\subsubsection[{bas\-\_\-asynclock}]{\setlength{\rightskip}{0pt plus 5cm}\#define bas\-\_\-asynclock(
+\begin{DoxyParamCaption}
+\item[{}]{elap, }
+\item[{}]{order}
+\end{DoxyParamCaption}
+)~bunny\-\_\-assynclock(elap, order)}}\label{macros_8h_aff86a9f431f420f8512e7033f18d1e52}
+\hypertarget{macros_8h_a23dd2ffda721bfe538af4a11f0d68858}{\index{macros.\-h@{macros.\-h}!bas\-\_\-current\-\_\-time@{bas\-\_\-current\-\_\-time}}
+\index{bas\-\_\-current\-\_\-time@{bas\-\_\-current\-\_\-time}!macros.h@{macros.\-h}}
+\subsubsection[{bas\-\_\-current\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}\#define bas\-\_\-current\-\_\-time(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-current\-\_\-time}()}}\label{macros_8h_a23dd2ffda721bfe538af4a11f0d68858}
+\hypertarget{macros_8h_ad4234755b16b5783c666954ab6798958}{\index{macros.\-h@{macros.\-h}!bas\-\_\-del\-\_\-trap@{bas\-\_\-del\-\_\-trap}}
+\index{bas\-\_\-del\-\_\-trap@{bas\-\_\-del\-\_\-trap}!macros.h@{macros.\-h}}
+\subsubsection[{bas\-\_\-del\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}\#define bas\-\_\-del\-\_\-trap(
+\begin{DoxyParamCaption}
+\item[{}]{trap}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-trap}(trap)}}\label{macros_8h_ad4234755b16b5783c666954ab6798958}
+\hypertarget{macros_8h_ad50285f6b75f497bd4c5d6fe4ad1fb79}{\index{macros.\-h@{macros.\-h}!bas\-\_\-reset\-\_\-clock@{bas\-\_\-reset\-\_\-clock}}
+\index{bas\-\_\-reset\-\_\-clock@{bas\-\_\-reset\-\_\-clock}!macros.h@{macros.\-h}}
+\subsubsection[{bas\-\_\-reset\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}\#define bas\-\_\-reset\-\_\-clock(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-reset\-\_\-clock}()}}\label{macros_8h_ad50285f6b75f497bd4c5d6fe4ad1fb79}
+\hypertarget{macros_8h_a6e3f2e4a2efe73f9c0df8aed182c3b6d}{\index{macros.\-h@{macros.\-h}!bas\-\_\-trap@{bas\-\_\-trap}}
+\index{bas\-\_\-trap@{bas\-\_\-trap}!macros.h@{macros.\-h}}
+\subsubsection[{bas\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}\#define bas\-\_\-trap(
+\begin{DoxyParamCaption}
+\item[{}]{func, }
+\item[{}]{order, }
+\item[{}]{stime, }
+\item[{}]{dur, }
+\item[{}]{par}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-trap}(func, order, stime, dur, par)}}\label{macros_8h_a6e3f2e4a2efe73f9c0df8aed182c3b6d}
+\hypertarget{macros_8h_a86709354a7aa18eed4a4d84efc29d5bc}{\index{macros.\-h@{macros.\-h}!bc\-\_\-conf@{bc\-\_\-conf}}
+\index{bc\-\_\-conf@{bc\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-conf(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-configuration}()}}\label{macros_8h_a86709354a7aa18eed4a4d84efc29d5bc}
+\hypertarget{macros_8h_a7547aed683d5afc6327021e30cacfd2f}{\index{macros.\-h@{macros.\-h}!bc\-\_\-create\-\_\-mode@{bc\-\_\-create\-\_\-mode}}
+\index{bc\-\_\-create\-\_\-mode@{bc\-\_\-create\-\_\-mode}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-create\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-create\-\_\-mode(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-create\-\_\-mode}(b)}}\label{macros_8h_a7547aed683d5afc6327021e30cacfd2f}
+\hypertarget{macros_8h_aa9f635bbd4b0440c89580e9c20153dd7}{\index{macros.\-h@{macros.\-h}!bc\-\_\-del\-\_\-conf@{bc\-\_\-del\-\_\-conf}}
+\index{bc\-\_\-del\-\_\-conf@{bc\-\_\-del\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-del\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-del\-\_\-conf(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-configuration}(c)}}\label{macros_8h_aa9f635bbd4b0440c89580e9c20153dd7}
+\hypertarget{macros_8h_ab312d135adcd191ab8088f7bb7f1a236}{\index{macros.\-h@{macros.\-h}!bc\-\_\-end@{bc\-\_\-end}}
+\index{bc\-\_\-end@{bc\-\_\-end}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-end(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-end}(c)}}\label{macros_8h_ab312d135adcd191ab8088f7bb7f1a236}
+\hypertarget{macros_8h_a584044d0a16e221bb5cab49e9eff6d3e}{\index{macros.\-h@{macros.\-h}!bc\-\_\-first@{bc\-\_\-first}}
+\index{bc\-\_\-first@{bc\-\_\-first}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-first}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-first(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-first}(c)}}\label{macros_8h_a584044d0a16e221bb5cab49e9eff6d3e}
+\hypertarget{macros_8h_a78bec9117f283ee7df6fe044f06e920a}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-case@{bc\-\_\-get\-\_\-case}}
+\index{bc\-\_\-get\-\_\-case@{bc\-\_\-get\-\_\-case}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-case(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-case}(cnf, i)}}\label{macros_8h_a78bec9117f283ee7df6fe044f06e920a}
+\hypertarget{macros_8h_aae72fa8d543aea45fa0da91a1165e502}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-child@{bc\-\_\-get\-\_\-child}}
+\index{bc\-\_\-get\-\_\-child@{bc\-\_\-get\-\_\-child}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-child}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-child(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-child}(cnf, c)}}\label{macros_8h_aae72fa8d543aea45fa0da91a1165e502}
+\hypertarget{macros_8h_adc464fa1ab0c541e930946d17990e228}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-double@{bc\-\_\-get\-\_\-double}}
+\index{bc\-\_\-get\-\_\-double@{bc\-\_\-get\-\_\-double}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-double(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-double}(cnf, val)}}\label{macros_8h_adc464fa1ab0c541e930946d17990e228}
+\hypertarget{macros_8h_a8077849c0b45236e6b48945e698b3fe0}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-int@{bc\-\_\-get\-\_\-int}}
+\index{bc\-\_\-get\-\_\-int@{bc\-\_\-get\-\_\-int}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-int(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-int}(cnf, val)}}\label{macros_8h_a8077849c0b45236e6b48945e698b3fe0}
+\hypertarget{macros_8h_a395937c4e244c578a756feac3680b017}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-name@{bc\-\_\-get\-\_\-name}}
+\index{bc\-\_\-get\-\_\-name@{bc\-\_\-get\-\_\-name}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-name(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-name}(c)}}\label{macros_8h_a395937c4e244c578a756feac3680b017}
+\hypertarget{macros_8h_a55d38588dfcda2640325e2b27c53ae3b}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-parent@{bc\-\_\-get\-\_\-parent}}
+\index{bc\-\_\-get\-\_\-parent@{bc\-\_\-get\-\_\-parent}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-parent}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-parent(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-parent}(c)}}\label{macros_8h_a55d38588dfcda2640325e2b27c53ae3b}
+\hypertarget{macros_8h_a98f573bb7fbd8b77dcb1c28376ebde12}{\index{macros.\-h@{macros.\-h}!bc\-\_\-get\-\_\-string@{bc\-\_\-get\-\_\-string}}
+\index{bc\-\_\-get\-\_\-string@{bc\-\_\-get\-\_\-string}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-get\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-get\-\_\-string(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-get\-\_\-string}(cnf, str)}}\label{macros_8h_a98f573bb7fbd8b77dcb1c28376ebde12}
+\hypertarget{macros_8h_a8351d7e82f0354e02c3e5e3da5f07726}{\index{macros.\-h@{macros.\-h}!bc\-\_\-load\-\_\-conf@{bc\-\_\-load\-\_\-conf}}
+\index{bc\-\_\-load\-\_\-conf@{bc\-\_\-load\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-load\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-load\-\_\-conf(
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{f, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-configuration}(t, f, c)}}\label{macros_8h_a8351d7e82f0354e02c3e5e3da5f07726}
+\hypertarget{macros_8h_a43f09e65cdc3cfa0b20d8dfd3af30852}{\index{macros.\-h@{macros.\-h}!bc\-\_\-next@{bc\-\_\-next}}
+\index{bc\-\_\-next@{bc\-\_\-next}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-next(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-next}(c)}}\label{macros_8h_a43f09e65cdc3cfa0b20d8dfd3af30852}
+\hypertarget{macros_8h_a990da7b1b25c4a29060070befde94529}{\index{macros.\-h@{macros.\-h}!bc\-\_\-read\-\_\-conf@{bc\-\_\-read\-\_\-conf}}
+\index{bc\-\_\-read\-\_\-conf@{bc\-\_\-read\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-read\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-read\-\_\-conf(
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{cd, }
+\item[{}]{cn}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-read\-\_\-configuration}(t, cd, cd)}}\label{macros_8h_a990da7b1b25c4a29060070befde94529}
+\hypertarget{macros_8h_a8709d524391a278fa0eab84afad8332d}{\index{macros.\-h@{macros.\-h}!bc\-\_\-save\-\_\-conf@{bc\-\_\-save\-\_\-conf}}
+\index{bc\-\_\-save\-\_\-conf@{bc\-\_\-save\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-save\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-save\-\_\-conf(
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{f, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-save\-\_\-configuration}(t, f, c)}}\label{macros_8h_a8709d524391a278fa0eab84afad8332d}
+\hypertarget{macros_8h_a6ae8cd79d30cf0bfd2347bde0a69aefb}{\index{macros.\-h@{macros.\-h}!bc\-\_\-set\-\_\-double@{bc\-\_\-set\-\_\-double}}
+\index{bc\-\_\-set\-\_\-double@{bc\-\_\-set\-\_\-double}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-set\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-set\-\_\-double(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-set\-\_\-double}(cnf, val)}}\label{macros_8h_a6ae8cd79d30cf0bfd2347bde0a69aefb}
+\hypertarget{macros_8h_ac95358ec909cca4d32b278c5af904e60}{\index{macros.\-h@{macros.\-h}!bc\-\_\-set\-\_\-int@{bc\-\_\-set\-\_\-int}}
+\index{bc\-\_\-set\-\_\-int@{bc\-\_\-set\-\_\-int}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-set\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-set\-\_\-int(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-set\-\_\-int}(cnf, val)}}\label{macros_8h_ac95358ec909cca4d32b278c5af904e60}
+\hypertarget{macros_8h_a6cb456fd0d9c4f527d791d7026339df4}{\index{macros.\-h@{macros.\-h}!bc\-\_\-set\-\_\-string@{bc\-\_\-set\-\_\-string}}
+\index{bc\-\_\-set\-\_\-string@{bc\-\_\-set\-\_\-string}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-set\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-set\-\_\-string(
+\begin{DoxyParamCaption}
+\item[{}]{cnf, }
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-configuration\-\_\-set\-\_\-string}(cnf, str)}}\label{macros_8h_a6cb456fd0d9c4f527d791d7026339df4}
+\hypertarget{macros_8h_a858356ea04c60153308742a4b681041b}{\index{macros.\-h@{macros.\-h}!bc\-\_\-write\-\_\-conf@{bc\-\_\-write\-\_\-conf}}
+\index{bc\-\_\-write\-\_\-conf@{bc\-\_\-write\-\_\-conf}!macros.h@{macros.\-h}}
+\subsubsection[{bc\-\_\-write\-\_\-conf}]{\setlength{\rightskip}{0pt plus 5cm}\#define bc\-\_\-write\-\_\-conf(
+\begin{DoxyParamCaption}
+\item[{}]{t, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-write\-\_\-configuration}(t, c)}}\label{macros_8h_a858356ea04c60153308742a4b681041b}
+\hypertarget{macros_8h_abf8c5b7caaf486ffd02509eaac584cff}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-circle@{bcol\-\_\-circle}}
+\index{bcol\-\_\-circle@{bcol\-\_\-circle}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-circle(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{r1, }
+\item[{}]{b, }
+\item[{}]{r2}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-circle\-\_\-collision}}}\label{macros_8h_abf8c5b7caaf486ffd02509eaac584cff}
+\hypertarget{macros_8h_afc5570890e738ccfcdfc4e1a58e07370}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-circle\-\_\-dot@{bcol\-\_\-circle\-\_\-dot}}
+\index{bcol\-\_\-circle\-\_\-dot@{bcol\-\_\-circle\-\_\-dot}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-circle\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-circle\-\_\-dot(
+\begin{DoxyParamCaption}
+\item[{}]{elem, }
+\item[{}]{dot, }
+\item[{}]{rad}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-circle\-\_\-collision\-\_\-dot}(elem, dot, rad)}}\label{macros_8h_afc5570890e738ccfcdfc4e1a58e07370}
+\hypertarget{macros_8h_aa0b22db2683b522ff539ddb3072117a0}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-quad\-\_\-dot@{bcol\-\_\-quad\-\_\-dot}}
+\index{bcol\-\_\-quad\-\_\-dot@{bcol\-\_\-quad\-\_\-dot}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-quad\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-quad\-\_\-dot(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-quad\-\_\-collision\-\_\-dot}(a, b)}}\label{macros_8h_aa0b22db2683b522ff539ddb3072117a0}
+\hypertarget{macros_8h_a2798a96b33470b984b7feedcecf2f479}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-rect@{bcol\-\_\-rect}}
+\index{bcol\-\_\-rect@{bcol\-\_\-rect}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-rect}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-rect(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-rectangular\-\_\-collision}(a, b)}}\label{macros_8h_a2798a96b33470b984b7feedcecf2f479}
+\hypertarget{macros_8h_a8c76d7fa791efce35b4392a13168381f}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-rect\-\_\-dot@{bcol\-\_\-rect\-\_\-dot}}
+\index{bcol\-\_\-rect\-\_\-dot@{bcol\-\_\-rect\-\_\-dot}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-rect\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-rect\-\_\-dot(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~bunny\-\_\-rectangular\-\_\-collision\-\_\-dot(a, b)}}\label{macros_8h_a8c76d7fa791efce35b4392a13168381f}
+\hypertarget{macros_8h_ad40a68ce34d14ae2a83b361bc11b976f}{\index{macros.\-h@{macros.\-h}!bcol\-\_\-triangle\-\_\-dot@{bcol\-\_\-triangle\-\_\-dot}}
+\index{bcol\-\_\-triangle\-\_\-dot@{bcol\-\_\-triangle\-\_\-dot}!macros.h@{macros.\-h}}
+\subsubsection[{bcol\-\_\-triangle\-\_\-dot}]{\setlength{\rightskip}{0pt plus 5cm}\#define bcol\-\_\-triangle\-\_\-dot(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-triangle\-\_\-collision\-\_\-dot}(a, b)}}\label{macros_8h_ad40a68ce34d14ae2a83b361bc11b976f}
+\hypertarget{macros_8h_abb0386690754b7f8b3282866e6f5e24f}{\index{macros.\-h@{macros.\-h}!bev\-\_\-click\-\_\-handler@{bev\-\_\-click\-\_\-handler}}
+\index{bev\-\_\-click\-\_\-handler@{bev\-\_\-click\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-click\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-click\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-click\-\_\-response}(a)}}\label{macros_8h_abb0386690754b7f8b3282866e6f5e24f}
+\hypertarget{macros_8h_a26b4c7ec77fe0307b8e0bc9bbd818f8b}{\index{macros.\-h@{macros.\-h}!bev\-\_\-close\-\_\-handler@{bev\-\_\-close\-\_\-handler}}
+\index{bev\-\_\-close\-\_\-handler@{bev\-\_\-close\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-close\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-close\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-close\-\_\-response}(a)}}\label{macros_8h_a26b4c7ec77fe0307b8e0bc9bbd818f8b}
+\hypertarget{macros_8h_a037791b0cf0d6c1152fc6408fce3fc31}{\index{macros.\-h@{macros.\-h}!bev\-\_\-context@{bev\-\_\-context}}
+\index{bev\-\_\-context@{bev\-\_\-context}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-context(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-context}(a)}}\label{macros_8h_a037791b0cf0d6c1152fc6408fce3fc31}
+\hypertarget{macros_8h_a934518c9e5aa45647ecf29708449f70d}{\index{macros.\-h@{macros.\-h}!bev\-\_\-display\-\_\-handler@{bev\-\_\-display\-\_\-handler}}
+\index{bev\-\_\-display\-\_\-handler@{bev\-\_\-display\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-display\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-display\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-display\-\_\-function}(a)}}\label{macros_8h_a934518c9e5aa45647ecf29708449f70d}
+\hypertarget{macros_8h_a4771a5f22d50e567c7b21a393f81b6ef}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-context@{bev\-\_\-get\-\_\-context}}
+\index{bev\-\_\-get\-\_\-context@{bev\-\_\-get\-\_\-context}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-context(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-context}(a)}}\label{macros_8h_a4771a5f22d50e567c7b21a393f81b6ef}
+\hypertarget{macros_8h_a233976996e857b43ce55a9194dd7c07b}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-focus\-\_\-handler@{bev\-\_\-get\-\_\-focus\-\_\-handler}}
+\index{bev\-\_\-get\-\_\-focus\-\_\-handler@{bev\-\_\-get\-\_\-focus\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-focus\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-focus\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-get\-\_\-focus\-\_\-response}(a)}}\label{macros_8h_a233976996e857b43ce55a9194dd7c07b}
+\hypertarget{macros_8h_a5a901bffc7831112d35ee333081cd4b3}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-joy\-\_\-axis@{bev\-\_\-get\-\_\-joy\-\_\-axis}}
+\index{bev\-\_\-get\-\_\-joy\-\_\-axis@{bev\-\_\-get\-\_\-joy\-\_\-axis}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-joy\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-joy\-\_\-axis(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-joy\-\_\-axis}()}}\label{macros_8h_a5a901bffc7831112d35ee333081cd4b3}
+\hypertarget{macros_8h_aad557d0112aa1290cad68654a50442a8}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-joy\-\_\-button@{bev\-\_\-get\-\_\-joy\-\_\-button}}
+\index{bev\-\_\-get\-\_\-joy\-\_\-button@{bev\-\_\-get\-\_\-joy\-\_\-button}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-joy\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-joy\-\_\-button(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-joy\-\_\-button}()}}\label{macros_8h_aad557d0112aa1290cad68654a50442a8}
+\hypertarget{macros_8h_ae712713e4b1721d0365297047793fa4c}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-joy\-\_\-info@{bev\-\_\-get\-\_\-joy\-\_\-info}}
+\index{bev\-\_\-get\-\_\-joy\-\_\-info@{bev\-\_\-get\-\_\-joy\-\_\-info}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-joy\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-joy\-\_\-info(
+\begin{DoxyParamCaption}
+\item[{}]{id}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-joy\-\_\-info}(id)}}\label{macros_8h_ae712713e4b1721d0365297047793fa4c}
+\hypertarget{macros_8h_a40cedf33cbf45bf2609f27e129b1ead7}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-mouse\-\_\-button@{bev\-\_\-get\-\_\-mouse\-\_\-button}}
+\index{bev\-\_\-get\-\_\-mouse\-\_\-button@{bev\-\_\-get\-\_\-mouse\-\_\-button}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-mouse\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-mouse\-\_\-button(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-mouse\-\_\-button}()}}\label{macros_8h_a40cedf33cbf45bf2609f27e129b1ead7}
+\hypertarget{macros_8h_a0a3d4cffcb07ff9de3fa5c108260bf43}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-mouse\-\_\-position@{bev\-\_\-get\-\_\-mouse\-\_\-position}}
+\index{bev\-\_\-get\-\_\-mouse\-\_\-position@{bev\-\_\-get\-\_\-mouse\-\_\-position}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-mouse\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-mouse\-\_\-position(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-mouse\-\_\-position}()}}\label{macros_8h_a0a3d4cffcb07ff9de3fa5c108260bf43}
+\hypertarget{macros_8h_add89ba6842148783f270e89968937bd7}{\index{macros.\-h@{macros.\-h}!bev\-\_\-get\-\_\-window@{bev\-\_\-get\-\_\-window}}
+\index{bev\-\_\-get\-\_\-window@{bev\-\_\-get\-\_\-window}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-get\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-get\-\_\-window(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-window}()}}\label{macros_8h_add89ba6842148783f270e89968937bd7}
+\hypertarget{macros_8h_a07c4f4f43efc026250bfdc2b7323803b}{\index{macros.\-h@{macros.\-h}!bev\-\_\-joy\-\_\-axis\-\_\-handler@{bev\-\_\-joy\-\_\-axis\-\_\-handler}}
+\index{bev\-\_\-joy\-\_\-axis\-\_\-handler@{bev\-\_\-joy\-\_\-axis\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-joy\-\_\-axis\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-joy\-\_\-axis\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-joy\-\_\-axis\-\_\-response}(a)}}\label{macros_8h_a07c4f4f43efc026250bfdc2b7323803b}
+\hypertarget{macros_8h_af383469cd547dd45d5eebabe09fe344a}{\index{macros.\-h@{macros.\-h}!bev\-\_\-joy\-\_\-button\-\_\-handler@{bev\-\_\-joy\-\_\-button\-\_\-handler}}
+\index{bev\-\_\-joy\-\_\-button\-\_\-handler@{bev\-\_\-joy\-\_\-button\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-joy\-\_\-button\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-joy\-\_\-button\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-joy\-\_\-button\-\_\-response}(a)}}\label{macros_8h_af383469cd547dd45d5eebabe09fe344a}
+\hypertarget{macros_8h_a12395c5dd20b3b69cefa7f21231b1a07}{\index{macros.\-h@{macros.\-h}!bev\-\_\-joy\-\_\-connect\-\_\-handler@{bev\-\_\-joy\-\_\-connect\-\_\-handler}}
+\index{bev\-\_\-joy\-\_\-connect\-\_\-handler@{bev\-\_\-joy\-\_\-connect\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-joy\-\_\-connect\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-joy\-\_\-connect\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-joy\-\_\-connect\-\_\-response}(a)}}\label{macros_8h_a12395c5dd20b3b69cefa7f21231b1a07}
+\hypertarget{macros_8h_a06db118482fffce5a549cb2776273133}{\index{macros.\-h@{macros.\-h}!bev\-\_\-key\-\_\-handler@{bev\-\_\-key\-\_\-handler}}
+\index{bev\-\_\-key\-\_\-handler@{bev\-\_\-key\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-key\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-key\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-key\-\_\-response}(a)}}\label{macros_8h_a06db118482fffce5a549cb2776273133}
+\hypertarget{macros_8h_a0c1988e73e787b9d3b4e9c0626e9e807}{\index{macros.\-h@{macros.\-h}!bev\-\_\-loop@{bev\-\_\-loop}}
+\index{bev\-\_\-loop@{bev\-\_\-loop}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-loop(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-loop}(a, b, c)}}\label{macros_8h_a0c1988e73e787b9d3b4e9c0626e9e807}
+\hypertarget{macros_8h_af78e4fda63d68a9761b396041b89ed24}{\index{macros.\-h@{macros.\-h}!bev\-\_\-loop\-\_\-mw@{bev\-\_\-loop\-\_\-mw}}
+\index{bev\-\_\-loop\-\_\-mw@{bev\-\_\-loop\-\_\-mw}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-loop\-\_\-mw}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-loop\-\_\-mw(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-loop\-\_\-mw}(a, b, c, d)}}\label{macros_8h_af78e4fda63d68a9761b396041b89ed24}
+\hypertarget{macros_8h_a60d427830e4cd5e5d4567dd17d5542d1}{\index{macros.\-h@{macros.\-h}!bev\-\_\-main\-\_\-loop@{bev\-\_\-main\-\_\-loop}}
+\index{bev\-\_\-main\-\_\-loop@{bev\-\_\-main\-\_\-loop}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-main\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-main\-\_\-loop(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-loop\-\_\-main\-\_\-function}(a)}}\label{macros_8h_a60d427830e4cd5e5d4567dd17d5542d1}
+\hypertarget{macros_8h_ad09dd58c0c80aa847b1dda2304bb9977}{\index{macros.\-h@{macros.\-h}!bev\-\_\-move\-\_\-handler@{bev\-\_\-move\-\_\-handler}}
+\index{bev\-\_\-move\-\_\-handler@{bev\-\_\-move\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-move\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-move\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-move\-\_\-response}(a)}}\label{macros_8h_ad09dd58c0c80aa847b1dda2304bb9977}
+\hypertarget{macros_8h_aa6c234d852cae60f65aa55d0fb6f7fca}{\index{macros.\-h@{macros.\-h}!bev\-\_\-resize\-\_\-handler@{bev\-\_\-resize\-\_\-handler}}
+\index{bev\-\_\-resize\-\_\-handler@{bev\-\_\-resize\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-resize\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-resize\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-resize\-\_\-response}(a)}}\label{macros_8h_aa6c234d852cae60f65aa55d0fb6f7fca}
+\hypertarget{macros_8h_a70c1f197ec2a98d11733159df2b2bdec}{\index{macros.\-h@{macros.\-h}!bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler@{bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler}}
+\index{bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler@{bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-set\-\_\-lost\-\_\-focus\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-lost\-\_\-focus\-\_\-response}(a)}}\label{macros_8h_a70c1f197ec2a98d11733159df2b2bdec}
+\hypertarget{macros_8h_ac10fb1972cc52d52b8bae02a0113025c}{\index{macros.\-h@{macros.\-h}!bev\-\_\-text\-\_\-handler@{bev\-\_\-text\-\_\-handler}}
+\index{bev\-\_\-text\-\_\-handler@{bev\-\_\-text\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-text\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-text\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-text\-\_\-response}(a)}}\label{macros_8h_ac10fb1972cc52d52b8bae02a0113025c}
+\hypertarget{macros_8h_a63f0b7203f4fe385a381bc8b19b9be3f}{\index{macros.\-h@{macros.\-h}!bev\-\_\-wheel\-\_\-handler@{bev\-\_\-wheel\-\_\-handler}}
+\index{bev\-\_\-wheel\-\_\-handler@{bev\-\_\-wheel\-\_\-handler}!macros.h@{macros.\-h}}
+\subsubsection[{bev\-\_\-wheel\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}\#define bev\-\_\-wheel\-\_\-handler(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-wheel\-\_\-response}(a)}}\label{macros_8h_a63f0b7203f4fe385a381bc8b19b9be3f}
+\hypertarget{macros_8h_aa5d385e8fed5516bc63a0729eac4ec36}{\index{macros.\-h@{macros.\-h}!bg\-\_\-blit@{bg\-\_\-blit}}
+\index{bg\-\_\-blit@{bg\-\_\-blit}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-blit(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-blit}(a, b, c)}}\label{macros_8h_aa5d385e8fed5516bc63a0729eac4ec36}
+\hypertarget{macros_8h_a7ad85793b7522c1a929db5e4133109d0}{\index{macros.\-h@{macros.\-h}!bg\-\_\-blit\-\_\-shader@{bg\-\_\-blit\-\_\-shader}}
+\index{bg\-\_\-blit\-\_\-shader@{bg\-\_\-blit\-\_\-shader}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-blit\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-blit\-\_\-shader(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-blit\-\_\-shader}(a, b, c, d)}}\label{macros_8h_a7ad85793b7522c1a929db5e4133109d0}
+\hypertarget{macros_8h_a3162f8fc7620bd736e0dcc1169f16a7d}{\index{macros.\-h@{macros.\-h}!bg\-\_\-circle@{bg\-\_\-circle}}
+\index{bg\-\_\-circle@{bg\-\_\-circle}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-circle(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-circle}(a, b, c, d)}}\label{macros_8h_a3162f8fc7620bd736e0dcc1169f16a7d}
+\hypertarget{macros_8h_a66c9b07dd8e7234300038870f3106cf7}{\index{macros.\-h@{macros.\-h}!bg\-\_\-clear@{bg\-\_\-clear}}
+\index{bg\-\_\-clear@{bg\-\_\-clear}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-clear(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-clear}(a, b)}}\label{macros_8h_a66c9b07dd8e7234300038870f3106cf7}
+\hypertarget{macros_8h_a10d2d77dbd883f33f58ffc5177c34803}{\index{macros.\-h@{macros.\-h}!bg\-\_\-del\-\_\-pic@{bg\-\_\-del\-\_\-pic}}
+\index{bg\-\_\-del\-\_\-pic@{bg\-\_\-del\-\_\-pic}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-del\-\_\-pic}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-del\-\_\-pic(
+\begin{DoxyParamCaption}
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-clipable}(c)}}\label{macros_8h_a10d2d77dbd883f33f58ffc5177c34803}
+\hypertarget{macros_8h_a66011800e37eff56359fef2b6bc6c2e9}{\index{macros.\-h@{macros.\-h}!bg\-\_\-del\-\_\-shader@{bg\-\_\-del\-\_\-shader}}
+\index{bg\-\_\-del\-\_\-shader@{bg\-\_\-del\-\_\-shader}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-del\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-del\-\_\-shader(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-shader}(a)}}\label{macros_8h_a66011800e37eff56359fef2b6bc6c2e9}
+\hypertarget{macros_8h_af0f07ca1f48626980b5caaf1ad86f7bc}{\index{macros.\-h@{macros.\-h}!bg\-\_\-draw@{bg\-\_\-draw}}
+\index{bg\-\_\-draw@{bg\-\_\-draw}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-draw}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-draw(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-draw}(a)}}\label{macros_8h_af0f07ca1f48626980b5caaf1ad86f7bc}
+\hypertarget{macros_8h_a49b48e70850efdde2b0e927b7526ea46}{\index{macros.\-h@{macros.\-h}!bg\-\_\-fill@{bg\-\_\-fill}}
+\index{bg\-\_\-fill@{bg\-\_\-fill}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-fill(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-fill}(a, b)}}\label{macros_8h_a49b48e70850efdde2b0e927b7526ea46}
+\hypertarget{macros_8h_ae1b3428a0e5cbf406ebf6cbc4c534e91}{\index{macros.\-h@{macros.\-h}!bg\-\_\-full\-\_\-blit@{bg\-\_\-full\-\_\-blit}}
+\index{bg\-\_\-full\-\_\-blit@{bg\-\_\-full\-\_\-blit}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-full\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-full\-\_\-blit(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-enable\-\_\-full\-\_\-blit}(a)}}\label{macros_8h_ae1b3428a0e5cbf406ebf6cbc4c534e91}
+\hypertarget{macros_8h_a7ed7a9621a9dd803879f93b3dc171612}{\index{macros.\-h@{macros.\-h}!bg\-\_\-geometry@{bg\-\_\-geometry}}
+\index{bg\-\_\-geometry@{bg\-\_\-geometry}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-geometry(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-geometry}(a, b, c, d)}}\label{macros_8h_a7ed7a9621a9dd803879f93b3dc171612}
+\hypertarget{macros_8h_a533e8d15b3f4cb475c16934abeb991f8}{\index{macros.\-h@{macros.\-h}!bg\-\_\-gl\-\_\-pop@{bg\-\_\-gl\-\_\-pop}}
+\index{bg\-\_\-gl\-\_\-pop@{bg\-\_\-gl\-\_\-pop}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-gl\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-gl\-\_\-pop(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-\-G\-L\-\_\-pop\-\_\-states}(a)}}\label{macros_8h_a533e8d15b3f4cb475c16934abeb991f8}
+\hypertarget{macros_8h_a814b9848b238e8e4fb11f61dcc1e55a7}{\index{macros.\-h@{macros.\-h}!bg\-\_\-gl\-\_\-push@{bg\-\_\-gl\-\_\-push}}
+\index{bg\-\_\-gl\-\_\-push@{bg\-\_\-gl\-\_\-push}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-gl\-\_\-push}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-gl\-\_\-push(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-\-G\-L\-\_\-push\-\_\-states}(a)}}\label{macros_8h_a814b9848b238e8e4fb11f61dcc1e55a7}
+\hypertarget{macros_8h_a7c6c9242efd94c3f836ee50723ed3955}{\index{macros.\-h@{macros.\-h}!bg\-\_\-gl\-\_\-reset@{bg\-\_\-gl\-\_\-reset}}
+\index{bg\-\_\-gl\-\_\-reset@{bg\-\_\-gl\-\_\-reset}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-gl\-\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-gl\-\_\-reset(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-\-G\-L\-\_\-reset\-\_\-states}(a)}}\label{macros_8h_a7c6c9242efd94c3f836ee50723ed3955}
+\hypertarget{macros_8h_ab8700a480390503ede87c09536bc2a17}{\index{macros.\-h@{macros.\-h}!bg\-\_\-line@{bg\-\_\-line}}
+\index{bg\-\_\-line@{bg\-\_\-line}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-line(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-line}(a, b, c)}}\label{macros_8h_ab8700a480390503ede87c09536bc2a17}
+\hypertarget{macros_8h_adcc118ecb9bc0f7cb3f5c2a64952487b}{\index{macros.\-h@{macros.\-h}!bg\-\_\-load\-\_\-pic@{bg\-\_\-load\-\_\-pic}}
+\index{bg\-\_\-load\-\_\-pic@{bg\-\_\-load\-\_\-pic}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-load\-\_\-pic}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-load\-\_\-pic(
+\begin{DoxyParamCaption}
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-picture}(f)}}\label{macros_8h_adcc118ecb9bc0f7cb3f5c2a64952487b}
+\hypertarget{macros_8h_a7ad0c213c19564ecde22c039c5fd0e57}{\index{macros.\-h@{macros.\-h}!bg\-\_\-load\-\_\-pixelarray@{bg\-\_\-load\-\_\-pixelarray}}
+\index{bg\-\_\-load\-\_\-pixelarray@{bg\-\_\-load\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-load\-\_\-pixelarray(
+\begin{DoxyParamCaption}
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-pixelarray}(f)}}\label{macros_8h_a7ad0c213c19564ecde22c039c5fd0e57}
+\hypertarget{macros_8h_a2b625be4c2cff66e844ab9ca9303a808}{\index{macros.\-h@{macros.\-h}!bg\-\_\-load\-\_\-shader@{bg\-\_\-load\-\_\-shader}}
+\index{bg\-\_\-load\-\_\-shader@{bg\-\_\-load\-\_\-shader}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-load\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-load\-\_\-shader(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-shader}(a, b, c)}}\label{macros_8h_a2b625be4c2cff66e844ab9ca9303a808}
+\hypertarget{macros_8h_aef8e60fe158cee1d93a8fb6364d37705}{\index{macros.\-h@{macros.\-h}!bg\-\_\-picture@{bg\-\_\-picture}}
+\index{bg\-\_\-picture@{bg\-\_\-picture}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-picture(
+\begin{DoxyParamCaption}
+\item[{}]{w, }
+\item[{}]{h}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-picture}(w, h)}}\label{macros_8h_aef8e60fe158cee1d93a8fb6364d37705}
+\hypertarget{macros_8h_a41ab526f527d49efe5294eeea822a7d4}{\index{macros.\-h@{macros.\-h}!bg\-\_\-pixel@{bg\-\_\-pixel}}
+\index{bg\-\_\-pixel@{bg\-\_\-pixel}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-pixel(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-pixel}(a, b, c)}}\label{macros_8h_a41ab526f527d49efe5294eeea822a7d4}
+\hypertarget{macros_8h_a3ab8c398f24dc67b4e10814bc3710b7e}{\index{macros.\-h@{macros.\-h}!bg\-\_\-pixelarray@{bg\-\_\-pixelarray}}
+\index{bg\-\_\-pixelarray@{bg\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-pixelarray(
+\begin{DoxyParamCaption}
+\item[{}]{w, }
+\item[{}]{h}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-pixelarray}(w, h)}}\label{macros_8h_a3ab8c398f24dc67b4e10814bc3710b7e}
+\hypertarget{macros_8h_a6ca85e7a6da9c4e7dc774dce70b91b5e}{\index{macros.\-h@{macros.\-h}!bg\-\_\-polygon@{bg\-\_\-polygon}}
+\index{bg\-\_\-polygon@{bg\-\_\-polygon}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-polygon(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-polygon}(a, b, c)}}\label{macros_8h_a6ca85e7a6da9c4e7dc774dce70b91b5e}
+\hypertarget{macros_8h_a6bb09cd30d7bbcdb5ad487684f6fc5f6}{\index{macros.\-h@{macros.\-h}!bg\-\_\-read\-\_\-pic@{bg\-\_\-read\-\_\-pic}}
+\index{bg\-\_\-read\-\_\-pic@{bg\-\_\-read\-\_\-pic}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-read\-\_\-pic}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-read\-\_\-pic(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{l}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-read\-\_\-picture}(p, l)}}\label{macros_8h_a6bb09cd30d7bbcdb5ad487684f6fc5f6}
+\hypertarget{macros_8h_ae4a175758660cde4cb15daca8e6f10e4}{\index{macros.\-h@{macros.\-h}!bg\-\_\-read\-\_\-pixelarray@{bg\-\_\-read\-\_\-pixelarray}}
+\index{bg\-\_\-read\-\_\-pixelarray@{bg\-\_\-read\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-read\-\_\-pixelarray(
+\begin{DoxyParamCaption}
+\item[{}]{v}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-read\-\_\-pixelarray}(v)}}\label{macros_8h_ae4a175758660cde4cb15daca8e6f10e4}
+\hypertarget{macros_8h_ae1e53a2b63668a1b0aef71b69f5c9b1d}{\index{macros.\-h@{macros.\-h}!bg\-\_\-save\-\_\-pixelarray@{bg\-\_\-save\-\_\-pixelarray}}
+\index{bg\-\_\-save\-\_\-pixelarray@{bg\-\_\-save\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-save\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-save\-\_\-pixelarray(
+\begin{DoxyParamCaption}
+\item[{}]{b, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-save\-\_\-pixelarray}(b, f)}}\label{macros_8h_ae1e53a2b63668a1b0aef71b69f5c9b1d}
+\hypertarget{macros_8h_a1f80f6baa89b4cb870d006034bf5cd9f}{\index{macros.\-h@{macros.\-h}!bg\-\_\-shader@{bg\-\_\-shader}}
+\index{bg\-\_\-shader@{bg\-\_\-shader}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-shader(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-shader}()}}\label{macros_8h_a1f80f6baa89b4cb870d006034bf5cd9f}
+\hypertarget{macros_8h_aced9aff20d5a78870d10db5e8ff67886}{\index{macros.\-h@{macros.\-h}!bg\-\_\-shader\-\_\-available@{bg\-\_\-shader\-\_\-available}}
+\index{bg\-\_\-shader\-\_\-available@{bg\-\_\-shader\-\_\-available}!macros.h@{macros.\-h}}
+\subsubsection[{bg\-\_\-shader\-\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}\#define bg\-\_\-shader\-\_\-available(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-is\-\_\-shader\-\_\-available}()}}\label{macros_8h_aced9aff20d5a78870d10db5e8ff67886}
+\hypertarget{macros_8h_ac077dc995cb4f8beffe5f55e7cf372f1}{\index{macros.\-h@{macros.\-h}!bh\-\_\-del\-\_\-hardware@{bh\-\_\-del\-\_\-hardware}}
+\index{bh\-\_\-del\-\_\-hardware@{bh\-\_\-del\-\_\-hardware}!macros.h@{macros.\-h}}
+\subsubsection[{bh\-\_\-del\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}\#define bh\-\_\-del\-\_\-hardware(
+\begin{DoxyParamCaption}
+\item[{}]{hrd}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-hardware}(hrd)}}\label{macros_8h_ac077dc995cb4f8beffe5f55e7cf372f1}
+\hypertarget{macros_8h_afb313343a1cf1c1566dbfa8f9cb4e66c}{\index{macros.\-h@{macros.\-h}!bh\-\_\-hardware@{bh\-\_\-hardware}}
+\index{bh\-\_\-hardware@{bh\-\_\-hardware}!macros.h@{macros.\-h}}
+\subsubsection[{bh\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}\#define bh\-\_\-hardware(
+\begin{DoxyParamCaption}
+\item[{}]{id}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-hardware}(id)}}\label{macros_8h_afb313343a1cf1c1566dbfa8f9cb4e66c}
+\hypertarget{macros_8h_a0de7ba664fdd27b950068495f1073b38}{\index{macros.\-h@{macros.\-h}!bh\-\_\-hash@{bh\-\_\-hash}}
+\index{bh\-\_\-hash@{bh\-\_\-hash}!macros.h@{macros.\-h}}
+\subsubsection[{bh\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}\#define bh\-\_\-hash(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-hash}(a, b, c)}}\label{macros_8h_a0de7ba664fdd27b950068495f1073b38}
+\hypertarget{macros_8h_a2a3a8354d2889889d02452902b2de88e}{\index{macros.\-h@{macros.\-h}!bh\-\_\-read@{bh\-\_\-read}}
+\index{bh\-\_\-read@{bh\-\_\-read}!macros.h@{macros.\-h}}
+\subsubsection[{bh\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}\#define bh\-\_\-read(
+\begin{DoxyParamCaption}
+\item[{}]{hrd}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-hardware\-\_\-read}(hrd)}}\label{macros_8h_a2a3a8354d2889889d02452902b2de88e}
+\hypertarget{macros_8h_ad13be0df4e409d09fd3e40d026099a75}{\index{macros.\-h@{macros.\-h}!bh\-\_\-write@{bh\-\_\-write}}
+\index{bh\-\_\-write@{bh\-\_\-write}!macros.h@{macros.\-h}}
+\subsubsection[{bh\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\#define bh\-\_\-write(
+\begin{DoxyParamCaption}
+\item[{}]{hrd}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-hardware\-\_\-write}(hrd)}}\label{macros_8h_ad13be0df4e409d09fd3e40d026099a75}
+\hypertarget{macros_8h_a126717706ea1c919ce525429d0e40970}{\index{macros.\-h@{macros.\-h}!bm\-\_\-errno@{bm\-\_\-errno}}
+\index{bm\-\_\-errno@{bm\-\_\-errno}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-errno}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-errno~{\bf bunny\-\_\-errno}}}\label{macros_8h_a126717706ea1c919ce525429d0e40970}
+\hypertarget{macros_8h_aca23ed91176b20b83945dd0a6d4dd8a3}{\index{macros.\-h@{macros.\-h}!bm\-\_\-eval@{bm\-\_\-eval}}
+\index{bm\-\_\-eval@{bm\-\_\-eval}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-eval}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-eval(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-evaluate}(a, b)}}\label{macros_8h_aca23ed91176b20b83945dd0a6d4dd8a3}
+\hypertarget{macros_8h_aaf0f82bc349944813ae0a09c8ec992e5}{\index{macros.\-h@{macros.\-h}!bm\-\_\-load\-\_\-file@{bm\-\_\-load\-\_\-file}}
+\index{bm\-\_\-load\-\_\-file@{bm\-\_\-load\-\_\-file}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-load\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-load\-\_\-file(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{d, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-file}(f, d, s)}}\label{macros_8h_aaf0f82bc349944813ae0a09c8ec992e5}
+\hypertarget{macros_8h_a48e3e9214577d1e543c2858eaf71c5eb}{\index{macros.\-h@{macros.\-h}!bm\-\_\-perror@{bm\-\_\-perror}}
+\index{bm\-\_\-perror@{bm\-\_\-perror}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-perror}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-perror(
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-perror}(s)}}\label{macros_8h_a48e3e9214577d1e543c2858eaf71c5eb}
+\hypertarget{macros_8h_af18e7fa51f55e94e033c1e800ea07c6b}{\index{macros.\-h@{macros.\-h}!bm\-\_\-printl@{bm\-\_\-printl}}
+\index{bm\-\_\-printl@{bm\-\_\-printl}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-printl}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-printl(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-printl}(str)}}\label{macros_8h_af18e7fa51f55e94e033c1e800ea07c6b}
+\hypertarget{macros_8h_a5c13e54ad1cc2b422bfc5b2f1283b130}{\index{macros.\-h@{macros.\-h}!bm\-\_\-printlerr@{bm\-\_\-printlerr}}
+\index{bm\-\_\-printlerr@{bm\-\_\-printlerr}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-printlerr}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-printlerr(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-printlerr}(str)}}\label{macros_8h_a5c13e54ad1cc2b422bfc5b2f1283b130}
+\hypertarget{macros_8h_a19448d87914452499ed549b7dada6c66}{\index{macros.\-h@{macros.\-h}!bm\-\_\-save\-\_\-file@{bm\-\_\-save\-\_\-file}}
+\index{bm\-\_\-save\-\_\-file@{bm\-\_\-save\-\_\-file}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-save\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-save\-\_\-file(
+\begin{DoxyParamCaption}
+\item[{}]{f, }
+\item[{}]{d, }
+\item[{}]{l}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-save\-\_\-file}(f, d, l)}}\label{macros_8h_a19448d87914452499ed549b7dada6c66}
+\hypertarget{macros_8h_ad78c7d4a317884d78b69aa36c2326e11}{\index{macros.\-h@{macros.\-h}!bm\-\_\-strerror@{bm\-\_\-strerror}}
+\index{bm\-\_\-strerror@{bm\-\_\-strerror}!macros.h@{macros.\-h}}
+\subsubsection[{bm\-\_\-strerror}]{\setlength{\rightskip}{0pt plus 5cm}\#define bm\-\_\-strerror(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-strerror}(e)}}\label{macros_8h_ad78c7d4a317884d78b69aa36c2326e11}
+\hypertarget{macros_8h_ad8165340d3bcc68fcb270882e4e05d59}{\index{macros.\-h@{macros.\-h}!bn\-\_\-client@{bn\-\_\-client}}
+\index{bn\-\_\-client@{bn\-\_\-client}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-client(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-client}(a, b)}}\label{macros_8h_ad8165340d3bcc68fcb270882e4e05d59}
+\hypertarget{macros_8h_a4a386c35816b78fd047988abca87159a}{\index{macros.\-h@{macros.\-h}!bn\-\_\-clt\-\_\-poll@{bn\-\_\-clt\-\_\-poll}}
+\index{bn\-\_\-clt\-\_\-poll@{bn\-\_\-clt\-\_\-poll}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-clt\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-clt\-\_\-poll(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-client\-\_\-poll}(a, b)}}\label{macros_8h_a4a386c35816b78fd047988abca87159a}
+\hypertarget{macros_8h_a8c969922672d49d95711adb17cf36666}{\index{macros.\-h@{macros.\-h}!bn\-\_\-clt\-\_\-write@{bn\-\_\-clt\-\_\-write}}
+\index{bn\-\_\-clt\-\_\-write@{bn\-\_\-clt\-\_\-write}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-clt\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-clt\-\_\-write(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-client\-\_\-write}(a, b, c)}}\label{macros_8h_a8c969922672d49d95711adb17cf36666}
+\hypertarget{macros_8h_a153406c3b16c60bb738390191b494b87}{\index{macros.\-h@{macros.\-h}!bn\-\_\-del\-\_\-client@{bn\-\_\-del\-\_\-client}}
+\index{bn\-\_\-del\-\_\-client@{bn\-\_\-del\-\_\-client}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-del\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-del\-\_\-client(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-client}(a)}}\label{macros_8h_a153406c3b16c60bb738390191b494b87}
+\hypertarget{macros_8h_a47c10524689793f366c870abb2635438}{\index{macros.\-h@{macros.\-h}!bn\-\_\-del\-\_\-server@{bn\-\_\-del\-\_\-server}}
+\index{bn\-\_\-del\-\_\-server@{bn\-\_\-del\-\_\-server}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-del\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-del\-\_\-server(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-server}(p)}}\label{macros_8h_a47c10524689793f366c870abb2635438}
+\hypertarget{macros_8h_a762faa70d55f8dba8615b82d6e319d62}{\index{macros.\-h@{macros.\-h}!bn\-\_\-server@{bn\-\_\-server}}
+\index{bn\-\_\-server@{bn\-\_\-server}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-server(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-server}(p)}}\label{macros_8h_a762faa70d55f8dba8615b82d6e319d62}
+\hypertarget{macros_8h_a6337e2fa61efdcc19d71966a6f7961a4}{\index{macros.\-h@{macros.\-h}!bn\-\_\-srv\-\_\-doom@{bn\-\_\-srv\-\_\-doom}}
+\index{bn\-\_\-srv\-\_\-doom@{bn\-\_\-srv\-\_\-doom}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-srv\-\_\-doom}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-srv\-\_\-doom(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-server\-\_\-doom\-\_\-client}(a, b)}}\label{macros_8h_a6337e2fa61efdcc19d71966a6f7961a4}
+\hypertarget{macros_8h_a1abfa6955c773605130d369f77fea489}{\index{macros.\-h@{macros.\-h}!bn\-\_\-srv\-\_\-packetok@{bn\-\_\-srv\-\_\-packetok}}
+\index{bn\-\_\-srv\-\_\-packetok@{bn\-\_\-srv\-\_\-packetok}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-srv\-\_\-packetok}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-srv\-\_\-packetok(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~bunny\-\_\-server\-\_\-packed\-\_\-ready(a)}}\label{macros_8h_a1abfa6955c773605130d369f77fea489}
+\hypertarget{macros_8h_aff3c21ee7cd4ba211e883dd9e12c41db}{\index{macros.\-h@{macros.\-h}!bn\-\_\-srv\-\_\-poll@{bn\-\_\-srv\-\_\-poll}}
+\index{bn\-\_\-srv\-\_\-poll@{bn\-\_\-srv\-\_\-poll}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-srv\-\_\-poll}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-srv\-\_\-poll(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-server\-\_\-poll}(a, b)}}\label{macros_8h_aff3c21ee7cd4ba211e883dd9e12c41db}
+\hypertarget{macros_8h_ae83b58f296f9a51db7d41ebcc8150385}{\index{macros.\-h@{macros.\-h}!bn\-\_\-srv\-\_\-write@{bn\-\_\-srv\-\_\-write}}
+\index{bn\-\_\-srv\-\_\-write@{bn\-\_\-srv\-\_\-write}!macros.h@{macros.\-h}}
+\subsubsection[{bn\-\_\-srv\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}\#define bn\-\_\-srv\-\_\-write(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-server\-\_\-write}(a, b, c, d)}}\label{macros_8h_ae83b58f296f9a51db7d41ebcc8150385}
+\hypertarget{macros_8h_a8da4019f312abcc4a0ca620e65f5b552}{\index{macros.\-h@{macros.\-h}!bs\-\_\-cipher\-\_\-data@{bs\-\_\-cipher\-\_\-data}}
+\index{bs\-\_\-cipher\-\_\-data@{bs\-\_\-cipher\-\_\-data}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-cipher\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-cipher\-\_\-data(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-cipher\-\_\-data}(a, b, c, d)}}\label{macros_8h_a8da4019f312abcc4a0ca620e65f5b552}
+\hypertarget{macros_8h_ada45b7fb019e007b417199476b88fe80}{\index{macros.\-h@{macros.\-h}!bs\-\_\-cipher\-\_\-file@{bs\-\_\-cipher\-\_\-file}}
+\index{bs\-\_\-cipher\-\_\-file@{bs\-\_\-cipher\-\_\-file}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-cipher\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-cipher\-\_\-file(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-cipher\-\_\-file}(a, b, c)}}\label{macros_8h_ada45b7fb019e007b417199476b88fe80}
+\hypertarget{macros_8h_accc9a47f311984dd24cf6819dbcae0d2}{\index{macros.\-h@{macros.\-h}!bs\-\_\-compute\-\_\-sfx@{bs\-\_\-compute\-\_\-sfx}}
+\index{bs\-\_\-compute\-\_\-sfx@{bs\-\_\-compute\-\_\-sfx}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-compute\-\_\-sfx}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-compute\-\_\-sfx(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-compute\-\_\-effect}(a)}}\label{macros_8h_accc9a47f311984dd24cf6819dbcae0d2}
+\hypertarget{macros_8h_a703dacacb7978c618f391f52c889420b}{\index{macros.\-h@{macros.\-h}!bs\-\_\-del\-\_\-key@{bs\-\_\-del\-\_\-key}}
+\index{bs\-\_\-del\-\_\-key@{bs\-\_\-del\-\_\-key}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-del\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-del\-\_\-key(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-key}(a)}}\label{macros_8h_a703dacacb7978c618f391f52c889420b}
+\hypertarget{macros_8h_aa425bbb0371f6b65da69d2ab6f6cd645}{\index{macros.\-h@{macros.\-h}!bs\-\_\-del\-\_\-sound@{bs\-\_\-del\-\_\-sound}}
+\index{bs\-\_\-del\-\_\-sound@{bs\-\_\-del\-\_\-sound}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-del\-\_\-sound}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-del\-\_\-sound(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-sound}(a)}}\label{macros_8h_aa425bbb0371f6b65da69d2ab6f6cd645}
+\hypertarget{macros_8h_a8b997a8a22bd656f8e78e05af5be52ba}{\index{macros.\-h@{macros.\-h}!bs\-\_\-fill\-\_\-defkey@{bs\-\_\-fill\-\_\-defkey}}
+\index{bs\-\_\-fill\-\_\-defkey@{bs\-\_\-fill\-\_\-defkey}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-fill\-\_\-defkey}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-fill\-\_\-defkey(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-fill\-\_\-default\-\_\-key}(a, b)}}\label{macros_8h_a8b997a8a22bd656f8e78e05af5be52ba}
+\hypertarget{macros_8h_ac6941670417098c21fcfd03c29a2ba9a}{\index{macros.\-h@{macros.\-h}!bs\-\_\-get\-\_\-cipher\-\_\-name@{bs\-\_\-get\-\_\-cipher\-\_\-name}}
+\index{bs\-\_\-get\-\_\-cipher\-\_\-name@{bs\-\_\-get\-\_\-cipher\-\_\-name}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-get\-\_\-cipher\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-get\-\_\-cipher\-\_\-name(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-ciphering}(a)}}\label{macros_8h_ac6941670417098c21fcfd03c29a2ba9a}
+\hypertarget{macros_8h_a2d741b69a9c570542b7c079fc50cd34e}{\index{macros.\-h@{macros.\-h}!bs\-\_\-get\-\_\-cursor@{bs\-\_\-get\-\_\-cursor}}
+\index{bs\-\_\-get\-\_\-cursor@{bs\-\_\-get\-\_\-cursor}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-get\-\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-get\-\_\-cursor(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-music\-\_\-get\-\_\-cursor}(a)}}\label{macros_8h_a2d741b69a9c570542b7c079fc50cd34e}
+\hypertarget{macros_8h_ae5381d67edbc2240f03bf4e59306abd7}{\index{macros.\-h@{macros.\-h}!bs\-\_\-key@{bs\-\_\-key}}
+\index{bs\-\_\-key@{bs\-\_\-key}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-key(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-key}(a)}}\label{macros_8h_ae5381d67edbc2240f03bf4e59306abd7}
+\hypertarget{macros_8h_a51600712387ae8ad9a9f2138ea23ec13}{\index{macros.\-h@{macros.\-h}!bs\-\_\-load\-\_\-music@{bs\-\_\-load\-\_\-music}}
+\index{bs\-\_\-load\-\_\-music@{bs\-\_\-load\-\_\-music}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-load\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-load\-\_\-music(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-music}(a)}}\label{macros_8h_a51600712387ae8ad9a9f2138ea23ec13}
+\hypertarget{macros_8h_ac9be13b3f70c6925d0f5c59e2f407ad9}{\index{macros.\-h@{macros.\-h}!bs\-\_\-load\-\_\-sfx@{bs\-\_\-load\-\_\-sfx}}
+\index{bs\-\_\-load\-\_\-sfx@{bs\-\_\-load\-\_\-sfx}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-load\-\_\-sfx}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-load\-\_\-sfx(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-load\-\_\-effect}(a)}}\label{macros_8h_ac9be13b3f70c6925d0f5c59e2f407ad9}
+\hypertarget{macros_8h_adfc34b5ecd38fe6cd29bb54118d1544e}{\index{macros.\-h@{macros.\-h}!bs\-\_\-play@{bs\-\_\-play}}
+\index{bs\-\_\-play@{bs\-\_\-play}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-play}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-play(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-play}(a)}}\label{macros_8h_adfc34b5ecd38fe6cd29bb54118d1544e}
+\hypertarget{macros_8h_ae7cd5f479691a60cbf714606a7c0fbab}{\index{macros.\-h@{macros.\-h}!bs\-\_\-save\-\_\-sfx@{bs\-\_\-save\-\_\-sfx}}
+\index{bs\-\_\-save\-\_\-sfx@{bs\-\_\-save\-\_\-sfx}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-save\-\_\-sfx}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-save\-\_\-sfx(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-save\-\_\-effect}(a, b)}}\label{macros_8h_ae7cd5f479691a60cbf714606a7c0fbab}
+\hypertarget{macros_8h_a9e03edfb33f63ca15863d25523e66f94}{\index{macros.\-h@{macros.\-h}!bs\-\_\-sfx@{bs\-\_\-sfx}}
+\index{bs\-\_\-sfx@{bs\-\_\-sfx}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-sfx}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-sfx(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-new\-\_\-effect}(a)}}\label{macros_8h_a9e03edfb33f63ca15863d25523e66f94}
+\hypertarget{macros_8h_ac59b1da8ae8938f729f4138cb3415eda}{\index{macros.\-h@{macros.\-h}!bs\-\_\-sound\-\_\-loop@{bs\-\_\-sound\-\_\-loop}}
+\index{bs\-\_\-sound\-\_\-loop@{bs\-\_\-sound\-\_\-loop}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-sound\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-sound\-\_\-loop(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-loop}(a, b)}}\label{macros_8h_ac59b1da8ae8938f729f4138cb3415eda}
+\hypertarget{macros_8h_a261740527699813904add292e78b15be}{\index{macros.\-h@{macros.\-h}!bs\-\_\-sound\-\_\-pitch@{bs\-\_\-sound\-\_\-pitch}}
+\index{bs\-\_\-sound\-\_\-pitch@{bs\-\_\-sound\-\_\-pitch}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-sound\-\_\-pitch}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-sound\-\_\-pitch(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-pitch}(a, b)}}\label{macros_8h_a261740527699813904add292e78b15be}
+\hypertarget{macros_8h_a5dc261581ba2f91676fcdd7f40b264a3}{\index{macros.\-h@{macros.\-h}!bs\-\_\-sound\-\_\-pos@{bs\-\_\-sound\-\_\-pos}}
+\index{bs\-\_\-sound\-\_\-pos@{bs\-\_\-sound\-\_\-pos}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-sound\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-sound\-\_\-pos(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-position}(a, b, c, d)}}\label{macros_8h_a5dc261581ba2f91676fcdd7f40b264a3}
+\hypertarget{macros_8h_a4a655a8764583b1b6e0290f1dcbd2c79}{\index{macros.\-h@{macros.\-h}!bs\-\_\-sound\-\_\-vol@{bs\-\_\-sound\-\_\-vol}}
+\index{bs\-\_\-sound\-\_\-vol@{bs\-\_\-sound\-\_\-vol}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-sound\-\_\-vol}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-sound\-\_\-vol(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-volume}(a, b)}}\label{macros_8h_a4a655a8764583b1b6e0290f1dcbd2c79}
+\hypertarget{macros_8h_aeb2f0bb5fcca7dbe477f1547dd92997e}{\index{macros.\-h@{macros.\-h}!bs\-\_\-stop@{bs\-\_\-stop}}
+\index{bs\-\_\-stop@{bs\-\_\-stop}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-stop(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-sound\-\_\-stop}(a)}}\label{macros_8h_aeb2f0bb5fcca7dbe477f1547dd92997e}
+\hypertarget{macros_8h_a6a0def7dd13e7003ae2a8fcad461044e}{\index{macros.\-h@{macros.\-h}!bs\-\_\-uncipher\-\_\-data@{bs\-\_\-uncipher\-\_\-data}}
+\index{bs\-\_\-uncipher\-\_\-data@{bs\-\_\-uncipher\-\_\-data}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-uncipher\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-uncipher\-\_\-data(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-uncipher\-\_\-data}(a, b, c, d)}}\label{macros_8h_a6a0def7dd13e7003ae2a8fcad461044e}
+\hypertarget{macros_8h_a867d0999e60988e0670b0c7968a234ce}{\index{macros.\-h@{macros.\-h}!bs\-\_\-uncipher\-\_\-file@{bs\-\_\-uncipher\-\_\-file}}
+\index{bs\-\_\-uncipher\-\_\-file@{bs\-\_\-uncipher\-\_\-file}!macros.h@{macros.\-h}}
+\subsubsection[{bs\-\_\-uncipher\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}\#define bs\-\_\-uncipher\-\_\-file(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-uncipher\-\_\-file}(a, b, c)}}\label{macros_8h_a867d0999e60988e0670b0c7968a234ce}
+\hypertarget{macros_8h_ae060225a978a87c4bb4082eca7c563c9}{\index{macros.\-h@{macros.\-h}!bt\-\_\-del\-\_\-threadpool@{bt\-\_\-del\-\_\-threadpool}}
+\index{bt\-\_\-del\-\_\-threadpool@{bt\-\_\-del\-\_\-threadpool}!macros.h@{macros.\-h}}
+\subsubsection[{bt\-\_\-del\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}\#define bt\-\_\-del\-\_\-threadpool(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-delete\-\_\-threadpool}(p)}}\label{macros_8h_ae060225a978a87c4bb4082eca7c563c9}
+\hypertarget{macros_8h_a3dd56d7a35b52a6468d0ef89f8fc570c}{\index{macros.\-h@{macros.\-h}!bt\-\_\-foreach@{bt\-\_\-foreach}}
+\index{bt\-\_\-foreach@{bt\-\_\-foreach}!macros.h@{macros.\-h}}
+\subsubsection[{bt\-\_\-foreach}]{\setlength{\rightskip}{0pt plus 5cm}\#define bt\-\_\-foreach(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d, }
+\item[{}]{e, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-thread\-\_\-foreach}(a, b, c, d, e)}}\label{macros_8h_a3dd56d7a35b52a6468d0ef89f8fc570c}
+\hypertarget{macros_8h_afe56b6b4cc887c84de5458565a32ec2e}{\index{macros.\-h@{macros.\-h}!bt\-\_\-threadpool@{bt\-\_\-threadpool}}
+\index{bt\-\_\-threadpool@{bt\-\_\-threadpool}!macros.h@{macros.\-h}}
+\subsubsection[{bt\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}\#define bt\-\_\-threadpool(
+\begin{DoxyParamCaption}
+\item[{}]{nbr}
+\end{DoxyParamCaption}
+)~bunny\-\_\-new\-\_\-thredapool(nbr)}}\label{macros_8h_afe56b6b4cc887c84de5458565a32ec2e}
+\hypertarget{macros_8h_ac6aa41a36f71875363c89f0f135fda27}{\index{macros.\-h@{macros.\-h}!bt\-\_\-wait@{bt\-\_\-wait}}
+\index{bt\-\_\-wait@{bt\-\_\-wait}!macros.h@{macros.\-h}}
+\subsubsection[{bt\-\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}\#define bt\-\_\-wait(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-thread\-\_\-wait\-\_\-completion}(p)}}\label{macros_8h_ac6aa41a36f71875363c89f0f135fda27}
+\hypertarget{macros_8h_a5a874ce622b8d985e31298fd33427515}{\index{macros.\-h@{macros.\-h}!bw\-\_\-display@{bw\-\_\-display}}
+\index{bw\-\_\-display@{bw\-\_\-display}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-display(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-display}(a)}}\label{macros_8h_a5a874ce622b8d985e31298fd33427515}
+\hypertarget{macros_8h_a13fcc5922c52b75e5cfcd0b9e21df1e9}{\index{macros.\-h@{macros.\-h}!bw\-\_\-focus@{bw\-\_\-focus}}
+\index{bw\-\_\-focus@{bw\-\_\-focus}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-focus(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-request\-\_\-focus}(a)}}\label{macros_8h_a13fcc5922c52b75e5cfcd0b9e21df1e9}
+\hypertarget{macros_8h_a9060845ece7538acfefefa2122f70a21}{\index{macros.\-h@{macros.\-h}!bw\-\_\-key\-\_\-repeat@{bw\-\_\-key\-\_\-repeat}}
+\index{bw\-\_\-key\-\_\-repeat@{bw\-\_\-key\-\_\-repeat}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-key\-\_\-repeat}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-key\-\_\-repeat(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-key\-\_\-repeat}(a, b)}}\label{macros_8h_a9060845ece7538acfefefa2122f70a21}
+\hypertarget{macros_8h_a87245291602224602ab2d06bcad8f20c}{\index{macros.\-h@{macros.\-h}!bw\-\_\-mouse\-\_\-hide@{bw\-\_\-mouse\-\_\-hide}}
+\index{bw\-\_\-mouse\-\_\-hide@{bw\-\_\-mouse\-\_\-hide}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-mouse\-\_\-hide}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-mouse\-\_\-hide(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-mouse\-\_\-visibility}(a, !b)}}\label{macros_8h_a87245291602224602ab2d06bcad8f20c}
+\hypertarget{macros_8h_aee3a4709616312804feef6e281cc647c}{\index{macros.\-h@{macros.\-h}!bw\-\_\-mouse\-\_\-pos@{bw\-\_\-mouse\-\_\-pos}}
+\index{bw\-\_\-mouse\-\_\-pos@{bw\-\_\-mouse\-\_\-pos}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-mouse\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-mouse\-\_\-pos(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-mouse\-\_\-position}(a, b)}}\label{macros_8h_aee3a4709616312804feef6e281cc647c}
+\hypertarget{macros_8h_a95bcd5764b4f649adfaf188fc63d18fc}{\index{macros.\-h@{macros.\-h}!bw\-\_\-mouse\-\_\-winpos@{bw\-\_\-mouse\-\_\-winpos}}
+\index{bw\-\_\-mouse\-\_\-winpos@{bw\-\_\-mouse\-\_\-winpos}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-mouse\-\_\-winpos}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-mouse\-\_\-winpos(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-set\-\_\-mouse\-\_\-position\-\_\-window}(a, b, c)}}\label{macros_8h_a95bcd5764b4f649adfaf188fc63d18fc}
+\hypertarget{macros_8h_a7dedbe467e57e392f1697c027b6f4838}{\index{macros.\-h@{macros.\-h}!bw\-\_\-move@{bw\-\_\-move}}
+\index{bw\-\_\-move@{bw\-\_\-move}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-move(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-move\-\_\-window}(a, b)}}\label{macros_8h_a7dedbe467e57e392f1697c027b6f4838}
+\hypertarget{macros_8h_a0b5b956b37dab7711992449ad1fc6ddb}{\index{macros.\-h@{macros.\-h}!bw\-\_\-resize@{bw\-\_\-resize}}
+\index{bw\-\_\-resize@{bw\-\_\-resize}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-resize(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-resize\-\_\-window}(a, b)}}\label{macros_8h_a0b5b956b37dab7711992449ad1fc6ddb}
+\hypertarget{macros_8h_a42ba4542c0d76b1e1e69ea43d731eb6a}{\index{macros.\-h@{macros.\-h}!bw\-\_\-resolution@{bw\-\_\-resolution}}
+\index{bw\-\_\-resolution@{bw\-\_\-resolution}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-resolution}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-resolution(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-get\-\_\-screen\-\_\-resolution}()}}\label{macros_8h_a42ba4542c0d76b1e1e69ea43d731eb6a}
+\hypertarget{macros_8h_ad9cae36d12c216b9890def25abd91139}{\index{macros.\-h@{macros.\-h}!bw\-\_\-start@{bw\-\_\-start}}
+\index{bw\-\_\-start@{bw\-\_\-start}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-start(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-start}(a, b, c, d)}}\label{macros_8h_ad9cae36d12c216b9890def25abd91139}
+\hypertarget{macros_8h_afbba514f40f67652efc5bce2da92356e}{\index{macros.\-h@{macros.\-h}!bw\-\_\-start\-\_\-style@{bw\-\_\-start\-\_\-style}}
+\index{bw\-\_\-start\-\_\-style@{bw\-\_\-start\-\_\-style}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-start\-\_\-style}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-start\-\_\-style(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b, }
+\item[{}]{c, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-start\-\_\-style}(a, b, c, d)}}\label{macros_8h_afbba514f40f67652efc5bce2da92356e}
+\hypertarget{macros_8h_a4a88eeef2bb13d6c00ec2af89c085bcd}{\index{macros.\-h@{macros.\-h}!bw\-\_\-stop@{bw\-\_\-stop}}
+\index{bw\-\_\-stop@{bw\-\_\-stop}!macros.h@{macros.\-h}}
+\subsubsection[{bw\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}\#define bw\-\_\-stop(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf bunny\-\_\-stop}(a)}}\label{macros_8h_a4a88eeef2bb13d6c00ec2af89c085bcd}
+\hypertarget{macros_8h_ac5aeb4bf6aa11d7b3088f338f069bd36}{\index{macros.\-h@{macros.\-h}!gl\-\_\-blit@{gl\-\_\-blit}}
+\index{gl\-\_\-blit@{gl\-\_\-blit}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-blit~{\bf gl\-\_\-bunny\-\_\-my\-\_\-blit}}}\label{macros_8h_ac5aeb4bf6aa11d7b3088f338f069bd36}
+\hypertarget{macros_8h_a3deec563d804163d44049b0c9d0c67f6}{\index{macros.\-h@{macros.\-h}!gl\-\_\-cipher@{gl\-\_\-cipher}}
+\index{gl\-\_\-cipher@{gl\-\_\-cipher}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-cipher~{\bf gl\-\_\-bunny\-\_\-my\-\_\-cipher}}}\label{macros_8h_a3deec563d804163d44049b0c9d0c67f6}
+\hypertarget{macros_8h_ad7131492656dc4007a10def7039860e4}{\index{macros.\-h@{macros.\-h}!gl\-\_\-ciphering@{gl\-\_\-ciphering}}
+\index{gl\-\_\-ciphering@{gl\-\_\-ciphering}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-ciphering}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-ciphering~{\bf gl\-\_\-bunny\-\_\-ciphering\-\_\-table}}}\label{macros_8h_ad7131492656dc4007a10def7039860e4}
+\hypertarget{macros_8h_ae12157150a66b46f1c539464b3be670c}{\index{macros.\-h@{macros.\-h}!gl\-\_\-clear@{gl\-\_\-clear}}
+\index{gl\-\_\-clear@{gl\-\_\-clear}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-clear~{\bf gl\-\_\-bunny\-\_\-my\-\_\-clear}}}\label{macros_8h_ae12157150a66b46f1c539464b3be670c}
+\hypertarget{macros_8h_a846e9e278840f46d385188bcc7dec6f7}{\index{macros.\-h@{macros.\-h}!gl\-\_\-fill@{gl\-\_\-fill}}
+\index{gl\-\_\-fill@{gl\-\_\-fill}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-fill~{\bf gl\-\_\-bunny\-\_\-my\-\_\-fill}}}\label{macros_8h_a846e9e278840f46d385188bcc7dec6f7}
+\hypertarget{macros_8h_ad7efddf2e1ce315c014e0115efa5257f}{\index{macros.\-h@{macros.\-h}!gl\-\_\-geomtry@{gl\-\_\-geomtry}}
+\index{gl\-\_\-geomtry@{gl\-\_\-geomtry}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-geomtry}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-geomtry~{\bf gl\-\_\-bunny\-\_\-my\-\_\-geometry}}}\label{macros_8h_ad7efddf2e1ce315c014e0115efa5257f}
+\hypertarget{macros_8h_adfde45dd5178eda6f541c895db8410b9}{\index{macros.\-h@{macros.\-h}!gl\-\_\-key\-\_\-twist@{gl\-\_\-key\-\_\-twist}}
+\index{gl\-\_\-key\-\_\-twist@{gl\-\_\-key\-\_\-twist}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-key\-\_\-twist}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-key\-\_\-twist~{\bf gl\-\_\-bunny\-\_\-my\-\_\-key\-\_\-twist}}}\label{macros_8h_adfde45dd5178eda6f541c895db8410b9}
+\hypertarget{macros_8h_a857f622ef787ebd3d55bbeb3bbe630ef}{\index{macros.\-h@{macros.\-h}!gl\-\_\-load\-\_\-pixelarray@{gl\-\_\-load\-\_\-pixelarray}}
+\index{gl\-\_\-load\-\_\-pixelarray@{gl\-\_\-load\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-load\-\_\-pixelarray~{\bf gl\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}}}\label{macros_8h_a857f622ef787ebd3d55bbeb3bbe630ef}
+\hypertarget{macros_8h_a33c10eaead21de2e3764e5cf5d15aae0}{\index{macros.\-h@{macros.\-h}!gl\-\_\-my\-\_\-hash@{gl\-\_\-my\-\_\-hash}}
+\index{gl\-\_\-my\-\_\-hash@{gl\-\_\-my\-\_\-hash}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-my\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-my\-\_\-hash~{\bf gl\-\_\-bunny\-\_\-my\-\_\-hash}}}\label{macros_8h_a33c10eaead21de2e3764e5cf5d15aae0}
+\hypertarget{macros_8h_acb4fd2620e2555b92ad01b9bfadc3d59}{\index{macros.\-h@{macros.\-h}!gl\-\_\-read\-\_\-configuration@{gl\-\_\-read\-\_\-configuration}}
+\index{gl\-\_\-read\-\_\-configuration@{gl\-\_\-read\-\_\-configuration}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-read\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-read\-\_\-configuration~{\bf gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}}}\label{macros_8h_acb4fd2620e2555b92ad01b9bfadc3d59}
+\hypertarget{macros_8h_ad0fc6078c15d03c05ec20adf514a309a}{\index{macros.\-h@{macros.\-h}!gl\-\_\-read\-\_\-pixelarray@{gl\-\_\-read\-\_\-pixelarray}}
+\index{gl\-\_\-read\-\_\-pixelarray@{gl\-\_\-read\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-read\-\_\-pixelarray~{\bf gl\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}}}\label{macros_8h_ad0fc6078c15d03c05ec20adf514a309a}
+\hypertarget{macros_8h_ac2256fa48a5054aff8cab89e2c580bb8}{\index{macros.\-h@{macros.\-h}!gl\-\_\-set\-\_\-circle@{gl\-\_\-set\-\_\-circle}}
+\index{gl\-\_\-set\-\_\-circle@{gl\-\_\-set\-\_\-circle}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-set\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-set\-\_\-circle~{\bf gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}}}\label{macros_8h_ac2256fa48a5054aff8cab89e2c580bb8}
+\hypertarget{macros_8h_a183f63d0c4e5e9a4ac87f159ee3aa07c}{\index{macros.\-h@{macros.\-h}!gl\-\_\-set\-\_\-line@{gl\-\_\-set\-\_\-line}}
+\index{gl\-\_\-set\-\_\-line@{gl\-\_\-set\-\_\-line}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-set\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-set\-\_\-line~{\bf gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}}}\label{macros_8h_a183f63d0c4e5e9a4ac87f159ee3aa07c}
+\hypertarget{macros_8h_ad114f844b2c73bed08fe45d4d8fd2456}{\index{macros.\-h@{macros.\-h}!gl\-\_\-set\-\_\-pixel@{gl\-\_\-set\-\_\-pixel}}
+\index{gl\-\_\-set\-\_\-pixel@{gl\-\_\-set\-\_\-pixel}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-set\-\_\-pixel~{\bf gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}}}\label{macros_8h_ad114f844b2c73bed08fe45d4d8fd2456}
+\hypertarget{macros_8h_adfea3d611bf25e6eb4d689ccca514c57}{\index{macros.\-h@{macros.\-h}!gl\-\_\-set\-\_\-poylgon@{gl\-\_\-set\-\_\-poylgon}}
+\index{gl\-\_\-set\-\_\-poylgon@{gl\-\_\-set\-\_\-poylgon}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-set\-\_\-poylgon}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-set\-\_\-poylgon~{\bf gl\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}}}\label{macros_8h_adfea3d611bf25e6eb4d689ccca514c57}
+\hypertarget{macros_8h_ac61cd2af13b1ddd819a08ec82a7425c5}{\index{macros.\-h@{macros.\-h}!gl\-\_\-uncipher@{gl\-\_\-uncipher}}
+\index{gl\-\_\-uncipher@{gl\-\_\-uncipher}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-uncipher}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-uncipher~{\bf gl\-\_\-bunny\-\_\-my\-\_\-uncipher}}}\label{macros_8h_ac61cd2af13b1ddd819a08ec82a7425c5}
+\hypertarget{macros_8h_a85ae4bc2e96835a673685ebb69b42c00}{\index{macros.\-h@{macros.\-h}!gl\-\_\-vfont@{gl\-\_\-vfont}}
+\index{gl\-\_\-vfont@{gl\-\_\-vfont}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-vfont}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-vfont~{\bf gl\-\_\-vector\-\_\-font}}}\label{macros_8h_a85ae4bc2e96835a673685ebb69b42c00}
+\hypertarget{macros_8h_ad92c143a105e57f7593fa1a23582ce3d}{\index{macros.\-h@{macros.\-h}!gl\-\_\-write\-\_\-configuration@{gl\-\_\-write\-\_\-configuration}}
+\index{gl\-\_\-write\-\_\-configuration@{gl\-\_\-write\-\_\-configuration}!macros.h@{macros.\-h}}
+\subsubsection[{gl\-\_\-write\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}\#define gl\-\_\-write\-\_\-configuration~{\bf gl\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}}}\label{macros_8h_ad92c143a105e57f7593fa1a23582ce3d}
+\hypertarget{macros_8h_a6505cb03672ac4de56d466eb0f474633}{\index{macros.\-h@{macros.\-h}!L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N}!macros.h@{macros.\-h}}
+\subsubsection[{L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-S\-T\-\_\-\-B\-U\-T\-T\-O\-N~{\bf L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-B\-U\-T\-T\-O\-N}}}\label{macros_8h_a6505cb03672ac4de56d466eb0f474633}
+\hypertarget{macros_8h_a434190aad9a91f28f47231fe67fa37de}{\index{macros.\-h@{macros.\-h}!L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K@{L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}}
+\index{L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K@{L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}!macros.h@{macros.\-h}}
+\subsubsection[{L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-S\-T\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K~{\bf L\-A\-S\-T\-\_\-\-B\-U\-N\-N\-Y\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}}}\label{macros_8h_a434190aad9a91f28f47231fe67fa37de}
+\hypertarget{macros_8h_ae1fb68decf677ca4bbabf95d3015b1f8}{\index{macros.\-h@{macros.\-h}!t\-\_\-2d@{t\-\_\-2d}}
+\index{t\-\_\-2d@{t\-\_\-2d}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-2d}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-2d~{\bf t\-\_\-bunny\-\_\-position}}}\label{macros_8h_ae1fb68decf677ca4bbabf95d3015b1f8}
+\hypertarget{macros_8h_ad87486172e235c284c9584eb9d20e588}{\index{macros.\-h@{macros.\-h}!t\-\_\-2df@{t\-\_\-2df}}
+\index{t\-\_\-2df@{t\-\_\-2df}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-2df}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-2df~{\bf t\-\_\-bunny\-\_\-accurate\-\_\-position}}}\label{macros_8h_ad87486172e235c284c9584eb9d20e588}
+\hypertarget{macros_8h_a1179d1de0d344229aae0c5e1acb9837f}{\index{macros.\-h@{macros.\-h}!t\-\_\-acontext@{t\-\_\-acontext}}
+\index{t\-\_\-acontext@{t\-\_\-acontext}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-acontext}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-acontext~{\bf t\-\_\-bunny\-\_\-anonymous\-\_\-context}}}\label{macros_8h_a1179d1de0d344229aae0c5e1acb9837f}
+\hypertarget{macros_8h_a234cded727f4a8481ce920c384ca6546}{\index{macros.\-h@{macros.\-h}!t\-\_\-area@{t\-\_\-area}}
+\index{t\-\_\-area@{t\-\_\-area}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-area~{\bf t\-\_\-bunny\-\_\-area}}}\label{macros_8h_a234cded727f4a8481ce920c384ca6546}
+\hypertarget{macros_8h_a706a13dddd314b234568b7c62156db85}{\index{macros.\-h@{macros.\-h}!t\-\_\-axis@{t\-\_\-axis}}
+\index{t\-\_\-axis@{t\-\_\-axis}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-axis~{\bf t\-\_\-bunny\-\_\-axis}}}\label{macros_8h_a706a13dddd314b234568b7c62156db85}
+\hypertarget{macros_8h_a5e49420122e05ed7e4b8d70260536ec7}{\index{macros.\-h@{macros.\-h}!t\-\_\-blit@{t\-\_\-blit}}
+\index{t\-\_\-blit@{t\-\_\-blit}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-blit}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-blit~{\bf t\-\_\-bunny\-\_\-my\-\_\-blit}}}\label{macros_8h_a5e49420122e05ed7e4b8d70260536ec7}
+\hypertarget{macros_8h_a9c90489cc73ca6b027e8906aea77854d}{\index{macros.\-h@{macros.\-h}!t\-\_\-buffer@{t\-\_\-buffer}}
+\index{t\-\_\-buffer@{t\-\_\-buffer}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-buffer~{\bf t\-\_\-bunny\-\_\-buffer}}}\label{macros_8h_a9c90489cc73ca6b027e8906aea77854d}
+\hypertarget{macros_8h_a97e2cca1390ddd35d8295e2d24961af9}{\index{macros.\-h@{macros.\-h}!t\-\_\-call\-\_\-order@{t\-\_\-call\-\_\-order}}
+\index{t\-\_\-call\-\_\-order@{t\-\_\-call\-\_\-order}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-call\-\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-call\-\_\-order~{\bf t\-\_\-bunny\-\_\-call\-\_\-order}}}\label{macros_8h_a97e2cca1390ddd35d8295e2d24961af9}
+\hypertarget{macros_8h_a7bf204300f2fe53501de815f35e9e3a8}{\index{macros.\-h@{macros.\-h}!t\-\_\-cipher@{t\-\_\-cipher}}
+\index{t\-\_\-cipher@{t\-\_\-cipher}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-cipher~{\bf t\-\_\-bunny\-\_\-my\-\_\-cipher}}}\label{macros_8h_a7bf204300f2fe53501de815f35e9e3a8}
+\hypertarget{macros_8h_a7d2b931688049cc0edfb4191faea5a9b}{\index{macros.\-h@{macros.\-h}!t\-\_\-cipher\-\_\-key@{t\-\_\-cipher\-\_\-key}}
+\index{t\-\_\-cipher\-\_\-key@{t\-\_\-cipher\-\_\-key}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-cipher\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-cipher\-\_\-key~{\bf t\-\_\-bunny\-\_\-cipher\-\_\-key}}}\label{macros_8h_a7d2b931688049cc0edfb4191faea5a9b}
+\hypertarget{macros_8h_ad9d181587cc74c30524341e55c412ae9}{\index{macros.\-h@{macros.\-h}!t\-\_\-ciphering@{t\-\_\-ciphering}}
+\index{t\-\_\-ciphering@{t\-\_\-ciphering}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-ciphering}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-ciphering~{\bf t\-\_\-bunny\-\_\-ciphering}}}\label{macros_8h_ad9d181587cc74c30524341e55c412ae9}
+\hypertarget{macros_8h_a595fb9004232116d34e2715510721725}{\index{macros.\-h@{macros.\-h}!t\-\_\-clear@{t\-\_\-clear}}
+\index{t\-\_\-clear@{t\-\_\-clear}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-clear~{\bf t\-\_\-bunny\-\_\-my\-\_\-clear}}}\label{macros_8h_a595fb9004232116d34e2715510721725}
+\hypertarget{macros_8h_aca00091b31974337ff692d64e6cb04c2}{\index{macros.\-h@{macros.\-h}!t\-\_\-click@{t\-\_\-click}}
+\index{t\-\_\-click@{t\-\_\-click}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-click}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-click~{\bf t\-\_\-bunny\-\_\-click}}}\label{macros_8h_aca00091b31974337ff692d64e6cb04c2}
+\hypertarget{macros_8h_a00e76f73c584d423d9c55cd718791218}{\index{macros.\-h@{macros.\-h}!t\-\_\-client@{t\-\_\-client}}
+\index{t\-\_\-client@{t\-\_\-client}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-client~{\bf t\-\_\-bunny\-\_\-client}}}\label{macros_8h_a00e76f73c584d423d9c55cd718791218}
+\hypertarget{macros_8h_a49431f62eebefb440586974b8e8d2318}{\index{macros.\-h@{macros.\-h}!t\-\_\-clipable@{t\-\_\-clipable}}
+\index{t\-\_\-clipable@{t\-\_\-clipable}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-clipable}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-clipable~{\bf t\-\_\-bunny\-\_\-clipable}}}\label{macros_8h_a49431f62eebefb440586974b8e8d2318}
+\hypertarget{macros_8h_a4814960df8ec864ab52cdc2be915c8c4}{\index{macros.\-h@{macros.\-h}!t\-\_\-close@{t\-\_\-close}}
+\index{t\-\_\-close@{t\-\_\-close}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-close~{\bf t\-\_\-bunny\-\_\-close}}}\label{macros_8h_a4814960df8ec864ab52cdc2be915c8c4}
+\hypertarget{macros_8h_a1d60d0a1191fb77465ac60261bae2e1d}{\index{macros.\-h@{macros.\-h}!t\-\_\-color@{t\-\_\-color}}
+\index{t\-\_\-color@{t\-\_\-color}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf t\-\_\-color}~{\bf t\-\_\-bunny\-\_\-color}}}\label{macros_8h_a1d60d0a1191fb77465ac60261bae2e1d}
+\hypertarget{macros_8h_ad1251bbea9d7fbe3e0367d2133c890ca}{\index{macros.\-h@{macros.\-h}!t\-\_\-comconnect@{t\-\_\-comconnect}}
+\index{t\-\_\-comconnect@{t\-\_\-comconnect}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-comconnect}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-comconnect~{\bf t\-\_\-bunny\-\_\-connected}}}\label{macros_8h_ad1251bbea9d7fbe3e0367d2133c890ca}
+\hypertarget{macros_8h_aff89c69f9048c8acf980e3e92c1315b2}{\index{macros.\-h@{macros.\-h}!t\-\_\-comdisconnect@{t\-\_\-comdisconnect}}
+\index{t\-\_\-comdisconnect@{t\-\_\-comdisconnect}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-comdisconnect}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-comdisconnect~{\bf t\-\_\-bunny\-\_\-disconnected}}}\label{macros_8h_aff89c69f9048c8acf980e3e92c1315b2}
+\hypertarget{macros_8h_a44da4e2e0a5b0ae8267d043e785ac031}{\index{macros.\-h@{macros.\-h}!t\-\_\-comerror@{t\-\_\-comerror}}
+\index{t\-\_\-comerror@{t\-\_\-comerror}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-comerror}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-comerror~{\bf t\-\_\-bunny\-\_\-comerror}}}\label{macros_8h_a44da4e2e0a5b0ae8267d043e785ac031}
+\hypertarget{macros_8h_a59b6ee792e54af0085b2eb3a29a9fada}{\index{macros.\-h@{macros.\-h}!t\-\_\-comexpire@{t\-\_\-comexpire}}
+\index{t\-\_\-comexpire@{t\-\_\-comexpire}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-comexpire}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-comexpire~{\bf t\-\_\-bunny\-\_\-expired}}}\label{macros_8h_a59b6ee792e54af0085b2eb3a29a9fada}
+\hypertarget{macros_8h_ae9da19f463c6e778a51f17c107273294}{\index{macros.\-h@{macros.\-h}!t\-\_\-communication@{t\-\_\-communication}}
+\index{t\-\_\-communication@{t\-\_\-communication}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-communication}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-communication~{\bf t\-\_\-bunny\-\_\-communication}}}\label{macros_8h_ae9da19f463c6e778a51f17c107273294}
+\hypertarget{macros_8h_a4adccda75415d55a3a47af5e0798d82a}{\index{macros.\-h@{macros.\-h}!t\-\_\-comtype@{t\-\_\-comtype}}
+\index{t\-\_\-comtype@{t\-\_\-comtype}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-comtype}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-comtype~{\bf t\-\_\-bunny\-\_\-comtype}}}\label{macros_8h_a4adccda75415d55a3a47af5e0798d82a}
+\hypertarget{macros_8h_aa33e44d4d14a19ea2a4912b16d833d07}{\index{macros.\-h@{macros.\-h}!t\-\_\-configuration@{t\-\_\-configuration}}
+\index{t\-\_\-configuration@{t\-\_\-configuration}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-configuration}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-configuration~{\bf t\-\_\-bunny\-\_\-configuration}}}\label{macros_8h_aa33e44d4d14a19ea2a4912b16d833d07}
+\hypertarget{macros_8h_af1a5f41fd25726ed5b8ee745bad61caf}{\index{macros.\-h@{macros.\-h}!t\-\_\-context@{t\-\_\-context}}
+\index{t\-\_\-context@{t\-\_\-context}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-context}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-context~{\bf t\-\_\-bunny\-\_\-context}}}\label{macros_8h_af1a5f41fd25726ed5b8ee745bad61caf}
+\hypertarget{macros_8h_af7c2abab216a14970fadd0ad2e64401b}{\index{macros.\-h@{macros.\-h}!t\-\_\-display@{t\-\_\-display}}
+\index{t\-\_\-display@{t\-\_\-display}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-display~{\bf t\-\_\-bunny\-\_\-display}}}\label{macros_8h_af7c2abab216a14970fadd0ad2e64401b}
+\hypertarget{macros_8h_a800c73c633a0fb053c94f90697902814}{\index{macros.\-h@{macros.\-h}!t\-\_\-error@{t\-\_\-error}}
+\index{t\-\_\-error@{t\-\_\-error}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-error~{\bf t\-\_\-bunny\-\_\-error}}}\label{macros_8h_a800c73c633a0fb053c94f90697902814}
+\hypertarget{macros_8h_a6fb306296bea0d9a3ccda8d548f61efd}{\index{macros.\-h@{macros.\-h}!t\-\_\-event\-\_\-state@{t\-\_\-event\-\_\-state}}
+\index{t\-\_\-event\-\_\-state@{t\-\_\-event\-\_\-state}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-event\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-event\-\_\-state~{\bf t\-\_\-bunny\-\_\-event\-\_\-state}}}\label{macros_8h_a6fb306296bea0d9a3ccda8d548f61efd}
+\hypertarget{macros_8h_a95d6d1c95dca15eca93fa91939648aa5}{\index{macros.\-h@{macros.\-h}!t\-\_\-farea@{t\-\_\-farea}}
+\index{t\-\_\-farea@{t\-\_\-farea}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-farea}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-farea~{\bf t\-\_\-bunny\-\_\-accurate\-\_\-area}}}\label{macros_8h_a95d6d1c95dca15eca93fa91939648aa5}
+\hypertarget{macros_8h_a70c6a065c4fe92b29614f275770205b4}{\index{macros.\-h@{macros.\-h}!t\-\_\-fill@{t\-\_\-fill}}
+\index{t\-\_\-fill@{t\-\_\-fill}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-fill~{\bf t\-\_\-bunny\-\_\-my\-\_\-fill}}}\label{macros_8h_a70c6a065c4fe92b29614f275770205b4}
+\hypertarget{macros_8h_a613645ae93708395d344b1da156b5413}{\index{macros.\-h@{macros.\-h}!t\-\_\-fposition@{t\-\_\-fposition}}
+\index{t\-\_\-fposition@{t\-\_\-fposition}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-fposition}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-fposition~{\bf t\-\_\-bunny\-\_\-accurate\-\_\-position}}}\label{macros_8h_a613645ae93708395d344b1da156b5413}
+\hypertarget{macros_8h_ad91b1bb7ee22c9554e51187ae5514c39}{\index{macros.\-h@{macros.\-h}!t\-\_\-fsize@{t\-\_\-fsize}}
+\index{t\-\_\-fsize@{t\-\_\-fsize}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-fsize}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-fsize~{\bf t\-\_\-bunny\-\_\-accurate\-\_\-size}}}\label{macros_8h_ad91b1bb7ee22c9554e51187ae5514c39}
+\hypertarget{macros_8h_ad032d0dc8313d330a9496a3ebe02658b}{\index{macros.\-h@{macros.\-h}!t\-\_\-function@{t\-\_\-function}}
+\index{t\-\_\-function@{t\-\_\-function}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-function~{\bf t\-\_\-bunny\-\_\-function}}}\label{macros_8h_ad032d0dc8313d330a9496a3ebe02658b}
+\hypertarget{macros_8h_aa490888739cde86b14f738b679453b98}{\index{macros.\-h@{macros.\-h}!t\-\_\-geometry@{t\-\_\-geometry}}
+\index{t\-\_\-geometry@{t\-\_\-geometry}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-geometry~{\bf t\-\_\-bunny\-\_\-geometry}}}\label{macros_8h_aa490888739cde86b14f738b679453b98}
+\hypertarget{macros_8h_a283ea711964ec90975e5b81429343380}{\index{macros.\-h@{macros.\-h}!t\-\_\-get\-\_\-focus@{t\-\_\-get\-\_\-focus}}
+\index{t\-\_\-get\-\_\-focus@{t\-\_\-get\-\_\-focus}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-get\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-get\-\_\-focus~{\bf t\-\_\-bunny\-\_\-get\-\_\-focus}}}\label{macros_8h_a283ea711964ec90975e5b81429343380}
+\hypertarget{macros_8h_aa9849d07bf5fbb3248710ce185b319b2}{\index{macros.\-h@{macros.\-h}!t\-\_\-hardware@{t\-\_\-hardware}}
+\index{t\-\_\-hardware@{t\-\_\-hardware}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-hardware}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-hardware~{\bf t\-\_\-bunny\-\_\-hardware}}}\label{macros_8h_aa9849d07bf5fbb3248710ce185b319b2}
+\hypertarget{macros_8h_a2121e1e99fcd045ef2a286cea91c0659}{\index{macros.\-h@{macros.\-h}!t\-\_\-hash@{t\-\_\-hash}}
+\index{t\-\_\-hash@{t\-\_\-hash}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-hash~{\bf t\-\_\-bunny\-\_\-hash}}}\label{macros_8h_a2121e1e99fcd045ef2a286cea91c0659}
+\hypertarget{macros_8h_ab8b48c263b1c7db478236026bda2768d}{\index{macros.\-h@{macros.\-h}!t\-\_\-joy\-\_\-axis@{t\-\_\-joy\-\_\-axis}}
+\index{t\-\_\-joy\-\_\-axis@{t\-\_\-joy\-\_\-axis}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-joy\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-joy\-\_\-axis~{\bf t\-\_\-bunny\-\_\-joy\-\_\-axis}}}\label{macros_8h_ab8b48c263b1c7db478236026bda2768d}
+\hypertarget{macros_8h_a87e6eed6398ab113fddf56535514cde0}{\index{macros.\-h@{macros.\-h}!t\-\_\-joy\-\_\-button@{t\-\_\-joy\-\_\-button}}
+\index{t\-\_\-joy\-\_\-button@{t\-\_\-joy\-\_\-button}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-joy\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-joy\-\_\-button~{\bf t\-\_\-bunny\-\_\-joy\-\_\-button}}}\label{macros_8h_a87e6eed6398ab113fddf56535514cde0}
+\hypertarget{macros_8h_a7635439074fbddbfd9b6a2e6ab573651}{\index{macros.\-h@{macros.\-h}!t\-\_\-joy\-\_\-connect@{t\-\_\-joy\-\_\-connect}}
+\index{t\-\_\-joy\-\_\-connect@{t\-\_\-joy\-\_\-connect}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-joy\-\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-joy\-\_\-connect~{\bf t\-\_\-bunny\-\_\-joy\-\_\-connect}}}\label{macros_8h_a7635439074fbddbfd9b6a2e6ab573651}
+\hypertarget{macros_8h_a8906167abe0211a1da429d5db01df163}{\index{macros.\-h@{macros.\-h}!t\-\_\-joystick@{t\-\_\-joystick}}
+\index{t\-\_\-joystick@{t\-\_\-joystick}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-joystick}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-joystick~{\bf t\-\_\-bunny\-\_\-joystick}}}\label{macros_8h_a8906167abe0211a1da429d5db01df163}
+\hypertarget{macros_8h_ad297c53f22128093f4a9fd12c5d01cd2}{\index{macros.\-h@{macros.\-h}!t\-\_\-key@{t\-\_\-key}}
+\index{t\-\_\-key@{t\-\_\-key}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-key~{\bf t\-\_\-bunny\-\_\-key}}}\label{macros_8h_ad297c53f22128093f4a9fd12c5d01cd2}
+\hypertarget{macros_8h_a2c30ebf8a0be2607326475a5a5c9d5e5}{\index{macros.\-h@{macros.\-h}!t\-\_\-key\-\_\-twist@{t\-\_\-key\-\_\-twist}}
+\index{t\-\_\-key\-\_\-twist@{t\-\_\-key\-\_\-twist}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-key\-\_\-twist}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-key\-\_\-twist~{\bf t\-\_\-bunny\-\_\-key\-\_\-twist}}}\label{macros_8h_a2c30ebf8a0be2607326475a5a5c9d5e5}
+\hypertarget{macros_8h_a7240c6e1cafed7c4ce3949026353482a}{\index{macros.\-h@{macros.\-h}!t\-\_\-keysym@{t\-\_\-keysym}}
+\index{t\-\_\-keysym@{t\-\_\-keysym}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-keysym}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-keysym~{\bf t\-\_\-bunny\-\_\-keysym}}}\label{macros_8h_a7240c6e1cafed7c4ce3949026353482a}
+\hypertarget{macros_8h_a819777c661097f138844463c57460dc9}{\index{macros.\-h@{macros.\-h}!t\-\_\-letter@{t\-\_\-letter}}
+\index{t\-\_\-letter@{t\-\_\-letter}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-letter}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-letter~{\bf t\-\_\-bunny\-\_\-letter}}}\label{macros_8h_a819777c661097f138844463c57460dc9}
+\hypertarget{macros_8h_a277466c291350a5d300434da4b866c22}{\index{macros.\-h@{macros.\-h}!t\-\_\-letter\-\_\-tab@{t\-\_\-letter\-\_\-tab}}
+\index{t\-\_\-letter\-\_\-tab@{t\-\_\-letter\-\_\-tab}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-letter\-\_\-tab}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-letter\-\_\-tab~{\bf t\-\_\-bunny\-\_\-letter\-\_\-tab}}}\label{macros_8h_a277466c291350a5d300434da4b866c22}
+\hypertarget{macros_8h_adfab2323a864440f47b1616fd063dcae}{\index{macros.\-h@{macros.\-h}!t\-\_\-load\-\_\-pixelarray@{t\-\_\-load\-\_\-pixelarray}}
+\index{t\-\_\-load\-\_\-pixelarray@{t\-\_\-load\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-load\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-load\-\_\-pixelarray~{\bf t\-\_\-bunny\-\_\-my\-\_\-load\-\_\-pixelarray}}}\label{macros_8h_adfab2323a864440f47b1616fd063dcae}
+\hypertarget{macros_8h_a1a789fed26548ed6c1b9ad2ce4d35911}{\index{macros.\-h@{macros.\-h}!t\-\_\-loop@{t\-\_\-loop}}
+\index{t\-\_\-loop@{t\-\_\-loop}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-loop~{\bf t\-\_\-bunny\-\_\-loop}}}\label{macros_8h_a1a789fed26548ed6c1b9ad2ce4d35911}
+\hypertarget{macros_8h_a3bc968796b4431d3864a212e6eb2fe76}{\index{macros.\-h@{macros.\-h}!t\-\_\-lost\-\_\-focus@{t\-\_\-lost\-\_\-focus}}
+\index{t\-\_\-lost\-\_\-focus@{t\-\_\-lost\-\_\-focus}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-lost\-\_\-focus}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-lost\-\_\-focus~{\bf t\-\_\-bunny\-\_\-lost\-\_\-focus}}}\label{macros_8h_a3bc968796b4431d3864a212e6eb2fe76}
+\hypertarget{macros_8h_af0e240aff25a34dc671a137b6b33aa92}{\index{macros.\-h@{macros.\-h}!t\-\_\-message@{t\-\_\-message}}
+\index{t\-\_\-message@{t\-\_\-message}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-message~{\bf t\-\_\-bunny\-\_\-message}}}\label{macros_8h_af0e240aff25a34dc671a137b6b33aa92}
+\hypertarget{macros_8h_a7fc03b6689a4ff2af4bd6e0f36612eaf}{\index{macros.\-h@{macros.\-h}!t\-\_\-mouse\-\_\-button@{t\-\_\-mouse\-\_\-button}}
+\index{t\-\_\-mouse\-\_\-button@{t\-\_\-mouse\-\_\-button}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-mouse\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-mouse\-\_\-button~{\bf t\-\_\-bunny\-\_\-mouse\-\_\-button}}}\label{macros_8h_a7fc03b6689a4ff2af4bd6e0f36612eaf}
+\hypertarget{macros_8h_a539e001d7146109c194996d5cf423cf4}{\index{macros.\-h@{macros.\-h}!t\-\_\-move@{t\-\_\-move}}
+\index{t\-\_\-move@{t\-\_\-move}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-move~{\bf t\-\_\-bunny\-\_\-move}}}\label{macros_8h_a539e001d7146109c194996d5cf423cf4}
+\hypertarget{macros_8h_a5ba104c7aa9fffe884023651b6c4f7ff}{\index{macros.\-h@{macros.\-h}!t\-\_\-music@{t\-\_\-music}}
+\index{t\-\_\-music@{t\-\_\-music}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-music~{\bf t\-\_\-bunny\-\_\-music}}}\label{macros_8h_a5ba104c7aa9fffe884023651b6c4f7ff}
+\hypertarget{macros_8h_aa95c963a91606e6e143153abcfe13167}{\index{macros.\-h@{macros.\-h}!t\-\_\-my\-\_\-hash@{t\-\_\-my\-\_\-hash}}
+\index{t\-\_\-my\-\_\-hash@{t\-\_\-my\-\_\-hash}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-my\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-my\-\_\-hash~{\bf t\-\_\-bunny\-\_\-hash}}}\label{macros_8h_aa95c963a91606e6e143153abcfe13167}
+\hypertarget{macros_8h_a9bca41b11ae07ab0c016a0b8c0644e0c}{\index{macros.\-h@{macros.\-h}!t\-\_\-picture@{t\-\_\-picture}}
+\index{t\-\_\-picture@{t\-\_\-picture}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-picture}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-picture~{\bf t\-\_\-bunny\-\_\-picture}}}\label{macros_8h_a9bca41b11ae07ab0c016a0b8c0644e0c}
+\hypertarget{macros_8h_a4f5fdc957ada414324b828397e9c6f1b}{\index{macros.\-h@{macros.\-h}!t\-\_\-pixelray@{t\-\_\-pixelray}}
+\index{t\-\_\-pixelray@{t\-\_\-pixelray}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-pixelray}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-pixelray~{\bf t\-\_\-bunny\-\_\-pixelarray}}}\label{macros_8h_a4f5fdc957ada414324b828397e9c6f1b}
+\hypertarget{macros_8h_a2710a26c82ca8e1765ccc544b2706e96}{\index{macros.\-h@{macros.\-h}!t\-\_\-position@{t\-\_\-position}}
+\index{t\-\_\-position@{t\-\_\-position}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-position~{\bf t\-\_\-bunny\-\_\-position}}}\label{macros_8h_a2710a26c82ca8e1765ccc544b2706e96}
+\hypertarget{macros_8h_a472d4e533bb61dd7f9e35be4ba05fa1c}{\index{macros.\-h@{macros.\-h}!t\-\_\-read\-\_\-confifugration@{t\-\_\-read\-\_\-confifugration}}
+\index{t\-\_\-read\-\_\-confifugration@{t\-\_\-read\-\_\-confifugration}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-read\-\_\-confifugration}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-read\-\_\-confifugration~{\bf t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-configuration}}}\label{macros_8h_a472d4e533bb61dd7f9e35be4ba05fa1c}
+\hypertarget{macros_8h_ac13df11e0dd1a009ac36c0c8a78c03d8}{\index{macros.\-h@{macros.\-h}!t\-\_\-read\-\_\-pixelarray@{t\-\_\-read\-\_\-pixelarray}}
+\index{t\-\_\-read\-\_\-pixelarray@{t\-\_\-read\-\_\-pixelarray}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-read\-\_\-pixelarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-read\-\_\-pixelarray~{\bf t\-\_\-bunny\-\_\-my\-\_\-read\-\_\-pixelarray}}}\label{macros_8h_ac13df11e0dd1a009ac36c0c8a78c03d8}
+\hypertarget{macros_8h_a368b19c822e528b58d0952619f2e2850}{\index{macros.\-h@{macros.\-h}!t\-\_\-resisze@{t\-\_\-resisze}}
+\index{t\-\_\-resisze@{t\-\_\-resisze}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-resisze}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-resisze~{\bf t\-\_\-bunny\-\_\-resize}}}\label{macros_8h_a368b19c822e528b58d0952619f2e2850}
+\hypertarget{macros_8h_afc7fe1399f95419eb274f35f18775ecd}{\index{macros.\-h@{macros.\-h}!t\-\_\-response@{t\-\_\-response}}
+\index{t\-\_\-response@{t\-\_\-response}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-response~{\bf t\-\_\-bunny\-\_\-response}}}\label{macros_8h_afc7fe1399f95419eb274f35f18775ecd}
+\hypertarget{macros_8h_a891d1955a21457d747c4deba016271fb}{\index{macros.\-h@{macros.\-h}!t\-\_\-rgb@{t\-\_\-rgb}}
+\index{t\-\_\-rgb@{t\-\_\-rgb}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-rgb}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf t\-\_\-rgb}~{\bf t\-\_\-bunny\-\_\-rgb}}}\label{macros_8h_a891d1955a21457d747c4deba016271fb}
+\hypertarget{macros_8h_ab1b607e9b91b7b48233f189e95dda0d2}{\index{macros.\-h@{macros.\-h}!t\-\_\-server@{t\-\_\-server}}
+\index{t\-\_\-server@{t\-\_\-server}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-server~{\bf t\-\_\-bunny\-\_\-server}}}\label{macros_8h_ab1b607e9b91b7b48233f189e95dda0d2}
+\hypertarget{macros_8h_aa2b1d39d1665ab0250ee47201363908a}{\index{macros.\-h@{macros.\-h}!t\-\_\-set\-\_\-circle@{t\-\_\-set\-\_\-circle}}
+\index{t\-\_\-set\-\_\-circle@{t\-\_\-set\-\_\-circle}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-set\-\_\-circle}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-set\-\_\-circle~{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-circle}}}\label{macros_8h_aa2b1d39d1665ab0250ee47201363908a}
+\hypertarget{macros_8h_ae8c340e9c529a0e84d38779e68c781f5}{\index{macros.\-h@{macros.\-h}!t\-\_\-set\-\_\-geometry@{t\-\_\-set\-\_\-geometry}}
+\index{t\-\_\-set\-\_\-geometry@{t\-\_\-set\-\_\-geometry}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-set\-\_\-geometry}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-set\-\_\-geometry~{\bf t\-\_\-bunny\-\_\-my\-\_\-geometry}}}\label{macros_8h_ae8c340e9c529a0e84d38779e68c781f5}
+\hypertarget{macros_8h_a90b49c42323f5b5cf54f63881fe82bba}{\index{macros.\-h@{macros.\-h}!t\-\_\-set\-\_\-line@{t\-\_\-set\-\_\-line}}
+\index{t\-\_\-set\-\_\-line@{t\-\_\-set\-\_\-line}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-set\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-set\-\_\-line~{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-line}}}\label{macros_8h_a90b49c42323f5b5cf54f63881fe82bba}
+\hypertarget{macros_8h_adaf5089b9ca1429a49a7f5ab97d6c327}{\index{macros.\-h@{macros.\-h}!t\-\_\-set\-\_\-pixel@{t\-\_\-set\-\_\-pixel}}
+\index{t\-\_\-set\-\_\-pixel@{t\-\_\-set\-\_\-pixel}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-set\-\_\-pixel}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-set\-\_\-pixel~{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-pixel}}}\label{macros_8h_adaf5089b9ca1429a49a7f5ab97d6c327}
+\hypertarget{macros_8h_a051764edf2cc1f7d103cfe1a06a74029}{\index{macros.\-h@{macros.\-h}!t\-\_\-set\-\_\-polygon@{t\-\_\-set\-\_\-polygon}}
+\index{t\-\_\-set\-\_\-polygon@{t\-\_\-set\-\_\-polygon}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-set\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-set\-\_\-polygon~{\bf t\-\_\-bunny\-\_\-my\-\_\-set\-\_\-polygon}}}\label{macros_8h_a051764edf2cc1f7d103cfe1a06a74029}
+\hypertarget{macros_8h_aae26f80a32356057b6e2732e25b55560}{\index{macros.\-h@{macros.\-h}!t\-\_\-sfx@{t\-\_\-sfx}}
+\index{t\-\_\-sfx@{t\-\_\-sfx}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-sfx}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-sfx~{\bf t\-\_\-bunny\-\_\-effect}}}\label{macros_8h_aae26f80a32356057b6e2732e25b55560}
+\hypertarget{macros_8h_a48a4c29560d3883917116a9a762927ef}{\index{macros.\-h@{macros.\-h}!t\-\_\-shader@{t\-\_\-shader}}
+\index{t\-\_\-shader@{t\-\_\-shader}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-shader}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-shader~{\bf t\-\_\-bunny\-\_\-shader}}}\label{macros_8h_a48a4c29560d3883917116a9a762927ef}
+\hypertarget{macros_8h_ad9dea3cca6ff1b9bcff7aae0b3361282}{\index{macros.\-h@{macros.\-h}!t\-\_\-size@{t\-\_\-size}}
+\index{t\-\_\-size@{t\-\_\-size}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-size~{\bf t\-\_\-bunny\-\_\-size}}}\label{macros_8h_ad9dea3cca6ff1b9bcff7aae0b3361282}
+\hypertarget{macros_8h_a4741431a59bdf8bcff51c37e095ebf8e}{\index{macros.\-h@{macros.\-h}!t\-\_\-sound@{t\-\_\-sound}}
+\index{t\-\_\-sound@{t\-\_\-sound}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-sound}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-sound~{\bf t\-\_\-bunny\-\_\-sound}}}\label{macros_8h_a4741431a59bdf8bcff51c37e095ebf8e}
+\hypertarget{macros_8h_af71d7750eddadf94e892ce184cd09a2e}{\index{macros.\-h@{macros.\-h}!t\-\_\-threadpool@{t\-\_\-threadpool}}
+\index{t\-\_\-threadpool@{t\-\_\-threadpool}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-threadpool}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-threadpool~{\bf t\-\_\-bunny\-\_\-threadpool}}}\label{macros_8h_af71d7750eddadf94e892ce184cd09a2e}
+\hypertarget{macros_8h_a610db16f84f1d198578fbba521030afc}{\index{macros.\-h@{macros.\-h}!t\-\_\-transform@{t\-\_\-transform}}
+\index{t\-\_\-transform@{t\-\_\-transform}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-transform}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-transform~{\bf t\-\_\-bunny\-\_\-transform}}}\label{macros_8h_a610db16f84f1d198578fbba521030afc}
+\hypertarget{macros_8h_a762891f8b9884b9d1be2520c926824cb}{\index{macros.\-h@{macros.\-h}!t\-\_\-trap@{t\-\_\-trap}}
+\index{t\-\_\-trap@{t\-\_\-trap}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-trap}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-trap~{\bf t\-\_\-bunny\-\_\-trap}}}\label{macros_8h_a762891f8b9884b9d1be2520c926824cb}
+\hypertarget{macros_8h_a27874c9d94f150d38e110dcf5cb9cc10}{\index{macros.\-h@{macros.\-h}!t\-\_\-trap\-\_\-function@{t\-\_\-trap\-\_\-function}}
+\index{t\-\_\-trap\-\_\-function@{t\-\_\-trap\-\_\-function}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-trap\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-trap\-\_\-function~{\bf t\-\_\-bunny\-\_\-trap\-\_\-function}}}\label{macros_8h_a27874c9d94f150d38e110dcf5cb9cc10}
+\hypertarget{macros_8h_aed05af23ef7ea31ebc7b5c20c1351beb}{\index{macros.\-h@{macros.\-h}!t\-\_\-type@{t\-\_\-type}}
+\index{t\-\_\-type@{t\-\_\-type}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-type~{\bf t\-\_\-bunny\-\_\-type}}}\label{macros_8h_aed05af23ef7ea31ebc7b5c20c1351beb}
+\hypertarget{macros_8h_a6bacb14d98da722dd1836f4bcba10468}{\index{macros.\-h@{macros.\-h}!t\-\_\-uncipher@{t\-\_\-uncipher}}
+\index{t\-\_\-uncipher@{t\-\_\-uncipher}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-uncipher}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-uncipher~{\bf t\-\_\-bunny\-\_\-my\-\_\-uncipher}}}\label{macros_8h_a6bacb14d98da722dd1836f4bcba10468}
+\hypertarget{macros_8h_a95c31a5d76d5c606e9520fd4f7b83654}{\index{macros.\-h@{macros.\-h}!t\-\_\-vartype@{t\-\_\-vartype}}
+\index{t\-\_\-vartype@{t\-\_\-vartype}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-vartype}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-vartype~{\bf t\-\_\-bunny\-\_\-variable\-\_\-type}}}\label{macros_8h_a95c31a5d76d5c606e9520fd4f7b83654}
+\hypertarget{macros_8h_a279e632b93867cf841c87a6dfc7c7719}{\index{macros.\-h@{macros.\-h}!t\-\_\-vertex@{t\-\_\-vertex}}
+\index{t\-\_\-vertex@{t\-\_\-vertex}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-vertex}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-vertex~{\bf t\-\_\-bunny\-\_\-vertex}}}\label{macros_8h_a279e632b93867cf841c87a6dfc7c7719}
+\hypertarget{macros_8h_aba9c2c0b09df0ae5c2eb1d0ff57f86b6}{\index{macros.\-h@{macros.\-h}!t\-\_\-vertex\-\_\-array@{t\-\_\-vertex\-\_\-array}}
+\index{t\-\_\-vertex\-\_\-array@{t\-\_\-vertex\-\_\-array}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-vertex\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-vertex\-\_\-array~{\bf t\-\_\-bunny\-\_\-vertex\-\_\-array}}}\label{macros_8h_aba9c2c0b09df0ae5c2eb1d0ff57f86b6}
+\hypertarget{macros_8h_afbd31ed6b32b7e90527fc3efeb1c6c65}{\index{macros.\-h@{macros.\-h}!t\-\_\-vfont\-\_\-line\-\_\-coord@{t\-\_\-vfont\-\_\-line\-\_\-coord}}
+\index{t\-\_\-vfont\-\_\-line\-\_\-coord@{t\-\_\-vfont\-\_\-line\-\_\-coord}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-vfont\-\_\-line\-\_\-coord}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-vfont\-\_\-line\-\_\-coord~{\bf t\-\_\-bunny\-\_\-vector\-\_\-font\-\_\-line\-\_\-coord}}}\label{macros_8h_afbd31ed6b32b7e90527fc3efeb1c6c65}
+\hypertarget{macros_8h_a5020fb723c765fea761e3437cab4b02b}{\index{macros.\-h@{macros.\-h}!t\-\_\-wheel@{t\-\_\-wheel}}
+\index{t\-\_\-wheel@{t\-\_\-wheel}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-wheel}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-wheel~{\bf t\-\_\-bunny\-\_\-wheel}}}\label{macros_8h_a5020fb723c765fea761e3437cab4b02b}
+\hypertarget{macros_8h_a523bd87853cd70ab87a36c78cb16bacf}{\index{macros.\-h@{macros.\-h}!t\-\_\-win\-\_\-style@{t\-\_\-win\-\_\-style}}
+\index{t\-\_\-win\-\_\-style@{t\-\_\-win\-\_\-style}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-win\-\_\-style}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-win\-\_\-style~{\bf t\-\_\-bunny\-\_\-window\-\_\-style}}}\label{macros_8h_a523bd87853cd70ab87a36c78cb16bacf}
+\hypertarget{macros_8h_a96ce2858dc90b633dcc86770196804e3}{\index{macros.\-h@{macros.\-h}!t\-\_\-window@{t\-\_\-window}}
+\index{t\-\_\-window@{t\-\_\-window}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-window}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-window~{\bf t\-\_\-bunny\-\_\-window}}}\label{macros_8h_a96ce2858dc90b633dcc86770196804e3}
+\hypertarget{macros_8h_a155249315edd9de91175401eda17febe}{\index{macros.\-h@{macros.\-h}!t\-\_\-write\-\_\-confifugration@{t\-\_\-write\-\_\-confifugration}}
+\index{t\-\_\-write\-\_\-confifugration@{t\-\_\-write\-\_\-confifugration}!macros.h@{macros.\-h}}
+\subsubsection[{t\-\_\-write\-\_\-confifugration}]{\setlength{\rightskip}{0pt plus 5cm}\#define t\-\_\-write\-\_\-confifugration~{\bf t\-\_\-bunny\-\_\-my\-\_\-write\-\_\-configuration}}}\label{macros_8h_a155249315edd9de91175401eda17febe}

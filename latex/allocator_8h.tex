@@ -1,0 +1,111 @@
+\hypertarget{allocator_8h}{\section{lib/lapin/dep/lapin/allocator.h File Reference}
+\label{allocator_8h}\index{lib/lapin/dep/lapin/allocator.\-h@{lib/lapin/dep/lapin/allocator.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{allocator_8h_a9c32c9f032e14d4640e23b4ea2d14106}{bunny\-\_\-malloc} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} siz)
+\item 
+void $\ast$ \hyperlink{allocator_8h_ab52a4701101f4d448f0d98c04dce0718}{bunny\-\_\-calloc} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} num, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} siz)
+\item 
+void $\ast$ \hyperlink{allocator_8h_a5fa623b5b25f614bca258291536b5832}{bunny\-\_\-realloc} (void $\ast$ptr, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} siz)
+\item 
+void \hyperlink{allocator_8h_acc8287bc7fe000c7ef5bd9215a6ec9a8}{bunny\-\_\-free} (void $\ast$ptr)
+\item 
+void \hyperlink{allocator_8h_a7229e2ebe869ffec0826e2b8d7d80a3e}{bunny\-\_\-set\-\_\-memory\-\_\-check} (\hyperlink{term__entry_8h_a002004ba5d663f149f6c38064926abac}{bool} chk)
+\item 
+void \hyperlink{allocator_8h_ab83561bad18a927b40a45c46ac4284e7}{bunny\-\_\-set\-\_\-maximum\-\_\-ram} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} byt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The allocator module contains functions to reserve memory with a specific fashion\-: with a specific limit of memory, with harsh bound checking (to make the software crash) and since the 1.\-11, to handle wave allocation. 
+
+\subsection{Function Documentation}
+\hypertarget{allocator_8h_ab52a4701101f4d448f0d98c04dce0718}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-calloc@{bunny\-\_\-calloc}}
+\index{bunny\-\_\-calloc@{bunny\-\_\-calloc}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-calloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ bunny\-\_\-calloc (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{num, }
+\item[{{\bf size\-\_\-t}}]{siz}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_ab52a4701101f4d448f0d98c04dce0718}
+Reserve a quantity of chunk of memories and return a pointer to the first of them. All bytes are reset before being returned. If there is not enough memory available, the function returns N\-U\-L\-L. 
+\begin{DoxyParams}{Parameters}
+{\em num} & The quantity of elements to reserve. \\
+\hline
+{\em siz} & The size of one single element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The address of the first byte of the first allocated element. N\-U\-L\-L if an error happened. 
+\end{DoxyReturn}
+\hypertarget{allocator_8h_acc8287bc7fe000c7ef5bd9215a6ec9a8}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-free@{bunny\-\_\-free}}
+\index{bunny\-\_\-free@{bunny\-\_\-free}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_acc8287bc7fe000c7ef5bd9215a6ec9a8}
+Make the given chunk of memory available again for a future call of bunny\-\_\-malloc, bunny\-\_\-calloc or bunny\-\_\-realloc. Validity of the pointer is checked during this function, so if your pointer is invalid, your program will crash. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The address of the first byte of the memory space to free. \\
+\hline
+\end{DoxyParams}
+\hypertarget{allocator_8h_a9c32c9f032e14d4640e23b4ea2d14106}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-malloc@{bunny\-\_\-malloc}}
+\index{bunny\-\_\-malloc@{bunny\-\_\-malloc}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ bunny\-\_\-malloc (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{siz}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_a9c32c9f032e14d4640e23b4ea2d14106}
+Reserve a sent amount of bytes and return a pointer to it. If there is not enough memory available, the function returns N\-U\-L\-L. 
+\begin{DoxyParams}{Parameters}
+{\em siz} & The amount, in bytes, of data to reserve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The address of the first byte of the allocated data. N\-U\-L\-L if an error happened. 
+\end{DoxyReturn}
+\hypertarget{allocator_8h_a5fa623b5b25f614bca258291536b5832}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-realloc@{bunny\-\_\-realloc}}
+\index{bunny\-\_\-realloc@{bunny\-\_\-realloc}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-realloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ bunny\-\_\-realloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{{\bf size\-\_\-t}}]{siz}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_a5fa623b5b25f614bca258291536b5832}
+Resize the space previously reserved at the sent address. The new size is given. If ptr is N\-U\-L\-L, then calling bunny\-\_\-realloc is the same as calling bunny\-\_\-malloc with the given size. If ptr is not N\-U\-L\-L but size is zero, then it is equivalent to calling bunny\-\_\-free with the given pointer. There is no guarantee that the address will not change, even if the new size is smaller than the original one, contrary to the standard realloc. The pointer validity is evaluated during bunny\-\_\-realloc. If the pointer is invalid, your program will crash. 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The address of the memory space to resize. \\
+\hline
+{\em siz} & The new size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new address of the data. N\-U\-L\-L if an error happened. The original buffer is left unchanged if this happen. 
+\end{DoxyReturn}
+\hypertarget{allocator_8h_ab83561bad18a927b40a45c46ac4284e7}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-set\-\_\-maximum\-\_\-ram@{bunny\-\_\-set\-\_\-maximum\-\_\-ram}}
+\index{bunny\-\_\-set\-\_\-maximum\-\_\-ram@{bunny\-\_\-set\-\_\-maximum\-\_\-ram}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-maximum\-\_\-ram}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-maximum\-\_\-ram (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{byt}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_ab83561bad18a927b40a45c46ac4284e7}
+This function takes an amount of byte that will be the maximum amount of memory that the program will be able to use, allocator meta-\/datas included. This function must be called before any other allocation. 
+\begin{DoxyParams}{Parameters}
+{\em byt} & The quantity of bytes the program will be allowed to use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{allocator_8h_a7229e2ebe869ffec0826e2b8d7d80a3e}{\index{allocator.\-h@{allocator.\-h}!bunny\-\_\-set\-\_\-memory\-\_\-check@{bunny\-\_\-set\-\_\-memory\-\_\-check}}
+\index{bunny\-\_\-set\-\_\-memory\-\_\-check@{bunny\-\_\-set\-\_\-memory\-\_\-check}!allocator.h@{allocator.\-h}}
+\subsubsection[{bunny\-\_\-set\-\_\-memory\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}void bunny\-\_\-set\-\_\-memory\-\_\-check (
+\begin{DoxyParamCaption}
+\item[{{\bf bool}}]{chk}
+\end{DoxyParamCaption}
+)}}\label{allocator_8h_a7229e2ebe869ffec0826e2b8d7d80a3e}
+This function allow you to ask a memory checkup at the end of your program. The amount of asked bytes, of chunks, how many of them remains, etc. It also makes a memory check that will make your program crash if a buffer overflow occured previously. 
+\begin{DoxyParams}{Parameters}
+{\em chk} & Activate or deactivate the memory check. \\
+\hline
+\end{DoxyParams}

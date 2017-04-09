@@ -1,0 +1,164 @@
+\hypertarget{classarcade_1_1_sprite}{\section{arcade\-:\-:Sprite Class Reference}
+\label{classarcade_1_1_sprite}\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}}
+}
+
+
+{\ttfamily \#include $<$Sprite.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146}{Sprite\-Mode} \{ \hyperlink{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146a92bee83b9fb08e4a8adbc36dff64effc}{U\-N\-I\-Q\-U\-E}, 
+\hyperlink{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146abe65861432810d11bd4cf826b598bf1c}{R\-E\-P\-E\-A\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classarcade_1_1_sprite_a8e523ec675ab75663ba3fc33743aeb72}{$\sim$\-Sprite} ()
+\item 
+\hyperlink{classarcade_1_1_sprite_a0f5d8c683d816e28c44e87206fc563a7}{Sprite} ()
+\item 
+\hyperlink{classarcade_1_1_sprite_a55316e015ec39ce95a06b3f913de48be}{Sprite} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} id, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} sprite\-Count=1)
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_sprite_a81260d4187d58695ee767fbf786223ab}{get\-Sprite\-Id} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_sprite_a9abd7394e6f785e8a12c40ba2b9efeea}{get\-Sprite\-Count} () \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} 
+\item 
+\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} \hyperlink{classarcade_1_1_sprite_ac2139891db91b8f5c48523d45192fe67}{advance} ()
+\item 
+void \hyperlink{classarcade_1_1_sprite_aeb763f7ab0781642a9cd9962c8824931}{pause} ()
+\item 
+void \hyperlink{classarcade_1_1_sprite_a0b50dbe2b0168198aa2761e49c7e1a4a}{resume} ()
+\item 
+void \hyperlink{classarcade_1_1_sprite_aa769e445c43384adf06c73d4f60d0f55}{reset} ()
+\item 
+void \hyperlink{classarcade_1_1_sprite_ae21b3b72968d9628c161473e952dfff0}{set\-Mode} (\hyperlink{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146}{Sprite\-Mode} mode)
+\item 
+void \hyperlink{classarcade_1_1_sprite_af1727bb5688fab424bae0cb03f5a7543}{set\-Sprite} (\hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} id, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} sprite\-Count=1, \hyperlink{nc__alloc_8h_a7b60c5629e55e8ec87a4547dd4abced4}{size\-\_\-t} index=0)
+\item 
+\hyperlink{classarcade_1_1_sprite}{Sprite} \& \hyperlink{classarcade_1_1_sprite_a06ce55b9dcbb25952f3a267c82e37a2b}{operator=} (\hyperlink{classarcade_1_1_sprite}{Sprite} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&sprite)
+\item 
+\hyperlink{classarcade_1_1_sprite_ae7194e727354e7b6fd208e0cb72887b4}{Sprite} (\hyperlink{classarcade_1_1_sprite}{Sprite} \hyperlink{term__entry_8h_a57bd63ce7f9a353488880e3de6692d5a}{const} \&sprite)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!Sprite\-Mode@{Sprite\-Mode}}
+\index{Sprite\-Mode@{Sprite\-Mode}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{Sprite\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf arcade\-::\-Sprite\-::\-Sprite\-Mode}}}\label{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\-N\-I\-Q\-U\-E@{U\-N\-I\-Q\-U\-E}!arcade\-::\-Sprite@{arcade\-::\-Sprite}}\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!U\-N\-I\-Q\-U\-E@{U\-N\-I\-Q\-U\-E}}\item[{\em 
+\hypertarget{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146a92bee83b9fb08e4a8adbc36dff64effc}{U\-N\-I\-Q\-U\-E}\label{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146a92bee83b9fb08e4a8adbc36dff64effc}
+}]\index{R\-E\-P\-E\-A\-T@{R\-E\-P\-E\-A\-T}!arcade\-::\-Sprite@{arcade\-::\-Sprite}}\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!R\-E\-P\-E\-A\-T@{R\-E\-P\-E\-A\-T}}\item[{\em 
+\hypertarget{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146abe65861432810d11bd4cf826b598bf1c}{R\-E\-P\-E\-A\-T}\label{classarcade_1_1_sprite_a897686598b8b81a1c7b329b5621f8146abe65861432810d11bd4cf826b598bf1c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classarcade_1_1_sprite_a8e523ec675ab75663ba3fc33743aeb72}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!$\sim$\-Sprite@{$\sim$\-Sprite}}
+\index{$\sim$\-Sprite@{$\sim$\-Sprite}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{$\sim$\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sprite\-::$\sim$\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classarcade_1_1_sprite_a8e523ec675ab75663ba3fc33743aeb72}
+\hypertarget{classarcade_1_1_sprite_a0f5d8c683d816e28c44e87206fc563a7}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{Sprite}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sprite\-::\-Sprite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_a0f5d8c683d816e28c44e87206fc563a7}
+\hypertarget{classarcade_1_1_sprite_a55316e015ec39ce95a06b3f913de48be}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{Sprite}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sprite\-::\-Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{id, }
+\item[{{\bf size\-\_\-t}}]{sprite\-Count = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_a55316e015ec39ce95a06b3f913de48be}
+\hypertarget{classarcade_1_1_sprite_ae7194e727354e7b6fd208e0cb72887b4}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{Sprite}]{\setlength{\rightskip}{0pt plus 5cm}arcade\-::\-Sprite\-::\-Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} {\bf const} \&}]{sprite}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_ae7194e727354e7b6fd208e0cb72887b4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classarcade_1_1_sprite_ac2139891db91b8f5c48523d45192fe67}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!advance@{advance}}
+\index{advance@{advance}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Sprite\-::advance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_ac2139891db91b8f5c48523d45192fe67}
+\hypertarget{classarcade_1_1_sprite_a9abd7394e6f785e8a12c40ba2b9efeea}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!get\-Sprite\-Count@{get\-Sprite\-Count}}
+\index{get\-Sprite\-Count@{get\-Sprite\-Count}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{get\-Sprite\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Sprite\-::get\-Sprite\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_sprite_a9abd7394e6f785e8a12c40ba2b9efeea}
+\hypertarget{classarcade_1_1_sprite_a81260d4187d58695ee767fbf786223ab}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!get\-Sprite\-Id@{get\-Sprite\-Id}}
+\index{get\-Sprite\-Id@{get\-Sprite\-Id}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{get\-Sprite\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-t} arcade\-::\-Sprite\-::get\-Sprite\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classarcade_1_1_sprite_a81260d4187d58695ee767fbf786223ab}
+\hypertarget{classarcade_1_1_sprite_a06ce55b9dcbb25952f3a267c82e37a2b}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!operator=@{operator=}}
+\index{operator=@{operator=}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf arcade\-::\-Sprite} \& arcade\-::\-Sprite\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} {\bf const} \&}]{sprite}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_a06ce55b9dcbb25952f3a267c82e37a2b}
+\hypertarget{classarcade_1_1_sprite_aeb763f7ab0781642a9cd9962c8824931}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!pause@{pause}}
+\index{pause@{pause}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sprite\-::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_aeb763f7ab0781642a9cd9962c8824931}
+\hypertarget{classarcade_1_1_sprite_aa769e445c43384adf06c73d4f60d0f55}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!reset@{reset}}
+\index{reset@{reset}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sprite\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_aa769e445c43384adf06c73d4f60d0f55}
+\hypertarget{classarcade_1_1_sprite_a0b50dbe2b0168198aa2761e49c7e1a4a}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!resume@{resume}}
+\index{resume@{resume}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{resume}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sprite\-::resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_a0b50dbe2b0168198aa2761e49c7e1a4a}
+\hypertarget{classarcade_1_1_sprite_ae21b3b72968d9628c161473e952dfff0}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!set\-Mode@{set\-Mode}}
+\index{set\-Mode@{set\-Mode}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sprite\-::set\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite\-Mode}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_ae21b3b72968d9628c161473e952dfff0}
+\hypertarget{classarcade_1_1_sprite_af1727bb5688fab424bae0cb03f5a7543}{\index{arcade\-::\-Sprite@{arcade\-::\-Sprite}!set\-Sprite@{set\-Sprite}}
+\index{set\-Sprite@{set\-Sprite}!arcade::Sprite@{arcade\-::\-Sprite}}
+\subsubsection[{set\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void arcade\-::\-Sprite\-::set\-Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf size\-\_\-t}}]{id, }
+\item[{{\bf size\-\_\-t}}]{sprite\-Count = {\ttfamily 1}, }
+\item[{{\bf size\-\_\-t}}]{index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classarcade_1_1_sprite_af1727bb5688fab424bae0cb03f5a7543}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+games/common/include/\hyperlink{games_2common_2include_2_sprite_8hpp}{Sprite.\-hpp}\item 
+games/common/src/\hyperlink{_sprite_8cpp}{Sprite.\-cpp}\end{DoxyCompactItemize}

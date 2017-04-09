@@ -1,0 +1,93 @@
+\hypertarget{nc__mingw_8h}{\section{lib/ndk/dep/nc\-\_\-mingw.h File Reference}
+\label{nc__mingw_8h}\index{lib/ndk/dep/nc\-\_\-mingw.\-h@{lib/ndk/dep/nc\-\_\-mingw.\-h}}
+}
+{\ttfamily \#include $<$windows.\-h$>$}\\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{nc__mingw_8h_a966cd377b9f3fdeb1432460c33352af1}{W\-I\-N\-V\-E\-R}~0x0501
+\item 
+\#define \hyperlink{nc__mingw_8h_a8319d91eac8691b350f17241b7d68c9a}{sleep}(n)~Sleep((n) $\ast$ 1000)
+\item 
+\#define \hyperlink{nc__mingw_8h_ad640b982b02601e71b1acdb45caecec9}{gettimeofday}(tv, tz)~\hyperlink{nc__mingw_8h_a967053b670a958d871e9e04b3df1df16}{\-\_\-nc\-\_\-gettimeofday}(tv,tz)
+\item 
+\#define \hyperlink{nc__mingw_8h_a32e7ff1da5763e68f44097cb23826415}{H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y}~1
+\item 
+\#define \hyperlink{nc__mingw_8h_a136c64ec2d1306de745e39d6aee362ca}{S\-I\-G\-H\-U\-P}~1
+\item 
+\#define \hyperlink{nc__mingw_8h_addd8dcd406ce514ab3b4f576a5343d42}{S\-I\-G\-K\-I\-L\-L}~9
+\item 
+\#define \hyperlink{nc__mingw_8h_a65aec0010f6a05ff8d3777e328da2610}{getlogin}()~\char`\"{}username\char`\"{}
+\item 
+\#define \hyperlink{nc__mingw_8h_ad7e6019f460bcc568edd28ee2d55ac55}{wcwidth}(ucs)~\hyperlink{nc__mingw_8h_a1dd7922f94332be334d03aa03b93be50}{\-\_\-nc\-\_\-wcwidth}(ucs)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{nc__mingw_8h_a967053b670a958d871e9e04b3df1df16}{\-\_\-nc\-\_\-gettimeofday} (struct timeval $\ast$, void $\ast$)
+\item 
+\hyperlink{term__entry_8h_ad65b480f8c8270356b45a9890f6499ae}{int} \hyperlink{nc__mingw_8h_a1dd7922f94332be334d03aa03b93be50}{\-\_\-nc\-\_\-wcwidth} (wchar\-\_\-t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{nc__mingw_8h_a65aec0010f6a05ff8d3777e328da2610}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!getlogin@{getlogin}}
+\index{getlogin@{getlogin}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{getlogin}]{\setlength{\rightskip}{0pt plus 5cm}\#define getlogin(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\char`\"{}username\char`\"{}}}\label{nc__mingw_8h_a65aec0010f6a05ff8d3777e328da2610}
+\hypertarget{nc__mingw_8h_ad640b982b02601e71b1acdb45caecec9}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!gettimeofday@{gettimeofday}}
+\index{gettimeofday@{gettimeofday}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{gettimeofday}]{\setlength{\rightskip}{0pt plus 5cm}\#define gettimeofday(
+\begin{DoxyParamCaption}
+\item[{}]{tv, }
+\item[{}]{tz}
+\end{DoxyParamCaption}
+)~{\bf \-\_\-nc\-\_\-gettimeofday}(tv,tz)}}\label{nc__mingw_8h_ad640b982b02601e71b1acdb45caecec9}
+\hypertarget{nc__mingw_8h_a32e7ff1da5763e68f44097cb23826415}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y@{H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y}}
+\index{H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y@{H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-A\-V\-E\-\_\-\-G\-E\-T\-T\-I\-M\-E\-O\-F\-D\-A\-Y~1}}\label{nc__mingw_8h_a32e7ff1da5763e68f44097cb23826415}
+\hypertarget{nc__mingw_8h_a136c64ec2d1306de745e39d6aee362ca}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!S\-I\-G\-H\-U\-P@{S\-I\-G\-H\-U\-P}}
+\index{S\-I\-G\-H\-U\-P@{S\-I\-G\-H\-U\-P}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{S\-I\-G\-H\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I\-G\-H\-U\-P~1}}\label{nc__mingw_8h_a136c64ec2d1306de745e39d6aee362ca}
+\hypertarget{nc__mingw_8h_addd8dcd406ce514ab3b4f576a5343d42}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!S\-I\-G\-K\-I\-L\-L@{S\-I\-G\-K\-I\-L\-L}}
+\index{S\-I\-G\-K\-I\-L\-L@{S\-I\-G\-K\-I\-L\-L}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{S\-I\-G\-K\-I\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I\-G\-K\-I\-L\-L~9}}\label{nc__mingw_8h_addd8dcd406ce514ab3b4f576a5343d42}
+\hypertarget{nc__mingw_8h_a8319d91eac8691b350f17241b7d68c9a}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!sleep@{sleep}}
+\index{sleep@{sleep}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}\#define sleep(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~Sleep((n) $\ast$ 1000)}}\label{nc__mingw_8h_a8319d91eac8691b350f17241b7d68c9a}
+\hypertarget{nc__mingw_8h_ad7e6019f460bcc568edd28ee2d55ac55}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!wcwidth@{wcwidth}}
+\index{wcwidth@{wcwidth}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{wcwidth}]{\setlength{\rightskip}{0pt plus 5cm}\#define wcwidth(
+\begin{DoxyParamCaption}
+\item[{}]{ucs}
+\end{DoxyParamCaption}
+)~{\bf \-\_\-nc\-\_\-wcwidth}(ucs)}}\label{nc__mingw_8h_ad7e6019f460bcc568edd28ee2d55ac55}
+\hypertarget{nc__mingw_8h_a966cd377b9f3fdeb1432460c33352af1}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!W\-I\-N\-V\-E\-R@{W\-I\-N\-V\-E\-R}}
+\index{W\-I\-N\-V\-E\-R@{W\-I\-N\-V\-E\-R}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{W\-I\-N\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-V\-E\-R~0x0501}}\label{nc__mingw_8h_a966cd377b9f3fdeb1432460c33352af1}
+
+
+\subsection{Function Documentation}
+\hypertarget{nc__mingw_8h_a967053b670a958d871e9e04b3df1df16}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!\-\_\-nc\-\_\-gettimeofday@{\-\_\-nc\-\_\-gettimeofday}}
+\index{\-\_\-nc\-\_\-gettimeofday@{\-\_\-nc\-\_\-gettimeofday}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{\-\_\-nc\-\_\-gettimeofday}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} \-\_\-nc\-\_\-gettimeofday (
+\begin{DoxyParamCaption}
+\item[{struct timeval $\ast$}]{, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{nc__mingw_8h_a967053b670a958d871e9e04b3df1df16}
+\hypertarget{nc__mingw_8h_a1dd7922f94332be334d03aa03b93be50}{\index{nc\-\_\-mingw.\-h@{nc\-\_\-mingw.\-h}!\-\_\-nc\-\_\-wcwidth@{\-\_\-nc\-\_\-wcwidth}}
+\index{\-\_\-nc\-\_\-wcwidth@{\-\_\-nc\-\_\-wcwidth}!nc_mingw.h@{nc\-\_\-mingw.\-h}}
+\subsubsection[{\-\_\-nc\-\_\-wcwidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} \-\_\-nc\-\_\-wcwidth (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{nc__mingw_8h_a1dd7922f94332be334d03aa03b93be50}
