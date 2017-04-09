@@ -60,7 +60,7 @@ libs:
 	@make -s -C $(LAPIN) DLL=YES
 	@make -s -C $(NDK) DLL=YES
 
-arcade: re lib
+arcade: lib
 
 sound:
 	@make -s -C $(SOUND) STATIC=YES

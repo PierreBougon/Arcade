@@ -85,10 +85,10 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
     tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snake/assets/img/", "snake_head_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_V", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_H", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_right", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_right", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_left", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("u", "./games/snake/assets/img/", "snake_tail_up", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snake/assets/img/", "snake_tail_right", 1, ".png"));
     tmp.push_back(std::make_unique<SpriteGenerator>("^", "./games/snake/assets/img/", "snake_tail_down", 1, ".png"));
@@ -143,7 +143,7 @@ arcade::Snake::Snake() :
                      false)),
         tick(0),
         score(Score()),
-        snakeSpeed(4)
+        snakeSpeed(10)
 {
     state = LOADING;
     createPlayer();
@@ -266,7 +266,7 @@ void arcade::Snake::feedingSnakes()
 
 void arcade::Snake::moveSnake()
 {
-    if (!(tick % (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed)) || talinette)
+    if (!(tick % static_cast<size_t>(Tick::BASIC_TICK_RATE / snakeSpeed)) || talinette)
     {
         snakes[0].move();
         checkDead();
@@ -274,8 +274,8 @@ void arcade::Snake::moveSnake()
     }
     else
     {
-        snakes[0].moveShift(tick % (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed),
-                            (static_cast<size_t>(Tick::BASIC_TICK_RATE) / snakeSpeed));
+        snakes[0].moveShift(tick % static_cast<size_t>(Tick::BASIC_TICK_RATE / snakeSpeed),
+                            Tick::BASIC_TICK_RATE / snakeSpeed);
         moveBody(false);
     }
 }
