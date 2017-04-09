@@ -193,12 +193,17 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
 void arcade::Core::setGame(const std::string &game)
 {
     size_t nbTested = 0;
+    std::vector<std::string>::const_iterator it = std::find(pars.getVecGame().begin(), pars.getVecGame().end(), game);
 
     currentGame = nullptr;
-    while (!currentGame && nbTested < tabGame.size())
+    while (!currentGame && nbTested < pars.getVecGame().size())
     {
-        currentGame = findGame(game);
-        initGame();
+        if (it == pars.getVecGame().end())
+            it = pars.getVecGame().begin();
+        currentGame = findGame(*it);
+        if (currentGame)
+            initGame();
+        ++it;
         ++nbTested;
     }
     if (nbTested == tabGame.size())
@@ -208,11 +213,17 @@ void arcade::Core::setGame(const std::string &game)
 void arcade::Core::setLib(const std::string &lib)
 {
     size_t nbTested = 0;
+    std::vector<std::string>::const_iterator it = std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &str){
+        return lib == "./lib/" + str;
+    });
 
     currentLib = nullptr;
-    while (!currentLib && nbTested < tabLib.size())
+    while (!currentLib && nbTested < pars.getVecLib().size())
     {
-        currentLib = findLib(lib);
+        if (it == pars.getVecLib().end())
+            it = pars.getVecLib().begin();
+        currentLib = findLib(*it);
+        ++it;
         ++nbTested;
     }
     if (nbTested == tabLib.size())
