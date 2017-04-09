@@ -196,7 +196,7 @@ void arcade::Core::setGame(const std::string &game)
     std::vector<std::string>::const_iterator it = std::find(pars.getVecGame().begin(), pars.getVecGame().end(), game);
 
     currentGame = nullptr;
-    while (!currentGame && nbTested < tabGame.size())
+    while (!currentGame && nbTested < pars.getVecGame().size())
     {
         if (it == pars.getVecGame().end())
             it = pars.getVecGame().begin();
@@ -213,10 +213,12 @@ void arcade::Core::setGame(const std::string &game)
 void arcade::Core::setLib(const std::string &lib)
 {
     size_t nbTested = 0;
-    std::vector<std::string>::const_iterator it = std::find(pars.getVecLib().begin(), pars.getVecLib().end(), lib);
+    std::vector<std::string>::const_iterator it = std::find_if(pars.getVecLib().begin(), pars.getVecLib().end(), [lib](std::string const &str){
+        return lib == "./lib/" + str;
+    });
 
     currentLib = nullptr;
-    while (!currentLib && nbTested < tabLib.size())
+    while (!currentLib && nbTested < pars.getVecLib().size())
     {
         if (it == pars.getVecLib().end())
             it = pars.getVecLib().begin();

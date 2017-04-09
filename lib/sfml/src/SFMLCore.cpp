@@ -6,7 +6,7 @@
 #include "IGfxLib.hpp"
 #include "SFMLCore.hpp"
 
-arcade::SFMLCore::SFMLCore() : width(800), height(600), x(0), y(0), window()
+arcade::SFMLCore::SFMLCore() : width(800), height(600), x(0), y(0)
 {
     sf::VideoMode videoMode(width, height);
 
