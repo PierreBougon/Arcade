@@ -5,18 +5,19 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Sun Apr  2 00:43:58 2017 bougon_p
-## Last update Fri Apr  7 21:29:32 2017 bougon_p
+## Last update Sun Apr  9 05:20:03 2017 bougon_p
 ##
 
 ## Include colors and basic commands
 
-PROJECT_NAME	=	NDK Graphic arcade library
+PROJECT_NAME	=	ndk
 
 include ../../mk/colors.mk ../../mk/commands.mk ../../mk/definitions.mk
 
 ## Lib variables
 
-SRC	=	src/Ndk.cpp
+SRC	=	src/Ndk.cpp			\
+		../../interfaces/Sound.cpp
 
 OBJ 	=   	$(SRC:.cpp=.o)
 
