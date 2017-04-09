@@ -27,7 +27,7 @@ arcade::Core::Core(std::string const &lib) : tabLib(), tabGame(), pars(),
 
     setLib(lib);
     //TODO: Basic choice should be decided on a menu
-    setGame("./games/lib_arcade_snake.so");
+    setGame("./games/lib_arcade_centipede.so");
 }
 
 arcade::Core::~Core()
@@ -254,18 +254,12 @@ void arcade::Core::loadDependencies()
     pars.FeedVecGame("./games");
     if (pars.getVecGame().size() == 0)
         throw LoadingExceptions("Cannot open game/ directory");
-    std::cerr << "LOL1" << std::endl;
-    std::cerr << "LOL2" << std::endl;
     feedLib();
-    std::cerr << "LOL3" << std::endl;
     if (tabLib.size() == 0)
         throw DLLoadingError(NO_LIB_ERROR_MSG, DLLoadingError::DLLError::NO_LIB_LOADED_ERROR);
-    std::cerr << "LOL4" << std::endl;
     feedGame();
-    std::cerr << "LOL5" << std::endl;
     if (tabGame.size() == 0)
         throw DLLoadingError(NO_GAME_ERROR_MSG, DLLoadingError::DLLError::NO_GAME_LOADED_ERROR);
-    std::cerr << "LOL6" << std::endl;
 }
 
 

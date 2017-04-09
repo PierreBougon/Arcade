@@ -24,8 +24,7 @@ int main(int ac, char **av)
     }
     catch (arcade::DLLoadingError const &error)
     {
-        std::cerr << "LOL : " << error.what() << std::endl;
-        Logger::log(Logger::Error, error.what());
+        //Logger::log(Logger::Error, error.what());
         return (EXIT_FAILURE);
     }
     // TODO: try catch for a game exception or something

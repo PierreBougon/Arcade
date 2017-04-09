@@ -4,6 +4,7 @@
 
 #include <map>
 #include <algorithm>
+#include <iostream>
 #include "Vector2.hpp"
 #include "Protocol.hpp"
 #include "GameState.hpp"
@@ -37,7 +38,8 @@ arcade::CentipedeKiller::CentipedeKiller(arcade::Vector2s pos,
 
 void arcade::CentipedeKiller::action(arcade::Bullet &bullet)
 {
-    tryFire(bullet);
+    if (_action == KillerAction::FIRE)
+        tryFire(bullet);
     if (bullet.isAlive())
         bullet.go();
     _action = KillerAction::NOTHING;
@@ -71,8 +73,6 @@ void arcade::CentipedeKiller::updatePlayerInput(std::vector<arcade::Event> &even
             {KillerAction::FIRE, &CentipedeKiller::isFire}
     };
 
-    _move = KillerMove::STAY;
-    _action = KillerAction::NOTHING;
     for (const arcade::Event &event : events)
     {
         for (const std::pair<KillerMove, move_t> check : moveTab)
@@ -87,7 +87,6 @@ void arcade::CentipedeKiller::updatePlayerInput(std::vector<arcade::Event> &even
                 _action = check.first;
         }
     }
-
 }
 
 bool arcade::CentipedeKiller::isMoveTop(const arcade::Event &event) const
@@ -133,7 +132,7 @@ void arcade::CentipedeKiller::tryMoveTop(const arcade::Map &map,
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != mushrooms.cend())
+                     }) == mushrooms.cend())
         --abs.y;
 }
 
@@ -148,7 +147,7 @@ void arcade::CentipedeKiller::tryMoveRight(const arcade::Map &map,
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != mushrooms.cend())
+                     }) == mushrooms.cend())
         ++abs.x;
 }
 
@@ -163,7 +162,7 @@ void arcade::CentipedeKiller::tryMoveLeft(const arcade::Map &map,
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != mushrooms.cend())
+                     }) == mushrooms.cend())
         --abs.x;
 }
 
@@ -178,7 +177,7 @@ void arcade::CentipedeKiller::tryMoveBot(const arcade::Map &map,
                      [&vec](const Mushroom *entity)
                      {
                          return (entity->getAbs() == vec);
-                     }) != mushrooms.cend())
+                     }) == mushrooms.cend())
         ++abs.y;
 }
 

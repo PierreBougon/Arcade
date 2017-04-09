@@ -8,7 +8,7 @@
 arcade::Tile::Tile() :
     Type(TileType::EMPTY),
     TypeEvo(TileTypeEvolution::EMPTY),
-    _Color(arcade::Color::Black),
+    _Color(arcade::Color::Transparent),
     Sprite(false),
     SpriteId(0),
     Pos(0),

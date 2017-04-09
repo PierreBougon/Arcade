@@ -44,7 +44,6 @@ t_bunny_response mouseMovement(const t_bunny_position *pos,
 
 arcade::Lapin::~Lapin()
 {
-    std::cerr << "DESTRUCTION" << std::endl;
     if (Window != nullptr)
         bunny_stop(Window);
     if (Map != nullptr)
@@ -66,6 +65,7 @@ bool arcade::Lapin::doesSupportSound() const
 
 void arcade::Lapin::display()
 {
+    bunny_draw(Map);
     bunny_blit(&Window->buffer, Map, NULL);
     bunny_display(Window);
 }
@@ -132,6 +132,7 @@ void arcade::Lapin::printOneSprite(t_bunny_position const &pos, t_bunny_picture 
 {
     sprite.scale.y = 1.0 / (static_cast<double>(sprite.clip_height) / static_cast<double>(TileHeight));
     sprite.scale.x = 1.0 / (static_cast<double>(sprite.clip_width) / static_cast<double>(TileWidth));
+    bunny_draw(&sprite);
     bunny_blit(&Map->buffer, &sprite, &pos);
 }
 
@@ -147,6 +148,7 @@ void arcade::Lapin::printOneColor(t_bunny_position const &pos, Color color, uint
         pic->clip_height = height;
         pic->clip_width = width;
         bunny_fill(&pic->buffer, color.full);
+        bunny_draw(pic);
         bunny_blit(&Map->buffer, pic, &pos);
     }
 }
@@ -158,6 +160,8 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
     size_t mWidth = map.getWidth();
     t_bunny_position pos;
 
+    TileWidth = Width / map.getWidth();
+    TileHeight = Height / map.getHeight();
     for (size_t layers = 0; layers < nbLayers; ++layers)
     {
         pos.y = 0;
@@ -170,7 +174,7 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
 
                 if (tile.hasSprite())
                     printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()]);
-                else
+                else if (tile.getColor().full != Color::Transparent.full)
                     printOneColor(pos, tile.getColor(), TileWidth, TileHeight);
                 pos.x += TileWidth;
             }
@@ -215,36 +219,32 @@ void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&
     {
         for (size_t i = 0; i < sprite->spritesCount(); ++i)
         {
-            add.emplace_back(bunny_load_picture(sprite->getGraphicPath(i).c_str()));
+            add.push_back(bunny_load_picture(sprite->getGraphicPath(i).c_str()));
             if (!add.back())
                 throw DLLoadingError("Can't load sprites", DLLoadingError::DLLError::UNDEFINED_ERROR);
         }
-        Sprites.emplace_back(std::move(add));
+        Sprites.push_back(add);
     }
 }
 
 arcade::Lapin::Lapin() :
         Width(800),
         Height(600),
-        TileWidth(10),
-        TileHeight(10),
+        TileWidth(20),
+        TileHeight(20),
         X(0),
         Y(0),
         Window(nullptr),
         Map(nullptr),
         Context({})
 {
-    std::cerr << "CONSTRUCTION" << std::endl;
     bunny_enable_full_blit(true);
     Map = bunny_new_picture(Width, Height);
     if (Map == nullptr)
         throw DLLoadingError("Can't create main picture", DLLoadingError::DLLError::UNDEFINED_ERROR);
-    std::cerr << "MAP BUILDT" << std::endl;
-
     Window = bunny_start(Width, Height, false, "Retro Furnace");
     if (Window == nullptr)
         throw DLLoadingError("Can't create window", DLLoadingError::DLLError::WINDOW_ERROR);
-    std::cerr << "WINDOW BUILDT" << std::endl;
     Context.key = keyboardPollEvents;
     Context.loop = mainLoop;
     Context.click = mousePollEvents;
@@ -352,8 +352,8 @@ namespace arcade
             {']', arcade::KeyboardKey::KB_RIGHTBRACKET},
             {')', arcade::KeyboardKey::KB_RIGHTPAREN},
             {BKS_RSHIFT, arcade::KeyboardKey::KB_RSHIFT},
-            {';', arcade::KeyboardKey::KB_SEMICOLON},
-            {' ', arcade::KeyboardKey::KB_SPACE},
+            {BKS_SEMICOLON, arcade::KeyboardKey::KB_SEMICOLON},
+            {BKS_SPACE, arcade::KeyboardKey::KB_SPACE},
             {'>', arcade::KeyboardKey::KB_SUPERIOR},
             {'\'', arcade::KeyboardKey::KB_SIMPLEQUOTE},
             {'/', arcade::KeyboardKey ::KB_SLASH},

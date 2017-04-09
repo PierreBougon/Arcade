@@ -28,7 +28,6 @@ size_t arcade::Entity::advance()
 
 size_t arcade::Entity::getSpriteId() const
 {
-    std::cerr << "CurSprite : " << curSprite << "Size Vec : " << sprite.size() << std::endl;
     return sprite[curSprite].getSpriteId();
 }
 

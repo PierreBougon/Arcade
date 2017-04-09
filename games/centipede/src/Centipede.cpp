@@ -69,10 +69,10 @@ arcade::Centipede::Centipede(Vector2s const& pos,
 }
 
 arcade::Centipede::Centipede(const arcade::Centipede &centipede) :
-    _poped(centipede._poped),
-    _start(centipede._start),
-    _directionH(centipede._directionH),
-    _directionV(centipede._directionV)
+        _poped(centipede._poped),
+        _start(centipede._start),
+        _directionH(centipede._directionH),
+        _directionV(centipede._directionV)
 {
     _body = centipede._body;
 }
@@ -132,7 +132,7 @@ void arcade::Centipede::split(size_t pos, std::list<Mushroom*> &mushrooms,
     _body.splice(newCentipede.cbegin(), _body, first, _body.cend());
     mushrooms.push_back(new Mushroom(newCentipede.front().getAbs()));
     newCentipede.pop_front();
-    centipedes.push_back(Centipede(newCentipede.front().getAbs(), _poped));
+    centipedes.emplace_back(Centipede(newCentipede.front().getAbs(), _poped));
     centipedes.back().setBody(std::move(newCentipede));
     centipedes.back().setBody();
 }
@@ -190,6 +190,7 @@ bool arcade::Centipede::checkCentipedeCollision(std::list<arcade::Centipede> &ce
                              return (pos == part.getAbs());
                          }) != centipede._body.cend())
             return true;
+
     }
     return false;
 }

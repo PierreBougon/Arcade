@@ -5,9 +5,12 @@
 #include <new>
 #include <cstdlib>
 #include <unistd.h>
+#include <algorithm>
 #include "LifelessEntity.hpp"
 #include "CentipedeGame.hpp"
 #include "Protocol.hpp"
+
+static bool talinette = false;
 
 arcade::CentipedeGame::CentipedeGame() :
         _gameState(GameState::NONE),
@@ -28,6 +31,7 @@ arcade::CentipedeGame::CentipedeGame() :
         for (CentipedePart &part : centipede.getBody())
             _map.updateLayer(part, CentipedeLayers::CENTIPEDE);
     this->updateMap();
+    _tick = 0;
     _gameState = GameState::INGAME;
 }
 
@@ -58,6 +62,7 @@ arcade::GameState arcade::CentipedeGame::getGameState() const
 void arcade::CentipedeGame::notifyEvent(std::vector<arcade::Event> &&_events)
 {
     std::vector<arcade::Event> events = std::move(_events);
+
     _centipedeKiller.updatePlayerInput(events);
 }
 
@@ -84,26 +89,30 @@ void arcade::CentipedeGame::createCentipede()
 
 void arcade::CentipedeGame::process()
 {
-    if (_gameState != INGAME)
-        _gameState = INGAME;
-
-    if (!_centipedes.size())
-        createCentipede();
-
-    _centipedeKiller.move(_map, _mushrooms);
-    _centipedeKiller.action(_bullet);
-
-    for (Centipede &centipede : _centipedes)
+    _tick++;
+    if (!(_tick % (SPEED / 5)) || talinette)
     {
-        centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
+        _centipedeKiller.move(_map, _mushrooms);
+        _centipedeKiller.action(_bullet);
+        bulletAndMushrooms();
+        this->updateMap();
     }
 
-    _centipedeKiller.touched(_centipedes);
+    if (!(_tick % (SPEED * 2)) || talinette) {
+        if (!_centipedes.size())
+            createCentipede();
 
-    this->updateMap();
+        for (Centipede &centipede : _centipedes) {
+            centipede.oneTurn(_bullet, _centipedes, _mushrooms, _map);
+        }
 
-    if (!_centipedeKiller.getHp())
-        _gameState = QUIT;
+        _centipedeKiller.touched(_centipedes);
+
+        this->updateMap();
+
+        if (!_centipedeKiller.getHp())
+            _gameState = QUIT;
+    }
 }
 
 std::vector<std::unique_ptr<arcade::ISprite>> arcade::CentipedeGame::getSpritesToLoad() const
@@ -181,7 +190,25 @@ const arcade::Vector2s &arcade::CentipedeGame::getPlayerpos() const
 }
 
 arcade::tick_t arcade::CentipedeGame::getTickRate() const {
-    return 60;
+    return SPEED;
+}
+
+void arcade::CentipedeGame::bulletAndMushrooms()
+{
+    std::list<arcade::Mushroom *>::iterator it;
+
+    if ((it = std::find_if(_mushrooms.begin(), _mushrooms.end(),
+                           [this](Mushroom *mush) {
+                              return (mush->getAbs() == _bullet.getAbs());
+                           })) != _mushrooms.end())
+    {
+        _bullet.hit();
+        _bullet.reset(_centipedeKiller.getAbs());
+        _bullet.hit();
+        (*it)->takeDamage(1);
+        if ((*it)->getHp() == 0)
+            _mushrooms.erase(it);
+    }
 }
 
 extern "C" arcade::IGame *getGame()
@@ -226,6 +253,7 @@ extern "C" void Play()
     size_t mapSize = sizeof(arcade::GetMap) + (map.getWidth() * map.getHeight() * sizeof(arcade::TileType));
     arcade::WhereAmI *whereAmI = reinterpret_cast<arcade::WhereAmI *>(new char[whereAmISize] {0});
     arcade::GetMap *getMap = reinterpret_cast<arcade::GetMap*>(new char[mapSize] {0});
+    talinette = true;
 
     whereAmI->lenght = 1;
     whereAmI->type = arcade::CommandType::WHERE_AM_I;

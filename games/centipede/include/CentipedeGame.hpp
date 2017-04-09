@@ -4,6 +4,7 @@
 
 #ifndef CPP_ARCADE_CENTIPEDEGAME_HPP
 # define CPP_ARCADE_CENTIPEDEGAME_HPP
+# define SPEED 10
 
 # include <list>
 # include "IGame.hpp"
@@ -53,12 +54,15 @@ namespace arcade
         CentipedeKiller                 _centipedeKiller;
         std::list<Mushroom *>           _mushrooms;
         std::list<Centipede>            _centipedes;
+        size_t                          _tick;
 
-    // private functions
+
+        // private functions
         void randomize(Map &map, double density = 0.5);
         Vector2s placePlayer(Map &map);
         void createCentipede();
         void updateMap();
+        void bulletAndMushrooms();
     };
 }
 

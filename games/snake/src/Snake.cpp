@@ -361,7 +361,6 @@ extern "C" void Play()
         event.type = arcade::ET_KEYBOARD;
         event.action = arcade::AT_PRESSED;
         maps->type = command;
-        std::cerr << "Command: " << static_cast<int>(command) << std::endl;
         switch (command)
         {
             case arcade::CommandType::WHERE_AM_I:
