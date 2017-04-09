@@ -2,6 +2,7 @@
 // Created by Pierre Bougon on 15/03/17.
 //
 
+#include <unistd.h>
 #include <algorithm>
 #include "DLLoader.hpp"
 #include "Logger.hpp"
@@ -76,7 +77,9 @@ void arcade::Core::run()
         {
             //TODO: display arcade menu
         }
+        currentLib->clear();
         currentLib->display();
+        usleep(100);
     }
 }
 
@@ -154,7 +157,13 @@ arcade::IGame *arcade::Core::findGame(const std::string &game)
                     game + " : This game has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabGame[it - pars.getVecGame().begin()]->getInstance("getGame");
+    IGame *found = tabGame[it - pars.getVecGame().begin()]->getInstance("getGame");
+    posGame = static_cast<size_t >(it - pars.getVecGame().begin());
+    if (!found)
+    {
+        Logger::log(Logger::Warning, game + " : This game is corrupted and cannot be loaded");
+    }
+    return found;
 }
 
 arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
@@ -169,24 +178,66 @@ arcade::IGfxLib *arcade::Core::findLib(const std::string &lib)
                     lib + " : This lib has not been found it may happen when a lib cannot be loaded");
         return nullptr;
     }
-    return tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
+    IGfxLib *found = tabLib[it - pars.getVecLib().begin()]->getInstance("getLib");
+    posLib = static_cast<size_t >(it - pars.getVecLib().begin());
+    if (!found)
+    {
+        Logger::log(Logger::Warning, lib + " : This lib is corrupted and cannot be loaded");
+    }
+    return found;
 }
 
 void arcade::Core::setGame(const std::string &game)
 {
-    currentGame = findGame(game);
-    initGame();
+    size_t nbTested = 0;
+
+    currentGame = nullptr;
+    while (!currentGame && nbTested < tabGame.size())
+    {
+        currentGame = findGame(game);
+        initGame();
+        ++nbTested;
+    }
+    if (nbTested == tabGame.size())
+        throw DLLoadingError(ALL_GAME_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::GAMES_CORRUPTED);
 }
 
 void arcade::Core::setLib(const std::string &lib)
 {
-    currentLib = findLib(lib);
+    size_t nbTested = 0;
+
+    currentLib = nullptr;
+    while (!currentLib && nbTested < tabLib.size())
+    {
+        currentLib = findLib(lib);
+        ++nbTested;
+    }
+    if (nbTested == tabLib.size())
+        throw DLLoadingError(ALL_LIB_CORRUPTED_ERROR_MSG, DLLoadingError::DLLError::LIBRARIES_CORRUPTED);
 }
 
+void arcade::Core::nextGame()
+{
+    currentGame = tabGame[++posGame]->getInstance("getGame");
+}
+
+void arcade::Core::prevGame()
+{
+    currentGame = tabGame[--posGame]->getInstance("getGame");
+}
+
+void arcade::Core::nextLib()
+{
+    currentLib = tabLib[++posLib]->getInstance("getLib");
+}
+
+void arcade::Core::prevLib()
+{
+    currentLib = tabLib[++posLib]->getInstance("getLib");
+}
 
 void arcade::Core::drawFrame()
 {
-    currentLib->clear();
     currentLib->updateMap(currentGame->getCurrentMap());
     currentLib->updateGUI(currentGame->getGUI());
 }
@@ -235,6 +286,9 @@ void arcade::Core::manageEvents()
             case EventType::ET_QUIT :
                 open = false;
                 break;
+            case EventType::ET_KEYBOARD :
+                if (coreEvent(event))
+                    break;
             default:
                 _events.push_back(event);
                 break;
@@ -244,6 +298,31 @@ void arcade::Core::manageEvents()
         currentGame->notifyEvent(std::move(_events));
     else
         events = _events;
+}
+
+bool arcade::Core::coreEvent(const arcade::Event &event)
+{
+    if (event.action == ActionType::AT_PRESSED)
+    {
+        switch (event.kb_key)
+        {
+            case KB_2:
+                prevLib();
+                return true;
+            case KB_3:
+                nextLib();
+                return true;
+            case KB_4:
+                prevGame();
+                return true;
+            case KB_5:
+                nextGame();
+                return true;
+            default:
+                return false;
+        }
+    }
+    return false;
 }
 
 void arcade::Core::loadDependencies()
@@ -271,4 +350,8 @@ namespace arcade
     const std::string Core::NO_LIB_ERROR_MSG = "Cannot load any graphic library, please checkout your lib/ directory to check if there is your library, else your library cannot be loaded";
 
     const std::string Core::NO_GAME_ERROR_MSG = "Cannot load any game, please checkout your games/ directory to check if there is your games, else your games cannot be loaded";
+
+    const std::string Core::ALL_LIB_CORRUPTED_ERROR_MSG = "All your libraries are corrupted, it may happen when a library is badly implemented";
+
+    const std::string Core::ALL_GAME_CORRUPTED_ERROR_MSG = "All your games are corrupted, it may happen when a game is badly implemented";
 }

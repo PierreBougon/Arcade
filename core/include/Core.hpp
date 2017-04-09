@@ -30,6 +30,9 @@ namespace arcade
         IGfxLib                                        *currentLib;
         IGame                                          *currentGame;
 
+        size_t                                         posGame;
+        size_t                                         posLib;
+
     public:
         Core();
         Core(std::string const &lib);
@@ -45,9 +48,13 @@ namespace arcade
 
 
     private:
+        /// Use those methods to load libraries
+        void loadDependencies();
         void feedLib();
         void feedGame();
         void feedSound();
+
+        /// Methods to get indexes on vectors
         int getIndexVec(std::string const &lib, std::vector<std::string> vec) const;
         int getIndexLib(std::string const &lib) const;
         int getIndexGame(std::string const &game) const;
@@ -59,6 +66,10 @@ namespace arcade
         /// Set current game / lib
         void setGame(const std::string &game);
         void setLib(const std::string &lib);
+        void nextGame();
+        void prevGame();
+        void nextLib();
+        void prevLib();
 
         /// Methods relative to the GameState
         void drawFrame();
@@ -72,9 +83,10 @@ namespace arcade
         /// Encapsulate the networks calls
         void sendNetwork();
 
+        /// Manage event for the core and send unused ones to the game
         void manageEvents();
+        bool coreEvent(const Event &event);
 
-        void loadDependencies();
 
 
         /**************************************************************************************
@@ -83,7 +95,8 @@ namespace arcade
     private:
         static const std::string NO_LIB_ERROR_MSG;
         static const std::string NO_GAME_ERROR_MSG;
-
+        static const std::string ALL_LIB_CORRUPTED_ERROR_MSG;
+        static const std::string ALL_GAME_CORRUPTED_ERROR_MSG;
     };
 }
 

@@ -5,11 +5,14 @@
 #include <bits/unique_ptr.h>
 #include <curses.h>
 #include <iostream>
+#include "Tile.hpp"
 #include "Ndk.hpp"
 
 bool arcade::Ndk::pollEvent(arcade::Event &e)
 {
     int c = getch();
+    if (c == ERR)
+        return false;
     if (keyboard.find(static_cast<char>(c)) != keyboard.end())
     {
         e.type = arcade::ET_KEYBOARD;
@@ -33,11 +36,17 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
     if (!pass)
     {
-        win = newwin(static_cast<int>(map.getHeight()), static_cast<int>(map.getWidth()), getmaxy(stdscr) / 4, getmaxx(stdscr) / 4);
+        win = newwin(static_cast<int>(map.getHeight() + 2), static_cast<int>(map.getWidth() + 2), 10, 10);
+        set_escdelay(0);
+        noecho();
+        curs_set(0);
+        wtimeout(win, 0);
         pass = true;
     }
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK);
     for (i = 0; i < layer; ++i)
     {
         for (j = 0; j < map.getHeight(); ++j)
@@ -45,8 +54,11 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
             for (k = 0; k < map.getWidth(); ++k)
             {
                 ITile const& tile = map.at(i, k, j);
-                tmp = vecString[tile.getSpritePos()][tile.getSpritePos()];
-                mvwprintw(win, static_cast<int>(j), static_cast<int>(k), tmp.c_str());
+                if (tile.hasSprite())
+                {
+                    tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
+                    mvwprintw(win, static_cast<int>(j) + 1, static_cast<int>(k) + 1, tmp.c_str());
+                }
             }
         }
     }
@@ -161,19 +173,9 @@ arcade::Ndk::Ndk() : keyboard({
                               {'|', arcade::KeyboardKey::KB_VERTICALBAR}
                       })
 {
-    std::cout << "INITSRC ..." << std::endl;
     initscr();
-    keypad(stdscr, true);
-    set_escdelay(0);
-    noecho();
-    cbreak();
-    raw();
-    halfdelay(3);
-    curs_set(0);
+    timeout(0);
     pass = false;
-    height = 0;
-    width = 0;
-    initializeWindow();
 }
 
 void arcade::Ndk::display()

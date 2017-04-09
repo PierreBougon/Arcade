@@ -44,6 +44,8 @@ namespace arcade
             UNDEFINED_ERROR,
             NO_LIB_LOADED_ERROR,
             NO_GAME_LOADED_ERROR,
+            LIBRARIES_CORRUPTED,
+            GAMES_CORRUPTED,
             NB_ERRORS
         };
 

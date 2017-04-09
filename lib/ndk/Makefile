@@ -22,7 +22,7 @@ OBJ 	=   	$(SRC:.cpp=.o)
 
 NAME    =      	../lib_arcade_ndk.so
 
-INC     =       -Iinclude -I../../interfaces 
+INC     =       -Iinclude -I../../interfaces -I../../games/common/include
 
 LDFLAGS	+=	-lncurses
 

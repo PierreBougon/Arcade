@@ -145,8 +145,13 @@ void arcade::Entity::setSprite(std::vector<size_t> id, std::vector<size_t> sprit
 {
     for (size_t i = 0; i < sprite.size(); ++i)
     {
-        sprite[i].setSprite(id[i], spriteCount[i], index);
+        sprite.erase(sprite.begin());
     }
+    for (size_t i = 0; i < id.size(); ++i)
+    {
+        sprite.push_back(Sprite(id[i], spriteCount[i]));
+    }
+    curSprite = static_cast<Orientation>(index);
     spriteSet = true;
 }
 
