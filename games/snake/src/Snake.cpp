@@ -387,22 +387,26 @@ void arcade::Snake::setSprites()
         pos = snakes[i].getAbs();
         posPrev = snakes[i - 1].getAbs();
         posNext = snakes[i + 1].getAbs();
-        if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x)
+        if ((pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x && pos.y == posNext.y) ||
+                (pos.x == posNext.x && pos.y < posNext.y && pos.y == posPrev.y && pos.x < posPrev.x))
         {
             snakes[i].setSprite(corner, count, Orientation::UP);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x)
+        else if ((pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x && pos.y == posNext.y) ||
+                (pos.x == posNext.x && pos.x > posPrev.x && pos.y == posPrev.y && pos.y < posNext.y))
         {
             snakes[i].setSprite(corner, count, Orientation::RIGHT);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if (pos.x > posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+        else if ((pos.y == posPrev.y && pos.x > posPrev.x && pos.y > posNext.y && pos.x == posNext.x)||
+                (pos.y == posNext.y && pos.x == posPrev.x && pos.y > posPrev.y && pos.x > posNext.x))
         {
             snakes[i].setSprite(corner, count, Orientation::LEFT);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if (pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
+        else if ((pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y && pos.x == posNext.x) ||
+                (pos.x == posPrev.x && pos.x < posNext.x && pos.y > posPrev.y && pos.y == posNext.y))
         {
             snakes[i].setSprite(corner, count, Orientation::DOWN);
             snakes[i].setColor(Color(Color::Cyan));
@@ -412,7 +416,7 @@ void arcade::Snake::setSprites()
             snakes[i].setSprite(body, countBody, Orientation::UP);
             snakes[i].setColor(Color(Color::Cyan));
         }
-        else if (pos.y == posPrev.y && pos.y  == posNext.y)
+        else if (pos.y == posPrev.y && pos.y == posNext.y)
         {
             snakes[i].setSprite(body, countBody, Orientation::RIGHT);
             snakes[i].setColor(Color(Color::Cyan));
