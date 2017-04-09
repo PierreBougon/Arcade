@@ -234,22 +234,46 @@ void arcade::Core::setLib(const std::string &lib)
 
 void arcade::Core::nextGame()
 {
-    currentGame = tabGame[++posGame]->getInstance("getGame");
+    if (posGame >= tabGame.size() - 1)
+    {
+        currentGame = tabGame.front()->getInstance("getGame");
+        posLib = 0;
+    }
+    else
+        currentGame = tabGame[++posGame]->getInstance("getGame");
 }
 
 void arcade::Core::prevGame()
 {
-    currentGame = tabGame[--posGame]->getInstance("getGame");
+    if (posLib == 0)
+    {
+        currentLib = tabLib.back()->getInstance("getGame");
+        posLib = tabLib.size() - 1;
+    }
+    else
+        currentGame = tabGame[--posGame]->getInstance("getGame");
 }
 
 void arcade::Core::nextLib()
 {
-    currentLib = tabLib[++posLib]->getInstance("getLib");
+    if (posLib >= tabLib.size() - 1)
+    {
+        currentLib = tabLib.front()->getInstance("getLib");
+        posLib = 0;
+    }
+    else
+        currentLib = tabLib[++posLib]->getInstance("getLib");
 }
 
 void arcade::Core::prevLib()
 {
-    currentLib = tabLib[++posLib]->getInstance("getLib");
+    if (posLib == 0)
+    {
+        currentLib = tabLib.back()->getInstance("getLib");
+        posLib = tabLib.size() - 1;
+    }
+    else
+        currentLib = tabLib[++posLib]->getInstance("getLib");
 }
 
 void arcade::Core::drawFrame()
