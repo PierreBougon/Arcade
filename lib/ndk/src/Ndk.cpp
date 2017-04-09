@@ -36,36 +36,27 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
     if (!pass)
     {
-        //std::cout << "Height :" << map.getHeight() << "WIdth : " << map.getWidth() << " && getmaxy / 4" << getmaxy(stdscr) / 4  << " getmaxx : " << getmaxx(stdscr) / 4 << std::endl;
         win = newwin(static_cast<int>(map.getHeight() + 2), static_cast<int>(map.getWidth() + 2), 10, 10);
-        //keypad(win, true);
         set_escdelay(0);
         noecho();
-        //cbreak();
-        //raw();
-        //halfdelay(3);
         curs_set(0);
-        //nodelay(win, TRUE);
         wtimeout(win, 0);
         pass = true;
     }
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
+    start_color();
+    init_pair(1, COLOR_RED, COLOR_BLACK);
     for (i = 0; i < layer; ++i)
     {
-//        std::cout << "LAYER :" << layer << std::endl;
         for (j = 0; j < map.getHeight(); ++j)
         {
             for (k = 0; k < map.getWidth(); ++k)
             {
-//                std::cout << "POO" << std::endl;
                 ITile const& tile = map.at(i, k, j);
                 if (tile.hasSprite())
                 {
-//                    std::cout << "GetSpritePos : " << tile.getSpriteId() << "GetSpriteId" << tile.getSpriteId()
-//                              << "Vec size" << vecString.size() << std::endl;
                     tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
-//                    std::cout << "j : " << j << " && k : " << k << std::endl;
                     mvwprintw(win, static_cast<int>(j) + 1, static_cast<int>(k) + 1, tmp.c_str());
                 }
             }
@@ -182,13 +173,9 @@ arcade::Ndk::Ndk() : keyboard({
                               {'|', arcade::KeyboardKey::KB_VERTICALBAR}
                       })
 {
-    std::cout << "INITSRC ..." << std::endl;
     initscr();
     timeout(0);
     pass = false;
-    //height = 60;
-    //width = 80;
-    //initializeWindow();
 }
 
 void arcade::Ndk::display()
