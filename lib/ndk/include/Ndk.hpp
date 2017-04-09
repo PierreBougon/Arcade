@@ -20,6 +20,8 @@ namespace arcade
         std::vector<std::string> vecString;
         size_t width;
         size_t height;
+
+        void setColor(size_t, size_t, size_t, ITile const&);
     public:
         Ndk();
 

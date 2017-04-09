@@ -156,19 +156,19 @@ void arcade::Snake::createPlayer()
     pos.x = x;
     pos.y = y;
     snakes.push_back(PlayerControlSnake(pos, head, count, Orientation::LEFT));
-    snakes[0].setColor(Color(4));
+    snakes[0].setColor(Color(Color::Green));
     for (int i = 1; i < 4; ++i)
     {
         pos.x = x + i;
         if (i == 3)
         {
             snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
-            snakes[i].setColor(Color(3));
+            snakes[i].setColor(Color(Color::Yellow));
         }
         else
         {
             snakes.push_back(PlayerControlSnake(pos, body, countBody, Orientation::RIGHT));
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
     }
 }
@@ -197,7 +197,7 @@ void arcade::Snake::putFoodInMap()
         pos.y = rand() % gameMap.getHeight();
     }
     cherry.push_back(DestroyableObject(pos, food, count, Orientation::UP));
-    cherry[0].setColor(Color(1));
+    cherry[0].setColor(Color(Color::White));
 }
 
 void arcade::Snake::checkEat()
@@ -226,14 +226,14 @@ void arcade::Snake::feedingSnakes()
     if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::LEFT));
-        snakes[snakes.size() - 1].setColor(Color(3));
+        snakes[snakes.size() - 1].setColor(Color(Color::Yellow));
         return;
     }
     pos.x -= 2;
     if (pos.x < gameMap.getWidth() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::RIGHT));
-        snakes[snakes.size() - 1].setColor(Color(3));
+        snakes[snakes.size() - 1].setColor(Color(Color::Yellow));
         return;
     }
     pos.x += 1;
@@ -241,14 +241,14 @@ void arcade::Snake::feedingSnakes()
     if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::DOWN));
-        snakes[snakes.size() - 1].setColor(Color(3));
+        snakes[snakes.size() - 1].setColor(Color(Color::Yellow));
         return;
     }
     pos.y -= 2;
     if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
-        snakes[snakes.size() - 1].setColor(Color(3));
+        snakes[snakes.size() - 1].setColor(Color(Color::Yellow));
         return;
     }
     state = GameState::MENU;
@@ -337,7 +337,7 @@ void arcade::Snake::setSprites()
         snakes[0].setNewDir(Orientation::DOWN);
     else
         snakes[0].setNewDir(Orientation::UP);
-    snakes[0].setColor(Color(4));
+    snakes[0].setColor(Color(Color::Green));
     for (size_t i = 1; i < snakes.size() - 1; i++)
     {
         pos = snakes[i].getAbs();
@@ -346,32 +346,32 @@ void arcade::Snake::setSprites()
         if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x < posNext.x)
         {
             snakes[i].setSprite(corner, count, Orientation::UP);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
         else if (pos.x == posPrev.x && pos.y < posPrev.y && pos.x > posNext.x)
         {
             snakes[i].setSprite(corner, count, Orientation::RIGHT);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
         else if (pos.x > posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
         {
             snakes[i].setSprite(corner, count, Orientation::LEFT);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
         else if (pos.x < posPrev.x && pos.y == posPrev.y && pos.y > posNext.y)
         {
             snakes[i].setSprite(corner, count, Orientation::DOWN);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
         else if (pos.x == posPrev.x && pos.x == posNext.x)
         {
             snakes[i].setSprite(body, countBody, Orientation::UP);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
         else if (pos.y == posPrev.y && pos.y  == posNext.y)
         {
             snakes[i].setSprite(body, countBody, Orientation::RIGHT);
-            snakes[i].setColor(Color(2));
+            snakes[i].setColor(Color(Color::Cyan));
         }
     }
     pos = snakes[snakes.size() - 1].getAbs();

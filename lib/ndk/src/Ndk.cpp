@@ -26,10 +26,19 @@ bool arcade::Ndk::pollEvent(arcade::Event &e)
     return false;
 }
 
+void arcade::Ndk::setColor(size_t pos, size_t j, size_t k, ITile const& tile)
+{
+    std::string tmp;
+
+    wattron(win, COLOR_PAIR(pos) | A_BOLD);
+    tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
+    mvwprintw(win, static_cast<int>(j) + 1, static_cast<int>(k) + 1, tmp.c_str());
+    wattroff(win, COLOR_PAIR(pos) | A_BOLD);
+}
+
 void arcade::Ndk::updateMap(arcade::IMap const &map)
 {
     size_t layer = map.getLayerNb();
-    std::string tmp;
     size_t i;
     size_t j;
     size_t k;
@@ -47,9 +56,11 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
     start_color();
-    init_pair(2, COLOR_BLACK, COLOR_GREEN);
-    init_pair(3, COLOR_BLACK, COLOR_YELLOW);
-    init_pair(4, COLOR_BLACK, COLOR_CYAN);
+    init_pair(0, COLOR_BLACK, COLOR_BLACK);
+    init_pair(5, COLOR_BLACK, COLOR_GREEN);
+    init_pair(2, COLOR_BLACK, COLOR_CYAN);
+    init_pair(3, COLOR_BLACK, COLOR_WHITE);
+    init_pair(4, COLOR_BLACK, COLOR_YELLOW);
     for (i = 0; i < layer; ++i)
     {
         for (j = 0; j < map.getHeight(); ++j)
@@ -59,10 +70,16 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
                 ITile const& tile = map.at(i, k, j);
                 if (tile.hasSprite())
                 {
-                    wattron(win, COLOR_PAIR(tile.getColor().full) | A_BOLD);
-                    tmp = vecString[tile.getSpriteId()][tile.getSpritePos()];
-                    mvwprintw(win, static_cast<int>(j) + 1, static_cast<int>(k) + 1, tmp.c_str());
-                    wattroff(win, COLOR_PAIR(tile.getColor().full) | A_BOLD);
+                    if (tile.getColor() == Color::Black)
+                        setColor(0, j, k, tile);
+                    else if (tile.getColor() == Color::Green)
+                        setColor(5, j, k, tile);
+                    else if (tile.getColor() == Color::Cyan)
+                        setColor(2, j, k, tile);
+                    else if (tile.getColor() == Color::White)
+                        setColor(3, j, k, tile);
+                    else if (tile.getColor() == Color::Yellow)
+                        setColor(4, j, k, tile);
                 }
             }
         }
