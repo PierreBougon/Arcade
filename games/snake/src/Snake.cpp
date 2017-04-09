@@ -79,33 +79,33 @@ std::vector<std::unique_ptr<arcade::ISprite>> arcade::Snake::getSpritesToLoad() 
 {
     std::vector<std::unique_ptr<arcade::ISprite>> tmp;
 
-    tmp.push_back(std::make_unique<SpriteGenerator>("A", "./games/snakes/assets/img/", "headUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snakes/assets/img/", "headLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("v", "./games/snakes/assets/img/", "headRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snakes/assets/img/", "headDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyHori", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "bodyVerti", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerUpRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snakes/assets/img/", "cornerDownRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("u", "./games/snakes/assets/img/", "tailUp", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snakes/assets/img/", "tailLeft", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("^", "./games/snakes/assets/img/", "tailRight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snakes/assets/img/", "tailDown", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("@", "./games/snakes/assets/img/", "food", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>(" ", "./games/snakes/assets/img/", "empty", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("Score", "./games/snakes/assets/img/", "score", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("0", "./games/snakes/assets/img/", "zero", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("1", "./games/snakes/assets/img/", "one", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("2", "./games/snakes/assets/img/", "two", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("3", "./games/snakes/assets/img/", "three", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("4", "./games/snakes/assets/img/", "four", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("5", "./games/snakes/assets/img/", "five", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("6", "./games/snakes/assets/img/", "six", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("7", "./games/snakes/assets/img/", "seven", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("8", "./games/snakes/assets/img/", "eight", 1, ".png"));
-    tmp.push_back(std::make_unique<SpriteGenerator>("9", "./games/snakes/assets/img/", "nine", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("A", "./games/snake/assets/img/", "snake_head_up", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snake/assets/img/", "snake_head_right", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("v", "./games/snake/assets/img/", "snake_head_down", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snake/assets/img/", "snake_head_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_V", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_center_H", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_top_right", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("O", "./games/snake/assets/img/", "snake_corner_down_right", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("u", "./games/snake/assets/img/", "snake_tail_up", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("<", "./games/snake/assets/img/", "snake_tail_right", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("^", "./games/snake/assets/img/", "snake_tail_down", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(">", "./games/snake/assets/img/", "snake_tail_left", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("@", "./games/snake/assets/img/", "apple", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>(" ", "./games/snake/assets/img/", "floor", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("Score", "./games/snake/assets/img/", "score", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("0", "./games/snake/assets/img/", "zero", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("1", "./games/snake/assets/img/", "one", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("2", "./games/snake/assets/img/", "two", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("3", "./games/snake/assets/img/", "three", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("4", "./games/snake/assets/img/", "four", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("5", "./games/snake/assets/img/", "five", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("6", "./games/snake/assets/img/", "six", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("7", "./games/snake/assets/img/", "seven", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("8", "./games/snake/assets/img/", "eight", 1, ".png"));
+    tmp.push_back(std::make_unique<SpriteGenerator>("9", "./games/snake/assets/img/", "nine", 1, ".png"));
     return std::move(tmp);
 }
 
@@ -131,7 +131,19 @@ const arcade::IGUI &arcade::Snake::getGUI() const
     return gameGui;
 }
 
-arcade::Snake::Snake() : gameMap("./assets/map.txt", 2), empty(Entity({0, 0}, std::vector<size_t>({15}), std::vector<size_t>({1}), Orientation::UP, TileType::EMPTY, TileTypeEvolution::EMPTY, Color::Black, false)), tick(0), score(Score()), snakeSpeed(4)
+arcade::Snake::Snake() :
+        gameMap("./assets/map.txt", 2),
+        empty(Entity({0, 0},
+                     std::vector<size_t>({15}),
+                     std::vector<size_t>({1}),
+                     Orientation::UP,
+                     TileType::EMPTY,
+                     TileTypeEvolution::EMPTY,
+                     Color::Black,
+                     false)),
+        tick(0),
+        score(Score()),
+        snakeSpeed(4)
 {
     state = LOADING;
     createPlayer();
@@ -246,7 +258,7 @@ void arcade::Snake::feedingSnakes()
     if (pos.y < gameMap.getHeight() && !checkInSnake(pos))
     {
         snakes.push_back(PlayerControlSnake(pos, tail, count, Orientation::UP));
-        snakes[snakes.size() - 1].setColor(Color(3));
+        snakes[snakes.size() - 1].setColor(Color(2));
         return;
     }
     state = GameState::MENU;
@@ -337,7 +349,7 @@ arcade::IGUI &arcade::Snake::getGUI()
 
 arcade::tick_t arcade::Snake::getTickRate() const
 {
-    return 30;
+    return 60;
 }
 
 std::vector<arcade::Vector2s> arcade::Snake::getPlayerpos()

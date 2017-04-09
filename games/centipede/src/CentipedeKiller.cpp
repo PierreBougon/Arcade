@@ -45,7 +45,9 @@ void arcade::CentipedeKiller::action(arcade::Bullet &bullet)
     _action = KillerAction::NOTHING;
 }
 
-void arcade::CentipedeKiller::move(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms)
+void arcade::CentipedeKiller::move(arcade::Bullet &bullet,
+                                   const arcade::Map &map,
+                                   const std::list<arcade::Mushroom*> &mushrooms)
 {
     static const std::vector<try_move_t > tryMoveTab = {
             &CentipedeKiller::tryMoveTop,
@@ -58,6 +60,12 @@ void arcade::CentipedeKiller::move(const arcade::Map &map, const std::list<arcad
     {
         (this->*tryMoveTab[_move])(map, mushrooms);
         _move = KillerMove::STAY;
+        if (!bullet.isAlive())
+        {
+            bullet.reset(abs);
+            bullet.hit();
+        }
+
     }
 }
 

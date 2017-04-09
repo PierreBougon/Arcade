@@ -37,6 +37,7 @@ namespace arcade
         typedef void (CentipedeKiller::*try_move_t)(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
 
     public:
+        ~CentipedeKiller(){};
         CentipedeKiller(Vector2s pos,
                         std::vector<size_t> idSprite,
                         std::vector<size_t> spriteCount,
@@ -52,7 +53,9 @@ namespace arcade
 
         void action();
         void move();
-        void move(const arcade::Map &map, const std::list<arcade::Mushroom*> &mushrooms);
+        void move(arcade::Bullet &bullet,
+                  const arcade::Map &map,
+                  const std::list<arcade::Mushroom*> &mushrooms);
         void updatePlayerInput(std::vector<Event> &events) override;
         void action(arcade::Bullet &bullet);
         bool touched(std::list<arcade::Centipede*> &centipedes);
