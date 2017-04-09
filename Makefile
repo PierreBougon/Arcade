@@ -5,7 +5,7 @@
 ## Login   <marc.brout@epitech.eu>
 ##
 ## Started on  Tue Mar 14 18:44:56 2017 brout_m
-## Last update Sun Apr  9 02:39:09 2017 bougon_p
+## Last update Sun Apr  9 06:27:00 2017 bougon_p
 ##
 
 include mk/colors.mk mk/commands.mk mk/definitions.mk
@@ -20,91 +20,79 @@ NDK		=	lib/ndk
 
 SOUND		=	soundManager
 
-CENTIPEDE	=	games/centipede	\
+CENTIPEDE	=	games/centipede
 
-SNAKE		=	games/snake	\
+SNAKE		=	games/snake
 
 all:
-ifeq ($(RELEASE), NO)
-	make -s -C $(BINARY)
-else
-	make -s -C $(BINARY) RELEASE=YES
-endif
+	@$(ECHO) "$(BLUE)/=================================\\"
+	@$(ECHO) "===========###$(BOLD_WHITE) CORE $(BLUE)###============"
+	@$(ECHO) "\=================================/ $(WHITE)"
+	@$(ECHO)
+	@make -s -C $(BINARY)
 
-lib:	fcleanlib
-ifeq ($(RELEASE), NO)
-	make -s -C $(SOUND) DLL=YES
-	make -s -C $(SFML) DLL=YES
-	make -s -C $(LAPIN) DLL=YES
-	make -s -C $(NDK) DLL=YES
-	make -s -C $(CENTIPEDE) DLL=YES
-	make -s -C $(SNAKE) DLL=YES
-else
-	make -s -C $(SOUND) DLL=YES RELEASE=YES
-	make -s -C $(SFML) DLL=YES RELEASE=YES
-	make -s -C $(LAPIN) DLL=YES RELEASE=YES
-	make -s -C $(NDK) DLL=YES RELEASE=YES
-	make -s -C $(CENTIPEDE) DLL=YES RELEASE=YES
-	make -s -C $(SNAKE) DLL=YES RELEASE=YES
-endif
+lib:	fcleanlib libpath dependencies game libs
+
+libpath:
+	@export LD_LIBRARY_PATH=soundManager/
+
+dependencies:
+	@$(ECHO) "$(BLUE)/=================================\\"
+	@$(ECHO) "=======### $(BOLD_WHITE)DEPENDENCIES$(BLUE) ###========"
+	@$(ECHO) "\=================================/ $(WHITE)"
+	@$(ECHO)
+	@make -s -C $(SOUND) DLL=YES
+
+game:
+	@$(ECHO) "$(BLUE)/=================================\\"
+	@$(ECHO) "===========### $(WHITE)GAMES$(BLUE) ###==========="
+	@$(ECHO) "\=================================/ $(WHITE)"
+	@$(ECHO)
+	@make -s -C $(SNAKE) DLL=YES
+	@make -s -C $(CENTIPEDE) DLL=YES
+
+libs:
+	@$(ECHO) "$(BLUE)/=================================\\"
+	@$(ECHO) "===========### $(BOLD_WHITE)LIBS $(BLUE)###============"
+	@$(ECHO) "\=================================/ $(WHITE)"
+	@$(ECHO)
+	@make -s -C $(SFML) DLL=YES
+	@make -s -C $(LAPIN) DLL=YES
+	@make -s -C $(NDK) DLL=YES
 
 arcade: re lib
 
 sound:
-ifeq ($(RELEASE), NO)
-	make -s -C $(SOUND) DLL=YES
-else
-	make -s -C $(SOUND) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(SOUND) DLL=YES
 
 sfml:
-ifeq ($(RELEASE), NO)
-	make -s -C $(SFML) DLL=YES
-else
-	make -s -C $(SFML) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(SFML) DLL=YES
 
 lapin:
-ifeq ($(RELEASE), NO)
-	make -s -C $(LAPIN) DLL=YES
-else
-	make -s -C $(LAPIN) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(LAPIN) DLL=YES
 
 ndk:
-ifeq ($(RELEASE), NO)
-	make -s -C $(NDK) DLL=YES
-else
-	make -s -C $(NDK) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(NDK) DLL=YES
 
 centipede:
-ifeq ($(RELEASE), NO)
-	make -s -C $(CENTIPEDE) DLL=YES
-else
-	make -s -C $(CENTIPEDE) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(CENTIPEDE) DLL=YES
 
 snake:
-ifeq ($(RELEASE), NO)
-	make -s -C $(SNAKE) DLL=YES
-else
-	make -s -C $(SNAKE) DLL=YES RELEASE=YES
-endif
+	@make -s -C $(SNAKE) DLL=YES
 
 clean:
-	make -s -C core/ clean
+	@make -s -C core/ clean
 
 fclean:
-	make -s -C core/ fclean
+	@make -s -C core/ fclean
 
 fcleanlib:
-	make -s -C $(CENTIPEDE) fclean
-	make -s -C $(SFML) fclean
-	make -s -C $(LAPIN) fclean
-	make -s -C $(NDK) fclean
-	make -s -C $(SOUND) fclean
-	make -s -C $(SNAKE) fclean
+	@make -s -C $(CENTIPEDE) fclean
+	@make -s -C $(SFML) fclean
+	@make -s -C $(LAPIN) fclean
+	@make -s -C $(NDK) fclean
+	@make -s -C $(SOUND) fclean
+	@make -s -C $(SNAKE) fclean
 
 re:	fclean all
 
