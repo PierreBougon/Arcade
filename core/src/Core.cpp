@@ -349,6 +349,7 @@ bool arcade::Core::coreEvent(const arcade::Event &event)
     {
         switch (event.kb_key)
         {
+/*
             case KB_2:
                 prevLib();
                 return true;
@@ -361,6 +362,7 @@ bool arcade::Core::coreEvent(const arcade::Event &event)
             case KB_5:
                 nextGame();
                 return true;
+*/
             case KB_ESCAPE:
                 open = false;
                 return true;
