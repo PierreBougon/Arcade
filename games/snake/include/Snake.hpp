@@ -40,6 +40,8 @@ namespace arcade
         void moveBody();
         void setSprites();
         void settingScore();
+        void moveSnake();
+
     public:
         Snake();
 

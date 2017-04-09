@@ -51,7 +51,7 @@ namespace arcade
         typedef std::map<char, arcade::KeyboardKey>                         t_keyboard;
         typedef std::map<e_bunny_mouse_button, arcade::MouseKey >           t_mouse;
         typedef std::map<char, e_bunny_letter_tab>                          t_letters;
-        typedef std::vector<std::vector<t_bunny_picture *>>                 t_sprites;
+        typedef std::vector<std::vector<std::unique_ptr<t_bunny_picture, Bunny_picture_deleter>>>  t_sprites;
         typedef unsigned int *t_uintcolormap;
         typedef t_color *t_colormap;
 

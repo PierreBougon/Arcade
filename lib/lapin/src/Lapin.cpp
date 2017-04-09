@@ -48,14 +48,6 @@ arcade::Lapin::~Lapin()
         bunny_stop(Window);
     if (Map != nullptr)
         bunny_delete_clipable(Map);
-    for (std::vector<t_bunny_picture *> &vec : Sprites)
-    {
-        for (t_bunny_picture *&sprite : vec)
-        {
-            if (sprite != nullptr)
-                bunny_delete_clipable(sprite);
-        }
-    }
 }
 
 bool arcade::Lapin::doesSupportSound() const
@@ -172,7 +164,7 @@ void arcade::Lapin::updateMap(const arcade::IMap &map)
             {
                 const ITile& tile = map.at(layers, x, y);
 
-                if (tile.hasSprite())
+                if (tile.hasSprite() && Sprites[tile.getSpriteId()][tile.getSpritePos()] != nullptr)
                     printOneSprite(pos, *Sprites[tile.getSpriteId()][tile.getSpritePos()]);
                 else if (tile.getColor().full != Color::Transparent.full)
                     printOneColor(pos, tile.getColor(), TileWidth, TileHeight);
@@ -202,7 +194,7 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
         width = static_cast<uint32_t>(component.getWidth() * static_cast<double>(Width));
         height = static_cast<uint32_t>(component.getHeight() * static_cast<double>(Height));
 
-        if (component.hasSprite())
+        if (component.hasSprite() && Sprites[component.getBackgroundId()][0] != nullptr)
             printOneSprite(pos, *Sprites[component.getBackgroundId()][0]);
         else
             printOneColor(pos, component.getBackgroundColor(), width, height);
@@ -213,17 +205,22 @@ void arcade::Lapin::updateGUI(arcade::IGUI &gui)
 
 void arcade::Lapin::loadSprites(std::vector<std::unique_ptr<arcade::ISprite>> &&sprites)
 {
-    std::vector<t_bunny_picture *> add;
+    std::vector<std::unique_ptr<t_bunny_picture, Bunny_picture_deleter>> add;
 
     for (std::unique_ptr<arcade::ISprite> &sprite : sprites)
     {
         for (size_t i = 0; i < sprite->spritesCount(); ++i)
         {
-            add.push_back(bunny_load_picture(sprite->getGraphicPath(i).c_str()));
-            if (!add.back())
-                throw DLLoadingError("Can't load sprites", DLLoadingError::DLLError::UNDEFINED_ERROR);
+            std::unique_ptr<t_bunny_picture, Bunny_picture_deleter> ptr;
+            t_bunny_picture *pic = bunny_load_picture(sprite->getGraphicPath(i).c_str());
+
+            if (!pic)
+                ptr = nullptr;
+            else
+                ptr.reset(pic);
+            add.push_back(std::move(ptr));
         }
-        Sprites.push_back(add);
+        Sprites.push_back(std::move(add));
     }
 }
 
