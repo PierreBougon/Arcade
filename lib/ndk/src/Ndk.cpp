@@ -53,6 +53,7 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
         wtimeout(win, 0);
         pass = true;
     }
+    wclear(win);
     werase(win);
     wborder(win, '|', '|', '-', '-', '-', '-', '-', '-');
     start_color();
@@ -88,7 +89,6 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
 
 arcade::Ndk::~Ndk()
 {
-    std::cout << "ENDWIN ..." << std::endl;
     clear();
     endwin();
 }
@@ -210,7 +210,6 @@ void arcade::Ndk::display()
 
 void arcade::Ndk::clear()
 {
-    ::clear();
 }
 
 void arcade::Ndk::soundControl(const arcade::Sound &sound)

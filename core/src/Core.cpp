@@ -324,6 +324,9 @@ bool arcade::Core::coreEvent(const arcade::Event &event)
             case KB_5:
                 nextGame();
                 return true;
+            case KB_ESCAPE:
+                open = false;
+                return true;
             default:
                 return false;
         }

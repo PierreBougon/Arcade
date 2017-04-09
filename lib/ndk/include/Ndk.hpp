@@ -31,7 +31,7 @@ namespace arcade
 
         void updateGUI(IGUI &gui);
 
-        ~Ndk();
+        virtual ~Ndk();
         bool pollEvent(arcade::Event &e);
         bool doesSupportSound() const;
         void loadSounds(std::vector<std::string> const &sounds);
