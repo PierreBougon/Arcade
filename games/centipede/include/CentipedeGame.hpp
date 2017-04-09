@@ -28,6 +28,14 @@ namespace arcade
             LASTLAYER
         };
 
+        enum CentipedeSprites
+        {
+            KILLER = 0,
+            MUSHROOM,
+            BODY,
+            FIRE
+        };
+
     public:
         ~CentipedeGame();
         CentipedeGame();

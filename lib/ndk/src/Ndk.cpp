@@ -5,6 +5,7 @@
 #include <bits/unique_ptr.h>
 #include <curses.h>
 #include <iostream>
+#include <Color.hpp>
 #include "Tile.hpp"
 #include "Ndk.hpp"
 
@@ -62,6 +63,7 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
     init_pair(2, COLOR_BLACK, COLOR_CYAN);
     init_pair(3, COLOR_BLACK, COLOR_WHITE);
     init_pair(4, COLOR_BLACK, COLOR_YELLOW);
+    init_pair(6, COLOR_BLACK, COLOR_RED);
     for (i = 0; i < layer; ++i)
     {
         for (j = 0; j < map.getHeight(); ++j)
@@ -81,6 +83,8 @@ void arcade::Ndk::updateMap(arcade::IMap const &map)
                         setColor(3, j, k, tile);
                     else if (tile.getColor() == Color::Yellow)
                         setColor(4, j, k, tile);
+                    else if (tile.getColor() == Color::Red)
+                        setColor(6, j, k, tile);
                 }
             }
         }
@@ -241,7 +245,6 @@ void arcade::Ndk::updateGUI(arcade::IGUI &gui)
         IComponent &component = gui.at(i);
         if (component.getText() != "")
         {
-            //std::cerr << static_cast<int>(component.getX() * getmaxx(stdscr)) << " && " << static_cast<int>(component.getY() * getmaxy(stdscr)) << std::endl;
             start_color();
             init_pair(1, COLOR_RED, COLOR_BLACK);
             wattron(stdscr, COLOR_PAIR(component.getTextColor().full));
